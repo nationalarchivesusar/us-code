@@ -520,12 +520,23 @@ async function restoreFromLocation() {
     preserveSection,
   });
 
+  // If the user clicked the brand/home link while we were awaiting, do not
+  // re-lock them into the `/cite/...` route by rendering the section on top.
+  if (state.location.title === null) {
+    resetViewer();
+    return;
+  }
+
   let sectionRestored = false;
   if (rawState.section) {
     await displaySection(rawState.section, {
       skipHistoryUpdate: true,
       pinpoint: rawState.pinpoint,
     });
+    if (state.location.title === null) {
+      resetViewer();
+      return;
+    }
     sectionRestored = Boolean(state.selectedSectionId);
     if (!sectionRestored) {
       state.location.section = null;
@@ -534,6 +545,14 @@ async function restoreFromLocation() {
   } else {
     state.location.section = null;
     state.location.pinpoint = null;
+  }
+
+  // Final guard: if the user navigated home while the awaits above were in
+  // flight, skip the replaceState that would otherwise put the `/cite/...`
+  // URL back in the bar.
+  if (state.location.title === null) {
+    resetViewer();
+    return;
   }
 
   setLocationState(
@@ -602,6 +621,11 @@ function initializePrimaryNavigation() {
 }
 
 async function bootstrap() {
+  // Wire up brand/primary-nav clicks before any async work so that the home
+  // link never falls back to the HTML default `href="./"`, which would reload
+  // the current `/cite/...` route and leave the user locked inside it.
+  initializePrimaryNavigation();
+
   const response = await fetch(appResourceUrl("data/titles.json"));
   if (!response.ok) {
     elements.message.textContent = "Unable to load US Code metadata.";
@@ -625,7 +649,6 @@ async function bootstrap() {
   elements.themeButtons.forEach((button) =>
     button.addEventListener("click", () => setTheme(button.dataset.themeChoice)),
   );
-  initializePrimaryNavigation();
   initializeTheme();
   setSearchMode(state.searchMode);
   window.addEventListener("popstate", handlePopState);
