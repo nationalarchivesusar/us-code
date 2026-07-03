@@ -80,15 +80,26 @@ jobs:
           source: ./
           destination: ./_site
 
-      - name: Generate social preview pages
+      # Re-enable only after changing this script to generate fewer pages.
+      # - name: Generate social preview pages
+      #   shell: bash
+      #   run: |
+      #     python tools/build_social_previews.py \
+      #       --site-root ./_site
+
+      - name: Remove nonwebsite files
         shell: bash
         run: |
-          python tools/build_social_previews.py \
-            --site-root ./_site
+          rm -f ./_site/codification.zip
+          rm -rf ./_site/codification
+          rm -rf ./_site/tools
+          rm -rf ./_site/xsd
+          rm -rf ./_site/.git
+          rm -rf ./_site/.github
 
-            - name: Inspect generated site
-          shell: bash
-          run: |
+      - name: Inspect generated site
+        shell: bash
+        run: |
           echo "Generated site size:"
           du -sh ./_site
 
