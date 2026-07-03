@@ -174,6 +174,19 @@ const shareMetaDefaults = {
 
 const SITE_NAME = "US Code Library";
 const SEARCH_SNIPPET_RADIUS = 160;
+const APP_BASE_URL = getAppBaseUrl();
+
+function getAppBaseUrl() {
+  const script = document.querySelector('script[src$="assets/js/app.js"]');
+  if (script?.src) {
+    return new URL("../../", script.src);
+  }
+  return new URL("./", window.location.href);
+}
+
+function appResourceUrl(path) {
+  return new URL(path, APP_BASE_URL).toString();
+}
 
 function applyShareMetadata({ pageTitle, shareTitle, description }) {
   const resolvedPageTitle = pageTitle || shareMetaDefaults.documentTitle;
@@ -364,14 +377,29 @@ function applySectionShareMetadata(metadata, sectionNode) {
 
 function getUrlState() {
   const params = new URLSearchParams(window.location.search);
-  const title = params.get("t") || params.get("title");
-  const section = params.get("s") || params.get("section");
+  const pathState = getCitationPathState();
+  const title = params.get("t") || params.get("title") || pathState.title;
+  const section = params.get("s") || params.get("section") || pathState.section;
   const pinpoint = params.get("p") || params.get("pinpoint");
   return {
     title,
     section,
     pinpoint,
   };
+}
+
+function getCitationPathState() {
+  const relativePath = window.location.pathname
+    .slice(APP_BASE_URL.pathname.length)
+    .replace(/^\/+|\/+$/g, "");
+  const parts = relativePath.split("/").filter(Boolean);
+  if (parts.length >= 3 && parts[0] === "cite") {
+    return {
+      title: decodeURIComponent(parts[1]),
+      section: decodeURIComponent(parts[2]),
+    };
+  }
+  return { title: null, section: null };
 }
 
 function setLocationState(nextState, options = {}) {
@@ -390,15 +418,21 @@ function setLocationState(nextState, options = {}) {
     return;
   }
 
-  const url = new URL(window.location.href);
-  if (desired.title) {
+  const url = desired.title && desired.section
+    ? new URL(
+        `cite/${encodeURIComponent(desired.title)}/${encodeURIComponent(desired.section)}/`,
+        APP_BASE_URL,
+      )
+    : new URL(APP_BASE_URL);
+
+  if (desired.title && !desired.section) {
     url.searchParams.set("t", desired.title);
   } else {
     url.searchParams.delete("t");
   }
   url.searchParams.delete("title");
 
-  if (desired.section) {
+  if (desired.section && !url.pathname.includes("/cite/")) {
     url.searchParams.set("s", desired.section);
   } else {
     url.searchParams.delete("s");
@@ -531,7 +565,7 @@ function handlePopState() {
 }
 
 async function bootstrap() {
-  const response = await fetch("data/titles.json");
+  const response = await fetch(appResourceUrl("data/titles.json"));
   if (!response.ok) {
     elements.message.textContent = "Unable to load US Code metadata.";
     return;
@@ -653,7 +687,7 @@ async function fetchTitleDocument(metadata) {
   if (state.xmlCache.has(metadata.file)) {
     return state.xmlCache.get(metadata.file);
   }
-  const response = await fetch(metadata.file);
+  const response = await fetch(appResourceUrl(metadata.file));
   if (!response.ok) {
     throw new Error(`Failed to fetch ${metadata.file}`);
   }
@@ -1264,12 +1298,9 @@ function buildSectionPreviewUrl(pinpoint = null) {
   if (!state.location.title || !state.location.section) {
     return null;
   }
-  const base = new URL("./", window.location.href);
-  base.search = "";
-  base.hash = "";
   const url = new URL(
     `cite/${encodeURIComponent(state.location.title)}/${encodeURIComponent(state.location.section)}/`,
-    base,
+    APP_BASE_URL,
   );
   if (pinpoint) {
     url.searchParams.set("p", pinpoint);
