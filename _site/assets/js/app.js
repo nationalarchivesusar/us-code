@@ -222,6 +222,19 @@ function formatSectionShareLabel(sectionNode) {
   return heading || numberLabel;
 }
 
+function formatSectionPageTitle(metadata, sectionNode) {
+  if (!metadata || !sectionNode) return "";
+  const titleNumber = cleanWhitespace(metadata.number);
+  const sectionNumber = cleanSectionNumber(sectionNode.number || "")
+    .replace(/^\u00a7\s*/, "")
+    .trim();
+  if (!titleNumber || !sectionNumber) return "";
+
+  const citation = `${titleNumber} U.S. Code \u00a7\u202f${sectionNumber}.`;
+  const heading = cleanWhitespace(sectionNode.heading).replace(/([^.!?])$/, "$1.");
+  return heading ? `${citation}\n${heading}` : citation;
+}
+
 function applyTitleShareMetadata(metadata) {
   const titleLabel = formatTitleShareLabel(metadata);
   if (!titleLabel) {
@@ -238,18 +251,20 @@ function applyTitleShareMetadata(metadata) {
 function applySectionShareMetadata(metadata, sectionNode) {
   const titleLabel = formatTitleShareLabel(metadata);
   const sectionLabel = formatSectionShareLabel(sectionNode);
+  const sectionPageTitle = formatSectionPageTitle(metadata, sectionNode);
   if (!sectionLabel) {
     applyTitleShareMetadata(metadata);
     return;
   }
-  const shareTitle = titleLabel
+  const fallbackShareTitle = titleLabel
     ? `${titleLabel}, ${sectionLabel}`
     : sectionLabel;
+  const shareTitle = sectionPageTitle || fallbackShareTitle;
   const description = titleLabel
     ? `View ${sectionLabel} within ${titleLabel} of the United States Code.`
     : `View ${sectionLabel} in the United States Code.`;
   applyShareMetadata({
-    pageTitle: `${shareTitle} | ${SITE_NAME}`,
+    pageTitle: shareTitle,
     shareTitle,
     description,
   });
