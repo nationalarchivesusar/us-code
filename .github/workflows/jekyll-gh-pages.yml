@@ -86,16 +86,21 @@ jobs:
           python tools/build_social_previews.py \
             --site-root ./_site
 
-      - name: Inspect generated site
-        shell: bash
-        run: |
+            - name: Inspect generated site
+          shell: bash
+          run: |
           echo "Generated site size:"
           du -sh ./_site
 
           echo "Largest generated files:"
           find ./_site -type f -printf "%s %p\n" \
             | sort -nr \
-            | head -20
+            | sed -n '1,20p'
+
+          echo "Largest directories:"
+          du -h --max-depth=2 ./_site \
+            | sort -hr \
+            | sed -n '1,30p'
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
