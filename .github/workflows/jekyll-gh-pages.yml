@@ -1,9 +1,9 @@
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+name: Build and deploy U.S. Code to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
-
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -12,15 +12,17 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 
 jobs:
   build:
+    name: Build Pages site
     runs-on: ubuntu-latest
+    timeout-minutes: 60
 
     steps:
-      - name: Checkout
+      - name: Checkout repository and Git LFS files
         uses: actions/checkout@v4
         with:
           lfs: true
@@ -28,6 +30,8 @@ jobs:
       - name: Verify Title 42 LFS object
         shell: bash
         run: |
+          set -euo pipefail
+
           if [[ ! -f usc/usc42.xml ]]; then
             echo "::error::usc/usc42.xml was not found."
             exit 1
@@ -35,11 +39,18 @@ jobs:
 
           if head -n 1 usc/usc42.xml | grep -q \
             "version https://git-lfs.github.com/spec"; then
-            echo "::error::Title 42 is still only a Git LFS pointer."
+            echo "::error::usc/usc42.xml is still only a Git LFS pointer."
             exit 1
           fi
 
-          echo "Title 42 source size:"
+          TITLE42_BYTES=$(stat -c%s usc/usc42.xml)
+
+          if (( TITLE42_BYTES < 1000000 )); then
+            echo "::error::usc/usc42.xml is unexpectedly small."
+            exit 1
+          fi
+
+          echo "Title 42 source:"
           du -h usc/usc42.xml
 
       - name: Set up Python
@@ -47,149 +58,295 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Build chunked Title 42 assets
+      - name: Install Python dependencies
         shell: bash
         run: |
+          set -euo pipefail
           python -m pip install \
             --disable-pip-version-check \
             lxml
 
+      - name: Build chunked Title 42 assets
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          rm -rf data/title-42
           python tools/build_title42_chunks.py
 
-      - name: Generate metadata index
-        shell: bash
-        run: |
-          python tools/build_index.py
-
-      - name: Remove original Title 42 source
-        shell: bash
-        run: |
-          rm -f usc/usc42.xml
-
-          if [[ -f usc/usc42.xml ]]; then
-            echo "::error::Could not remove the original Title 42 XML."
+          if [[ ! -d data/title-42 ]]; then
+            echo "::error::Title 42 output directory was not generated."
             exit 1
           fi
 
-      - name: Setup Pages
+          SECTION_COUNT=$(
+            find data/title-42 \
+              -type f \
+              -name "*.xml" \
+              | wc -l
+          )
+
+          echo "Generated Title 42 section files: $SECTION_COUNT"
+
+          if (( SECTION_COUNT < 8000 )); then
+            echo "::error::Too few Title 42 section files were generated."
+            exit 1
+          fi
+
+      - name: Generate website metadata index
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          python tools/build_index.py
+
+          if [[ ! -s data/titles.json ]]; then
+            echo "::error::data/titles.json was not generated."
+            exit 1
+          fi
+
+      - name: Remove original Title 42 XML from publishable source
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          rm -f usc/usc42.xml
+
+          if [[ -e usc/usc42.xml ]]; then
+            echo "::error::The original Title 42 XML could not be removed."
+            exit 1
+          fi
+
+      - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
+
+      - name: Prepare clean Jekyll source
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          rm -rf _pages_src _site
+          mkdir -p _pages_src
+
+          rsync -a \
+            --exclude="_pages_src/" \
+            --exclude="_site/" \
+            --exclude=".git/" \
+            --exclude=".github/" \
+            --exclude="codification/" \
+            --exclude="codification.zip" \
+            --exclude="tools/" \
+            --exclude="xsd/" \
+            --exclude=".venv/" \
+            --exclude="venv/" \
+            --exclude="node_modules/" \
+            --exclude="*.zip" \
+            --exclude="*.bat" \
+            --exclude="*.log" \
+            --exclude="Gemfile" \
+            --exclude="Gemfile.lock" \
+            --exclude="README.md" \
+            ./ \
+            _pages_src/
+
+          echo "Staged website source:"
+          du -sh _pages_src
+
+          for forbidden in \
+            _pages_src/codification \
+            _pages_src/codification.zip \
+            _pages_src/tools \
+            _pages_src/xsd \
+            _pages_src/.github
+          do
+            if [[ -e "$forbidden" ]]; then
+              echo "::error::Development path entered staged source: $forbidden"
+              exit 1
+            fi
+          done
+
+          if [[ ! -d _pages_src/data/title-42 ]]; then
+            echo "::error::Chunked Title 42 assets are missing from staged source."
+            exit 1
+          fi
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./
+          source: ./_pages_src
           destination: ./_site
 
-      # Re-enable only after changing this script to generate fewer pages.
-      # - name: Generate social preview pages
-      #   shell: bash
-      #   run: |
-      #     python tools/build_social_previews.py \
-      #       --site-root ./_site
-
-      - name: Remove nonwebsite files
+      - name: Verify generated site
         shell: bash
         run: |
-          rm -f ./_site/codification.zip
-          rm -rf ./_site/codification
-          rm -rf ./_site/tools
-          rm -rf ./_site/xsd
-          rm -rf ./_site/.git
-          rm -rf ./_site/.github
+          set -euo pipefail
+
+          if [[ ! -f _site/index.html ]]; then
+            echo "::error::_site/index.html was not generated."
+            exit 1
+          fi
+
+          if [[ ! -s _site/data/titles.json ]]; then
+            echo "::error::Title metadata is missing from the generated site."
+            exit 1
+          fi
+
+          if [[ ! -d _site/data/title-42 ]]; then
+            echo "::error::Title 42 assets are missing from the generated site."
+            exit 1
+          fi
+
+          PUBLISHED_SECTION_COUNT=$(
+            find _site/data/title-42 \
+              -type f \
+              -name "*.xml" \
+              | wc -l
+          )
+
+          echo "Published Title 42 section files: $PUBLISHED_SECTION_COUNT"
+
+          if (( PUBLISHED_SECTION_COUNT < 8000 )); then
+            echo "::error::The generated site contains too few Title 42 sections."
+            exit 1
+          fi
+
+          for forbidden in \
+            _site/codification \
+            _site/codification.zip \
+            _site/tools \
+            _site/xsd
+          do
+            if [[ -e "$forbidden" ]]; then
+              echo "::error::Development path was published: $forbidden"
+              exit 1
+            fi
+          done
 
       - name: Inspect generated site
         shell: bash
         run: |
+          set -euo pipefail
+
           echo "Generated site size:"
-          du -sh ./_site
+          du -sh _site
 
+          echo
           echo "Largest generated files:"
-          find ./_site -type f -printf "%s %p\n" \
+          find _site \
+            -type f \
+            -printf "%s %p\n" \
             | sort -nr \
-            | sed -n '1,20p'
+            | sed -n "1,20p"
 
-          echo "Largest directories:"
-          du -h --max-depth=2 ./_site \
+          echo
+          echo "Largest generated directories:"
+          du -h \
+            --max-depth=2 \
+            _site \
             | sort -hr \
-            | sed -n '1,30p'
+            | sed -n "1,30p"
 
-      - name: Upload artifact
+      - name: Enforce GitHub Pages size limit
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          SITE_BYTES=$(du -sb _site | cut -f1)
+          SAFE_LIMIT=$((900 * 1024 * 1024))
+
+          echo "Generated site: $SITE_BYTES bytes"
+          echo "Workflow safety limit: $SAFE_LIMIT bytes"
+
+          if (( SITE_BYTES > SAFE_LIMIT )); then
+            echo "::error::Generated site exceeds the 900 MiB safety limit."
+            exit 1
+          fi
+
+          echo "Generated site is within the configured safety limit."
+
+      - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
+          retention-days: 1
 
   deploy:
+    name: Deploy GitHub Pages
     needs: build
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 70
 
     environment:
       name: github-pages
       url: ${{ steps.deployment_result.outputs.page_url }}
 
     steps:
-      - name: Deploy to GitHub Pages — attempt 1
+      - name: Deploy to GitHub Pages - attempt 1
         id: deploy_1
         continue-on-error: true
         uses: actions/deploy-pages@v5
         with:
-          timeout: 1800000
+          timeout: 600000
           error_count: 60
           reporting_interval: 5000
 
-      - name: Wait before attempt 2
-        if: steps.deploy_1.outcome == 'failure'
+      - name: Wait before deployment attempt 2
+        if: ${{ steps.deploy_1.outcome == 'failure' }}
+        shell: bash
         run: sleep 30
 
-      - name: Deploy to GitHub Pages — attempt 2
+      - name: Deploy to GitHub Pages - attempt 2
         id: deploy_2
-        if: steps.deploy_1.outcome == 'failure'
+        if: ${{ steps.deploy_1.outcome == 'failure' }}
         continue-on-error: true
         uses: actions/deploy-pages@v5
         with:
-          timeout: 1800000
+          timeout: 600000
           error_count: 60
           reporting_interval: 5000
 
-      - name: Wait before attempt 3
-        if: steps.deploy_2.outcome == 'failure'
+      - name: Wait before deployment attempt 3
+        if: ${{ steps.deploy_2.outcome == 'failure' }}
+        shell: bash
         run: sleep 60
 
-      - name: Deploy to GitHub Pages — attempt 3
+      - name: Deploy to GitHub Pages - attempt 3
         id: deploy_3
-        if: steps.deploy_2.outcome == 'failure'
+        if: ${{ steps.deploy_2.outcome == 'failure' }}
         continue-on-error: true
         uses: actions/deploy-pages@v5
         with:
-          timeout: 1800000
+          timeout: 600000
           error_count: 60
           reporting_interval: 5000
 
-      - name: Wait before attempt 4
-        if: steps.deploy_3.outcome == 'failure'
+      - name: Wait before deployment attempt 4
+        if: ${{ steps.deploy_3.outcome == 'failure' }}
+        shell: bash
         run: sleep 120
 
-      - name: Deploy to GitHub Pages — attempt 4
+      - name: Deploy to GitHub Pages - attempt 4
         id: deploy_4
-        if: steps.deploy_3.outcome == 'failure'
+        if: ${{ steps.deploy_3.outcome == 'failure' }}
         continue-on-error: true
         uses: actions/deploy-pages@v5
         with:
-          timeout: 1800000
+          timeout: 600000
           error_count: 60
           reporting_interval: 5000
 
-      - name: Wait before attempt 5
-        if: steps.deploy_4.outcome == 'failure'
+      - name: Wait before deployment attempt 5
+        if: ${{ steps.deploy_4.outcome == 'failure' }}
+        shell: bash
         run: sleep 180
 
-      - name: Deploy to GitHub Pages — attempt 5
+      - name: Deploy to GitHub Pages - attempt 5
         id: deploy_5
-        if: steps.deploy_4.outcome == 'failure'
+        if: ${{ steps.deploy_4.outcome == 'failure' }}
         continue-on-error: true
         uses: actions/deploy-pages@v5
         with:
-          timeout: 1800000
+          timeout: 600000
           error_count: 60
           reporting_interval: 5000
 
@@ -203,25 +360,32 @@ jobs:
           OUTCOME_3: ${{ steps.deploy_3.outcome }}
           OUTCOME_4: ${{ steps.deploy_4.outcome }}
           OUTCOME_5: ${{ steps.deploy_5.outcome }}
-
           URL_1: ${{ steps.deploy_1.outputs.page_url }}
           URL_2: ${{ steps.deploy_2.outputs.page_url }}
           URL_3: ${{ steps.deploy_3.outputs.page_url }}
           URL_4: ${{ steps.deploy_4.outputs.page_url }}
           URL_5: ${{ steps.deploy_5.outputs.page_url }}
         run: |
+          set -euo pipefail
+
           PAGE_URL=""
+          SUCCESSFUL_ATTEMPT=""
 
           if [[ "$OUTCOME_1" == "success" ]]; then
             PAGE_URL="$URL_1"
+            SUCCESSFUL_ATTEMPT="1"
           elif [[ "$OUTCOME_2" == "success" ]]; then
             PAGE_URL="$URL_2"
+            SUCCESSFUL_ATTEMPT="2"
           elif [[ "$OUTCOME_3" == "success" ]]; then
             PAGE_URL="$URL_3"
+            SUCCESSFUL_ATTEMPT="3"
           elif [[ "$OUTCOME_4" == "success" ]]; then
             PAGE_URL="$URL_4"
+            SUCCESSFUL_ATTEMPT="4"
           elif [[ "$OUTCOME_5" == "success" ]]; then
             PAGE_URL="$URL_5"
+            SUCCESSFUL_ATTEMPT="5"
           fi
 
           if [[ -z "$PAGE_URL" ]]; then
@@ -230,4 +394,5 @@ jobs:
           fi
 
           echo "page_url=$PAGE_URL" >> "$GITHUB_OUTPUT"
-          echo "Deployment succeeded: $PAGE_URL"
+          echo "Deployment succeeded on attempt $SUCCESSFUL_ATTEMPT."
+          echo "Published URL: $PAGE_URL"
