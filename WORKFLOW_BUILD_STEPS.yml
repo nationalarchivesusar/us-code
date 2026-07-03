@@ -1,0 +1,36 @@
+# Replace the checkout/build portion of the Pages build job with these steps.
+# The LFS object is used only as build input. The deployed Pages artifact
+# contains ordinary per-section XML files, not the LFS pointer or object.
+
+- name: Checkout
+  uses: actions/checkout@v4
+  with:
+    lfs: true
+
+- name: Set up Python
+  uses: actions/setup-python@v5
+  with:
+    python-version: "3.12"
+
+- name: Build chunked Title 42 assets
+  shell: bash
+  run: |
+    python -m pip install --disable-pip-version-check lxml
+    python tools/build_title42_chunks.py
+    python tools/build_index.py
+
+    # Do not publish the original 113 MB XML file. The browser uses the
+    # generated manifest and per-section files under data/title-42 instead.
+    rm -f usc/usc42.xml
+
+- name: Setup Pages
+  uses: actions/configure-pages@v5
+
+- name: Build with Jekyll
+  uses: actions/jekyll-build-pages@v1
+  with:
+    source: ./
+    destination: ./_site
+
+- name: Upload artifact
+  uses: actions/upload-pages-artifact@v3
