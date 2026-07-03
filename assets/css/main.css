@@ -472,19 +472,50 @@ summary {
 .breadcrumbs {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.25rem;
   color: var(--muted);
   font-size: 0.85rem;
 }
 
-.breadcrumbs span::after {
+.breadcrumbs span::after,
+.breadcrumbs button::after {
   content: "/";
   margin: 0 0.25rem;
   color: var(--border-strong);
 }
 
-.breadcrumbs span:last-child::after {
+.breadcrumbs span:last-child::after,
+.breadcrumbs button:last-child::after {
   content: none;
+}
+
+.breadcrumb-link {
+  border: 0;
+  background: transparent;
+  color: var(--link);
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.breadcrumb-link:hover,
+.breadcrumb-link:focus {
+  color: var(--cornell-red-dark);
+  text-decoration: underline;
+}
+
+.toc-highlight {
+  animation: toc-highlight-flash 1.5s ease-out;
+}
+
+@keyframes toc-highlight-flash {
+  0% {
+    box-shadow: inset 4px 0 0 var(--cornell-red), 0 0 0 2px var(--cornell-red);
+  }
+  100% {
+    box-shadow: none;
+  }
 }
 
 .title-overview {
@@ -755,6 +786,51 @@ summary {
   font-style: italic;
 }
 
+.section-pagination {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.section-pagination__link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  border: 1px solid var(--border);
+  background: var(--surface-alt);
+  color: var(--ink);
+  padding: 0.65rem 0.85rem;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+
+.section-pagination__link:hover,
+.section-pagination__link:focus {
+  border-color: var(--cornell-red);
+}
+
+.section-pagination__link--next {
+  text-align: right;
+  align-items: flex-end;
+}
+
+.section-pagination__kicker {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.section-pagination__label {
+  font-family: var(--serif);
+  font-weight: 700;
+}
+
 .usc-body {
   display: grid;
   gap: 0.65rem;
@@ -769,9 +845,15 @@ summary {
 .usc-clause,
 .usc-subparagraph,
 .usc-subclause,
-.usc-subitem {
+.usc-subitem,
+.usc-level {
   border-left: 3px solid var(--border-strong);
-  padding: 0.45rem 0 0.45rem 0.8rem;
+  padding: 0.4rem 0 0.4rem 0.6rem;
+}
+
+.usc-chapeau,
+.usc-continuation {
+  margin: 0.35rem 0;
 }
 
 .usc-marker {
@@ -779,6 +861,29 @@ summary {
   font-family: var(--sans);
   font-weight: 800;
   margin-right: 0.35rem;
+}
+
+button.usc-marker,
+button.section-number {
+  appearance: none;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.usc-marker--link {
+  cursor: pointer;
+}
+
+.usc-marker--link:hover,
+.usc-marker--link:focus-visible {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
 }
 
 .usc-text p {
@@ -806,6 +911,44 @@ summary {
   color: var(--muted);
 }
 
+.usc-footnote-marker {
+  font-size: 0.75em;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--cornell-red-dark);
+  padding: 0 0.1em;
+}
+
+.usc-footnotes {
+  margin-top: 1.5rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--border);
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.usc-footnotes h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.usc-footnotes ol {
+  margin: 0;
+  padding-left: 1.3rem;
+}
+
+.usc-footnotes li {
+  margin: 0.3rem 0;
+}
+
+.usc-footnote-backref {
+  margin-left: 0.3rem;
+  text-decoration: none;
+}
+
 .button:focus-visible,
 .theme-switcher__button:focus-visible,
 .toc-toggle:focus-visible,
@@ -813,10 +956,33 @@ summary {
 .section-toggle__button:focus-visible,
 .title-item button:focus-visible,
 .primary-nav a:focus-visible,
+.usc-marker--link:focus-visible,
 a:focus-visible,
 input:focus-visible {
   outline: none;
   box-shadow: var(--focus);
+}
+
+.usc-copy-toast {
+  position: fixed;
+  bottom: 1.75rem;
+  left: 50%;
+  transform: translate(-50%, 10px);
+  background: rgba(20, 18, 16, 0.94);
+  color: #fff;
+  padding: 0.55rem 1.1rem;
+  border-radius: 6px;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+.usc-copy-toast.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 .site-footer {
@@ -906,6 +1072,15 @@ input:focus-visible {
 
   .section-toggle__button {
     flex: 1;
+  }
+
+  .section-pagination {
+    grid-template-columns: 1fr;
+  }
+
+  .section-pagination__link--next {
+    text-align: left;
+    align-items: flex-start;
   }
 }
 

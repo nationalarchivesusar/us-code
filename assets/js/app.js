@@ -14,6 +14,96 @@ const STRUCTURAL_TAGS = new Set([
   "subpart1",
 ]);
 
+let footnoteState = { items: [], counter: 0 };
+
+function resetFootnotes() {
+  footnoteState = { items: [], counter: 0 };
+}
+
+function isFootnoteRef(node) {
+  const classAttr = node.getAttribute("class") || "";
+  return classAttr.split(/\s+/).includes("footnoteRef");
+}
+
+function footnoteAnchorBase(node, idAttr) {
+  const raw = idAttr || node.getAttribute("idref") || node.getAttribute("id") || "";
+  return raw || `auto-${++footnoteState.counter}`;
+}
+
+function renderRef(node) {
+  if (isFootnoteRef(node)) {
+    const anchor = footnoteAnchorBase(node, node.getAttribute("idref"));
+    const label = node.textContent.trim();
+    const sup = document.createElement("sup");
+    const a = document.createElement("a");
+    a.href = `#usc-footnote-${anchor}`;
+    a.id = `usc-footnote-ref-${anchor}`;
+    a.className = "usc-footnote-marker";
+    a.textContent = label;
+    sup.appendChild(a);
+    return sup;
+  }
+  const a = document.createElement("a");
+  a.href = node.getAttribute("href") || "#";
+  a.textContent = node.textContent.trim();
+  a.target = "_blank";
+  a.rel = "noreferrer";
+  return a;
+}
+
+function renderEmphasisNode(node) {
+  const em = document.createElement("em");
+  node.childNodes.forEach((child) => {
+    const rendered = renderInline(child);
+    if (rendered) em.appendChild(rendered);
+  });
+  return em;
+}
+
+function renderTermNode(node) {
+  const span = document.createElement("span");
+  span.className = "usc-term";
+  span.textContent = node.textContent.trim();
+  return span;
+}
+
+function renderFootnoteNote(node) {
+  const anchor = footnoteAnchorBase(node, node.getAttribute("id"));
+  const numText = directChildText(node, "num");
+  const body = document.createElement("span");
+  node.childNodes.forEach((child) => {
+    if (child.namespaceURI === USLM_NS && child.localName === "num") return;
+    const rendered = renderInline(child);
+    if (rendered) body.appendChild(rendered);
+  });
+  footnoteState.items.push({ anchor, num: numText, body });
+  return null;
+}
+
+function renderFootnotesSection() {
+  if (!footnoteState.items.length) return null;
+  const section = document.createElement("section");
+  section.className = "usc-footnotes";
+  const h3 = document.createElement("h3");
+  h3.textContent = "Footnotes";
+  section.appendChild(h3);
+  const list = document.createElement("ol");
+  footnoteState.items.forEach((item) => {
+    const li = document.createElement("li");
+    li.id = `usc-footnote-${item.anchor}`;
+    li.appendChild(item.body);
+    li.appendChild(document.createTextNode(" "));
+    const backref = document.createElement("a");
+    backref.href = `#usc-footnote-ref-${item.anchor}`;
+    backref.className = "usc-footnote-backref";
+    backref.textContent = "↑";
+    li.appendChild(backref);
+    list.appendChild(li);
+  });
+  section.appendChild(list);
+  return section;
+}
+
 const THEME_STORAGE_KEY = "usc-theme";
 const state = {
   titles: [],
@@ -28,6 +118,7 @@ const state = {
   location: {
     title: null,
     section: null,
+    pinpoint: null,
   },
 };
 
@@ -259,9 +350,11 @@ function getUrlState() {
   const params = new URLSearchParams(window.location.search);
   const title = params.get("t") || params.get("title");
   const section = params.get("s") || params.get("section");
+  const pinpoint = params.get("p") || params.get("pinpoint");
   return {
     title,
     section,
+    pinpoint,
   };
 }
 
@@ -270,11 +363,13 @@ function setLocationState(nextState, options = {}) {
   const desired = {
     title: nextState.title || null,
     section: nextState.section || null,
+    pinpoint: nextState.pinpoint || null,
   };
   if (
     !replace &&
     state.location.title === desired.title &&
-    state.location.section === desired.section
+    state.location.section === desired.section &&
+    state.location.pinpoint === desired.pinpoint
   ) {
     return;
   }
@@ -293,6 +388,13 @@ function setLocationState(nextState, options = {}) {
     url.searchParams.delete("s");
   }
   url.searchParams.delete("section");
+
+  if (desired.pinpoint) {
+    url.searchParams.set("p", desired.pinpoint);
+  } else {
+    url.searchParams.delete("p");
+  }
+  url.searchParams.delete("pinpoint");
 
   if (!url.searchParams.toString()) {
     url.search = "";
@@ -331,10 +433,11 @@ function getTitleLocationValue(metadata) {
 }
 
 async function restoreFromLocation() {
-  const { title, section } = getUrlState();
+  const { title, section, pinpoint } = getUrlState();
   const rawState = {
     title: title || null,
     section: section || null,
+    pinpoint: pinpoint || null,
   };
 
   if (!rawState.title) {
@@ -355,6 +458,7 @@ async function restoreFromLocation() {
   state.location = {
     title: rawState.title,
     section: rawState.section,
+    pinpoint: rawState.pinpoint,
   };
 
   await loadTitle(metadata.file, {
@@ -364,19 +468,25 @@ async function restoreFromLocation() {
 
   let sectionRestored = false;
   if (rawState.section) {
-    await displaySection(rawState.section, { skipHistoryUpdate: true });
+    await displaySection(rawState.section, {
+      skipHistoryUpdate: true,
+      pinpoint: rawState.pinpoint,
+    });
     sectionRestored = Boolean(state.selectedSectionId);
     if (!sectionRestored) {
       state.location.section = null;
+      state.location.pinpoint = null;
     }
   } else {
     state.location.section = null;
+    state.location.pinpoint = null;
   }
 
   setLocationState(
     {
       title: state.location.title,
       section: sectionRestored ? state.location.section : null,
+      pinpoint: sectionRestored ? state.location.pinpoint : null,
     },
     { replace: true },
   );
@@ -575,7 +685,10 @@ function buildNavigation(metadata, doc) {
   const index = new Map();
   buildIndex(rootNode, [], index);
 
-  return { metadata, root: rootNode, index };
+  const sectionOrder = [];
+  collectSectionOrder(rootNode, [], sectionOrder);
+
+  return { metadata, root: rootNode, index, sectionOrder };
 }
 
 function parseStructure(element) {
@@ -612,6 +725,17 @@ function buildIndex(node, parents, index) {
   node.children.forEach((child) => buildIndex(child, path, index));
 }
 
+function collectSectionOrder(node, parents, order) {
+  if (!node) {
+    return;
+  }
+  const path = [...parents, node];
+  if (node.type === "section") {
+    order.push({ node, path });
+  }
+  node.children.forEach((child) => collectSectionOrder(child, path, order));
+}
+
 function sectionKey(value) {
   return value.replace(/[^a-z0-9]/gi, "").toLowerCase();
 }
@@ -642,11 +766,13 @@ function renderTitle(metadata, nav) {
 
   elements.tocContainer.hidden = false;
   elements.toc.innerHTML = "";
-  elements.toc.appendChild(renderTree(nav.root));
+  const elementMap = new Map();
+  elements.toc.appendChild(renderTree(nav.root, elementMap));
+  nav.elementMap = elementMap;
   elements.tocToggle.setAttribute("aria-expanded", String(!state.tocCollapsed));
 }
 
-function renderTree(node) {
+function renderTree(node, elementMap) {
   if (!node) return document.createTextNode("");
 
   if (node.type === "section") {
@@ -661,6 +787,7 @@ function renderTree(node) {
       button.dataset.number = node.number;
     }
     button.addEventListener("click", () => displaySection(node.identifier || node.number));
+    if (elementMap) elementMap.set(node, button);
     return button;
   }
 
@@ -676,13 +803,14 @@ function renderTree(node) {
     const wrapper = document.createElement("div");
     wrapper.className = "toc-children";
     node.children.forEach((child) => {
-      const childElement = renderTree(child);
+      const childElement = renderTree(child, elementMap);
       if (childElement) {
         wrapper.appendChild(childElement);
       }
     });
     details.appendChild(wrapper);
   }
+  if (elementMap) elementMap.set(node, details);
   return details;
 }
 
@@ -696,7 +824,7 @@ function formatNodeLabel(node) {
 }
 
 async function displaySection(identifierOrNumber, options = {}) {
-  const { skipHistoryUpdate = false } = options;
+  const { skipHistoryUpdate = false, pinpoint = null } = options;
   const titleId = state.selectedTitleId;
   if (!titleId) return;
   const nav = state.navigation.get(titleId);
@@ -724,17 +852,20 @@ async function displaySection(identifierOrNumber, options = {}) {
       return;
     }
     renderBreadcrumbs(path);
-    renderSection(sectionElement);
-    highlightSectionLink(sectionNode);
     setTocCollapsed(true);
+    const pinpointFound = renderSection(sectionElement, { pinpoint });
+    elements.sectionContent.appendChild(renderSectionPagination(nav, path));
+    highlightSectionLink(sectionNode);
     applySectionShareMetadata(nav.metadata, sectionNode);
     const titleParam = getTitleLocationValue(nav.metadata);
+    const resolvedPinpoint = pinpointFound ? pinpoint : null;
     if (sectionParam) {
       if (skipHistoryUpdate) {
         state.location.title = titleParam;
         state.location.section = sectionParam;
+        state.location.pinpoint = resolvedPinpoint;
       } else {
-        setLocationState({ title: titleParam, section: sectionParam });
+        setLocationState({ title: titleParam, section: sectionParam, pinpoint: resolvedPinpoint });
       }
     }
   } catch (error) {
@@ -746,12 +877,57 @@ async function displaySection(identifierOrNumber, options = {}) {
 
 function renderBreadcrumbs(path) {
   elements.breadcrumbs.innerHTML = "";
-  path.forEach((node) => {
+  path.forEach((node, index) => {
     if (!node.heading && !node.number) return;
-    const span = document.createElement("span");
-    span.textContent = formatNodeLabel(node);
-    elements.breadcrumbs.appendChild(span);
+    const isCurrent = index === path.length - 1;
+    if (isCurrent) {
+      const span = document.createElement("span");
+      span.textContent = formatNodeLabel(node);
+      elements.breadcrumbs.appendChild(span);
+      return;
+    }
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "breadcrumb-link";
+    button.textContent = formatNodeLabel(node);
+    button.addEventListener("click", () => goBackToNavigation(node, path));
+    elements.breadcrumbs.appendChild(button);
   });
+}
+
+function goBackToNavigation(node, path) {
+  const titleId = state.selectedTitleId;
+  if (!titleId) return;
+  const nav = state.navigation.get(titleId);
+  if (!nav) return;
+
+  state.selectedSectionId = null;
+  resetFootnotes();
+  elements.sectionContent.hidden = true;
+  elements.sectionContent.innerHTML = "";
+  elements.breadcrumbs.innerHTML = "";
+  applyTitleShareMetadata(nav.metadata);
+  setTocCollapsed(false);
+
+  const ancestors = path.slice(0, path.indexOf(node) + 1);
+  ancestors.forEach((ancestor) => {
+    const el = nav.elementMap && nav.elementMap.get(ancestor);
+    if (el && el.tagName === "DETAILS") {
+      el.open = true;
+    }
+  });
+
+  const titleParam = getTitleLocationValue(nav.metadata);
+  setLocationState({ title: titleParam, section: null });
+
+  const targetEl = nav.elementMap && nav.elementMap.get(node);
+  if (targetEl) {
+    requestAnimationFrame(() => {
+      targetEl.scrollIntoView({ behavior: "smooth", block: "center" });
+      targetEl.classList.add("toc-highlight");
+      setTimeout(() => targetEl.classList.remove("toc-highlight"), 1500);
+    });
+  }
 }
 
 function findSectionElement(doc, identifier, number) {
@@ -766,9 +942,11 @@ function findSectionElement(doc, identifier, number) {
   return sectionList.find((section) => sectionKey(directChildText(section, "num")) === targetKey) || null;
 }
 
-function renderSection(sectionElement) {
+function renderSection(sectionElement, options = {}) {
+  const { pinpoint = null } = options;
   elements.sectionContent.hidden = false;
   elements.sectionContent.innerHTML = "";
+  resetFootnotes();
 
   const header = document.createElement("header");
   header.className = "section-header";
@@ -777,10 +955,20 @@ function renderSection(sectionElement) {
   headingGroup.className = "section-heading-group";
   const number = directChildText(sectionElement, "num");
   const heading = directChildText(sectionElement, "heading");
+  const sectionIdentifier = sectionElement.getAttribute("identifier") || "";
   if (number) {
-    const span = document.createElement("span");
+    const span = document.createElement(sectionIdentifier ? "button" : "span");
     span.className = "section-number";
     span.textContent = number.replace(/—+$/, "").trim();
+    if (sectionIdentifier) {
+      span.type = "button";
+      span.classList.add("usc-marker--link");
+      span.title = "Copy link to this section";
+      span.dataset.uscIdentifier = sectionIdentifier;
+      span.addEventListener("click", (event) =>
+        handleCopyLinkClick(event, sectionIdentifier, headingGroup),
+      );
+    }
     headingGroup.appendChild(span);
   }
   if (heading) {
@@ -841,6 +1029,10 @@ function renderSection(sectionElement) {
 
   if (hasContent) {
     statutePanel.appendChild(body);
+    const footnotesSection = renderFootnotesSection();
+    if (footnotesSection) {
+      statutePanel.appendChild(footnotesSection);
+    }
   } else {
     const empty = document.createElement("p");
     empty.className = "section-empty";
@@ -886,7 +1078,67 @@ function renderSection(sectionElement) {
   textButton.addEventListener("click", () => switchView("statute"));
   notesButton.addEventListener("click", () => switchView("notes"));
 
-  scrollSectionIntoView();
+  const pinpointTarget = pinpoint ? findElementByIdentifier(pinpoint) : null;
+  if (pinpointTarget) {
+    scrollElementIntoView(pinpointTarget);
+    flashHighlight(pinpointTarget);
+  } else {
+    scrollSectionIntoView();
+  }
+  return Boolean(pinpointTarget);
+}
+
+function renderSectionPagination(nav, path) {
+  const sectionNode = path[path.length - 1];
+  const parentNode = path.length >= 2 ? path[path.length - 2] : path[0];
+  const order = nav.sectionOrder || [];
+  const currentIndex = order.findIndex((entry) => entry.node === sectionNode);
+  const prevEntry = currentIndex > 0 ? order[currentIndex - 1] : null;
+  const nextEntry =
+    currentIndex >= 0 && currentIndex < order.length - 1 ? order[currentIndex + 1] : null;
+
+  const pager = document.createElement("nav");
+  pager.className = "section-pagination";
+  pager.setAttribute("aria-label", "Section pagination");
+
+  pager.appendChild(
+    buildPaginationLink({
+      variant: "prev",
+      kicker: prevEntry ? "← Previous section" : "← Back to navigation",
+      label: prevEntry ? formatNodeLabel(prevEntry.node) : formatNodeLabel(parentNode),
+      onClick: prevEntry
+        ? () => displaySection(prevEntry.node.identifier || prevEntry.node.number)
+        : () => goBackToNavigation(parentNode, path),
+    }),
+  );
+
+  pager.appendChild(
+    buildPaginationLink({
+      variant: "next",
+      kicker: nextEntry ? "Next section →" : "Back to navigation →",
+      label: nextEntry ? formatNodeLabel(nextEntry.node) : formatNodeLabel(parentNode),
+      onClick: nextEntry
+        ? () => displaySection(nextEntry.node.identifier || nextEntry.node.number)
+        : () => goBackToNavigation(parentNode, path),
+    }),
+  );
+
+  return pager;
+}
+
+function buildPaginationLink({ variant, kicker, label, onClick }) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = `section-pagination__link section-pagination__link--${variant}`;
+  const kickerEl = document.createElement("span");
+  kickerEl.className = "section-pagination__kicker";
+  kickerEl.textContent = kicker;
+  const labelEl = document.createElement("span");
+  labelEl.className = "section-pagination__label";
+  labelEl.textContent = label;
+  button.append(kickerEl, labelEl);
+  button.addEventListener("click", onClick);
+  return button;
 }
 
 function directChild(element, name) {
@@ -915,6 +1167,120 @@ function scrollSectionIntoView() {
   window.scrollTo({ top: Math.max(offset, 0), behavior: "smooth" });
 }
 
+function scrollElementIntoView(el) {
+  const rect = el.getBoundingClientRect();
+  const offset = window.scrollY + rect.top - 96;
+  window.scrollTo({ top: Math.max(offset, 0), behavior: "smooth" });
+}
+
+function findElementByIdentifier(identifier) {
+  if (!identifier || !elements.sectionContent) return null;
+  try {
+    return elements.sectionContent.querySelector(`[data-usc-identifier="${CSS.escape(identifier)}"]`);
+  } catch (error) {
+    return null;
+  }
+}
+
+function flashHighlight(el) {
+  if (!el) return;
+  el.classList.remove("toc-highlight");
+  void el.offsetWidth;
+  el.classList.add("toc-highlight");
+  setTimeout(() => el.classList.remove("toc-highlight"), 1500);
+}
+
+function buildPinpointUrl(identifier) {
+  const url = new URL(window.location.href);
+  if (state.location.title) {
+    url.searchParams.set("t", state.location.title);
+  } else {
+    url.searchParams.delete("t");
+  }
+  url.searchParams.delete("title");
+  if (state.location.section) {
+    url.searchParams.set("s", state.location.section);
+  } else {
+    url.searchParams.delete("s");
+  }
+  url.searchParams.delete("section");
+  url.searchParams.set("p", identifier);
+  url.searchParams.delete("pinpoint");
+  return url.toString();
+}
+
+async function copyTextToClipboard(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  try {
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    textarea.setAttribute("readonly", "");
+    textarea.style.position = "fixed";
+    textarea.style.opacity = "0";
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+    return true;
+  } catch (error) {
+    console.error(error);
+    return false;
+  }
+}
+
+let copyToastTimeout = null;
+function showCopyToast(message) {
+  let toast = document.getElementById("usc-copy-toast");
+  if (!toast) {
+    toast = document.createElement("div");
+    toast.id = "usc-copy-toast";
+    toast.className = "usc-copy-toast";
+    toast.setAttribute("role", "status");
+    toast.setAttribute("aria-live", "polite");
+    document.body.appendChild(toast);
+  }
+  toast.textContent = message;
+  toast.classList.add("is-visible");
+  clearTimeout(copyToastTimeout);
+  copyToastTimeout = setTimeout(() => {
+    toast.classList.remove("is-visible");
+  }, 1600);
+}
+
+async function handleCopyLinkClick(event, identifier, target) {
+  event.preventDefault();
+  event.stopPropagation();
+  const url = buildPinpointUrl(identifier);
+  const copied = await copyTextToClipboard(url);
+  showCopyToast(copied ? "Link copied" : "Unable to copy link");
+  flashHighlight(target);
+  if (copied) {
+    setLocationState(
+      { title: state.location.title, section: state.location.section, pinpoint: identifier },
+      { replace: true },
+    );
+  }
+}
+
+const INDENT_STEP_REM = 0.75;
+const INDENTING_TAGS = new Set([
+  "paragraph",
+  "subparagraph",
+  "subsection",
+  "clause",
+  "subclause",
+  "item",
+  "subitem",
+  "level",
+]);
+
 function renderNode(node) {
   if (node.nodeType === Node.TEXT_NODE) {
     const text = node.textContent.trim();
@@ -934,14 +1300,26 @@ function renderNode(node) {
     case "subclause":
     case "item":
     case "subitem":
+    case "level":
+    case "chapeau":
+    case "continuation":
       return renderStructuredBlock(node);
     case "note":
+      if (node.getAttribute("type") === "footnote") {
+        return renderFootnoteNote(node);
+      }
       return renderNote(node);
     case "quotedContent":
       return renderQuoted(node);
     case "list":
       return renderList(node);
-    default:
+    case "ref":
+      return renderRef(node);
+    case "emphasis":
+      return renderEmphasisNode(node);
+    case "term":
+      return renderTermNode(node);
+    default: {
       const fragment = document.createElement("div");
       fragment.className = `usc-${node.localName}`;
       node.childNodes.forEach((child) => {
@@ -949,6 +1327,7 @@ function renderNode(node) {
         if (rendered) fragment.appendChild(rendered);
       });
       return fragment.childNodes.length ? fragment : null;
+    }
   }
 }
 
@@ -969,28 +1348,17 @@ function renderInline(node) {
     return null;
   }
   switch (node.localName) {
-    case "ref": {
-      const a = document.createElement("a");
-      a.href = node.getAttribute("href") || "#";
-      a.textContent = node.textContent.trim();
-      a.target = "_blank";
-      a.rel = "noreferrer";
-      return a;
-    }
-    case "emphasis": {
-      const em = document.createElement("em");
-      node.childNodes.forEach((child) => {
-        const rendered = renderInline(child);
-        if (rendered) em.appendChild(rendered);
-      });
-      return em;
-    }
-    case "term": {
-      const span = document.createElement("span");
-      span.className = "usc-term";
-      span.textContent = node.textContent.trim();
-      return span;
-    }
+    case "ref":
+      return renderRef(node);
+    case "emphasis":
+      return renderEmphasisNode(node);
+    case "term":
+      return renderTermNode(node);
+    case "note":
+      if (node.getAttribute("type") === "footnote") {
+        return renderFootnoteNote(node);
+      }
+      return renderNote(node);
     case "quotedContent":
       return renderQuoted(node);
     default: {
@@ -1007,11 +1375,24 @@ function renderInline(node) {
 function renderStructuredBlock(node) {
   const wrapper = document.createElement("div");
   wrapper.className = `usc-${node.localName}`;
+  if (INDENTING_TAGS.has(node.localName)) {
+    wrapper.style.marginLeft = `${INDENT_STEP_REM}rem`;
+  }
+  const identifier = node.getAttribute("identifier") || "";
+  if (identifier) {
+    wrapper.dataset.uscIdentifier = identifier;
+  }
   const markerText = directChildText(node, "num");
   if (markerText) {
-    const marker = document.createElement("span");
+    const marker = document.createElement(identifier ? "button" : "span");
     marker.className = "usc-marker";
     marker.textContent = markerText;
+    if (identifier) {
+      marker.type = "button";
+      marker.classList.add("usc-marker--link");
+      marker.title = "Copy link to this provision";
+      marker.addEventListener("click", (event) => handleCopyLinkClick(event, identifier, wrapper));
+    }
     wrapper.appendChild(marker);
   }
   const headingText = directChildText(node, "heading");

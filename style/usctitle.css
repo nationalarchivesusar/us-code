@@ -487,6 +487,14 @@ ref[class~="footnoteRef"] {
     color:                      green;
 }
 
+/* USAR workbench-added history/amendment notes (identifiers prefixed "rp-")
+   are colored green to distinguish them from official OLRC notes. */
+note[id^="rp-"],
+note[id^="rp-"] > p,
+note[id^="rp-"] > heading {
+    color:                      green;
+}
+
 note[topic="enacting"] > p   {
     display:                    block;
     margin-left:                24pt;
