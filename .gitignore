@@ -1,0 +1,33 @@
+# Local codification/workbench tooling
+/codification/
+/codify_us_code.bat
+/tools/rp_codifier.py
+
+# Local agent/editor metadata
+/.agents/
+/.qodo/
+/.codex/
+
+# Jekyll/Ruby local artifacts
+/.bundle/
+/.jekyll-cache/
+/.sass-cache/
+/vendor/bundle/
+
+# Dependency and cache directories
+/node_modules/
+/.cache/
+/.tmp/
+/tmp/
+
+# Logs and transient reports
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
