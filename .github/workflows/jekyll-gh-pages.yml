@@ -1,51 +1,134 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
 name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
-  # Deployment job
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    # Five attempts at up to 30 minutes each, plus retry delays.
+    timeout-minutes: 180
+
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
+      url: ${{ steps.deployment_result.outputs.page_url }}
+
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
+      - name: Deploy to GitHub Pages — attempt 1
+        id: deploy_1
+        continue-on-error: true
         uses: actions/deploy-pages@v5
+        with:
+          timeout: 1800000
+          error_count: 60
+          reporting_interval: 5000
+
+      - name: Wait before attempt 2
+        if: steps.deploy_1.outcome == 'failure'
+        run: sleep 30
+
+      - name: Deploy to GitHub Pages — attempt 2
+        id: deploy_2
+        if: steps.deploy_1.outcome == 'failure'
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+        with:
+          timeout: 1800000
+          error_count: 60
+          reporting_interval: 5000
+
+      - name: Wait before attempt 3
+        if: steps.deploy_2.outcome == 'failure'
+        run: sleep 60
+
+      - name: Deploy to GitHub Pages — attempt 3
+        id: deploy_3
+        if: steps.deploy_2.outcome == 'failure'
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+        with:
+          timeout: 1800000
+          error_count: 60
+          reporting_interval: 5000
+
+      - name: Wait before attempt 4
+        if: steps.deploy_3.outcome == 'failure'
+        run: sleep 120
+
+      - name: Deploy to GitHub Pages — attempt 4
+        id: deploy_4
+        if: steps.deploy_3.outcome == 'failure'
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+        with:
+          timeout: 1800000
+          error_count: 60
+          reporting_interval: 5000
+
+      - name: Wait before attempt 5
+        if: steps.deploy_4.outcome == 'failure'
+        run: sleep 180
+
+      - name: Deploy to GitHub Pages — attempt 5
+        id: deploy_5
+        if: steps.deploy_4.outcome == 'failure'
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+        with:
+          timeout: 1800000
+          error_count: 60
+          reporting_interval: 5000
+
+      - name: Determine deployment result
+        id: deployment_result
+        if: always()
+        env:
+          URL_1: ${{ steps.deploy_1.outputs.page_url }}
+          URL_2: ${{ steps.deploy_2.outputs.page_url }}
+          URL_3: ${{ steps.deploy_3.outputs.page_url }}
+          URL_4: ${{ steps.deploy_4.outputs.page_url }}
+          URL_5: ${{ steps.deploy_5.outputs.page_url }}
+        shell: bash
+        run: |
+          PAGE_URL="${URL_1:-${URL_2:-${URL_3:-${URL_4:-${URL_5:-}}}}}"
+
+          if [[ -z "$PAGE_URL" ]]; then
+            echo "::error::GitHub Pages deployment failed after five attempts."
+            exit 1
+          fi
+
+          echo "page_url=$PAGE_URL" >> "$GITHUB_OUTPUT"
+          echo "Deployment succeeded: $PAGE_URL"
