@@ -112,6 +112,7 @@ const state = {
   selectedTitleId: null,
   selectedTitleMeta: null,
   selectedSectionId: null,
+  currentSectionIdentifier: null,
   tocCollapsed: false,
   theme: "light",
   searchMode: "citation",
@@ -956,6 +957,7 @@ function renderSection(sectionElement, options = {}) {
   const number = directChildText(sectionElement, "num");
   const heading = directChildText(sectionElement, "heading");
   const sectionIdentifier = sectionElement.getAttribute("identifier") || "";
+  state.currentSectionIdentifier = sectionIdentifier;
   if (number) {
     const span = document.createElement(sectionIdentifier ? "button" : "span");
     span.className = "section-number";
@@ -1078,7 +1080,9 @@ function renderSection(sectionElement, options = {}) {
   textButton.addEventListener("click", () => switchView("statute"));
   notesButton.addEventListener("click", () => switchView("notes"));
 
-  const pinpointTarget = pinpoint ? findElementByIdentifier(pinpoint) : null;
+  const pinpointTarget = pinpoint
+    ? findElementByIdentifier(resolvePinpointIdentifier(sectionIdentifier, pinpoint))
+    : null;
   if (pinpointTarget) {
     scrollElementIntoView(pinpointTarget);
     flashHighlight(pinpointTarget);
@@ -1190,7 +1194,31 @@ function flashHighlight(el) {
   setTimeout(() => el.classList.remove("toc-highlight"), 1500);
 }
 
+// Pinpoint identifiers from the XML are absolute, e.g. "/us/usc/t7/s1b/a/1". Since the
+// title and section are already in the "t"/"s" params, we only need the part below the
+// section, written dot-separated (e.g. "a.1") so it stays plain, unencoded, and readable
+// in the address bar instead of turning into a wall of "%2F" escapes.
+function relativePinpointFromIdentifier(identifier) {
+  if (!identifier) return null;
+  const base = state.currentSectionIdentifier;
+  if (!base) return identifier;
+  if (identifier === base) return "";
+  const prefix = `${base}/`;
+  if (identifier.startsWith(prefix)) {
+    return identifier.slice(prefix.length).replace(/\//g, ".");
+  }
+  return identifier;
+}
+
+function resolvePinpointIdentifier(sectionIdentifier, pinpoint) {
+  if (!pinpoint) return null;
+  if (pinpoint.startsWith("/us/")) return pinpoint;
+  if (!sectionIdentifier) return null;
+  return `${sectionIdentifier}/${pinpoint.replace(/\./g, "/")}`;
+}
+
 function buildPinpointUrl(identifier) {
+  const relative = relativePinpointFromIdentifier(identifier);
   const url = new URL(window.location.href);
   if (state.location.title) {
     url.searchParams.set("t", state.location.title);
@@ -1204,7 +1232,11 @@ function buildPinpointUrl(identifier) {
     url.searchParams.delete("s");
   }
   url.searchParams.delete("section");
-  url.searchParams.set("p", identifier);
+  if (relative) {
+    url.searchParams.set("p", relative);
+  } else {
+    url.searchParams.delete("p");
+  }
   url.searchParams.delete("pinpoint");
   return url.toString();
 }
@@ -1262,8 +1294,9 @@ async function handleCopyLinkClick(event, identifier, target) {
   showCopyToast(copied ? "Link copied" : "Unable to copy link");
   flashHighlight(target);
   if (copied) {
+    const relative = relativePinpointFromIdentifier(identifier);
     setLocationState(
-      { title: state.location.title, section: state.location.section, pinpoint: identifier },
+      { title: state.location.title, section: state.location.section, pinpoint: relative || null },
       { replace: true },
     );
   }
