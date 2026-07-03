@@ -22,12 +22,57 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Verify Title 42 LFS object
+        shell: bash
+        run: |
+          if [[ ! -f usc/usc42.xml ]]; then
+            echo "::error::usc/usc42.xml was not found."
+            exit 1
+          fi
+
+          if head -n 1 usc/usc42.xml | grep -q \
+            "version https://git-lfs.github.com/spec"; then
+            echo "::error::Title 42 is still only a Git LFS pointer."
+            exit 1
+          fi
+
+          echo "Title 42 source size:"
+          du -h usc/usc42.xml
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build chunked Title 42 assets
+        shell: bash
+        run: |
+          python -m pip install \
+            --disable-pip-version-check \
+            lxml
+
+          python tools/build_title42_chunks.py
+
+      - name: Generate metadata index
+        shell: bash
+        run: |
+          python tools/build_index.py
+
+      - name: Remove original Title 42 source
+        shell: bash
+        run: |
+          rm -f usc/usc42.xml
+
+          if [[ -f usc/usc42.xml ]]; then
+            echo "::error::Could not remove the original Title 42 XML."
+            exit 1
+          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
-
-      - name: Generate metadata index
-        run: python tools/build_index.py
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
@@ -36,16 +81,30 @@ jobs:
           destination: ./_site
 
       - name: Generate social preview pages
-        run: python tools/build_social_previews.py --site-root ./_site
+        shell: bash
+        run: |
+          python tools/build_social_previews.py \
+            --site-root ./_site
+
+      - name: Inspect generated site
+        shell: bash
+        run: |
+          echo "Generated site size:"
+          du -sh ./_site
+
+          echo "Largest generated files:"
+          find ./_site -type f -printf "%s %p\n" \
+            | sort -nr \
+            | head -20
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
-
-    # Five attempts at up to 30 minutes each, plus retry delays.
     timeout-minutes: 180
 
     environment:
@@ -121,15 +180,33 @@ jobs:
       - name: Determine deployment result
         id: deployment_result
         if: always()
+        shell: bash
         env:
+          OUTCOME_1: ${{ steps.deploy_1.outcome }}
+          OUTCOME_2: ${{ steps.deploy_2.outcome }}
+          OUTCOME_3: ${{ steps.deploy_3.outcome }}
+          OUTCOME_4: ${{ steps.deploy_4.outcome }}
+          OUTCOME_5: ${{ steps.deploy_5.outcome }}
+
           URL_1: ${{ steps.deploy_1.outputs.page_url }}
           URL_2: ${{ steps.deploy_2.outputs.page_url }}
           URL_3: ${{ steps.deploy_3.outputs.page_url }}
           URL_4: ${{ steps.deploy_4.outputs.page_url }}
           URL_5: ${{ steps.deploy_5.outputs.page_url }}
-        shell: bash
         run: |
-          PAGE_URL="${URL_1:-${URL_2:-${URL_3:-${URL_4:-${URL_5:-}}}}}"
+          PAGE_URL=""
+
+          if [[ "$OUTCOME_1" == "success" ]]; then
+            PAGE_URL="$URL_1"
+          elif [[ "$OUTCOME_2" == "success" ]]; then
+            PAGE_URL="$URL_2"
+          elif [[ "$OUTCOME_3" == "success" ]]; then
+            PAGE_URL="$URL_3"
+          elif [[ "$OUTCOME_4" == "success" ]]; then
+            PAGE_URL="$URL_4"
+          elif [[ "$OUTCOME_5" == "success" ]]; then
+            PAGE_URL="$URL_5"
+          fi
 
           if [[ -z "$PAGE_URL" ]]; then
             echo "::error::GitHub Pages deployment failed after five attempts."
