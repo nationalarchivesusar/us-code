@@ -1234,6 +1234,10 @@ function resolvePinpointIdentifier(sectionIdentifier, pinpoint) {
 
 function buildPinpointUrl(identifier) {
   const relative = relativePinpointFromIdentifier(identifier);
+  const previewUrl = buildSectionPreviewUrl(relative || null);
+  if (previewUrl) {
+    return previewUrl;
+  }
   const url = new URL(window.location.href);
   if (state.location.title) {
     url.searchParams.set("t", state.location.title);
@@ -1253,6 +1257,23 @@ function buildPinpointUrl(identifier) {
     url.searchParams.delete("p");
   }
   url.searchParams.delete("pinpoint");
+  return url.toString();
+}
+
+function buildSectionPreviewUrl(pinpoint = null) {
+  if (!state.location.title || !state.location.section) {
+    return null;
+  }
+  const base = new URL("./", window.location.href);
+  base.search = "";
+  base.hash = "";
+  const url = new URL(
+    `cite/${encodeURIComponent(state.location.title)}/${encodeURIComponent(state.location.section)}/`,
+    base,
+  );
+  if (pinpoint) {
+    url.searchParams.set("p", pinpoint);
+  }
   return url.toString();
 }
 

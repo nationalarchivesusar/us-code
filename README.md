@@ -18,7 +18,16 @@ Cornell Law's legal information pages.
 
    The command creates `data/titles.json`, which the web application uses to
    populate the title list. Re-run it whenever XML files are updated.
-3. Open `index.html` in your browser or push the repository to GitHub with Pages
+3. Generate static social preview pages when preparing a Pages artifact:
+
+   ```bash
+   tools/build_social_previews.py --site-root _site
+   ```
+
+   The deploy workflow runs this after Jekyll so Discord, X/Twitter, and other
+   link preview crawlers can read per-section metadata at URLs like
+   `/cite/18/1113/`.
+4. Open `index.html` in your browser or push the repository to GitHub with Pages
    enabled (serving from the repository root) to browse the code.
 
 ## Working with Git LFS titles
@@ -37,6 +46,8 @@ git lfs pull
 
 * `assets/js/app.js` fetches XML files on demand and converts the USLM markup to
   rich HTML in the browser.
+* `tools/build_social_previews.py` creates tiny generated HTML pages containing
+  Open Graph/Twitter metadata and redirects readers back into the main app.
 * Styling lives in `assets/css/main.css` and aims to provide a modern, accessible
   reading experience with responsive layout.
 * The repository intentionally keeps the XML source untouched; all enhancements occur
