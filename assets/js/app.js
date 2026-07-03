@@ -409,14 +409,6 @@ function setLocationState(nextState, options = {}) {
     section: nextState.section || null,
     pinpoint: nextState.pinpoint || null,
   };
-  if (
-    !replace &&
-    state.location.title === desired.title &&
-    state.location.section === desired.section &&
-    state.location.pinpoint === desired.pinpoint
-  ) {
-    return;
-  }
 
   const url = desired.title && desired.section
     ? new URL(
@@ -448,6 +440,18 @@ function setLocationState(nextState, options = {}) {
 
   if (!url.searchParams.toString()) {
     url.search = "";
+  }
+
+  const currentUrl = new URL(window.location.href);
+  currentUrl.hash = "";
+  if (
+    !replace &&
+    state.location.title === desired.title &&
+    state.location.section === desired.section &&
+    state.location.pinpoint === desired.pinpoint &&
+    currentUrl.toString() === url.toString()
+  ) {
+    return;
   }
 
   const method = replace ? "replaceState" : "pushState";
@@ -564,6 +568,39 @@ function handlePopState() {
   restoreFromLocation();
 }
 
+function navigateHome(hash = "") {
+  resetViewer();
+  setLocationState({ title: null, section: null, pinpoint: null });
+  if (hash) {
+    const url = new URL(APP_BASE_URL);
+    url.hash = hash;
+    history.replaceState({}, "", url);
+    document.getElementById(hash)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  } else {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+}
+
+function initializePrimaryNavigation() {
+  const brand = document.querySelector(".brand");
+  if (brand) {
+    brand.href = APP_BASE_URL.toString();
+    brand.addEventListener("click", (event) => {
+      event.preventDefault();
+      navigateHome();
+    });
+  }
+
+  document.querySelectorAll(".primary-nav a[href^='#']").forEach((link) => {
+    const targetId = link.getAttribute("href").slice(1);
+    link.href = new URL(`#${targetId}`, APP_BASE_URL).toString();
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      navigateHome(targetId);
+    });
+  });
+}
+
 async function bootstrap() {
   const response = await fetch(appResourceUrl("data/titles.json"));
   if (!response.ok) {
@@ -588,6 +625,7 @@ async function bootstrap() {
   elements.themeButtons.forEach((button) =>
     button.addEventListener("click", () => setTheme(button.dataset.themeChoice)),
   );
+  initializePrimaryNavigation();
   initializeTheme();
   setSearchMode(state.searchMode);
   window.addEventListener("popstate", handlePopState);
