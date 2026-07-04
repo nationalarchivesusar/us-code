@@ -108,6 +108,7 @@ const THEME_STORAGE_KEY = "usc-theme";
 const state = {
   titles: [],
   xmlCache: new Map(),
+  chunkCache: new Map(),
   navigation: new Map(),
   selectedTitleId: null,
   selectedTitleMeta: null,
@@ -319,7 +320,7 @@ function formatTitleShareLabel(metadata) {
 function formatSectionShareLabel(sectionNode) {
   if (!sectionNode) return "";
   const number = cleanSectionNumber(sectionNode.number || "");
-  const numberLabel = number.replace(/^§\s*/, "Section ");
+  const numberLabel = number.replace(/^\[?§\s*/, "Section ");
   const heading = cleanWhitespace(sectionNode.heading);
   if (numberLabel && heading) {
     return `${numberLabel} — ${heading}`;
@@ -331,7 +332,7 @@ function formatSectionPageTitle(metadata, sectionNode) {
   if (!metadata || !sectionNode) return "";
   const titleNumber = cleanWhitespace(metadata.number);
   const sectionNumber = cleanSectionNumber(sectionNode.number || "")
-    .replace(/^\u00a7\s*/, "")
+    .replace(/^\[?\u00a7\s*/, "")
     .trim();
   if (!titleNumber || !sectionNumber) return "";
 
@@ -727,9 +728,21 @@ async function loadTitle(file, options = {}) {
   }
 
   try {
-    const { doc } = await fetchTitleDocument(metadata);
-    const nav = buildNavigation(metadata, doc);
-    state.navigation.set(file, nav);
+    let nav = state.navigation.get(file);
+    if (!nav) {
+      if (metadata.chunked) {
+        const manifest = await fetchChunkManifest(metadata);
+        const index = new Map();
+        buildIndex(manifest.root, [], index);
+        const sectionOrder = [];
+        collectSectionOrder(manifest.root, [], sectionOrder);
+        nav = { metadata, root: manifest.root, index, sectionOrder, manifest };
+      } else {
+        const { doc } = await fetchTitleDocument(metadata);
+        nav = buildNavigation(metadata, doc);
+      }
+      state.navigation.set(file, nav);
+    }
     renderTitle(metadata, nav);
     setTocCollapsed(false);
   } catch (error) {
@@ -764,6 +777,42 @@ async function fetchTitleDocument(metadata) {
   const payload = { doc, text };
   state.xmlCache.set(metadata.file, payload);
   return payload;
+}
+
+async function fetchChunkManifest(metadata) {
+  const cacheKey = `manifest:${metadata.file}`;
+  if (state.chunkCache.has(cacheKey)) {
+    return state.chunkCache.get(cacheKey);
+  }
+  const response = await fetch(appResourceUrl(metadata.file));
+  if (!response.ok) {
+    throw new Error(`Failed to fetch ${metadata.file}`);
+  }
+  const manifest = await response.json();
+  state.chunkCache.set(cacheKey, manifest);
+  return manifest;
+}
+
+async function fetchChunkSection(sectionNode) {
+  if (!sectionNode?.file) {
+    throw new Error("Chunked section is missing its file reference in the manifest.");
+  }
+  const cacheKey = `section:${sectionNode.file}`;
+  if (state.chunkCache.has(cacheKey)) {
+    return state.chunkCache.get(cacheKey);
+  }
+  const response = await fetch(appResourceUrl(sectionNode.file));
+  if (!response.ok) {
+    throw new Error(`Failed to fetch ${sectionNode.file}`);
+  }
+  const text = await response.text();
+  const doc = new DOMParser().parseFromString(text, "application/xml");
+  if (doc.getElementsByTagName("parsererror").length) {
+    throw new Error("Unable to parse chunked section XML.");
+  }
+  const sectionElement = doc.documentElement;
+  state.chunkCache.set(cacheKey, sectionElement);
+  return sectionElement;
 }
 
 function findStructuralRoot(element) {
@@ -955,8 +1004,13 @@ async function displaySection(identifierOrNumber, options = {}) {
   const sectionParam = getSectionLocationValue(sectionNode);
 
   try {
-    const { doc } = await fetchTitleDocument(nav.metadata);
-    const sectionElement = findSectionElement(doc, sectionNode.identifier, sectionNode.number);
+    let sectionElement;
+    if (nav.metadata.chunked) {
+      sectionElement = await fetchChunkSection(sectionNode);
+    } else {
+      const { doc } = await fetchTitleDocument(nav.metadata);
+      sectionElement = findSectionElement(doc, sectionNode.identifier, sectionNode.number);
+    }
     if (!sectionElement) {
       elements.message.textContent = "Section markup not found in XML.";
       applyTitleShareMetadata(nav.metadata);
@@ -1575,9 +1629,49 @@ function renderStructuredBlock(node) {
   return wrapper;
 }
 
+// Notes created by USAR public-law codification carry a deterministic
+// "rp-" id prefix (see tools/rp_codifier.py's make_id()), distinguishing
+// them from ordinary pre-existing OLRC notes without any text guessing or
+// reliance on public-law Congress-number ranges. This works identically for
+// Title 42 chunked sections, since the id travels with the section's XML
+// regardless of how it was fetched.
+const USAR_NOTE_ID_PREFIX = "rp-";
+
+const USAR_NOTE_BADGE_LABELS = {
+  amendments: "USAR Amendment Note",
+  miscellaneous: "USAR Statutory Note",
+  transfer: "USAR Transfer Note",
+  priorProvisions: "USAR Prior-Provisions Note",
+  removalDescription: "USAR Removal Note",
+};
+
+function isUsarNoteElement(node) {
+  return Boolean(
+    node &&
+      node.nodeType === Node.ELEMENT_NODE &&
+      node.namespaceURI === USLM_NS &&
+      node.localName === "note" &&
+      typeof node.getAttribute === "function" &&
+      (node.getAttribute("id") || "").startsWith(USAR_NOTE_ID_PREFIX),
+  );
+}
+
+function usarNoteBadgeLabel(node) {
+  const topic = node.getAttribute("topic") || "";
+  return USAR_NOTE_BADGE_LABELS[topic] || "USAR Public Law Note";
+}
+
 function renderNote(node) {
   const container = document.createElement("section");
   container.className = "usc-note";
+  const isUsar = isUsarNoteElement(node);
+  if (isUsar) {
+    container.classList.add("usc-note--usar");
+    const badge = document.createElement("span");
+    badge.className = "usc-note__badge";
+    badge.textContent = usarNoteBadgeLabel(node);
+    container.appendChild(badge);
+  }
   const heading = directChildText(node, "heading");
   if (heading) {
     const h3 = document.createElement("h3");
@@ -1594,6 +1688,15 @@ function renderNote(node) {
   return container;
 }
 
+// Preserves the authoritative XML order within each group, but displays
+// USAR-added notes first: only the display order changes here, not the
+// underlying document.
+function orderNotesForDisplay(children) {
+  const usarChildren = children.filter((child) => isUsarNoteElement(child));
+  const ordinaryChildren = children.filter((child) => !isUsarNoteElement(child));
+  return usarChildren.concat(ordinaryChildren);
+}
+
 function renderNotes(notes) {
   const fragment = document.createElement("section");
   fragment.className = "usc-note";
@@ -1601,7 +1704,8 @@ function renderNotes(notes) {
   const h3 = document.createElement("h3");
   h3.textContent = heading.replace(/([A-Z])/g, " $1").trim();
   fragment.appendChild(h3);
-  notes.childNodes.forEach((child) => {
+
+  orderNotesForDisplay(Array.from(notes.childNodes)).forEach((child) => {
     const rendered = renderNode(child);
     if (rendered) fragment.appendChild(rendered);
   });
@@ -1669,15 +1773,72 @@ async function handleKeywordSearch() {
 
   const normalizedQuery = query.toLowerCase();
   const matches = [];
-  const skippedTitles = [];
+  const lfsSkippedTitles = [];
+  const unindexedChunkedTitles = [];
   const failedTitles = [];
   const seenSections = new Set();
 
+  const addMatch = (metadata, { identifier, number, heading, snippetSource, matchIndex }) => {
+    const key = `${metadata.file}::${identifier || sectionKey(number || "")}`;
+    if (seenSections.has(key)) return;
+    seenSections.add(key);
+    matches.push({ title: metadata, identifier, number, heading, snippetSource, matchIndex });
+  };
+
   for (const metadata of state.titles) {
     if (metadata.pointer) {
-      skippedTitles.push(metadata);
+      lfsSkippedTitles.push(metadata);
       continue;
     }
+
+    if (metadata.chunked) {
+      // Full-text search across every chunk would require fetching
+      // thousands of individual section files, which this UI deliberately
+      // avoids. Instead, search the (already-fetched, cheap) manifest
+      // headings/numbers, plus any chunk sections the user has already
+      // opened and that are therefore already sitting in state.chunkCache.
+      unindexedChunkedTitles.push(metadata);
+      try {
+        const manifest = await fetchChunkManifest(metadata);
+        const order = [];
+        collectSectionOrder(manifest.root, [], order);
+        order.forEach(({ node }) => {
+          const headingText = cleanWhitespace(node.heading || "");
+          const numberText = cleanWhitespace(node.number || "");
+          const haystack = `${numberText} ${headingText}`.trim();
+          if (!haystack) return;
+          const matchIndex = haystack.toLowerCase().indexOf(normalizedQuery);
+          if (matchIndex === -1) return;
+          addMatch(metadata, {
+            identifier: node.identifier,
+            number: node.number,
+            heading: node.heading,
+            snippetSource: haystack,
+            matchIndex,
+          });
+        });
+
+        for (const [cacheKey, sectionElement] of state.chunkCache.entries()) {
+          if (!cacheKey.startsWith("section:")) continue;
+          const text = cleanWhitespace(sectionElement.textContent || "");
+          if (!text) continue;
+          const matchIndex = text.toLowerCase().indexOf(normalizedQuery);
+          if (matchIndex === -1) continue;
+          addMatch(metadata, {
+            identifier: sectionElement.getAttribute("identifier") || "",
+            number: directChildText(sectionElement, "num"),
+            heading: directChildText(sectionElement, "heading"),
+            snippetSource: text,
+            matchIndex,
+          });
+        }
+      } catch (error) {
+        console.error(error);
+        failedTitles.push(metadata);
+      }
+      continue;
+    }
+
     let payload;
     try {
       payload = await fetchTitleDocument(metadata);
@@ -1701,15 +1862,9 @@ async function handleKeywordSearch() {
       const lower = text.toLowerCase();
       const matchIndex = lower.indexOf(normalizedQuery);
       if (matchIndex === -1) return;
-      const identifier = section.getAttribute("identifier") || "";
-      const number = directChildText(section, "num");
-      const key = `${metadata.file}::${identifier || sectionKey(number || "")}`;
-      if (seenSections.has(key)) return;
-      seenSections.add(key);
-      matches.push({
-        title: metadata,
-        identifier,
-        number,
+      addMatch(metadata, {
+        identifier: section.getAttribute("identifier") || "",
+        number: directChildText(section, "num"),
         heading: directChildText(section, "heading"),
         snippetSource: text,
         matchIndex,
@@ -1717,10 +1872,10 @@ async function handleKeywordSearch() {
     });
   }
 
-  renderSearchResults(query, matches, skippedTitles, failedTitles);
+  renderSearchResults(query, matches, lfsSkippedTitles, failedTitles, unindexedChunkedTitles);
 }
 
-function renderSearchResults(query, matches, skippedTitles, failedTitles) {
+function renderSearchResults(query, matches, skippedTitles, failedTitles, unindexedChunkedTitles = []) {
   if (!elements.searchResults) return;
   elements.searchResults.hidden = false;
 
@@ -1798,6 +1953,17 @@ function renderSearchResults(query, matches, skippedTitles, failedTitles) {
     if (failedTitles.length) {
       const labelList = failedTitles.map((title) => getTitleDisplayLabel(title)).join(", ");
       notes.push(`Unable to search the following titles due to a loading error: ${labelList}.`);
+    }
+    if (unindexedChunkedTitles.length) {
+      const labelList = unindexedChunkedTitles
+        .map((title) => getTitleDisplayLabel(title))
+        .join(", ");
+      notes.push(
+        `Full-text keyword search is not currently indexed for these large titles, which are ` +
+          `loaded section by section: ${labelList}. Their chapter/section headings were searched, ` +
+          `along with any of their sections you have already opened. Use citation search (e.g. "42 U.S.C. § 1983") ` +
+          `to jump straight to a specific section.`,
+      );
     }
 
     if (notes.length) {

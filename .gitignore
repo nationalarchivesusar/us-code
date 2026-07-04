@@ -1,7 +1,16 @@
 # Local codification/workbench tooling
+# (depends on tools/rp_codifier.py and/or codification/ plan data, which are
+# intentionally excluded from the public repo)
 /codification/
 /codify_us_code.bat
 /tools/rp_codifier.py
+/tools/clean_reserved_headings.py
+/tools/sync_stale_toc_headings.py
+/tools/strip_non_usar_notes_from_reserved.py
+tests/test_reserve_section_toc.py
+tests/test_clean_reserved_headings.py
+tests/test_sync_stale_toc_headings.py
+tests/test_strip_non_usar_notes.py
 
 # Local agent/editor metadata
 /.agents/
@@ -13,12 +22,20 @@
 /.jekyll-cache/
 /.sass-cache/
 /vendor/bundle/
+/_site/
+
+# Generated Title 42 chunks (tools/build_title42_chunks.py). The publish
+# workflow always deletes and regenerates this directory from the Git-LFS
+# source, so it is never committed.
+/data/title-42/
 
 # Dependency and cache directories
 /node_modules/
 /.cache/
 /.tmp/
 /tmp/
+__pycache__/
+*.pyc
 
 # Logs and transient reports
 *.log
@@ -26,31 +43,14 @@
 *.bak
 *.swp
 *.swo
+*.zip
+
+# Scratch/investigation scripts (ad hoc, never meant to be committed)
+scratch_*.py
+scratch_*.txt
+scratch_*.json
 
 # OS/editor noise
 .DS_Store
 Thumbs.db
 desktop.ini
-scratch_1918.txt
-scratch_check_ch89.py
-scratch_get.py
-scratch_get_1918b.py
-scratch_get_pl019151.py
-scratch_pl019151_hashes.json
-scratch_get.py
-scratch_get.py
-scratch_chain_sim2.py
-scratch_check_chapters.py
-scratch_orig_headings.py
-scratch_post17133_s1253.txt
-scratch_post17133_s1257.txt
-scratch_post17133_s1291.txt
-scratch_chain28.py
-scratch_get2000e2.py
-scratch_get6103.py
-*.zip
-tests/test_reserve_section_toc.py
-tools/__pycache__/rp_codifier.cpython-312.pyc
-tools/__pycache__/rp_codifier.cpython-312.pyc
-tools/__pycache__/rp_codifier.cpython-312.pyc
-*.zip

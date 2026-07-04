@@ -12,6 +12,10 @@
   --cornell-red-dark: #8f1414;
   --link: #1261a6;
   --gold: #b38b00;
+  --usar-green: #2e7d32;
+  --usar-green-dark: #1b5e20;
+  --usar-green-bg: #eaf5ea;
+  --usar-green-ink: #14401a;
   --focus: 0 0 0 3px rgba(179, 27, 27, 0.22);
   --measure: 74rem;
   --serif: Georgia, "Times New Roman", serif;
@@ -33,6 +37,10 @@
   --cornell-red-dark: #ff8c8c;
   --link: #8cc7ff;
   --gold: #e0bd47;
+  --usar-green: #5cb85c;
+  --usar-green-dark: #7fd17f;
+  --usar-green-bg: #1c2c1d;
+  --usar-green-ink: #cdeecd;
   --focus: 0 0 0 3px rgba(240, 106, 106, 0.28);
 }
 
@@ -902,6 +910,33 @@ button.section-number {
   margin: 0 0 0.5rem;
   font-family: var(--serif);
   font-size: 1.08rem;
+}
+
+/* Notes added by USAR public-law codification get a distinct green
+   treatment so readers can tell them apart from ordinary OLRC notes at a
+   glance, without relying on color alone (see the badge below). */
+.usc-note--usar {
+  border-left-color: var(--usar-green);
+  background: var(--usar-green-bg);
+}
+
+.usc-note--usar h3 {
+  color: var(--usar-green-ink);
+}
+
+.usc-note__badge {
+  display: inline-block;
+  margin: 0 0 0.6rem;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--usar-green-dark);
+  border-radius: 999px;
+  background: var(--usar-green);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .usc-quoted {

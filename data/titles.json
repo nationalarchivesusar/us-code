@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-03T22:12:17.428279+00:00",
+  "generated": "2026-07-04T03:26:59.361167+00:00",
   "titles": [
     {
       "file": "usc/usc01.xml",
@@ -317,11 +317,13 @@
       "label": "Title 41"
     },
     {
-      "file": "usc/usc42.xml",
+      "file": "data/title-42/manifest.json",
+      "manifest": "data/title-42/manifest.json",
       "identifier": "/us/usc/t42",
       "number": "42",
       "heading": "THE PUBLIC HEALTH AND WELFARE",
-      "label": "Title 42"
+      "label": "Title 42",
+      "chunked": true
     },
     {
       "file": "usc/usc43.xml",
