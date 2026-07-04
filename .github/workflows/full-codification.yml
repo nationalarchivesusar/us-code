@@ -29,6 +29,7 @@ jobs:
       - name: Check out branch and Git LFS content
         uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
           lfs: true
           fetch-depth: 0
 
@@ -131,28 +132,46 @@ jobs:
           PY
 
       - name: Run repository baseline checks
+        continue-on-error: true
         shell: bash
         run: |
-          set -euo pipefail
-          python tools/build_index.py
-          python tools/check_encoding.py
-          python tools/audit_applied_material.py
+          set -uo pipefail
+          mkdir -p codification-branch-audit
+          : > codification-branch-audit/validation.log
+          failed=0
+          run_check() {
+            printf '\n===== %s =====\n' "$1" | tee -a codification-branch-audit/validation.log
+            shift
+            "$@" 2>&1 | tee -a codification-branch-audit/validation.log
+            rc=${PIPESTATUS[0]}
+            if (( rc != 0 )); then
+              printf 'FAILED (%s): %s\n' "$rc" "$*" | tee -a codification-branch-audit/validation.log
+              failed=1
+            fi
+          }
+          run_check build-index python tools/build_index.py
+          run_check encoding python tools/check_encoding.py
+          run_check applied-material python tools/audit_applied_material.py
           rm -rf data/title-42
-          python tools/build_title42_chunks.py
-          python tools/check_title42_build.py
-          python -m unittest discover -s tests -p 'test_*.py' -v
-          node --test tests/test_usar_notes.mjs tests/test_citation_routing.mjs
+          run_check build-title42 python tools/build_title42_chunks.py
+          run_check check-title42 python tools/check_title42_build.py
+          run_check python-tests python -m unittest discover -s tests -p 'test_*.py' -v
+          run_check javascript-tests node --test tests/test_usar_notes.mjs tests/test_citation_routing.mjs
+          echo "$failed" > codification-branch-audit/validation-failed
+          exit "$failed"
 
       - name: Package exact branch worktree
+        if: always()
         shell: bash
         run: |
           set -euo pipefail
           rm -rf codification-worktree
           mkdir codification-worktree
-          rsync -a --exclude='.git/' --exclude='data/title-42/' ./ codification-worktree/
+          rsync -a --exclude='.git/' --exclude='data/title-42/' --exclude='codification-worktree/' ./ codification-worktree/
           tar -czf codification-worktree.tar.gz codification-worktree
 
       - name: Upload baseline audit
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: codification-baseline-audit
@@ -160,6 +179,7 @@ jobs:
           retention-days: 7
 
       - name: Upload exact worktree
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: codification-worktree
