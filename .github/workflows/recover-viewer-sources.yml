@@ -19,45 +19,76 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
-      - name: Install extraction tools
+      - name: Install OCR tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y tesseract-ocr poppler-utils
-          python -m pip install --disable-pip-version-check pypdf beautifulsoup4
-      - name: Retrieve archived projector payloads
+          sudo apt-get install -y tesseract-ocr
+      - name: Open fresh Drive viewers, recover every page, and OCR
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p viewer-recovery/PL-018-141 viewer-recovery/PL-018-142
-          cat > viewer-recovery/endpoints.tsv <<'EOF'
-          PL-018-141	https://drive.google.com/viewer/upload?ds=APznzaZp0WDgyykvZ3AkXSBNA0pDqyONXKlt9n23gEjA2vZAffuqniIBVKP-rABSoGOyOwv0Vt9CRpskXEayru2rMEhEiyAyBFqFj54850E0VVL9aIrfFx5l75JA9AhOGwiW0vg1yvB4zr-gifXeOU7mRtjNpA_Apx19VT_ImZ5G4qloAfr5WwMHJVT6652SllDFcy-rDENyAvqMDJPLLkQNlFrFLTlbs7cFk5Db45_rDqeU1mF3uKspsnV7D1ZT4hjiBn3e1KlEcBOiKSp9gAaOyXxIeMPKjZq1DxKiZNMEySGmBLru4hJ1u3b2DOtn4hsXPrpwEYiGEXukoIlBY-DaVjd24yAkT0Nbak4U24YMM6bRtgkcWnmdkkxjbu0PuFvodGtgNvApitu7DuiE6MBx4Wo09mMEJqslT9XZcEjuMMSvk5mJN6hYVQLr2srf-n23otT3Kavs&ck=drive&dsmi=texmex&p=proj
-          PL-018-142	https://drive.google.com/viewer/upload?ds=APznzaYV-CoTqPKom40bkrO_zQoXUkV4Pas93bwFhSg96EWb5c5NVE4OuTaCYTo7SjYZqMMdpmH_Qngo-hKhANM5VGFTwoJxpeW3eqRY18mD1Cs20AU1EVDOxtyJpgcAH5FJSMVyij_zPYdQRPwfzo9N8oefoXEqKkdFmpDz73rsl4UnyKVusQVUL6utlMqNK8aSe4RwWDrG-JcVwW_29JUZVsR8Oso9wxCV_R57QLpQn9Me1mBr2BvNcOPhoWdrGvlbkoN5Sc7-idYHEGDhZOMTGVeFdhBNe0LTQjuu3YjXFxOw0uJKhsQ8V1T7pZELbWbW43D7UtKgX2bhGsdYQydLeOiGDdTsVwgOYJ1Gfc8X3QxpYWouuE2Clm7iEgvLsVqHMTTJ3DvkFsOxH7qwfdoqyyqVqMRVIBwJD3FoEPLedzgtyxvFch2TahSIlMoKsoLVj6PPNbuW&ck=drive&dsmi=texmex&p=proj
-          EOF
-          while IFS=$'\t' read -r law url; do
-            out="viewer-recovery/$law"
-            curl -L --silent --show-error --max-time 120 -A 'Mozilla/5.0' -D "$out/headers.txt" -o "$out/projector.bin" "$url" || true
-            file "$out/projector.bin" > "$out/file-type.txt" || true
-            wc -c "$out/projector.bin" > "$out/size.txt" || true
-            strings -n 6 "$out/projector.bin" | head -n 5000 > "$out/strings.txt" || true
-          done < viewer-recovery/endpoints.tsv
+          mkdir -p viewer-recovery
           python - <<'PY'
+          from __future__ import annotations
+          import html, re, subprocess
           from pathlib import Path
-          import json, re, subprocess
-          for lawdir in [Path('viewer-recovery/PL-018-141'), Path('viewer-recovery/PL-018-142')]:
-              data=(lawdir/'projector.bin').read_bytes() if (lawdir/'projector.bin').exists() else b''
-              result={'bytes':len(data),'magic':data[:32].hex()}
-              if data.startswith(b'%PDF-'):
-                  (lawdir/'document.pdf').write_bytes(data)
-                  subprocess.run(['pdftotext',str(lawdir/'document.pdf'),str(lawdir/'document.txt')],check=False)
-                  result['kind']='pdf'
-              else:
-                  text=data.decode('utf-8',errors='replace')
-                  (lawdir/'projector.txt').write_text(text,encoding='utf-8')
-                  result['kind']='text'
-                  result['urls']=re.findall(r'https?[^"\\\s]+',text)[:200]
-                  result['page_markers']=len(re.findall(r'page',text,re.I))
-              (lawdir/'result.json').write_text(json.dumps(result,indent=2)+'\n')
-              print(lawdir.name,result)
+
+          jobs = {
+              'PL-018-141': '19W_vSdy0jLzg2fzIQv4xNlkvAdhdCuY6',
+              'PL-018-142': '1-SEQeh3WiGffnAa_YDG87XKqRzUTfOeQ',
+              'PL-012-076': '1nJpAsDw6hVsDDFGzCXaf6T0zOpKDr3o2',
+          }
+          root = Path('viewer-recovery')
+          for law, file_id in jobs.items():
+              out = root / law
+              out.mkdir(parents=True, exist_ok=True)
+              cookies = out / 'cookies.txt'
+              view_url = f'https://drive.google.com/file/d/{file_id}/view?usp=sharing'
+              page = out / 'viewer.html'
+              proc = subprocess.run([
+                  'curl','-L','--fail','--silent','--show-error','--max-time','120',
+                  '-A','Mozilla/5.0','-c',str(cookies),'-b',str(cookies),
+                  '-o',str(page),view_url
+              ], capture_output=True, text=True)
+              if proc.returncode:
+                  (out/'viewer.error.txt').write_text(proc.stderr)
+                  continue
+              source = page.read_text(errors='replace')
+              urls = re.findall(r'https://drive\.google\.com/viewer/img\?[^"\'<> ]+', source)
+              normalized=[]
+              for url in urls:
+                  url=html.unescape(url).replace('\\u003d','=').replace('\\u0026','&')
+                  if url not in normalized: normalized.append(url)
+              (out/'page-urls.txt').write_text('\n'.join(normalized)+'\n',encoding='utf-8')
+              texts=[]
+              for index,url in enumerate(normalized,1):
+                  high=re.sub(r'([?&])w=\d+',r'\1w=2000',url)
+                  img=out/f'page-{index:02d}.png'
+                  req=subprocess.run([
+                      'curl','-L','--fail','--silent','--show-error','--max-time','120',
+                      '-A','Mozilla/5.0','-e',view_url,'-c',str(cookies),'-b',str(cookies),
+                      '-o',str(img),high
+                  ],capture_output=True,text=True)
+                  if req.returncode or not img.exists() or img.stat().st_size < 1000:
+                      # Retry the exact small preview URL when the high-resolution variant is rejected.
+                      req=subprocess.run([
+                          'curl','-L','--fail','--silent','--show-error','--max-time','120',
+                          '-A','Mozilla/5.0','-e',view_url,'-c',str(cookies),'-b',str(cookies),
+                          '-o',str(img),url
+                      ],capture_output=True,text=True)
+                  if req.returncode or not img.exists() or img.stat().st_size < 1000:
+                      (out/f'page-{index:02d}.error.txt').write_text(req.stderr or 'page unavailable')
+                      continue
+                  base=out/f'page-{index:02d}'
+                  subprocess.run(['tesseract',str(img),str(base),'--dpi','300'],check=False,capture_output=True,text=True)
+                  text_file=base.with_suffix('.txt')
+                  texts.append(text_file.read_text(errors='replace') if text_file.exists() else '')
+              (out/'combined.txt').write_text('\n\n'.join(texts),encoding='utf-8')
+              (out/'summary.txt').write_text(
+                  f'viewer_bytes={page.stat().st_size}\npage_urls={len(normalized)}\nocr_pages={len(texts)}\nocr_chars={sum(map(len,texts))}\n',
+                  encoding='utf-8'
+              )
+              print(law,(out/'summary.txt').read_text().replace('\n',' '))
           PY
       - uses: actions/upload-artifact@v4
         with:
