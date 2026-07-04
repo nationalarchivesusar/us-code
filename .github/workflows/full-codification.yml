@@ -1,0 +1,162 @@
+name: Full public-law codification workbench
+
+on:
+  push:
+    branches:
+      - codification/full-implementation
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: full-codification
+  cancel-in-progress: false
+
+jobs:
+  baseline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Check out branch and Git LFS content
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install validation dependencies
+        run: python -m pip install --disable-pip-version-check lxml requests pypdf python-docx
+
+      - name: Verify full Title 42 object
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f usc/usc42.xml
+          if head -n 1 usc/usc42.xml | grep -q 'version https://git-lfs.github.com/spec'; then
+            echo 'usc/usc42.xml is still an LFS pointer' >&2
+            exit 1
+          fi
+          test "$(stat -c%s usc/usc42.xml)" -gt 1000000
+
+      - name: Generate baseline audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p codification-branch-audit
+          python - <<'PY'
+          from __future__ import annotations
+          import hashlib, json, re
+          from collections import Counter, defaultdict
+          from pathlib import Path
+          from lxml import etree
+
+          root = Path('.')
+          out = root / 'codification-branch-audit'
+          ns = {'u': 'http://xml.house.gov/schemas/uslm/1.0'}
+          titles = []
+          ids = Counter()
+          law_locations = defaultdict(list)
+          findings = []
+          law_re = re.compile(r'(?:Pub(?:lic)?\.?\s*L(?:aw)?\.?|Public Law)\s*(\d{1,3})\s*[-–—]\s*(\d{1,4})', re.I)
+
+          for path in sorted((root / 'usc').glob('usc*.xml')):
+              raw = path.read_bytes()
+              pointer = raw.startswith(b'version https://git-lfs.github.com/spec')
+              entry = {
+                  'path': path.as_posix(),
+                  'bytes': len(raw),
+                  'sha256': hashlib.sha256(raw).hexdigest(),
+                  'lfs_pointer': pointer,
+                  'rp_nodes': 0,
+              }
+              if pointer:
+                  findings.append(f'{path}: unresolved Git LFS pointer')
+                  titles.append(entry)
+                  continue
+              parser = etree.XMLParser(huge_tree=True, recover=False)
+              tree = etree.parse(str(path), parser)
+              for el in tree.iter():
+                  value = el.get('id')
+                  if value:
+                      ids[value] += 1
+                  if value and value.startswith('rp-'):
+                      entry['rp_nodes'] += 1
+                      text = ' '.join(''.join(el.itertext()).split())
+                      identifier = el.get('identifier') or ''
+                      for congress, sequence in law_re.findall(text):
+                          law = f'PL-{int(congress):03d}-{int(sequence):03d}'
+                          law_locations[law].append({
+                              'file': path.as_posix(),
+                              'element_id': value,
+                              'identifier': identifier,
+                              'excerpt': text[:500],
+                          })
+              titles.append(entry)
+
+          duplicate_ids = sorted(k for k, v in ids.items() if v > 1)
+          if duplicate_ids:
+              findings.append(f'duplicate XML ids: {len(duplicate_ids)}')
+
+          payload = {
+              'head': __import__('subprocess').check_output(['git','rev-parse','HEAD'], text=True).strip(),
+              'branch': __import__('subprocess').check_output(['git','branch','--show-current'], text=True).strip(),
+              'titles': titles,
+              'project_law_locations': dict(sorted(law_locations.items())),
+              'duplicate_ids': duplicate_ids,
+              'findings': findings,
+          }
+          (out / 'baseline-audit.json').write_text(json.dumps(payload, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+          (out / 'baseline-summary.txt').write_text(
+              f"titles={len(titles)}\nrp_nodes={sum(x['rp_nodes'] for x in titles)}\n"
+              f"laws_referenced={len(law_locations)}\nduplicate_ids={len(duplicate_ids)}\n",
+              encoding='utf-8',
+          )
+          print((out / 'baseline-summary.txt').read_text())
+          PY
+
+      - name: Run repository baseline checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/build_index.py
+          python tools/check_encoding.py
+          python tools/audit_applied_material.py
+          rm -rf data/title-42
+          python tools/build_title42_chunks.py
+          python tools/check_title42_build.py
+          python -m unittest discover -s tests -p 'test_*.py' -v
+          node --test tests/test_usar_notes.mjs tests/test_citation_routing.mjs
+
+      - name: Package exact branch worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf codification-worktree
+          mkdir codification-worktree
+          rsync -a --exclude='.git/' --exclude='data/title-42/' ./ codification-worktree/
+          tar -czf codification-worktree.tar.gz codification-worktree
+
+      - name: Upload baseline audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: codification-baseline-audit
+          path: codification-branch-audit/
+          retention-days: 7
+
+      - name: Upload exact worktree
+        uses: actions/upload-artifact@v4
+        with:
+          name: codification-worktree
+          path: codification-worktree.tar.gz
+          retention-days: 7
