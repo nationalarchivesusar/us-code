@@ -1,0 +1,30 @@
+name: Inspect staged codifier package
+
+on:
+  push:
+    branches: [codification/package-staging]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect package
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p package-inspection
+          cp .codification/package-inspect.tar.xz package-inspection/package.tar.xz
+          stat -c '%s' package-inspection/package.tar.xz | tee package-inspection/size.txt
+          sha256sum package-inspection/package.tar.xz | tee package-inspection/sha256.txt
+          file package-inspection/package.tar.xz | tee package-inspection/file.txt
+          tar -tJf package-inspection/package.tar.xz | tee package-inspection/listing.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: staged-package-inspection
+          path: package-inspection/
+          retention-days: 7
