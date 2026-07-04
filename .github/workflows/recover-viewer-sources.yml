@@ -43,6 +43,7 @@ jobs:
           const jobs = {
             'PL-018-141': { id: '19W_vSdy0jLzg2fzIQv4xNlkvAdhdCuY6', pages: 15 },
             'PL-018-142': { id: '1-SEQeh3WiGffnAa_YDG87XKqRzUTfOeQ', pages: 4 },
+            'PL-025-182': { id: '1oGACcmQOwdwGOGR3uCpumI3K8l8LV93_', pages: 20 },
             'PL-012-076': { id: '1nJpAsDw6hVsDDFGzCXaf6T0zOpKDr3o2', pages: 20 },
           };
 
@@ -87,7 +88,7 @@ jobs:
               fs.writeFileSync(path.join(out, 'viewer.html'), await page.content());
               fs.writeFileSync(path.join(out, 'body.txt'), await page.locator('body').innerText().catch(() => ''));
               for (let i = 0; i < info.pages + 8; i += 1) {
-                await page.screenshot({ path: path.join(out, `screen-${String(i+1).padStart(3,'0')}.png` });
+                await page.screenshot({ path: path.join(out, `screen-${String(i+1).padStart(3,'0')}.png`) });
                 await page.keyboard.press('PageDown');
                 await page.mouse.wheel(0, 1100);
                 await page.waitForTimeout(900);
@@ -110,7 +111,7 @@ jobs:
           node /tmp/recover-viewer.mjs > viewer-recovery/browser.log 2>&1
           browser_rc=$?
 
-          for law in PL-018-141 PL-018-142 PL-012-076; do
+          for law in PL-018-141 PL-018-142 PL-025-182 PL-012-076; do
             out="viewer-recovery/$law"
             mkdir -p "$out/ocr"
             : > "$out/combined.txt"
