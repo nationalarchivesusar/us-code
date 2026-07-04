@@ -17,6 +17,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          echo "Inspecting referenced package blob"
           mkdir -p package-inspection
           cp .codification/package-inspect.tar.xz package-inspection/package.tar.xz
           stat -c '%s' package-inspection/package.tar.xz | tee package-inspection/size.txt
