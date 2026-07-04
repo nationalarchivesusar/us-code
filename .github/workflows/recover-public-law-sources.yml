@@ -1,0 +1,131 @@
+name: Recover held public-law sources
+
+on:
+  push:
+    branches:
+      - codification/full-implementation
+    paths:
+      - .github/workflows/recover-public-law-sources.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install extractors
+        run: python -m pip install --disable-pip-version-check pypdf python-docx beautifulsoup4
+
+      - name: Recover and authenticate sources
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p recovered-sources/raw recovered-sources/text recovered-sources/records
+          cat > recovered-sources/source-map.tsv <<'EOF'
+          PL-012-076	1nJpAsDw6hVsDDFGzCXaf6T0zOpKDr3o2	Removing Idiocy Act
+          PL-015-101	1Hbvm-qzSt7qUxDZ0IBdMbBjDI3LvVUH5	Ensuring Accountability in Federal Agencies Act
+          PL-018-141	19W_vSdy0jLzg2fzIQv4xNlkvAdhdCuY6	Foreign Service Act of 2023
+          PL-018-142	1-SEQeh3WiGffnAa_YDG87XKqRzUTfOeQ	Business Licensing Act
+          PL-024-175	1zLcAaxazS-aEXNcIQQvcilggO3Z0fqMo	MPD Relocation Act
+          PL-024-176	1ZcdFDXWnBBFGBa56LCRf4nid1htIXZL2	Comprehensive Federal Government Funding Act
+          EOF
+          python - <<'PY'
+          from __future__ import annotations
+          import hashlib, html, json, re, subprocess
+          from pathlib import Path
+          from urllib.parse import urlencode
+          from pypdf import PdfReader
+          from docx import Document
+          from bs4 import BeautifulSoup
+
+          root = Path('recovered-sources')
+          records = []
+          for line in (root / 'source-map.tsv').read_text().splitlines():
+              law, file_id, title = line.split('\t', 2)
+              raw = root / 'raw' / f'{law}.bin'
+              urls = [
+                  f'https://drive.usercontent.google.com/download?{urlencode({"id": file_id, "export": "download", "confirm": "t"})}',
+                  f'https://drive.google.com/uc?{urlencode({"id": file_id, "export": "download", "confirm": "t"})}',
+              ]
+              attempts = []
+              data = b''
+              selected = ''
+              for url in urls:
+                  proc = subprocess.run(['curl','-L','--fail','--silent','--show-error','--max-time','90',url], capture_output=True)
+                  attempts.append({'url': url, 'returncode': proc.returncode, 'bytes': len(proc.stdout), 'stderr': proc.stderr.decode(errors='replace')[:1000]})
+                  if proc.returncode == 0 and len(proc.stdout) > len(data):
+                      data = proc.stdout
+                      selected = url
+                  if data.startswith(b'%PDF-') or data.startswith(b'PK\x03\x04'):
+                      break
+              raw.write_bytes(data)
+              kind = 'unknown'
+              text = ''
+              error = ''
+              try:
+                  if data.startswith(b'%PDF-'):
+                      kind = 'pdf'
+                      pdf = raw.with_suffix('.pdf')
+                      raw.replace(pdf)
+                      raw = pdf
+                      reader = PdfReader(str(pdf))
+                      text = '\n\n'.join((page.extract_text() or '') for page in reader.pages)
+                  elif data.startswith(b'PK\x03\x04'):
+                      kind = 'docx'
+                      docx = raw.with_suffix('.docx')
+                      raw.replace(docx)
+                      raw = docx
+                      doc = Document(str(docx))
+                      text = '\n'.join(p.text for p in doc.paragraphs)
+                  elif data:
+                      decoded = data.decode('utf-8', errors='replace')
+                      if '<html' in decoded.lower() or '<!doctype' in decoded.lower():
+                          kind = 'html'
+                          soup = BeautifulSoup(decoded, 'html.parser')
+                          text = soup.get_text('\n')
+                      else:
+                          kind = 'text'
+                          text = decoded
+              except Exception as exc:
+                  error = repr(exc)
+              text = html.unescape(text).replace('\x00','')
+              text = re.sub(r'\r\n?', '\n', text)
+              (root / 'text' / f'{law}.txt').write_text(text, encoding='utf-8')
+              record = {
+                  'law_id': law,
+                  'title': title,
+                  'file_id': file_id,
+                  'selected_url': selected,
+                  'attempts': attempts,
+                  'kind': kind,
+                  'raw_path': str(raw),
+                  'raw_bytes': len(data),
+                  'raw_sha256': hashlib.sha256(data).hexdigest() if data else '',
+                  'text_characters': len(text),
+                  'text_sha256': hashlib.sha256(text.encode()).hexdigest() if text else '',
+                  'contains_title': sum(1 for word in re.findall(r'[A-Za-z]{4,}', title.lower()) if word in text.lower()),
+                  'contains_enactment_formula': bool(re.search(r'be\s+it\s+enacted', text, re.I)),
+                  'error': error,
+              }
+              (root / 'records' / f'{law}.json').write_text(json.dumps(record, indent=2) + '\n')
+              records.append(record)
+          (root / 'summary.json').write_text(json.dumps(records, indent=2) + '\n')
+          for record in records:
+              print(record['law_id'], record['kind'], record['raw_bytes'], record['text_characters'], record['contains_enactment_formula'])
+          PY
+
+      - name: Upload recovered source records
+        uses: actions/upload-artifact@v4
+        with:
+          name: recovered-public-law-sources
+          path: recovered-sources/
+          retention-days: 7
