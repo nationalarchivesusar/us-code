@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
-      - name: Query all recoverable Drive endpoints
+      - name: Query Drive endpoints with the archived referrer
         shell: bash
         run: |
           set -euo pipefail
@@ -41,7 +41,11 @@ jobs:
             i=0
             for url in "${urls[@]}"; do
               i=$((i+1))
-              curl -L --silent --show-error --max-time 90 -A 'Mozilla/5.0' -D "$out/$i.headers" -o "$out/$i.body" "$url" || true
+              curl -L --silent --show-error --max-time 90 \
+                -A 'Mozilla/5.0' \
+                -H 'Referer: https://drive.google.com/' \
+                -H 'Origin: https://drive.google.com' \
+                -D "$out/$i.headers" -o "$out/$i.body" "$url" || true
               file "$out/$i.body" > "$out/$i.file" || true
               printf '%s\n' "$url" > "$out/$i.url"
             done
