@@ -23,8 +23,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y tesseract-ocr
-          python -m pip install --disable-pip-version-check pillow
-      - name: Download viewer pages and extract text
+      - name: Download signed viewer pages and extract text
         shell: bash
         run: |
           set -euo pipefail
@@ -32,24 +31,23 @@ jobs:
           python - <<'PY'
           import subprocess
           from pathlib import Path
-          from urllib.parse import quote
 
           jobs = {
-            'PL-018-141': ('ACFrOgA-g-vOeQqhzyQv2AJnrovIiavdXgcIORslK2XfzMD1DagoGadMv6XLdZ3E1JeuhuBbtuhTON1DTp7HAGRB2NxzQNO38uaOz0mYUyUp-f6v5-w-YnlJdTdOdAqDZ1QyaPpMYIeJ0Hr2WX3yk9FBXwF5fX9vNsJjKlg4vUJfPSIBCIPW4BpKtnLUd2SBmc2NzcVVXkixu6DFyLFWcrxhQq6uSB_McsTlR-BK3Q7MNDy8zlP8lV4ZUiKzkTF6DdZ1olgOM5zBrZvSGIE2', 15),
-            'PL-018-142': ('ACFrOgCKmNJv33H3YBAwMyiQriEwMixRWq8htxbfT8-XYqNnib9lF9GwoEDBoho82R0rWrKF0_hxYe5vw5_r39GbNM6fHCH_ooL0ScvzzXUGNkCjuKJUUwVBB8HdKLujjrzQz_w7BrFhDb2gKCnNzR21k-utYxHyFNCGO9Ze7Pt9yoKf3IN1avgIDRMZBjXCR2eVxkVLiJZl3DWfIYR8oW0TOonS4OdItAei3NLY-hZYKT3m-QNMfZPGqK3Vq4w=', 4),
+            'PL-018-141': ('https://drive.google.com/viewer/img?id=ACFrOgA-g-vOeQqhzyQv2AJnrovIiavdXgcIORslK2XfzMD1DagoGadMv6XLdZ3E1JeuhuBbtuhTON1DTp7HAGRB2NxzQNO38uaOz0mYUyUp-f6v5-w-YnlJdTdOdAqDZ1QyaPpMYIeJ0Hr2WX3yk9FBXwF5fX9vNsJjKlg4vUJfPSIBCIPW4BpKtnLUd2SBmc2NzcVVXkixu6DFyLFWcrxhQq6uSB_McsTlR-BK3Q7MNDy8zlP8lV4ZUiKzkTF6DdZ1olgOM5zBrZvSGIE2&authuser=0&dsmi=texmex&page={page}&skiphighlight=true&w=1600', 15),
+            'PL-018-142': ('https://drive.google.com/viewer/img?id=ACFrOgCKmNJv33H3YBAwMyiQriEwMixRWq8htxbfT8-XYqNnib9lF9GwoEDBoho82R0rWrKF0_hxYe5vw5_r39GbNM6fHCH_ooL0ScvzzXUGNkCjuKJUUwVBB8HdKLujjrzQz_w7BrFhDb2gKCnNzR21k-utYxHyFNCGO9Ze7Pt9yoKf3IN1avgIDRMZBjXCR2eVxkVLiJZl3DWfIYR8oW0TOonS4OdItAei3NLY-hZYKT3m-QNMfZPGqK3Vq4w%3D&authuser=0&dsmi=texmex&page={page}&skiphighlight=true&w=1600', 4),
           }
-          for law, (token, pages) in jobs.items():
+          for law, (template, pages) in jobs.items():
               out = Path('viewer-recovery') / law
               texts=[]
               for page in range(pages):
                   img=out/f'page-{page+1:02d}.png'
-                  url=f'https://drive.google.com/viewer/img?id={quote(token, safe="-_=")}&page={page}&skiphighlight=true&w=2000'
-                  proc=subprocess.run(['curl','-L','--fail','--silent','--show-error','--max-time','90','-o',str(img),url],capture_output=True,text=True)
+                  url=template.format(page=page)
+                  proc=subprocess.run(['curl','-L','--fail','--silent','--show-error','--max-time','90','-A','Mozilla/5.0','-o',str(img),url],capture_output=True,text=True)
                   if proc.returncode or not img.exists() or img.stat().st_size < 1000:
                       (out/f'page-{page+1:02d}.error.txt').write_text(proc.stderr or f'bad size {img.stat().st_size if img.exists() else 0}')
                       continue
                   txtbase=out/f'page-{page+1:02d}'
-                  ocr=subprocess.run(['tesseract',str(img),str(txtbase),'--dpi','300'],capture_output=True,text=True)
+                  subprocess.run(['tesseract',str(img),str(txtbase),'--dpi','300'],check=False,capture_output=True,text=True)
                   txt=txtbase.with_suffix('.txt')
                   texts.append(txt.read_text(errors='replace') if txt.exists() else '')
               (out/'combined.txt').write_text('\n\n'.join(texts),encoding='utf-8')
