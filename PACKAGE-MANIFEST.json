@@ -1,0 +1,152 @@
+{
+  "package": "usar-full-corpus-public-law-codifier",
+  "version": "2.0.0",
+  "scope": "Every canonical public-law card in the NARA public-law Trello export; applies only after corpus completeness gates pass.",
+  "minimum_actionable_active_remaining_laws": 100,
+  "maximum_active_source_holds": 10,
+  "stress_test_law_count": 205,
+  "python_tested": "3.13.5",
+  "platform_tested": "Linux-4.4.0-x86_64-with-glibc2.41",
+  "files": [
+    {
+      "path": "LEGAL-METHODOLOGY.md",
+      "bytes": 9403,
+      "sha256": "7ceee89797c2b23f9d31996a33b9ec3174eb23e66476998878ab90e796e59704"
+    },
+    {
+      "path": "MASS_CODIFY_ALL_PUBLIC_LAWS.bat",
+      "bytes": 2019,
+      "sha256": "202ab0a0b831fbd760b8e507cbfe2a2eb146c4d04ee007143846bdfc042164ce"
+    },
+    {
+      "path": "MASS_CODIFY_PREVIEW.bat",
+      "bytes": 577,
+      "sha256": "263027c72f4ad1112c03ab3b22fb526011b2c5cc169217457afb9b3b975e1abc"
+    },
+    {
+      "path": "POST_TRELLO_COMMENTS.bat",
+      "bytes": 491,
+      "sha256": "fe307e3ea55c78d1267f5334bfc8ba63342dd794ac556080d8e04c07c20c8355"
+    },
+    {
+      "path": "README-FIRST.md",
+      "bytes": 7318,
+      "sha256": "ac6c2cadf8b6586c64b6929876ad71695029f67369cec2236833b4e90cb8bdfb"
+    },
+    {
+      "path": "TEST-RESULTS.txt",
+      "bytes": 1149,
+      "sha256": "61c4e6cbddcdb3fe607926ff105323ed424f4e0f5ffdb3783df21754de846d1a"
+    },
+    {
+      "path": "VERIFY-RESULTS.txt",
+      "bytes": 1207,
+      "sha256": "ba794e41c4888279440056f4c4953823fa0c4f066daadf44531cd7b171d17634"
+    },
+    {
+      "path": "VERIFY_PACKAGE.bat",
+      "bytes": 272,
+      "sha256": "fcc41c863f091a2955a8ec81dca89bfa4d67c4621c1af9617a2493e50bc5b189"
+    },
+    {
+      "path": "config/non_code_rules.json",
+      "bytes": 1229,
+      "sha256": "f7a589aaf7fa59d48ffe58ce20b203eb43daf4306cce83a18ccfe90b4fe258a2"
+    },
+    {
+      "path": "config/subject_map.json",
+      "bytes": 6103,
+      "sha256": "9aeeb8292f74c7f8533e0499f3f8ecd664ecfdeba93ff138010847166ee755b0"
+    },
+    {
+      "path": "lib/__init__.py",
+      "bytes": 51,
+      "sha256": "da397b5761f2d35ef0082dec58ad578d40187cac9d7ee3987c313b819c78880e"
+    },
+    {
+      "path": "lib/apply_engine.py",
+      "bytes": 24579,
+      "sha256": "0e0eaa48c6e6bc9fc5bac1f8e06cb6137029c6ea6d12192814998e4f4ea0b6e2"
+    },
+    {
+      "path": "lib/codebase.py",
+      "bytes": 23950,
+      "sha256": "6893981551f5f26b42c0451dc1a56e249aa34357692e50aa28ba7dbc3b1f3cd8"
+    },
+    {
+      "path": "lib/common.py",
+      "bytes": 5400,
+      "sha256": "bbd8738e1e078d0888eb8ad230e6a5499ebd21df4135a5eacb14a8912ed6ae36"
+    },
+    {
+      "path": "lib/legal_analysis.py",
+      "bytes": 35334,
+      "sha256": "e48c1d1dd26bbfb290ac5ff2d18f3e6fd8ad6176bd863a9938a14029f7f9b304"
+    },
+    {
+      "path": "lib/model.py",
+      "bytes": 3751,
+      "sha256": "d2f69d958dd52fc5e76c150c8de9a9c1fe17edd33242a120af03bd9fea696a79"
+    },
+    {
+      "path": "lib/reports.py",
+      "bytes": 27713,
+      "sha256": "dd545e900c65dc99b88629c4f6a0a3abcc4b34c16c340354948006d010458568"
+    },
+    {
+      "path": "lib/sources.py",
+      "bytes": 28441,
+      "sha256": "d330b3a1e9f7e5cfeab40cd265afe8e1f6707fc55e43cb06753c783546de5ae4"
+    },
+    {
+      "path": "lib/trello.py",
+      "bytes": 10891,
+      "sha256": "688bd2148c4919d85cdc97aaaab71a9c8c8f89ca3dcfb9ba91dcbd0924bee0bc"
+    },
+    {
+      "path": "mass_codifier.py",
+      "bytes": 15635,
+      "sha256": "c6cca9fd2c0ede181eee171693fcc99672329cb4280856260489ec29615fca8d"
+    },
+    {
+      "path": "post_trello_comments.py",
+      "bytes": 3955,
+      "sha256": "e66e02388cba10250db1a2450a747a9a0593ba1a3150ec42b63c6ff1f3131191"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 45,
+      "sha256": "5b5917330952ec85f987050c89ab709e40467619b0ad0b86d633eb14ed160640"
+    },
+    {
+      "path": "templates/README.repository.md",
+      "bytes": 5593,
+      "sha256": "96700b6657a6979dcc171d0967a1a4b66075d869b3b7144d92589f3fac6bb9c3"
+    },
+    {
+      "path": "tests/run_tests.bat",
+      "bytes": 289,
+      "sha256": "8ec81764a1a217fd30711919fc988ae01ce217d5f7751b8e47bd731062f705ac"
+    },
+    {
+      "path": "tests/test_large_corpus.py",
+      "bytes": 8036,
+      "sha256": "d92e6064326f55468df21b5175b93ac3ff7f93b3caea05478e7bd79d3972c883"
+    },
+    {
+      "path": "tests/test_mass_codifier.py",
+      "bytes": 13797,
+      "sha256": "aceffce89e61a488b41e43296dc8b0e7a15e5762631e70e1dd126fd36b960458"
+    },
+    {
+      "path": "tests/test_safety_cases.py",
+      "bytes": 7338,
+      "sha256": "4a2433927d2189cd93deff31a44d7b0d36dc1b6fd2c7b9b60c7c5a5d1d6790d0"
+    },
+    {
+      "path": "verify_package.py",
+      "bytes": 1757,
+      "sha256": "fe1995e9896d796bfa94b4ccd0407de0b36dcba8c962038b985fa3eb6753ecbb"
+    }
+  ]
+}

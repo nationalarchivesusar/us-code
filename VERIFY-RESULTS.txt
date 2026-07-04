@@ -1,0 +1,14 @@
+test_205_law_transaction (test_large_corpus.LargeCorpusTest.test_205_law_transaction) ... ok
+test_board_canonicalization_and_description_source (test_mass_codifier.MassCodifierTests.test_board_canonicalization_and_description_source) ... ok
+test_classification_and_application (test_mass_codifier.MassCodifierTests.test_classification_and_application) ... ok
+test_full_cli_pipeline_and_repository_repair (test_mass_codifier.MassCodifierTests.test_full_cli_pipeline_and_repository_repair) ... ok
+test_already_incorporated_later_law_suppresses_older (test_safety_cases.SafetyCases.test_already_incorporated_later_law_suppresses_older) ... ok
+test_primary_incorporation_reference_only (test_safety_cases.SafetyCases.test_primary_incorporation_reference_only) ... ok
+test_repository_check_failure_restores_title_and_new_state (test_safety_cases.SafetyCases.test_repository_check_failure_restores_title_and_new_state) ... ok
+test_subdivision_repeal_is_not_section_repeal (test_safety_cases.SafetyCases.test_subdivision_repeal_is_not_section_repeal) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 4.251s
+
+OK
+Package verified: 28 packaged files and all tests passed.
