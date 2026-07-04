@@ -4,6 +4,13 @@ on:
   push:
     branches:
       - codification/full-implementation
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - synchronize
+      - reopened
   workflow_dispatch:
 
 permissions:
@@ -11,7 +18,7 @@ permissions:
   actions: write
 
 concurrency:
-  group: full-codification
+  group: full-codification-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -56,18 +63,17 @@ jobs:
           mkdir -p codification-branch-audit
           python - <<'PY'
           from __future__ import annotations
-          import hashlib, json, re
+          import hashlib, json, re, subprocess
           from collections import Counter, defaultdict
           from pathlib import Path
           from lxml import etree
 
           root = Path('.')
           out = root / 'codification-branch-audit'
-          ns = {'u': 'http://xml.house.gov/schemas/uslm/1.0'}
-          titles = []
           ids = Counter()
           law_locations = defaultdict(list)
           findings = []
+          titles = []
           law_re = re.compile(r'(?:Pub(?:lic)?\.?\s*L(?:aw)?\.?|Public Law)\s*(\d{1,3})\s*[-–—]\s*(\d{1,4})', re.I)
 
           for path in sorted((root / 'usc').glob('usc*.xml')):
@@ -84,8 +90,7 @@ jobs:
                   findings.append(f'{path}: unresolved Git LFS pointer')
                   titles.append(entry)
                   continue
-              parser = etree.XMLParser(huge_tree=True, recover=False)
-              tree = etree.parse(str(path), parser)
+              tree = etree.parse(str(path), etree.XMLParser(huge_tree=True, recover=False))
               for el in tree.iter():
                   value = el.get('id')
                   if value:
@@ -109,8 +114,8 @@ jobs:
               findings.append(f'duplicate XML ids: {len(duplicate_ids)}')
 
           payload = {
-              'head': __import__('subprocess').check_output(['git','rev-parse','HEAD'], text=True).strip(),
-              'branch': __import__('subprocess').check_output(['git','branch','--show-current'], text=True).strip(),
+              'head': subprocess.check_output(['git','rev-parse','HEAD'], text=True).strip(),
+              'branch': subprocess.check_output(['git','branch','--show-current'], text=True).strip(),
               'titles': titles,
               'project_law_locations': dict(sorted(law_locations.items())),
               'duplicate_ids': duplicate_ids,
