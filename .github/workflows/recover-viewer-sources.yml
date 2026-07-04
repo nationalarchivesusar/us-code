@@ -14,7 +14,7 @@ permissions:
 jobs:
   recover:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
@@ -44,6 +44,7 @@ jobs:
             'PL-018-141': { id: '19W_vSdy0jLzg2fzIQv4xNlkvAdhdCuY6', pages: 15 },
             'PL-018-142': { id: '1-SEQeh3WiGffnAa_YDG87XKqRzUTfOeQ', pages: 4 },
             'PL-025-182': { id: '1oGACcmQOwdwGOGR3uCpumI3K8l8LV93_', pages: 20 },
+            'PL-037-261': { id: '1n1XLX1hMQQ0LFWg6kIM_CL4m8JgCOsz_', pages: 120 },
             'PL-012-076': { id: '1nJpAsDw6hVsDDFGzCXaf6T0zOpKDr3o2', pages: 20 },
           };
 
@@ -88,15 +89,14 @@ jobs:
               fs.writeFileSync(path.join(out, 'viewer.html'), await page.content());
               fs.writeFileSync(path.join(out, 'body.txt'), await page.locator('body').innerText().catch(() => ''));
               for (let i = 0; i < info.pages + 8; i += 1) {
-                await page.screenshot({ path: path.join(out, `screen-${String(i+1).padStart(3,'0')}.png`) });
                 await page.keyboard.press('PageDown');
-                await page.mouse.wheel(0, 1100);
-                await page.waitForTimeout(900);
+                await page.mouse.wheel(0, 1200);
+                await page.waitForTimeout(700);
               }
               await page.keyboard.press('Home');
               for (let i = 0; i < info.pages + 4; i += 1) {
                 await page.keyboard.press('ArrowRight');
-                await page.waitForTimeout(700);
+                await page.waitForTimeout(500);
               }
               await page.waitForTimeout(3000);
             } catch (err) {
@@ -111,7 +111,7 @@ jobs:
           node recover-viewer.mjs > viewer-recovery/browser.log 2>&1
           browser_rc=$?
 
-          for law in PL-018-141 PL-018-142 PL-025-182 PL-012-076; do
+          for law in PL-018-141 PL-018-142 PL-025-182 PL-037-261 PL-012-076; do
             out="viewer-recovery/$law"
             mkdir -p "$out/ocr"
             : > "$out/combined.txt"
@@ -122,14 +122,6 @@ jobs:
               tesseract "$img" "$base" --dpi 300 >/dev/null 2>&1 || true
               if [[ -s "$base.txt" ]]; then cat "$base.txt" >> "$out/combined.txt"; printf '\n\n' >> "$out/combined.txt"; fi
             done < <(find "$out" -maxdepth 1 -type f \( -name 'network-*.png' -o -name 'network-*.jpg' -o -name 'network-*.webp' \) | sort)
-            if (( found == 0 )); then
-              while IFS= read -r img; do
-                found=$((found+1))
-                base="$out/ocr/screen-$(printf '%03d' "$found")"
-                tesseract "$img" "$base" --dpi 144 >/dev/null 2>&1 || true
-                if [[ -s "$base.txt" ]]; then cat "$base.txt" >> "$out/combined.txt"; printf '\n\n' >> "$out/combined.txt"; fi
-              done < <(find "$out" -maxdepth 1 -type f -name 'screen-*.png' | sort)
-            fi
             printf 'captured_images=%s\ncombined_chars=%s\n' "$found" "$(wc -c < "$out/combined.txt")" > "$out/summary.txt"
           done
           rm -f recover-viewer.mjs
