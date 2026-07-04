@@ -69,6 +69,31 @@ function fakeOrdinaryNode(localName = "note") {
   };
 }
 
+function fakeCrossHeadingNote(id = "id-crossheading-0001") {
+  return {
+    nodeType: 1,
+    namespaceURI: USLM_NS,
+    localName: "note",
+    getAttribute(name) {
+      if (name === "id") return id;
+      if (name === "role") return "crossHeading";
+      return null;
+    },
+  };
+}
+
+function fakeNotesContainer(children) {
+  return {
+    nodeType: 1,
+    namespaceURI: USLM_NS,
+    localName: "notes",
+    childNodes: children,
+    getAttribute() {
+      return null; // real data never sets `role` on the <notes> container itself
+    },
+  };
+}
+
 test("isUsarNoteElement is true only for note elements with an rp- id", () => {
   const ctx = loadAppContext();
   assert.equal(ctx.isUsarNoteElement(fakeNote({ id: "rp-abc123" })), true);
@@ -133,6 +158,107 @@ test("orderNotesForDisplay handles a notes list with only USAR notes", () => {
   const usar2 = fakeNote({ id: "rp-2" });
   assert.deepEqual(ctx.orderNotesForDisplay([usar1, usar2]), [usar1, usar2]);
 });
+
+// -- Issue 2: ordering must be GLOBAL across every <notes> container in a --
+// -- section, not just within each container individually. A section can --
+// -- carry more than one direct <notes> container (e.g. a combined-       --
+// -- identifier section, or a statutory note targeting a different        --
+// -- identifier than the section's own). collectAllNoteChildren() flattens --
+// -- every container's children in document order before orderNotesForDisplay --
+// -- reorders the single combined list -- this is exactly what           --
+// -- renderNotesPanel() does, so testing the two composed together covers --
+// -- the real rendering path without needing a full fake DOM renderer.    --
+
+test("a single <notes> container with mixed notes orders USAR notes first (baseline)", () => {
+  const ctx = loadAppContext();
+  const ordinary = fakeOrdinaryNode();
+  const usar = fakeNote({ id: "rp-1", topic: "amendments" });
+  const container = fakeNotesContainer([ordinary, usar]);
+
+  const result = ctx.orderNotesForDisplay(ctx.collectAllNoteChildren([container]));
+  assert.deepEqual(result, [usar, ordinary]);
+});
+
+test("a USAR note in a LATER container still floats above an ordinary note from an EARLIER container", () => {
+  const ctx = loadAppContext();
+  const earlierOrdinary = fakeOrdinaryNode();
+  const laterUsar = fakeNote({ id: "rp-later", topic: "amendments" });
+  const containerA = fakeNotesContainer([earlierOrdinary]);
+  const containerB = fakeNotesContainer([laterUsar]);
+
+  const result = ctx.orderNotesForDisplay(ctx.collectAllNoteChildren([containerA, containerB]));
+  assert.deepEqual(result, [laterUsar, earlierOrdinary]);
+});
+
+test("multiple USAR notes across multiple containers preserve their original relative order", () => {
+  const ctx = loadAppContext();
+  const usarA1 = fakeNote({ id: "rp-a1" });
+  const ordinaryA = fakeOrdinaryNode();
+  const usarB1 = fakeNote({ id: "rp-b1" });
+  const usarB2 = fakeNote({ id: "rp-b2" });
+  const containerA = fakeNotesContainer([usarA1, ordinaryA]);
+  const containerB = fakeNotesContainer([usarB1, usarB2]);
+
+  const result = ctx.orderNotesForDisplay(ctx.collectAllNoteChildren([containerA, containerB]));
+  assert.deepEqual(result, [usarA1, usarB1, usarB2, ordinaryA]);
+});
+
+test("ordinary notes across multiple containers preserve their original relative order", () => {
+  const ctx = loadAppContext();
+  const ordinaryA1 = fakeOrdinaryNode();
+  const ordinaryA2 = fakeOrdinaryNode();
+  const ordinaryB1 = fakeOrdinaryNode();
+  const usar = fakeNote({ id: "rp-1" });
+  const containerA = fakeNotesContainer([ordinaryA1, ordinaryA2]);
+  const containerB = fakeNotesContainer([usar, ordinaryB1]);
+
+  const result = ctx.orderNotesForDisplay(ctx.collectAllNoteChildren([containerA, containerB]));
+  assert.deepEqual(result, [usar, ordinaryA1, ordinaryA2, ordinaryB1]);
+});
+
+test("a section with no USAR notes at all is completely unaffected across multiple containers", () => {
+  const ctx = loadAppContext();
+  const a1 = fakeOrdinaryNode();
+  const a2 = fakeOrdinaryNode();
+  const b1 = fakeOrdinaryNode();
+  const containerA = fakeNotesContainer([a1, a2]);
+  const containerB = fakeNotesContainer([b1]);
+
+  const result = ctx.orderNotesForDisplay(ctx.collectAllNoteChildren([containerA, containerB]));
+  assert.deepEqual(result, [a1, a2, b1]);
+});
+
+test("an editorial cross-heading note (role=crossHeading) is never misclassified as USAR and stays glued to the ordinary notes that follow it", () => {
+  const ctx = loadAppContext();
+  const crossHeading = fakeCrossHeadingNote();
+  const followingOrdinary = fakeOrdinaryNode();
+  const usar = fakeNote({ id: "rp-1" });
+  const container = fakeNotesContainer([crossHeading, followingOrdinary, usar]);
+
+  assert.equal(ctx.isUsarNoteElement(crossHeading), false);
+  const result = ctx.orderNotesForDisplay(ctx.collectAllNoteChildren([container]));
+  // USAR note floats to the front, but the cross-heading stays immediately
+  // ahead of the ordinary note it introduces -- their relative order to
+  // each other is untouched.
+  assert.deepEqual(result, [usar, crossHeading, followingOrdinary]);
+});
+
+test("collectAllNoteChildren on a single container is a pure pass-through in document order", () => {
+  const ctx = loadAppContext();
+  const a = fakeOrdinaryNode();
+  const b = fakeNote({ id: "rp-1" });
+  const container = fakeNotesContainer([a, b]);
+  assert.deepEqual(ctx.collectAllNoteChildren([container]), [a, b]);
+});
+
+// Title 42 chunked sections use the exact same renderNotesPanel()/
+// collectAllNoteChildren()/orderNotesForDisplay() call path as ordinary
+// titles (see displaySection() in app.js): rendering is source-agnostic,
+// it operates on whatever <section> element it's given regardless of
+// whether that element came from fetchTitleDocument() (ordinary titles) or
+// fetchChunkSection() (Title 42). There is no separate code path to test
+// here; this was also confirmed live against a real chunked Title 42
+// section during manual verification.
 
 // Regression coverage for a rendering defect found while spot-checking
 // cleaned reserved sections (Phase 7): repealed sections' own <num> text

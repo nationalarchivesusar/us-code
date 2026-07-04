@@ -6,11 +6,11 @@
 /tools/rp_codifier.py
 /tools/clean_reserved_headings.py
 /tools/sync_stale_toc_headings.py
-/tools/strip_non_usar_notes_from_reserved.py
+/tools/audit_and_restore_reserved_notes.py
 tests/test_reserve_section_toc.py
 tests/test_clean_reserved_headings.py
 tests/test_sync_stale_toc_headings.py
-tests/test_strip_non_usar_notes.py
+tests/test_audit_and_restore_reserved_notes.py
 
 # Local agent/editor metadata
 /.agents/

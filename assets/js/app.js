@@ -389,6 +389,40 @@ function getUrlState() {
   };
 }
 
+const REDIRECT_PARAM = "redirect";
+
+// GitHub Pages SPA fallback (see 404.html). GH Pages has no server-side
+// rewriting, so a direct request to a path like /cite/42/1983/ -- no
+// matching static file -- returns a real 404 response whose body is
+// 404.html. That page redirects back here with the originally-requested
+// path (plus any query string and hash) encoded in a `redirect` query
+// parameter. This restores the true URL via history.replaceState -- a
+// client-side-only change that never triggers a network request -- before
+// any of the app's own routing logic reads window.location, so the address
+// bar ends up showing the exact original URL and there is no possibility
+// of looping back through 404.html again (replaceState cannot cause
+// another navigation, let alone another 404).
+function restoreRedirectedPath() {
+  const params = new URLSearchParams(window.location.search);
+  const redirect = params.get(REDIRECT_PARAM);
+  if (!redirect) return;
+
+  let decoded;
+  try {
+    decoded = decodeURIComponent(redirect);
+  } catch {
+    return;
+  }
+
+  let target;
+  try {
+    target = new URL(decoded, APP_BASE_URL);
+  } catch {
+    return;
+  }
+  history.replaceState(null, "", target.toString());
+}
+
 function getCitationPathState() {
   const relativePath = window.location.pathname
     .slice(APP_BASE_URL.pathname.length)
@@ -622,6 +656,12 @@ function initializePrimaryNavigation() {
 }
 
 async function bootstrap() {
+  // Must run first: if we were served via the 404.html SPA fallback, fix
+  // the address bar up to the true requested URL before anything else
+  // (including initializePrimaryNavigation, which reads state derived from
+  // the current location indirectly through later navigation) reads it.
+  restoreRedirectedPath();
+
   // Wire up brand/primary-nav clicks before any async work so that the home
   // link never falls back to the HTML default `href="./"`, which would reload
   // the current `/cite/...` route and leave the user locked inside it.
@@ -654,7 +694,11 @@ async function bootstrap() {
   setSearchMode(state.searchMode);
   window.addEventListener("popstate", handlePopState);
   await restoreFromLocation();
-  if (!state.selectedTitleId) {
+  if (!state.selectedTitleId && !elements.message.textContent) {
+    // Only fall back to the generic prompt if restoreFromLocation() didn't
+    // already set a more specific message (e.g. "Requested title could not
+    // be found."); otherwise that message was immediately clobbered and a
+    // bad direct-citation link silently looked identical to a fresh visit.
     elements.message.textContent = "Select a title to begin browsing the code.";
   }
 }
@@ -1216,12 +1260,7 @@ function renderSection(sectionElement, options = {}) {
   notesPanel.id = "section-notes";
   notesButton.setAttribute("aria-controls", notesPanel.id);
   if (notesList.length) {
-    notesList.forEach((notes) => {
-      const noteElement = renderNotes(notes);
-      if (noteElement) {
-        notesPanel.appendChild(noteElement);
-      }
-    });
+    notesPanel.appendChild(renderNotesPanel(notesList));
   } else {
     const emptyNotes = document.createElement("p");
     emptyNotes.className = "section-empty";
@@ -1697,15 +1736,40 @@ function orderNotesForDisplay(children) {
   return usarChildren.concat(ordinaryChildren);
 }
 
-function renderNotes(notes) {
+function notesContainerHeadingText(notes) {
+  const heading = notes.getAttribute("role") || "Notes";
+  return heading.replace(/([A-Z])/g, " $1").trim();
+}
+
+// A section can carry more than one direct <notes> container (for example,
+// a combined-identifier section, or a statutory note targeting a different
+// identifier than the section's own). Reordering USAR notes to the front
+// within each container separately is not enough: an ordinary note from an
+// *earlier* container would still render above a USAR note from a *later*
+// one. This collects every direct-child note from every container in
+// document order first, then reorders that single combined list once, so
+// USAR notes end up first across the whole panel regardless of which
+// container originally held them. The underlying XML order is untouched --
+// only this rendered, in-memory list is reordered.
+function collectAllNoteChildren(notesContainers) {
+  return notesContainers.flatMap((notes) => Array.from(notes.childNodes));
+}
+
+function renderNotesPanel(notesContainers) {
   const fragment = document.createElement("section");
   fragment.className = "usc-note";
-  const heading = notes.getAttribute("role") || "Notes";
+
+  // Every <notes> container in the real data omits `role`, so this is
+  // always the generic "Notes" label today; repeating it once per
+  // container added no distinguishing information, so the panel now shows
+  // it exactly once. If containers ever do carry distinct roles, the
+  // first container's heading is used as the overall panel label rather
+  // than silently discarding the others' text.
   const h3 = document.createElement("h3");
-  h3.textContent = heading.replace(/([A-Z])/g, " $1").trim();
+  h3.textContent = notesContainerHeadingText(notesContainers[0]);
   fragment.appendChild(h3);
 
-  orderNotesForDisplay(Array.from(notes.childNodes)).forEach((child) => {
+  orderNotesForDisplay(collectAllNoteChildren(notesContainers)).forEach((child) => {
     const rendered = renderNode(child);
     if (rendered) fragment.appendChild(rendered);
   });

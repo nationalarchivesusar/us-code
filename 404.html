@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>US Code Library | United States of America Roblox</title>
+    <script>
+      // GitHub Pages SPA fallback.
+      //
+      // This site is a single-page app that uses history.pushState to
+      // produce shareable URLs like /us-code/cite/42/1983/. GitHub Pages
+      // has no server-side URL rewriting: it serves whatever static file
+      // matches the request path, and this 404.html for everything else.
+      // Crucially, a 404 response is not a redirect -- the browser's
+      // address bar and window.location still show the URL the user
+      // actually requested (a direct link, a bookmark, a page refresh).
+      //
+      // So: capture that original path (plus any query string and hash,
+      // e.g. a `?p=` pinpoint), and send the browser to the real app entry
+      // point with it encoded in a `redirect` query parameter. app.js's
+      // restoreRedirectedPath() decodes that on load and calls
+      // history.replaceState to put the address bar back to the exact
+      // original URL -- a client-side-only change, so this never loops
+      // back through 404.html again.
+      //
+      // This performs exactly one real navigation (this page to the app's
+      // index.html); location.replace (not .href) is used so 404.html never
+      // becomes its own back-button history entry, keeping back/forward
+      // behaving as if the direct link had loaded normally.
+      (function () {
+        var BASE_PATH = "/us-code/";
+        var loc = window.location;
+        var afterBase = loc.pathname.startsWith(BASE_PATH)
+          ? loc.pathname.slice(BASE_PATH.length)
+          : loc.pathname.replace(/^\/+/, "");
+        var suffix = afterBase + loc.search + loc.hash;
+        var target = BASE_PATH + "?redirect=" + encodeURIComponent(suffix);
+        window.location.replace(target);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

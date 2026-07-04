@@ -66,6 +66,11 @@ jobs:
             --disable-pip-version-check \
             lxml
 
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
       - name: Build chunked Title 42 assets
         shell: bash
         run: |
@@ -104,6 +109,31 @@ jobs:
             echo "::error::data/titles.json was not generated."
             exit 1
           fi
+
+      - name: Run validation checks
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          echo "::group::Encoding audit (Unicode replacement characters, mojibake)"
+          python tools/check_encoding.py
+          echo "::endgroup::"
+
+          echo "::group::Title 42 chunked build validation"
+          python tools/check_title42_build.py
+          echo "::endgroup::"
+
+          echo "::group::Applied-material audit (duplicate/malformed project-generated XML)"
+          python tools/audit_applied_material.py
+          echo "::endgroup::"
+
+          echo "::group::Python unit tests (public test suite only)"
+          python -m unittest discover -s tests -p "test_*.py" -v
+          echo "::endgroup::"
+
+          echo "::group::JavaScript tests (USAR note ordering, direct-citation fallback)"
+          node --test tests/test_usar_notes.mjs tests/test_citation_routing.mjs
+          echo "::endgroup::"
 
       - name: Remove original Title 42 XML from publishable source
         shell: bash

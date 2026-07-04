@@ -6,6 +6,12 @@
       "runtimeExecutable": "python",
       "runtimeArgs": ["-m", "http.server", "8321"],
       "port": 8321
+    },
+    {
+      "name": "pages-like",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["tools/serve_like_pages.py", "--port", "8322"],
+      "port": 8322
     }
   ]
 }
