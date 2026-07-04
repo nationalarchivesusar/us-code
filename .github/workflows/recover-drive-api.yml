@@ -1,0 +1,58 @@
+name: Recover public-law sources through Drive API
+
+on:
+  pull_request:
+    branches: [main]
+    types: [synchronize]
+    paths:
+      - .github/workflows/recover-drive-api.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+      - name: Query all recoverable Drive endpoints
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p drive-api-recovery
+          API_KEY='AIzaSyDVQw45DwoYh632gvsP5vPDqEKvb-Ywnb8'
+          while IFS=$'\t' read -r law id thumb; do
+            out="drive-api-recovery/$law"; mkdir -p "$out"
+            urls=(
+              "https://www.googleapis.com/drive/v3/files/$id?fields=*&key=$API_KEY"
+              "https://www.googleapis.com/drive/v3/files/$id?alt=media&key=$API_KEY"
+              "https://www.googleapis.com/drive/v2/files/$id?key=$API_KEY"
+              "https://www.googleapis.com/drive/v2/files/$id?alt=media&key=$API_KEY"
+              "https://clients6.google.com/drive/v2internal/files/$id?key=$API_KEY"
+              "https://clients6.google.com/drive/v2internal/files/$id?alt=media&key=$API_KEY"
+              "https://drive.google.com/thumbnail?id=$id&sz=w2000"
+              "https://lh3.googleusercontent.com/d/$id=w2000"
+              "$thumb"
+            )
+            i=0
+            for url in "${urls[@]}"; do
+              i=$((i+1))
+              curl -L --silent --show-error --max-time 90 -A 'Mozilla/5.0' -D "$out/$i.headers" -o "$out/$i.body" "$url" || true
+              file "$out/$i.body" > "$out/$i.file" || true
+              printf '%s\n' "$url" > "$out/$i.url"
+            done
+          done <<'EOF'
+          PL-018-141	19W_vSdy0jLzg2fzIQv4xNlkvAdhdCuY6	https://drive.google.com/u/0/drive-viewer/AKGpihYYXfp-GTc0khGQeSzRsC3rkBOPUDWh-3HYCORFH8pBCgU2-RuiAo5tSESaG23R5P3o6EDwem8FqO-FxDcyZrbGDm_Ccddyo_g=s1600-rw-v1
+          PL-018-142	1-SEQeh3WiGffnAa_YDG87XKqRzUTfOeQ	https://drive.google.com/u/0/drive-viewer/AKGpihamSVooDisZ8fkNskgi30ZMjhaMPJvJ19o-auP1y8ylVfk7EDTb7NjbU_0gyFyQTxfeWchdXVexWVK69uKYwHJGf2BtU5u8zIA=s1600-rw-v1
+          PL-012-076	1nJpAsDw6hVsDDFGzCXaf6T0zOpKDr3o2	https://drive.google.com/thumbnail?id=1nJpAsDw6hVsDDFGzCXaf6T0zOpKDr3o2&sz=w2000
+          EOF
+          find drive-api-recovery -name '*.body' -printf '%p %s bytes\n' | sort
+      - uses: actions/upload-artifact@v4
+        with:
+          name: drive-api-source-recovery
+          path: drive-api-recovery/
+          retention-days: 7
