@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "law_id": "PL-004-036",
+  "public_law": "4-36",
+  "law_section": "II",
+  "status": "approved",
+  "summary": "Codifies the active Defense Heraldic Services Act of 2022. The Act repeals and reserves 10 U.S.C. 7594 and enacts new 10 U.S.C. 206. The enacted reference to subchapter II of chapter 48 is treated as an obsolete/clerically erroneous structural reference because section 206 is expressly specified and current title 10 places sections 201-205 in subchapter II of chapter 8; new section 206 is inserted after section 205 in that subchapter.",
+  "operations": [
+    {
+      "op": "reserve_section",
+      "title": "10",
+      "section": "7594",
+      "expected_sha256": "__AUTO_S7594__",
+      "heading": "[Reserved]",
+      "toc_heading": "[Reserved]",
+      "amendment_note": "repealed and reserved this section."
+    },
+    {
+      "op": "insert_after_xml",
+      "title": "10",
+      "target_identifier": "/us/usc/t10/s205",
+      "expected_sha256": "__AUTO_S205__",
+      "fragment_file": "PL-004-036-t10-s206-fragment.xml"
+    },
+    {
+      "op": "insert_toc_item_after",
+      "title": "10",
+      "after_href": "/us/usc/t10/s205",
+      "href": "/us/usc/t10/s206",
+      "number": "206",
+      "heading": "Furnishing of heraldic services."
+    }
+  ]
+}
