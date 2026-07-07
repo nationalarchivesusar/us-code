@@ -1,0 +1,199 @@
+{
+  "reviewer": "law-auditor-I",
+  "group_index": 18,
+  "law_count": 10,
+  "source_manifest": "audit/review/manifest-18.json",
+  "output_path": "audit/review/review-18.json",
+  "laws": [
+    {
+      "law_id": "PL-024-176",
+      "public_law": "24-176",
+      "title": "Public Law 24-176 | Comprehensive Federal Government Funding Act",
+      "final_status": "source_unavailable",
+      "provision_disposition": "historical-note-only",
+      "required_code_treatment": "no current code text; keep only source-limited history",
+      "current_implementation": {
+        "state": "not-applicable",
+        "xml": "no verified XML placement",
+        "branch_vs_origin": "no relevant branch change identified"
+      },
+      "source_evidence": {
+        "law_report": "codification/mass_migration/latest/reports/laws/PL-024-176.md",
+        "classification": "manifest marks the source unrecoverable; final report says SOURCE_UNAVAILABLE",
+        "code_register": "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+      },
+      "recommended_action": "Retain as unrecoverable history only and flag for source reacquisition."
+    },
+    {
+      "law_id": "PL-024-177",
+      "public_law": "24-177",
+      "title": "Public Law 24-177 | SS Jurisdiction Act",
+      "final_status": "repealed",
+      "provision_disposition": "historical-note-only",
+      "required_code_treatment": "no current code text",
+      "current_implementation": {
+        "state": "not-applicable",
+        "xml": "no verified XML placement",
+        "branch_vs_origin": "no relevant branch change identified"
+      },
+      "source_evidence": {
+        "law_report": "codification/mass_migration/latest/reports/laws/PL-024-177.md",
+        "classification": "final report classifies the Trello record as repealed and says it is not inserted as current Code text",
+        "code_register": "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+      },
+      "recommended_action": "Keep only a repeal-history note and do not add operative Code text."
+    },
+    {
+      "law_id": "PL-024-178",
+      "public_law": "24-178",
+      "title": "Public Law 24-178 | Equality in Employment Act",
+      "final_status": "current",
+      "provision_disposition": "amend-existing-text",
+      "required_code_treatment": "keep the 42 U.S.C. 2000e-2(a) amendment and a concise statutory note; no extra text beyond the direct amendment",
+      "current_implementation": {
+        "state": "already-incorporated",
+        "xml": "usc/usc42.xml",
+        "branch_vs_origin": "origin/main differs from HEAD; HEAD includes the inserted gender-identity and sexual-orientation amendment plus the USAR note"
+      },
+      "source_evidence": {
+        "law_report": "codification/mass_migration/latest/reports/laws/PL-024-178.md",
+        "source_text": "SEC 6(a)(1)-(2) expressly amends 42 U.S.C. 2000e-2(a)",
+        "xml": "usc/usc42.xml at 42 U.S.C. 2000e-2(a) shows the inserted text and amendment note"
+      },
+      "recommended_action": "Leave the Title 42 amendment in place and keep only a compact statutory note for the amendment history."
+    },
+    {
+      "law_id": "PL-025-179",
+      "public_law": "25-179",
+      "title": "Public Law 25-179 | Fiscal Year 21-2",
+      "final_status": "temporary-operative",
+      "provision_disposition": "temporary-statute-note",
+      "required_code_treatment": "treat SEC 5 as a temporary note at 2 U.S.C. 4501 and keep the appropriations material out of permanent Code text",
+      "current_implementation": {
+        "state": "note-only",
+        "xml": "usc/usc31.xml",
+        "branch_vs_origin": "origin/main differs from HEAD; HEAD contains a statutory note for PL-025-179"
+      },
+      "source_evidence": {
+        "law_report": "codification/mass_migration/latest/reports/laws/PL-025-179.md",
+        "source_text": "SEC 5 suspends adjustments under 2 U.S.C. 4501 for FY 21-2",
+        "xml": "usc/usc31.xml note id rp-pl025179-codification"
+      },
+      "recommended_action": "Keep only the temporary history note and do not promote the appropriations provisions to permanent text."
+    },
+    {
+      "law_id": "PL-025-180",
+      "public_law": "25-180",
+      "title": "Public Law 25-180 | Sanction Repealment Act",
+      "final_status": "repealed",
+      "provision_disposition": "historical-note-only",
+      "required_code_treatment": "no current code text; if the repeal of PL-009-055 is not already reflected elsewhere, record it only at the PL-009-055 home",
+      "current_implementation": {
+        "state": "no_verified_code_location",
+        "xml": "no relevant XML placement found",
+        "branch_vs_origin": "no relevant branch change identified"
+      },
+      "source_evidence": {
+        "law_report": "codification/mass_migration/latest/reports/laws/PL-025-180.md",
+        "source_text": "SEC 3(b) repeals PL 9-55 and SEC 3(c) nullifies the sanctions",
+        "code_register": "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+      },
+      "recommended_action": "Treat the law itself as repealed history and ensure any repeal-marking for PL-009-055 lives at the target's home, not as new permanent text here."
+    },
+    {
+      "law_id": "PL-025-181",
+      "public_law": "25-181",
+      "title": "Public Law 25-181 | Federal District of Columbia Criminal Code",
+      "final_status": "repealed",
+      "provision_disposition": "historical-note-only",
+      "required_code_treatment": "no current code text; preserve only as D.C. history if retained at all",
+      "current_implementation": {
+        "state": "not-applicable",
+        "xml": "no verified XML placement",
+        "branch_vs_origin": "no relevant branch change identified"
+      },
+      "source_evidence": {
+        "law_report": "codification/mass_migration/latest/reports/laws/PL-025-181.md",
+        "classification": "final report classifies the Trello record as repealed and rejects current Code insertion",
+        "code_register": "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+      },
+      "recommended_action": "Keep only source-limited history and do not surface the D.C. criminal code as current U.S. Code text."
+    },
+    {
+      "law_id": "PL-025-182",
+      "public_law": "25-182",
+      "title": "Public Law 25-182 | Pentagon Expansion and National Territory Authorization Act",
+      "final_status": "source_unavailable",
+      "provision_disposition": "historical-note-only",
+      "required_code_treatment": "no current code text; retain only source-limited history",
+      "current_implementation": {
+        "state": "not-applicable",
+        "xml": "no verified XML placement",
+        "branch_vs_origin": "no relevant branch change identified"
+      },
+      "source_evidence": {
+        "law_report": "codification/mass_migration/latest/reports/laws/PL-025-182.md",
+        "classification": "final report says no readable authenticated enactment text could be recovered",
+        "code_register": "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+      },
+      "recommended_action": "Retain only a source-limited record until the actual enactment text is recovered."
+    },
+    {
+      "law_id": "PL-025-183",
+      "public_law": "25-183",
+      "title": "Public Law 25-183 | Commerce and Labor Advancement Act (CLAA)",
+      "final_status": "superseded_before_codification",
+      "provision_disposition": "historical-note-only",
+      "required_code_treatment": "no current code insertion; keep only history because PL-031-226 repeals the law",
+      "current_implementation": {
+        "state": "no_current_code_insertion",
+        "xml": "no verified XML placement for this law in the current branch",
+        "branch_vs_origin": "no relevant branch change identified"
+      },
+      "source_evidence": {
+        "law_report": "codification/mass_migration/latest/reports/laws/PL-025-183.md",
+        "later_law": "PL-031-226 repeals PL-025-183 in its entirety",
+        "source_text": "SEC 6 establishes the Department of Commerce and Labor and related licensing/enforcement rules"
+      },
+      "recommended_action": "Keep the law only as superseded history and do not insert operative Code text."
+    },
+    {
+      "law_id": "PL-025-184",
+      "public_law": "25-184",
+      "title": "Public Law 25-184 | Legal Advisors, Representatives, and Professionals Exam Regulations (LARPER)",
+      "final_status": "superseded_before_codification",
+      "provision_disposition": "historical-note-only",
+      "required_code_treatment": "no current code insertion; keep only history because PL-033-238 repeals the law",
+      "current_implementation": {
+        "state": "no_current_code_insertion",
+        "xml": "no verified XML placement for this law in the current branch",
+        "branch_vs_origin": "no relevant branch change identified"
+      },
+      "source_evidence": {
+        "law_report": "codification/mass_migration/latest/reports/laws/PL-025-184.md",
+        "later_law": "PL-033-238 repeals PL-025-184 in its entirety",
+        "source_text": "SEC 6-12 create the Uniform Legal Practice Authority licensing and discipline framework"
+      },
+      "recommended_action": "Keep the law only as superseded history and do not insert operative Code text."
+    },
+    {
+      "law_id": "PL-025-185",
+      "public_law": "25-185",
+      "title": "Public Law 25-185 | Fiscal Year 21-3",
+      "final_status": "expired",
+      "provision_disposition": "historical-note-only",
+      "required_code_treatment": "exclude from permanent code text; if retained, keep only a historical note",
+      "current_implementation": {
+        "state": "incorrectly-implemented",
+        "xml": "usc/usc31.xml",
+        "branch_vs_origin": "origin/main differs from HEAD; HEAD includes a statutory note that still presents the act as current"
+      },
+      "source_evidence": {
+        "law_report": "codification/mass_migration/latest/reports/laws/PL-025-185.md",
+        "source_text": "SEC 3-14 are appropriations and reporting provisions for a short fiscal period; SEC 5 is a temporary 2 U.S.C. 4501 adjustment",
+        "xml": "usc/usc31.xml note id rp-pl025185-codification"
+      },
+      "recommended_action": "Reclassify the measure as expired appropriations history and remove any implication that it is current Code text."
+    }
+  ]
+}

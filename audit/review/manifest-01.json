@@ -1,0 +1,221 @@
+{
+  "reviewer": "reviewer-01",
+  "group_index": 1,
+  "law_count": 10,
+  "output_path": "audit/review/review-01.json",
+  "laws": [
+    {
+      "law_id": "PL-001-001",
+      "public_law": "1-1",
+      "title": "Public Law 1-1 | Enactment of the U.S. Codes Act",
+      "report_path": "audit/primary/batch-01-01.json",
+      "batch": 1,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION 2"
+      ],
+      "targets": [
+        "/us/usc/t1"
+      ]
+    },
+    {
+      "law_id": "PL-001-002",
+      "public_law": "1-2",
+      "title": "Public Law 1-2 | United States Bar Act",
+      "report_path": "audit/primary/batch-01-01.json",
+      "batch": 1,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION 3",
+        "SECTION 4"
+      ],
+      "targets": [
+        "/us/usc/t28"
+      ]
+    },
+    {
+      "law_id": "PL-001-003",
+      "public_law": "1-3",
+      "title": "Public Law 1-3 | Closing Cabinet Doors Act",
+      "report_path": "audit/primary/batch-01-01.json",
+      "batch": 1,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SECTION 4(a)-(h)",
+        "SECTION 4(i)"
+      ],
+      "targets": [
+        "/us/usc",
+        "/us/usc/t5"
+      ]
+    },
+    {
+      "law_id": "PL-001-004",
+      "public_law": "1-4",
+      "title": "Public Law 1-4 | Retracting of Resignations Act",
+      "report_path": "audit/primary/batch-01-01.json",
+      "batch": 1,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION 2(a)-(b)"
+      ],
+      "targets": [
+        "/us/usc/t18",
+        "/us/usc/t18/s918"
+      ]
+    },
+    {
+      "law_id": "PL-002-005",
+      "public_law": "2-5",
+      "title": "Public Law 2-5 | Judicial Efficiency Act (Keywords: Maximum, Minimum, Sentence, Sentencing)",
+      "report_path": "audit/primary/batch-01-01.json",
+      "batch": 1,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SECTION II",
+        "SECTION III"
+      ],
+      "targets": [
+        "/us/usc/t18"
+      ]
+    },
+    {
+      "law_id": "PL-002-006",
+      "public_law": "2-6",
+      "title": "Public Law 2-6 | Shelby-Kabob Act of 2021",
+      "report_path": "audit/primary/batch-01-01.json",
+      "batch": 1,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SECTION II",
+        "SECTION III"
+      ],
+      "targets": [
+        "/us/usc/t18",
+        "/us/usc/t18/s120",
+        "/us/usc/t18/s250"
+      ]
+    },
+    {
+      "law_id": "PL-002-007",
+      "public_law": "2-7",
+      "title": "Public Law 2-7 | Court of Appeals Temporary Suspension Act of 2021",
+      "report_path": "audit/primary/batch-01-01.json",
+      "batch": 1,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SECTION II"
+      ],
+      "targets": [
+        "/us/usc/t28"
+      ]
+    },
+    {
+      "law_id": "PL-002-008",
+      "public_law": "2-8",
+      "title": "Public Law 2-8 | National Security Act of 2021",
+      "report_path": "audit/primary/batch-01-01.json",
+      "batch": 1,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION II",
+        "SECTION III",
+        "SECTION IV",
+        "SECTION V",
+        "SECTION VI",
+        "SECTION VII"
+      ],
+      "targets": [
+        "/us/usc/t50"
+      ]
+    },
+    {
+      "law_id": "PL-002-010",
+      "public_law": "2-10",
+      "title": "Public Law 2-10 | Amendment to the District of Columbia City Charter",
+      "report_path": "audit/primary/batch-01-01.json",
+      "batch": 1,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SECTION II(a)-(d)"
+      ],
+      "targets": [
+        "/us/usc/t40"
+      ]
+    },
+    {
+      "law_id": "PL-002-011",
+      "public_law": "2-11",
+      "title": "Public Law 2-11 | Criminal Statute of Limitations Act",
+      "report_path": "audit/primary/batch-01-02.json",
+      "batch": 1,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC II(a)-(c)"
+      ],
+      "targets": [
+        "/us/usc/t18"
+      ]
+    }
+  ]
+}

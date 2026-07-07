@@ -1,0 +1,720 @@
+{
+  "batch": 9,
+  "auditor": "law-auditor-I",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-035-253",
+      "public_law": "35-253",
+      "title": "Public Law 35-253 | Nobody Likes Plex (Fiscal Year 25-4) Bill 2025",
+      "status": "current",
+      "status_basis": "The source is an appropriations act with a short title, budget availability rule, line-item funding, an uncodified office designation, and an immediate effective date. Nothing in the text repeals the enactment or shows it to be superseded.",
+      "provisions": [
+        {
+          "ref": "SEC 1-4",
+          "text_summary": "Short title, purpose, emergency availability rule, and funding framework.",
+          "classes": [
+            "short-title",
+            "appropriation",
+            "uncodified-admin-direction"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The Act says it may be cited as the \"Nobody Likes Plex (Fiscal Year 25-4) Act 2025\" and that emergency amounts become available only upon presidential designation.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 5-13",
+          "text_summary": "Line-item appropriations for defense, transportation, commerce, state, homeland security, legislative branch, justice, executive office, and District of Columbia spending.",
+          "classes": [
+            "appropriation",
+            "authorization-approps",
+            "local-district"
+          ],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Examples include \"Department of Defense - $750,000\" and \"Metropolitan Police Department - $200,000\".",
+          "notes": "These are temporary appropriations and do not belong in permanent positive-law text."
+        },
+        {
+          "ref": "SEC 14",
+          "text_summary": "Findings-style condemnation of Plexinium and creation of a named office.",
+          "classes": [
+            "findings-or-sense",
+            "uncodified-admin-direction"
+          ],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The source says the position \"Chief Officer of Mismanagement and Poor Decisions\" shall be established.",
+          "notes": "Purely uncodified political language; keep out of the Code."
+        },
+        {
+          "ref": "SEC 15",
+          "text_summary": "Immediate effective-date clause.",
+          "classes": [
+            "effective-date"
+          ],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act shall become effective upon enactment.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t31/s101",
+        "detail": "The note is in the right general fiscal-law bucket, but it embeds the full text and a Trello link instead of a concise appropriations note."
+      },
+      "recommended_actions": [
+        "Remove the quoted-content dump and Trello link.",
+        "Keep only a concise appropriations note at the existing anchor.",
+        "Do not attempt to create permanent positive-law text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-035-254",
+      "public_law": "35-254",
+      "title": "Public Law 35-254 | An Act to repeal Public Law 28-205",
+      "status": "current",
+      "status_basis": "The source is an operative repealer: it gives a short title, includes findings, and expressly states that Public Law 28-205 \"is hereby repealed.\" No later enactment in the materials reviewed repeals this repealer.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and findings about Public Law 28-205.",
+          "classes": [
+            "short-title",
+            "findings-or-sense"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The bill says it may be cited as \"An Act to repeal Public Law 28-205\" and describes failures by the Council of Inspectors General.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Repeals Public Law 28-205 in full.",
+          "classes": [
+            "repeal"
+          ],
+          "treatment": "repeal-marking",
+          "target": "Public Law 28-205",
+          "exact_change": "Repeal Public Law 28-205 in its entirety.",
+          "evidence": "The source states that Public Law 28-205 \"is hereby repealed.\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s101",
+        "detail": "The XML treats the repealer itself as historical only, but the source makes this enactment the operative repeal of Public Law 28-205."
+      },
+      "recommended_actions": [
+        "Retain the enactment as a current repealer law.",
+        "Mark Public Law 28-205 fully repealed.",
+        "Remove the quoted-content dump and Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-035-255",
+      "public_law": "35-255",
+      "title": "Public Law 35-255 | Print More Money Act of 2025",
+      "status": "current",
+      "status_basis": "The source is a live appropriations-style enactment: it authorizes issuance of fifty million dollars, sets spending limits and a reserved emergency fund, and contains an immediate effective date. Nothing in the text indicates repeal or expiration.",
+      "provisions": [
+        {
+          "ref": "SEC I-III",
+          "text_summary": "Short title, definitions, and the stated purpose of restoring lost funds.",
+          "classes": [
+            "short-title",
+            "definitions",
+            "findings-or-sense"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The act may be cited as the \"Print More Money Act of 2025\" and says it is intended to address a fifty million dollar shortfall.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC IV",
+          "text_summary": "Authorizes issuance of fifty million dollars and restricts use to restoring the federal budget.",
+          "classes": [
+            "appropriation",
+            "authorization-approps"
+          ],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The source says the United States Congress \"authorizes the issuance ... of fifty million ($50,000,000) dollars\".",
+          "notes": "This is temporary funding language, not permanent Code text."
+        },
+        {
+          "ref": "SEC V",
+          "text_summary": "Future-limitations clause.",
+          "classes": [
+            "uncodified-admin-direction"
+          ],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "It provides that no additional dollars may be issued under the bill once the authorized amount has been deposited.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC VI",
+          "text_summary": "Immediate enactment clause.",
+          "classes": [
+            "effective-date"
+          ],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This bill shall take effect immediately after its passage.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t31/s101",
+        "detail": "The current note is directionally correct for a fiscal enactment, but it needs cleanup and should remain note-level rather than permanent Code text."
+      },
+      "recommended_actions": [
+        "Trim the quoted-content dump and remove the Trello link.",
+        "Keep the law as a concise statutory note only.",
+        "Do not promote the appropriations language into permanent Code text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-035-256",
+      "public_law": "35-256",
+      "title": "Public Law 35-256 | Workers First Act of 2025",
+      "status": "current",
+      "status_basis": "The source reduces the income tax rate from 28 percent to 23 percent and then supplies supporting limitations and an immediate effective date. The text is operative, but it does not name a determinable U.S. Code target in the accessible source.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and definitions.",
+          "classes": [
+            "short-title",
+            "definitions"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The bill may be cited as the \"Workers First Act of 2025\" and defines \"Tax Rate\" and \"Dollar Income\".",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Reduces the income tax rate on American dollar income from 28 percent to 23 percent.",
+          "classes": [
+            "new-permanent-general",
+            "non-code"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The source says the tax rate \"shall be reduced from twenty-eight (28%) to twenty-three percent (23%).\"",
+          "notes": "No exact U.S. Code target is stated in the accessible text."
+        },
+        {
+          "ref": "SEC 4-5",
+          "text_summary": "Purpose and limitations clauses.",
+          "classes": [
+            "findings-or-sense",
+            "uncodified-admin-direction"
+          ],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "It says no American shall be taxed above 23 percent under this bill and describes the desired fiscal policy.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 6",
+          "text_summary": "Immediate enactment clause.",
+          "classes": [
+            "effective-date"
+          ],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This bill shall take effect immediately after its passage.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t29/s201",
+        "detail": "The note is a plausible statutory anchor, but the file still carries the full-text dump and Trello link and should stay note-level because no determinable Code section is named."
+      },
+      "recommended_actions": [
+        "Remove the quoted-content dump and Trello link.",
+        "Keep this as a statutory note unless a later source identifies a precise Code target.",
+        "Do not invent a codified target from the general tax-rate language."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-036-256",
+      "public_law": "36-256",
+      "title": "Public Law 36-256 | Commerce Dispersal Act",
+      "status": "current",
+      "status_basis": "The source dissolves the Department of Commerce and Labor, redistributes its functions, and transfers copyright administration. It is an operative structural reorganization, not a repealed enactment.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and severability.",
+          "classes": [
+            "short-title",
+            "severability"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The act may be cited as the \"Commerce Dispersal Act\" and contains a severability clause.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Dissolves Commerce and Labor and transfers its functions, enforcement, and related offices.",
+          "classes": [
+            "transfer",
+            "uncodified-admin-direction"
+          ],
+          "treatment": "transfer-note",
+          "target": "Department of Commerce and Labor and related successor offices",
+          "exact_change": "Transfer Commerce and Labor functions to State or Justice as specified in subsections (a) through (j).",
+          "evidence": "The source says the Department of Commerce and Labor \"shall be rendered inoperable\" and its functions \"transferred\".",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Transfers the Copyright Office and Copyright Royalty Board functions to the Department of State and the District of Columbia district court.",
+          "classes": [
+            "transfer",
+            "uncodified-admin-direction"
+          ],
+          "treatment": "transfer-note",
+          "target": "Library of Congress / Copyright Office / Copyright Royalty Board",
+          "exact_change": "Move copyright administration out of the Library of Congress and into the Department of State, with CRB jurisdiction transferred to the D.C. district court.",
+          "evidence": "The source says the Copyright Office \"shall be transferred from the Library of Congress to the Department of State.\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t15/s1",
+        "detail": "The placement is serviceable as a subject-matter note, but the XML needs to be reduced to a concise transfer history and stripped of the dump and Trello link."
+      },
+      "recommended_actions": [
+        "Keep only a concise transfer note.",
+        "Remove the quoted-content dump and Trello link.",
+        "Do not convert the restructuring into permanent positive-law sections."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-036-257",
+      "public_law": "36-257",
+      "title": "Public Law 36-257 | Maritime Operations & Policy Overhaul Act",
+      "status": "current",
+      "status_basis": "The source amends prior public laws governing military and Coast Guard policy, creates contingent Coast Guard authorities, and adds maritime-security coordination. It is operative and not shown as repealed.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, purpose, and severability.",
+          "classes": [
+            "short-title",
+            "findings-or-sense",
+            "severability"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The Act may be cited as the \"Maritime Operations & Policy Overhaul Act\" and includes a severability clause.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Amends the Streamlining and Protecting American Security Act section 6(m) to include Coast Guard and subordinate military intelligence leadership.",
+          "classes": [
+            "direct-amendment",
+            "amendment-note"
+          ],
+          "treatment": "amendment-note",
+          "target": "Streamlining and Protecting American Security Act, section 6(m)",
+          "exact_change": "Add the United States Coast Guard and subordinate military intelligence leadership to the listed heads.",
+          "evidence": "Section 6(m) \"shall be amended to\" list the Coast Guard and subordinate military intelligence units.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "Amends the Military Officer Commissioning Reform Act section 9(g) to let the Coast Guard Commandant attend certain Joint Chiefs meetings and vote in limited circumstances.",
+          "classes": [
+            "direct-amendment",
+            "amendment-note"
+          ],
+          "treatment": "amendment-note",
+          "target": "Military Officer Commissioning Reform Act, section 9(g)",
+          "exact_change": "Add Coast Guard Commandant attendance and limited voting authority language.",
+          "evidence": "Section 9(g) \"shall be amended\" to add the Coast Guard Commandant paragraph.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 6",
+          "text_summary": "Amends the Military Justice Reform Act of 2024 to redefine Armed Services for that act.",
+          "classes": [
+            "direct-amendment",
+            "amendment-note"
+          ],
+          "treatment": "amendment-note",
+          "target": "Military Justice Reform Act of 2024, section 4(a)",
+          "exact_change": "Redefine Armed Services to list the Army, Marine Corps, Air Force, Space Force, and Navy.",
+          "evidence": "Section 4(a) of the Military Justice Reform Act of 2024 \"shall be amended\" to redefine Armed Services.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 7-12",
+          "text_summary": "Contingent Coast Guard assumption of duties, domestic-security integration, national-security advisory role, special access programs, and global partnerships.",
+          "classes": [
+            "transfer",
+            "uncodified-admin-direction",
+            "new-permanent-general"
+          ],
+          "treatment": "transfer-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Examples include the Coast Guard \"may assume\" duties of dormant forces and the Commandant shall serve as principal maritime security adviser.",
+          "notes": "These are uncodified operational directives and coordination rules."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t46/s101",
+        "detail": "The note is in a maritime subject area and the anchor is plausible, but it still needs cleanup and should be reduced to a concise transfer/amendment note."
+      },
+      "recommended_actions": [
+        "Keep the Coast Guard amendments as concise amendment notes.",
+        "Remove the quoted-content dump and Trello link.",
+        "Do not fabricate a positive-law Code rewrite from the uncodified operational directives."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-036-258",
+      "public_law": "36-258",
+      "title": "Public Law 36-258 | National Root Beer Day Act",
+      "status": "current",
+      "status_basis": "The source is an active amendment to title 5: it inserts National Root Beer Day into the federal holiday list and includes an immediate enactment clause. No repeal or supersession appears in the materials reviewed.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and enactment clause.",
+          "classes": [
+            "short-title",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The bill may be cited as the \"National Root Beer Day Act\" and becomes effective immediately upon enactment.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Amends 5 U.S.C. 6103(a) by inserting National Root Beer Day after Memorial Day.",
+          "classes": [
+            "direct-amendment",
+            "insertion"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t5/s6103",
+          "exact_change": "Insert \"National Root Beer Day, June 17.\" after the Memorial Day clause in subsection (a).",
+          "evidence": "The source says 5 U.S.C. 6103(a) \"is amended by inserting after 'Memorial Day, the last Monday in May.'\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s101",
+        "detail": "The XML note is parked at Title 5 section 101, but the source requires a real insertion in 5 U.S.C. 6103(a)."
+      },
+      "recommended_actions": [
+        "Apply the 5 U.S.C. 6103(a) insertion.",
+        "Remove the quoted-content dump and Trello link.",
+        "Keep the short-title and effective-date language only as a note."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-036-259",
+      "public_law": "36-259",
+      "title": "Public Law 36-259 | Run Me My Money Act of 2025",
+      "status": "current",
+      "status_basis": "The source is a supplemental appropriations bill that allocates money to specific departments and agencies, reserves an emergency fund, and takes effect immediately. It is still operative law.",
+      "provisions": [
+        {
+          "ref": "SEC I-III",
+          "text_summary": "Short title, definitions, and budget-allocation purpose.",
+          "classes": [
+            "short-title",
+            "definitions",
+            "findings-or-sense"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The bill may be cited as the \"Run Me My Money Act of 2025\" and says it provides supplemental funding.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC IV",
+          "text_summary": "Appropriates $4,000,000 across federal and municipal entities and reserves an emergency fund.",
+          "classes": [
+            "appropriation",
+            "authorization-approps",
+            "local-district"
+          ],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The source says a total of \"$4,000,000 is hereby appropriated\" and lists the recipient entities.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC V",
+          "text_summary": "Oversight and emergency-fund restrictions.",
+          "classes": [
+            "uncodified-admin-direction"
+          ],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "It requires oversight review for misuse and limits emergency-fund use to written authorization.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC VI",
+          "text_summary": "Immediate enactment clause.",
+          "classes": [
+            "effective-date"
+          ],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This bill shall take effect immediately after its passage.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t31/s101",
+        "detail": "The note is appropriate for a supplemental appropriations act, but it should be trimmed to a concise note without the full-text dump."
+      },
+      "recommended_actions": [
+        "Remove the quoted-content dump and Trello link.",
+        "Keep the law as a concise appropriations note only.",
+        "Do not create permanent positive-law text for the funding tables."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-036-260",
+      "public_law": "36-260",
+      "title": "Public Law 36-260 | Fixing the District of Columbia Act of 2025",
+      "status": "current",
+      "status_basis": "The source expressly repeals six prior public laws, dissolves the District municipal government, transfers MPD and DCFEMS, reestablishes the D.C. Delegate, adopts municipal laws into federal law, and amends Public Law 22-156. Nothing in the materials shows it to be repealed or superseded.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, purpose, and findings.",
+          "classes": [
+            "short-title",
+            "findings-or-sense"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The act may be cited as the \"Fixing the District of Columbia Act of 2025\" and includes extensive findings about the District.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4(a)(i)-(vi)",
+          "text_summary": "Repeals Public Laws 16-120, 25-181, 29-213, 29-216, 30-223, and 32-231.",
+          "classes": [
+            "repeal"
+          ],
+          "treatment": "repeal-marking",
+          "target": "Public Laws 16-120, 25-181, 29-213, 29-216, 30-223, and 32-231",
+          "exact_change": "Repeal each listed public law in full.",
+          "evidence": "Section 4(a) says the listed laws \"shall be repealed in their entirety.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "Definitions for the municipal-government transition.",
+          "classes": [
+            "definitions"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The section defines \"municipal government,\" \"Metropolitan Police Department,\" and related transition terms.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 6-9",
+          "text_summary": "Dissolves the municipal government, transfers MPD to DOJ, transfers DCFEMS to DHS, and reestablishes the D.C. Delegate.",
+          "classes": [
+            "transfer",
+            "local-district",
+            "uncodified-admin-direction"
+          ],
+          "treatment": "transfer-note",
+          "target": "District of Columbia municipal government, MPD, DCFEMS, and Delegate office",
+          "exact_change": "Transfer the named functions and offices exactly as described in sections 6 through 9.",
+          "evidence": "The source says the municipal government is \"hereby dissolved\" and the MPD and DCFEMS are \"hereby transferred\".",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 10",
+          "text_summary": "Adopts several District municipal laws into federal law with specified amendments.",
+          "classes": [
+            "new-permanent-general",
+            "amendment-note",
+            "local-district"
+          ],
+          "treatment": "amendment-note",
+          "target": "District Tort Act, DC Criminal Code, Protecting our Firefighters Act, and Fire Marshals Act",
+          "exact_change": "Adopt the named municipal laws into federal law and apply the stated textual amendments.",
+          "evidence": "It says those municipal laws are \"hereby adopted and enacted as federal law\" with listed amendments.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 11",
+          "text_summary": "Amends Public Law 22-156 to place the Metropolitan Police Department under DOJ authority and revise leadership language.",
+          "classes": [
+            "direct-amendment",
+            "amendment-note"
+          ],
+          "treatment": "amendment-note",
+          "target": "Public Law 22-156, sections 6(1)(1), 6(2)(1), and 6(2)(2)",
+          "exact_change": "Rewrite the listed subsections to make MPD a DOJ component with Attorney General-appointed leadership.",
+          "evidence": "Section 11 says the listed subsections of Public Law 22-156 \"shall be amended to read.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 12-13",
+          "text_summary": "Severability and enactment clause.",
+          "classes": [
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The act includes a severability clause and says it shall take effect immediately after enactment.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "The current note is anchored in Title 40, but it flattens multiple repeal, transfer, and amendment actions into one bloated note instead of preserving the specific actions."
+      },
+      "recommended_actions": [
+        "Record the six repeals explicitly.",
+        "Add the listed transfer and amendment notes for the District transition provisions.",
+        "Remove the quoted-content dump and Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-037-261",
+      "public_law": "37-261",
+      "title": "Public Law 37-261 | Federal Criminal Code Act of 2025",
+      "status": "current",
+      "status_basis": "The accessible source gives a short title, severability, an immediate effective date, and a section adopting an attached Federal Criminal Code. The act is operative, but the attachment text is not determinable from the accessible source alone.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The source says the bill may be cited as the \"Federal Criminal Code Act\" and becomes effective immediately upon enactment.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Adopts the attached criminal code as the Federal Criminal Code to be enforced in the District of Columbia.",
+          "classes": [
+            "new-permanent-general",
+            "statutory-note-material",
+            "non-code"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t18/s1",
+          "exact_change": "Adopt the attached code as the operative Federal Criminal Code; the accessible source does not expose a section-by-section replacement text.",
+          "evidence": "The source says the attached Criminal Code \"shall act as the Federal Criminal Code.\"",
+          "notes": "This is source-limited because the attached code text is not determinable from the accessible extraction."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "This is an honest source-limited note at the right general anchor, but it still carries a Trello link and cannot reproduce the attached criminal code text from the accessible source."
+      },
+      "recommended_actions": [
+        "Keep the law as a source-limited statutory note at the existing anchor.",
+        "Remove the Trello link.",
+        "Do not invent unattested attached-code text."
+      ],
+      "confidence": "medium"
+    }
+  ]
+}

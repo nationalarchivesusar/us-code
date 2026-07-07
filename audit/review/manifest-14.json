@@ -1,0 +1,190 @@
+{
+  "reviewer": "reviewer-14",
+  "group_index": 14,
+  "law_count": 10,
+  "output_path": "audit/review/review-14.json",
+  "laws": [
+    {
+      "law_id": "PL-017-135",
+      "public_law": "17-135",
+      "title": "Public Law 17-135 | Judicial Bias Protection Act (JBPA)",
+      "report_path": "audit/primary/batch-05-02.json",
+      "batch": 5,
+      "source_status": "current",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC4",
+        "SEC5",
+        "SEC6",
+        "SEC7"
+      ],
+      "targets": [
+        "/us/usc/t28/s144"
+      ]
+    },
+    {
+      "law_id": "PL-017-136",
+      "public_law": "17-136",
+      "title": "Public Law 17-136 | The Parks Act (TPA)",
+      "report_path": "audit/primary/batch-05-02.json",
+      "batch": 5,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC4(1)",
+        "SEC4(2)-(5)",
+        "SEC5(1)-(2)"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-017-137",
+      "public_law": "17-137",
+      "title": "Public Law 17-137 | Federal Background Check Act",
+      "report_path": "audit/primary/batch-05-02.json",
+      "batch": 5,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC II",
+        "SEC III",
+        "SEC IV"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-017-138",
+      "public_law": "17-138",
+      "title": "Public Law 17-138 | Hatch Act Amendment Act (HA)",
+      "report_path": "audit/primary/batch-05-02.json",
+      "batch": 5,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC5(1)",
+        "SEC5(2)"
+      ],
+      "targets": [
+        "/us/usc/t5/s7323"
+      ]
+    },
+    {
+      "law_id": "PL-018-139",
+      "public_law": "18-139",
+      "title": "Public Law 18-139 | The Bye Bye Background Checks Act",
+      "report_path": "audit/primary/batch-05-02.json",
+      "batch": 5,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-018-140",
+      "public_law": "18-140",
+      "title": "Public Law 18-140 | Federal Employment Act of 2023",
+      "report_path": "audit/primary/batch-05-02.json",
+      "batch": 5,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-018-141",
+      "public_law": "18-141",
+      "title": "Public Law 18-141 | Foreign Service Act of 2023",
+      "report_path": "audit/primary/batch-05-02.json",
+      "batch": 5,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-018-142",
+      "public_law": "18-142",
+      "title": "Public Law 18-142 | Business Licensing Act",
+      "report_path": "audit/primary/batch-05-03.json",
+      "batch": 5,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-018-143",
+      "public_law": "18-143",
+      "title": "Public Law 18-143 | United States Capitol Police Technical Corrections Act",
+      "report_path": "audit/primary/batch-05-03.json",
+      "batch": 5,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-019-144",
+      "public_law": "19-144",
+      "title": "Public Law 19-144 | Public Area Management Act (PAMA)",
+      "report_path": "audit/primary/batch-05-03.json",
+      "batch": 5,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC4-SEC5",
+        "SEC6",
+        "SEC7-SEC8",
+        "SEC9"
+      ],
+      "targets": [
+        "(PL 15-95 §VI(2)-(4))"
+      ]
+    }
+  ]
+}

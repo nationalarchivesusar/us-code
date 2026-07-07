@@ -1,0 +1,220 @@
+{
+  "reviewer": "reviewer-04",
+  "group_index": 4,
+  "law_count": 10,
+  "output_path": "audit/review/review-04.json",
+  "laws": [
+    {
+      "law_id": "PL-004-032",
+      "public_law": "4-32",
+      "title": "Public Law 4-32 | Warrants, Subpoenas, and Summons Act",
+      "report_path": "audit/primary/batch-02-01.json",
+      "batch": 2,
+      "source_status": "unresolved",
+      "validation_status": "missing source evidence",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-004-033",
+      "public_law": "4-33",
+      "title": "Public Law 4-33 | National Archives Act",
+      "report_path": "audit/primary/batch-02-01.json",
+      "batch": 2,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC. II",
+        "SEC. III"
+      ],
+      "targets": [
+        "/us/usc/t44",
+        "/us/usc/t44 (ch. 21, National Archives)"
+      ]
+    },
+    {
+      "law_id": "PL-004-034",
+      "public_law": "4-34",
+      "title": "Public Law 4-34 | An Act to Prevent the Proliferation of Magistrates and Ensure Basic Judicial Competence",
+      "report_path": "audit/primary/batch-02-01.json",
+      "batch": 2,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "multiple-laws-same-target",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC. II",
+        "SEC. III"
+      ],
+      "targets": [
+        "/us/usc/t28",
+        "/us/usc/t28 (judiciary) - not t50 as placed"
+      ]
+    },
+    {
+      "law_id": "PL-004-035",
+      "public_law": "4-35",
+      "title": "Public Law 4-35 | Recommissioning of the United States Ship New Jersey Act of 2022",
+      "report_path": "audit/primary/batch-02-01.json",
+      "batch": 2,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-004-036",
+      "public_law": "4-36",
+      "title": "Public Law 4-36 | Defense Heraldic Services Act",
+      "report_path": "audit/primary/batch-02-01.json",
+      "batch": 2,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. II",
+        "SEC. III"
+      ],
+      "targets": [
+        "/us/usc/t10",
+        "/us/usc/t10 ch. 48, subchapter II",
+        "/us/usc/t10/s7594"
+      ]
+    },
+    {
+      "law_id": "PL-004-037",
+      "public_law": "4-37",
+      "title": "Public Law 4-37 | Border Awareness and Naturalization Act",
+      "report_path": "audit/primary/batch-02-01.json",
+      "batch": 2,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC. 3-3.4",
+        "SEC. 5",
+        "SEC. 6"
+      ],
+      "targets": [
+        "/us/usc/t8",
+        "/us/usc/t8 (aliens & nationality)",
+        "n/a"
+      ]
+    },
+    {
+      "law_id": "PL-004-038",
+      "public_law": "4-38",
+      "title": "Public Law 4-38 | White House Protection Act",
+      "report_path": "audit/primary/batch-02-01.json",
+      "batch": 2,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC. 3 (Actions)"
+      ],
+      "targets": [
+        "/us/usc/t3",
+        "/us/usc/t3 (President) or t18 s3056 (Secret Service powers)",
+        "n/a"
+      ]
+    },
+    {
+      "law_id": "PL-007-039",
+      "public_law": "7-39",
+      "title": "Public Law 7-39 | Mandatory FLETC Training ACT",
+      "report_path": "audit/primary/batch-02-01.json",
+      "batch": 2,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC. 3"
+      ],
+      "targets": [
+        "n/a",
+        "n/a (repealed & revived-as-if-never-enacted)"
+      ]
+    },
+    {
+      "law_id": "PL-007-040",
+      "public_law": "7-40",
+      "title": "Public Law 7-40 | Media Companies Protection Act of 2022",
+      "report_path": "audit/primary/batch-02-01.json",
+      "batch": 2,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC. II",
+        "SEC. III"
+      ],
+      "targets": [
+        "/us/usc/t15 (commerce)",
+        "n/a (repealed)"
+      ]
+    },
+    {
+      "law_id": "PL-007-041",
+      "public_law": "7-41",
+      "title": "Public Law 7-41 | Common Sense Defense Act of 2022",
+      "report_path": "audit/primary/batch-02-02.json",
+      "batch": 2,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "ARTICLE I",
+        "ARTICLE II"
+      ],
+      "targets": [
+        "n/a",
+        "n/a (repealed)",
+        "n/a (repealed; game-specific)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "reviewer": "reviewer-10",
+  "group_index": 10,
+  "law_count": 10,
+  "output_path": "audit/review/review-10.json",
+  "laws": [
+    {
+      "law_id": "PL-015-093",
+      "public_law": "15-93",
+      "title": "Public Law 15-93 | Checks and Balances Act of 2023",
+      "report_path": "audit/primary/batch-04-01.json",
+      "batch": 4,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC 2(a)"
+      ],
+      "targets": [
+        "/us/usc/t22",
+        "PL 3-15 (Admission to United Nations Act)"
+      ]
+    },
+    {
+      "law_id": "PL-015-094",
+      "public_law": "15-94",
+      "title": "Public Law 15-94 | Whistleblower Protections Act of 2023",
+      "report_path": "audit/primary/batch-04-01.json",
+      "batch": 4,
+      "source_status": "unresolved",
+      "validation_status": "missing source evidence",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "/us/usc/t5"
+      ]
+    },
+    {
+      "law_id": "PL-015-095",
+      "public_law": "15-95",
+      "title": "Public Law 15-95 | An Act to Repeal the White House Protection Act",
+      "report_path": "audit/primary/batch-04-01.json",
+      "batch": 4,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "status:unresolved"
+      ],
+      "provision_refs": [
+        "(whole act)"
+      ],
+      "targets": [
+        "unknown (White House Protection Act)"
+      ]
+    },
+    {
+      "law_id": "PL-015-096",
+      "public_law": "15-96",
+      "title": "Public Law 15-96 | Prisoner Bail Protection Act",
+      "report_path": "audit/primary/batch-04-01.json",
+      "batch": 4,
+      "source_status": "fully-repealed",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "(whole act)"
+      ],
+      "targets": [
+        "unknown"
+      ]
+    },
+    {
+      "law_id": "PL-015-097",
+      "public_law": "15-97",
+      "title": "Public Law 15-97 | Uniform Legal Practice Authority Act",
+      "report_path": "audit/primary/batch-04-01.json",
+      "batch": 4,
+      "source_status": "partially-current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 101",
+        "SEC 102",
+        "SEC 103",
+        "SEC 201-205 (Title II)"
+      ],
+      "targets": [
+        "/us/usc/t28"
+      ]
+    },
+    {
+      "law_id": "PL-015-098",
+      "public_law": "15-98",
+      "title": "Public Law 15-98 | Inspector General Act (2023)",
+      "report_path": "audit/primary/batch-04-01.json",
+      "batch": 4,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 3",
+        "SEC 4",
+        "SEC 5",
+        "SEC 6-14"
+      ],
+      "targets": [
+        "/us/usc/t5"
+      ]
+    },
+    {
+      "law_id": "PL-015-099",
+      "public_law": "15-99",
+      "title": "Public Law 15-99 | Second National Federal Torts Act",
+      "report_path": "audit/primary/batch-04-01.json",
+      "batch": 4,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "P2",
+        "P25-30",
+        "P5-8",
+        "P9-24"
+      ],
+      "targets": [
+        "/us/usc/t28",
+        "PL 2-14 (National Federal Torts Act)"
+      ]
+    },
+    {
+      "law_id": "PL-015-100",
+      "public_law": "15-100",
+      "title": "Public Law 15-100 | Employment Rights and Limitations Act",
+      "report_path": "audit/primary/batch-04-02.json",
+      "batch": 4,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 2",
+        "SEC 3-5",
+        "SEC 6",
+        "SEC 7"
+      ],
+      "targets": [
+        "/us/usc/t5",
+        "/us/usc/t5/s101"
+      ]
+    },
+    {
+      "law_id": "PL-015-101",
+      "public_law": "15-101",
+      "title": "Public Law 15-101 | Guidance to Guidances Act (source text; manifest title 'Ensuring Accountability in Federal Agencies Act' is a mislabel)",
+      "report_path": "audit/primary/batch-04-02.json",
+      "batch": 4,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 2",
+        "SEC 3",
+        "SEC 3(d)"
+      ],
+      "targets": [
+        "/us/usc/t5",
+        "/us/usc/t5/s551",
+        "/us/usc/t5/s552"
+      ]
+    },
+    {
+      "law_id": "PL-015-102",
+      "public_law": "15-102",
+      "title": "Public Law 15-102 | New Ambassadorial Organizational and Reporting Act",
+      "report_path": "audit/primary/batch-04-02.json",
+      "batch": 4,
+      "source_status": "partially-current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION II(a)",
+        "SECTION II(b)",
+        "SECTION III",
+        "SECTION IV"
+      ],
+      "targets": [
+        "/us/usc/t22",
+        "Ambassadorial Readjustment Act",
+        "PL 14-90 section 2(a)(i)"
+      ]
+    }
+  ]
+}

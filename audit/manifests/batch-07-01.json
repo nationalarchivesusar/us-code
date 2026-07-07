@@ -1,0 +1,529 @@
+﻿{
+    "batch":  7,
+    "auditor":  "law-auditor-A",
+    "report_path":  "audit/primary/batch-07-01.json",
+    "law_count":  10,
+    "laws":  [
+                 {
+                     "law_id":  "PL-025-181",
+                     "public_law":  "25-181",
+                     "title":  "Public Law 25-181 | Federal District of Columbia Criminal Code",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-025-181/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  28140,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-025-181/source/H.R. 2 - Federal District of Columbia Criminal Code.pdf",
+                                              "format":  "pdf",
+                                              "size":  219995,
+                                              "sha256":  "3fc8aaada2efbf0555c2535552e83c044989d13b2a0974973a73954d5f304d09"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc40.xml",
+                                                   "note_id":  "rp-pl025181-codification",
+                                                   "public_law":  "25-181",
+                                                   "congress_from_id":  25,
+                                                   "seq_from_id":  181,
+                                                   "heading_cited_pl":  "25-181",
+                                                   "heading":  "Federal District of Columbia Criminal Codeâ€”Pub. L. 25â€“181",
+                                                   "placement_identifier":  "/us/usc/t40/s101/4",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/xyxuESxL/688-public-law-25-181-federal-district-of-columbia-criminal-code"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  792
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-025-182",
+                     "public_law":  "25-182",
+                     "title":  "Public Law 25-182 | Pentagon Expansion and National Territory Authorization Act",
+                     "list_name":  "21st - 30th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "meaningful text",
+                     "law_txt_path":  "codification/laws/laws/PL-025-182/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  4096,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  true,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-025-182/source/document.docx",
+                                              "format":  "docx",
+                                              "size":  7945,
+                                              "sha256":  "d6d060800c29eb1adde506d962f1c21fde261bda27990336e3d271c4edcae660"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc10.xml",
+                                                   "note_id":  "rp-pl025182-codification",
+                                                   "public_law":  "25-182",
+                                                   "congress_from_id":  25,
+                                                   "seq_from_id":  182,
+                                                   "heading_cited_pl":  "25-182",
+                                                   "heading":  "Pentagon Expansion and National Territory Authorization Actâ€”Pub. L. 25â€“182",
+                                                   "placement_identifier":  "/us/usc/t10/s101/h",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/AOEN09Ve/689-public-law-25-182-pentagon-expansion-and-national-territory-authorization-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  831
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-025-183",
+                     "public_law":  "25-183",
+                     "title":  "Public Law 25-183 | Commerce and Labor Advancement Act (CLAA)",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-025-183/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  14272,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-025-183/source/H.R. 8 - Commerce and Labor Advancement Act (CLAA).pdf",
+                                              "format":  "pdf",
+                                              "size":  191841,
+                                              "sha256":  "530c5bdcb5506c8d52e97f5618b5a2c27d6f1febf0c64330026844031a30cc2e"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "sunset"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc29.xml",
+                                                   "note_id":  "rp-pl025183-codification",
+                                                   "public_law":  "25-183",
+                                                   "congress_from_id":  25,
+                                                   "seq_from_id":  183,
+                                                   "heading_cited_pl":  "25-183",
+                                                   "heading":  "Commerce and Labor Advancement Act (CLAA)â€”Pub. L. 25â€“183",
+                                                   "placement_identifier":  "/us/usc/t29/s201",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/eEupFUAG/690-public-law-25-183-commerce-and-labor-advancement-act-claa"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  737
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-025-184",
+                     "public_law":  "25-184",
+                     "title":  "Public Law 25-184 | Legal Advisors, Representatives, and Professionals Exam Regulations (LARPER)",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-025-184/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  18879,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-025-184/source/H.R. 9 - Legal Advisors, Representatives, and Professionals Exam Regulations (LARPER).pdf",
+                                              "format":  "pdf",
+                                              "size":  214309,
+                                              "sha256":  "e3f9b1956abd9d0d0485ee422a886722a6f5518467f3fb4ffd19d6497843c26f"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "establish",
+                                                         "findings"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc28.xml",
+                                                   "note_id":  "rp-pl025184-codification",
+                                                   "public_law":  "25-184",
+                                                   "congress_from_id":  25,
+                                                   "seq_from_id":  184,
+                                                   "heading_cited_pl":  "25-184",
+                                                   "heading":  "Legal Advisors, Representatives, and Professionals Exam Regulations (LARPER)â€”Pub. L. 25â€“184",
+                                                   "placement_identifier":  "/us/usc/t28/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/9gLr0UZY/694-public-law-25-184-legal-advisors-representatives-and-professionals-exam-regulations-larper"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  805
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-025-185",
+                     "public_law":  "25-185",
+                     "title":  "Public Law 25-185  | Fiscal Year 21-3",
+                     "list_name":  "21st - 30th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-025-185/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  2965,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-025-185/source/H.R. 12 - Fiscal Year 21-3.pdf",
+                                              "format":  "pdf",
+                                              "size":  163144,
+                                              "sha256":  "8d6710a7eece91ca717f42ae121a327c301f7a82d5edd1727bc5506268dce882"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc31.xml",
+                                                   "note_id":  "rp-pl025185-codification",
+                                                   "public_law":  "25-185",
+                                                   "congress_from_id":  25,
+                                                   "seq_from_id":  185,
+                                                   "heading_cited_pl":  "25-185",
+                                                   "heading":  "Fiscal Year 21-3â€”Pub. L. 25â€“185",
+                                                   "placement_identifier":  "/us/usc/t31/s101",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/PXctFnlC/695-public-law-25-185-fiscal-year-21-3"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  745
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-026-186",
+                     "public_law":  "26-186",
+                     "title":  "Public Law 26-186  | Secret Service Jurisdiction Reform Act",
+                     "list_name":  "21st - 30th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-026-186/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  8679,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-026-186/source/S.1 - Secret Service Jurisdiction Reform Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  168155,
+                                              "sha256":  "fa6838914aac558f2362d775421a9e8aa1550e336dcc0fa6d91e594794439a1a"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc54.xml",
+                                                   "note_id":  "rp-pl026186-codification",
+                                                   "public_law":  "26-186",
+                                                   "congress_from_id":  26,
+                                                   "seq_from_id":  186,
+                                                   "heading_cited_pl":  "26-186",
+                                                   "heading":  "Secret Service Jurisdiction Reform Actâ€”Pub. L. 26â€“186",
+                                                   "placement_identifier":  "/us/usc/t54/s100101/b/2",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/ac6Oa3bx/700-public-law-26-186-secret-service-jurisdiction-reform-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  738
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-026-187",
+                     "public_law":  "26-187",
+                     "title":  "Public Law 26-187  | FPS Funding Act",
+                     "list_name":  "21st - 30th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-026-187/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  1350,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-026-187/source/H.R. 5 - FPS Funding Act Ã°ÂŸÂ˜Â­Ã°ÂŸÂ’Â€.pdf",
+                                              "format":  "pdf",
+                                              "size":  166041,
+                                              "sha256":  "5ec5ec4d4ebcb8b95b4d0d7f84750160e94c4f51bfd68736913e07449c0b1f05"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc31.xml",
+                                                   "note_id":  "rp-pl026187-codification",
+                                                   "public_law":  "26-187",
+                                                   "congress_from_id":  26,
+                                                   "seq_from_id":  187,
+                                                   "heading_cited_pl":  "26-187",
+                                                   "heading":  "FPS Funding Actâ€”Pub. L. 26â€“187",
+                                                   "placement_identifier":  "/us/usc/t31/s101",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/307pQ864/701-public-law-26-187-fps-funding-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  743
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-026-188",
+                     "public_law":  "26-188",
+                     "title":  "Public Law 26-188  | Departmental Reports Act",
+                     "list_name":  "21st - 30th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-026-188/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  7366,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-026-188/source/H.R. 4 - Departmental Reports Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  138707,
+                                              "sha256":  "b4986f8cfb9da51b188189f1c0792aaa6558494cd90651fbadff2b3fe5ed9214"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "Â§3371ashall"
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "severab"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc50.xml",
+                                                   "note_id":  "rp-pl026188-codification",
+                                                   "public_law":  "26-188",
+                                                   "congress_from_id":  26,
+                                                   "seq_from_id":  188,
+                                                   "heading_cited_pl":  "26-188",
+                                                   "heading":  "Departmental Reports Actâ€”Pub. L. 26â€“188",
+                                                   "placement_identifier":  "/us/usc/t50/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/jSEht4L7/702-public-law-26-188-departmental-reports-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  734
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-026-189",
+                     "public_law":  "26-189",
+                     "title":  "Public Law 26-189 | Fiscal Year 22-1",
+                     "list_name":  "21st - 30th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-026-189/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  2960,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-026-189/source/H.R. 8 - Fiscal Year 22-1.pdf",
+                                              "format":  "pdf",
+                                              "size":  163071,
+                                              "sha256":  "72ecc6ed83d5f667890a62477a51bbf5ed407a666f40c9aeba76938feceec94f"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc31.xml",
+                                                   "note_id":  "rp-pl026189-codification",
+                                                   "public_law":  "26-189",
+                                                   "congress_from_id":  26,
+                                                   "seq_from_id":  189,
+                                                   "heading_cited_pl":  "26-189",
+                                                   "heading":  "Fiscal Year 22-1â€”Pub. L. 26â€“189",
+                                                   "placement_identifier":  "/us/usc/t31/s101",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/NuTVYSK9/703-public-law-26-189-fiscal-year-22-1"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  745
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-026-190",
+                     "public_law":  "26-190",
+                     "title":  "Public Law 26-190 | The Great Reform Initiative of the Judiciary",
+                     "list_name":  "21st - 30th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-026-190/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  14194,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-026-190/source/H.R 6 - The Great Reform Initiative of the Judiciary",
+                                              "format":  "r 6 - the great reform initiative of the judiciary",
+                                              "size":  145038,
+                                              "sha256":  "3774c2f67fc0b2dae85134a5950862179a180a2f01a7a1498596e60b646c7735"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc28.xml",
+                                                   "note_id":  "rp-pl026190-codification",
+                                                   "public_law":  "26-190",
+                                                   "congress_from_id":  26,
+                                                   "seq_from_id":  190,
+                                                   "heading_cited_pl":  "26-190",
+                                                   "heading":  "The Great Reform Initiative of the Judiciaryâ€”Pub. L. 26â€“190",
+                                                   "placement_identifier":  "/us/usc/t28/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/6nziDRGb/704-public-law-26-190-the-great-reform-initiative-of-the-judiciary"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  774
+                                               }
+                                           ]
+                 }
+             ]
+}

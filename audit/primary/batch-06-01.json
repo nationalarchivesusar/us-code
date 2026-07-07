@@ -1,0 +1,405 @@
+{
+  "batch": 6,
+  "auditor": "law-auditor-A",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-019-152",
+      "public_law": "19-152",
+      "title": "Public Law 19-152 | The Commerce Legislation and Labor Aggravations Reformations (CLEAR)",
+      "status": "partially-current",
+      "status_basis": "Operative reorganization and amendment act with a real replacement of 5 U.S.C. 101, plus repeal/transfer provisions aimed at earlier public laws. The source does not show the act itself self-repealed, but the affected executive-department text was later replaced again in the code history.",
+      "provisions": [
+        {
+          "ref": "SEC1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This bill shall be referred to by its short title, \"The Commerce Legislation and Labor Aggravations Reformations\" or \"CLEAR\".",
+          "notes": ""
+        },
+        {
+          "ref": "SEC2",
+          "text_summary": "Severability and anti-supersession.",
+          "classes": ["severability"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act shall be severable... This Act shall not be superseded by any newer law unless that law specifically declares its intent to supersede this Act's provisions.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC3",
+          "text_summary": "Immediate effective date.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This bill shall be effective immediately upon passage by both chambers of the Congress and signature of the President of the United States.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC4",
+          "text_summary": "General applicability clause.",
+          "classes": ["uncodified-admin-direction"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Pursuant to Public Law 1-1, codes listed in this act shall be applicable.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC5",
+          "text_summary": "Definitions and creation of the Department of Commerce and Labor framework.",
+          "classes": ["new-permanent-general", "uncodified-admin-direction", "transfer"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The term \"Department\" means the Department of Commerce and Labor; ... There shall be a department known as the Department of Commerce and Labor.",
+          "notes": "Organic reorganization language; do not force into permanent Code text without an identified positive-law home."
+        },
+        {
+          "ref": "SEC5(1)",
+          "text_summary": "Repeals Public Law 4-29 in its entirety.",
+          "classes": ["repeal"],
+          "treatment": "repeal-marking",
+          "target": "PL 4-29",
+          "exact_change": "Repeal Public Law 4-29 entirely.",
+          "evidence": "Public Law 4-29 shall be repealed, in its entirety.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC6(1)",
+          "text_summary": "Repeals Section 13 of Public Law 12-80.",
+          "classes": ["repeal"],
+          "treatment": "repeal-marking",
+          "target": "PL 12-80 sec. 13",
+          "exact_change": "Strike Section 13 of Public Law 12-80.",
+          "evidence": "Section 13 of Public Law 12-80 shall be repealed in its entirety.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC6(2)",
+          "text_summary": "Replaces Section 13 of Public Law 12-80 with new labor-remedy text.",
+          "classes": ["direct-amendment", "substitution"],
+          "treatment": "amend-existing-text",
+          "target": "PL 12-80 sec. 13",
+          "exact_change": "Replace Section 13 with the enacted remedies, enforcement, review, and costs text.",
+          "evidence": "Section 13 of Public Law 12-80 shall now read as; (a) Remedies of the FEC and DOCAL may include...",
+          "notes": "Determinable replacement text is present in the source."
+        },
+        {
+          "ref": "SEC7",
+          "text_summary": "Business and event licensing penalties.",
+          "classes": ["new-permanent-general"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The operation of a business without a business licence shall be illegal... The hosting of an event... without a valid and active event permit... shall be illegal.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC8",
+          "text_summary": "Replaces 5 U.S.C. 101 with a new executive-departments list.",
+          "classes": ["direct-amendment", "repeal", "substitution"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t5/s101",
+          "exact_change": "Replace the section text of 5 U.S.C. 101 with the six-department list enacted in SEC 8.",
+          "evidence": "5 U.S.Code § 101 shall be repealed in its entirety. 5 U.S.Code §101 shall now read as; The Executive departments are: ... The Department of Commerce and Labor.",
+          "notes": "This is the real textual Code amendment."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s101",
+        "detail": "Current XML contains only an amendment note at t5/s101; the enacted replacement of 5 U.S.C. 101 is a real textual amendment that must be applied, and the uncodified reorganization language should remain out of permanent Code text."
+      },
+      "recommended_actions": [
+        "amend /us/usc/t5/s101 with the enacted executive-departments list from SEC 8.",
+        "record repeal-markings for PL 4-29 and PL 12-80 sec. 13.",
+        "keep the department-creation and transfer framework as a non-code note or historical note only."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-021-123",
+      "public_law": "21-123",
+      "title": "Public Law 21-123 | Freedom In Removing Employees and Deregulation Act of 2024",
+      "status": "unresolved",
+      "status_basis": "Supplied source is only Google Drive permission-error debris; no operative statutory text was recovered, so no lawful codification conclusion can be drawn from the file.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Source text unavailable.",
+          "classes": ["non-code"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Sorry, the owner hasn't given you permission to download this file.",
+          "notes": "Source-limited; do not invent any Code effect."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s101",
+        "detail": "No recoverable source text exists, so the current note cannot support a substantive codification claim."
+      },
+      "recommended_actions": [
+        "retain only as a source-limited historical note.",
+        "re-acquire the underlying source before any codification decision."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-022-153",
+      "public_law": "22-153",
+      "title": "Public Law 22-153 | Fire Department Reform and Nurturing (FDRN)",
+      "status": "current",
+      "status_basis": "Full text present. This is a local District of Columbia fire-service organic act with no self-repeal or sunset and no express amendment to a numbered Code section.",
+      "provisions": [
+        {"ref": "SEC1", "text_summary": "Short title.", "classes": ["short-title"], "treatment": "statutory-note", "target": null, "exact_change": null, "evidence": "This bill shall be referred to by its short title, \"Fire Department Reform and Nurturing\" or \"FDRN\".", "notes": ""},
+        {"ref": "SEC2", "text_summary": "Severability and anti-supersession.", "classes": ["severability"], "treatment": "statutory-note", "target": null, "exact_change": null, "evidence": "This Act shall be severable... This Act shall not be superseded by any newer law unless that law specifically declares its intent to supersede this Act's provisions.", "notes": ""},
+        {"ref": "SEC3", "text_summary": "Immediate effective date.", "classes": ["effective-date"], "treatment": "effective-date-note", "target": null, "exact_change": null, "evidence": "This bill shall be effective immediately upon passage...", "notes": ""},
+        {"ref": "SEC4", "text_summary": "General applicability clause.", "classes": ["uncodified-admin-direction"], "treatment": "historical-note-only", "target": null, "exact_change": null, "evidence": "Pursuant to Public Law 1-1, codes listed in this act shall be applicable.", "notes": ""},
+        {"ref": "SEC5", "text_summary": "Definitions for the fire department act.", "classes": ["new-permanent-general"], "treatment": "exclude-from-code", "target": null, "exact_change": null, "evidence": "The term \"Fire Department\" means the District of Columbia Fire and Emergency Medical Services Department...", "notes": "Local/District organic definitions should not be inserted as permanent positive-law text."},
+        {"ref": "SEC6", "text_summary": "Establishes the D.C. Fire and Emergency Medical Services Department and related leadership, mission, reporting, and home-rule contingencies.", "classes": ["local-district", "new-permanent-general", "uncodified-admin-direction"], "treatment": "exclude-from-code", "target": null, "exact_change": null, "evidence": "There hereby is established the District of Columbia Fire and Emergency Medical Services Department as a Service within the Department of Homeland Security...", "notes": "Keep as a concise statutory note only."}
+      ],
+      "current_implementation": {
+        "assessment": "missing",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "No matching note id was found in the current XML for this enactment."
+      },
+      "recommended_actions": [
+        "exclude the local/District organic provisions from permanent Code text.",
+        "if a note is kept, move it to a subject-appropriate anchor and keep it concise.",
+        "do not invent a textual Code amendment."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-022-154",
+      "public_law": "22-154",
+      "title": "Public Law 22-154 | Officer Bill of Rights (OBR)",
+      "status": "current",
+      "status_basis": "Full text present. This is a free-standing law-enforcement personnel-rights act with no express amendment to a numbered Code section.",
+      "provisions": [
+        {"ref": "SEC1", "text_summary": "Short title.", "classes": ["short-title"], "treatment": "statutory-note", "target": null, "exact_change": null, "evidence": "This bill shall be referred to as \"Officer Bill of Rights\" or \"OBR\"", "notes": ""},
+        {"ref": "SEC2", "text_summary": "Severability and anti-supersession.", "classes": ["severability"], "treatment": "statutory-note", "target": null, "exact_change": null, "evidence": "This Act shall be severable... This Act shall not be superseded by any newer law unless that law specifically declares its intent to supersede this Act's provisions.", "notes": ""},
+        {"ref": "SEC3", "text_summary": "Immediate effective date.", "classes": ["effective-date"], "treatment": "effective-date-note", "target": null, "exact_change": null, "evidence": "This bill shall be effective immediately upon passage...", "notes": ""},
+        {"ref": "SEC4", "text_summary": "Definitions for officer, on duty, authorized officer, punitive action, public agency, toll.", "classes": ["new-permanent-general"], "treatment": "exclude-from-code", "target": null, "exact_change": null, "evidence": "The term \"officer\" means any member of a public agency...", "notes": ""},
+        {"ref": "SEC5", "text_summary": "Political activity protections.", "classes": ["new-permanent-general"], "treatment": "exclude-from-code", "target": null, "exact_change": null, "evidence": "No officer shall be prohibited from engaging... in political activity.", "notes": ""},
+        {"ref": "SEC6", "text_summary": "Interrogation conditions, notice, and representation rules.", "classes": ["new-permanent-general"], "treatment": "exclude-from-code", "target": null, "exact_change": null, "evidence": "the interrogation shall be conducted under the following conditions", "notes": ""},
+        {"ref": "SEC7", "text_summary": "Lawful exercise of rights, insubordination, and administrative appeal.", "classes": ["new-permanent-general"], "treatment": "exclude-from-code", "target": null, "exact_change": null, "evidence": "No officer shall be subjected to punitive action... because of the lawful exercise of the rights granted under this act", "notes": ""},
+        {"ref": "SEC8-10", "text_summary": "Personnel-file adverse comments, response, inspection, and correction procedures.", "classes": ["new-permanent-general"], "treatment": "exclude-from-code", "target": null, "exact_change": null, "evidence": "No officer shall have any comment adverse to his interest entered in his personnel file...", "notes": ""},
+        {"ref": "SEC11", "text_summary": "Applicability, jurisdiction, injunctions, and civil penalties.", "classes": ["new-permanent-general"], "treatment": "exclude-from-code", "target": null, "exact_change": null, "evidence": "The District Courts shall have initial jurisdiction over any proceeding brought by any officer against any public agency...", "notes": ""},
+        {"ref": "SEC12", "text_summary": "Mutual-aid savings clause.", "classes": ["savings"], "treatment": "savings-note", "target": null, "exact_change": null, "evidence": "Nothing in this act shall in any way be construed to limit the use of any public agency...", "notes": ""}
+      ],
+      "current_implementation": {
+        "assessment": "missing",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t52/s10101/g",
+        "detail": "No matching current XML note was found; the enactment should be handled as a concise note/exclusion item, not as positive-law text."
+      },
+      "recommended_actions": [
+        "exclude the substantive officer-rights provisions from permanent Code text.",
+        "keep only a concise statutory note at a more appropriate anchor.",
+        "do not carry over any full-text dump behavior."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-022-155",
+      "public_law": "22-155",
+      "title": "Public Law 22-155 | Department of Education Repealment Act",
+      "status": "current",
+      "status_basis": "Full text present. Operative repeal/abolition act that repeals Public Law 17-129 and abolishes the Department of Education; the act itself is not self-repealed.",
+      "provisions": [
+        {"ref": "SECTION I", "text_summary": "Short title.", "classes": ["short-title"], "treatment": "statutory-note", "target": null, "exact_change": null, "evidence": "This Act may be cited as the \"Department of Education Repealment Act\".", "notes": ""},
+        {"ref": "SECTION II", "text_summary": "Findings.", "classes": ["findings-or-sense"], "treatment": "historical-note-only", "target": null, "exact_change": null, "evidence": "We as a Congress has found the development of the Department... stagnant", "notes": ""},
+        {"ref": "SECTION III", "text_summary": "Severability.", "classes": ["severability"], "treatment": "statutory-note", "target": null, "exact_change": null, "evidence": "This Act shall be severable...", "notes": ""},
+        {"ref": "SECTION IV", "text_summary": "Immediate effective date.", "classes": ["effective-date"], "treatment": "effective-date-note", "target": null, "exact_change": null, "evidence": "This act shall immediately take effect upon passage of both chambers of Congress and the signature of the President of the United States.", "notes": ""},
+        {"ref": "SECTION V(a)", "text_summary": "Repeals Public Law 17-129.", "classes": ["repeal"], "treatment": "repeal-marking", "target": "PL 17-129", "exact_change": "Repeal Public Law 17-129 entirely.", "evidence": "Public Law 17-129 shall be repealed in its entirety.", "notes": ""},
+        {"ref": "SECTION V(b)", "text_summary": "Abolishes the Department of Education.", "classes": ["new-permanent-general", "non-code"], "treatment": "exclude-from-code", "target": null, "exact_change": null, "evidence": "The United States Department of Education shall cease to exist.", "notes": "Abolition language belongs in history/notes, not permanent Code text."}
+      ],
+      "current_implementation": {
+        "assessment": "missing",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t20/s1 /us/usc/t20/s2",
+        "detail": "No matching current XML note was found; the source should be handled as repeal-marking plus a concise historical note."
+      },
+      "recommended_actions": [
+        "record repeal-marking for PL 17-129.",
+        "exclude the abolition language from permanent Code text and keep only a concise historical note.",
+        "avoid false source-limitation boilerplate."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-022-156",
+      "public_law": "22-156",
+      "title": "Public Law 22-156 | Local Law Enforcement Agencies Reform and Nurturing (LLEARN)",
+      "status": "current",
+      "status_basis": "Full text present. Major District/Capitol Police reorganization act with multiple real Title 2 amendments and repeal-markings; the act itself is operative and not self-repealed.",
+      "provisions": [
+        {"ref": "SEC1", "text_summary": "Short title.", "classes": ["short-title"], "treatment": "statutory-note", "target": null, "exact_change": null, "evidence": "This bill shall be referred to by its short title, \"Local Law Enforcement Agencies Reform and Nurturing\" or \"LLEARN\".", "notes": ""},
+        {"ref": "SEC2", "text_summary": "Severability and anti-supersession.", "classes": ["severability"], "treatment": "statutory-note", "target": null, "exact_change": null, "evidence": "This Act shall be severable... This Act shall not be superseded by any newer law unless that law specifically declares its intent to supersede this Act's provisions.", "notes": ""},
+        {"ref": "SEC3", "text_summary": "Immediate effective date.", "classes": ["effective-date"], "treatment": "effective-date-note", "target": null, "exact_change": null, "evidence": "This bill shall be effective immediately upon passage...", "notes": ""},
+        {"ref": "SEC4", "text_summary": "General applicability clause.", "classes": ["uncodified-admin-direction"], "treatment": "historical-note-only", "target": null, "exact_change": null, "evidence": "Pursuant to Public Law 1-1, codes listed in this act shall be applicable.", "notes": ""},
+        {"ref": "SEC5", "text_summary": "Definitions for Metropolitan Police, Capitol Police, sworn officers, emergency situations, PSA, Chief, and Capitol Grounds.", "classes": ["new-permanent-general", "local-district"], "treatment": "exclude-from-code", "target": null, "exact_change": null, "evidence": "The term \"Metropolitan Police\" means the Metropolitan Police Department... The term \"Capitol Police\" means the United States Capitol Police...", "notes": ""},
+        {"ref": "SEC6", "text_summary": "Metropolitan Police Department restructure, leadership, jurisdiction, powers, officer rules, and home-rule contingency.", "classes": ["local-district", "new-permanent-general", "uncodified-admin-direction"], "treatment": "exclude-from-code", "target": null, "exact_change": null, "evidence": "There hereby is established the Metropolitan Police Department as a bureau within the Department of Justice...", "notes": ""},
+        {"ref": "SEC7(1)", "text_summary": "Repeal package for prior public laws and multiple Title 2 sections.", "classes": ["repeal"], "treatment": "repeal-marking", "target": "PL 3-16, PL 7-45, PL 16-119, PL 17-134, PL 18-143, PL 11-69, and 2 U.S.C. 1902, 1903, 1904, 1905, 1905a, 1905b, 1907, 1907a, 1907b, 1910, 1921, 1921a, 1922, 1923, 1926, 1927, 1930, 1931, 1932, 1933, 1934, 1964, 1965, 1966, 1968, 1971, 1972, 1973, 1976, 1980, 1981", "exact_change": "Mark the listed public laws and Title 2 sections as repealed.", "evidence": "Public Law 3-16 shall remain repealed in its entirety... 2 U.S.Code §1902 shall be repealed in its entirety... 2 U.S.Code §1981 shall be repealed in its entirety.", "notes": ""},
+        {"ref": "SEC7(2)", "text_summary": "Replaces 2 U.S.C. 1901a with Capitol Police Board text.", "classes": ["direct-amendment", "substitution"], "treatment": "amend-existing-text", "target": "/us/usc/t2/s1901a", "exact_change": "Replace 2 U.S.C. 1901a with the Board establishment, membership, executive assistant, and documentation text.", "evidence": "2 U.S.Code §1901a shall be repealed in its entirety. 2 U.S.Code §1901a shall now read as; ...", "notes": ""},
+        {"ref": "SEC7(3)", "text_summary": "Capitol Police leadership.", "classes": ["new-permanent-general"], "treatment": "exclude-from-code", "target": null, "exact_change": null, "evidence": "The principal head of the Capitol Police shall be the Chief of Police...", "notes": ""},
+        {"ref": "SEC7(4)", "text_summary": "Capitol Police structure and jurisdiction.", "classes": ["new-permanent-general"], "treatment": "exclude-from-code", "target": null, "exact_change": null, "evidence": "The following named bureaus of the public service... shall be under the jurisdiction and supervision of the Capitol Police...", "notes": ""},
+        {"ref": "SEC7(5)(1)", "text_summary": "Replaces 2 U.S.C. 1961.", "classes": ["direct-amendment", "substitution"], "treatment": "amend-existing-text", "target": "/us/usc/t2/s1961", "exact_change": "Replace 2 U.S.C. 1961 with the policing-and-arrest authority text.", "evidence": "2 U.S.Code § 1961 shall be stricken in its entirety, and shall now read as follows:", "notes": ""},
+        {"ref": "SEC7(5)(2)", "text_summary": "Replaces 2 U.S.C. 1966.", "classes": ["direct-amendment", "substitution"], "treatment": "amend-existing-text", "target": "/us/usc/t2/s1966", "exact_change": "Replace 2 U.S.C. 1966 with the Member-of-Congress protective-detail text.", "evidence": "2 U.S.Code § 1966 shall be stricken in its entirety, and shall now read as follows:", "notes": ""},
+        {"ref": "SEC7(5)(3)", "text_summary": "Replaces 2 U.S.C. 1966a.", "classes": ["direct-amendment", "substitution"], "treatment": "amend-existing-text", "target": "/us/usc/t2/s1966a", "exact_change": "Replace 2 U.S.C. 1966a with the former-Speaker protective-detail text.", "evidence": "2 U.S.Code § 1966a shall be stricken in its entirety and shall now read as follows:", "notes": ""},
+        {"ref": "SEC7(5)(4)", "text_summary": "Replaces 2 U.S.C. 1969.", "classes": ["direct-amendment", "substitution"], "treatment": "amend-existing-text", "target": "/us/usc/t2/s1969", "exact_change": "Replace 2 U.S.C. 1969 with the traffic-control and regulations text.", "evidence": "2 U.S.Code § 1969 shall be stricken in its entirety and shall now read as follows:", "notes": ""},
+        {"ref": "SEC7(5)(5)", "text_summary": "Replaces 2 U.S.C. 1974.", "classes": ["direct-amendment", "substitution"], "treatment": "amend-existing-text", "target": "/us/usc/t2/s1974", "exact_change": "Replace 2 U.S.C. 1974 with the emergency special-officer text.", "evidence": "2 U.S.Code § 1974 shall be stricken in its entirety and shall now read as follows:", "notes": ""},
+        {"ref": "SEC7(6)", "text_summary": "Defines Capitol Grounds and Capitol Complex.", "classes": ["new-permanent-general"], "treatment": "exclude-from-code", "target": null, "exact_change": null, "evidence": "United States Capitol Grounds or United States Capitol Complex shall include the Congressional Offices...", "notes": ""}
+      ],
+      "current_implementation": {
+        "assessment": "missing",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s1",
+        "detail": "No matching note id was found in the current XML; the real Title 2 textual amendments are absent and need to be applied."
+      },
+      "recommended_actions": [
+        "amend the Title 2 sections listed in SEC 7(2) and SEC 7(5) with the enacted replacement text.",
+        "record repeal-markings for the listed prior public laws and sections.",
+        "keep the District/Capitol reorganization provisions as concise notes or exclude them from permanent Code text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-022-157",
+      "public_law": "22-157",
+      "title": "Public Law 22-157 | Area Management Update Act (AMUA)",
+      "status": "current",
+      "status_basis": "Full text present. This is an amendment act directed at Public Law 19-144, not a self-repealing measure.",
+      "provisions": [
+        {"ref": "SEC1", "text_summary": "Short title.", "classes": ["short-title"], "treatment": "statutory-note", "target": null, "exact_change": null, "evidence": "This bill shall be referred to by its short title, the \"Area Management Update Act\" or \"AMUA\".", "notes": ""},
+        {"ref": "SEC2", "text_summary": "Severability and anti-supersession.", "classes": ["severability"], "treatment": "statutory-note", "target": null, "exact_change": null, "evidence": "This Act shall be severable... This Act shall not be superseded by any newer law unless that law specifically declares its intent to supersede this Act's provisions.", "notes": ""},
+        {"ref": "SEC3", "text_summary": "Immediate effective date.", "classes": ["effective-date"], "treatment": "effective-date-note", "target": null, "exact_change": null, "evidence": "This bill shall be effective immediately upon passage...", "notes": ""},
+        {"ref": "SEC5(1)", "text_summary": "Amends Section 6 of Public Law 19-144.", "classes": ["direct-amendment", "substitution"], "treatment": "amendment-note", "target": "PL 19-144 sec. 6", "exact_change": "Add the new subsection text concerning road closures and Metropolitan Police authority.", "evidence": "Section 6 of Public Law 19-144, PAMA, shall be amended to state;", "notes": ""},
+        {"ref": "SEC5(2)", "text_summary": "Amends Section 8 of Public Law 19-144.", "classes": ["direct-amendment", "substitution"], "treatment": "amendment-note", "target": "PL 19-144 sec. 8", "exact_change": "Add the new subsection text concerning notice, searches, and closure duration.", "evidence": "Section 8 of Public Law 19-144, PAMA, shall be amended to state;", "notes": ""}
+      ],
+      "current_implementation": {
+        "assessment": "missing",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "No matching current XML note was found; the amendment should be carried as a statutory/amendment note tied to Public Law 19-144, not as positive-law text."
+      },
+      "recommended_actions": [
+        "add amendment notes for Public Law 19-144 sections 6 and 8.",
+        "do not invent a Title 18 code amendment target.",
+        "keep any note concise and source-grounded."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-022-158",
+      "public_law": "22-158",
+      "title": "Public Law 22-158 | Service Members Protection Act (SMPA)",
+      "status": "current",
+      "status_basis": "Full text present. A free-standing military/employment protection act with no express amendment to a numbered Code section.",
+      "provisions": [
+        {"ref": "SEC1", "text_summary": "Short title.", "classes": ["short-title"], "treatment": "statutory-note", "target": null, "exact_change": null, "evidence": "This bill shall be referred to by its short title, \"Service Members Protection Act\" or \"SMPA\".", "notes": ""},
+        {"ref": "SEC2", "text_summary": "Severability and anti-supersession.", "classes": ["severability"], "treatment": "statutory-note", "target": null, "exact_change": null, "evidence": "This Act shall be severable... This Act shall not be superseded by any newer law unless that law specifically declares its intent to supersede this Act's provisions.", "notes": ""},
+        {"ref": "SEC3", "text_summary": "Immediate effective date.", "classes": ["effective-date"], "treatment": "effective-date-note", "target": null, "exact_change": null, "evidence": "This bill shall be effective immediately upon passage...", "notes": ""},
+        {"ref": "SEC5", "text_summary": "Definitions for punitive action, deployment, armed forces, military, commanding officer, federalised, and service.", "classes": ["new-permanent-general"], "treatment": "exclude-from-code", "target": null, "exact_change": null, "evidence": "The term \"punitive action\" means any action that may lead to dismissal...", "notes": ""},
+        {"ref": "SEC6(1)", "text_summary": "Employment precedence during enlistment or deployment.", "classes": ["new-permanent-general"], "treatment": "exclude-from-code", "target": null, "exact_change": null, "evidence": "Upon the enlistment or commission of persons to the armed forces, the duties and responsibilities required of them... shall take precedence over other employment.", "notes": ""},
+        {"ref": "SEC6(2)", "text_summary": "Unlimited leave and no punitive action for missed work.", "classes": ["temporary", "new-permanent-general"], "treatment": "exclude-from-code", "target": null, "exact_change": null, "evidence": "All military personnel are entitled to unlimited leave... No military personnel may face punitive action for missed work by non-military employment.", "notes": ""},
+        {"ref": "SEC6(3)", "text_summary": "Recalls former military personnel for specific deployments.", "classes": ["new-permanent-general"], "treatment": "exclude-from-code", "target": null, "exact_change": null, "evidence": "Former military personnel... shall be excused from other employment obligations...", "notes": ""}
+      ],
+      "current_implementation": {
+        "assessment": "missing",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "No matching current XML note was found; this is a free-standing non-code enactment that should be handled as a concise historical/statutory note only."
+      },
+      "recommended_actions": [
+        "exclude the substantive military-employment rules from permanent Code text.",
+        "if retained, keep only a concise statutory note at a military/personnel anchor.",
+        "avoid any full-text dump."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-022-159",
+      "public_law": "22-159",
+      "title": "Public Law 22-159 | D.C. Statute of Limitations Act",
+      "status": "current",
+      "status_basis": "Full text present. This is a direct amendment to Public Law 11-69 adding a statute-of-limitations section; the act itself is not self-repealing.",
+      "provisions": [
+        {"ref": "SECTION I", "text_summary": "Short title.", "classes": ["short-title"], "treatment": "statutory-note", "target": null, "exact_change": null, "evidence": "This Act may be cited as the \"D.C. Statute of Limitations Act\".", "notes": ""},
+        {"ref": "SECTION II", "text_summary": "Severability and anti-supersession.", "classes": ["severability"], "treatment": "statutory-note", "target": null, "exact_change": null, "evidence": "This Act shall be severable... This Act shall not be superseded by any newer law unless that law specifically declares its intent to supersede this Act's provisions.", "notes": ""},
+        {"ref": "SECTION III", "text_summary": "Immediate effective date.", "classes": ["effective-date"], "treatment": "effective-date-note", "target": null, "exact_change": null, "evidence": "This act shall immediately take effect upon passage of both chambers of Congress and the signature of the President of the United States.", "notes": ""},
+        {"ref": "SECTION IV", "text_summary": "Adds a statute-of-limitations section to Public Law 11-69.", "classes": ["direct-amendment", "insertion"], "treatment": "amendment-note", "target": "PL 11-69", "exact_change": "Add a new section titled 'Statute of Limitations' with the 75-day limitations rule and commencement rule.", "evidence": "Public Law 11-69 shall be amended to add an additional section titled \"Statute of Limitations\" that shall henceforth read;", "notes": ""}
+      ],
+      "current_implementation": {
+        "assessment": "missing",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s1",
+        "detail": "No matching current XML note was found; the amendment should be recorded as a note or amendment to Public Law 11-69, not as a repeal."
+      },
+      "recommended_actions": [
+        "add an amendment note at the Public Law 11-69 home.",
+        "do not mark this as a repeal.",
+        "keep the limitations text concise and source-grounded."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-022-160",
+      "public_law": "22-160",
+      "title": "Public Law 22-160 | To Amend the U.S. Code",
+      "status": "current",
+      "status_basis": "Full text present. Direct amendment act targeting 18 U.S.C. 205; the act itself is not self-repealing.",
+      "provisions": [
+        {"ref": "SECTION I", "text_summary": "Purpose and short title.", "classes": ["short-title", "uncodified-admin-direction"], "treatment": "statutory-note", "target": null, "exact_change": null, "evidence": "To amend the U.S. Code to redefine certain restrictions on the practice of law.", "notes": ""},
+        {"ref": "SECTION II", "text_summary": "Severability.", "classes": ["severability"], "treatment": "statutory-note", "target": null, "exact_change": null, "evidence": "This Act shall be severable...", "notes": ""},
+        {"ref": "SECTION III", "text_summary": "Immediate effective date.", "classes": ["effective-date"], "treatment": "effective-date-note", "target": null, "exact_change": null, "evidence": "This act shall immediately take effect upon passage...", "notes": ""},
+        {"ref": "SECTION IV(a)", "text_summary": "Replaces subsection (a) of 18 U.S.C. 205.", "classes": ["direct-amendment", "substitution"], "treatment": "amend-existing-text", "target": "/us/usc/t18/s205", "exact_change": "Replace subsection (a) of 18 U.S.C. 205 with the enacted principal-officer text.", "evidence": "18 U.S.C. §205 shall be amended by replacing subsection (a) with the text;", "notes": ""},
+        {"ref": "SECTION IV(b)", "text_summary": "Inserts new subsection (j) after subsection (i) of 18 U.S.C. 205.", "classes": ["direct-amendment", "insertion"], "treatment": "amend-existing-text", "target": "/us/usc/t18/s205", "exact_change": "Insert new subsection (j) after subsection (i) with the enacted employee-representation text.", "evidence": "18 U.S.C. §205 shall be amended by inserting an additional subsection after subsection (i), with the text;", "notes": ""}
+      ],
+      "current_implementation": {
+        "assessment": "missing",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "No matching current XML note was found; the two real Title 18 textual amendments must be applied directly."
+      },
+      "recommended_actions": [
+        "amend /us/usc/t18/s205 subsection (a) with the enacted principal-officer text.",
+        "insert subsection (j) after subsection (i) in /us/usc/t18/s205.",
+        "remove any note-only placeholder if present."
+      ],
+      "confidence": "high"
+    }
+  ]
+}

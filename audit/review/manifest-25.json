@@ -1,0 +1,224 @@
+{
+  "reviewer": "reviewer-25",
+  "group_index": 25,
+  "law_count": 10,
+  "output_path": "audit/review/review-25.json",
+  "laws": [
+    {
+      "law_id": "PL-035-252",
+      "public_law": "35-252",
+      "title": "Public Law 35-252 | Magistrate Appointment Act of 2025",
+      "report_path": "audit/primary/batch-09-01.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC 3"
+      ],
+      "targets": [
+        "Public Law 26-190 section 106(c)(i)"
+      ]
+    },
+    {
+      "law_id": "PL-035-254",
+      "public_law": "35-254",
+      "title": "Public Law 35-254 | An Act to repeal Public Law 28-205",
+      "report_path": "audit/primary/batch-09-02.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC 3"
+      ],
+      "targets": [
+        "Public Law 28-205"
+      ]
+    },
+    {
+      "law_id": "PL-035-256",
+      "public_law": "35-256",
+      "title": "Public Law 35-256 | Workers First Act of 2025",
+      "report_path": "audit/primary/batch-09-02.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 3"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-036-256",
+      "public_law": "36-256",
+      "title": "Public Law 36-256 | Commerce Dispersal Act",
+      "report_path": "audit/primary/batch-09-02.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC 3",
+        "SEC 4"
+      ],
+      "targets": [
+        "Department of Commerce and Labor and related successor offices",
+        "Library of Congress / Copyright Office / Copyright Royalty Board"
+      ]
+    },
+    {
+      "law_id": "PL-036-257",
+      "public_law": "36-257",
+      "title": "Public Law 36-257 | Maritime Operations & Policy Overhaul Act",
+      "report_path": "audit/primary/batch-09-02.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 4",
+        "SEC 5",
+        "SEC 6",
+        "SEC 7-12"
+      ],
+      "targets": [
+        "Military Justice Reform Act of 2024, section 4(a)",
+        "Military Officer Commissioning Reform Act, section 9(g)",
+        "Streamlining and Protecting American Security Act, section 6(m)"
+      ]
+    },
+    {
+      "law_id": "PL-036-258",
+      "public_law": "36-258",
+      "title": "Public Law 36-258 | National Root Beer Day Act",
+      "report_path": "audit/primary/batch-09-02.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC 3"
+      ],
+      "targets": [
+        "/us/usc/t5/s6103"
+      ]
+    },
+    {
+      "law_id": "PL-036-260",
+      "public_law": "36-260",
+      "title": "Public Law 36-260 | Fixing the District of Columbia Act of 2025",
+      "report_path": "audit/primary/batch-09-02.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 10",
+        "SEC 11",
+        "SEC 4(a)(i)-(vi)",
+        "SEC 6-9"
+      ],
+      "targets": [
+        "District Tort Act, DC Criminal Code, Protecting our Firefighters Act, and Fire Marshals Act",
+        "District of Columbia municipal government, MPD, DCFEMS, and Delegate office",
+        "Public Law 22-156, sections 6(1)(1), 6(2)(1), and 6(2)(2)",
+        "Public Laws 16-120, 25-181, 29-213, 29-216, 30-223, and 32-231"
+      ]
+    },
+    {
+      "law_id": "PL-037-261",
+      "public_law": "37-261",
+      "title": "Public Law 37-261 | Federal Criminal Code Act of 2025",
+      "report_path": "audit/primary/batch-09-02.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 4"
+      ],
+      "targets": [
+        "/us/usc/t18/s1"
+      ]
+    },
+    {
+      "law_id": "PL-038-262",
+      "public_law": "38-262",
+      "title": "Public Law 38-262 | Fund the Government Act of 2026",
+      "report_path": "audit/primary/batch-09-03.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. V",
+        "SEC. VI"
+      ],
+      "targets": [
+        "PL 32-230 sec. 6"
+      ]
+    },
+    {
+      "law_id": "PL-038-263",
+      "public_law": "38-263",
+      "title": "Public Law 38-263 | National Security Act of 2026",
+      "report_path": "audit/primary/batch-09-03.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 5",
+        "TITLE I, SEC. 101-102",
+        "TITLE II, SEC. 201-212",
+        "TITLE III, SEC. 301-302",
+        "TITLE IV, SEC. 401-402"
+      ],
+      "targets": [
+        "Pub. L. 3-21"
+      ]
+    }
+  ]
+}

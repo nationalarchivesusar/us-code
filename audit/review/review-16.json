@@ -1,0 +1,388 @@
+{
+  "reviewer": "law-auditor-G",
+  "group_index": 16,
+  "law_count": 10,
+  "source_manifest": "D:\\us-code\\audit\\review\\manifest-16.json",
+  "output_path": "D:\\us-code\\audit\\review\\review-16.json",
+  "laws": [
+    {
+      "law_id": "PL-022-154",
+      "public_law": "22-154",
+      "title": "Public Law 22-154 | Officer Bill of Rights (OBR)",
+      "final_legal_status": "current",
+      "status_basis": "The source is intact and operative. It is a freestanding officer-rights enactment with severability, effective-date, definitions, protections, and enforcement provisions, but no express positive-law section amendment.",
+      "provision_level_disposition": [
+        {
+          "provision": "SEC. 4-SEC. 12",
+          "operative_character": "freestanding law-enforcement personnel-rights rules and remedies",
+          "required_code_treatment": "statutory-note-only",
+          "implementation": "implemented as a statutory note at the title-52 subject-matter anchor",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-022-154\\law.txt; D:\\us-code\\usc\\usc52.xml (note id rp-pl022154-codification)"
+        }
+      ],
+      "required_code_treatment": "statutory-note-only",
+      "current_implementation": {
+        "assessment": "implemented",
+        "placement": "/us/usc/t52/s10101/g",
+        "detail": "Current branch carries the Pub. L. 22-154 statutory note; the branch change is not present in origin/main."
+      },
+      "source_evidence": [
+        "D:\\us-code\\codification\\laws\\laws\\PL-022-154\\law.txt",
+        "D:\\us-code\\usc\\usc52.xml:518",
+        "D:\\us-code\\audit\\current-implementation.json"
+      ],
+      "recommended_action": [
+        "Retain the statutory note at the title 52 anchor.",
+        "Do not create a new U.S. Code section.",
+        "Keep the act current."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-022-155",
+      "public_law": "22-155",
+      "title": "Public Law 22-155 | Department of Education Repealment Act",
+      "final_legal_status": "current",
+      "status_basis": "The source is intact and operative. It repeals Public Law 17-129 and abolishes the Department of Education; the enactment itself is not self-repealed.",
+      "provision_level_disposition": [
+        {
+          "provision": "SECTION V(a)",
+          "operative_character": "repeals Public Law 17-129",
+          "required_code_treatment": "historical-note-only",
+          "implementation": "implemented as a statutory note at the title-20 anchor",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-022-155\\law.txt; D:\\us-code\\usc\\usc20.xml (note id rp-pl022155-codification)"
+        },
+        {
+          "provision": "SECTION V(b)",
+          "operative_character": "abolishes the Department of Education",
+          "required_code_treatment": "historical-note-only",
+          "implementation": "implemented as part of the same title-20 statutory note",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-022-155\\law.txt"
+        }
+      ],
+      "required_code_treatment": "historical-note-only",
+      "current_implementation": {
+        "assessment": "implemented",
+        "placement": "/us/usc/t20/s1/s2",
+        "detail": "Current branch includes the Pub. L. 22-155 note; this is a history-only treatment rather than a new positive-law section."
+      },
+      "source_evidence": [
+        "D:\\us-code\\codification\\laws\\laws\\PL-022-155\\law.txt",
+        "D:\\us-code\\usc\\usc20.xml",
+        "D:\\us-code\\audit\\current-implementation.json"
+      ],
+      "recommended_action": [
+        "Retain the history-only note under the closest title-20 anchor.",
+        "Do not create a new Code section.",
+        "Preserve the repeal history for Public Law 17-129."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-022-156",
+      "public_law": "22-156",
+      "title": "Public Law 22-156 | Local Law Enforcement Agencies Reform and Nurturing (LLEARN)",
+      "final_legal_status": "current",
+      "status_basis": "The source is intact and operative. It makes direct Title 2 amendments and repeal-markings affecting the Capitol Police / Metro Police framework, and the act itself remains current.",
+      "provision_level_disposition": [
+        {
+          "provision": "SEC. 7(1)",
+          "operative_character": "repeals the listed prior enactments and repeal-marked title-2 provisions",
+          "required_code_treatment": "reserve-or-repeal-note",
+          "implementation": "branch already carries repeal notes for the affected title-2 material",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-022-156\\law.txt; D:\\us-code\\usc\\usc02.xml"
+        },
+        {
+          "provision": "SEC. 7(2)",
+          "operative_character": "replaces 2 U.S.C. 1901a",
+          "required_code_treatment": "amend-existing-text",
+          "implementation": "implemented in current Title 2 text",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-022-156\\law.txt; D:\\us-code\\usc\\usc02.xml:26951"
+        },
+        {
+          "provision": "SEC. 7(5)(1)-(5)",
+          "operative_character": "replaces 2 U.S.C. 1961, 1966, 1966a, 1969, and 1974",
+          "required_code_treatment": "amend-existing-text",
+          "implementation": "implemented in current Title 2 text",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-022-156\\law.txt; D:\\us-code\\usc\\usc02.xml:27640, 27801, 27809, 27869, 27989"
+        }
+      ],
+      "required_code_treatment": "amend-existing-text",
+      "current_implementation": {
+        "assessment": "implemented",
+        "placement": "/us/usc/t2",
+        "detail": "The current branch contains the Title 2 amendments and repeal notes; this work is absent from origin/main."
+      },
+      "source_evidence": [
+        "D:\\us-code\\codification\\laws\\laws\\PL-022-156\\law.txt",
+        "D:\\us-code\\usc\\usc02.xml:26951, 26957, 26995, 27640, 27697, 27801, 27807, 27809, 27869, 27895, 27989, 28006",
+        "D:\\us-code\\codification\\decisions\\PL-022-156.md"
+      ],
+      "recommended_action": [
+        "Keep the integrated Title 2 replacements and repeal notes.",
+        "Do not treat the act as a note-only law.",
+        "Preserve the later-law conflict handling already reflected in the current branch."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-022-157",
+      "public_law": "22-157",
+      "title": "Public Law 22-157 | Area Management Update Act (AMUA)",
+      "final_legal_status": "current",
+      "status_basis": "The source is intact and operative. It is an amendment act directed at Public Law 19-144, not a self-repealing measure.",
+      "provision_level_disposition": [
+        {
+          "provision": "SEC. 5(1)-(2)",
+          "operative_character": "amends Public Law 19-144 section 6 and section 8",
+          "required_code_treatment": "statutory-note-only",
+          "implementation": "implemented as a title-18 anchor note on the current branch",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-022-157\\law.txt; D:\\us-code\\usc\\usc18.xml (note id rp-pl022157-codification)"
+        }
+      ],
+      "required_code_treatment": "statutory-note-only",
+      "current_implementation": {
+        "assessment": "implemented",
+        "placement": "/us/usc/t18/s1",
+        "detail": "Current branch carries the Pub. L. 22-157 statutory note; no new positive-law section is required."
+      },
+      "source_evidence": [
+        "D:\\us-code\\codification\\laws\\laws\\PL-022-157\\law.txt",
+        "D:\\us-code\\usc\\usc18.xml",
+        "D:\\us-code\\audit\\current-implementation.json"
+      ],
+      "recommended_action": [
+        "Retain the statutory note under the closest title-18 anchor.",
+        "Do not create a new Code section.",
+        "Preserve the amendment history to Public Law 19-144."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-022-158",
+      "public_law": "22-158",
+      "title": "Public Law 22-158 | Service Members Protection Act (SMPA)",
+      "final_legal_status": "current",
+      "status_basis": "The source is intact and operative. It is a freestanding military and employment-protection enactment with no express Code section amendment.",
+      "provision_level_disposition": [
+        {
+          "provision": "SEC. 5-SEC. 6",
+          "operative_character": "service-member protections, procedural safeguards, and enforcement language",
+          "required_code_treatment": "statutory-note-only",
+          "implementation": "implemented as a title-50 statutory note",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-022-158\\law.txt; D:\\us-code\\usc\\usc50.xml (note id rp-pl022158-codification)"
+        }
+      ],
+      "required_code_treatment": "statutory-note-only",
+      "current_implementation": {
+        "assessment": "implemented",
+        "placement": "/us/usc/t50/s1",
+        "detail": "Current branch carries the Pub. L. 22-158 statutory note; no positive-law replacement was necessary."
+      },
+      "source_evidence": [
+        "D:\\us-code\\codification\\laws\\laws\\PL-022-158\\law.txt",
+        "D:\\us-code\\usc\\usc50.xml",
+        "D:\\us-code\\audit\\current-implementation.json"
+      ],
+      "recommended_action": [
+        "Retain the title-50 statutory note.",
+        "Do not create a new Code section.",
+        "Keep the act current."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-022-159",
+      "public_law": "22-159",
+      "title": "Public Law 22-159 | D.C. Statute of Limitations Act",
+      "final_legal_status": "repealed_or_superseded",
+      "status_basis": "The source is retained as history only. It adds a statute-of-limitations section to Public Law 11-69 and is classified in the source record as statutory history rather than a live operative enactment.",
+      "provision_level_disposition": [
+        {
+          "provision": "SECTION IV",
+          "operative_character": "adds a statute-of-limitations rule to Public Law 11-69",
+          "required_code_treatment": "historical-note-only",
+          "implementation": "implemented as a history note at the title-28 anchor",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-022-159\\law.txt; D:\\us-code\\usc\\usc28.xml (note id rp-pl022159-codification)"
+        }
+      ],
+      "required_code_treatment": "historical-note-only",
+      "current_implementation": {
+        "assessment": "implemented",
+        "placement": "/us/usc/t28/s1",
+        "detail": "The current branch carries the history-only note, so no operative Code text should be created."
+      },
+      "source_evidence": [
+        "D:\\us-code\\codification\\laws\\laws\\PL-022-159\\law.txt",
+        "D:\\us-code\\usc\\usc28.xml",
+        "D:\\us-code\\audit\\current-implementation.json"
+      ],
+      "recommended_action": [
+        "Retain the law only as statutory history.",
+        "Do not create or expand operative Code text.",
+        "Keep the repeal/supersession classification intact."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-022-160",
+      "public_law": "22-160",
+      "title": "Public Law 22-160 | To Amend the U.S. Code",
+      "final_legal_status": "current",
+      "status_basis": "The source is intact and operative. It directly amends 18 U.S.C. 205 by replacing subsection (a) and adding subsection (j).",
+      "provision_level_disposition": [
+        {
+          "provision": "SECTION IV(a)",
+          "operative_character": "amends 18 U.S.C. 205 subsection (a)",
+          "required_code_treatment": "amend-existing-text",
+          "implementation": "implemented in current Title 18 text",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-022-160\\law.txt; D:\\us-code\\usc\\usc18.xml:4052, 4131"
+        },
+        {
+          "provision": "SECTION IV(b)",
+          "operative_character": "adds 18 U.S.C. 205 subsection (j)",
+          "required_code_treatment": "amend-existing-text",
+          "implementation": "implemented in current Title 18 text",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-022-160\\law.txt; D:\\us-code\\usc\\usc18.xml:4103, 4131"
+        }
+      ],
+      "required_code_treatment": "amend-existing-text",
+      "current_implementation": {
+        "assessment": "implemented",
+        "placement": "/us/usc/t18/s205",
+        "detail": "Current branch contains the amended 18 U.S.C. 205 text and the Pub. L. 22-160 history note; origin/main does not."
+      },
+      "source_evidence": [
+        "D:\\us-code\\codification\\laws\\laws\\PL-022-160\\law.txt",
+        "D:\\us-code\\usc\\usc18.xml:4052, 4103, 4131",
+        "D:\\us-code\\codification\\decisions\\PL-022-160.md"
+      ],
+      "recommended_action": [
+        "Retain the updated 18 U.S.C. 205 text.",
+        "Keep the history note for Pub. L. 22-160.",
+        "No further Code change is required."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-022-161",
+      "public_law": "22-161",
+      "title": "Public Law 22-161 | Second Chance Act",
+      "final_legal_status": "current",
+      "status_basis": "The source is intact and operative. It is a generally applicable employment-and-sealing statute with no express positive-law Code amendment.",
+      "provision_level_disposition": [
+        {
+          "provision": "SEC. 3-SEC. 4",
+          "operative_character": "general employment rules and criminal-record sealing procedures",
+          "required_code_treatment": "statutory-note-only",
+          "implementation": "implemented as a title-50 statutory note",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-022-161\\law.txt; D:\\us-code\\usc\\usc50.xml (note id rp-pl022161-codification)"
+        }
+      ],
+      "required_code_treatment": "statutory-note-only",
+      "current_implementation": {
+        "assessment": "implemented",
+        "placement": "/us/usc/t50/s1",
+        "detail": "Current branch carries the Pub. L. 22-161 statutory note; no direct Code rewrite is needed."
+      },
+      "source_evidence": [
+        "D:\\us-code\\codification\\laws\\laws\\PL-022-161\\law.txt",
+        "D:\\us-code\\usc\\usc50.xml",
+        "D:\\us-code\\audit\\current-implementation.json"
+      ],
+      "recommended_action": [
+        "Retain the statutory note under title 50.",
+        "Do not create a new Code section.",
+        "Keep the act current."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-022-162",
+      "public_law": "22-162",
+      "title": "Public Law 22-162 | Judicial Fairness Act",
+      "final_legal_status": "current",
+      "status_basis": "The source is intact and operative. Section IV expressly amends 28 U.S.C. 1253, 1257, and 1291; section V amends other public laws that are outside the Code-operation scope.",
+      "provision_level_disposition": [
+        {
+          "provision": "SEC. IV(1)",
+          "operative_character": "amends 28 U.S.C. 1253",
+          "required_code_treatment": "amend-existing-text",
+          "implementation": "implemented in current Title 28 text",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-022-162\\law.txt; D:\\us-code\\usc\\usc28.xml:17497, 17509"
+        },
+        {
+          "provision": "SEC. IV(2)",
+          "operative_character": "amends 28 U.S.C. 1257",
+          "required_code_treatment": "amend-existing-text",
+          "implementation": "implemented in current Title 28 text",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-022-162\\law.txt; D:\\us-code\\usc\\usc28.xml:17543, 17567"
+        },
+        {
+          "provision": "SEC. IV(4)",
+          "operative_character": "amends 28 U.S.C. 1291",
+          "required_code_treatment": "amend-existing-text",
+          "implementation": "implemented in current Title 28 text",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-022-162\\law.txt; D:\\us-code\\usc\\usc28.xml:17641, 17686"
+        },
+        {
+          "provision": "SEC. V",
+          "operative_character": "direct amendments to other public laws, not Code text",
+          "required_code_treatment": "no-code-operation",
+          "implementation": "no separate Code rewrite required",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-022-162\\law.txt"
+        }
+      ],
+      "required_code_treatment": "amend-existing-text",
+      "current_implementation": {
+        "assessment": "implemented",
+        "placement": "/us/usc/t28/s1253,/us/usc/t28/s1257,/us/usc/t28/s1291",
+        "detail": "Current branch contains the amended Title 28 text and the Pub. L. 22-162 history notes; origin/main lacks these changes."
+      },
+      "source_evidence": [
+        "D:\\us-code\\codification\\laws\\laws\\PL-022-162\\law.txt",
+        "D:\\us-code\\usc\\usc28.xml:17497, 17509, 17543, 17567, 17641, 17686",
+        "D:\\us-code\\codification\\decisions\\PL-022-162.md"
+      ],
+      "recommended_action": [
+        "Keep the integrated amendments to 28 U.S.C. 1253, 1257, and 1291.",
+        "Do not create a separate Code operation for section V.",
+        "Preserve the existing history notes."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-022-163",
+      "public_law": "22-163",
+      "title": "Public Law 22-163 | Employee's Bill of Rights",
+      "final_legal_status": "current",
+      "status_basis": "The source is intact and operative. It creates federal-employee protections, a District of Columbia judicial review path, and penalties, but it does not contain an express positive-law Code amendment.",
+      "provision_level_disposition": [
+        {
+          "provision": "SEC. 4-SEC. 12",
+          "operative_character": "federal-employee protections, procedure, jurisdiction, remedies, and penalties",
+          "required_code_treatment": "statutory-note-only",
+          "implementation": "implemented as a title-5 statutory note",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-022-163\\law.txt; D:\\us-code\\usc\\usc05.xml (note id rp-pl022163-codification)"
+        }
+      ],
+      "required_code_treatment": "statutory-note-only",
+      "current_implementation": {
+        "assessment": "implemented",
+        "placement": "/us/usc/t5/s101",
+        "detail": "Current branch carries the Pub. L. 22-163 statutory note; no new operative Code text is warranted."
+      },
+      "source_evidence": [
+        "D:\\us-code\\codification\\laws\\laws\\PL-022-163\\law.txt",
+        "D:\\us-code\\usc\\usc05.xml",
+        "D:\\us-code\\audit\\current-implementation.json"
+      ],
+      "recommended_action": [
+        "Retain the title-5 statutory note.",
+        "Do not create a new Code section.",
+        "Keep the act current."
+      ],
+      "confidence": "high"
+    }
+  ]
+}

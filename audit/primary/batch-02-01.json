@@ -1,0 +1,608 @@
+{
+  "batch": 2,
+  "auditor": "law-auditor-A",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-004-031",
+      "public_law": "4-31",
+      "title": "Public Law 4-31 | Stand Your Ground Act",
+      "status": "fully-repealed",
+      "status_basis": "Listed in the source manifest under 'Repealed Laws'. The source body itself contains no self-repeal or sunset; it enacts a permanent general criminal-defense scheme (justifiable use of force / castle doctrine). Repeal is external, so status rests on the repealed-laws listing rather than internal text.",
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "text_summary": "Short title 'Stand Your Ground Act' / S. 31.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t18 (crimes/self-defense) or t50 as placed",
+          "exact_change": "n/a",
+          "evidence": "This Act may be cited as the \"Stand Your Ground Act\" or simply as S. 31.",
+          "notes": "Short title only."
+        },
+        {
+          "ref": "SEC. 2",
+          "text_summary": "Purposes: protect citizens standing their ground from criminals and legal repercussion.",
+          "classes": ["findings-or-sense"],
+          "treatment": "exclude-from-code",
+          "target": "n/a",
+          "exact_change": "n/a",
+          "evidence": "It is the purpose of this act to - Protect citizens from armed criminals.",
+          "notes": "Purpose clause."
+        },
+        {
+          "ref": "SEC. 3",
+          "text_summary": "Enactment/effective on passage and signature.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": "n/a",
+          "exact_change": "n/a",
+          "evidence": "This bill shall be enacted once passed through both chambers of Congress and signed by the President",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 101",
+          "text_summary": "Definitions: law enforcement agency/officer, dwelling, residence, vehicle.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "title 18 (crimes/self-defense) - not title 50 as placed",
+          "exact_change": "Would define terms for a self-defense/use-of-force chapter.",
+          "evidence": "SEC. 101. Definition (a) Law enforcement agency shall be defined as...",
+          "notes": "Substantive general law; placement at t50/s1 is wrong subject matter."
+        },
+        {
+          "ref": "SEC. 102",
+          "text_summary": "Justifiable use of force; no duty to retreat in dwelling/residence.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "title 18",
+          "exact_change": "Enacts stand-your-ground rule.",
+          "evidence": "has no duty to retreat and has the right to stand his or her ground",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 103",
+          "text_summary": "Presumption of reasonable fear on unlawful/forcible entry.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "title 18",
+          "exact_change": "",
+          "evidence": "A person is presumed to have held a reasonable fear of imminent peril...",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 104",
+          "text_summary": "Exceptions to the presumption (lawful resident, criminal activity, law enforcement officer).",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "title 18",
+          "exact_change": "",
+          "evidence": "The presumption set forth in section 103 of this title does not apply if:",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 105",
+          "text_summary": "Presumption that forcible entrant intends unlawful violent act.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "title 18",
+          "exact_change": "",
+          "evidence": "is presumed to be doing so with the intent to commit an unlawful act involving force or violence.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "Note rp-pl004031-codification carries a full-text quotedContent dump and a Trello link, placed at t50/s1 (war/national defense) which is the wrong title - this is a general self-defense/criminal-law enactment properly belonging in title 18. Declared codification is boilerplate; the note substitutes for what should be excluded-from-code text (repealed) or a concise history note."
+      },
+      "recommended_actions": [
+        "Remove full-text dump and Trello link from rp-pl004031-codification.",
+        "Reclassify as fully-repealed; retain only a concise historical/statutory note (repealed), and correct placement out of t50 to a crimes/self-defense anchor (t18) if any note is kept."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-032",
+      "public_law": "4-32",
+      "title": "Public Law 4-32 | Warrants, Subpoenas, and Summons Act",
+      "status": "unresolved",
+      "status_basis": "The supplied law.txt is an Executive Order (\"EXECUTIVE ORDER\") that merely references PL 4-32 as authority. The operative statute text of PL 4-32 is not present in the supplied source, so no lawful codification conclusion about the Act itself can be drawn.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "No authentic statutory text recoverable; the supplied file is an executive order referencing Public Law 4-32.",
+          "classes": ["non-code"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "EXECUTIVE ORDER ... under Public Law 4-32",
+          "notes": "Source-limited; the Act itself is not recoverable from the supplied file."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s1",
+        "detail": "Note declares 'Current or not wholly repealed' but the underlying source is an Executive Order, not the enacted PL 4-32 statutory text. Any codification note purporting to represent PL 4-32 rests on the wrong document. Trello link present; no dump."
+      },
+      "recommended_actions": [
+        "Do not codify EO 18-4 as PL 4-32 statutory text; retain at most a concise historical note flagging that the supplied source is an executive order referencing the Act, not the Act itself.",
+        "Flag source defect: locate the true PL 4-32 enacted text before any codification; remove Trello link."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-004-033",
+      "public_law": "4-33",
+      "title": "Public Law 4-33 | National Archives Act",
+      "status": "fully-repealed",
+      "status_basis": "Listed under 'Repealed Laws'. Internally the Act is permanent and general (establishes NARA as an independent agency); no self-repeal or sunset. Repeal is external.",
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "text_summary": "Short title, severability, immediate effective date, authorizes edit/copy of prior amended bills.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t44",
+          "exact_change": "n/a",
+          "evidence": "This piece of legislation shall be referred to as National Archives Act of 2022; This act shall be severable",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. II",
+          "text_summary": "Establishes the National Archives and Records Administration as an independent federal agency, headed by the Archivist and four Co-Archivists; President nominates with Senate advice/consent.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t44 (ch. 21, National Archives)",
+          "exact_change": "Establish NARA and the office of Archivist.",
+          "evidence": "The National Archives and Records Administration will be established as an independent federal agency.",
+          "notes": "General organic law; proper title placement (t44) but should be actual section text if retained, not just a note."
+        },
+        {
+          "ref": "SEC. III",
+          "text_summary": "Responsibilities: maintain records of laws, court decisions, elections; maintain Federal Register/CFR.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t44",
+          "exact_change": "",
+          "evidence": "The National Archives and Records Administration will keep an up-to-date record of all laws...; shall maintain the Code of Federal Regulations (Federal Register)",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t44/s101",
+        "detail": "Full-text dump + Trello link present. Title placement (t44) is correct subject-matter, but the note is a full-text dump rather than a concise history note, and no real section text was created. Since the law is repealed, positive-law section text is not required, but the dump/Trello must be removed."
+      },
+      "recommended_actions": [
+        "Remove full-text dump and Trello link from rp-pl004033-codification.",
+        "Retain a concise historical note at title 44 recording enactment and repeal of the National Archives Act."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-034",
+      "public_law": "4-34",
+      "title": "Public Law 4-34 | An Act to Prevent the Proliferation of Magistrates and Ensure Basic Judicial Competence",
+      "status": "fully-repealed",
+      "status_basis": "Listed under 'Repealed Laws'. Internally a permanent general rule (bar-certification requirement for magistrate/judicial appointments); no self-repeal or sunset. Repeal external.",
+      "provisions": [
+        {
+          "ref": "SEC. I",
+          "text_summary": "Short title, severability, effective on passage.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28",
+          "exact_change": "n/a",
+          "evidence": "referred to as \"H.R. 4015, an Act to Prevent the Proliferation of Magistrates...",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. II",
+          "text_summary": "No person may be appointed a Magistrate (excluding confirmed Judges/Justices) without federal-court certification; appointing officer liable to impeachment.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t28 (judiciary) - not t50 as placed",
+          "exact_change": "Bar-certification requirement for magistrate appointments.",
+          "evidence": "No person shall be appointed as a Magistrate... without first being certified to practice in a federal court",
+          "notes": "Placement at t50/s1 (war/defense) is the wrong subject; belongs in judiciary (t28)."
+        },
+        {
+          "ref": "SEC. III",
+          "text_summary": "Same certification requirement for Judges/Justices; appointing officer liable to impeachment.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t28",
+          "exact_change": "",
+          "evidence": "No person shall be appointed as a Judge or Justice... without first being certified to practice in a federal court",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. IV",
+          "text_summary": "Persons already appointed get ten days to comply or face impeachment/removal.",
+          "classes": ["applicability", "temporary"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28",
+          "exact_change": "",
+          "evidence": "shall have ten days from its passing into law to become in compliance",
+          "notes": "Transitional applicability clause."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "Full-text dump + Trello link; placed at t50/s1 which is wrong (judiciary matter belongs in t28). Repealed law, so no section text required, but dump/Trello must be cleaned and placement corrected if a note is kept."
+      },
+      "recommended_actions": [
+        "Remove full-text dump and Trello link from rp-pl004034-codification.",
+        "Move any retained historical note out of t50 to title 28 (judiciary); mark as repealed."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-035",
+      "public_law": "4-35",
+      "title": "Public Law 4-35 | Recommissioning of the United States Ship New Jersey Act of 2022",
+      "status": "unresolved",
+      "status_basis": "Source is unrecoverable: law.txt contains only Google Drive access-denied debris ('Sorry, the owner hasn't given you permission to download this file'). No statutory text is available; no lawful codification conclusion can be drawn.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "Text unavailable - source is a Google Drive permission error page. By title, this appears to be a single-vessel recommissioning measure.",
+          "classes": ["non-code"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Sorry, the owner hasn't given you permission to download this file.",
+          "notes": "Source-limited; cannot enumerate provisions."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t46/s101",
+        "detail": "Note declares specific status/codification prose despite the source being unrecoverable debris - an unsupported conclusion. No dump. Trello link present. Placement t46 (shipping) is a plausible subject guess but not verifiable from source."
+      },
+      "recommended_actions": [
+        "Recover the true source text before any codification.",
+        "Retain only a source-limited historical note (source unrecoverable); remove Trello link. Likely ceremonial/individual - exclude from permanent Code."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-004-036",
+      "public_law": "4-36",
+      "title": "Public Law 4-36 | Defense Heraldic Services Act",
+      "status": "current",
+      "status_basis": "Listed under '1st - 10th U.S. Congress' (not repealed). The extracted HTML contains the full operative text. It makes express amendments to Title 10 with no self-repeal or sunset.",
+      "provisions": [
+        {
+          "ref": "SEC. I",
+          "text_summary": "Short title; immediate effective date; conflicting legislation null; severability.",
+          "classes": ["short-title", "effective-date", "severability"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t10",
+          "exact_change": "n/a",
+          "evidence": "referred to as the \"Defense Heraldic Services Act of 2022\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. II",
+          "text_summary": "Amends Chapter 767 of Title 10 by repealing section 7594 in its entirety and reserving it.",
+          "classes": ["direct-amendment", "repeal"],
+          "treatment": "repeal-marking",
+          "target": "/us/usc/t10/s7594",
+          "exact_change": "Repeal 10 U.S.C. 7594 (Secretary of the Army authorization to furnish heraldic services) in its entirety; mark reserved.",
+          "evidence": "Chapter 767 of Title 10... is amended - (1) by repealing section 7594 in its entirety, and rendering it reserved",
+          "notes": "Requires actual textual repeal-marking, not merely a note."
+        },
+        {
+          "ref": "SEC. III",
+          "text_summary": "Amends Subchapter II of Chapter 48 of Title 10 by adding a new section furnishing heraldic services under the Secretary of Defense.",
+          "classes": ["direct-amendment", "insertion", "new-permanent-general"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t10 ch. 48, subchapter II",
+          "exact_change": "Insert new section (source labels it '206') at end of subchapter II of ch. 48 with subsections (a) design of flags/insignia/etc. by DoD authority, (b) advising other agencies on heraldry, (c) reimbursement regulations.",
+          "evidence": "Subchapter II of Chapter 48 of Title 10... is amended - (1) by adding the new following section at the end thereof: '206. Furnishing of heraldic services'",
+          "notes": "Source section number '206' likely a drafting artifact; integrator must place it correctly within ch. 48 subch. II numbering. This is a real textual insertion, NOT a note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t10/s101/h",
+        "detail": "Correct title (t10) and note correctly says 'Operative amendments are integrated where determinable,' but the draft only added a note at t10/s101/h and did NOT perform the express textual amendments (repeal of 7594; insertion of new heraldic-services section in ch. 48 subch. II). Express amendments to numbered Code provisions must be actual textual amendments."
+      },
+      "recommended_actions": [
+        "Perform actual repeal-marking of 10 U.S.C. 7594 (reserve it) per SEC. II.",
+        "Insert the new heraldic-services section into Title 10, Chapter 48, Subchapter II per SEC. III with source-credit to PL 4-36; do not rely on the s101/h note.",
+        "Remove Trello link from rp-pl004036-codification."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-037",
+      "public_law": "4-37",
+      "title": "Public Law 4-37 | Border Awareness and Naturalization Act",
+      "status": "fully-repealed",
+      "status_basis": "Listed under 'Repealed Laws'. Internally a permanent general immigration/naturalization regulatory scheme; no self-repeal or sunset. Repeal external.",
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "text_summary": "Short title (BAN Act / S. 37).",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t8",
+          "exact_change": "n/a",
+          "evidence": "cited as the \"Border Awareness and Naturalization Act\", the \"BAN Act\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 2",
+          "text_summary": "Purposes: CIS background-check regulations; organizational structure.",
+          "classes": ["findings-or-sense"],
+          "treatment": "exclude-from-code",
+          "target": "n/a",
+          "exact_change": "n/a",
+          "evidence": "It is the purpose of this act to - 1. Create regulations for the Citizenship & Immigration Services...",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 3-3.4",
+          "text_summary": "CIS background-check regulations; alternate-account definitions/actions; immigration regulations; CIS organizational structure (Director under DHS, database requirements).",
+          "classes": ["new-permanent-general", "uncodified-admin-direction"],
+          "treatment": "new-section",
+          "target": "/us/usc/t8 (aliens & nationality)",
+          "exact_change": "Establish CIS naturalization/background-check procedures and org structure.",
+          "evidence": "Citizenship and Immigration Services shall be an agency under the Department of Homeland Security and the head administrator shall be the Director...",
+          "notes": "Much is administrative/procedural (Roblox-specific: alt accounts, Discord messaging), of limited codifiability."
+        },
+        {
+          "ref": "SEC. 4",
+          "text_summary": "Special tagging of accounts flagged for further investigation.",
+          "classes": ["uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t8",
+          "exact_change": "",
+          "evidence": "SPECIAL TAGGING OF ACCOUNTS.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 5",
+          "text_summary": "Immigration closure seven days before elections; discretionary closure for national security.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t8",
+          "exact_change": "",
+          "evidence": "Immigration shall be closed seven days prior to a Congressional or Presidential Election",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 6",
+          "text_summary": "Denaturalization process via courts on later-found evidence.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t8",
+          "exact_change": "",
+          "evidence": "The Department of Homeland Security or Citizenship and Immigration Services may file a case to the court systems where they will request the removal of citizenship",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 7",
+          "text_summary": "Enactment on passage and signature.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": "n/a",
+          "exact_change": "n/a",
+          "evidence": "This bill shall be enacted once passed through both chambers of Congress and signed by the President",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t8/s1101/i/2",
+        "detail": "Full-text dump + Trello link at t8/s1101/i/2. Title 8 subject-matter is correct, but the note is a full dump not a concise history note. Law is repealed, so no positive-law section text required; dump/Trello must be removed."
+      },
+      "recommended_actions": [
+        "Remove full-text dump and Trello link from rp-pl004037-codification.",
+        "Retain a concise historical note in title 8 (repealed)."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-038",
+      "public_law": "4-38",
+      "title": "Public Law 4-38 | White House Protection Act",
+      "status": "fully-repealed",
+      "status_basis": "Listed under 'Repealed Laws'. Internally permanent general (Secret Service jurisdiction around the White House); no self-repeal or sunset. Repeal external.",
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "text_summary": "Short title (White House Protection Act / S. 36).",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t3",
+          "exact_change": "n/a",
+          "evidence": "cited as the \"White House Protection Act\" or simply as S. 36",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 2",
+          "text_summary": "Purpose: broaden Secret Service jurisdiction around White House and protectees.",
+          "classes": ["findings-or-sense"],
+          "treatment": "exclude-from-code",
+          "target": "n/a",
+          "exact_change": "n/a",
+          "evidence": "To broaden Secret Services jurisdiction around the White House and protectees.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 3 (Actions)",
+          "text_summary": "Secret Service enforcement of roads/sidewalks around White House; arrest/detain/frisk on complex; weapons prohibition on grounds.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t3 (President) or t18 s3056 (Secret Service powers)",
+          "exact_change": "Extend USSS jurisdiction and enforcement authority around the White House complex.",
+          "evidence": "North Road, West Road, East Road of the White House shall be enforced by United States Secret Service including sidewalks",
+          "notes": "Two sections numbered 'SECTION 3' (Actions and Enactment) in source."
+        },
+        {
+          "ref": "SEC. 3 (Enactment)",
+          "text_summary": "Enactment on passage and signature.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": "n/a",
+          "exact_change": "n/a",
+          "evidence": "This bill shall be enacted once passed through both chambers of Congress and signed by the President",
+          "notes": "Duplicate section numbering in source."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t3/s1",
+        "detail": "Full-text dump + Trello link at t3/s1. Title 3 (President) is a reasonable subject anchor. Repealed law; dump/Trello must be removed; concise history note is all that's warranted."
+      },
+      "recommended_actions": [
+        "Remove full-text dump and Trello link from rp-pl004038-codification.",
+        "Retain a concise historical note (repealed) at title 3."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-007-039",
+      "public_law": "7-39",
+      "title": "Public Law 7-39 | Mandatory FLETC Training ACT",
+      "status": "fully-repealed",
+      "status_basis": "Expressly repealed by PL 9-57 (also in this batch): 'S.B.1- Mandatory FLETC Training/Public Law 7-39 is repealed, and the provisions of law amended or repealed by that act are restored or revived as if the act had not been enacted.' Also listed under 'Repealed Laws'.",
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "text_summary": "Short title (Mandatory FLETC Training ACT).",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": "n/a",
+          "exact_change": "n/a",
+          "evidence": "cited as the \"Mandatory FLETC Training ACT\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 2",
+          "text_summary": "Purpose: trained/prepared officers to avoid misconduct.",
+          "classes": ["findings-or-sense"],
+          "treatment": "exclude-from-code",
+          "target": "n/a",
+          "exact_change": "n/a",
+          "evidence": "The purpose is to make sure we have trained & prepared officers",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 3",
+          "text_summary": "Mandatory FLETC training for USMS/FBI/DHS; exam requirements (75% pass); FLETC director/staff structure; exam content.",
+          "classes": ["new-permanent-general", "uncodified-admin-direction"],
+          "treatment": "exclude-from-code",
+          "target": "n/a (repealed & revived-as-if-never-enacted)",
+          "exact_change": "n/a",
+          "evidence": "All Federal departments below will have to go through FLETC training...",
+          "notes": "Because PL 9-57 revives prior law 'as if the act had not been enacted,' no code footprint should remain."
+        },
+        {
+          "ref": "SEC. 4",
+          "text_summary": "Effective immediately on passage/signature.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": "n/a",
+          "exact_change": "n/a",
+          "evidence": "This bill will be in effect immediately upon Passing both Chambers",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "Full-text dump + Trello link at t50/s1. Law was expressly repealed by PL 9-57 with revival of prior law 'as if not enacted,' yet the note retains a full-text dump. Placement t50 is also a poor subject fit (law enforcement training)."
+      },
+      "recommended_actions": [
+        "Remove full-text dump and Trello link from rp-pl007039-codification.",
+        "Reflect express repeal by PL 9-57 and revival of prior law; keep at most a concise historical note (repealed)."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-007-040",
+      "public_law": "7-40",
+      "title": "Public Law 7-40 | Media Companies Protection Act of 2022",
+      "status": "fully-repealed",
+      "status_basis": "Expressly repealed by PL 9-53 (also in this batch), SEC. 2: 'Public Law 7-40, the Media Protections Act is repealed.' Also listed under 'Repealed Laws'.",
+      "provisions": [
+        {
+          "ref": "SEC. I",
+          "text_summary": "Short title, severability, effective date, definition of 'Media Company'; includes anti-supersession clause.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t15 (commerce)",
+          "exact_change": "n/a",
+          "evidence": "cited as the \"Media Companies Protection Act of 2022\"; This Act shall not be superseded by any newer law unless that law specifically declares its intent to supersede",
+          "notes": "Anti-supersession clause; PL 9-53 nonetheless expressly repeals it, satisfying any specificity requirement."
+        },
+        {
+          "ref": "SEC. II",
+          "text_summary": "Bars Dept. of Commerce and Labor from suspending business license/media registry except for inactivity (3 weeks) or law violations.",
+          "classes": ["new-permanent-general"],
+          "treatment": "exclude-from-code",
+          "target": "n/a (repealed)",
+          "exact_change": "n/a",
+          "evidence": "the Department of Commerce and Labor is prohibited from suspending any business license or media registry...",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. III",
+          "text_summary": "New requirements to create media companies (communications server, a manager); prohibits denial for lacking a Roblox group/employees.",
+          "classes": ["new-permanent-general", "uncodified-admin-direction"],
+          "treatment": "exclude-from-code",
+          "target": "n/a (repealed)",
+          "exact_change": "n/a",
+          "evidence": "the Department of Commerce and Labor shall set the new requirements to start a media company",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "Full-text dump + Trello link at t50/s1 (wrong subject - this is commerce/media, not war/defense). Expressly repealed by PL 9-53; dump/Trello must be removed and only a concise history note kept."
+      },
+      "recommended_actions": [
+        "Remove full-text dump and Trello link from rp-pl007040-codification.",
+        "Reflect express repeal by PL 9-53; move any retained note out of t50 to a commerce anchor (t15); mark repealed."
+      ],
+      "confidence": "high"
+    }
+  ]
+}

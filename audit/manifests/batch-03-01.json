@@ -1,0 +1,544 @@
+﻿{
+    "batch":  3,
+    "auditor":  "law-auditor-A",
+    "report_path":  "audit/primary/batch-03-01.json",
+    "law_count":  10,
+    "laws":  [
+                 {
+                     "law_id":  "PL-009-061",
+                     "public_law":  "9-61",
+                     "title":  "Public Law 9-61 | Charter Repeal Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-009-061/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  666,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-009-061/source/H. R. 7- Repealing the Washington, Dsitrict of Columbia City Charter .pdf",
+                                              "format":  "pdf",
+                                              "size":  73018,
+                                              "sha256":  "f0d88663b3202dde48bf4636d518a892bc5f3c05cc5718af12b92568daf11830"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "repeal",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc40.xml",
+                                                   "note_id":  "rp-pl009061-codification",
+                                                   "public_law":  "9-61",
+                                                   "congress_from_id":  9,
+                                                   "seq_from_id":  61,
+                                                   "heading_cited_pl":  "9-61",
+                                                   "heading":  "Charter Repeal Actâ€”Pub. L. 9â€“61",
+                                                   "placement_identifier":  "/us/usc/t40/s101/4",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/ou1ggUYn/210-public-law-9-61-charter-repeal-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "8ece5424d9983232578eafb03754f121b0c7ef39aac2bf89a3a0f35fbe7ac412"
+                                                                      ],
+                                                   "note_char_length":  1380
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-009-062",
+                     "public_law":  "9-62",
+                     "title":  "Public Law 9-62 | Repealing the District of Columbia Home Rule Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-009-062/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  710,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-009-062/source/H. R. 0005 - Repealing the District of Columbia Home Rule Act .pdf",
+                                              "format":  "pdf",
+                                              "size":  69834,
+                                              "sha256":  "c28c0a1a619506c70fa5125487ae524ce7f357c8afc9dd4a7658d5667adb7e1d"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+                                                    "Pub.L. 93-198"
+                                                ],
+                     "detected_operative_language":  [
+                                                         "amend",
+                                                         "repeal",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc40.xml",
+                                                   "note_id":  "rp-pl009062-codification",
+                                                   "public_law":  "9-62",
+                                                   "congress_from_id":  9,
+                                                   "seq_from_id":  62,
+                                                   "heading_cited_pl":  "9-62",
+                                                   "heading":  "Repealing the District of Columbia Home Rule Actâ€”Pub. L. 9â€“62",
+                                                   "placement_identifier":  "/us/usc/t40/s101/4",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/WhRRn2SY/212-public-law-9-62-repealing-the-district-of-columbia-home-rule-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "92d0b3cc6f0fd4c8733e247e0f8fb79e1f2a5a4d8c4cb5f6435def21c56d8569"
+                                                                      ],
+                                                   "note_char_length":  1479
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-009-063",
+                     "public_law":  "9-63",
+                     "title":  "Public Law 9-63 | The Federal District Employment Act of 2022",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "meaningful text",
+                     "law_txt_path":  "codification/laws/laws/PL-009-063/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  209,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  true,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-009-063/source/downloaded_file.html",
+                                              "format":  "html",
+                                              "size":  1789,
+                                              "sha256":  "730fc174ad9c62b36fe6bf0c406dc7ef5d1317af144742b679a5311e00506016"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc05.xml",
+                                                   "note_id":  "rp-pl009063-codification",
+                                                   "public_law":  "9-63",
+                                                   "congress_from_id":  9,
+                                                   "seq_from_id":  63,
+                                                   "heading_cited_pl":  "9-63",
+                                                   "heading":  "The Federal District Employment Act of 2022â€”Pub. L. 9â€“63",
+                                                   "placement_identifier":  "/us/usc/t5/s101",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/03vz0K0H/214-public-law-9-63-the-federal-district-employment-act-of-2022"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  739
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-009-064",
+                     "public_law":  "9-64",
+                     "title":  "Public Law 9-64 | To Bar T800Ninja123 From Public Office",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-009-064/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  2667,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-009-064/source/H.J.Res 5 - To Bar T800Ninja123 From Public Office",
+                                              "format":  "res 5 - to bar t800ninja123 from public office",
+                                              "size":  99641,
+                                              "sha256":  "03bfc1de2571d97bc056c0c3ba8f3737cb2a2dcce027052578b7f50b541261e1"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc46.xml",
+                                                   "note_id":  "rp-pl009064-codification",
+                                                   "public_law":  "9-64",
+                                                   "congress_from_id":  9,
+                                                   "seq_from_id":  64,
+                                                   "heading_cited_pl":  "9-64",
+                                                   "heading":  "To Bar T800Ninja123 From Public Officeâ€”Pub. L. 9â€“64",
+                                                   "placement_identifier":  "/us/usc/t46/s101",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/eFDVkRRi/215-public-law-9-64-to-bar-t800ninja123-from-public-office"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "6840e0c504f60fab4ff5c7876dce5aad863addd9537331388d984ab5bdb6be48"
+                                                                      ],
+                                                   "note_char_length":  3428
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-010-065",
+                     "public_law":  "10-65",
+                     "title":  "Public Law 10-65 | Federal Judicial Reform Act ii",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-010-065/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  5857,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-010-065/source/Opinion and Order- JR-20220611-001.pdf",
+                                              "format":  "pdf",
+                                              "size":  123634,
+                                              "sha256":  "64c4f1f9140aecd3945356feafb2bd1e4fe07e5b9d22b910d2aca044ac94f058"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "28 U.S.C. Â§Â§ 351",
+                                                     "Title 4"
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "amend"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc50.xml",
+                                                   "note_id":  "rp-pl010065-codification",
+                                                   "public_law":  "10-65",
+                                                   "congress_from_id":  10,
+                                                   "seq_from_id":  65,
+                                                   "heading_cited_pl":  "10-65",
+                                                   "heading":  "Federal Judicial Reform Act iiâ€”Pub. L. 10â€“65",
+                                                   "placement_identifier":  "/us/usc/t50/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/YpcBUvxd/204-public-law-10-65-federal-judicial-reform-act-ii"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "c339985bd6bb1d09b2cfb7d3ad9d5db60b26ee9a9331abb6e0852b1937696a6b"
+                                                                      ],
+                                                   "note_char_length":  5045
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-010-066",
+                     "public_law":  "10-66",
+                     "title":  "Public Law 10-66 | The Americans First Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-010-066/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  973,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-010-066/source/S.B. 3 (1).pdf",
+                                              "format":  "pdf",
+                                              "size":  71248,
+                                              "sha256":  "e1f54b15fdd470f2fa28d625aad45c64f383c0b09aaad0ded7c1207c3074702e"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+                                                    "Public Law 3-17"
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "repeal",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc08.xml",
+                                                   "note_id":  "rp-pl010066-codification",
+                                                   "public_law":  "10-66",
+                                                   "congress_from_id":  10,
+                                                   "seq_from_id":  66,
+                                                   "heading_cited_pl":  "10-66",
+                                                   "heading":  "The Americans First Actâ€”Pub. L. 10â€“66",
+                                                   "placement_identifier":  "/us/usc/t8/s1101/i/2",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/QeDLDS6P/199-public-law-10-66-the-americans-first-act",
+                                                                        "https://trello.com/c/l8FcQqnQ/17-public-law-3-17-the-diplomatic-protections-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "5294f3ad91aa989c0d39974181031f0e03335c31c12da6f4dd087e8ebd4f96a3"
+                                                                      ],
+                                                   "note_char_length":  1648
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-010-067",
+                     "public_law":  "10-67",
+                     "title":  "Public Law 10-67 | Ambassadorial Readjustment Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-010-067/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  2148,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-010-067/source/S.B.04 - Ambassadorial Readjustment Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  75211,
+                                              "sha256":  "7fe4eb216393b88ea6a14bfef514a91ae24a9ae178bd87b189bc5e0456034750"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "establish",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc22.xml",
+                                                   "note_id":  "rp-pl010067-codification",
+                                                   "public_law":  "10-67",
+                                                   "congress_from_id":  10,
+                                                   "seq_from_id":  67,
+                                                   "heading_cited_pl":  "10-67",
+                                                   "heading":  "Ambassadorial Readjustment Actâ€”Pub. L. 10â€“67",
+                                                   "placement_identifier":  "/us/usc/t22/s2651",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable. No additional direct substitution was made where the enactment used only a blanket clause, contained a source defect, or was displaced by later legislation.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/wyhVslbS/208-public-law-10-67-ambassadorial-readjustment-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "42593a922829dea71f651cec7e03f9d97e5cc37f0b8d82e768265def45586ec4"
+                                                                      ],
+                                                   "note_char_length":  3038
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-010-068",
+                     "public_law":  "10-68",
+                     "title":  "Public Law 10-68 | American Jobs Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-010-068/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  783,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-010-068/source/H.R. 5.pdf",
+                                              "format":  "pdf",
+                                              "size":  67080,
+                                              "sha256":  "e4d1e61356e19889bc3981ca5ed6ab6ebc5464f1960a6ebc099976ed60de0270"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+                                                    "Public Law 3-20"
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "repeal",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc46.xml",
+                                                   "note_id":  "rp-pl010068-codification",
+                                                   "public_law":  "10-68",
+                                                   "congress_from_id":  10,
+                                                   "seq_from_id":  68,
+                                                   "heading_cited_pl":  "10-68",
+                                                   "heading":  "American Jobs Actâ€”Pub. L. 10â€“68",
+                                                   "placement_identifier":  "/us/usc/t46/s101",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/6xjUFfok/216-public-law-10-68-american-jobs-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "4c77f31431f9504dbe1762b6e238a4836b4f6461ef15bb76015a8ba882632e80"
+                                                                      ],
+                                                   "note_char_length":  1448
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-011-069",
+                     "public_law":  "11-69",
+                     "title":  "Public Law 11-69 | DC Criminal Code Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-011-069/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  9508,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-011-069/source/S. 2 - DC Criminal Code Act",
+                                              "format":  " 2 - dc criminal code act",
+                                              "size":  62192,
+                                              "sha256":  "cafc38db0c7b05ce03a479090b4c078633d22af550215b01821adf10b6cb24a1"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc18.xml",
+                                                   "note_id":  "rp-pl011069-codification",
+                                                   "public_law":  "11-69",
+                                                   "congress_from_id":  11,
+                                                   "seq_from_id":  69,
+                                                   "heading_cited_pl":  "11-69",
+                                                   "heading":  "DC Criminal Code Actâ€”Pub. L. 11â€“69",
+                                                   "placement_identifier":  "/us/usc/t18/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/v7d0R8ia/220-public-law-11-69-dc-criminal-code-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "975d79deb1f368f49a11a65c9a178c809e00bbe3ffac50041e9fbd65e741e6c7"
+                                                                      ],
+                                                   "note_char_length":  10253
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-011-070",
+                     "public_law":  "11-70",
+                     "title":  "Public Law 11-70 | Supreme Court Please Act",
+                     "list_name":  "11th - 20th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-011-070/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  968,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-011-070/source/S. 5 - Supreme Court Please Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  38998,
+                                              "sha256":  "86f87094fad3b19dbd34a2d328daa0e855c97c5ae77ad7e80f37dab4780d668d"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "Â§ 6121"
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "shorttitle",
+                                                         "transfer"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc28.xml",
+                                                   "note_id":  "rp-pl011070-codification",
+                                                   "public_law":  "11-70",
+                                                   "congress_from_id":  11,
+                                                   "seq_from_id":  70,
+                                                   "heading_cited_pl":  "11-70",
+                                                   "heading":  "Supreme Court Please Actâ€”Pub. L. 11â€“70",
+                                                   "placement_identifier":  "/us/usc/t28/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/WL14qoK1/223-public-law-11-70-supreme-court-please-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "57d347726d8288db4b1507ae9a925c6860b3059a10fe4b428231f12aaaa0a362"
+                                                                      ],
+                                                   "note_char_length":  1650
+                                               }
+                                           ]
+                 }
+             ]
+}

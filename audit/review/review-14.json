@@ -1,0 +1,348 @@
+{
+  "reviewer": "reviewer-14",
+  "group_index": 14,
+  "law_count": 10,
+  "source_manifest": "audit/review/manifest-14.json",
+  "laws": [
+    {
+      "law_id": "PL-017-135",
+      "public_law": "17-135",
+      "title": "Public Law 17-135 | Judicial Bias Protection Act (JBPA)",
+      "final_statutory_text": "Section 5 repeals and replaces 28 U.S.C. 144, narrowing the affidavit-of-bias procedure and adding timing and reassignment limits; sections 4, 6, and 7 are free-standing policy provisions.",
+      "provision_level_disposition": "Direct amendment to 28 U.S.C. 144; no separate Code placement for sections 4, 6, or 7.",
+      "chronology": "Current enactment. The source is intact and operative, and nothing in the reviewed corpus repeals Public Law 17-135 itself.",
+      "repeal_transfer_redesignation": "Section 5 is a direct replace-section-text operation against 28 U.S.C. 144; no transfer or redesignation chain is involved.",
+      "standalone_general_permanent": false,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": false,
+      "decision": "amend-existing-text",
+      "status": "current",
+      "status_basis": "The decision memorandum says section 5 repeals and replaces 28 U.S.C. 144, and the current branch has the USAR amendment note at that section. The substantive section text still needs the replacement applied.",
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s144",
+        "detail": "Current XML has the Pub. L. 17-135 history note, but the body of 28 U.S.C. 144 is still the pre-amendment text from origin/main."
+      },
+      "source_evidence": [
+        "codification/decisions/PL-017-135.md says section 5 repeals and replaces 28 U.S.C. 144.",
+        "usc/usc28.xml in the current branch contains the USAR note for Pub. L. 17-135, section 5.",
+        "git diff origin/main shows that note was added on this branch."
+      ],
+      "recommended_actions": [
+        "Apply the section 5 replacement text to 28 U.S.C. 144.",
+        "Preserve the heading, source credit, and historical notes.",
+        "Remove the Trello link once the text replacement is integrated."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-136",
+      "public_law": "17-136",
+      "title": "Public Law 17-136 | The Parks Act (TPA)",
+      "final_statutory_text": "Grants the Secret Service primary authority over President's Park and White House grounds, regulates limited closures and notice, and assigns secondary enforcement authority to other law-enforcement agencies.",
+      "provision_level_disposition": "Standalone generally permanent law; best preserved as a statutory note at 2 U.S.C. 4577.",
+      "chronology": "Current enactment. The source is intact and permanent, and no later enactment in the reviewed set repeals it.",
+      "repeal_transfer_redesignation": "No repeal, transfer, or redesignation chain was identified.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "note-only",
+      "status": "current",
+      "status_basis": "The law text is readable and permanent, but it does not give a uniquely executable Code amendment. The best placement is a statutory note at 2 U.S.C. 4577.",
+      "current_implementation": {
+        "assessment": "not-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s4577",
+        "detail": "Current XML has the preexisting section 4577 text, but no PL-17-136 statutory note has been added."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-017-136.md classifies the act as STATUTORY_NOTE at 2 U.S.C. 4577.",
+        "codification/mass_migration/latest/sources/text/PL-017-136.txt contains the Secret Service / President's Park closure provisions.",
+        "usc/usc02.xml currently has 2 U.S.C. 4577 but no PL-17-136 note."
+      ],
+      "recommended_actions": [
+        "Add a statutory note at 2 U.S.C. 4577.",
+        "Do not create a new Code section.",
+        "Do not alter XML text beyond the note insertion."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-137",
+      "public_law": "17-137",
+      "title": "Public Law 17-137 | Federal Background Check Act",
+      "final_statutory_text": "Requires FBI-approved background checks for federal agency employment, sets timing and waiver rules, and voids employment obtained without a qualifying check; the enactment itself is marked repealed in the source set.",
+      "provision_level_disposition": "No Code operation survives because the law is treated as repealed/nonoperative.",
+      "chronology": "Repealed enactment. The source report classifies the law as repealed, and no current Code placement is authorized.",
+      "repeal_transfer_redesignation": "No transfer or redesignation issue; the law is excluded from current Code treatment.",
+      "standalone_general_permanent": false,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "nonoperative-or-repealed",
+      "status": "repealed",
+      "status_basis": "The source report classifies the Trello record as repealed and the law text itself is a repealer of its own background-check regime.",
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "No Code text is being or should be carried forward for this repealed enactment."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-017-137.md classifies the act as NONOPERATIVE_OR_REPEALED.",
+        "codification/mass_migration/latest/sources/text/PL-017-137.txt repeals PL 17-137 in its entirety.",
+        "No PL-17-137 note or Code text appears in current XML."
+      ],
+      "recommended_actions": [
+        "Retain only as historical repeal information.",
+        "Do not add a Code section or statutory note.",
+        "Do not infer operative text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-138",
+      "public_law": "17-138",
+      "title": "Public Law 17-138 | Hatch Act Amendment Act (HA)",
+      "final_statutory_text": "Section 5(1)-(2) repeals and replaces 5 U.S.C. 7323 with a new subsection structure covering political activity restrictions and exceptions.",
+      "provision_level_disposition": "Direct amendment to 5 U.S.C. 7323; the section text itself is the operative object.",
+      "chronology": "Current enactment. The source is intact and operative, and the current branch already reflects the revised 7323 text.",
+      "repeal_transfer_redesignation": "Section 5 is a direct replace-section-text operation against 5 U.S.C. 7323; no transfer or redesignation chain is involved.",
+      "standalone_general_permanent": false,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": false,
+      "decision": "amend-existing-text",
+      "status": "current",
+      "status_basis": "The source memo says section 5(1)-(2) replaces 5 U.S.C. 7323, and the current XML already contains the revised subsections and the Pub. L. 17-138 amendment note.",
+      "current_implementation": {
+        "assessment": "implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s7323",
+        "detail": "Current XML already contains the revised 5 U.S.C. 7323 text and the USAR note for Pub. L. 17-138; origin/main does not."
+      },
+      "source_evidence": [
+        "codification/decisions/PL-017-138.md says section 5(1)-(2) repeals and replaces 5 U.S.C. 7323.",
+        "usc/usc05.xml current branch shows the revised subsection text for 7323 and a Pub. L. 17-138 note.",
+        "git diff origin/main shows the 7323 language was changed on this branch."
+      ],
+      "recommended_actions": [
+        "Retain the current 5 U.S.C. 7323 text and history note.",
+        "No further Code change is required for this law.",
+        "Remove any remaining Trello linkage if present outside XML."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-018-139",
+      "public_law": "18-139",
+      "title": "Public Law 18-139 | The Bye Bye Background Checks Act",
+      "final_statutory_text": "Repeals Public Law 17-137 in its entirety and halts the background-check regime established by that earlier act.",
+      "provision_level_disposition": "Standalone repealer; preserved, if at all, as a statutory note at 2 U.S.C. 6132.",
+      "chronology": "Current enactment. The source is intact and permanent, and no later enactment in the reviewed set repeals it.",
+      "repeal_transfer_redesignation": "The enactment is a direct repeal of PL 17-137; no transfer or redesignation survives.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "note-only",
+      "status": "current",
+      "status_basis": "The law text is readable and permanent, but it does not provide a uniquely executable Code amendment. The source record for the law is current, and the better treatment is a statutory note.",
+      "current_implementation": {
+        "assessment": "not-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s6132",
+        "detail": "Current XML has the underlying section 6132 text, but no PL-18-139 statutory note or repeal-history entry."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-018-139.md classifies the act as STATUTORY_NOTE at 2 U.S.C. 6132.",
+        "codification/laws/laws/PL-018-139/law.txt says Public Law 17-137 shall be repealed in its entirety.",
+        "usc/usc02.xml currently has 2 U.S.C. 6132 but no PL-18-139 note."
+      ],
+      "recommended_actions": [
+        "Add a statutory note at 2 U.S.C. 6132 recording the repeal of PL 17-137.",
+        "Do not add substantive Code text.",
+        "Do not treat the note as a new operative section."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-018-140",
+      "public_law": "18-140",
+      "title": "Public Law 18-140 | Federal Employment Act of 2023",
+      "final_statutory_text": "Source unavailable; no operative statutory text can be verified.",
+      "provision_level_disposition": "No safe Code treatment can be assigned from the recovered source set.",
+      "chronology": "Source-unavailable. The enactment cannot be authenticated from the readable source corpus.",
+      "repeal_transfer_redesignation": "No determinable repeal, transfer, or redesignation chain could be resolved.",
+      "standalone_general_permanent": null,
+      "new_code_section_required": null,
+      "note_treatment_legally_sufficient": null,
+      "decision": "source-unavailable-historical-note",
+      "status": "repealed",
+      "status_basis": "The classification file marks this law as repealed_recorded, but the enactment source itself was not recoverable in readable form.",
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "No readable source was recovered, so no XML placement is safe."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-018-140.md says no readable authenticated enactment text could be recovered.",
+        "codification/reference/all_270_laws_classification.csv marks PL-018-140 as repealed_recorded.",
+        "No implementing XML entry was found in the current branch."
+      ],
+      "recommended_actions": [
+        "Re-acquire the authentic source before any codification work.",
+        "Do not invent operative text.",
+        "Keep the law as a source-unavailable historical record only."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-018-141",
+      "public_law": "18-141",
+      "title": "Public Law 18-141 | Foreign Service Act of 2023",
+      "final_statutory_text": "Source unavailable; no operative statutory text can be verified.",
+      "provision_level_disposition": "No safe Code treatment can be assigned from the recovered source set.",
+      "chronology": "Source-unavailable. The enactment cannot be authenticated from the readable source corpus.",
+      "repeal_transfer_redesignation": "No determinable repeal, transfer, or redesignation chain could be resolved.",
+      "standalone_general_permanent": null,
+      "new_code_section_required": null,
+      "note_treatment_legally_sufficient": null,
+      "decision": "source-unavailable-historical-note",
+      "status": "current",
+      "status_basis": "The classification file marks this law as active_or_not_wholly_repealed, but the enactment source itself was not recoverable in readable form.",
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "No readable source was recovered, so no XML placement is safe."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-018-141.md says no readable authenticated enactment text could be recovered.",
+        "codification/reference/all_270_laws_classification.csv marks PL-018-141 as active_or_not_wholly_repealed.",
+        "No implementing XML entry was found in the current branch."
+      ],
+      "recommended_actions": [
+        "Re-acquire the authentic source before any codification work.",
+        "Do not invent operative text.",
+        "Keep the law as a source-unavailable historical record only."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-018-142",
+      "public_law": "18-142",
+      "title": "Public Law 18-142 | Business Licensing Act",
+      "final_statutory_text": "Source unavailable; no operative statutory text can be verified.",
+      "provision_level_disposition": "No safe Code treatment can be assigned from the recovered source set.",
+      "chronology": "Source-unavailable. The enactment cannot be authenticated from the readable source corpus.",
+      "repeal_transfer_redesignation": "No determinable repeal, transfer, or redesignation chain could be resolved.",
+      "standalone_general_permanent": null,
+      "new_code_section_required": null,
+      "note_treatment_legally_sufficient": null,
+      "decision": "source-unavailable-historical-note",
+      "status": "current",
+      "status_basis": "The classification file marks this law as active_or_not_wholly_repealed, but the enactment source itself was not recoverable in readable form.",
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "No readable source was recovered, so no XML placement is safe."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-018-142.md says no readable authenticated enactment text could be recovered.",
+        "codification/reference/all_270_laws_classification.csv marks PL-018-142 as active_or_not_wholly_repealed.",
+        "No implementing XML entry was found in the current branch."
+      ],
+      "recommended_actions": [
+        "Re-acquire the authentic source before any codification work.",
+        "Do not invent operative text.",
+        "Keep the law as a source-unavailable historical record only."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-018-143",
+      "public_law": "18-143",
+      "title": "Public Law 18-143 | United States Capitol Police Technical Corrections Act",
+      "final_statutory_text": "Source unavailable; no operative statutory text can be verified.",
+      "provision_level_disposition": "No safe Code treatment can be assigned from the recovered source set.",
+      "chronology": "Source-unavailable. The enactment cannot be authenticated from the readable source corpus.",
+      "repeal_transfer_redesignation": "No determinable repeal, transfer, or redesignation chain could be resolved.",
+      "standalone_general_permanent": null,
+      "new_code_section_required": null,
+      "note_treatment_legally_sufficient": null,
+      "decision": "source-unavailable-historical-note",
+      "status": "repealed",
+      "status_basis": "The classification file marks this law as repealed_recorded, but the enactment source itself was not recoverable in readable form.",
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "No readable source was recovered, so no XML placement is safe."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-018-143.md says no readable authenticated enactment text could be recovered.",
+        "codification/reference/all_270_laws_classification.csv marks PL-018-143 as repealed_recorded.",
+        "No implementing XML entry was found in the current branch."
+      ],
+      "recommended_actions": [
+        "Re-acquire the authentic source before any codification work.",
+        "Do not invent operative text.",
+        "Keep the law as a source-unavailable historical record only."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-019-144",
+      "public_law": "19-144",
+      "title": "Public Law 19-144 | Public Area Management Act (PAMA)",
+      "final_statutory_text": "Creates District of Columbia road and sidewalk closure authority, defines district/public-road/private-road terms, sets closure reasons and limits, and repeals PL 15-95 section VI(2)-(4).",
+      "provision_level_disposition": "Standalone generally permanent law; best preserved as a statutory note at 2 U.S.C. 5346.",
+      "chronology": "Current enactment. The source is intact and permanent, and no later enactment in the reviewed set repeals it.",
+      "repeal_transfer_redesignation": "The act contains a direct repeal of PL 15-95 section VI(2)-(4); no transfer or redesignation chain survives.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "note-only",
+      "status": "current",
+      "status_basis": "The source is readable and permanent, but it does not supply a uniquely executable Code amendment. The best treatment is a statutory note at 2 U.S.C. 5346.",
+      "current_implementation": {
+        "assessment": "not-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s5346",
+        "detail": "Current XML has the preexisting section 5346 text, but no PL-19-144 statutory note has been added."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-019-144.md classifies the act as STATUTORY_NOTE at 2 U.S.C. 5346.",
+        "codification/laws/laws/PL-019-144/law.txt contains the District closure authority and repeal of PL 15-95 section VI(2)-(4).",
+        "usc/usc02.xml currently has 2 U.S.C. 5346 but no PL-19-144 note."
+      ],
+      "recommended_actions": [
+        "Add a statutory note at 2 U.S.C. 5346.",
+        "Do not add substantive Code text.",
+        "Do not treat the note as a new operative section."
+      ],
+      "confidence": "high"
+    }
+  ]
+}

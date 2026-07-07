@@ -1,0 +1,540 @@
+﻿{
+    "batch":  4,
+    "auditor":  "law-auditor-B",
+    "report_path":  "audit/primary/batch-04-02.json",
+    "law_count":  10,
+    "laws":  [
+                 {
+                     "law_id":  "PL-015-100",
+                     "public_law":  "15-100",
+                     "title":  "Public Law 15-100 | Employee Rights and Limitations Act (leave, employment, termination)",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-015-100/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  8907,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-015-100/source/S. 19 - Employment Rights and Limitations Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  119408,
+                                              "sha256":  "8e2a801a032c4d150a36903c1f5ef22c6937ad5bcc4c1163e483e061f27faa9b"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "appropriat",
+                                                         "sunset"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc05.xml",
+                                                   "note_id":  "rp-pl015100-codification",
+                                                   "public_law":  "15-100",
+                                                   "congress_from_id":  15,
+                                                   "seq_from_id":  100,
+                                                   "heading_cited_pl":  "15-100",
+                                                   "heading":  "Employee Rights and Limitations Act (leave, employment, termination)â€”Pub. L. 15â€“100",
+                                                   "placement_identifier":  "/us/usc/t5/s101",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/oy4U92jb/296-public-law-15-100-employee-rights-and-limitations-act-leave-employment-termination"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "f0065481a4d60b780e9983c9e55723fc26c11a25b24fbe1e1cc505abc2b11601"
+                                                                      ],
+                                                   "note_char_length":  9707
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-015-101",
+                     "public_law":  "15-101",
+                     "title":  "Public Law 15-101 | Ensuring Accountability in Federal Agencies Act",
+                     "list_name":  "11th - 20th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "Forced exact-link Drive viewer text extraction",
+                     "law_txt_path":  "codification/laws/laws/PL-015-101/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  745382,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  true,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-015-101/source/drive_viewer_extracted_text.txt",
+                                              "format":  "txt",
+                                              "size":  753019,
+                                              "sha256":  "de7841d7cc15a8171e62963e20b8cfb4723c2146bab77c3533de2c2a3930c2dc"
+                                          },
+                                          {
+                                              "file":  "codification/laws/laws/PL-015-101/source/drive_viewer_rendered.html",
+                                              "format":  "html",
+                                              "size":  290704,
+                                              "sha256":  "6b60a0ba617e97c994085b96ade4f6eaa96f1f4952cc25653f6fc970bd027492"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "section 551 of title 5",
+                                                     "section 553 of title 5",
+                                                     "title 5"
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "appropriat",
+                                                         "effective",
+                                                         "establish",
+                                                         "insert",
+                                                         "severab",
+                                                         "shorttitle",
+                                                         "transfer"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc50.xml",
+                                                   "note_id":  "rp-pl015101-codification",
+                                                   "public_law":  "15-101",
+                                                   "congress_from_id":  15,
+                                                   "seq_from_id":  101,
+                                                   "heading_cited_pl":  "15-101",
+                                                   "heading":  "Ensuring Accountability in Federal Agencies Actâ€”Pub. L. 15â€“101",
+                                                   "placement_identifier":  "/us/usc/t50/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/U0u0tNvW/297-public-law-15-101-ensuring-accountability-in-federal-agencies-act-public-records-information-freedom-of-information"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  806
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-015-102",
+                     "public_law":  "15-102",
+                     "title":  "Public Law 15-102 | New Ambassadorial Organizational and Reporting Act",
+                     "list_name":  "11th - 20th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-015-102/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  3582,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-015-102/source/S. 13 - New Ambassadorial Organization and Reporting Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  81656,
+                                              "sha256":  "be3982fa0290ea7b1ead1c6d56a2cc88034f63e6fc8614010a966797497262ff"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "severab"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc22.xml",
+                                                   "note_id":  "rp-pl015102-codification",
+                                                   "public_law":  "15-102",
+                                                   "congress_from_id":  15,
+                                                   "seq_from_id":  102,
+                                                   "heading_cited_pl":  "15-102",
+                                                   "heading":  "New Ambassadorial Organizational and Reporting Actâ€”Pub. L. 15â€“102",
+                                                   "placement_identifier":  "/us/usc/t22/s2651",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/zN3E2LuI/298-public-law-15-102-new-ambassadorial-organizational-and-reporting-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  762
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-015-104",
+                     "public_law":  "15-104",
+                     "title":  "Public Law 15-104 | The Military Justice Reorganization and Reform Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-015-104/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  20479,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-015-104/source/S 18. - The Military Justice Reorganization and Reform Act of 2023.pdf",
+                                              "format":  "pdf",
+                                              "size":  135355,
+                                              "sha256":  "28d77e6593b12b7be53b50bbc6693f193928f51384430b63f1d983c1acce0d53"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "appropriat",
+                                                         "establish",
+                                                         "findings"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc10.xml",
+                                                   "note_id":  "rp-pl015104-codification",
+                                                   "public_law":  "15-104",
+                                                   "congress_from_id":  15,
+                                                   "seq_from_id":  104,
+                                                   "heading_cited_pl":  "15-104",
+                                                   "heading":  "The Military Justice Reorganization and Reform Actâ€”Pub. L. 15â€“104",
+                                                   "placement_identifier":  "/us/usc/t10/s101/h",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/EeWre6cf/303-public-law-15-104-the-military-justice-reorganization-and-reform-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "f91e5498dd2b70b484edfdb286aa86c179b241aed2d5cd38ad7f228269930cf6"
+                                                                      ],
+                                                   "note_char_length":  21400
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-015-105",
+                     "public_law":  "15-105",
+                     "title":  "Public Law 15-105 | Municipal Prosecution Act of 2023",
+                     "list_name":  "11th - 20th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-015-105/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  2779,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-015-105/source/S. 20 - The Municipal Prosecution Act of 2023 .pdf",
+                                              "format":  "pdf",
+                                              "size":  95074,
+                                              "sha256":  "a4343c3a1bd32947d2ad20975e24a4e3b602ea252a6a42bddd5b6b3cad105aba"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc40.xml",
+                                                   "note_id":  "rp-pl015105-codification",
+                                                   "public_law":  "15-105",
+                                                   "congress_from_id":  15,
+                                                   "seq_from_id":  105,
+                                                   "heading_cited_pl":  "15-105",
+                                                   "heading":  "Municipal Prosecution Act of 2023â€”Pub. L. 15â€“105",
+                                                   "placement_identifier":  "/us/usc/t40/s101/4",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/QWCPAcvx/304-public-law-15-105-municipal-prosecution-act-of-2023"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  723
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-015-106",
+                     "public_law":  "15-106",
+                     "title":  "Public Law 15-106 | Congress Strikes Back Repealment",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-015-106/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  1826,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-015-106/source/S. 3 - The Congress Strikes Back Repealment.pdf",
+                                              "format":  "pdf",
+                                              "size":  80678,
+                                              "sha256":  "64d2cc66f3758feab40b601531afa347c96de674252db7316ce1590b0e43503a"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "severab"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc02.xml",
+                                                   "note_id":  "rp-pl015106-codification",
+                                                   "public_law":  "15-106",
+                                                   "congress_from_id":  15,
+                                                   "seq_from_id":  106,
+                                                   "heading_cited_pl":  "15-106",
+                                                   "heading":  "Congress Strikes Back Repealmentâ€”Pub. L. 15â€“106",
+                                                   "placement_identifier":  "/us/usc/t2/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/vFyDk7qX/305-public-law-15-106-congress-strikes-back-repealment"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  772
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-015-107",
+                     "public_law":  "15-107",
+                     "title":  "Public Law 15-107 | Guidance to Guidances Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "unrecoverable",
+                     "source_reason":  "Source deleted or not found",
+                     "law_txt_path":  "codification/laws/laws/PL-015-107/law.txt",
+                     "text_extracted":  false,
+                     "text_length":  0,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc01.xml",
+                                                   "note_id":  "rp-pl015107-codification",
+                                                   "public_law":  "15-107",
+                                                   "congress_from_id":  15,
+                                                   "seq_from_id":  107,
+                                                   "heading_cited_pl":  "15-107",
+                                                   "heading":  "Guidance to Guidances Actâ€”Pub. L. 15â€“107",
+                                                   "placement_identifier":  "/us/usc/t1/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/GoNVooOz/306-public-law-15-107-guidance-to-guidances-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  707
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-015-108",
+                     "public_law":  "15-108",
+                     "title":  "Public Law 15-108 | Reclassification of Labeling Act of 2023",
+                     "list_name":  "11th - 20th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "substantive HTML text",
+                     "law_txt_path":  "codification/laws/laws/PL-015-108/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  6968,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  true,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-015-108/source/rendered.html",
+                                              "format":  "html",
+                                              "size":  271547,
+                                              "sha256":  "7c3e82172f9bb21ab4f053fbee77f51dff6552665442b1a31173a236ff829f42"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "amend",
+                                                         "findings",
+                                                         "insert",
+                                                         "repeal",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc50.xml",
+                                                   "note_id":  "rp-pl015108-codification",
+                                                   "public_law":  "15-108",
+                                                   "congress_from_id":  15,
+                                                   "seq_from_id":  108,
+                                                   "heading_cited_pl":  "15-108",
+                                                   "heading":  "Reclassification of Labeling Act of 2023â€”Pub. L. 15â€“108",
+                                                   "placement_identifier":  "/us/usc/t50/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/q1gdbHOE/307-public-law-15-108-reclassification-of-labeling-act-of-2023"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  742
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-015-109",
+                     "public_law":  "15-109",
+                     "title":  "Public Law 15-109 | Ending Tigray for the Last Time",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-015-109/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  721,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-015-109/source/Senate Joint Resolution 3 - Ending Tigray for the last time.pdf",
+                                              "format":  "pdf",
+                                              "size":  76382,
+                                              "sha256":  "7de36606cba191d1f8441b77f66f09dcac91f680897d314b57aff4f80bf9adc7"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc02.xml",
+                                                   "note_id":  "rp-pl015109-codification",
+                                                   "public_law":  "15-109",
+                                                   "congress_from_id":  15,
+                                                   "seq_from_id":  109,
+                                                   "heading_cited_pl":  "15-109",
+                                                   "heading":  "Ending Tigray for the Last Timeâ€”Pub. L. 15â€“109",
+                                                   "placement_identifier":  "/us/usc/t2/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/5WFT7A4M/308-public-law-15-109-ending-tigray-for-the-last-time"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  770
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-015-110",
+                     "public_law":  "15-110",
+                     "title":  "Public Law 15-110 | A Bill to Direct the Inspector General of the Department of Defense to Conduct an Investigation Into the Attack on the United States Embassy in Damascus, and for Other Purposes",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "unrecoverable",
+                     "source_reason":  "Source deleted or not found",
+                     "law_txt_path":  "codification/laws/laws/PL-015-110/law.txt",
+                     "text_extracted":  false,
+                     "text_length":  0,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc22.xml",
+                                                   "note_id":  "rp-pl015110-codification",
+                                                   "public_law":  "15-110",
+                                                   "congress_from_id":  15,
+                                                   "seq_from_id":  110,
+                                                   "heading_cited_pl":  "15-110",
+                                                   "heading":  "A Bill to Direct the Inspector General of the Department of Defense to Conduct an Investigation Into the Attack on the United States Embassy in Damascus, and for Other Purposesâ€”Pub. L. 15â€“110",
+                                                   "placement_identifier":  "/us/usc/t22/s2651",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/0oFrLrga/331-public-law-15-110-a-bill-to-direct-the-inspector-general-of-the-department-of-defense-to-conduct-an-investigation-into-the-attac"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  994
+                                               }
+                                           ]
+                 }
+             ]
+}

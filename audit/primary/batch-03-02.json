@@ -1,0 +1,661 @@
+{
+  "batch": 3,
+  "auditor": "law-auditor-B",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-011-071",
+      "public_law": "11-71",
+      "title": "Public Law 11-71 | Supreme Court Needs Act",
+      "status": "current",
+      "status_basis": "Section 2(a) repeals 28 U.S.C. section 1 and section 2(b) immediately replaces it with new text setting the Court at a Chief Justice plus four associate justices. The source contains no self-repeal or sunset.",
+      "provisions": [
+        {
+          "ref": "SEC 1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This act shall be referred to as the Supreme Court Needs Act.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 2(a)-(b)",
+          "text_summary": "Repeals 28 U.S.C. section 1 and replaces it with new Supreme Court membership and quorum text.",
+          "classes": ["repeal", "substitution", "direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t28/s1",
+          "exact_change": "Replace 28 U.S.C. section 1 with text stating that the Supreme Court consists of a Chief Justice and four associate justices and may determine quorum.",
+          "evidence": "28 U.S. Code section 1 is repealed. 28 U.S. Code section 1 shall read as: The Supreme Court of the United States shall consist of a Chief Justice of the United States and four associate justices.",
+          "notes": "This is a determinable strike-and-replace amendment, not a note."
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Immediate effective date.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": "/us/usc/t28/s1",
+          "exact_change": null,
+          "evidence": "This act shall immediately take effect upon passage.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s1",
+        "detail": "The XML note sits at the correct anchor but only adds boilerplate with a full-text dump and Trello link; 28 U.S.C. section 1 was not actually amended."
+      },
+      "recommended_actions": [
+        "Remove the full-text dump and Trello link from rp-pl011071-codification.",
+        "Actually amend 28 U.S.C. section 1 to the new Chief Justice plus four associate justices text and add a proper amendment history note."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-011-072",
+      "public_law": "11-72",
+      "title": "Public Law 11-72 | No More Mariah Act",
+      "status": "current",
+      "status_basis": "Section 2 repeals Public Law 10-65 and section 3 repeals and replaces 28 U.S.C. section 133 with a new District of Columbia judgeship rule. The source itself does not self-repeal.",
+      "provisions": [
+        {
+          "ref": "SEC 1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This act shall be referred to as the No More Mariah Act.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 2",
+          "text_summary": "Repeals Public Law 10-65, the Federal Judicial Reform Act II.",
+          "classes": ["repeal"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Repeal of prior public law PL 10-65.",
+          "evidence": "Public Law 10-65, the Federal Judicial Reform Act II is repealed.",
+          "notes": "Record as a repeal cross-reference; it is not Code text."
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Repeals and re-enacts 28 U.S.C. section 133 for District of Columbia district judges.",
+          "classes": ["repeal", "substitution", "direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t28/s133",
+          "exact_change": "Replace 28 U.S.C. section 133 with the two-subsection rule allowing up to five District of Columbia judges and a replacement mechanism for inactive or unfit judges.",
+          "evidence": "28 U.S. Code section 133 - Appointment and number of district judges is repealed. 28 U.S. Code section 133 - Appointment and number of district judges shall read as:",
+          "notes": "This requires actual textual amendment of section 133."
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Contingent effective date tied to the Federal Circuit Court of the District of Columbia being vacated.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": "/us/usc/t28/s133",
+          "exact_change": null,
+          "evidence": "This act shall immediately take effect when the Federal Circuit Court of the District of Columbia is entirely vacated.",
+          "notes": "Treat as a contingent effective-date clause."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s1",
+        "detail": "The XML note is anchored at section 1, but the real target is 28 U.S.C. section 133. The draft only added boilerplate with a full-text dump and Trello link and did not record the repeal of Public Law 10-65."
+      },
+      "recommended_actions": [
+        "Remove the full-text dump and Trello link from rp-pl011072-codification.",
+        "Amend 28 U.S.C. section 133 with the new District of Columbia judgeship text and add a contingent effective-date note.",
+        "Record the repeal of Public Law 10-65 as a repeal cross-reference."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-011-073",
+      "public_law": "11-73",
+      "title": "Public Law 11-73 | Let Me Act",
+      "status": "current",
+      "status_basis": "Section 2 creates a generally applicable acting-service rule for nominees waiting for Senate confirmation. The source contains no self-repeal or sunset.",
+      "provisions": [
+        {
+          "ref": "SEC 1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This act shall be referred to as the Let Me Act.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 2",
+          "text_summary": "Allows nominees to act in office while awaiting Senate confirmation for seven listed office categories.",
+          "classes": ["new-permanent-general", "applicability"],
+          "treatment": "new-section",
+          "target": "/us/usc/t5",
+          "exact_change": "Create a Title 5 acting-service rule for commissioned officers, ambassadors, assistant secretaries, inspectors general, service secretaries, U.S. marshals, and deputy directors pending confirmation.",
+          "evidence": "Individuals nominated to the following offices will be allowed to act in their capacity whilst waiting confirmation from the United States Senate.",
+          "notes": "This is a general appointments-law rule best housed in Title 5."
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Immediate effective date.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This act shall immediately take effect upon passage.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t22/s2651",
+        "detail": "The note is too narrow and sits in Title 22, but the rule is broader appointments/vacancies law and should be codified as a real Title 5 provision."
+      },
+      "recommended_actions": [
+        "Remove the Trello link from rp-pl011073-codification.",
+        "Codify the acting-service rule as a new Title 5 provision covering all seven enumerated office categories."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-012-074",
+      "public_law": "12-74",
+      "title": "Public Law 12-74 | Federal Bar Association Act of 2023",
+      "status": "current",
+      "status_basis": "Section 3 repeals Public Law 7-47 and sections 4-5 establish and govern the Federal Bar Association as a new executive-branch independent establishment. The recovered source contains no self-repeal.",
+      "provisions": [
+        {
+          "ref": "SEC 1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act may be cited as the Federal Bar Association Act of 2023.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 2",
+          "text_summary": "Severability and anti-supersession clause.",
+          "classes": ["severability"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "If any provision of this Act, or the application thereof, is held invalid, the validity of the remainder of this Act.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Repeals Public Law 7-47, the Federal Bar Association Act of 2022.",
+          "classes": ["repeal"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Repeal of prior public law PL 7-47.",
+          "evidence": "Public Law 7-47 | The Federal Bar Association Act of 2022 is hereby repealed.",
+          "notes": "Treat as repeal history; do not create permanent Code text for the repeal itself."
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Establishes the Federal Bar Association as an independent establishment with chairman, vice chairman, board, bylaws, and seal.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t5",
+          "exact_change": "Create a new Title 5 organic provision establishing the Federal Bar Association in the Executive branch as an independent establishment.",
+          "evidence": "There is established in the Executive branch an Association to be known as the Federal Bar Association. The Association shall be an independent establishment.",
+          "notes": "The external Code of Professional Conduct link should not be embedded as statutory text."
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "Administrative functions: examination, membership, discipline, law-firm regulation, and sovereign immunity.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t5",
+          "exact_change": "Add a Title 5 provision covering the Federal Bar Examination, membership rules, discipline, law-firm regulation, and sovereign immunity.",
+          "evidence": "The Federal Bar Examination shall be an exam that is created and administered to citizens by the Chairman.",
+          "notes": "Keep the Google Drive link out of the permanent text."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The draft inserted a long boilerplate note at a Title 50 anchor with a full-text dump and Trello link. This is a new Title 5 organic statute, so the current implementation is only a note and is misanchored."
+      },
+      "recommended_actions": [
+        "Remove the full-text dump and Trello link from rp-pl012074-codification.",
+        "Codify sections 4-5 as new Title 5 organic provisions for the Federal Bar Association.",
+        "Record the repeal of Public Law 7-47 as a historical repeal cross-reference."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-012-075",
+      "public_law": "12-75",
+      "title": "Public Law 12-75 | Freedom of Information Common Sense Act",
+      "status": "current",
+      "status_basis": "Section 3 expressly replaces text in 5 U.S.C. section 552, so the act is a live Code amendment. The source contains no self-repeal.",
+      "provisions": [
+        {
+          "ref": "SEC 1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This act shall be referred to as the Freedom of Information Common Sense Act.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 2",
+          "text_summary": "Purpose to lower FOIA response times.",
+          "classes": ["findings-or-sense"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "It is the purpose of this act to lower the response time limit for all Freedom of Information Act Requests.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3(a) section 552(a)(6)(A)(i)",
+          "text_summary": "Replaces the initial FOIA determination deadline with a 4-day deadline.",
+          "classes": ["substitution", "direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t5/s552",
+          "exact_change": "Change the FOIA determination deadline in section 552(a)(6)(A)(i) from 20 days to 4 days and require immediate notice.",
+          "evidence": "5 U.S. Code section 552(a)(6)(A)(i) shall be replaced with: determine within 4 days after the receipt of any such request.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3(a) section 552(a)(6)(A)(ii)",
+          "text_summary": "Replaces the appeal determination deadline with a 4-day deadline and rewrites the tolling paragraph.",
+          "classes": ["substitution", "direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t5/s552",
+          "exact_change": "Replace section 552(a)(6)(A)(ii) with the quoted 4-day appeal language and the revised commencement paragraph.",
+          "evidence": "5 U.S. Code section 552(a)(6)(A)(ii) shall be replaced with: make a determination with respect to any appeal within four days after the receipt of such appeal.",
+          "notes": "The source still says The 20-day period shall not be tolled, which should be flagged for drafting cleanup."
+        },
+        {
+          "ref": "SEC 3(a) section 552(a)(6)(A)(ii)(I)",
+          "text_summary": "Allows one requester-information request to toll the new 4-day period.",
+          "classes": ["substitution", "direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t5/s552",
+          "exact_change": "Replace section 552(a)(6)(A)(ii)(I) with the one-request tolling language quoted in the source.",
+          "evidence": "5 U.S. Code section 552(a)(6)(A)(ii)(I) shall be replaced with: that the agency may make one request to the requester for information and toll the four-day period.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Severability and immediate effectiveness on full passage.",
+          "classes": ["severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This act shall be severable ... the Freedom of Information Common Sense Act of 2023 will be in effect immediately upon full passage.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t44/s101",
+        "detail": "The draft note is at a Title 44 anchor with a full-text dump and Trello link, but the real target is 5 U.S.C. section 552. No textual amendment was actually made."
+      },
+      "recommended_actions": [
+        "Remove the full-text dump and Trello link from rp-pl012075-codification.",
+        "Amend 5 U.S.C. section 552(a)(6)(A)(i), (ii), and (ii)(I) with the source's replacement language.",
+        "Move the codification to Title 5 and flag the residual 20-day-period drafting inconsistency."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-012-076",
+      "public_law": "12-76",
+      "title": "Public Law 12-76 | Removing Idiocy Act",
+      "status": "unresolved",
+      "status_basis": "The manifest marks the source as unrecoverable because access was revoked or denied and no statutory text was extracted.",
+      "provisions": [
+        {
+          "ref": "(entire act)",
+          "text_summary": "No recoverable statutory text is available.",
+          "classes": ["non-code"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "source_status unrecoverable; source_reason Access revoked or permission denied; text_extracted false.",
+          "notes": "source-defect-nondeterminable"
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t1/s1",
+        "detail": "The XML has only a boilerplate note and Trello link at Title 1. Because the source is genuinely unavailable, the note should be replaced with an honest source-limited historical note."
+      },
+      "recommended_actions": [
+        "Remove the Trello link from rp-pl012076-codification.",
+        "Replace the boilerplate with an honest source-limited historical note stating that the source is unrecoverable."
+      ],
+      "confidence": "low"
+    },
+    {
+      "law_id": "PL-012-077",
+      "public_law": "12-77",
+      "title": "Public Law 12-77 | Preventing Abuse and Promoting Democracy Act",
+      "status": "unresolved",
+      "status_basis": "The manifest marks the source as unrecoverable because it was deleted or not found and no statutory text was extracted.",
+      "provisions": [
+        {
+          "ref": "(entire act)",
+          "text_summary": "No recoverable statutory text is available.",
+          "classes": ["non-code"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "source_status unrecoverable; source_reason Source deleted or not found; text_extracted false.",
+          "notes": "source-defect-nondeterminable"
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t1/s1",
+        "detail": "The XML has only a boilerplate note and Trello link at Title 1. The source is unavailable, so the note should be replaced with an honest source-limited historical note."
+      },
+      "recommended_actions": [
+        "Remove the Trello link from rp-pl012077-codification.",
+        "Replace the boilerplate with an honest source-limited historical note stating that the source was deleted or not found."
+      ],
+      "confidence": "low"
+    },
+    {
+      "law_id": "PL-012-078",
+      "public_law": "12-78",
+      "title": "Public Law 12-78 | Balancing Executive Act",
+      "status": "unresolved",
+      "status_basis": "The manifest marks the source as unrecoverable because it was deleted or not found and no statutory text was extracted.",
+      "provisions": [
+        {
+          "ref": "(entire act)",
+          "text_summary": "No recoverable statutory text is available.",
+          "classes": ["non-code"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "source_status unrecoverable; source_reason Source deleted or not found; text_extracted false.",
+          "notes": "source-defect-nondeterminable"
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t1/s1",
+        "detail": "The XML has only a boilerplate note and Trello link at Title 1. The source is unavailable, so the note should be replaced with an honest source-limited historical note."
+      },
+      "recommended_actions": [
+        "Remove the Trello link from rp-pl012078-codification.",
+        "Replace the boilerplate with an honest source-limited historical note stating that the source was deleted or not found."
+      ],
+      "confidence": "low"
+    },
+    {
+      "law_id": "PL-012-079",
+      "public_law": "12-79",
+      "title": "Public Law 12-79 | Anti-Terrorism Act of 2023",
+      "status": "unresolved",
+      "status_basis": "The recovered file is only a Google Drive permission-denied HTML stub, so no operative statutory text is available.",
+      "provisions": [
+        {
+          "ref": "(entire act)",
+          "text_summary": "No recoverable statutory text is available.",
+          "classes": ["non-code"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Google Drive - Can't download file; Sorry, the owner hasn't given you permission to download this file.",
+          "notes": "source-defect-nondeterminable"
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "The XML has a boilerplate note and Trello link at Title 18. Because the source is only a permission-denied stub, the note should be replaced with an honest source-limited historical note."
+      },
+      "recommended_actions": [
+        "Remove the Trello link from rp-pl012079-codification.",
+        "Replace the boilerplate with an honest source-limited historical note stating that the source is unrecoverable due to Google Drive access denial."
+      ],
+      "confidence": "low"
+    },
+    {
+      "law_id": "PL-012-080",
+      "public_law": "12-80",
+      "title": "Public Law 12-80 | Government Labor Management Act",
+      "status": "current",
+      "status_basis": "The act creates a comprehensive federal labor-management relations program for government employees and contains no self-repeal in the recovered source.",
+      "provisions": [
+        {
+          "ref": "SEC 1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "SECTION 1. SHORT TITLE. This act shall be referred to as the Government Labor Management Act.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 2",
+          "text_summary": "Policy declarations, collective bargaining rights, and supervisor definition.",
+          "classes": ["new-permanent-general", "findings-or-sense"],
+          "treatment": "new-section",
+          "target": "/us/usc/t5",
+          "exact_change": "Codify the labor-management policy statement and employee rights framework in Title 5.",
+          "evidence": "The government finds and declares that an effective collective bargaining process is in the general public interest. Each employee of the government has the right.",
+          "notes": "Title 5 is the proper home for this federal employee labor statute."
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Labor-management relations program administered by DOCAL.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t5",
+          "exact_change": "Create the DOCAL labor-management relations program and its core procedures.",
+          "evidence": "The Department of Commerce and Labor shall issue rules and regulations establishing a labor-management relations program.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4 (standards of conduct)",
+          "text_summary": "Standards of conduct for labor organizations.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t5",
+          "exact_change": "Add labor-organization standards of conduct, certification, and rulemaking authority.",
+          "evidence": "Recognition shall be accorded only to a labor organization that is free from corrupt influences.",
+          "notes": "The source later reuses section number 4 for unfair labor practices."
+        },
+        {
+          "ref": "SEC 4 (unfair labor practices)",
+          "text_summary": "Unfair labor practices for the government, employees, labor organizations, agents, and representatives.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t5",
+          "exact_change": "Add the unfair labor practice prohibitions and associated enforcement rules.",
+          "evidence": "The government, its agents, its departments, and representatives are prohibited from.",
+          "notes": "Source defect: duplicate section 4 numbering."
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "Strikes prohibited.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t5",
+          "exact_change": "Codify a strike prohibition for government employees and labor organizations.",
+          "evidence": "It shall be unlawful for any government employee or labor organization to participate in, authorize, or ratify a strike against the government.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 6",
+          "text_summary": "Employee rights and grievance procedure.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t5",
+          "exact_change": "Codify employee rights to organize, bargain, and present grievances.",
+          "evidence": "All employees shall have the right to organize a labor organization free from interference, restraint, or coercion.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 7",
+          "text_summary": "Union security and dues deduction.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t5",
+          "exact_change": "Add dues-deduction and service-fee provisions for certified labor organizations.",
+          "evidence": "Any labor organization which has been certified as the exclusive representative shall, upon request, have its dues and uniform assessments deducted.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 8",
+          "text_summary": "Management rights and matters subject to collective bargaining.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t5",
+          "exact_change": "Set out management rights, negotiability rules, and law-enforcement discipline carve-outs.",
+          "evidence": "The respective personnel authorities shall retain the sole right, in accordance with applicable laws and rules and regulations.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 9",
+          "text_summary": "Unit determination.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t5",
+          "exact_change": "Create unit-determination standards for labor organization recognition.",
+          "evidence": "The determination of an appropriate unit will be made on a case-to-case basis.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 10",
+          "text_summary": "Selection of exclusive representatives and election procedures.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t5",
+          "exact_change": "Add recognition, decertification, and election rules for exclusive representatives.",
+          "evidence": "Exclusive recognition shall be granted to a labor organization which has been selected by a majority of employees in an appropriate unit.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 11",
+          "text_summary": "Rights accompanying exclusive recognition.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t5",
+          "exact_change": "Define the rights and duties of the exclusive representative.",
+          "evidence": "The labor organization which has been certified to be the exclusive representative of all employees in the unit shall have the right to act for and negotiate agreements.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 12",
+          "text_summary": "Sunshine provisions for bargaining and fact-finding proceedings.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t5",
+          "exact_change": "Add public-access rules for fact-finding and closed bargaining sessions.",
+          "evidence": "Collective bargaining sessions between the government and employee organization representatives shall not be open to the public.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 13",
+          "text_summary": "Remedies, enforcement, and judicial review.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t5",
+          "exact_change": "Add DOCAL remedial powers and District Court enforcement/review procedures.",
+          "evidence": "Remedies of the FEC and DOCAL may include, but shall not be limited to, orders which.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 14",
+          "text_summary": "Timelines for DOCAL decisions.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t5",
+          "exact_change": "Require DOCAL to render decisions within a reasonable period and no later than two weeks.",
+          "evidence": "All decisions of DOCAL shall be rendered within a reasonable period of time, and in no event later than 2 weeks.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 15",
+          "text_summary": "Collective bargaining agreements and approvals.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t5",
+          "exact_change": "Set approval and submission rules for labor agreements.",
+          "evidence": "An agreement with a labor organization is subject to the approval of the President or his or her designee.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 16",
+          "text_summary": "Collective bargaining concerning compensation.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t5",
+          "exact_change": "Authorize compensation bargaining and associated unit rules.",
+          "evidence": "DOCAL shall provide for collective bargaining concerning compensation under the procedures of and on the dates provided in section 17.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 17",
+          "text_summary": "Immediate effect, severability, and conflict clause.",
+          "classes": ["effective-date", "severability"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This act shall immediately take effect upon passage of both houses of congress and signed by the president.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t29/s201",
+        "detail": "The draft note is a long dump at a Title 29 anchor, but this is a federal-employee labor-management statute that belongs in Title 5. No actual new chapter or sections were created, and the source has duplicate section 4 numbering."
+      },
+      "recommended_actions": [
+        "Remove the full-text dump and Trello link from rp-pl012080-codification.",
+        "Codify sections 2-16 as a new Title 5 labor-management relations chapter or section set.",
+        "Flag the duplicate section 4 numbering for cleanup and keep the short-title and effective-date material as notes."
+      ],
+      "confidence": "medium"
+    }
+  ]
+}

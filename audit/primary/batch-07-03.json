@@ -1,0 +1,1037 @@
+{
+  "batch": 7,
+  "auditor": "law-auditor-C",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-028-201",
+      "public_law": "28-201",
+      "title": "Public Law 28-201 | RESET Act",
+      "status": "current",
+      "status_basis": "The source is a live repealer: it says listed laws \"shall be repealed\" and separately preserves already-repealed laws. Nothing in the act repeals itself or sunsets it.",
+      "provisions": [
+        {
+          "ref": "SEC1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“This Act may be cited as the ‘Removing Excess Statutes and Extraneous Texts Act’, or by its short title, ‘RESET Act’.”",
+          "notes": ""
+        },
+        {
+          "ref": "SEC2",
+          "text_summary": "Purpose to clean up the public-law database.",
+          "classes": ["statutory-note-material", "non-code"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“To cleanup the Public Law Database” and “simplify our Public Law Database”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC3(a)",
+          "text_summary": "Savings clause preserving any prior repeal.",
+          "classes": ["savings"],
+          "treatment": "savings-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“Any Public Law that is repealed by one of the laws being repealed in subsection (b) shall remain repealed”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC3(b)(i)-(xxix)",
+          "text_summary": "Repeals the listed public laws, including Public Law 25-180.",
+          "classes": ["repeal"],
+          "treatment": "repeal-marking",
+          "target": "Public Laws 3-23, 4-28, 4-33, 4-35, 4-37, 7-44, 7-50, 9-52, 9-57, 10-66, 10-68, 11-72, 12-78, 12-79, 12-83, 12-86, 14-90, 15-93, 15-106, 15-107, 15-109, 15-110, 16-113, 16-117, 16-122, 17-125, 17-127, 18-139, 25-180",
+          "exact_change": "Repeal every listed public law in its entirety and leave any already-repealed law in its repealed state.",
+          "evidence": "“The following laws shall be repealed:” followed by the list ending with “Public Law 25-180”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC4",
+          "text_summary": "Severability.",
+          "classes": ["severability"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“If any provision of this Act ... is held invalid, the remainder of the Act ... shall not be affected.”",
+          "notes": ""
+        },
+        {
+          "ref": "SEC6",
+          "text_summary": "Immediate effective date.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“This Act shall become effective upon enactment.”",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s1",
+        "detail": "The XML note is a defensible historical anchor and does not need permanent Code text; the main cleanup is converting the repealer list into concise repeal history."
+      },
+      "recommended_actions": [
+        "retain as a concise statutory history note",
+        "record the listed repeals at the affected laws' homes where applicable",
+        "remove the Trello link"
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-028-202",
+      "public_law": "28-202",
+      "title": "Public Law 28-202 | Comprehensive Gun Reform Act",
+      "status": "current",
+      "status_basis": "The act is fully operative and repeals several prior laws, but it does not repeal itself or expire by its own terms.",
+      "provisions": [
+        {
+          "ref": "SEC1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“This Act may be cited as the ‘Comprehensive Gun Reform Act’.”",
+          "notes": ""
+        },
+        {
+          "ref": "SEC2",
+          "text_summary": "Purpose and policy goals.",
+          "classes": ["statutory-note-material", "non-code"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“To consolidate and repeal existing statutes pertaining to firearms” and “to enshrine Second Amendment protections in law”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC3",
+          "text_summary": "Definitions for public space, law enforcement officer, self-defense, deadly force, dwelling, business, and ERPO terms.",
+          "classes": ["statutory-note-material", "non-code"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“‘Public Space’ shall refer to any public park, street, building, road, sidewalk...”",
+          "notes": ""
+        },
+        {
+          "ref": "SEC4(a)(i)-(iv)",
+          "text_summary": "Repeals Public Laws 4-31, 7-41, 23-165, and 24-174.",
+          "classes": ["repeal"],
+          "treatment": "repeal-marking",
+          "target": "Public Laws 4-31, 7-41, 23-165, 24-174",
+          "exact_change": "Repeal the listed public laws in full.",
+          "evidence": "“The following laws shall be repealed: (i) Public Law 4-31 ... (iv) Public Law 24-174”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC5",
+          "text_summary": "Constitutional carry and federal-facility exceptions.",
+          "classes": ["new-permanent-general", "uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“Any individual shall be legally permitted to possess a firearm without obtaining a permit” subject to the listed exceptions.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC6",
+          "text_summary": "Self-defense rules and immunity.",
+          "classes": ["new-permanent-general", "statutory-note-material"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“Use of Non-Deadly Force”, “Use of Deadly Force”, and “No Duty to Retreat”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC7",
+          "text_summary": "Extreme risk protection order procedure.",
+          "classes": ["new-permanent-general", "statutory-note-material"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“The following individuals are eligible to file a petition ... for an Extreme Risk Protection Order”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC8",
+          "text_summary": "Open-carry restrictions and penalties.",
+          "classes": ["new-permanent-general", "statutory-note-material"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“the open carry of firearms in urban or densely populated areas is prohibited” and violations are misdemeanors.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC9",
+          "text_summary": "Severability.",
+          "classes": ["severability"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“If any provision of this Act ... is held invalid, the remainder of the Act ... shall not be affected.”",
+          "notes": ""
+        },
+        {
+          "ref": "SEC10",
+          "text_summary": "Immediate effective date.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“This Act shall become effective upon enactment.”",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "The XML note is an acceptable historical anchor; the bill is a standalone firearms policy law, not a direct Code rewrite."
+      },
+      "recommended_actions": [
+        "retain as a concise statutory note",
+        "do not fabricate a permanent Code section",
+        "remove the Trello link"
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-028-203",
+      "public_law": "28-203",
+      "title": "Public Law 28-203 | Foundation for Accountability and Impeachment Reform Act",
+      "status": "current",
+      "status_basis": "The source amends impeachment-process policy and repeals Public Law 17-128, but it does not repeal itself or time out.",
+      "provisions": [
+        {
+          "ref": "SEC1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“This Act may be cited as the ‘Foundation for Accountability and Impeachment Reform Act’, or by its short title, the ‘FAIR Act’.”",
+          "notes": ""
+        },
+        {
+          "ref": "SEC2",
+          "text_summary": "Purpose.",
+          "classes": ["statutory-note-material", "non-code"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“the purpose of this bill shall be to reform the impeachment process” and “balance transparency and fairness”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC3",
+          "text_summary": "Definition of impeachment for the act.",
+          "classes": ["statutory-note-material", "non-code"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“Impeachment shall refer to the formal process established under Article I, Section 2, and Article II, Section 4”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC4",
+          "text_summary": "Repeals Public Law 17-128.",
+          "classes": ["repeal"],
+          "treatment": "repeal-marking",
+          "target": "Public Law 17-128",
+          "exact_change": "Repeal Public Law 17-128 in its entirety.",
+          "evidence": "“The following laws shall be repealed: (i) Public Law 17-128”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC5",
+          "text_summary": "Defines high crimes and misdemeanors and preserves congressional impeachment discretion.",
+          "classes": ["new-permanent-general", "statutory-note-material"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“High Crimes and Misdemeanors” and “This Section does not limit the authority of the House ... or the Senate”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC6",
+          "text_summary": "House impeachment inquiry procedure.",
+          "classes": ["new-permanent-general", "uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“Impeachment Inquiries in the House of Representatives can be initiated” by the listed triggers.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC7",
+          "text_summary": "Selection and duties of impeachment managers.",
+          "classes": ["new-permanent-general", "uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“impeachment managers shall be appointed by the Speaker of the House”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC8",
+          "text_summary": "Senate trial structure, conviction, and removal vote.",
+          "classes": ["new-permanent-general", "uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“the impeachment trial shall be considered privileged business before the Senate” and conviction requires “a two-thirds majority”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC9",
+          "text_summary": "Severability.",
+          "classes": ["severability"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“If any provision of this Act ... is held invalid, the remainder of the Act ... shall not be affected.”",
+          "notes": ""
+        },
+        {
+          "ref": "SEC10",
+          "text_summary": "Immediate effective date.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“This Act shall become effective upon enactment.”",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s1",
+        "detail": "The note is a defensible historical annotation; the act is policy/history rather than a direct Code amendment."
+      },
+      "recommended_actions": [
+        "retain as a concise statutory note",
+        "record the repeal of Public Law 17-128 in repeal history",
+        "remove the Trello link"
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-028-204",
+      "public_law": "28-204",
+      "title": "Public Law 28-204 | Intelligence Community Employment Act",
+      "status": "current",
+      "status_basis": "The source adds a new section to Public Law 26-191 and contains no repeal of itself or sunset. Later-law repeal evidence was not identified in the corpus.",
+      "provisions": [
+        {
+          "ref": "SEC1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“This Act may be cited as the ‘Intelligence Community Employment Act’.”",
+          "notes": ""
+        },
+        {
+          "ref": "SEC2",
+          "text_summary": "Purpose to create an intelligence-community employment exception.",
+          "classes": ["statutory-note-material", "non-code"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“to quickly and effectively neutralize potential security risks within its ranks”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC3",
+          "text_summary": "Definition of Intelligence Community by reference to 50 U.S.C. § 3003.",
+          "classes": ["statutory-note-material", "non-code"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“Intelligence Community refers to all federal agencies engaged in intelligence activities as defined in 50 U.S. Code §3003.”",
+          "notes": ""
+        },
+        {
+          "ref": "SEC4",
+          "text_summary": "Amends Public Law 26-191 to add a new Section 15, Intelligence Community Exceptions.",
+          "classes": ["direct-amendment", "insertion"],
+          "treatment": "amendment-note",
+          "target": "Public Law 26-191, Section 15",
+          "exact_change": "Insert a new Section 15 authorizing at-will termination for intelligence-community positions relevant to sensitive information, except criminal investigative positions, and exempting specified subparts when national security would be compromised.",
+          "evidence": "“Public Law 26-191 shall be amended to include the following section: SEC 15. INTELLIGENCE COMMUNITY EXCEPTIONS”.",
+          "notes": "Not a U.S. Code target; keep as a source note unless the underlying 26-191 text is separately codified."
+        },
+        {
+          "ref": "SEC5",
+          "text_summary": "Severability.",
+          "classes": ["severability"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“If any provision of this Act ... is held invalid, the remainder of the Act ... shall not be affected.”",
+          "notes": ""
+        },
+        {
+          "ref": "SEC6",
+          "text_summary": "Immediate effective date.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“This Act shall become effective upon enactment.”",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The draft XML labels this as repealed or superseded, but the source contains a live amendment to Public Law 26-191 and no repeal of the act itself."
+      },
+      "recommended_actions": [
+        "correct the status to current",
+        "retain the amendment to Public Law 26-191 as a source note unless separately codified",
+        "remove the Trello link"
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-028-205",
+      "public_law": "28-205",
+      "title": "Public Law 28-205 | Inspector General Reform Act of 2024",
+      "status": "fully-repealed",
+      "status_basis": "A later enacted law in the corpus expressly says Public Law 28-205 \"is hereby repealed\", so the enactment is no longer current law.",
+      "provisions": [
+        {
+          "ref": "SEC1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“This Act may be cited as the ‘The Inspector General Reform Act of 2024’.”",
+          "notes": ""
+        },
+        {
+          "ref": "SEC2",
+          "text_summary": "Purpose to amend the Inspector General Act and create a council.",
+          "classes": ["statutory-note-material", "non-code"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“Amend the Inspector General Act of 2023” and “Establish the Council of the Inspectors General on Integrity and Efficiency”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC3(a)",
+          "text_summary": "Repeals Public Law 15-98 section 3.",
+          "classes": ["repeal"],
+          "treatment": "repeal-marking",
+          "target": "Public Law 15-98, Section 3",
+          "exact_change": "Repeal Section 3 of Public Law 15-98 in its entirety.",
+          "evidence": "“Public Law 15-98 Section 3 is repealed in its entirety”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC4",
+          "text_summary": "Amends the Inspector General office-establishment framework.",
+          "classes": ["direct-amendment", "insertion"],
+          "treatment": "historical-note-only",
+          "target": "Public Law 15-98",
+          "exact_change": "Revise the inspector-general office framework to require Senate-confirmed IG nominations for the listed departments.",
+          "evidence": "“In each of the establishments an Inspector General shall be nominated by the president with the advise and consent from the United States Senate”.",
+          "notes": "Keep only as history because the whole enactment is later repealed."
+        },
+        {
+          "ref": "SEC5",
+          "text_summary": "Establishes the Council of the Inspectors General on Integrity and Efficiency and its duties.",
+          "classes": ["new-permanent-general", "statutory-note-material"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“The Council of the Inspectors General on Integrity and Efficiency ... shall be established” and the act lists mission, membership, chairperson, and reporting duties.",
+          "notes": "Retain as repeal history only; do not treat as current operative law."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s101",
+        "detail": "The XML note still treats the law as current, but the corpus includes Public Law 35-254 expressly repealing Public Law 28-205."
+      },
+      "recommended_actions": [
+        "mark the enactment as fully repealed",
+        "keep only a concise historical note",
+        "remove the Trello link"
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-028-206",
+      "public_law": "28-206",
+      "title": "Public Law 28-206 | Washington Diplomacy Complex Boundary Act",
+      "status": "current",
+      "status_basis": "The source creates local closure and security rules for the Washington Diplomacy Complex and contains no repeal of itself or sunset.",
+      "provisions": [
+        {
+          "ref": "SEC1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“This bill shall be referred to as ‘Washington Diplomacy Complex Boundary Act’ or ‘WDCBA’.”",
+          "notes": ""
+        },
+        {
+          "ref": "SEC2",
+          "text_summary": "Severability.",
+          "classes": ["severability"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“This Act shall be severable”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC3",
+          "text_summary": "Purpose to regulate jurisdiction around the UN headquarters.",
+          "classes": ["statutory-note-material", "local-district"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“specify the jurisdiction of federal agencies on the grounds of the UN headquarters building”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC4",
+          "text_summary": "Definitions for district, public road, private road, law enforcement officer, and foreign security.",
+          "classes": ["statutory-note-material", "local-district"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“The term ‘district’ means the District of Columbia” and the other defined terms follow.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC5(a)-(e)",
+          "text_summary": "Closure authority, notice, extension, and search/ID rules for the Diplomacy Complex lockdown area.",
+          "classes": ["local-district", "uncodified-admin-direction"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“shall be closed” and “must issue a public notice” plus search and identification requirements.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC6(a)-(b)",
+          "text_summary": "Permissible reasons for closure.",
+          "classes": ["local-district", "statutory-note-material"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“Any road closure must be made in the interest of public health, safety, national security”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC7",
+          "text_summary": "Closure limitations.",
+          "classes": ["local-district", "statutory-note-material"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“No closure of a private road, public road, or sidewalk may ... last longer than twenty-four hours”.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-inserted-into-permanent-text",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "The current XML note includes a full-text dump and marks the act as repealed or superseded, but the source is current and local, so it should be kept only as concise history or excluded from permanent Code text."
+      },
+      "recommended_actions": [
+        "remove the full-text dump and Trello link",
+        "keep only a concise local-history note or exclude from Code text",
+        "correct the status label to current if the note remains"
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-029-207",
+      "public_law": "29-207",
+      "title": "Public Law 29-207 | Justice Reform Act of 2024",
+      "status": "current",
+      "status_basis": "The act is a broad criminal and civil procedure reform. It repeals several prior laws and numbered Code sections, but it does not repeal itself.",
+      "provisions": [
+        {
+          "ref": "SEC1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“This Act may be cited as the ‘Justice Reform Act of 2024’.”",
+          "notes": ""
+        },
+        {
+          "ref": "SEC2",
+          "text_summary": "Purpose to revise limitations, punishments, definitions, and justice-system rules.",
+          "classes": ["statutory-note-material", "non-code"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“To revise the statute of limitations, maximum punishments for crimes, definitions, and other matters pertaining to the justice system at large.”",
+          "notes": ""
+        },
+        {
+          "ref": "SEC3(a)",
+          "text_summary": "Repeals Public Laws 2-11, 4-30, and 19-149.",
+          "classes": ["repeal"],
+          "treatment": "repeal-marking",
+          "target": "Public Laws 2-11, 4-30, 19-149",
+          "exact_change": "Repeal each listed public law in full.",
+          "evidence": "“The following Public Laws shall be repealed in their entirety: (i) Public Law 2-11 (ii) Public Law 4-30 (iii) Public Law 19-149”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC3(b)",
+          "text_summary": "Restores any Code text modified by the repealed laws to its original form.",
+          "classes": ["savings"],
+          "treatment": "savings-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“Any part of the U.S. Code modified by the Acts listed ... shall be reinstated in their original form.”",
+          "notes": ""
+        },
+        {
+          "ref": "SEC4",
+          "text_summary": "Clarification on capital punishment and life imprisonment references.",
+          "classes": ["statutory-note-material", "non-code"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“none of these shall be applicable punishments” despite references to capital punishment and life imprisonment.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC5(a)-(c)",
+          "text_summary": "Rewrites criminal limitations for 18 U.S.C. §§ 3281-3283.",
+          "classes": ["direct-amendment", "substitution"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t18/s3281; /us/usc/t18/s3282; /us/usc/t18/s3283",
+          "exact_change": "Strike sections 3281-3283 and replace them with 45-day and 60-day criminal limitation rules.",
+          "evidence": "“18 U.S. Code § 3281”, “18 U.S. Code § 3282”, and “18 U.S. Code § 3283” are listed for repeal, followed by new limitations.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC6(a)-(c)",
+          "text_summary": "Rewrites civil limitations for 28 U.S.C. § 1658, 29 U.S.C. § 255, 31 U.S.C. § 3731(b), and 41 U.S.C. § 7103(a)(4).",
+          "classes": ["direct-amendment", "substitution"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t28/s1658; /us/usc/t29/s255; /us/usc/t31/s3731; /us/usc/t41/s7103",
+          "exact_change": "Strike the listed provisions and replace them with the new civil limitations periods and false-claims timing rules.",
+          "evidence": "“28 U.S. Code § 1658”, “29 U.S. Code § 255”, “31 U.S. Code § 3731(b)”, and “41 U.S. Code § 7103(a)(4)” are listed for repeal.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC7(a)-(e)",
+          "text_summary": "Revises offense classifications and sentencing ceilings.",
+          "classes": ["direct-amendment", "substitution"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t18/s3559",
+          "exact_change": "Replace the sentencing-classification rule with the act’s new capped sentencing scheme, including the 14-day, 9-day, and 120-hour limits.",
+          "evidence": "“For the purpose of 18 U.S. Code § 3559(a)” and “shall have a maximum sentence of fourteen (14) days”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC8(a)-(f)",
+          "text_summary": "Fugitives, trials in absentia, default judgments, and DOJ tracking duties.",
+          "classes": ["new-permanent-general", "uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“The Department of Justice ... shall be required to keep and track a database of fugitives and warrants”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC9",
+          "text_summary": "Severability.",
+          "classes": ["severability"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“If any provision of this Act ... is held invalid, the remainder of the Act ... shall not be affected.”",
+          "notes": ""
+        },
+        {
+          "ref": "SEC10",
+          "text_summary": "Immediate effective date.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“This Act shall become effective immediately following passage and enactment.”",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "The XML note exists, but the express textual amendments to multiple U.S. Code sections are not actually implemented in permanent text."
+      },
+      "recommended_actions": [
+        "apply the direct textual amendments to 18 U.S.C., 28 U.S.C., 29 U.S.C., 31 U.S.C., 41 U.S.C., and 18 U.S.C. § 3559",
+        "record the repeal of Public Laws 2-11, 4-30, and 19-149",
+        "remove the Trello link"
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-029-208",
+      "public_law": "29-208",
+      "title": "Public Law 29-208 | Foreign Affairs Accountability Act",
+      "status": "current",
+      "status_basis": "The source is a live foreign-affairs reporting measure. It repeals a prior public-law section and adds reporting duties, but it does not repeal itself.",
+      "provisions": [
+        {
+          "ref": "SEC1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“This Act may be cited as the ‘Foreign Affairs Reporting Act’.”",
+          "notes": ""
+        },
+        {
+          "ref": "SEC2",
+          "text_summary": "Purpose to revise ambassador reporting requirements.",
+          "classes": ["statutory-note-material", "non-code"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“To revise the reporting mechanisms and requirements for Ambassadors and the Department of State”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC3(a)",
+          "text_summary": "Repeals Section IV of Public Law 15-102.",
+          "classes": ["repeal"],
+          "treatment": "repeal-marking",
+          "target": "Public Law 15-102, Section IV",
+          "exact_change": "Repeal Section IV of Public Law 15-102 in its entirety.",
+          "evidence": "“Section IV of Public Law 15-102 shall be repealed in its entirety.”",
+          "notes": ""
+        },
+        {
+          "ref": "SEC3(b)",
+          "text_summary": "Requires monthly ambassador reports to the Secretary of State.",
+          "classes": ["new-permanent-general", "uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“Each Ambassador within the Department of State shall be required to provide a monthly report”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC3(c)",
+          "text_summary": "Requires State Department reporting to the foreign-affairs committees for major developments.",
+          "classes": ["new-permanent-general", "uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“the Secretary of State shall be required to provide a report to the House and Senate Foreign Affairs Committees within forty-eight (48) hours”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC4",
+          "text_summary": "Severability.",
+          "classes": ["severability"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“If any provision of this Act ... is held invalid, the remainder of the Act ... shall not be affected.”",
+          "notes": ""
+        },
+        {
+          "ref": "SEC5",
+          "text_summary": "Immediate effective date.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“This Act shall become effective immediately following passage and enactment.”",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t22/s2651",
+        "detail": "The note is an acceptable historical anchor; the act is standalone reporting legislation, not a direct Code rewrite."
+      },
+      "recommended_actions": [
+        "retain as a concise statutory note",
+        "record the repeal of Public Law 15-102 section IV in repeal history",
+        "remove the Trello link"
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-029-209",
+      "public_law": "29-209",
+      "title": "Public Law 29-209 | Terms of Service Act",
+      "status": "current",
+      "status_basis": "The law is a non-code internal ruleset for bill drafting and proposal conduct. It remains operative as policy/history and does not self-repeal.",
+      "provisions": [
+        {
+          "ref": "SEC1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“This Act may be cited as the ‘Terms of Service Act’.”",
+          "notes": ""
+        },
+        {
+          "ref": "SEC2",
+          "text_summary": "Severability.",
+          "classes": ["severability"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“If any provision of this Act ... is held invalid, the remainder of the Act ... shall not be affected.”",
+          "notes": ""
+        },
+        {
+          "ref": "SEC3",
+          "text_summary": "Effective date.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“This Act shall become effective upon enactment”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC4",
+          "text_summary": "Findings about bills violating Roblox Terms of Service and game rules.",
+          "classes": ["findings-or-sense", "non-code"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“Congress finds that there have been instances of bills being proposed that violate the Roblox Terms of Service”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC5",
+          "text_summary": "Restrictions on bills.",
+          "classes": ["uncodified-admin-direction", "non-code"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“No bill will be proposed if it contains material that could violate Roblox Terms of Service or Game Rules.”",
+          "notes": ""
+        },
+        {
+          "ref": "SEC6",
+          "text_summary": "Repercussions for prohibited bills.",
+          "classes": ["uncodified-admin-direction", "non-code"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“the Clerk of the House or Secretary of the Senate” must remove the bill and report it to leadership.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t46/s101",
+        "detail": "The note is consistent with the source as non-code policy/history. It should stay concise and not be promoted into permanent statutory text."
+      },
+      "recommended_actions": [
+        "keep only a concise non-code note",
+        "exclude the findings and enforcement rules from permanent Code text",
+        "remove the Trello link"
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-029-210",
+      "public_law": "29-210",
+      "title": "Public Law 29-210 | Military Justice Reform Act of 2024",
+      "status": "current",
+      "status_basis": "The source rewrites major parts of the military justice framework and amends the UCMJ, but it does not repeal itself or sunset.",
+      "provisions": [
+        {
+          "ref": "SEC1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“This Act may be cited as the ‘Military Justice Act of 2024’.”",
+          "notes": ""
+        },
+        {
+          "ref": "SEC2",
+          "text_summary": "Purpose to reorganize and future-proof the military justice system.",
+          "classes": ["statutory-note-material", "non-code"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“To repeal and replace overlapping statutes and laws concerning the military justice system”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC3(a)",
+          "text_summary": "Repeals Public Laws 15-104 and 19-146.",
+          "classes": ["repeal"],
+          "treatment": "repeal-marking",
+          "target": "Public Laws 15-104, 19-146",
+          "exact_change": "Repeal each listed public law in full.",
+          "evidence": "“The following laws shall be repealed in their entirety: (i) Public Law 15-104 (ii) Public Law 19-146”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC3(b)",
+          "text_summary": "Supersession clause for conflicting Code provisions.",
+          "classes": ["savings"],
+          "treatment": "savings-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“Any part of the U.S. Code that is deemed in conflict with this legislation shall be considered superseded by this Act.”",
+          "notes": ""
+        },
+        {
+          "ref": "SEC4(a)",
+          "text_summary": "Defines the Armed Forces.",
+          "classes": ["statutory-note-material", "non-code"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“‘Armed Forces’ shall refer to all military branches ... including” the listed services.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC4(b)",
+          "text_summary": "Establishes the Judge Advocate General Corps and its leadership.",
+          "classes": ["new-permanent-general", "uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“There shall be a Judge Advocate General Corps of the Armed Forces established”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC5",
+          "text_summary": "Assistant Judge Advocate General divisions and duties.",
+          "classes": ["new-permanent-general", "uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“There shall be a Military Law division”, “Legal Assistance division”, and “Military Judiciary division”.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC6",
+          "text_summary": "Military judiciary structure and appellate path.",
+          "classes": ["new-permanent-general", "uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“The Military Judiciary shall be the main judicial arm” and consists of trial and appeals courts.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC7",
+          "text_summary": "Judge advocates and enlisted personnel support roles.",
+          "classes": ["new-permanent-general", "uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“Judge Advocates shall be responsible for providing legal representation” and enlisted personnel may be hired as support.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC8(a)-(v)",
+          "text_summary": "Amends the UCMJ by striking Articles 7(d), 25, and 32(e), rewriting Articles 39(a) and 45.",
+          "classes": ["direct-amendment", "substitution"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t10/s807; /us/usc/t10/s825; /us/usc/t10/s832; /us/usc/t10/s839; /us/usc/t10/s845",
+          "exact_change": "Strike Article 7(d), Article 25, and Article 32(e); replace Article 39(a) and Article 45 with the enacted text and renamed title.",
+          "evidence": "“Art.7.(d) shall be struck”, “Art.25 shall be struck”, “Art.32(e) shall be struck”, and Article 45 is to be renamed and rewritten.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC9",
+          "text_summary": "Severability.",
+          "classes": ["severability"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“If any provision of this Act ... is held invalid, the remainder of the Act ... shall not be affected.”",
+          "notes": ""
+        },
+        {
+          "ref": "SEC10",
+          "text_summary": "Immediate effective date.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "“This Act shall become effective immediately following passage and enactment.”",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t10/s101/h",
+        "detail": "The note exists, but the direct UCMJ text changes are not actually applied in the Code; the XML remains note-only."
+      },
+      "recommended_actions": [
+        "apply the UCMJ textual amendments to the affected Title 10 sections",
+        "record the repeals of Public Laws 15-104 and 19-146",
+        "remove the Trello link"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

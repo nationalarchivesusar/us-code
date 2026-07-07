@@ -1,0 +1,540 @@
+﻿{
+    "batch":  1,
+    "auditor":  "law-auditor-C",
+    "report_path":  "audit/primary/batch-01-03.json",
+    "law_count":  10,
+    "laws":  [
+                 {
+                     "law_id":  "PL-003-021",
+                     "public_law":  "3-21",
+                     "title":  "Public Law 3-21 | Effective Judicial Function and General Duties Act",
+                     "list_name":  "1st - 10th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-003-021/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  3742,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-003-021/source/S. 14 - Efficient Judicial Function and General Duties Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  77238,
+                                              "sha256":  "ed99e5d292ab337455b67f1d39a56160af274b3d274def4ba6c57fcc24620c31"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "appropriat",
+                                                         "effective",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc50.xml",
+                                                   "note_id":  "rp-pl003021-codification",
+                                                   "public_law":  "3-21",
+                                                   "congress_from_id":  3,
+                                                   "seq_from_id":  21,
+                                                   "heading_cited_pl":  "3-21",
+                                                   "heading":  "Effective Judicial Function and General Duties Actâ€”Pub. L. 3â€“21",
+                                                   "placement_identifier":  "/us/usc/t50/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/3UIc2D6X/22-public-law-3-21-effective-judicial-function-and-general-duties-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "0026be92ec551101604d70c643bedfd940abb55014afd9af400746d1fd3b9998"
+                                                                      ],
+                                                   "note_char_length":  4502
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-003-022",
+                     "public_law":  "3-22",
+                     "title":  "Public Law 3-22 | District of Columbia Administration Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "meaningful text",
+                     "law_txt_path":  "codification/laws/laws/PL-003-022/law.txt",
+                     "text_extracted":  false,
+                     "text_length":  121,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  true,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-003-022/source/source_page.html",
+                                              "format":  "html",
+                                              "size":  124347,
+                                              "sha256":  "dd2f2d26fb7c16cad92288437139dfcc05400223390ef24e6d056b09643373e7"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc40.xml",
+                                                   "note_id":  "rp-pl003022-codification",
+                                                   "public_law":  "3-22",
+                                                   "congress_from_id":  3,
+                                                   "seq_from_id":  22,
+                                                   "heading_cited_pl":  "3-22",
+                                                   "heading":  "District of Columbia Administration Actâ€”Pub. L. 3â€“22",
+                                                   "placement_identifier":  "/us/usc/t40/s101/4",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/JHppBlMo/21-public-law-3-22-district-of-columbia-administration-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "880a39f94b201c50b7e5d3e603feefa9af7ab970381ee671a9a5c13068947f7a"
+                                                                      ],
+                                                   "note_char_length":  2563
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-003-023",
+                     "public_law":  "3-23",
+                     "title":  "Public Law 3-23 | Federal Law Enforcement Training Center Establishment Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "unrecoverable",
+                     "source_reason":  "Source deleted or not found",
+                     "law_txt_path":  "codification/laws/laws/PL-003-023/law.txt",
+                     "text_extracted":  false,
+                     "text_length":  0,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc18.xml",
+                                                   "note_id":  "rp-pl003023-codification",
+                                                   "public_law":  "3-23",
+                                                   "congress_from_id":  3,
+                                                   "seq_from_id":  23,
+                                                   "heading_cited_pl":  "3-23",
+                                                   "heading":  "Federal Law Enforcement Training Center Establishment Actâ€”Pub. L. 3â€“23",
+                                                   "placement_identifier":  "/us/usc/t18/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/yBbNOHod/25-public-law-3-23-federal-law-enforcement-training-center-establishment-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  766
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-003-024",
+                     "public_law":  "3-24",
+                     "title":  "Public Law 3-24 | Judgeship Reducation Act of 2022",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-003-024/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  2221,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-003-024/source/Judgeship Reduction Act of 2022 .pdf",
+                                              "format":  "pdf",
+                                              "size":  598838,
+                                              "sha256":  "594c1f792306f26f6393763a1bda45d89c6f79408376269cb5ccbbcf647b1b88"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "amend",
+                                                         "repeal",
+                                                         "severab"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc28.xml",
+                                                   "note_id":  "rp-pl003024-codification",
+                                                   "public_law":  "3-24",
+                                                   "congress_from_id":  3,
+                                                   "seq_from_id":  24,
+                                                   "heading_cited_pl":  "3-24",
+                                                   "heading":  "Judgeship Reducation Act of 2022â€”Pub. L. 3â€“24",
+                                                   "placement_identifier":  "/us/usc/t28/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable. No additional direct substitution was made where the enactment used only a blanket clause, contained a source defect, or was displaced by later legislation.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/knDFioB4/26-public-law-3-24-judgeship-reducation-act-of-2022"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "d07f3efb8fd8da68ab254692b2caa3d2a1b85bdba6aa9d94bdf89d0eebf5eb04"
+                                                                      ],
+                                                   "note_char_length":  3092
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-003-025",
+                     "public_law":  "3-25",
+                     "title":  "Public Law 3-25 | CRACK Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-003-025/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  70263,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-003-025/source/CRACK Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  265352,
+                                              "sha256":  "eeb079a7b926d9348dbd79e4937b9e5141835139cb7cff95f569aba88b1a04ca"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "severab",
+                                                         "substitute"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc18.xml",
+                                                   "note_id":  "rp-pl003025-codification",
+                                                   "public_law":  "3-25",
+                                                   "congress_from_id":  3,
+                                                   "seq_from_id":  25,
+                                                   "heading_cited_pl":  "3-25",
+                                                   "heading":  "CRACK Actâ€”Pub. L. 3â€“25",
+                                                   "placement_identifier":  "/us/usc/t18/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable. No additional direct substitution was made where the enactment used only a blanket clause, contained a source defect, or was displaced by later legislation.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/HQmvP5OI/27-public-law-3-25-crack-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  851
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-004-026",
+                     "public_law":  "4-26",
+                     "title":  "Public Law 4-26 | H.J. Res. 06 (Keywords: Tigray)",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-004-026/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  1013,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-004-026/source/H.J.Res. 06.pdf",
+                                              "format":  "pdf",
+                                              "size":  50654,
+                                              "sha256":  "54071ec1ef7b6fa67be33e5f628ebf14b8b99dd1a9b69cae4047b5c16a295e10"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc50.xml",
+                                                   "note_id":  "rp-pl004026-codification",
+                                                   "public_law":  "4-26",
+                                                   "congress_from_id":  4,
+                                                   "seq_from_id":  26,
+                                                   "heading_cited_pl":  "4-26",
+                                                   "heading":  "H.J. Res. 06 (Keywords: Tigray)â€”Pub. L. 4â€“26",
+                                                   "placement_identifier":  "/us/usc/t50/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/pgzvupND/36-public-law-4-26-hj-res-06-keywords-tigray"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  759
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-004-027",
+                     "public_law":  "4-27",
+                     "title":  "Public Law 4-27 | Right to Security Act of 2022",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid DOCX",
+                     "law_txt_path":  "codification/laws/laws/PL-004-027/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  2540,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-004-027/source/H.R. 4004.docx.zip",
+                                              "format":  "zip",
+                                              "size":  766671,
+                                              "sha256":  "0317ccce94cc00f3c23e06785a0d14eeb0cae9ff5431fe89aff3e7e3bbe04b67"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "amend",
+                                                         "effective",
+                                                         "severab"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc18.xml",
+                                                   "note_id":  "rp-pl004027-codification",
+                                                   "public_law":  "4-27",
+                                                   "congress_from_id":  4,
+                                                   "seq_from_id":  27,
+                                                   "heading_cited_pl":  "4-27",
+                                                   "heading":  "Right to Security Act of 2022â€”Pub. L. 4â€“27",
+                                                   "placement_identifier":  "/us/usc/t18/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/L8RsaGNM/37-public-law-4-27-right-to-security-act-of-2022"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "02ad4423f6105f7c2290962eac561698d8bf1d1dc59b6f029cb39e72ca80b013"
+                                                                      ],
+                                                   "note_char_length":  3418
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-004-028",
+                     "public_law":  "4-28",
+                     "title":  "Public Law 4-28 | House Veterans Affairs Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid DOCX",
+                     "law_txt_path":  "codification/laws/laws/PL-004-028/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  4317,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-004-028/source/H.R. 4003.docx.zip",
+                                              "format":  "zip",
+                                              "size":  363476,
+                                              "sha256":  "f801d1c8b00acfc6abe1759f054709d9dee3e51ca3a3856df5a29293b4eb5bca"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "amend",
+                                                         "effective",
+                                                         "establish",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc38.xml",
+                                                   "note_id":  "rp-pl004028-codification",
+                                                   "public_law":  "4-28",
+                                                   "congress_from_id":  4,
+                                                   "seq_from_id":  28,
+                                                   "heading_cited_pl":  "4-28",
+                                                   "heading":  "House Veterans Affairs Actâ€”Pub. L. 4â€“28",
+                                                   "placement_identifier":  "/us/usc/t38/s101/38",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/7xfgPYfG/38-public-law-4-28-house-veterans-affairs-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "e386a74f4db4c8ffe879c6b9f5d68947f6d72f82c31abd3030221a39c5f87fe1"
+                                                                      ],
+                                                   "note_char_length":  5260
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-004-029",
+                     "public_law":  "4-29",
+                     "title":  "Public Law 4-29 | Department of Commerce and Labor Act of 2022",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid DOCX",
+                     "law_txt_path":  "codification/laws/laws/PL-004-029/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  5166,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-004-029/source/H.R. 4006.docx.zip",
+                                              "format":  "zip",
+                                              "size":  755883,
+                                              "sha256":  "b96b0427b393bd935f14bd9df4ce9c4a79213f2b30e7caf7b54d2b497e2b94f0"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "amend",
+                                                         "effective",
+                                                         "establish",
+                                                         "severab",
+                                                         "transfer"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc29.xml",
+                                                   "note_id":  "rp-pl004029-codification",
+                                                   "public_law":  "4-29",
+                                                   "congress_from_id":  4,
+                                                   "seq_from_id":  29,
+                                                   "heading_cited_pl":  "4-29",
+                                                   "heading":  "Department of Commerce and Labor Act of 2022â€”Pub. L. 4â€“29",
+                                                   "placement_identifier":  "/us/usc/t29/s201",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/3p46SzkH/39-public-law-4-29-department-of-commerce-and-labor-act-of-2022"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "f87bbe569c0f59c1efddffca679a6f8ae400da618e0e3240b5b852294eb29a5f"
+                                                                      ],
+                                                   "note_char_length":  6036
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-004-030",
+                     "public_law":  "4-30",
+                     "title":  "Public Law 4-30 | Fugitive Justice Reform Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-004-030/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  3310,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-004-030/source/Fugitive Justice Reform Act (1).pdf",
+                                              "format":  "pdf",
+                                              "size":  343997,
+                                              "sha256":  "818f0b6b2f489e6ffacb9aee0dd55213539e30c27e5e30d182c3a4334acd50a9"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "repeal",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc18.xml",
+                                                   "note_id":  "rp-pl004030-codification",
+                                                   "public_law":  "4-30",
+                                                   "congress_from_id":  4,
+                                                   "seq_from_id":  30,
+                                                   "heading_cited_pl":  "4-30",
+                                                   "heading":  "Fugitive Justice Reform Actâ€”Pub. L. 4â€“30",
+                                                   "placement_identifier":  "/us/usc/t18/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/n34PVckg/40-public-law-4-30-fugitive-justice-reform-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "a851dbd4010ee22178893a0027766c30b41d5dce482c62c967a12527617cbcd8"
+                                                                      ],
+                                                   "note_char_length":  3995
+                                               }
+                                           ]
+                 }
+             ]
+}

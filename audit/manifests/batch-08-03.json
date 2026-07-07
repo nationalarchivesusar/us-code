@@ -1,0 +1,571 @@
+﻿{
+    "batch":  8,
+    "auditor":  "law-auditor-C",
+    "report_path":  "audit/primary/batch-08-03.json",
+    "law_count":  10,
+    "laws":  [
+                 {
+                     "law_id":  "PL-032-232",
+                     "public_law":  "32-232",
+                     "title":  "Public Law 32-232 | The Federal Pay Standardization Act",
+                     "list_name":  "31st - 40th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-032-232/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  4173,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-032-232/source/H.R. 7 - The Federal Pay Standardization Act .pdf",
+                                              "format":  "pdf",
+                                              "size":  216154,
+                                              "sha256":  "c816b1bc3d109b150d55c6a50da6723bfb011fd75209cb282321d0bc7a85163e"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "chapter 53 of title 5",
+                                                     "section 2105 of title 5",
+                                                     "title 5"
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "amend",
+                                                         "effective",
+                                                         "establish",
+                                                         "findings",
+                                                         "insert",
+                                                         "shorttitle",
+                                                         "substitute"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc05.xml",
+                                                   "note_id":  "rp-pl032232-codification",
+                                                   "public_law":  "32-232",
+                                                   "congress_from_id":  32,
+                                                   "seq_from_id":  232,
+                                                   "heading_cited_pl":  "32-232",
+                                                   "heading":  "The Federal Pay Standardization Actâ€”Pub. L. 32â€“232",
+                                                   "placement_identifier":  "/us/usc/t5/s101",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/m2cJWaCU/802-public-law-32-232-the-federal-pay-standardization-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "e829f1aa6731c56e1ba94842eddbda49c08bc97fb34cb2c9a7714f96c78f1954"
+                                                                      ],
+                                                   "note_char_length":  4986
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-032-233",
+                     "public_law":  "32-233",
+                     "title":  "Public Law 32-233 | Literally Introducing Taxes (LIT)",
+                     "list_name":  "31st - 40th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-032-233/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  1800,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-032-233/source/H.R. 9 - Literally Introducing Taxes (LIT).pdf",
+                                              "format":  "pdf",
+                                              "size":  155907,
+                                              "sha256":  "343d55e5c1f0cf62bbdbae42b74f30259fcbc3f92bc7d4ef573f890d05b6ea70"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "amend",
+                                                         "effective",
+                                                         "repeal",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc26.xml",
+                                                   "note_id":  "rp-pl032233-codification",
+                                                   "public_law":  "32-233",
+                                                   "congress_from_id":  32,
+                                                   "seq_from_id":  233,
+                                                   "heading_cited_pl":  "32-233",
+                                                   "heading":  "Literally Introducing Taxes (LIT)â€”Pub. L. 32â€“233",
+                                                   "placement_identifier":  "/us/usc/t26/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/2mrcVVH3/803-public-law-32-233-literally-introducing-taxes-lit"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "2743072becbaa50c0c0a35ae0c58e8c041b3db1ece8fe82070c3c66ea887d46b"
+                                                                      ],
+                                                   "note_char_length":  2940
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-032-234",
+                     "public_law":  "32-234",
+                     "title":  "Public Law 32-234 | Intelligence Appointment Transparency and Oversight Act",
+                     "list_name":  "31st - 40th  U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "substantive HTML text",
+                     "law_txt_path":  "codification/laws/laws/PL-032-234/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  6481,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  true,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-032-234/source/rendered.html",
+                                              "format":  "html",
+                                              "size":  267416,
+                                              "sha256":  "3052a056f51556ba3d764916e59042e1ff0078386139a32d6e1403011e492282"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "amend",
+                                                         "insert",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc50.xml",
+                                                   "note_id":  "rp-pl032234-codification",
+                                                   "public_law":  "32-234",
+                                                   "congress_from_id":  32,
+                                                   "seq_from_id":  234,
+                                                   "heading_cited_pl":  "32-234",
+                                                   "heading":  "Intelligence Appointment Transparency and Oversight Actâ€”Pub. L. 32â€“234",
+                                                   "placement_identifier":  "/us/usc/t50/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/Z37fBZuI/805-public-law-32-234-intelligence-appointment-transparency-and-oversight-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  796
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-032-235",
+                     "public_law":  "32-235",
+                     "title":  "Public Law 32-235 | Command Responsibility And Noncompliance Enforcement (CRANE) Act",
+                     "list_name":  "31st - 40th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-032-235/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  4231,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-032-235/source/H.R. 16 - Command Responsibility And Noncompliance Enforcement (CRANE) Act",
+                                              "format":  " 16 - command responsibility and noncompliance enforcement (crane) act",
+                                              "size":  268660,
+                                              "sha256":  "5a31c0ee4912de13901103a52afeb8fa21d8148031a920d300815081a6e2551c"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc10.xml",
+                                                   "note_id":  "rp-pl032235-codification",
+                                                   "public_law":  "32-235",
+                                                   "congress_from_id":  32,
+                                                   "seq_from_id":  235,
+                                                   "heading_cited_pl":  "32-235",
+                                                   "heading":  "Command Responsibility And Noncompliance Enforcement (CRANE) Actâ€”Pub. L. 32â€“235",
+                                                   "placement_identifier":  "/us/usc/t10/s101/h",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/TcmbHCpN/806-public-law-32-235-command-responsibility-and-noncompliance-enforcement-crane-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "aed8ae97fd686916761236374e33b665ff88fa1e921eead9b3df6296a15ca785"
+                                                                      ],
+                                                   "note_char_length":  5443
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-032-236",
+                     "public_law":  "32-236",
+                     "title":  "Public Law 32-236 | Military Operational Authority Reform Act",
+                     "list_name":  "31st - 40th  U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "substantive HTML text",
+                     "law_txt_path":  "codification/laws/laws/PL-032-236/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  6877,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  true,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-032-236/source/rendered.html",
+                                              "format":  "html",
+                                              "size":  268281,
+                                              "sha256":  "ea8f5a4cf03e6bad20ec9f47a011f3011f061f504969b54ce32c7c5a8da8f110"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "TITLE 10"
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "amend",
+                                                         "effective",
+                                                         "insert",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc10.xml",
+                                                   "note_id":  "rp-pl032236-codification",
+                                                   "public_law":  "32-236",
+                                                   "congress_from_id":  32,
+                                                   "seq_from_id":  236,
+                                                   "heading_cited_pl":  "32-236",
+                                                   "heading":  "Military Operational Authority Reform Actâ€”Pub. L. 32â€“236",
+                                                   "placement_identifier":  "/us/usc/t10/s101/h",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/9Z512n0p/807-public-law-32-236-military-operational-authority-reform-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  768
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-033-238",
+                     "public_law":  "33-238",
+                     "title":  "Public Law 33-238 | Conference Oversight of Discipline and Ethics Act",
+                     "list_name":  "31st - 40th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-033-238/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  19433,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-033-238/source/S.4 - CODE Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  275844,
+                                              "sha256":  "c89e80e3068a3652397f5327ca5b4f932b4dd68e752807701fbf549b49b9c111"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+                                                    "Public Law 15-97",
+                                                    "Public Law 25-184"
+                                                ],
+                     "detected_operative_language":  [
+                                                         "appropriat",
+                                                         "effective",
+                                                         "establish",
+                                                         "findings",
+                                                         "repeal",
+                                                         "severab",
+                                                         "shorttitle",
+                                                         "sunset",
+                                                         "transfer"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc50.xml",
+                                                   "note_id":  "rp-pl033238-codification",
+                                                   "public_law":  "33-238",
+                                                   "congress_from_id":  33,
+                                                   "seq_from_id":  238,
+                                                   "heading_cited_pl":  "33-238",
+                                                   "heading":  "Conference Oversight of Discipline and Ethics Actâ€”Pub. L. 33â€“238",
+                                                   "placement_identifier":  "/us/usc/t50/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/vJqkpPs9/809-public-law-33-238-conference-oversight-of-discipline-and-ethics-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "a37a9d3f48a6d297d11d0db812ca4fe9c7e8ea9bfae7ff84ee77a8fa19989b2e"
+                                                                      ],
+                                                   "note_char_length":  20291
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-034-239",
+                     "public_law":  "34-239",
+                     "title":  "Public Law 34-239 | Judicial Recall Act",
+                     "list_name":  "31st - 40th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-034-239/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  2426,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-034-239/source/H.R. 1 - Judicial Recall Act - Google Docs.pdf",
+                                              "format":  "pdf",
+                                              "size":  193592,
+                                              "sha256":  "b0f9fea774a022b8e43643bcd05c4a96a7f245c7f0de740cfa51cbb3451a1c7e"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+                                                    "Public Law 26-190"
+                                                ],
+                     "detected_operative_language":  [
+                                                         "amend",
+                                                         "effective",
+                                                         "repeal",
+                                                         "shorttitle",
+                                                         "sunset"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc50.xml",
+                                                   "note_id":  "rp-pl034239-codification",
+                                                   "public_law":  "34-239",
+                                                   "congress_from_id":  34,
+                                                   "seq_from_id":  239,
+                                                   "heading_cited_pl":  "34-239",
+                                                   "heading":  "Judicial Recall Actâ€”Pub. L. 34â€“239",
+                                                   "placement_identifier":  "/us/usc/t50/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/gLcMkp3D/811-public-law-34-239-judicial-recall-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "e7351a41bb88df60f12b5050ac03a7bad126fad78ec8c42b2ee42788381ba367"
+                                                                      ],
+                                                   "note_char_length":  3046
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-034-240",
+                     "public_law":  "34-240",
+                     "title":  "Public Law 34-240 | Literally Fixing Taxes",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-034-240/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  1846,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-034-240/source/H.R. 6 - Literally Fixing Taxes (LFT).pdf",
+                                              "format":  "pdf",
+                                              "size":  135653,
+                                              "sha256":  "799006c0c70e984a1771d5ec63a6cdf09087aa91e523f25d1c346e28fd9a20ae"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "amend",
+                                                         "effective",
+                                                         "establish",
+                                                         "repeal",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc26.xml",
+                                                   "note_id":  "rp-pl034240-codification",
+                                                   "public_law":  "34-240",
+                                                   "congress_from_id":  34,
+                                                   "seq_from_id":  240,
+                                                   "heading_cited_pl":  "34-240",
+                                                   "heading":  "Literally Fixing Taxesâ€”Pub. L. 34â€“240",
+                                                   "placement_identifier":  "/us/usc/t26/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/gv6XAmOo/817-public-law-34-240-literally-fixing-taxes"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "ef745aa0e7d51591db386f16a31fd79b9f7a6c76a9cc285499ed25fc93a92af4"
+                                                                      ],
+                                                   "note_char_length":  2800
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-034-241",
+                     "public_law":  "34-241",
+                     "title":  "Public Law 34-241 | Protecting Working Americans",
+                     "list_name":  "31st - 40th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-034-241/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  1854,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-034-241/source/H.R. 7 - Protecting Working Americans Bill 2025.pdf",
+                                              "format":  "pdf",
+                                              "size":  280110,
+                                              "sha256":  "506cec00321ff6bbbce92886e95672a22e2a6d96d25e829a3eac282b211df0d3"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "amend",
+                                                         "effective",
+                                                         "establish",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc46.xml",
+                                                   "note_id":  "rp-pl034241-codification",
+                                                   "public_law":  "34-241",
+                                                   "congress_from_id":  34,
+                                                   "seq_from_id":  241,
+                                                   "heading_cited_pl":  "34-241",
+                                                   "heading":  "Protecting Working Americansâ€”Pub. L. 34â€“241",
+                                                   "placement_identifier":  "/us/usc/t46/s101",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/dm1Jy9Kr/818-public-law-34-241-protecting-working-americans"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "cdf2911d06ddfc5bd36ff00acb23f0c32bad8348545ec6909b53d9febcce08cb"
+                                                                      ],
+                                                   "note_char_length":  2901
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-034-242",
+                     "public_law":  "34-242",
+                     "title":  "Public Law 34-242 | Federal Courthouse Security \u0026 Jurisdiction Act",
+                     "list_name":  "31st - 40th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-034-242/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  6424,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-034-242/source/H.R.10 - Federal Courthouse Security and Jurisdiction Act .pdf",
+                                              "format":  "pdf",
+                                              "size":  107613,
+                                              "sha256":  "3c87faf8f28d3da57ac5b3f5ff587d3439f5866b4660424dd582736c13a59704"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "establish",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc40.xml",
+                                                   "note_id":  "rp-pl034242-codification",
+                                                   "public_law":  "34-242",
+                                                   "congress_from_id":  34,
+                                                   "seq_from_id":  242,
+                                                   "heading_cited_pl":  "34-242",
+                                                   "heading":  "Federal Courthouse Security \u0026amp; Jurisdiction Actâ€”Pub. L. 34â€“242",
+                                                   "placement_identifier":  "/us/usc/t40/s101/4",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/BZQZpIP1/819-public-law-34-242-federal-courthouse-security-jurisdiction-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "76f2272a3a16788639201ea5f078376960829a0e9f69f778d5e60fc40317cf36"
+                                                                      ],
+                                                   "note_char_length":  9222
+                                               }
+                                           ]
+                 }
+             ]
+}

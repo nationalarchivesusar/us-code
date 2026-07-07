@@ -1,0 +1,687 @@
+{
+  "batch": 1,
+  "auditor": "law-auditor-B",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-002-011",
+      "public_law": "2-11",
+      "title": "Public Law 2-11 | Criminal Statute of Limitations Act",
+      "status": "current",
+      "status_basis": "Permanent general statute of limitations for Title 18 crimes; no self-repeal, sunset, or later-law repeal in the source body.",
+      "provisions": [
+        {
+          "ref": "SEC I(a)",
+          "text_summary": "Short title, though the source caption is internally mismatched.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t18",
+          "exact_change": "n/a",
+          "evidence": "\"This piece of legislation shall be referredto as the \\\"City Level Infrastructure Act of 2021\\\".\"",
+          "notes": "Short-title clause only."
+        },
+        {
+          "ref": "SEC I(b)",
+          "text_summary": "Immediate effective date upon passage.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": "/us/usc/t18",
+          "exact_change": "n/a",
+          "evidence": "\"This Act shall go into effectimmediately upon passage.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC I(c)",
+          "text_summary": "Conflict clause voiding inconsistent laws.",
+          "classes": ["non-code"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18",
+          "exact_change": "n/a",
+          "evidence": "\"Any part of any act,joint resolution, or codified law that conflicts with this Actshall be considered null and void.\"",
+          "notes": "Not a standalone Code section."
+        },
+        {
+          "ref": "SEC I(d)",
+          "text_summary": "Severability clause.",
+          "classes": ["severability"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t18",
+          "exact_change": "n/a",
+          "evidence": "\"this act shall be severable\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC II(a)-(c)",
+          "text_summary": "Creates a 75-day limitations period for Title 18 crimes, with 150 days for listed chapters, and bars prosecution after expiration.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t18",
+          "exact_change": "Add a new Title 18 statute-of-limitations provision: 75 days for Title 18 offenses except listed chapters 29, 37, 47, 111A, 113B, 115, and 118; 150 days for those listed chapters; accrual at the time of the offense.",
+          "evidence": "\"Any Crime under Title 18 shall have a statute of limitationsof limitations of 75 days\"; \"All criminal prosecutions tried under clauses (1) - (7)\"; \"The Statute of Limitations for an offense shall commenceat the time the offense takes place.\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "The draft note at Title 18 section 1 carries a full-text dump and Trello link, but the source creates a real statute-of-limitations rule that should be enacted as operative Title 18 text."
+      },
+      "recommended_actions": [
+        "Codify the Title 18 statute-of-limitations rule as operative text.",
+        "Remove the full-text dump and Trello link from rp-pl002011-codification.",
+        "Correct the law status to current."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-012",
+      "public_law": "2-12",
+      "title": "Public Law 2-12 | Fee Prohibition Act",
+      "status": "current",
+      "status_basis": "Permanent federal court-fee prohibition with no self-repeal, sunset, or later-law repeal in the source body.",
+      "provisions": [
+        {
+          "ref": "SEC I(a)",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28",
+          "exact_change": "n/a",
+          "evidence": "\"This piece of legislation shall be referredto as the \\\"City Level Infrastructure Act of 2021\\\".\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC I(b)",
+          "text_summary": "Immediate effective date.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": "/us/usc/t28",
+          "exact_change": "n/a",
+          "evidence": "\"This Act shall go into effectimmediately upon passage.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC I(c)",
+          "text_summary": "Conflict clause.",
+          "classes": ["non-code"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t28",
+          "exact_change": "n/a",
+          "evidence": "\"Any part of any act,joint resolution, or codified law that conflicts with this Actshall be considered null and void.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC I(d)",
+          "text_summary": "Severability clause.",
+          "classes": ["severability"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28",
+          "exact_change": "n/a",
+          "evidence": "\"this act shall be severable\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC II(a)",
+          "text_summary": "Prohibits court fees in United States courts except as criminal punishment.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t28",
+          "exact_change": "Add a new Title 28 rule barring courts, including the Supreme Court, from imposing or collecting fees in proceedings unless the charge is imposed as punishment for a criminal offense.",
+          "evidence": "\"No Court in the United States, including the SupremeCourt, shall impose, collect, or otherwise require fees inany of its proceedings unless imposed as a punishment for acriminal offense.\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The XML places this substantive court-fee rule as a note at Title 50 section 1 and marks it repealed/superseded without source support; the rule belongs in Title 28 as operative text."
+      },
+      "recommended_actions": [
+        "Codify the fee prohibition as operative Title 28 text.",
+        "Remove the full-text dump and Trello link from rp-pl002012-codification.",
+        "Correct the law status to current and move it off Title 50."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-013",
+      "public_law": "2-13",
+      "title": "Public Law 2-13 | The Employees Termination Notification Act of 2021",
+      "status": "current",
+      "status_basis": "Permanent employment-notice requirement with no self-repeal, sunset, or later-law repeal in the source body.",
+      "provisions": [
+        {
+          "ref": "SEC 1(a)",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t29",
+          "exact_change": "n/a",
+          "evidence": "\"This Act shall be referred to as \\\"The Employees Termination Notification Act of2021\\\".\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 2",
+          "text_summary": "Severability clause and no-newer-law override language.",
+          "classes": ["severability", "non-code"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t29",
+          "exact_change": "n/a",
+          "evidence": "\"This Act shall be severable\"; \"shall not be superseded by any newer law unless that law specifically declares its intent to supersede this Act's provisions.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Immediate effective date upon passage and signature.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": "/us/usc/t29",
+          "exact_change": "n/a",
+          "evidence": "\"This bill shall take effect immediately upon passage of both chambersof Congress and signed by the President.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4(a)-(b)",
+          "text_summary": "Requires notice of termination reasons and delivery within 48 hours for federal-agency and private-business employees.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t29",
+          "exact_change": "Add a new employment-notice provision requiring a terminating employer to give the employee the reason for termination within 48 hours, including federal-agency and private-business contexts.",
+          "evidence": "\"A High Rank employee from any Federal Agency and Private Businessshall notify an employee of his/her termination with the reason of theirtermination.\"; \"has forty-eight hours (48 hours) to present the employee witha reason for termination.\"",
+          "notes": "Federal-agency implementation may warrant a Title 5 cross-reference."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s101",
+        "detail": "The XML parks a substantive employment-notice rule as a note in Title 5 section 101; the law should be enacted as real labor text, with a Title 5 cross-reference for federal agencies if needed."
+      },
+      "recommended_actions": [
+        "Codify the termination-notice rule as operative Title 29 text.",
+        "Add a Title 5 cross-reference for federal-agency employees if the editor wants a federal-workforce placement.",
+        "Remove the Trello link and correct the repealed/superseded label."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-002-014",
+      "public_law": "2-14",
+      "title": "Public Law 2-14 | National Federal Torts Act",
+      "status": "current",
+      "status_basis": "Permanent federal civil-torts framework and jurisdictional rules; no self-repeal, sunset, or later-law repeal in the source body.",
+      "provisions": [
+        {
+          "ref": "SEC I(a)-(d)",
+          "text_summary": "Short title, immediate effective date, conflict clause, and severability.",
+          "classes": ["short-title", "effective-date", "non-code", "severability"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28",
+          "exact_change": "n/a",
+          "evidence": "\"National Federal Torts Act\"; \"immediately upon passage\"; \"conflicts with this Act shall be considered null and void\"; \"This act shall be severable\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC I (Jurisdiction)",
+          "text_summary": "Creates federal civil-suit jurisdiction for recognized tort claims and limits review of disputes outside recognized U.S. territory/districts.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t28",
+          "exact_change": "Add a new civil-jurisdiction provision for District Courts covering recognized civil tort claims and the territorial limitation language in the source.",
+          "evidence": "\"Any person who is a Citizen of the United States ofAmerica shall have the ability to launch a civil lawsuit inthe United States District Court\"; \"No Court of the United States shall have the jurisdictionto review civil disputes that occur outside of arecognized territory or district\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC II(a-o)",
+          "text_summary": "Defines the individual civil torts: trespassing, battery, assault, false imprisonment, negligence, negligence per se, breach of contract, fraud, wrongful death, tortious interference, civil conspiracy, abuse of process, trover, harassment, and defamation.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t28",
+          "exact_change": "Codify the enumerated tort causes of action and damages caps as operative Title 28 civil-law text.",
+          "evidence": "\"TRESPASSING\"; \"BATTERY\"; \"ASSAULT\"; \"FALSE IMPRISONMENT\"; \"NEGLIGENCE\"; \"BREACH OF CONTRACT\"; \"FRAUD\"; \"WRONGFUL DEATH\"; \"TORTIOUS INTERFERENCE\"; \"CIVIL CONSPIRACY\"; \"ABUSE OF PROCESS\"; \"TROVER\"; \"HARASSMENT\"; \"DEFAMATION\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC II(p)",
+          "text_summary": "Sets the government-liability rules: no injunctive relief of apologies/repentance, no monetary relief, official-capacity treatment, defense/settlement authority, intervention, and qualified-immunity override if the government refuses to defend.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t28",
+          "exact_change": "Codify the government-liability and defense rules for suits against the United States or agents acting in official capacity.",
+          "evidence": "\"The Government shall be immune from all offenses other than those listed in this section\"; \"No monetary relief shall be rewarded\"; \"Qualified immunity shall not be a valid defense\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC II(q)",
+          "text_summary": "Creates false-arrest relief and expungement rules.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t28",
+          "exact_change": "Codify the false-arrest expungement remedy.",
+          "evidence": "\"FALSE ARREST - Any Law Enforcement Officer\"; \"shall be subject to injunctive relief inexpungement of the arrest.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC II(r)",
+          "text_summary": "Creates a civil action for systematic rights violations with permanent restraining-order relief.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t28",
+          "exact_change": "Codify the systemic-rights violation cause of action and injunctive remedy.",
+          "evidence": "\"CIVIL ACTION FOR SYSTEMATIC RIGHTS VIOLATION\"; \"shall be liable to injunctive relief by a permanent restraining order against the government.\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s1",
+        "detail": "The draft note at Title 28 section 1 preserves none of the required tort, jurisdiction, or government-liability text; it is only a placeholder note plus dump/Trello baggage."
+      },
+      "recommended_actions": [
+        "Codify the jurisdiction, tort, and government-liability rules as operative Title 28 text.",
+        "Remove the full-text dump and Trello link from rp-pl002014-codification.",
+        "Correct the law status to current."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-015",
+      "public_law": "3-15",
+      "title": "Public Law 3-15 | Admission to the United Nations Act",
+      "status": "current",
+      "status_basis": "Permanent notification duty to the Archivist; no self-repeal, sunset, or later-law repeal in the source body.",
+      "provisions": [
+        {
+          "ref": "SECTION I(a)",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t44",
+          "exact_change": "n/a",
+          "evidence": "\"Admission to United Nations Act\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION I(b)",
+          "text_summary": "Effective date.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": "/us/usc/t44",
+          "exact_change": "n/a",
+          "evidence": "\"This Act shall go into effect immediately upon passage.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION I(c)",
+          "text_summary": "Conflict clause.",
+          "classes": ["non-code"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t44",
+          "exact_change": "n/a",
+          "evidence": "\"Any part of any act, jointresolution, or codified law that conflicts with this Act shall beconsidered null and void.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION I(d)",
+          "text_summary": "Severability clause.",
+          "classes": ["severability"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t44",
+          "exact_change": "n/a",
+          "evidence": "\"This act shall be severable\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION II(a)",
+          "text_summary": "Requires the President to notify the Archivist of all bills signed.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t44",
+          "exact_change": "Add a Title 44 reporting duty requiring the President to notify the Archivist of the United States of all bills signed.",
+          "evidence": "\"the President of the United States, upon theenactment of this Act, shall beobligated to notify the Archivist of the United States of all Bills he so signs.\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t22/s2651",
+        "detail": "The law is a Title 44 records-duty rule, but the XML only has a note at Title 22 section 2651 with a full-text dump and Trello link."
+      },
+      "recommended_actions": [
+        "Codify the Archivist-notification duty as operative Title 44 text.",
+        "Remove the full-text dump and Trello link from rp-pl003015-codification.",
+        "Correct the law status to current."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-016",
+      "public_law": "3-16",
+      "title": "Public Law 3-16 | The Capitol Police Establishment",
+      "status": "current",
+      "status_basis": "Creates the Capitol Police Board, protective powers, arrest authority, Capitol-complex policing duties, and outside-jurisdiction deployment rules; no self-repeal or sunset.",
+      "provisions": [
+        {
+          "ref": "SECTION I(a)-(d)",
+          "text_summary": "Short title, severability, reasoning, and effective date.",
+          "classes": ["short-title", "severability", "findings-or-sense", "effective-date"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2",
+          "exact_change": "n/a",
+          "evidence": "\"The CPE Act of 2021\"; \"shall be severable\"; \"Due to the uprising of Congressional Members needing protection\"; \"take effect immediately\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION II",
+          "text_summary": "Establishes the Capitol Police Board and its membership and authorities.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t2",
+          "exact_change": "Create the Capitol Police Board with the listed congressional officers and grant appointment/removal/regulatory authority.",
+          "evidence": "\"The following shall be members of the Capitol Police Board\"; \"Appoint a Capitol Police Chief\"; \"Remove a sitting Capitol Police Chief\"; \"The power to regulate the security of the Capitol Buildings\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION III",
+          "text_summary": "Authorizes protection of Members of Congress and families, warrantless arrests in protective duties, use of Capitol Police property/equipment, and penalties for obstruction.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t2",
+          "exact_change": "Codify the protective-service authority, arrest authority, and obstruction penalty provisions.",
+          "evidence": "\"the United States CapitolPolice is authorized to protect\"; \"to make arrests withoutwarrant\"; \"shall be fined not more than $300 orimprisoned not more than one year\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION IV",
+          "text_summary": "Makes Capitol Police the principal agency for policing the Capitol complex and covered office buildings.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t2",
+          "exact_change": "Codify Capitol-complex policing authority and the covered-building definitions.",
+          "evidence": "\"The Capitol Police shall police the United States Capitol Buildings and Grounds\"; \"shall be the principal agency tasked with the policing of thecapitol complex\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION V",
+          "text_summary": "Restricts deployment outside jurisdiction absent board notice/approval, with emergency, intelligence, and protective-service exceptions.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t2",
+          "exact_change": "Codify the outside-jurisdiction deployment approval rule and exceptions.",
+          "evidence": "\"The Chief of the Capitol Police may not deploy any officer outside of theareas established by law\"; \"suchboard approves of the deployment\"; \"Responding to an imminent threat or emergency\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "The XML note is parked in Title 18 section 1, but the source creates Title 2 legislative-branch police text; no operative text was added."
+      },
+      "recommended_actions": [
+        "Codify the Capitol Police framework as operative Title 2 text.",
+        "Remove the full-text dump and Trello link from rp-pl003016-codification.",
+        "Correct the law status to current."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-017",
+      "public_law": "3-17",
+      "title": "Public Law 3-17 | The Diplomatic Protections Act",
+      "status": "current",
+      "status_basis": "Permanent diplomatic-protection and immunity rules; no self-repeal, sunset, or later-law repeal in the source body.",
+      "provisions": [
+        {
+          "ref": "SECTION I(a)",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t22",
+          "exact_change": "n/a",
+          "evidence": "\"Diplomatic Protections Act\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION I(b)",
+          "text_summary": "Effective date.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": "/us/usc/t22",
+          "exact_change": "n/a",
+          "evidence": "\"This Act shall go into effect immediatelyupon passage\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION I(c)",
+          "text_summary": "Conflict clause.",
+          "classes": ["non-code"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t22",
+          "exact_change": "n/a",
+          "evidence": "\"Any part of any act, jointresolution, or codified law that conflicts with this Act shall beconsidered null and void.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION I(d)",
+          "text_summary": "Severability clause.",
+          "classes": ["severability"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t22",
+          "exact_change": "n/a",
+          "evidence": "\"This act shall be severable\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION II(a)-(e)",
+          "text_summary": "Defines foreign diplomats, requires State Department protection, provides for removal and deportation, grants diplomatic immunity on American soil when authorized, and gives a 24-hour departure timetable.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t22",
+          "exact_change": "Codify the diplomatic-protection, deportation, immunity, and departure-timetable rules in Title 22.",
+          "evidence": "\"Foreign Diplomat\"; \"provide adequate protection\"; \"to be deported to their country of origin\"; \"Diplomatic Immunity\"; \"24hr timetable to leave the United States\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t22/s2651",
+        "detail": "The XML note is in Title 22 territory, but it is still only a note and it carries a full-text dump plus Trello link instead of operative Title 22 text."
+      },
+      "recommended_actions": [
+        "Codify the diplomatic-protection rules as operative Title 22 text.",
+        "Remove the full-text dump and Trello link from rp-pl003017-codification.",
+        "Correct the law status to current."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-018",
+      "public_law": "3-18",
+      "title": "Public Law 3-18 | Amendment to S.12",
+      "status": "current",
+      "status_basis": "Express amendment to PL 3-16 Section V; no self-repeal, sunset, or later-law repeal in the source body.",
+      "provisions": [
+        {
+          "ref": "SECTION I(a)",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2",
+          "exact_change": "n/a",
+          "evidence": "\"Amendment S.12\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION I(b)",
+          "text_summary": "Severability clause.",
+          "classes": ["severability"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2",
+          "exact_change": "n/a",
+          "evidence": "\"This Act shall be severable\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION I(c)",
+          "text_summary": "Reasoning clause identifying the amendment target.",
+          "classes": ["findings-or-sense"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t2",
+          "exact_change": "n/a",
+          "evidence": "\"This is an amendment to the Capitol Police Establishment S.12\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION II(a)-(b)",
+          "text_summary": "Disbands Section V of S.12 and replaces it with 'Capitol Police Outside Prescribed Jurisdiction' powers, including D.C. law enforcement, emergency response, intelligence gathering, and protective services.",
+          "classes": ["direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t2",
+          "exact_change": "Replace Section V of PL 3-16 in full with the new outside-jurisdiction authority and renamed section title.",
+          "evidence": "\"Section V and its entirely shall be disbanded\"; \"Capitol Police Outside Prescribed Jurisdiction\"; \"Capitol Police Shall be authorized to enforce all federal andmunicipal laws of Washington D.C\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The draft note at Title 50 section 1 does not amend PL 3-16's text; the amendment must be integrated into the underlying Capitol Police statute."
+      },
+      "recommended_actions": [
+        "Amend PL 3-16 Section V with the replacement text from this act.",
+        "Remove the Trello link and keep only a concise history note if desired.",
+        "Correct the law status to current."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-019",
+      "public_law": "3-19",
+      "title": "Public Law 3-19 | The NARA Act",
+      "status": "current",
+      "status_basis": "Permanent Archivist-notification duty with no self-repeal, sunset, or later-law repeal in the source body.",
+      "provisions": [
+        {
+          "ref": "SECTION I(a)",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t44",
+          "exact_change": "n/a",
+          "evidence": "\"The NARA Act of 2021\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION I(b)",
+          "text_summary": "Severability clause.",
+          "classes": ["severability"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t44",
+          "exact_change": "n/a",
+          "evidence": "\"This Act shall be severable\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION I(c)",
+          "text_summary": "Reasoning clause about NARA upkeep.",
+          "classes": ["findings-or-sense"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t44",
+          "exact_change": "n/a",
+          "evidence": "\"Due to the NARA establishment, we shall be obligated to notify them\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION I(d)",
+          "text_summary": "Effective date.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": "/us/usc/t44",
+          "exact_change": "n/a",
+          "evidence": "\"This Act shall take effect immediately upon the passage\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION II(a)",
+          "text_summary": "Requires the President to notify the Archivist of all bills signed.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t44",
+          "exact_change": "Add a Title 44 reporting duty requiring the President to notify the Archivist of the United States of all signed bills.",
+          "evidence": "\"The President of the United States, upon theenactment of this Act, shall beobligated to notify the Archivist of the United States of all Bills he so signs.\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t44/s101",
+        "detail": "The note sits in a plausible records-management title, but it still substitutes a note for the actual reporting requirement and carries dump/Trello baggage."
+      },
+      "recommended_actions": [
+        "Codify the Archivist-notification duty as operative Title 44 text.",
+        "Remove the full-text dump and Trello link from rp-pl003019-codification.",
+        "Correct the law status to current."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-020",
+      "public_law": "3-20",
+      "title": "Public Law 3-20 | National Immigration Employment Act of 2021",
+      "status": "unresolved",
+      "status_basis": "The supplied source is a scanned PDF with no extractable text, so the operative provisions cannot be recovered from the batch inputs.",
+      "provisions": [
+        {
+          "ref": "SOURCE UNAVAILABLE",
+          "text_summary": "Scanned PDF with no extractable text; operative provisions cannot be audited from the supplied source.",
+          "classes": ["non-code"],
+          "treatment": "historical-note-only",
+          "target": "n/a",
+          "exact_change": "n/a",
+          "evidence": "\"text_extracted\": false; \"image_only_or_scanned\": true",
+          "notes": "Source-limited disposition only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t8/s1101/i/2",
+        "detail": "No recoverable statutory text was supplied, so the XML note cannot be validated against the source body."
+      },
+      "recommended_actions": [
+        "Retain only a source-limited historical note until OCR or extractable text becomes available.",
+        "Do not invent substantive codification from the scanned PDF.",
+        "Re-audit if the text extraction is recovered later."
+      ],
+      "confidence": "low"
+    }
+  ]
+}

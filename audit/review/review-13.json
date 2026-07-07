@@ -1,0 +1,348 @@
+{
+  "reviewer": "reviewer-13",
+  "group_index": 13,
+  "law_count": 10,
+  "source_manifest": "audit/review/manifest-13.json",
+  "laws": [
+    {
+      "law_id": "PL-017-125",
+      "public_law": "17-125",
+      "title": "Public Law 17-125 | We Don't Read Minds Act of 2023",
+      "final_statutory_text": "No express, uniquely executable Code amendment was found. The enactment is general and permanent and is best preserved as a statutory note at 2 U.S.C. 661.",
+      "provision_level_disposition": "Standalone generally permanent law; best preserved as a statutory note at 2 U.S.C. 661.",
+      "chronology": "Current enactment. The source is intact and operative, and nothing in the reviewed corpus repeals Public Law 17-125 itself.",
+      "repeal_transfer_redesignation": "No repeal, transfer, or redesignation chain was identified.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "note-only",
+      "status": "current",
+      "status_basis": "The act is current and generally permanent, but its operative material is best preserved as a statutory note rather than a new positive-law section.",
+      "current_implementation": {
+        "assessment": "not-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s661",
+        "detail": "No PL-17-125 statutory note was found in current XML."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-017-125.md classifies the act as STATUTORY_NOTE at 2 U.S.C. 661.",
+        "codification/mass_migration/latest/sources/text/PL-017-125.txt contains the enacted text.",
+        "current XML search did not surface a PL-17-125 note."
+      ],
+      "recommended_actions": [
+        "Add a statutory note at 2 U.S.C. 661.",
+        "Do not create a new Code section.",
+        "Do not alter substantive Code text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-126",
+      "public_law": "17-126",
+      "title": "Public Law 17-126 | Special Events Act",
+      "final_statutory_text": "No current Code insertion is made because PL-031-226 repeals this law.",
+      "provision_level_disposition": "No current Code insertion is made because PL-031-226 repeals this law.",
+      "chronology": "The act is superseded before codification and does not survive as current Code text.",
+      "repeal_transfer_redesignation": "No transfer or redesignation chain survives once PL-031-226 repeals the act.",
+      "standalone_general_permanent": false,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "nonoperative-or-repealed",
+      "status": "repealed",
+      "status_basis": "PL-031-226 supersedes this act before any current codification step.",
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "No current Code insertion should be made because the law was repealed before codification."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-017-126.md classifies the act as SUPERSEDED_BEFORE_CODIFICATION.",
+        "The report states that PL-031-226 repeals this law.",
+        "No Code operation was authorized."
+      ],
+      "recommended_actions": [
+        "Retain only as historical repeal information.",
+        "Do not add a Code section or statutory note.",
+        "Do not infer operative text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-127",
+      "public_law": "17-127",
+      "title": "Public Law 17-127 | Border Security Act",
+      "final_statutory_text": "No express, uniquely executable Code amendment was found. The enactment is general and permanent and is best preserved as a statutory note at 28 U.S.C. 507A.",
+      "provision_level_disposition": "Standalone generally permanent law; best preserved as a statutory note at 28 U.S.C. 507A.",
+      "chronology": "Current enactment. The source is intact and operative, and nothing in the reviewed corpus repeals Public Law 17-127 itself.",
+      "repeal_transfer_redesignation": "No repeal, transfer, or redesignation chain was identified.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "note-only",
+      "status": "current",
+      "status_basis": "The act is current and generally permanent, but its operative material is best preserved as a statutory note at 28 U.S.C. 507A.",
+      "current_implementation": {
+        "assessment": "not-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s507A",
+        "detail": "No PL-17-127 statutory note was found in current XML."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-017-127.md classifies the act as STATUTORY_NOTE at 28 U.S.C. 507A.",
+        "codification/mass_migration/latest/sources/text/PL-017-127.txt contains the enacted text.",
+        "current XML search did not surface a PL-17-127 note."
+      ],
+      "recommended_actions": [
+        "Add a statutory note at 28 U.S.C. 507A.",
+        "Do not create a new Code section.",
+        "Do not alter substantive Code text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-128",
+      "public_law": "17-128",
+      "title": "Public Law 17-128 | Impeachment Procedures and Protocols Act (IPPA)",
+      "final_statutory_text": "This enactment is commemorative rather than general and permanent U.S. Code material. It remains a public law but receives no Code insertion.",
+      "provision_level_disposition": "Commemorative enactment; no Code insertion.",
+      "chronology": "Current enactment. The source is intact and active, but the law is commemorative rather than generally codifiable.",
+      "repeal_transfer_redesignation": "No repeal, transfer, or redesignation chain was identified.",
+      "standalone_general_permanent": false,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "non-code",
+      "status": "current",
+      "status_basis": "The act is commemorative rather than generally codifiable, so no Code insertion is warranted.",
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "The law is commemorative, so no Code placement is appropriate."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-017-128.md classifies the act as NON_CODE.",
+        "The report describes the enactment as commemorative rather than general and permanent U.S. Code material.",
+        "No Code operation was authorized."
+      ],
+      "recommended_actions": [
+        "Retain only as commemorative history.",
+        "Do not add Code text or a statutory note.",
+        "Do not treat the enactment as a codification candidate."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-017-129",
+      "public_law": "17-129",
+      "title": "Public Law 17-129 | Department of Education Act",
+      "final_statutory_text": "This enactment is commemorative, but current XML already carries its statutory note at title 20.",
+      "provision_level_disposition": "Commemorative enactment already preserved as a statutory note at the closest subject-matter anchor.",
+      "chronology": "Current enactment. The source is intact and active, but the law is commemorative rather than generally codifiable.",
+      "repeal_transfer_redesignation": "No repeal, transfer, or redesignation chain was identified.",
+      "standalone_general_permanent": false,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "non-code",
+      "status": "current",
+      "status_basis": "The act is commemorative, but current XML already carries the statutory note in title 20.",
+      "current_implementation": {
+        "assessment": "implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t20/s1",
+        "detail": "The PL-17-129 statutory note is already present in usc20.xml at section 1."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-017-129.md classifies the act as NON_CODE.",
+        "usc/usc20.xml contains rp-pl017129-codification under section 1.",
+        "The note records the act as statutory history rather than operative Code text."
+      ],
+      "recommended_actions": [
+        "Keep the existing note.",
+        "Do not add new Code text.",
+        "Do not duplicate the law in another title anchor."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-017-130",
+      "public_law": "17-130",
+      "title": "Public Law 17-130 | Oath and Offices Protection (OOP)",
+      "final_statutory_text": "No express, uniquely executable Code amendment was found. The enactment is general and permanent and is best preserved as a statutory note at 2 U.S.C. 6599.",
+      "provision_level_disposition": "Standalone generally permanent law; best preserved as a statutory note at 2 U.S.C. 6599.",
+      "chronology": "Current enactment. The source is intact and operative, and nothing in the reviewed corpus repeals Public Law 17-130 itself.",
+      "repeal_transfer_redesignation": "No repeal, transfer, or redesignation chain was identified.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "note-only",
+      "status": "current",
+      "status_basis": "The act is current and generally permanent, but its operative material is best preserved as a statutory note at 2 U.S.C. 6599.",
+      "current_implementation": {
+        "assessment": "not-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s6599",
+        "detail": "No PL-17-130 statutory note was found in current XML."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-017-130.md classifies the act as STATUTORY_NOTE at 2 U.S.C. 6599.",
+        "codification/mass_migration/latest/sources/text/PL-017-130.txt contains the enacted text.",
+        "current XML search did not surface a PL-17-130 note."
+      ],
+      "recommended_actions": [
+        "Add a statutory note at 2 U.S.C. 6599.",
+        "Do not create a new Code section.",
+        "Do not alter substantive Code text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-131",
+      "public_law": "17-131",
+      "title": "Public Law 17-131 | More Jobs Amendment",
+      "final_statutory_text": "No Code operation survives because the law is repealed/nonoperative.",
+      "provision_level_disposition": "No Code operation survives because the law is repealed/nonoperative.",
+      "chronology": "Repealed enactment. The source report classifies the law as repealed, and no current Code placement is authorized.",
+      "repeal_transfer_redesignation": "No transfer or redesignation chain survives; the law is excluded from current Code treatment.",
+      "standalone_general_permanent": false,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "nonoperative-or-repealed",
+      "status": "repealed",
+      "status_basis": "The source report classifies the law as repealed and the amendment itself is no longer operative.",
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "No Code text is being or should be carried forward for this repealed enactment."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-017-131.md classifies the act as NONOPERATIVE_OR_REPEALED.",
+        "The report marks the law as repealed.",
+        "No Code operation was authorized."
+      ],
+      "recommended_actions": [
+        "Retain only as historical repeal information.",
+        "Do not add a Code section or statutory note.",
+        "Do not infer operative text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-132",
+      "public_law": "17-132",
+      "title": "Public Law 17-132 | Standard Process for International Extraditions Act",
+      "final_statutory_text": "No express, uniquely executable Code amendment was found. The enactment is general and permanent and is best preserved as a statutory note at 2 U.S.C. 172.",
+      "provision_level_disposition": "Standalone generally permanent law; best preserved as a statutory note at 2 U.S.C. 172.",
+      "chronology": "Current enactment. The source is intact and operative, and nothing in the reviewed corpus repeals Public Law 17-132 itself.",
+      "repeal_transfer_redesignation": "No repeal, transfer, or redesignation chain was identified.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "note-only",
+      "status": "current",
+      "status_basis": "The act is current and generally permanent, but its operative material is best preserved as a statutory note at 2 U.S.C. 172.",
+      "current_implementation": {
+        "assessment": "not-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s172",
+        "detail": "No PL-17-132 statutory note was found in current XML."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-017-132.md classifies the act as STATUTORY_NOTE at 2 U.S.C. 172.",
+        "codification/mass_migration/latest/sources/text/PL-017-132.txt contains the enacted text.",
+        "current XML search did not surface a PL-17-132 note."
+      ],
+      "recommended_actions": [
+        "Add a statutory note at 2 U.S.C. 172.",
+        "Do not create a new Code section.",
+        "Do not alter substantive Code text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-133",
+      "public_law": "17-133",
+      "title": "Public Law 17-133 | Judicial Overhaul Bill (JOB) AMENDED",
+      "final_statutory_text": "Project-generated U.S. Code material already contains this public law; no new Code operation is needed.",
+      "provision_level_disposition": "Project-generated U.S. Code material already contains this public law; no new Code operation is needed.",
+      "chronology": "Current enactment. The source is intact and operative, and the reviewed XML already reflects the law's amendment trail across title 28.",
+      "repeal_transfer_redesignation": "The affected title 28 provisions already carry the repeal/amendment trail; no new transfer or redesignation is needed.",
+      "standalone_general_permanent": false,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "already-incorporated",
+      "status": "current",
+      "status_basis": "Current XML already contains the Pub. L. 17-133 amendment trail across title 28, so no new operation is needed.",
+      "current_implementation": {
+        "assessment": "implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "Current XML already contains Pub. L. 17-133 amendment notes in title 28; no new placement is needed."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-017-133.md classifies the act as ALREADY_INCORPORATED.",
+        "usc/usc28.xml contains multiple Pub. L. 17-133 amendment notes.",
+        "No Code operation was authorized."
+      ],
+      "recommended_actions": [
+        "Keep the existing incorporated changes.",
+        "Do not duplicate the law in a new note or section.",
+        "Leave the existing amendment trail in place."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-134",
+      "public_law": "17-134",
+      "title": "Public Law 17-134 | Amended The Uniformed Capitol Police Act of 2023",
+      "final_statutory_text": "No express, uniquely executable Code amendment was found. The enactment is general and permanent and is best preserved as a statutory note at 2 U.S.C. 1438.",
+      "provision_level_disposition": "Standalone generally permanent law; best preserved as a statutory note at 2 U.S.C. 1438.",
+      "chronology": "Current enactment. The source is intact and operative, and nothing in the reviewed corpus repeals Public Law 17-134 itself.",
+      "repeal_transfer_redesignation": "No repeal, transfer, or redesignation chain was identified.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "note-only",
+      "status": "current",
+      "status_basis": "The act is current and generally permanent, but its operative material is best preserved as a statutory note at 2 U.S.C. 1438.",
+      "current_implementation": {
+        "assessment": "not-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s1438",
+        "detail": "No PL-17-134 statutory note was found in current XML."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-017-134.md classifies the act as STATUTORY_NOTE at 2 U.S.C. 1438.",
+        "codification/mass_migration/latest/sources/text/PL-017-134.txt contains the enacted text.",
+        "current XML search did not surface a PL-17-134 note."
+      ],
+      "recommended_actions": [
+        "Add a statutory note at 2 U.S.C. 1438.",
+        "Do not create a new Code section.",
+        "Do not alter substantive Code text."
+      ],
+      "confidence": "high"
+    }
+  ]
+}

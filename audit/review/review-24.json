@@ -1,0 +1,170 @@
+{
+  "reviewer": "reviewer-24",
+  "group_index": 24,
+  "law_count": 10,
+  "reviewed_against": [
+    "audit/review/manifest-24.json",
+    "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv",
+    "usc XML in current branch"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-034-242",
+      "public_law": "34-242",
+      "title": "Public Law 34-242 | Federal Courthouse Security & Jurisdiction Act",
+      "status": "active",
+      "decision": "statutory-note",
+      "status_basis": "General and permanent law, but the live branch does not yet contain the note at the classified anchor.",
+      "current_implementation": {
+        "assessment": "absent",
+        "placement": "/us/usc/t28/s362",
+        "detail": "No matching PL-034-242 note was found in usc/usc28.xml."
+      },
+      "recommended_action": "Add the statutory note at /us/usc/t28/s362.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-243",
+      "public_law": "34-243",
+      "title": "Public Law 34-243 | Judicial Integrity & Accountability Act",
+      "status": "current",
+      "decision": "amend-existing-text",
+      "status_basis": "Direct chapter-level rewrite to Title 28 chapter 16; the branch already carries the enacted replacement text.",
+      "current_implementation": {
+        "assessment": "implemented",
+        "placement": "/us/usc/t28/ch16",
+        "detail": "Current XML includes the replacement chapter 16 framework and repeal markers for sections 359 and 361."
+      },
+      "recommended_action": "No further Code change is required.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-244",
+      "public_law": "34-244",
+      "title": "Public Law 34-244 | Sentencing Reform Act",
+      "status": "current",
+      "decision": "amend-existing-text",
+      "status_basis": "Direct amendment to 18 U.S.C. 3585, and the current branch already contains the revised text.",
+      "current_implementation": {
+        "assessment": "implemented",
+        "placement": "/us/usc/t18/s3585",
+        "detail": "Current XML includes the amended commencement and prior-custody-credit language."
+      },
+      "recommended_action": "No further Code change is required.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-245",
+      "public_law": "34-245",
+      "title": "Public Law 34-245 | Legal Compensation Act",
+      "status": "current",
+      "decision": "mixed-amendment-and-note",
+      "status_basis": "Direct amendment to 18 U.S.C. 3006A(d) plus repeal of 42 U.S.C. chapter 34 subchapter X with note-style grant authority.",
+      "current_implementation": {
+        "assessment": "implemented",
+        "placement": [
+          "/us/usc/t18/s3006A/d",
+          "/us/usc/t42/ch34/schX"
+        ],
+        "detail": "Current XML contains the subsection (d) rewrite and the subchapter repeal with the accompanying legal-representation support note."
+      },
+      "recommended_action": "No further Code change is required.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-246",
+      "public_law": "34-246",
+      "title": "Public Law 34-246 | Sentencing Commission Reform Act",
+      "status": "current",
+      "decision": "amend-existing-text",
+      "status_basis": "Direct Title 28 amendments and repeal markings, all already reflected in the branch.",
+      "current_implementation": {
+        "assessment": "implemented",
+        "placement": [
+          "/us/usc/t28/s991",
+          "/us/usc/t28/s992",
+          "/us/usc/t28/s994",
+          "/us/usc/t28/s995"
+        ],
+        "detail": "Current XML shows the revised 991(a), the repeal of 992 and 995, and the expanded 994 duties."
+      },
+      "recommended_action": "No further Code change is required.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-247",
+      "public_law": "34-247",
+      "title": "Public Law 34-247 | Grand Jury Bypass Act",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "General and permanent enactment anchored as a statutory note, and the live branch already carries it.",
+      "current_implementation": {
+        "assessment": "implemented",
+        "placement": "/us/usc/t28/s2261",
+        "detail": "Current XML contains the Pub. L. 34-247 statutory note at the Title 28 anchor."
+      },
+      "recommended_action": "No further Code change is required.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-248",
+      "public_law": "34-248",
+      "title": "Public Law 34-248 | Intelligence Community Inspector General Consolidation Act of 2025",
+      "status": "current",
+      "decision": "non-code",
+      "status_basis": "Classified as non-Code material, so no XML insertion is expected.",
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No Code location applies for this enactment."
+      },
+      "recommended_action": "Leave it out of the Code and retain it only as history.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-249",
+      "public_law": "34-249",
+      "title": "Public Law 34-249 | Washington Diplomacy Complex Bill 2025",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "General and permanent enactment, but the target note is not present in the current branch.",
+      "current_implementation": {
+        "assessment": "absent",
+        "placement": "/us/usc/t2/s6567",
+        "detail": "No matching PL-034-249 note was found in usc/usc02.xml."
+      },
+      "recommended_action": "Add the statutory note at /us/usc/t2/s6567.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-250",
+      "public_law": "34-250",
+      "title": "Public Law 34-250 | Federal Prison Standards Act of 2025",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "General and permanent enactment classified to a statutory note, but the branch does not yet carry it.",
+      "current_implementation": {
+        "assessment": "absent",
+        "placement": "/us/usc/t49/s46307",
+        "detail": "No matching PL-034-250 note was found in usc/usc49.xml."
+      },
+      "recommended_action": "Add the statutory note at /us/usc/t49/s46307.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-251",
+      "public_law": "34-251",
+      "title": "Public Law 34-251 | In-Game Sentencing Guidelines Bill",
+      "status": "superseded",
+      "decision": "historical-note-only",
+      "status_basis": "Superseded before codification, so it should remain historical only.",
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No current Code implementation should be carried forward."
+      },
+      "recommended_action": "Retain as superseded history only.",
+      "confidence": "high"
+    }
+  ]
+}

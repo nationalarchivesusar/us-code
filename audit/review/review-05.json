@@ -1,0 +1,528 @@
+{
+  "batch": 5,
+  "auditor": "review-auditor-05",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-007-042",
+      "public_law": "7-42",
+      "title": "Public Law 7-42 | Transportation Act of 2022",
+      "status": "fully-repealed",
+      "status_basis": "The source is a generally applicable transportation enactment that was later repealed externally. Its active provisions were real while operative: it creates a Bus Rapid Transit Division, the Federal Transit Administration, and the Transportation Security Administration, then adds municipal-law restrictions and a repeal of the prior towing act. Because later law repealed it in full, the correct disposition is statutory history only.",
+      "provisions": [
+        {
+          "ref": "PART III",
+          "text_summary": "Creates a Bus Rapid Transit Division under the Department of Transportation and sets nationwide transit duties.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t49",
+          "exact_change": "Retain only as historical note material; no live Title 49 text should be created from a repealed enactment.",
+          "evidence": "There shall be a Bus Rapid Transit Division under the Federal Government.",
+          "notes": "General and permanent while active, but fully repealed now."
+        },
+        {
+          "ref": "PART IV",
+          "text_summary": "Creates the Federal Transit Administration and assigns transit-routing duties.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t49",
+          "exact_change": "Keep as history-only; do not codify a new permanent section for a repealed act.",
+          "evidence": "The Federal Transit Administration is hereby formed under the direction of the Department of Transportation.",
+          "notes": ""
+        },
+        {
+          "ref": "PART V",
+          "text_summary": "Creates the Transportation Security Administration and gives it transit-security and air-traffic-related duties.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t49",
+          "exact_change": "History note only; no present Code text is required after repeal.",
+          "evidence": "The Transportation Security Administration is hereby established under the direction of the Department of Transportation.",
+          "notes": ""
+        },
+        {
+          "ref": "PART VI(b)",
+          "text_summary": "Bars municipalities from regulating public transit or towing services and repeals conflicting municipal laws.",
+          "classes": [
+            "repeal",
+            "local-district"
+          ],
+          "treatment": "historical-note-only",
+          "target": "municipal law; non-U.S. Code target",
+          "exact_change": "Record the municipal-law repeal as history only; do not invent a federal Code amendment.",
+          "evidence": "Any municipal laws not specifically mentioned herein that regulate such are hereby repealed and overruled.",
+          "notes": "The clause references prior municipal law, not a numbered U.S. Code section."
+        },
+        {
+          "ref": "PART VI(b) / closing line",
+          "text_summary": "Repeals the prior 'S 63 Towing Companies Regulation Act'.",
+          "classes": [
+            "repeal"
+          ],
+          "treatment": "historical-note-only",
+          "target": "prior S. 63 towing act; non-U.S. Code target",
+          "exact_change": "Keep the repeal cross-reference as history only.",
+          "evidence": "S 63 Towing Companies Regulation Act is hereby struck down and repealed.",
+          "notes": ""
+        },
+        {
+          "ref": "PART IX",
+          "text_summary": "Non-binding development suggestions about buses and gun-free zones.",
+          "classes": [
+            "non-code",
+            "ceremonial"
+          ],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": "Do not codify; this text expressly says it is not law of the United States.",
+          "evidence": "This section should not be construed to be the law of the United States.",
+          "notes": "Non-operative policy suggestion only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t49",
+        "detail": "The history-note treatment is legally sufficient, but the XML note carries full quotedContent and archive-link baggage that should be cleaned up if the branch keeps the note."
+      },
+      "recommended_actions": [
+        "Retain as statutory history only at the closest Title 49 anchor.",
+        "Remove any unnecessary quotedContent dump and archive-link clutter from the note if present.",
+        "Do not create a new permanent Code section."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-007-043",
+      "public_law": "7-43",
+      "title": "Public Law 7-43 | District of Columbia Reorganization Initiative Act",
+      "status": "fully-repealed",
+      "status_basis": "This is a local District of Columbia charter amendment, not a permanent U.S. Code enactment. It changes the charter's council structure, abolishes a charter section, and sets a mayoral succession order. The later record shows the charter itself was repealed, so this enactment belongs in local history only.",
+      "provisions": [
+        {
+          "ref": "SEC. III",
+          "text_summary": "Reduces the D.C. council from six members to five and abolishes Article I, Section IV of the charter.",
+          "classes": [
+            "direct-amendment",
+            "local-district",
+            "redesignation"
+          ],
+          "treatment": "exclude-from-code",
+          "target": "D.C. City Charter Art. I",
+          "exact_change": "Treat as local charter history; no federal Code amendment is appropriate.",
+          "evidence": "The Council established shall consist of five members elected on a partisan basis.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. IV",
+          "text_summary": "Rewrites the mayoral designation rule in Article II of the charter.",
+          "classes": [
+            "direct-amendment",
+            "local-district"
+          ],
+          "treatment": "exclude-from-code",
+          "target": "D.C. City Charter Art. II",
+          "exact_change": "Local charter text only; keep as historical note material.",
+          "evidence": "The Mayor may designate the officer or officers of the executive department of the District, with the consent of the City Council.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. V",
+          "text_summary": "Establishes a line of succession for the D.C. mayor's office.",
+          "classes": [
+            "local-district",
+            "new-permanent-general"
+          ],
+          "treatment": "exclude-from-code",
+          "target": "D.C. City Charter / local succession rule",
+          "exact_change": "Do not map to permanent U.S. Code text; this is a local governance rule.",
+          "evidence": "The Line of Succession for the Office of the Mayor of Washington, DC shall be the following:",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t40",
+        "detail": "The branch note is directionally right in treating this as local history, but it should remain history-only and not be treated as live federal Code text."
+      },
+      "recommended_actions": [
+        "Keep only a local historical note; do not create U.S. Code text.",
+        "Treat the later charter repeal as superseding history.",
+        "Do not promote any section of this act into permanent positive law."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-007-044",
+      "public_law": "7-44",
+      "title": "Public Law 7-44 | The Bye Bye Terrorism Act",
+      "status": "fully-repealed",
+      "status_basis": "The source is a permanent general firearms-policy enactment that limits fully automatic firearms to semi-automatic status. It is not temporary on its face, but later repeal removed it from live law. A history note is sufficient now.",
+      "provisions": [
+        {
+          "ref": "SEC. II",
+          "text_summary": "Defines and reclassifies fully automatic firearms within the firearms code framework.",
+          "classes": [
+            "new-permanent-general",
+            "direct-amendment"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18",
+          "exact_change": "History note only; no current Code text should be created from a repealed firearms policy law.",
+          "evidence": "Any fully automatic firearms shall be classified as semi-automatic firearms.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. III",
+          "text_summary": "Contains the effective-date rule for the firearms policy.",
+          "classes": [
+            "effective-date"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep as a historical effective-date reference only.",
+          "evidence": "This Act shall go into effect immediately upon passage.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18",
+        "detail": "The enactment is legally history-only now, but the note should be kept concise and not treated as active text."
+      },
+      "recommended_actions": [
+        "Retain as historical note only at the Title 18 firearms anchor.",
+        "No new Code section is required because the law is fully repealed.",
+        "Keep the note concise and history-only."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-007-045",
+      "public_law": "7-45",
+      "title": "Public Law 7-45 | United States Capitol Police Reorganization Act of 2022",
+      "status": "fully-repealed",
+      "status_basis": "This is a Capitol Police reorganization measure with local/Congressional subject matter. It repeals part of the earlier Capitol Police establishment law, creates a new board structure, and governs deployment outside the Capitol jurisdiction. Later repeal leaves only a historical note role.",
+      "provisions": [
+        {
+          "ref": "SEC. II",
+          "text_summary": "Repeals portions of the prior Capitol Police law and creates a new Capitol Police Board structure.",
+          "classes": [
+            "repeal",
+            "local-district",
+            "direct-amendment"
+          ],
+          "treatment": "exclude-from-code",
+          "target": "/us/usc/t2 or /us/usc/t40",
+          "exact_change": "Record as local/Congressional history only; no permanent federal Code section is required.",
+          "evidence": "The following shall be members of the Capitol Police Board.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. III",
+          "text_summary": "Sets Capitol Police protective authority and arrest powers.",
+          "classes": [
+            "local-district",
+            "new-permanent-general"
+          ],
+          "treatment": "exclude-from-code",
+          "target": "/us/usc/t2 or /us/usc/t40",
+          "exact_change": "Keep as history only because the enactment is fully repealed.",
+          "evidence": "The United States Capitol Police is authorized to protect, in any area of the United States, the person of any Member of Congress.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. V",
+          "text_summary": "Restricts deployment outside the Capitol Police jurisdiction except for emergencies and protective services.",
+          "classes": [
+            "local-district",
+            "new-permanent-general"
+          ],
+          "treatment": "exclude-from-code",
+          "target": "/us/usc/t2 or /us/usc/t40",
+          "exact_change": "History note only; do not create live Code text.",
+          "evidence": "The Chief of the Capitol Police may not deploy any officer outside of the areas established by law for the jurisdiction of the Capitol Police unless...",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2",
+        "detail": "This belongs in historical/local-note form only. Any live Code placement would overstate its current force because the law was later repealed."
+      },
+      "recommended_actions": [
+        "Keep only as historical note material at the closest Congressional/Capitol anchor.",
+        "Do not write a permanent U.S. Code section.",
+        "Preserve the repeal chronology in the history note."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-007-046",
+      "public_law": "7-46",
+      "title": "Public Law 7-46 | Whistleblower Protection Act",
+      "status": "unresolved",
+      "status_basis": "The supplied source is not recoverable in the record available to this review. The attached law.html is a permission-denied page, so the enacted statutory text cannot be lawfully reconstructed. No operative conclusions beyond source unavailability can be drawn.",
+      "provisions": [],
+      "current_implementation": {
+        "assessment": "missing",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "No recoverable statutory text was available in the supplied source files, so there is nothing lawful to codify from the review record."
+      },
+      "recommended_actions": [
+        "Leave unresolved and do not invent operative text.",
+        "If recovery later becomes possible, add only a source-limited historical note.",
+        "Do not assign a live Code section from the current record."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-007-047",
+      "public_law": "7-47",
+      "title": "Public Law 7-47 | The Federal Bar Association Act of 2022",
+      "status": "fully-repealed",
+      "status_basis": "This was a generally applicable, permanent bar-governance enactment that established the Federal Bar Association, a bar-exam structure, and a code of conduct. A later enactment expressly repealed it, so the current disposition is historical note only.",
+      "provisions": [
+        {
+          "ref": "SEC. 3",
+          "text_summary": "Creates the Federal Bar Association structure and membership/administration rules.",
+          "classes": [
+            "new-permanent-general",
+            "direct-amendment"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t28",
+          "exact_change": "Retain as history only because the law was later repealed in full.",
+          "evidence": "There shall be established a Federal Bar Association.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 4",
+          "text_summary": "Creates the bar-exam and admission framework tied to the Federal Bar Association.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t28",
+          "exact_change": "No active Code section is warranted after repeal.",
+          "evidence": "The Federal Bar Association shall have the power to administer the bar exam.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 5",
+          "text_summary": "Sets the code of conduct for lawyers admitted under the act.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t28",
+          "exact_change": "History note only.",
+          "evidence": "Code of Conduct.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28",
+        "detail": "The note is directionally correct as history, but the branch still treats a repealed organic bar law as if it were live subject-matter text."
+      },
+      "recommended_actions": [
+        "Keep as a repealed-history note only.",
+        "Do not leave any live Title 28 text in place for this enactment.",
+        "Preserve the later repeal chronology in the note."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-007-048",
+      "public_law": "7-48",
+      "title": "Public Law 7-48 | OCJCS Reform Act of 2022",
+      "status": "fully-repealed",
+      "status_basis": "The source is a permanent, generally applicable military reorganization. It abolishes most combatant-command structures, reallocates duties to the Chairman of the Joint Chiefs, and is later repealed by a subsequent enactment. That makes history-note treatment sufficient now.",
+      "provisions": [
+        {
+          "ref": "SEC. 2",
+          "text_summary": "Abolishes or restructures combatant commands except for the specified exception and reassigns duties.",
+          "classes": [
+            "direct-amendment",
+            "new-permanent-general"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t10",
+          "exact_change": "History only; the later repeal means no live Title 10 section should remain from this act.",
+          "evidence": "All combatant commanders shall be abolished, except for USSOCOM.",
+          "notes": ""
+        },
+        {
+          "ref": "later-repeal chronology",
+          "text_summary": "Later enactment repeals this law and restores/reworks the command structure.",
+          "classes": [
+            "repeal"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t10",
+          "exact_change": "Record the repeal chronology only.",
+          "evidence": "The later record repeals Public Law 7-48.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t10",
+        "detail": "The act should be retained as history only; the branch should not leave behind live military-organic text once the repeal is accounted for."
+      },
+      "recommended_actions": [
+        "Retain as historical note material at the Title 10 anchor.",
+        "Do not create a new Code section for a repealed reform act.",
+        "Keep the repeal chronology explicit."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-007-049",
+      "public_law": "7-49",
+      "title": "Public Law 7-49 | Legislative Initiative to Grow Monetary Access Act of 2022 (LIGMA Act)",
+      "status": "fully-repealed",
+      "status_basis": "This enactment is an ongoing compensation rule while active: it gives House and Senate teams recurring in-game paychecks and applies to successor games. It is now fully repealed, so the only legally sufficient treatment is statutory history.",
+      "provisions": [
+        {
+          "ref": "SEC. 3",
+          "text_summary": "Provides in-game compensation for elected legislative officials.",
+          "classes": [
+            "new-permanent-general",
+            "appropriation"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t31",
+          "exact_change": "History note only; no live spending or pay section should be created.",
+          "evidence": "This act grants in-game compensation to elected federal legislative officials.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 4-5",
+          "text_summary": "Sets the effective date and the recurring paycheck cadence, including successor games.",
+          "classes": [
+            "effective-date",
+            "applicability"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t31",
+          "exact_change": "Keep as repealed-history only.",
+          "evidence": "The timeline for this effect is specified in section 4.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t31",
+        "detail": "The current note is legally adequate as history, but it should remain clearly historical because the law no longer has operative force."
+      },
+      "recommended_actions": [
+        "Keep the law only as historical note material.",
+        "Do not create a live Title 31 compensation section.",
+        "Preserve its repeal status in the note text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-007-050",
+      "public_law": "7-50",
+      "title": "Public Law 7-50 | Coast Guard Base Repurposing Act of 2022",
+      "status": "fully-repealed",
+      "status_basis": "This is a site-specific property and jurisdiction repurposing law about a named Coast Guard base in Washington, D.C. Remastered. It is local/property-specific rather than permanent Code text, and later repeal makes a history note sufficient.",
+      "provisions": [
+        {
+          "ref": "SEC. 3-6",
+          "text_summary": "Defines the base, repurposes it to the Navy, and changes jurisdiction/signage.",
+          "classes": [
+            "local-district",
+            "transfer",
+            "repeal"
+          ],
+          "treatment": "exclude-from-code",
+          "target": "/us/usc/t14",
+          "exact_change": "Treat as site-specific history only; do not create permanent positive-law text.",
+          "evidence": "The Potomac River Coast Guard Base shall be repurposed to service the United States Navy.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 7",
+          "text_summary": "States the factual purpose for the repurposing decision.",
+          "classes": [
+            "findings-or-sense"
+          ],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": "Keep as explanatory history only.",
+          "evidence": "There is no reason to have a Coast Guard installation at Washington, D.C.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t14",
+        "detail": "The note is legally sufficient as a history note; no Code section is warranted because the law is site-specific and later repealed."
+      },
+      "recommended_actions": [
+        "Keep as history only at the Title 14 anchor.",
+        "Do not create permanent U.S. Code text for a repurposed installation.",
+        "Maintain the repeal chronology in the note."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-007-051",
+      "public_law": "7-51",
+      "title": "Public Law 7-51 | Federal Agent Law Training Mandate",
+      "status": "unresolved",
+      "status_basis": "The source was deleted or not found. The only recovered material is a source-limited record indicating the law could not be recovered, so the statutory text cannot be reconstructed lawfully. The proper disposition is unresolved source-limited history only.",
+      "provisions": [],
+      "current_implementation": {
+        "assessment": "correctly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": null,
+        "detail": "The existing note is a lawful source-limited history note; no operative language is invented, which is exactly what the record permits."
+      },
+      "recommended_actions": [
+        "Retain only as a source-limited historical note.",
+        "Do not infer any operative provisions from the missing source.",
+        "No Code section should be created from the current record."
+      ],
+      "confidence": "medium"
+    }
+  ]
+}

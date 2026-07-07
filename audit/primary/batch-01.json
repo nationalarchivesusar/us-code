@@ -1,0 +1,607 @@
+{
+  "batch": 1,
+  "auditor": "law-auditor-01",
+  "law_count": 30,
+  "laws": [
+    {
+      "law_id": "PL-001-001",
+      "public_law": "1-1",
+      "title": "Public Law 1-1 | Enactment of the U.S. Codes Act",
+      "status": "partially-current",
+      "status_basis": "Foundational enactment establishing the 53/54-title structure of the U.S. Code; still the organizational baseline. Later law PL 3-24 (Judgeship Reduction Act) sec. VII expressly supersedes 'The Enactment of the U.S. Codes Act of 2021 ... in all conflicting provisions', so it is current except where PL 3-24 conflicts. No self-repeal or sunset in the body.",
+      "provisions": [
+        {"ref": "Preamble / short title", "text_summary": "Cites act as 'Enactment of the U.S. Codes Act.'", "classes": ["short-title"], "treatment": "statutory-note", "target": "/us/usc/t1/s1", "exact_change": "n/a", "evidence": "\"this act may be cited as the “Enactment of the U.S. Codes Act.”\"", "notes": "Short-title note only."},
+        {"ref": "SECTION 1", "text_summary": "Reasoning/recital describing what the U.S. Code is and its publication history.", "classes": ["findings-or-sense"], "treatment": "historical-note-only", "target": "/us/usc/t1/s1", "exact_change": "n/a", "evidence": "\"The United States Code is the codification by subject matter of the general and permanent laws\"", "notes": "Non-operative findings; not codified as text."},
+        {"ref": "SECTION 2", "text_summary": "Enumerates the titles of the Code (Title 1 through Title 54, including a-suffixed titles).", "classes": ["new-permanent-general", "statutory-note-material"], "treatment": "historical-note-only", "target": "/us/usc/t1", "exact_change": "Establishes the Code's title structure; already reflected in the repository baseline.", "evidence": "\"CODE OF LAWS OF THE UNITED STATES OF AMERICA TITLE 1 - GENERAL PROVISIONS ... TITLE 54 - NATIONAL PARK SERVICE\"", "notes": "This is the structural enactment; the existing repository IS its implementation. No new section text to insert."},
+        {"ref": "SECTION 3", "text_summary": "Effective date: immediately upon passage and Presidential signature.", "classes": ["effective-date"], "treatment": "effective-date-note", "target": "/us/usc/t1/s1", "exact_change": "n/a", "evidence": "\"This Act shall take effect immediately after the passage of the Congress and with the signature of the President\"", "notes": "Effective-date note."}
+      ],
+      "current_implementation": {"assessment": "improperly-inserted-into-permanent-text", "dump_present": true, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t1/s1", "detail": "Note rp-pl001001-codification carries a full-text quotedContent dump and a Trello link. The declared codification prose is acceptable in gist (foundational note) but the dump and Trello link must be removed. No false source-limitation boilerplate here."},
+      "recommended_actions": [
+        "Retain a concise foundational statutory note at /us/usc/t1/s1 identifying PL 1-1 as the enactment of the Code's title structure.",
+        "Remove the full-text quotedContent dump and the Trello 'Archive record' link from rp-pl001001-codification.",
+        "Add a cross-reference noting PL 3-24 supersedes conflicting provisions."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-001-002",
+      "public_law": "1-2",
+      "title": "Public Law 1-2 | United States Bar Act",
+      "status": "current",
+      "status_basis": "No self-repeal, sunset, or later law in this batch repeals it. Manifest lists it under 'Repealed Laws' but the source body contains no repealing language and no later batch law targets it. Operative grant of authority to the Attorney General over the bar exam remains on its face.",
+      "provisions": [
+        {"ref": "SEC 1", "text_summary": "Short title: 'United States Bar Act' / S. 2.", "classes": ["short-title"], "treatment": "statutory-note", "target": "/us/usc/t3", "exact_change": "n/a", "evidence": "\"This Act may be cited as the “United States Bar Act” or simply as S. 2.\"", "notes": "Placement at t3/s1 is questionable subject-matter fit (Title 3 = President)."},
+        {"ref": "SEC 2", "text_summary": "Purpose: give the AG full control over the U.S. Bar Exam.", "classes": ["findings-or-sense"], "treatment": "historical-note-only", "target": "/us/usc/t3", "exact_change": "n/a", "evidence": "\"give the Attorney General full control over the United States Bar Exam.\"", "notes": "Purpose clause."},
+        {"ref": "SEC 4 (Definitions)", "text_summary": "Defines the bar examination.", "classes": ["new-permanent-general"], "treatment": "statutory-note", "target": "/us/usc/t3", "exact_change": "n/a", "evidence": "\"The bar examination (“exam”) shall be defined as an examination to assess one’s competency in the field of law\"", "notes": "Definitions."},
+        {"ref": "SEC 3 (Actions)", "text_summary": "Vests the Attorney General with full control over the U.S. Bar Exam and its content/method.", "classes": ["new-permanent-general"], "treatment": "statutory-note", "target": "/us/usc/t28", "exact_change": "New free-standing authority; no numbered Code target cited. Better placed near Title 28 (Judiciary/DOJ) or Title 5, not Title 3.", "evidence": "\"The Attorney General of the United States will have full control over The United States Bar Exam.\"", "notes": "Operative but does not amend a numbered section; a statutory note is appropriate. Note duplicate 'SECTION 3' numbering in source (Actions and Enactment both labeled 3)."},
+        {"ref": "SEC 3 (Enactment)", "text_summary": "Effective on passage by both chambers and Presidential signature.", "classes": ["effective-date"], "treatment": "effective-date-note", "target": "/us/usc/t3", "exact_change": "n/a", "evidence": "\"This bill shall be enacted once passed through both chambers of Congress and signed by the President\"", "notes": "Effective-date."}
+      ],
+      "current_implementation": {"assessment": "incorrectly-implemented", "dump_present": false, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t3/s1", "detail": "Note declares status 'Repealed or superseded' but nothing in the source or batch supports repeal — this is a false status label. Placement at Title 3 (President) is a poor subject-matter fit for AG bar-exam authority; Title 28 or Title 5 is better. No dump; Trello link present and must be removed."},
+      "recommended_actions": [
+        "Correct status: not repealed; treat as current uncodified authority.",
+        "Relocate the statutory note from /us/usc/t3/s1 to a Title 28 (Judiciary/DOJ) or Title 5 anchor.",
+        "Remove the Trello link."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-001-003",
+      "public_law": "1-3",
+      "title": "Public Law 1-3 | Closing Cabinet Doors Act",
+      "status": "current",
+      "status_basis": "Body abolishes seven executive departments and repeals related Code provisions; no self-repeal or sunset. Later law PL 4-29 relies on this Act's closure of the Department of Labor ('Senate Bill 2 §(2)(c)') as still-operative, confirming it remains in force. Effect is permanent structural/organizational.",
+      "provisions": [
+        {"ref": "SECTION 1", "text_summary": "Short title 'CCD Act'.", "classes": ["short-title"], "treatment": "statutory-note", "target": "/us/usc/t5", "exact_change": "n/a", "evidence": "\"This act may be cited as the “CCD Act”.\"", "notes": ""},
+        {"ref": "SECTION 2", "text_summary": "Purpose: close cabinet departments/positions serving no purpose.", "classes": ["findings-or-sense"], "treatment": "historical-note-only", "target": "/us/usc/t5", "exact_change": "n/a", "evidence": "\"Closing those cabinet departments/positions that serve no purpose\"", "notes": ""},
+        {"ref": "SECTION 3", "text_summary": "Defines 'United States Code' by a Google Drive link.", "classes": ["non-code"], "treatment": "exclude-from-code", "target": "n/a", "exact_change": "n/a", "evidence": "\"United States Code shall be defined as; https://drive.google.com/file/...\"", "notes": "Source defect: definition points to an external drive link, non-determinable."},
+        {"ref": "SECTION 4(a)-(h)", "text_summary": "Closes in entirety Depts of Interior, Agriculture, Labor, HHS, HUD, Energy, Education, and Veterans Affairs (VA relocated under DoD).", "classes": ["repeal", "uncodified-admin-direction", "transfer"], "treatment": "statutory-note", "target": "/us/usc/t5", "exact_change": "Abolishes the named executive departments; transfers VA under Department of Defense. Affects numerous organic statutes but source gives only department-level closures, not section-level strikes.", "evidence": "\"Department of Interior shall be closed in its entirety ... Department of Veterans Affairs shall be closed in its entirety ... It shall be relocated under the Department of Defense.\"", "notes": "Structural abolitions; treated as statutory notes/organizational history plus repeal-marking of dependent provisions where determinable."},
+        {"ref": "SECTION 4(i)", "text_summary": "Repeals all U.S. Code provisions involving the departments in 4(a)-(h).", "classes": ["repeal"], "treatment": "statutory-note", "target": "/us/usc", "exact_change": "Blanket repeal of all Code provisions relating to the eight departments — no enumerated sections.", "evidence": "\"All codes within the United States Code that involve all Departments in “Section 4. Provisions, subsection a through h” shall be repealed in its entirety and be considered null and void.\"", "notes": "Blanket clause; source-defect-nondeterminable at section level. Cannot invent specific strikes."},
+        {"ref": "SECTION 5", "text_summary": "Effective immediately upon passage and Presidential signature.", "classes": ["effective-date"], "treatment": "effective-date-note", "target": "/us/usc/t5", "exact_change": "n/a", "evidence": "\"This bill will take effect immediately after passage through both houses of Congress and a signature from the President.\"", "notes": ""}
+      ],
+      "current_implementation": {"assessment": "note-only-but-amendment-required", "dump_present": true, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t5/s101", "detail": "The abolitions in 4(a)-(h) have real Code consequences (Title 7 Agriculture organic provisions, Title 20 Education, Title 42 HHS/HUD, Title 38 VA, Title 43 Interior) that a mere note at t5/s101 does not effect. Full-text dump and Trello link present. Note prose partially wrong: declares status 'Current' but omits the repeal-marking obligations."},
+      "recommended_actions": [
+        "Where a named department maps to a determinable organic Code chapter, add repeal-marking/executive-reorganization statutory notes at those anchors (e.g., VA transfer note in Title 38; Labor closure note in Title 29).",
+        "Keep a master statutory note at /us/usc/t5 recording the department abolitions and VA-to-DoD transfer.",
+        "Treat SEC 4(i) blanket repeal as statutory-note (source-defect-nondeterminable) — do not invent section strikes.",
+        "Remove the full-text dump and Trello link from rp-pl001003-codification."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-001-004",
+      "public_law": "1-4",
+      "title": "Public Law 1-4 | Retracting of Resignations Act",
+      "status": "current",
+      "status_basis": "Body expressly directs codification of its rule into 18 U.S.C. §918. No self-repeal, sunset, or later batch law repeals it. Manifest 'Repealed Laws' label unsupported by source.",
+      "provisions": [
+        {"ref": "SEC 1(a)", "text_summary": "Short title 'Retracting Resignations.'", "classes": ["short-title"], "treatment": "statutory-note", "target": "/us/usc/t18/s918", "exact_change": "n/a", "evidence": "\"This Act may be cited at the “Retracting Resignations.”\"", "notes": "Typo 'cited at' in source."},
+        {"ref": "SEC 1(b)", "text_summary": "Conflicting-legislation clause (null and void).", "classes": ["savings"], "treatment": "statutory-note", "target": "/us/usc/t18/s918", "exact_change": "n/a", "evidence": "\"Any part of any act ... that conflicts with this Act shall be considered null and void.\"", "notes": ""},
+        {"ref": "SEC 1(c)", "text_summary": "Severability.", "classes": ["severability"], "treatment": "statutory-note", "target": "/us/usc/t18/s918", "exact_change": "n/a", "evidence": "\"This Act shall be severable\"", "notes": ""},
+        {"ref": "SEC 1(d)", "text_summary": "Effective date immediate upon passage and signature.", "classes": ["effective-date"], "treatment": "effective-date-note", "target": "/us/usc/t18/s918", "exact_change": "n/a", "evidence": "\"This Act shall go into effect immediately upon passage\"", "notes": ""},
+        {"ref": "SEC 2(a)", "text_summary": "Retracting resignations effective immediately is unlawful.", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t18/s918", "exact_change": "Codify as operative text of new 18 U.S.C. §918: retraction of an immediately-effective resignation is unlawful.", "evidence": "\"Retracting resignations when the effective date is immediate shall be unlawful.\"", "notes": "Section 2(c) directs 'Section 3(a)' be codified at 18 U.S.C. §918, but the act has no Section 3; the intended target is Section 2's rule (drafting error)."},
+        {"ref": "SEC 2(b)", "text_summary": "Retracting resignations with a future effective date is lawful.", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t18/s918", "exact_change": "Codify companion rule at §918: future-dated resignations may lawfully be retracted before they take effect.", "evidence": "\"The retracting of resignations that ... will take effect at a time beyond immediately shall be lawful.\"", "notes": ""},
+        {"ref": "SEC 2(c)", "text_summary": "Directs codification under Chapter 43 of Title 18, Section 918.", "classes": ["uncodified-admin-direction"], "treatment": "new-section", "target": "/us/usc/t18/s918", "exact_change": "Place the operative rule as new §918 in Title 18, Chapter 43.", "evidence": "\"Section 3(a) of this Act shall be codified under Chapter 43 of Title 18 of the United States Code under Section 918.\"", "notes": "Codification instruction; note the mislabeled 'Section 3(a)'."}
+      ],
+      "current_implementation": {"assessment": "note-only-but-amendment-required", "dump_present": true, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t18/s1", "detail": "Law expressly directs a new numbered section (18 U.S.C. §918) but the draft only inserted a note at t18/s1. A real new-section text is required at §918. Full-text dump and Trello link present. Status label 'Repealed' is unsupported."},
+      "recommended_actions": [
+        "Create new 18 U.S.C. §918 with the operative rules from SEC 2(a)-(b), with a source-credit to PL 1-4.",
+        "Correct the status from 'Repealed' to current.",
+        "Remove the full-text dump and Trello link from rp-pl001004-codification."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-005",
+      "public_law": "2-5",
+      "title": "Public Law 2-5 | Judicial Efficiency Act",
+      "status": "current",
+      "status_basis": "Sets maximum sentence caps across Title 18. No self-repeal or sunset; no later batch law repeals it (PL 3-25 CRACK Act sets specific term-of-days penalties but does not expressly repeal this cap regime). Remains operative on its face. 'Repealed Laws' label unsupported by source.",
+      "provisions": [
+        {"ref": "SEC I(a)-(d)", "text_summary": "Short title 'Judicial Efficiency Act', effective date, conflicting-legislation, severability.", "classes": ["short-title", "effective-date", "savings", "severability"], "treatment": "statutory-note", "target": "/us/usc/t18", "exact_change": "n/a", "evidence": "\"This piece of legislation shall be referred to as the “Judicial Efficiency Act”.\"", "notes": "General provisions."},
+        {"ref": "SEC II(a)(1)-(14)", "text_summary": "Readjusts maximum imprisonment terms for numerous Title 18 offenses to a range of days (e.g., §1111 murder max 7 days; §1113 max 5 days; §1114 max 9 days; §1116 max 10 days; §1117 max 4 days; §1118 max 8 days; §1119 max 10 days; §1120 max 8 days; Ch.43 §§911,913-917 max 6 days; §912 max 5 days; §2113 max 5 days; enumerated chapters max 30 days; all other Title 18 chapters max 7 days).", "classes": ["direct-amendment", "substitution"], "treatment": "amend-existing-text", "target": "/us/usc/t18/s1111", "exact_change": "Amend the penalty clause of each cited section to cap imprisonment at the stated number of days (§1111 → not to exceed 7 days; §1113 → 5; §1114 → 9; §1116 → 10; §1117 → 4; §1118 → 8; §1119 → 10; §1120 → 8; §912 → 5; §2113 → 5; Ch.43 §§911/913/914/915/916/917 → 6; Chapters 20,29,37,47,113B,118,111A,115 → 30; all other Title 18 chapters → 7).", "evidence": "\"The maximum imprisonment time for U.S. Code § 1111 Murder shall not exceed seven days.\"", "notes": "Multiple express amendments to numbered Title 18 sections — must be actual textual amendments, not just a note. Note source skips item (4)."},
+        {"ref": "SEC III(a)-(b)", "text_summary": "Accumulated sentences capped at 30 days; judges may not exceed the Act's maximums.", "classes": ["new-permanent-general"], "treatment": "amend-existing-text", "target": "/us/usc/t18", "exact_change": "Add an aggregate-sentence cap (30 days) provision applicable to Title 18 sentencing.", "evidence": "\"No Judge may issue a Judgement that constitute a sentence longer than thirty days\"", "notes": "General sentencing rule; best as an operative sentencing provision/note in Title 18."}
+      ],
+      "current_implementation": {"assessment": "note-only-but-amendment-required", "dump_present": true, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t18/s1", "detail": "This law makes many express amendments to numbered Title 18 sections (penalty clauses), which require actual textual amendments. The draft only added a note at t18/s1. Full-text dump and Trello link present. 'Repealed' status label unsupported."},
+      "recommended_actions": [
+        "Amend the penalty clauses of each enumerated Title 18 section (§1111, §1113, §1114, §1116, §1117, §1118, §1119, §1120, §912, §2113, Ch.43 §§911/913-917) to the day-caps stated.",
+        "Add amendment notes/source credits citing PL 2-5.",
+        "Correct status from 'Repealed' to current; remove full-text dump and Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-006",
+      "public_law": "2-6",
+      "title": "Public Law 2-6 | Shelby-Kabob Act of 2021",
+      "status": "current",
+      "status_basis": "Creates two new Title 18 offenses and directs their codification. No self-repeal or sunset; no later batch law repeals it. 'Repealed Laws' label unsupported by source.",
+      "provisions": [
+        {"ref": "SEC I(a)-(d)", "text_summary": "Short title, effective date, conflicting-legislation, severability.", "classes": ["short-title", "effective-date", "savings", "severability"], "treatment": "statutory-note", "target": "/us/usc/t18", "exact_change": "n/a", "evidence": "\"referred to as the “Shelby-Kabob Act of 2021”.\"", "notes": ""},
+        {"ref": "SEC II(a)", "text_summary": "Unlawful discharge of a taser without probable cause; fine and/or up to 30 days.", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t18/s120", "exact_change": "Codify as new 18 U.S.C. §120 (Chapter 7): unlawful taser discharge without probable cause, fine under title or up to 30 days, or both.", "evidence": "\"Whoever discharges his or her taser ... without probable cause ... shall be fined under this title or imprisoned for no greater than thirty days\"", "notes": "SEC IV(a) directs codification at Ch.7 Title 18 §120."},
+        {"ref": "SEC III(a)", "text_summary": "Abuse of power by federal agent (fraudulent detention/arrest, extortionate threats, warrantless seizure); fine and/or up to 45 days plus possible dismissal/bar.", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t18/s250", "exact_change": "Codify as new 18 U.S.C. §250 (Chapter 7): abuse of power by federal agent, fine and/or up to 45 days, with discretionary dismissal/bar from federal agencies.", "evidence": "\"shall be fined under this title and/or be imprisoned for no greater than forty-five days\"", "notes": "SEC IV(b) directs codification at Ch.7 Title 18 §250. References Chapter 41 Title 18 for extortion cross-ref."},
+        {"ref": "SEC IV(a)-(b)", "text_summary": "Codification instructions placing SEC II at §120 and SEC III at §250 of Title 18 Chapter 7.", "classes": ["uncodified-admin-direction"], "treatment": "new-section", "target": "/us/usc/t18/s120", "exact_change": "Directs the two new sections' placement.", "evidence": "\"Section II of this Act shall be codified under Chapter 7 of Title 18 ... under Section 120.\"", "notes": ""}
+      ],
+      "current_implementation": {"assessment": "note-only-but-amendment-required", "dump_present": true, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t18/s1", "detail": "Two express new numbered sections (§120, §250) are directed but the draft only added a note at t18/s1. Real new-section text is required. Full-text dump and Trello link present; 'Repealed' status unsupported."},
+      "recommended_actions": [
+        "Create 18 U.S.C. §120 (unlawful taser discharge) and §250 (abuse of power by federal agent) in Chapter 7 with source credits to PL 2-6.",
+        "Correct status from 'Repealed' to current; remove full-text dump and Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-007",
+      "public_law": "2-7",
+      "title": "Public Law 2-7 | Court of Appeals Temporary Suspension Act of 2021",
+      "status": "fully-repealed",
+      "status_basis": "Expressly repealed by later batch law PL 3-24 (Judgeship Reduction Act of 2022) sec. VII: 'The Court of Appeals Temporary Suspension Act of 2021 is hereby superseded and repealed in full.' Also self-describes as temporary. No longer operative.",
+      "provisions": [
+        {"ref": "SEC I(a)-(d)", "text_summary": "Short title, severability (with anti-supersession clause), reasoning, effective date.", "classes": ["short-title", "severability", "findings-or-sense", "effective-date"], "treatment": "historical-note-only", "target": "/us/usc/t28", "exact_change": "n/a", "evidence": "\"cited as the “Court of Appeals Temporary Suspension Act of 2021”.\"", "notes": ""},
+        {"ref": "SEC II(a)-(b)", "text_summary": "Temporarily closes the U.S. Court of Appeals; records moved to the Supreme Court under the Chief Justice.", "classes": ["temporary", "uncodified-admin-direction"], "treatment": "historical-note-only", "target": "/us/usc/t28", "exact_change": "n/a (repealed by PL 3-24; Court of Appeals then permanently closed).", "evidence": "\"The United States Court of Appeals, upon the enactment of this Act, shall be temporarily closed.\"", "notes": "Superseded."},
+        {"ref": "SEC III(a)-(b)", "text_summary": "Chief Justice empowered to lift the suspension on stated conditions; powers abolished once lifted.", "classes": ["temporary", "sunset"], "treatment": "historical-note-only", "target": "/us/usc/t28", "exact_change": "n/a", "evidence": "\"once the Chief Justice lift the suspension ... his powers over the Court of Appeals in this Act are abolished.\"", "notes": "Self-terminating."}
+      ],
+      "current_implementation": {"assessment": "improperly-retained-despite-repeal", "dump_present": true, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t28/s1", "detail": "Correctly not codified as permanent text, but the note does not reflect that PL 3-24 repealed this Act in full. Full-text dump and Trello link present."},
+      "recommended_actions": [
+        "Retain only a concise historical note at a Title 28 anchor recording enactment and repeal-in-full by PL 3-24.",
+        "Add repealed-by cross-reference to PL 3-24.",
+        "Remove the full-text dump and Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-008",
+      "public_law": "2-8",
+      "title": "Public Law 2-8 | National Security Act of 2021 (source text = National Security Council establishment, H.R.6)",
+      "status": "fully-repealed",
+      "status_basis": "The source PDF establishes the National Security Council ('National Security Act of 2021'). PL 3-25 (CRACK Act) sec. 101 expressly provides 'The National Security Act of 2021 shall be repealed in its entirety' and sec. 102 re-establishes the NSC in revised form. Therefore fully repealed and replaced.",
+      "provisions": [
+        {"ref": "SEC I(a)-(d)", "text_summary": "General provisions (short title internally reads 'National Federal Torts Act' — evident drafting/label error; the substantive act is the NSC).", "classes": ["short-title", "effective-date", "savings", "severability"], "treatment": "historical-note-only", "target": "/us/usc/t50", "exact_change": "n/a", "evidence": "\"There shall be a National Security Council (hereinafter the “NSC” ...)\"", "notes": "Internal short-title text mismatches the enacted subject; the operative content is the NSC."},
+        {"ref": "SEC II-VII", "text_summary": "Establishes the NSC as an entity under the EOP; membership (Principals, Deputies, Gang of Eight), responsibilities, Chair powers, national security threat designations, transnational threats.", "classes": ["new-permanent-general"], "treatment": "historical-note-only", "target": "/us/usc/t50", "exact_change": "n/a — entirely repealed by PL 3-25 sec.101 and superseded by PL 3-25 sec.102-105.", "evidence": "\"There shall be a National Security Council ... as an entity under the Executive Office of the President\"", "notes": "All operative NSC provisions superseded by CRACK Act Title I Subtitle A."}
+      ],
+      "current_implementation": {"assessment": "improperly-retained-despite-repeal", "dump_present": true, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t50/s1", "detail": "The note does not record the express full repeal by PL 3-25 sec.101. Full-text dump (12k+ chars) and Trello link present. Should not be permanent Code text."},
+      "recommended_actions": [
+        "Retain only a concise historical note at a Title 50 anchor stating enactment and repeal-in-full by PL 3-25 sec.101, replaced by PL 3-25 sec.102 NSC.",
+        "Remove the large full-text dump and Trello link.",
+        "Flag the internal short-title mislabel ('National Federal Torts Act')."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-009",
+      "public_law": "2-9",
+      "title": "Public Law 2-9 | District of Columbia City Charter",
+      "status": "current",
+      "status_basis": "A local municipal charter for the District of Columbia; amended (not repealed) by PL 2-10 and PL 3-22. No self-repeal or sunset. It is local/District-of-Columbia governing law, not general permanent U.S. Code material.",
+      "provisions": [
+        {"ref": "Preamble / Art. I §§1.01-1.06", "text_summary": "Creates the municipal government, corporate name/boundaries, general powers, citizens' bill of rights, severability, general policy, oath of office.", "classes": ["local-district", "new-permanent-general"], "treatment": "statutory-note", "target": "/us/usc/t40", "exact_change": "n/a — local charter, not general federal Code text.", "evidence": "\"A political subdivision is hereby created within the United States to be known as The City of Washington, District of Columbia.\"", "notes": "Local/District matter."},
+        {"ref": "Art. II §§2.01-2.02", "text_summary": "Legislative branch: City Council composition (Deputy Mayor + five), 4-month terms, meetings, voting.", "classes": ["local-district"], "treatment": "statutory-note", "target": "/us/usc/t40", "exact_change": "n/a", "evidence": "\"Members of the City Council shall have a term of four months.\"", "notes": "Amended by PL 2-10 (term to 45 days)."},
+        {"ref": "Art. III §§3.01-3.02", "text_summary": "Administrative branch: Mayor, 4-month term, qualifications, absence/removal, department heads.", "classes": ["local-district"], "treatment": "statutory-note", "target": "/us/usc/t40", "exact_change": "n/a", "evidence": "\"The Mayor of the District of Columbia shall be elected by the people and shall serve a term of four months.\"", "notes": "Amended by PL 2-10 (mayoral term to 90 days)."},
+        {"ref": "Art. IV-V §§4.01-5.04", "text_summary": "Public safety (MPD, Fire Dept) and District Attorney's Office functions.", "classes": ["local-district"], "treatment": "statutory-note", "target": "/us/usc/t40", "exact_change": "n/a", "evidence": "\"The District of Columbia shall have a Police Department (hereinafter “MPD” ...)\"", "notes": ""}
+      ],
+      "current_implementation": {"assessment": "correct-in-baseline", "dump_present": false, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t40/s101/4", "detail": "Correctly treated as a local/District statutory note (not permanent positive-law text). No dump. Trello link present and should be removed. Status label 'Repealed' is inaccurate — the charter was amended, not repealed."},
+      "recommended_actions": [
+        "Keep as a concise local/District statutory note at Title 40; correct status from 'Repealed' to current (amended).",
+        "Add cross-references to amending laws PL 2-10 and PL 3-22.",
+        "Remove the Trello link."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-002-010",
+      "public_law": "2-10",
+      "title": "Public Law 2-10 | Amendment to the District of Columbia City Charter",
+      "status": "current",
+      "status_basis": "Amends PL 2-9 (the DC Charter). No self-repeal or sunset; not repealed by any later batch law. Local/District amendment.",
+      "provisions": [
+        {"ref": "SEC I(a)-(d)", "text_summary": "Short title, effective date, conflicting-legislation, severability.", "classes": ["short-title", "effective-date", "savings", "severability"], "treatment": "statutory-note", "target": "/us/usc/t40", "exact_change": "n/a", "evidence": "\"referred to as the “Amendment to the District of Columbia City Charter”.\"", "notes": ""},
+        {"ref": "SEC II(a)", "text_summary": "Mayoral term set to 90 days.", "classes": ["direct-amendment", "substitution", "local-district"], "treatment": "statutory-note", "target": "/us/usc/t40", "exact_change": "Amend DC Charter Art. III §3.02(A): mayoral term 'four months' → 'ninety (90) Days'.", "evidence": "\"The Mayoral Term shall last a total of ninety (90) Days.\"", "notes": "Amends charter note text, not federal positive law."},
+        {"ref": "SEC II(b)", "text_summary": "City Council term set to 45 days.", "classes": ["direct-amendment", "substitution", "local-district"], "treatment": "statutory-note", "target": "/us/usc/t40", "exact_change": "Amend DC Charter Art. II §2.01(A)(a)(i): council term 'four months' → 'forty-five (45) Days'.", "evidence": "\"The City Council Term shall last a total of forty-five (45) Days.\"", "notes": ""},
+        {"ref": "SEC II(c)-(d)", "text_summary": "States Art. III §3.02(a) and Art. II §2.01(A)(a)(i) are partially repealed and amended.", "classes": ["redesignation", "repeal", "local-district"], "treatment": "statutory-note", "target": "/us/usc/t40", "exact_change": "Records the partial-repeal-and-amend of the two charter provisions per (a)-(b).", "evidence": "\"Article III (§ 3.02)(a) of the Charter shall be partially-repealed and amended.\"", "notes": "Amendment to a local charter note."}
+      ],
+      "current_implementation": {"assessment": "correct-in-baseline", "dump_present": true, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t40/s101/4", "detail": "Correctly a local/District statutory note. Full-text dump and Trello link present. 'Repealed' status inaccurate."},
+      "recommended_actions": [
+        "Fold the term changes into the DC Charter statutory note (PL 2-9) as an amendment; correct status to current.",
+        "Remove the full-text dump and Trello link."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-002-011",
+      "public_law": "2-11",
+      "title": "Public Law 2-11 | Criminal Statute of Limitations Act",
+      "status": "partially-current",
+      "status_basis": "Establishes statutes of limitation for Title 18 crimes. PL 3-25 (CRACK Act) sec. 408(b) provides its terrorism-SOL amendment 'shall supersede any conflicting provision within the Criminal Statute of Limitations Act' — a partial supersession, not full repeal. Remains operative except as to terrorism offenses.",
+      "provisions": [
+        {"ref": "SEC I(a)-(d)", "text_summary": "General provisions. NOTE: source short title erroneously reads 'City Level Infrastructure Act of 2021' (copy-paste error); the enacted act is the Criminal Statute of Limitations Act.", "classes": ["short-title", "effective-date", "savings", "severability"], "treatment": "statutory-note", "target": "/us/usc/t18", "exact_change": "n/a", "evidence": "\"referred to as the “City Level Infrastructure Act of 2021”.\"", "notes": "Flag internal short-title error."},
+        {"ref": "SEC II(a)", "text_summary": "General 75-day SOL for Title 18 crimes, excepting seven enumerated chapters (29, 37, 47, 111A, 113B, 115, 118).", "classes": ["new-permanent-general"], "treatment": "amend-existing-text", "target": "/us/usc/t18/s3282", "exact_change": "Establish a 75-day general limitations period for Title 18 offenses (Title 18 Ch.213 SOL provisions), with enumerated exceptions.", "evidence": "\"Any Crime under Title 18 shall have a statute of limitations of 75 days except for; (1) Title 18, Chapter 29 ...\"", "notes": "General limitations rule; codify in Title 18 Chapter 213 (limitations) as operative text/amendment."},
+        {"ref": "SEC II(b)", "text_summary": "150-day SOL for the seven excepted chapters.", "classes": ["new-permanent-general"], "treatment": "amend-existing-text", "target": "/us/usc/t18/s3282", "exact_change": "150-day limitations period for offenses under the enumerated chapters.", "evidence": "\"shall have a Statute of Limitations of 150 Days.\"", "notes": ""},
+        {"ref": "SEC II(c)", "text_summary": "SOL runs from time of offense; charges must be filed before expiration.", "classes": ["new-permanent-general"], "treatment": "amend-existing-text", "target": "/us/usc/t18/s3282", "exact_change": "Accrual rule: limitations period commences at the time the offense takes place.", "evidence": "\"The Statute of Limitations for an offense shall commence at the time the offense takes place.\"", "notes": "Subject to PL 3-25 sec.408 (no SOL for terrorism)."}
+      ],
+      "current_implementation": {"assessment": "note-only-but-amendment-required", "dump_present": true, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t18/s1", "detail": "General limitations rules belong as operative text in Title 18's limitations chapter, not a bare note at t18/s1. Full-text dump and Trello link present. Status 'Repealed' overstates — only partially superseded by PL 3-25."},
+      "recommended_actions": [
+        "Codify the 75/150-day limitations regime in Title 18's limitations chapter (Ch.213) as operative text/amendment with exceptions list.",
+        "Add supersession cross-reference to PL 3-25 sec.408 (terrorism no-SOL).",
+        "Correct status to partially-current; flag internal short-title error; remove full-text dump and Trello link."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-002-012",
+      "public_law": "2-12",
+      "title": "Public Law 2-12 | Fee Prohibition Act",
+      "status": "fully-repealed",
+      "status_basis": "This act (H.R.4) prohibits court fees. Later batch law PL 4-30 (Fugitive Justice Reform Act) sec. 7 expressly repeals 'H. R. 4 in its entirety, and to all its effects, including any amendments ratified to such.' PL 2-12 is H.R.4; therefore fully repealed.",
+      "provisions": [
+        {"ref": "SEC I(a)-(d)", "text_summary": "General provisions. Source short title erroneously reads 'City Level Infrastructure Act of 2021' (copy-paste error); the enacted act prohibits court fees.", "classes": ["short-title", "effective-date", "savings", "severability"], "treatment": "historical-note-only", "target": "/us/usc/t28", "exact_change": "n/a", "evidence": "\"referred to as the “City Level Infrastructure Act of 2021”.\"", "notes": "Flag internal short-title error. Placement at Title 50 is a poor fit; Title 28 (courts) is proper subject."},
+        {"ref": "SEC II(a)", "text_summary": "No U.S. court (including the Supreme Court) may impose or collect fees except as criminal punishment.", "classes": ["new-permanent-general"], "treatment": "historical-note-only", "target": "/us/usc/t28", "exact_change": "n/a — repealed in full by PL 4-30 sec.7.", "evidence": "\"No Court in the United States, including the Supreme Court, shall impose, collect, or otherwise require fees ... unless imposed as a punishment for a criminal offense.\"", "notes": "Operative on its face but subsequently repealed."}
+      ],
+      "current_implementation": {"assessment": "improperly-retained-despite-repeal", "dump_present": true, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t50/s1", "detail": "Note does not record repeal by PL 4-30 sec.7. Wrong placement (Title 50 War/Defense) for a court-fee prohibition — Title 28 is correct. Full-text dump and Trello link present."},
+      "recommended_actions": [
+        "Retain only a historical note (Title 28 anchor) recording enactment and repeal-in-full by PL 4-30 sec.7.",
+        "Flag internal short-title mislabel; correct placement from Title 50 to Title 28.",
+        "Remove the full-text dump and Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-013",
+      "public_law": "2-13",
+      "title": "Public Law 2-13 | The Employees Termination Notification Act of 2021",
+      "status": "current",
+      "status_basis": "Requires notice of reason for termination within 48 hours. No self-repeal or sunset in the body (manifest flagged 'sunset' keyword, but the source contains no sunset clause — only an anti-supersession severability clause). No later batch law repeals it. 'Repealed Laws' label unsupported.",
+      "provisions": [
+        {"ref": "SEC 1(a)", "text_summary": "Short title.", "classes": ["short-title"], "treatment": "statutory-note", "target": "/us/usc/t5", "exact_change": "n/a", "evidence": "\"referred to as “The Employees Termination Notification Act of 2021”.\"", "notes": ""},
+        {"ref": "SEC 2(a)", "text_summary": "Severability with anti-supersession clause.", "classes": ["severability"], "treatment": "statutory-note", "target": "/us/usc/t5", "exact_change": "n/a", "evidence": "\"This Act shall not be superseded by any newer law unless that law specifically declares its intent to supersede\"", "notes": "No sunset present."},
+        {"ref": "SEC 3(a)", "text_summary": "Effective on passage and signature.", "classes": ["effective-date"], "treatment": "effective-date-note", "target": "/us/usc/t5", "exact_change": "n/a", "evidence": "\"This bill shall take effect immediately upon passage\"", "notes": ""},
+        {"ref": "SEC 4(a)-(b)", "text_summary": "High-rank employees of any federal agency and private business must notify terminated employees of the reason within 48 hours.", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t29", "exact_change": "Codify a termination-notice requirement (reason given within 48 hours) applicable to federal agencies and private employers.", "evidence": "\"has forty-eight hours (48 hours) to present the employee with a reason for termination.\"", "notes": "Substantively a labor rule; Title 29 (Labor) is a better anchor than Title 5. Applies to both public and private employers."}
+      ],
+      "current_implementation": {"assessment": "note-only-but-amendment-required", "dump_present": true, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t5/s101", "detail": "Operative private-and-public employer duty; better as a codified section in Title 29 (Labor) or dual-anchored. Draft added only a note at t5/s101. Full-text dump and Trello link present; 'Repealed' status unsupported; no sunset exists despite manifest keyword."},
+      "recommended_actions": [
+        "Codify the 48-hour termination-notice duty (new section in Title 29 Labor, cross-referenced in Title 5 for federal employees).",
+        "Correct status to current; remove full-text dump and Trello link."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-002-014",
+      "public_law": "2-14",
+      "title": "Public Law 2-14 | National Federal Torts Act (source text = H.R.5 National Federal Torts Act)",
+      "status": "current",
+      "status_basis": "Creates a federal civil-tort regime with District Court jurisdiction and enumerated torts/damages. No self-repeal or sunset; no later batch law repeals it. 'Repealed Laws' label unsupported. (Note: PL 2-08's PDF mislabels itself 'National Federal Torts Act', but the true Torts Act is here in PL 2-14.)",
+      "provisions": [
+        {"ref": "SEC I (Gen. Provisions)", "text_summary": "Short title, effective date, conflicting-legislation, severability.", "classes": ["short-title", "effective-date", "savings", "severability"], "treatment": "statutory-note", "target": "/us/usc/t28", "exact_change": "n/a", "evidence": "\"referred to as the “National Federal Torts Act”.\"", "notes": ""},
+        {"ref": "SEC I (Jurisdiction)", "text_summary": "U.S. citizens may bring civil tort suits in U.S. District Court; courts award remedies; jurisdiction limited to recognized U.S. territory; common-law torts admissible.", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t28", "exact_change": "Codify federal-tort jurisdiction and cause-of-action provisions (Title 28 Judiciary, or a new tort chapter).", "evidence": "\"Any person who is a Citizen of the United States of America shall have the ability to launch a civil lawsuit in the United States District Court for any Civil Tort recognized in this act.\"", "notes": "Duplicate 'SECTION II' labels in source (Individual Civil Torts and Civil Torts Against Government)."},
+        {"ref": "SEC II(a)-(o) (Individual Torts)", "text_summary": "Defines and sets damage caps for trespass, battery, assault, false imprisonment, negligence, negligence per se, breach of contract, fraud, wrongful death, tortious interference, civil conspiracy, abuse of process, trover, harassment, defamation.", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t28", "exact_change": "Codify each enumerated tort with its damage cap (e.g., trespass ≤$1,000; battery ≤$2,500; false imprisonment ≤$3,500; abuse of process ≤$10,000).", "evidence": "\"TRESPASSING - Any individual who unlawfully enters the land of another ... liable for punitive damages up to no more than $1,000.\"", "notes": "Substantial permanent general law; new chapter warranted."},
+        {"ref": "SEC II(p)-(r) (Torts Against Gov't)", "text_summary": "Government immunity limits, DOJ defense, settlements, false arrest, systematic rights-violation injunctive relief.", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t28", "exact_change": "Codify governmental-tort immunity/defense rules and false-arrest/rights-violation remedies.", "evidence": "\"The Government shall be immune from all offenses other than those listed in this section.\"", "notes": ""}
+      ],
+      "current_implementation": {"assessment": "note-only-but-amendment-required", "dump_present": true, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t28/s1", "detail": "A substantial permanent general-law tort code that warrants a new Code chapter/sections, not a single note at t28/s1. Full-text dump (8.8k chars) and Trello link present; 'Repealed' status unsupported."},
+      "recommended_actions": [
+        "Codify the tort regime as a new chapter in Title 28 (or an appropriate civil-remedies title) with each enumerated tort as operative text.",
+        "Correct status to current; remove full-text dump and Trello link.",
+        "Note the title-vs-content mismatch relative to PL 2-08."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-003-015",
+      "public_law": "3-15",
+      "title": "Public Law 3-15 | Admission to the United Nations Act",
+      "status": "current",
+      "status_basis": "Establishes a procedure for consenting to admission into a United Nations body. No self-repeal or sunset; no later batch law repeals it. 'Repealed Laws' label unsupported.",
+      "provisions": [
+        {"ref": "SEC I(a)-(d)", "text_summary": "Short title 'Admission to United Nations Act', effective date, conflicting-legislation, severability.", "classes": ["short-title", "effective-date", "savings", "severability"], "treatment": "statutory-note", "target": "/us/usc/t22", "exact_change": "n/a", "evidence": "\"referred to as the “Admission to United Nations Act”.\"", "notes": ""},
+        {"ref": "SEC II(a)", "text_summary": "On Presidential notification, the Speaker and President Pro Tempore send a letter consenting to or denying admission into the selected United Nations.", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t22/s2651", "exact_change": "Codify the admission-consent procedure as operative foreign-relations text at a Title 22 anchor.", "evidence": "\"the Speaker of the House ... and the President Pro Tempore ... shall send a letter back to the President ... consenting to or denying the admission into the selected United Nations.\"", "notes": "Foreign relations procedure; Title 22 anchor is appropriate."}
+      ],
+      "current_implementation": {"assessment": "note-only-but-amendment-required", "dump_present": true, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t22/s2651", "detail": "Operative procedure could be codified as a Title 22 section; draft added only a note with full-text dump and Trello link. 'Repealed' status unsupported."},
+      "recommended_actions": [
+        "Codify the admission-consent procedure as a Title 22 section (or retain a concise operative statutory note).",
+        "Correct status to current; remove full-text dump and Trello link."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-003-016",
+      "public_law": "3-16",
+      "title": "Public Law 3-16 | The Capitol Police Establishment",
+      "status": "partially-current",
+      "status_basis": "Establishes the U.S. Capitol Police, Board, protective authority, jurisdiction, and offenses. Amended by later batch law PL 3-18 (Amendment to S.12), which disbands and rewrites Section V (deployment outside jurisdiction). No full repeal or sunset; remains operative as amended.",
+      "provisions": [
+        {"ref": "SEC I(a)-(d)", "text_summary": "Short title 'The CPE Act of 2021', severability (anti-supersession), reasoning, effective date.", "classes": ["short-title", "severability", "findings-or-sense", "effective-date"], "treatment": "statutory-note", "target": "/us/usc/t2", "exact_change": "n/a", "evidence": "\"cited as the “The CPE Act of 2021”.\"", "notes": "Capitol Police are Title 2 (Congress); Title 18 placement is a subject-matter mismatch."},
+        {"ref": "SEC II(a)-(b)", "text_summary": "Capitol Police Board membership and authorities (appoint/remove Chief, regulate Capitol security).", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t2", "exact_change": "Codify the Capitol Police Board composition and authorities.", "evidence": "\"The following shall be members of the Capitol Police Board;\"", "notes": ""},
+        {"ref": "SEC III(a)-(c)", "text_summary": "Protection of Members/officers of Congress and families; arrest authority; obstruction penalty ($300 / ≤1 year).", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t2", "exact_change": "Codify protective authority and the obstruction offense (fine ≤$300 or ≤1 year).", "evidence": "\"shall be fined not more than $300 or imprisoned not more than one year, or both.\"", "notes": "Contains a criminal penalty; may also cross-reference Title 18."},
+        {"ref": "SEC IV(a)-(e)", "text_summary": "Capitol complex/buildings jurisdiction and policing authority.", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t2", "exact_change": "Codify Capitol Buildings and Grounds jurisdiction.", "evidence": "\"The Capitol Police shall police the United States Capitol Buildings and Grounds\"", "notes": ""},
+        {"ref": "SEC V(a)-(b)", "text_summary": "Deployment outside jurisdiction, with Board notice/approval and exceptions.", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t2", "exact_change": "Codify deployment-outside-jurisdiction rules. NOTE: disbanded and rewritten by PL 3-18.", "evidence": "\"The Chief of the Capitol Police may not deploy any officer outside of the areas established by law ...\"", "notes": "Superseded by PL 3-18's replacement Section V."}
+      ],
+      "current_implementation": {"assessment": "note-only-but-amendment-required", "dump_present": true, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t18/s1", "detail": "Substantial permanent law establishing the Capitol Police; belongs codified (Title 2, Congress, is the natural home), not a note at t18/s1. Draft has full-text dump and Trello link. Must reflect PL 3-18's amendment to Section V."},
+      "recommended_actions": [
+        "Codify the Capitol Police establishment as operative sections (Title 2), with the obstruction offense cross-referenced in Title 18.",
+        "Integrate PL 3-18's replacement of Section V (deployment outside jurisdiction).",
+        "Correct placement from Title 18 to Title 2; correct status to partially-current; remove full-text dump and Trello link."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-003-017",
+      "public_law": "3-17",
+      "title": "Public Law 3-17 | The Diplomatic Protections Act",
+      "status": "current",
+      "status_basis": "Provides diplomatic protections/immunity for foreign diplomats. No self-repeal or sunset; no later batch law repeals it. 'Repealed Laws' label unsupported.",
+      "provisions": [
+        {"ref": "SEC I(a)-(d)", "text_summary": "Short title 'Diplomatic Protections Act', effective date, conflicting-legislation, severability.", "classes": ["short-title", "effective-date", "savings", "severability"], "treatment": "statutory-note", "target": "/us/usc/t22", "exact_change": "n/a", "evidence": "\"referred to as the ‘’Diplomatic Protections Act’’\"", "notes": ""},
+        {"ref": "SEC II(a)-(e)", "text_summary": "Defines 'Foreign Diplomat'; State Dept must protect visiting diplomats; expulsion/deportation procedures; diplomatic immunity on authorization; 24-hour departure timetable.", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t22/s2651", "exact_change": "Codify diplomatic-protection and immunity provisions as operative Title 22 (Foreign Relations) text.", "evidence": "\"The State Department will be obligated to provide adequate protection to visiting Foreign Diplomats on American Soil.\"", "notes": "Foreign relations subject; Title 22 anchor appropriate."}
+      ],
+      "current_implementation": {"assessment": "note-only-but-amendment-required", "dump_present": true, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t22/s2651", "detail": "Operative diplomatic-protection rules could be codified as Title 22 text; draft added only a note with full-text dump and Trello link. 'Repealed' status unsupported."},
+      "recommended_actions": [
+        "Codify the diplomatic-protection/immunity provisions as Title 22 operative text (or retain a concise operative statutory note).",
+        "Correct status to current; remove full-text dump and Trello link."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-003-018",
+      "public_law": "3-18",
+      "title": "Public Law 3-18 | Amendment to S.12",
+      "status": "current",
+      "status_basis": "Amends PL 3-16 (Capitol Police Establishment, S.12) by disbanding and rewriting its Section V. No self-repeal or sunset; not repealed by any later batch law.",
+      "provisions": [
+        {"ref": "SEC I(a)-(c)", "text_summary": "Short title 'Amendment S.12', severability (anti-supersession), reasoning (amendment to CPE S.12).", "classes": ["short-title", "severability", "findings-or-sense"], "treatment": "statutory-note", "target": "/us/usc/t2", "exact_change": "n/a", "evidence": "\"This is an amendment to the Capitol Police Establishment S.12\"", "notes": "Placement at Title 50 is wrong; subject is Capitol Police (Title 2/Title 18 cross)."},
+        {"ref": "SEC II(a)", "text_summary": "Section V of S.12 disbanded in its entirety.", "classes": ["repeal", "direct-amendment"], "treatment": "amend-existing-text", "target": "/us/usc/t2", "exact_change": "Strike former Section V (deployment outside jurisdiction) of the Capitol Police Establishment.", "evidence": "\"Section V and its entirely shall be disbanded\"", "notes": ""},
+        {"ref": "SEC II(b)(i)(1)-(4)", "text_summary": "New Section V 'Capitol Police Outside Prescribed Jurisdiction': authority to enforce all federal and DC municipal laws; respond to imminent threats; gather intelligence; provide protective services to enumerated congressional leaders and approved members.", "classes": ["substitution", "insertion", "new-permanent-general"], "treatment": "amend-existing-text", "target": "/us/usc/t2", "exact_change": "Insert new Section V granting Capitol Police out-of-jurisdiction enforcement of federal/DC law, threat response, intelligence gathering, and protective services to listed leaders.", "evidence": "\"Capitol Police Shall be authorized to enforce all federal and municipal laws of Washington D.C\"", "notes": "Express amendment to the PL 3-16 provisions; must be a real textual change to the Capitol Police provisions, not a stand-alone note."}
+      ],
+      "current_implementation": {"assessment": "note-only-but-amendment-required", "dump_present": false, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t50/s1", "detail": "This is an express amendment to PL 3-16's Section V, but the draft placed only a bare note at t50/s1 (wrong title — War/Defense). No dump; Trello link present."},
+      "recommended_actions": [
+        "Apply the Section V rewrite directly to the Capitol Police provisions (Title 2) as a textual amendment.",
+        "Correct placement from Title 50 to Title 2; add amendment note/source credit to PL 3-18.",
+        "Correct status to current; remove Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-019",
+      "public_law": "3-19",
+      "title": "Public Law 3-19 | The NARA Act",
+      "status": "current",
+      "status_basis": "Directs the President to notify the Archivist of all bills signed. No self-repeal or sunset; no later batch law repeals it. Manifest lists it as current-adjacent ('1st-10th Congress' list).",
+      "provisions": [
+        {"ref": "SEC I(a)-(d)", "text_summary": "Short title 'The NARA Act of 2021', severability (anti-supersession), reasoning, effective date.", "classes": ["short-title", "severability", "findings-or-sense", "effective-date"], "treatment": "statutory-note", "target": "/us/usc/t44", "exact_change": "n/a", "evidence": "\"cited as the “The NARA Act of 2021”.\"", "notes": ""},
+        {"ref": "SEC II(a)", "text_summary": "President must notify the Archivist of the United States of all bills he signs.", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t44/s101", "exact_change": "Codify a duty on the President to notify the Archivist of all signed bills, as operative Title 44 (Public Printing and Documents) text.", "evidence": "\"The President of the United States ... shall be obligated to notify the Archivist of the United States of all Bills he so signs.\"", "notes": "Title 44 anchor appropriate."}
+      ],
+      "current_implementation": {"assessment": "note-only-but-amendment-required", "dump_present": true, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t44/s101", "detail": "Operative notification duty could be codified as Title 44 text; draft added only a note with full-text dump and Trello link. Status correctly 'Current'."},
+      "recommended_actions": [
+        "Codify the Presidential-notification duty as Title 44 operative text (or retain a concise operative statutory note).",
+        "Remove the full-text dump and Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-020",
+      "public_law": "3-20",
+      "title": "Public Law 3-20 | National Immigration Employment Act of 2021",
+      "status": "unresolved",
+      "status_basis": "Source is an image-only/scanned PDF (H.R.26); law.txt is absent and text_extracted=false. Statutory text is unavailable and may not be invented. Cannot lawfully determine status or provisions from the supplied source.",
+      "provisions": [
+        {"ref": "(entire act)", "text_summary": "Text unavailable — scanned image PDF with no extractable text.", "classes": ["non-code"], "treatment": "statutory-note", "target": "/us/usc/t8/s1101", "exact_change": "n/a — source-limited (image-only). No operative language recoverable.", "evidence": "manifest: text_extracted=false, image_only_or_scanned=true, text_length=0", "notes": "Source defect: cannot analyze provisions."}
+      ],
+      "current_implementation": {"assessment": "not-applicable", "dump_present": false, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t8/s1101/i/2", "detail": "Draft note (738 chars) has no dump; Trello link present. Here a source-limitation statement WOULD be accurate (unlike the false boilerplate elsewhere), because the source genuinely lacks extractable text."},
+      "recommended_actions": [
+        "Retain a source-limited historical note at a Title 8 anchor stating the source is a scanned image and text is unavailable pending OCR/re-extraction.",
+        "Do NOT invent statutory text.",
+        "Remove the Trello link; flag for OCR re-extraction of H.R.26.pdf."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-021",
+      "public_law": "3-21",
+      "title": "Public Law 3-21 | Efficient Judicial Function and General Duties Act",
+      "status": "current",
+      "status_basis": "Assigns administrative duties to the Chief Justice with reporting requirements. No self-repeal or sunset; no later batch law repeals it. Manifest lists it as current ('1st-10th Congress' list, declared 'Current').",
+      "provisions": [
+        {"ref": "SEC 1(a)", "text_summary": "Short/long title 'Efficient Judicial Function and General Duties Act'.", "classes": ["short-title"], "treatment": "statutory-note", "target": "/us/usc/t28", "exact_change": "n/a", "evidence": "\"cited as “S. 14”, or by its long title, “Efficient Judicial Function and General Duties Act”\"", "notes": "Placement at Title 50 is wrong; subject is the Judiciary (Title 28)."},
+        {"ref": "SEC 2(a)", "text_summary": "Severability (anti-supersession).", "classes": ["severability"], "treatment": "statutory-note", "target": "/us/usc/t28", "exact_change": "n/a", "evidence": "\"This Resolution shall be severable\"", "notes": ""},
+        {"ref": "SEC 3(a)-(b)", "text_summary": "Chief Justice's general administrative duties over the federal courts and enumerated powers (public-defender recommendations, corrective action, orderly administration of justice).", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t28/s331", "exact_change": "Codify the Chief Justice's administrative duties/powers as operative Title 28 text.", "evidence": "\"The Chief Justice shall see that the business of the several courts of the Federal Government is attended with proper dispatch\"", "notes": "Title 28 (Judiciary) anchor appropriate."},
+        {"ref": "SEC 4(a)-(c)", "text_summary": "Reporting requirements to the Judiciary Committees, President, and Judicial Conference; congressional deferral by concurrent resolution.", "classes": ["new-permanent-general", "uncodified-admin-direction"], "treatment": "new-section", "target": "/us/usc/t28", "exact_change": "Codify the reporting-and-deferral mechanism.", "evidence": "\"he shall submit a report with the Senate and House Committees on the Judiciary, the President, and [when applicable] the Judicial Conference\"", "notes": ""},
+        {"ref": "SEC 5(a)", "text_summary": "Effective on ratification and signature.", "classes": ["effective-date"], "treatment": "effective-date-note", "target": "/us/usc/t28", "exact_change": "n/a", "evidence": "\"This Act shall take effect immediately after its ratification\"", "notes": ""}
+      ],
+      "current_implementation": {"assessment": "note-only-but-amendment-required", "dump_present": true, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t50/s1", "detail": "Operative Chief Justice duties belong in Title 28 (Judiciary), not a note at t50/s1 (War/Defense) — wrong title. Full-text dump and Trello link present. Status correctly 'Current'."},
+      "recommended_actions": [
+        "Codify the Chief Justice duties/reporting as Title 28 operative text.",
+        "Correct placement from Title 50 to Title 28; remove full-text dump and Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-022",
+      "public_law": "3-22",
+      "title": "Public Law 3-22 | District of Columbia Administration Act",
+      "status": "unresolved",
+      "status_basis": "The only source is HTML viewer debris (Google Drive page), not the statute; law.txt contains only 'Copy of District of Columbia City Charter (ammended) - Google Drive' plus account metadata. Substantive statutory text is unavailable and may not be invented.",
+      "provisions": [
+        {"ref": "(entire act)", "text_summary": "Text unavailable — source is an HTML Google Drive viewer page with no statutory content.", "classes": ["non-code", "local-district"], "treatment": "statutory-note", "target": "/us/usc/t40", "exact_change": "n/a — source-limited (HTML debris only). No operative language recoverable.", "evidence": "law.txt: \"Copy of District of Columbia City Charter (ammended) - Google Drive\"", "notes": "Title suggests a DC-charter amendment (local/District), but the actual text was not captured."}
+      ],
+      "current_implementation": {"assessment": "not-applicable", "dump_present": true, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t40/s101/4", "detail": "Draft note (2563 chars) reportedly has a quotedContent dump despite the only recoverable source being HTML debris — any dumped 'text' is suspect/fabricated and must be verified against a real source. Trello link present."},
+      "recommended_actions": [
+        "Retain only a source-limited local/District historical note at Title 40 stating the source is unrecoverable (HTML viewer debris) pending re-extraction.",
+        "Scrutinize/remove any quotedContent dump as unverifiable; do not treat it as authenticated text.",
+        "Remove the Trello link; flag for source re-acquisition of the actual charter-amendment document."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-023",
+      "public_law": "3-23",
+      "title": "Public Law 3-23 | Federal Law Enforcement Training Center Establishment Act",
+      "status": "unresolved",
+      "status_basis": "Source is unrecoverable (source_status='unrecoverable', 'Source deleted or not found'); no source files, no law.txt. Statutory text is unavailable and may not be invented; no lawful conclusion possible from the supplied source.",
+      "provisions": [
+        {"ref": "(entire act)", "text_summary": "Text unavailable — source deleted/not found; nothing to analyze.", "classes": ["non-code"], "treatment": "statutory-note", "target": "/us/usc/t18", "exact_change": "n/a — source unrecoverable.", "evidence": "manifest: source_status='unrecoverable', source_files=[], text_extracted=false", "notes": "By title, would establish a Federal Law Enforcement Training Center, but content is unavailable."}
+      ],
+      "current_implementation": {"assessment": "not-applicable", "dump_present": false, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t18/s1", "detail": "Draft note (766 chars) has no dump; Trello link present. A source-limitation statement is genuinely accurate here."},
+      "recommended_actions": [
+        "Retain a source-limited historical note stating the source is unrecoverable and no text is available.",
+        "Do NOT invent statutory text.",
+        "Remove the Trello link; flag for source re-acquisition."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-024",
+      "public_law": "3-24",
+      "title": "Public Law 3-24 | Judgeship Reduction Act of 2022",
+      "status": "current",
+      "status_basis": "Sets fixed seat counts for the Supreme Court and District Court, permanently closes the Court of Appeals, and expressly repeals PL 2-7 and supersedes conflicting provisions of PL 1-1. No self-repeal or sunset; no later batch law repeals it. Operative structural law.",
+      "provisions": [
+        {"ref": "SEC I(a)-(c)", "text_summary": "Short title 'Judgeship Reduction Act of 2022', severability, effective date (immediate) with edit/copy authorization.", "classes": ["short-title", "severability", "effective-date"], "treatment": "statutory-note", "target": "/us/usc/t28", "exact_change": "n/a", "evidence": "\"referred to as the Judgeship Reduction Act of 2022\"", "notes": ""},
+        {"ref": "SEC II", "text_summary": "Supreme Court set at 1 Chief Justice + 4 Associate Justices (5 seats).", "classes": ["direct-amendment", "substitution"], "treatment": "amend-existing-text", "target": "/us/usc/t28/s1", "exact_change": "Amend 28 U.S.C. §1: Supreme Court composed of a Chief Justice and 4 Associate Justices.", "evidence": "\"The available number of seats on the United States Supreme Court shall be one (1) Chief Justice and four(4) Associate Justices\"", "notes": "Express change to Title 28 court-composition provisions."},
+        {"ref": "SEC III", "text_summary": "Court of Appeals (all circuits) permanently closed.", "classes": ["repeal", "direct-amendment"], "treatment": "amend-existing-text", "target": "/us/usc/t28/s43", "exact_change": "Repeal/close the courts of appeals provisions (Title 28 Ch.3).", "evidence": "\"The United States Court of Appeals (in any and all circuits) shall be permanently closed\"", "notes": "Structural repeal of the courts of appeals."},
+        {"ref": "SEC IV", "text_summary": "District Court for DC set at 1 Chief Judge + 4 Judges; made the only federal District Court.", "classes": ["direct-amendment", "substitution"], "treatment": "amend-existing-text", "target": "/us/usc/t28/s133", "exact_change": "Amend Title 28 district-court provisions: only the D.D.C. exists, with 5 judgeships.", "evidence": "\"The United States District Court for the District of Columbia shall be the only federal District Court.\"", "notes": ""},
+        {"ref": "SEC V", "text_summary": "Three magistrates to serve under the D.D.C.", "classes": ["direct-amendment"], "treatment": "amend-existing-text", "target": "/us/usc/t28/s631", "exact_change": "Set magistrate judges under D.D.C. at 3.", "evidence": "\"The available number of Magistrates ... shall be three (3)\"", "notes": ""},
+        {"ref": "SEC VI", "text_summary": "Applicability: does not remove sitting Justices/Judges/Magistrates.", "classes": ["applicability", "savings"], "treatment": "savings-note", "target": "/us/usc/t28", "exact_change": "n/a", "evidence": "\"This statute shall not be applied in a manner that shall remove ... any person currently a Justice\"", "notes": ""},
+        {"ref": "SEC VII", "text_summary": "Repeals PL 2-7 (Court of Appeals Temporary Suspension Act) in full; supersedes conflicting provisions of PL 1-1 (U.S. Codes Act) and the real-life U.S. Code.", "classes": ["repeal"], "treatment": "repeal-marking", "target": "/us/usc/t28", "exact_change": "Mark PL 2-7 repealed in full; note supersession of conflicting PL 1-1 provisions.", "evidence": "\"The Court of Appeals Temporary Suspension Act of 2021 is hereby superseded and repealed in full.\"", "notes": "Drives repeal-marking for PL 2-7."}
+      ],
+      "current_implementation": {"assessment": "note-only-but-amendment-required", "dump_present": true, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t28/s1", "detail": "Express amendments to Title 28 court-composition and structure require actual textual amendments (§1, Ch.3, §133, §631), not just a note at t28/s1. Full-text dump and Trello link present; 'Repealed' status of this law itself is unsupported (it is the repealing law)."},
+      "recommended_actions": [
+        "Amend 28 U.S.C. §1 (SCOTUS composition), the courts-of-appeals chapter (close), §133 (district judgeships/D.D.C. only), and §631 (3 magistrates).",
+        "Add repeal-marking for PL 2-7 and a supersession note against PL 1-1.",
+        "Correct this law's own status to current; remove full-text dump and Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-025",
+      "public_law": "3-25",
+      "title": "Public Law 3-25 | CRACK Act",
+      "status": "current",
+      "status_basis": "Large omnibus (Countering, Restricting, and other Appropriate Controls for Killers Act of 2022) making numerous express Title 18 amendments, repealing PL 2-8, superseding Title 18 Chapter 96 and part of PL 2-11. No self-repeal or sunset; no later batch law repeals it.",
+      "provisions": [
+        {"ref": "SEC 1-2", "text_summary": "Short title and table of contents; construction/severability.", "classes": ["short-title", "severability"], "treatment": "statutory-note", "target": "/us/usc/t18", "exact_change": "n/a", "evidence": "\"cited as the ‘‘Countering, Restricting, and other Appropriate Controls for Killers (CRACK) Act of 2022’’\"", "notes": ""},
+        {"ref": "SEC 101", "text_summary": "Repeals the National Security Act of 2021 (PL 2-8) in its entirety.", "classes": ["repeal"], "treatment": "repeal-marking", "target": "/us/usc/t50", "exact_change": "Mark PL 2-8 repealed in full.", "evidence": "\"The National Security Act of 2021 shall be repealed in its entirety.\"", "notes": "Drives repeal-marking for PL 2-8."},
+        {"ref": "SEC 102-105", "text_summary": "Re-establishes the National Security Council (functions, membership, presiding officer, congressional briefings, threats, access to intelligence, communications).", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t50", "exact_change": "Codify the revised NSC as operative Title 50 text (replacing repealed PL 2-8).", "evidence": "\"There is a council known as the National Security Council\"", "notes": ""},
+        {"ref": "SEC 150", "text_summary": "Amends 18 U.S.C. §2510 (redesignate (20)-(21) as (22)-(23); insert new (20) 'terrorist activities' and (21) 'criminal investigation') and §3127(1).", "classes": ["direct-amendment", "redesignation", "insertion"], "treatment": "amend-existing-text", "target": "/us/usc/t18/s2510", "exact_change": "Redesignate §2510(20)-(21) as (22)-(23); insert new (20)/(21) definitions; amend §3127(1) by inserting the quoted terms.", "evidence": "\"Section 2510 of title 18 ... is amended— by redesignating paragraphs (20) and (21) as paragraphs (22) and (23)\"", "notes": "Express textual amendments."},
+        {"ref": "SEC 153", "text_summary": "Inserts new 18 U.S.C. §2332j (administrative subpoenas in terrorism investigations) after §2332i.", "classes": ["insertion"], "treatment": "new-section", "target": "/us/usc/t18/s2332j", "exact_change": "Insert new §2332j into Chapter 113B.", "evidence": "\"Chapter 113B of title 18 ... is amended by inserting after section 2332i the following: ‘Sec. 2332j. Administrative subpoenas'\"", "notes": ""},
+        {"ref": "SEC 154", "text_summary": "Amends 18 U.S.C. §1510(e) by striking and replacing; inserts new §2332k before §2333.", "classes": ["direct-amendment", "substitution", "insertion"], "treatment": "amend-existing-text", "target": "/us/usc/t18/s1510", "exact_change": "Replace §1510(e) with the quoted text (penalties in days); insert new §2332k.", "evidence": "\"Section 1510(e) of title 18 ... is amended by striking the existing provision and replacing with:\"", "notes": ""},
+        {"ref": "SEC 201-214, 230-232", "text_summary": "Classified-information regime (Title II): standards, levels, authority, categories, duration, markings, prohibitions, criminal penalty (§209), challenges, derivative classification, declassification, safeguarding, special access programs; nondisclosure provisions; §232 amends CIPA §4 ('may'→'shall').", "classes": ["new-permanent-general", "direct-amendment", "substitution"], "treatment": "new-section", "target": "/us/usc/t50", "exact_change": "Codify the classification regime (Title 50 national-security anchor); §232 amend CIPA §4 (18 U.S.C. App. 3): strike 'may', insert 'shall'.", "evidence": "\"Section 4 of the Classified Information Procedures Act (18 U.S.C. App. 3) is hereby amended by deleting the ‘may’ ... and inserting ‘shall’.\"", "notes": "Mostly executive-order-style national security text; §232 is an express CIPA amendment."},
+        {"ref": "SEC 301-303", "text_summary": "Information Sharing and Cooperation Act (Title III): remedies re surveillance activities; disclosure immunity.", "classes": ["new-permanent-general", "short-title"], "treatment": "new-section", "target": "/us/usc/t18", "exact_change": "Codify surveillance-remedy and voluntary-disclosure-immunity provisions.", "evidence": "\"This Subtitle may be cited as the ‘Information Sharing and Cooperation Act of 2022’\"", "notes": ""},
+        {"ref": "SEC 402", "text_summary": "Inserts new 18 U.S.C. §1041 (false information and hoaxes) after §1040 in Chapter 47.", "classes": ["insertion"], "treatment": "new-section", "target": "/us/usc/t18/s1041", "exact_change": "Insert new §1041 (terrorism hoaxes; fine and ≤5 days).", "evidence": "\"Chapter 47 of title 18 ... is amended by inserting after section 1040 the following: ‘Sec. 1041. False information and hoaxes'\"", "notes": ""},
+        {"ref": "SEC 403", "text_summary": "Amends 18 U.S.C. §2339A(a)/(b), §2331(1)(B)/(5)(B), §2339B(g)(4) (material support / training definitions).", "classes": ["direct-amendment", "substitution", "redesignation", "insertion"], "treatment": "amend-existing-text", "target": "/us/usc/t18/s2339A", "exact_change": "Apply the enumerated strikes/inserts/redesignations to §2339A, §2331, §2339B.", "evidence": "\"Section 2339A(a) of title 18 ... is amended by— designating the first sentence as paragraph (1) ...\"", "notes": ""},
+        {"ref": "SEC 404", "text_summary": "Inserts new Chapter 124 (§2801 unlawful use of encryption) after Chapter 123 in Part I of Title 18.", "classes": ["insertion"], "treatment": "new-section", "target": "/us/usc/t18/s2801", "exact_change": "Add new Chapter 124 / §2801.", "evidence": "\"Part I of title 18 ... is amended by inserting after chapter 123 the following: ‘CHAPTER 124—ENCRYPTED WIRE OR ELECTRONIC COMMUNICATIONS'\"", "notes": ""},
+        {"ref": "SEC 405-406", "text_summary": "Amends 18 U.S.C. §3142 (pretrial detention presumption) and §3583 (post-release supervision of terrorists).", "classes": ["direct-amendment", "substitution", "insertion"], "treatment": "amend-existing-text", "target": "/us/usc/t18/s3142", "exact_change": "Apply the enumerated strike/insert amendments to §3142 and §3583.", "evidence": "\"Section 3142 of title 18 ... is amended—\"", "notes": ""},
+        {"ref": "SEC 408", "text_summary": "Amends 18 U.S.C. §3286(b) (no SOL for terrorism); expressly supersedes conflicting provisions of the Criminal Statute of Limitations Act (PL 2-11).", "classes": ["direct-amendment", "substitution", "repeal"], "treatment": "amend-existing-text", "target": "/us/usc/t18/s3286", "exact_change": "Amend §3286(b) per the strike; note supersession of PL 2-11 for terrorism offenses.", "evidence": "\"This section shall supersede any conflicting provision within the Criminal Statute of Limitations Act.\"", "notes": "Drives partial-supersession of PL 2-11."},
+        {"ref": "SEC 409", "text_summary": "Inserts new 18 U.S.C. §2339E (terrorist offenses resulting in death) into Chapter 113B; amends §3592(c)(1).", "classes": ["insertion", "direct-amendment"], "treatment": "new-section", "target": "/us/usc/t18/s2339E", "exact_change": "Insert §2339E; amend §3592(c)(1).", "evidence": "\"Chapter 113B title 18 ... is amended, by inserting— ‘2339E. Terrorist offenses resulting in death.'\"", "notes": ""},
+        {"ref": "SEC 420", "text_summary": "Amends 18 U.S.C. §2339C(c)(2) and (e) (financing of terrorism definitions).", "classes": ["direct-amendment", "substitution", "redesignation", "insertion"], "treatment": "amend-existing-text", "target": "/us/usc/t18/s2339C", "exact_change": "Apply enumerated strikes/inserts/redesignations to §2339C.", "evidence": "\"Section 2339C(c)(2) of title 18 ... is amended by—\"", "notes": ""},
+        {"ref": "SEC 501-504", "text_summary": "Criminal intelligence definitions, national plan, Coordination Council, protection of criminal intelligence.", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t28", "exact_change": "Codify criminal-intelligence framework (DOJ; Title 28/Title 34 anchor).", "evidence": "\"The Attorney General shall develop a comprehensive national criminal intelligence strategy\"", "notes": ""},
+        {"ref": "SEC 601-609", "text_summary": "RICO-style regime (Title VI): definitions, prohibited activities, criminal penalties, civil remedies, venue, civil investigative demands; expressly supersedes 18 U.S.C. Chapter 96.", "classes": ["new-permanent-general", "substitution", "repeal"], "treatment": "amend-existing-text", "target": "/us/usc/t18/s1961", "exact_change": "Replace/supersede Title 18 Chapter 96 (RICO) with the Act's Title VI provisions.", "evidence": "\"This title may be cited as the ‘Racketeering Influenced and Corrupt Organizations Act of 2022’ and shall supersede 18 U.S. Code Chapter 96.\"", "notes": "Express supersession of a Title 18 chapter."},
+        {"ref": "SEC 701-703", "text_summary": "Archivist compilation duty; Commission on Capital District Security review; effective immediately.", "classes": ["uncodified-admin-direction", "effective-date"], "treatment": "statutory-note", "target": "/us/usc/t18", "exact_change": "n/a", "evidence": "\"The Archivist of the United States shall publish and compile all affected sections of the United States Code as amended.\"", "notes": "Administrative direction + effective date."}
+      ],
+      "current_implementation": {"assessment": "note-only-but-amendment-required", "dump_present": false, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t18/s1", "detail": "The draft added only a short note (851 chars) at t18/s1, but this omnibus makes dozens of express Title 18 textual amendments and new-section insertions (§2510, §1510, new §2332j/§2332k, §1041, §2339A/B/C/E, §2801/Ch.124, §3142, §3583, §3286, §3592, Ch.96 RICO supersession) plus repeal of PL 2-8. All of these require actual textual amendments. No dump; Trello link present."},
+      "recommended_actions": [
+        "Implement each express Title 18 amendment as an actual textual amendment: §2510 (redesignate + insert defs), §3127, §1510(e) strike/replace, insert §2332j and §2332k, §1041, §2339A/2331/2339B, new Chapter 124 §2801, §3142, §3583, §3286(b), §2339E, §3592(c)(1), §2339C; supersede Ch.96 with the Act's RICO Title VI.",
+        "Add repeal-marking for PL 2-8 (sec.101) and partial-supersession note for PL 2-11 (sec.408).",
+        "Codify the revised NSC (sec.102-105) and classification/criminal-intelligence frameworks at Title 50/Title 28 anchors as appropriate.",
+        "Remove the Trello link; add source credits to PL 3-25 throughout."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-026",
+      "public_law": "4-26",
+      "title": "Public Law 4-26 | H.J. Res. 06 (Declaration of War on Tigray)",
+      "status": "current",
+      "status_basis": "A joint resolution declaring a state of war between the United States and the Nation of Tigray. No self-repeal or sunset; no later batch law rescinds it. A declaration of war is a one-time operative act, not permanent codifiable general law.",
+      "provisions": [
+        {"ref": "Preamble", "text_summary": "Recites the January 28, 2022 attack by Tigray as justification.", "classes": ["findings-or-sense"], "treatment": "historical-note-only", "target": "/us/usc/t50", "exact_change": "n/a", "evidence": "\"a dastardly attack on the US capital of Washington DC took place by ... the Nation of Tigray.\"", "notes": ""},
+        {"ref": "Resolving clause", "text_summary": "Declares a state of war exists between the United States and the Nation of Tigray.", "classes": ["non-code", "temporary"], "treatment": "exclude-from-code", "target": "/us/usc/t50", "exact_change": "n/a — declaration of war; not codified as permanent Code text (concise historical note only).", "evidence": "\"a state of war exists between the United States and the Nation of Tigray.\"", "notes": "One-time operative declaration."}
+      ],
+      "current_implementation": {"assessment": "correct-in-baseline", "dump_present": false, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t50/s1", "detail": "Correctly not codified as permanent text; kept as a note at Title 50 (War/Defense) — appropriate subject. No dump. Trello link present. 'Repealed' status label inaccurate; it is a spent/operative war declaration."},
+      "recommended_actions": [
+        "Retain a concise historical statutory note at Title 50 recording the declaration of war (PL 4-26).",
+        "Correct status label from 'Repealed' to current/spent declaration.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-027",
+      "public_law": "4-27",
+      "title": "Public Law 4-27 | Right to Security Act of 2022",
+      "status": "current",
+      "status_basis": "Protects private security firms and individual self-defense (castle doctrine) from prosecution/interference within reason. No self-repeal or sunset; no later batch law repeals it. 'Repealed Laws' label unsupported.",
+      "provisions": [
+        {"ref": "SEC 1(a)-(c)", "text_summary": "Short title 'Right to Security Act of 2022', severability, effective date (immediate) with edit/copy authorization.", "classes": ["short-title", "severability", "effective-date"], "treatment": "statutory-note", "target": "/us/usc/t18", "exact_change": "n/a", "evidence": "\"referred to as “Right to Security Act of 2022”\"", "notes": ""},
+        {"ref": "SEC II (Definitions)", "text_summary": "Defines Individual, Private Security (Commerce-licensed), Federal Protection Services.", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t18", "exact_change": "Codify definitions supporting the security-protection rules.", "evidence": "\"‘Private Security’ shall refer to any organization or firm licensed by the U.S. Department of Commerce\"", "notes": ""},
+        {"ref": "SEC III Subsec.1 §§1-4", "text_summary": "Purpose: protect licensed private security and individuals acting in defense from prosecution/interference; establish private-security/law-enforcement cooperation; establish castle doctrine.", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t18", "exact_change": "Codify protections for private security and individual self-defense (castle doctrine) as operative Title 18 text.", "evidence": "\"Establishing for individuals a right to the “castle doctrine” in order to protect owned property.\"", "notes": ""},
+        {"ref": "SEC III Subsec.2 §§1-4", "text_summary": "Limitations: no entry to federally protected buildings absent reasonable cause; no interference with law enforcement; no replacing federal protection services absent their absence; unreasonable actions prosecutable.", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t18", "exact_change": "Codify the limitations on private-security conduct.", "evidence": "\"Private Security may not interfere with dutiful actions of Law Enforcement.\"", "notes": ""}
+      ],
+      "current_implementation": {"assessment": "note-only-but-amendment-required", "dump_present": true, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t18/s1", "detail": "Operative substantive protections could be codified as Title 18 text; draft added only a note at t18/s1 with full-text dump and Trello link. 'Repealed' status unsupported."},
+      "recommended_actions": [
+        "Codify the private-security/self-defense protections and limitations as operative Title 18 text (or a concise operative statutory note).",
+        "Correct status to current; remove full-text dump and Trello link."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-004-028",
+      "public_law": "4-28",
+      "title": "Public Law 4-28 | House Veterans Affairs Act (Department of Veterans Affairs Act of 2022)",
+      "status": "current",
+      "status_basis": "Establishes the Department of Veterans Affairs and Secretary of Veterans Affairs, with employment/benefit/counseling functions and reporting. No self-repeal or sunset; no later batch law repeals it. 'Repealed Laws' label unsupported. (Note tension: PL 1-3 closed/relocated VA under DoD; this later act re-establishes VA — an implied supersession of PL 1-3 as to VA.)",
+      "provisions": [
+        {"ref": "SEC 1(a)-(c)", "text_summary": "Short title 'Department of Veterans Affairs Act of 2022', severability, effective date.", "classes": ["short-title", "severability", "effective-date"], "treatment": "statutory-note", "target": "/us/usc/t38", "exact_change": "n/a", "evidence": "\"referred to as the Department of Veterans Affairs Act of 2022.\"", "notes": ""},
+        {"ref": "SEC II (Definitions)", "text_summary": "Defines Veteran and honorable discharge.", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t38", "exact_change": "Codify definitions in Title 38.", "evidence": "\"Veteran - An individual who has been honorably discharged from the Armed Forces\"", "notes": ""},
+        {"ref": "SEC III Sub-1 (Short Title)", "text_summary": "Alternate citation as H.R. 4003 / Department of Veterans Affairs Act.", "classes": ["short-title"], "treatment": "statutory-note", "target": "/us/usc/t38", "exact_change": "n/a", "evidence": "\"cited or referred to as House Resolution 4003 or the Department of Veterans Affairs Act.\"", "notes": ""},
+        {"ref": "SEC III Sub-2", "text_summary": "VA designated a community-based org for veteran employment counseling; agencies/employers may fast-track veterans by MOS.", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t38", "exact_change": "Codify equal-employment/fast-track functions of the VA.", "evidence": "\"Designating the Department of Veterans Affairs as a community-based organization\"", "notes": ""},
+        {"ref": "SEC III Sub-3", "text_summary": "VA to coordinate re-enlistment, employ legal aids/attorneys for veterans, and provide mental-health/career counseling.", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t38", "exact_change": "Codify VA social/legal benefit functions.", "evidence": "\"to employ legal aids and attorneys to provide complimentary legal services to veterans\"", "notes": ""},
+        {"ref": "SEC III Sub-4", "text_summary": "Secretary of Veterans Affairs nominated by the President with Senate confirmation, cabinet-level.", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t38", "exact_change": "Establish the Secretary of Veterans Affairs (Title 38 / Title 5 cabinet listing).", "evidence": "\"to serve on the President’s cabinet as the Secretary of Veterans Affairs.\"", "notes": "Implicitly supersedes PL 1-3's VA closure."},
+        {"ref": "SEC III Sub-5", "text_summary": "Monthly outcome reporting to Congress by the 15th.", "classes": ["new-permanent-general", "uncodified-admin-direction"], "treatment": "new-section", "target": "/us/usc/t38", "exact_change": "Codify reporting requirement.", "evidence": "\"shall submit the data to Congress on the 15th of every month\"", "notes": ""}
+      ],
+      "current_implementation": {"assessment": "note-only-but-amendment-required", "dump_present": true, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t38/s101/38", "detail": "Establishment of the VA/Secretary and its functions is permanent general law suited to Title 38, not merely a note. Full-text dump and Trello link present. 'Repealed' status unsupported. Should note supersession of PL 1-3 (VA closure)."},
+      "recommended_actions": [
+        "Codify the VA establishment, Secretary, and functions as operative Title 38 text (cabinet listing cross-referenced in Title 5).",
+        "Add a note reconciling with PL 1-3 (this act re-establishes the VA that PL 1-3 closed/relocated).",
+        "Correct status to current; remove full-text dump and Trello link."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-004-029",
+      "public_law": "4-29",
+      "title": "Public Law 4-29 | Department of Commerce and Labor Act of 2022",
+      "status": "current",
+      "status_basis": "Merges the Department of Commerce and (formerly closed) Department of Labor into a new Department of Commerce and Labor, transferring named agencies/assets and creating the Secretary of Commerce and Labor. Relies on PL 1-3's closure of Labor as operative. No self-repeal or sunset; no later batch law repeals it. 'Repealed Laws' label unsupported.",
+      "provisions": [
+        {"ref": "SEC 1(a)-(c)", "text_summary": "Short title 'Department of Commerce and Labor Act of 2022', severability, effective date.", "classes": ["short-title", "severability", "effective-date"], "treatment": "statutory-note", "target": "/us/usc/t15", "exact_change": "n/a", "evidence": "\"referred to as Department of Commerce and Labor Act of 2022\"", "notes": ""},
+        {"ref": "SEC II (Definitions)", "text_summary": "Defines Department of Labor (closed per SB 2 §(2)(c)), Department of Commerce, Secretary of Commerce and Labor, President.", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t15", "exact_change": "Codify definitions.", "evidence": "\"Department of Labor shall be defined as the closed department pursuant to Senate Bill 2 §(2)(c)\"", "notes": "Cross-refs PL 1-3 (the CCD Act closure of Labor)."},
+        {"ref": "SEC III (Bill Purpose)", "text_summary": "Establishes the Department of Commerce and Labor by merging Commerce and Labor; allocates assets; merges Secretary of Commerce into Secretary of Commerce and Labor; transfers named agencies (SBA, USTR, Ex-Im Bank, OPIC, USTDA, USPTO, Office of Labor).", "classes": ["new-permanent-general", "transfer"], "treatment": "new-section", "target": "/us/usc/t15", "exact_change": "Codify establishment of the merged department and transfers of the enumerated agencies/assets.", "evidence": "\"The Department of Commerce and Labor is hereby established and ordained under the Executive Branch\"", "notes": "Transfer-note also warranted for reassigned agencies."},
+        {"ref": "SEC IV (Provisions)", "text_summary": "Assigns powers/responsibilities (business creation/management, worker rights, labor policy); Under Secretary for the Office of Labor; reporting lines; continuity of prior departmental functions.", "classes": ["new-permanent-general", "transfer"], "treatment": "new-section", "target": "/us/usc/t15", "exact_change": "Codify the department's powers, Under Secretary structure, and continuity clauses.", "evidence": "\"The Department of Commerce and Labor shall be required to maintain the position of Under Secretary of Commerce and Labor for the Office of Labor\"", "notes": ""}
+      ],
+      "current_implementation": {"assessment": "note-only-but-amendment-required", "dump_present": true, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t29/s201", "detail": "A reorganization establishing a new executive department with agency transfers is permanent structural law; belongs as operative text (Title 15 Commerce, cross-referenced Title 29 Labor and Title 5 cabinet), with transfer notes — not a single note at t29/s201. Full-text dump and Trello link present. 'Repealed' status unsupported."},
+      "recommended_actions": [
+        "Codify the Department of Commerce and Labor establishment and Secretary as operative text (Title 15 primary; Title 29 and Title 5 cross-references).",
+        "Add transfer notes for the reassigned agencies (SBA, USTR, Ex-Im, OPIC, USTDA, USPTO, Office of Labor).",
+        "Cross-reference PL 1-3 (closure of Labor) as the predicate.",
+        "Correct status to current; remove full-text dump and Trello link."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-004-030",
+      "public_law": "4-30",
+      "title": "Public Law 4-30 | Fugitive Justice Reform Act",
+      "status": "current",
+      "status_basis": "Creates a Fugitive List, Marshals-maintained warrant database, removal mechanisms, and repeals H.R.4 (PL 2-12, Fee Prohibition Act). No self-repeal or sunset; no later batch law repeals it. 'Repealed Laws' label unsupported.",
+      "provisions": [
+        {"ref": "SEC 1-3", "text_summary": "Short title 'Fugitive Justice Reform Act', purpose, enactment clause.", "classes": ["short-title", "findings-or-sense", "effective-date"], "treatment": "statutory-note", "target": "/us/usc/t18", "exact_change": "n/a", "evidence": "\"cited as the “Fugitive Justice Reform Act” or simply as S. 29.\"", "notes": ""},
+        {"ref": "SEC 4(a)-(e)", "text_summary": "Defines Fugitive (fleeing during trial or after conviction), trial in absentia, court-ordered addition to the Fugitive List, Marshals maintenance, restrictions on fugitives (barred from White House grounds/military bases/Supreme Court; arrestable on sight).", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t18", "exact_change": "Codify the Fugitive List regime and fugitive restrictions as operative Title 18 (or Title 28) text.", "evidence": "\"Upon a person/party becoming a Fugitive; a representative of the United States shall motion before the Court of Jurisdiction to issue an Order to have such person/party added to The Fugitive List\"", "notes": ""},
+        {"ref": "SEC 5(a)-(b)", "text_summary": "U.S. Marshals Service maintains a public Warrant Database (active/inactive warrants, subpoenas, fugitives, fees) and witnesses court-fee transactions.", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t28", "exact_change": "Codify the Marshals warrant-database duty (Title 28 Ch.37, Marshals).", "evidence": "\"The United States Marshal Services shall maintain a Warrant Database\"", "notes": ""},
+        {"ref": "SEC 6(a)", "text_summary": "Four removal mechanisms from the Fugitive List (pardon/clemency, sentence fully executed, conviction vacated, acquittal).", "classes": ["new-permanent-general"], "treatment": "new-section", "target": "/us/usc/t18", "exact_change": "Codify the removal mechanisms.", "evidence": "\"There shall be four mechanisms for removal from The Fugitive List;\"", "notes": ""},
+        {"ref": "SEC 7(a)", "text_summary": "Repeals H.R.4 in its entirety and all its effects/amendments.", "classes": ["repeal"], "treatment": "repeal-marking", "target": "/us/usc/t28", "exact_change": "Mark H.R.4 (PL 2-12, Fee Prohibition Act) repealed in full.", "evidence": "\"H. R. 4 in its entirety, and to all its effects, including any amendments ratified to such, shall be repealed and rescinded.\"", "notes": "Drives repeal-marking for PL 2-12."}
+      ],
+      "current_implementation": {"assessment": "note-only-but-amendment-required", "dump_present": true, "trello_present": true, "false_source_limitation": false, "placement": "/us/usc/t18/s1", "detail": "Operative Fugitive List/warrant-database regime and an express repeal (H.R.4) require codified text and repeal-marking, not just a note at t18/s1. Full-text dump and Trello link present. 'Repealed' status of this law itself unsupported (it is a repealing law)."},
+      "recommended_actions": [
+        "Codify the Fugitive List, removal mechanisms (Title 18), and Marshals warrant-database duty (Title 28) as operative text.",
+        "Add repeal-marking for PL 2-12 (H.R.4 Fee Prohibition Act) per sec.7.",
+        "Correct this law's own status to current; remove full-text dump and Trello link."
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "reviewer": "reviewer-15",
+  "group_index": 15,
+  "law_count": 10,
+  "source_manifest": "audit/review/manifest-15.json",
+  "laws": [
+    {
+      "law_id": "PL-019-145",
+      "public_law": "19-145",
+      "title": "Public Law 19-145 | Military Officer Accountability Act (MOAA)",
+      "final_statutory_text": "Replaces 10 U.S.C. 1161 and 10 U.S.C. 1181, 1182(a), 1184, 1185(a)(1), 1186(a), and 1187(b) with revised officer show-cause and removal rules.",
+      "chronology": "Current enactment. The supplied source is usable and no later law in the reviewed set repeals PL 19-145 itself.",
+      "repeal_transfer_redesignation": "Direct replacement of seven Title 10 provisions; no separate transfer or redesignation chain was resolved.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": false,
+      "decision": "amend-existing-text",
+      "status": "current",
+      "status_basis": "The act is intact and operative. It expressly repeals and replaces seven Title 10 provisions governing officer show-cause and removal procedures, and nothing in the reviewed material repeals PL 19-145 itself.",
+      "current_implementation": {
+        "assessment": "implemented",
+        "placement": "/us/usc/t10/s101/h",
+        "detail": "The Title 10 treatment reflects the enacted amendments rather than a bare history note."
+      },
+      "recommended_actions": [
+        "Keep the Title 10 amendments aligned with the enacted text.",
+        "Preserve the replacement structure for the seven affected provisions."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-019-146",
+      "public_law": "19-146",
+      "title": "Public Law 19-146 | Refurbishing the Military Legal System Act",
+      "final_statutory_text": "Source unavailable; no operative statutory text can be verified.",
+      "chronology": "Source-limited. The accessible file is a Google Drive permission-denial page, so no lawful chronology can be fixed from the text itself.",
+      "repeal_transfer_redesignation": "No determinable repeal, transfer, or redesignation chain could be resolved from the available source.",
+      "standalone_general_permanent": null,
+      "new_code_section_required": null,
+      "note_treatment_legally_sufficient": true,
+      "decision": "source-limited-historical-note",
+      "status": "unresolved",
+      "status_basis": "The only accessible source is unrecoverable permission-denial content, so no operative conclusion about the act can be supported.",
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "placement": "/us/usc/t10/s101/h",
+        "detail": "The existing XML treats the act as repealed or superseded, but the source does not support that certainty."
+      },
+      "recommended_actions": [
+        "Retain only as a source-limited historical note.",
+        "Remove boilerplate certainty about repeal or supersession.",
+        "Do not invent operative text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-019-147",
+      "public_law": "19-147",
+      "title": "Public Law 19-147 | Diplomatic Standards Act (DSA)",
+      "final_statutory_text": "Restates a diplomatic-relations framework and repeals 8 U.S.C. 1102; the act is later repealed by PL 31-227 without revival of the section.",
+      "chronology": "Current at enactment, but later law PL 31-227 explicitly repeals PL 19-147 and does not restore 8 U.S.C. 1102.",
+      "repeal_transfer_redesignation": "Direct repeal of 8 U.S.C. 1102, followed by later repeal of the public law itself; no surviving transfer or redesignation chain was resolved.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "note-only",
+      "status": "repealed",
+      "status_basis": "PL 31-227 later repeals PL 19-147 expressly, so the act survives only as statutory history.",
+      "current_implementation": {
+        "assessment": "correctly-retained-as-history",
+        "placement": "/us/usc/t8/s1101/i/2",
+        "detail": "The Title 8 note is the right history-only treatment because the enacted repeal chain is tied to 8 U.S.C. 1102."
+      },
+      "recommended_actions": [
+        "Keep the history note tied to the 8 U.S.C. 1102 reservation and the PL 31-227 repealer chain.",
+        "Do not reinstate operative text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-019-148",
+      "public_law": "19-148",
+      "title": "Public Law 19-148 | Badges and Entrapment Act (BEA)",
+      "final_statutory_text": "Creates badge-display rules, defines entrapment, and sets related enforcement consequences, but cites no direct Code host for a text amendment.",
+      "chronology": "Current enactment. The source is usable and no later law in the reviewed material repeals PL 19-148 itself.",
+      "repeal_transfer_redesignation": "No Code repeal or transfer chain was resolved; the act is properly handled as a statutory note.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "note-only",
+      "status": "current",
+      "status_basis": "The act is a generally applicable and permanent enactment, and nothing in the reviewed set repeals it.",
+      "current_implementation": {
+        "assessment": "implemented",
+        "placement": "/us/usc/t50/s1",
+        "detail": "The note-only treatment in Title 50 is a reasonable home for the statute, and no new Code section is required."
+      },
+      "recommended_actions": [
+        "Keep the note-only treatment.",
+        "Do not invent a positive-law Code section for the act."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-019-149",
+      "public_law": "19-149",
+      "title": "Public Law 19-149 | Criminal Justice Reform Act (CJRA)",
+      "final_statutory_text": "Amends 18 U.S.C. 3156(a)(3) and proposes a broad title-wide sentencing-cap regime, but the cap provisions in sections 7 and 8 remain unresolved.",
+      "chronology": "Current enactment. Section 5 is codifiable now, while the broader sentencing-cap provisions were left unresolved because the source does not safely resolve the drafting choice.",
+      "repeal_transfer_redesignation": "Section 5 is a direct amendment to 18 U.S.C. 3156; sections 7 and 8 would require a separate title-wide sentencing-cap decision.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": false,
+      "decision": "amend-existing-text",
+      "status": "current",
+      "status_basis": "No later repeal of PL 19-149 itself was identified, and the act still contains a direct amendment to 18 U.S.C. 3156(a)(3).",
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t18/s1",
+        "detail": "The 18 U.S.C. 3156 amendment is applied, but the title-wide sentencing-cap provisions remain held for review rather than forced into text."
+      },
+      "recommended_actions": [
+        "Keep the 18 U.S.C. 3156 amendment in place.",
+        "Leave sections 7 and 8 held until a human interpretation is chosen.",
+        "Do not guess at a title-wide rewrite."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-019-150",
+      "public_law": "19-150",
+      "title": "Public Law 19-150 | Small Businesses Empowerment Act",
+      "final_statutory_text": "Creates a small-business recognition and support program and a related employment initiative within the Department of Commerce and Labor; no direct Code amendment host is cited.",
+      "chronology": "Current enactment. The source is usable and no later law in the reviewed set repeals PL 19-150 itself.",
+      "repeal_transfer_redesignation": "No Code repeal or transfer chain was resolved; the act is properly handled as a statutory note.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "note-only",
+      "status": "current",
+      "status_basis": "The act is a generally applicable permanent enactment with no cited USC host and no identified repeal.",
+      "current_implementation": {
+        "assessment": "implemented",
+        "placement": "/us/usc/t15/s1",
+        "detail": "The Title 15 note placement is a plausible statutory-note anchor for the small-business program."
+      },
+      "recommended_actions": [
+        "Keep the note-only treatment.",
+        "Do not invent a positive-law Code section for the act."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-019-151",
+      "public_law": "19-151",
+      "title": "Public Law 19-151 | Court Fees Prohibition and Protection Act (CTPPA)",
+      "final_statutory_text": "Repeals nineteen Title 28 fee, cost, and deposit provisions, plus 28 U.S.C. 1918(b), and states a general prohibition on court fees outside criminal punishment or contempt.",
+      "chronology": "Current enactment. The direct Title 28 repeals are codifiable, and no later repeal of PL 19-151 itself was identified.",
+      "repeal_transfer_redesignation": "Direct repeal of twenty Title 28 targets and one subsection; section 5 is a freestanding fee rule without a specific USC host.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": false,
+      "decision": "amend-existing-text",
+      "status": "current",
+      "status_basis": "The act remains operative and expressly repeals multiple Title 28 provisions; nothing in the reviewed set repeals PL 19-151 itself.",
+      "current_implementation": {
+        "assessment": "implemented",
+        "placement": "/us/usc/t28/s1",
+        "detail": "The Title 28 repeal history is reflected, and section 5 remains properly handled as a note rather than fabricated positive-law text."
+      },
+      "recommended_actions": [
+        "Keep the Title 28 repeal/reservation chain aligned with the historical note.",
+        "Preserve section 5 as a note-style prohibition."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-019-152",
+      "public_law": "19-152",
+      "title": "Public Law 19-152 | The Commerce Legislation and Labor Aggravations Reformations (CLEAR)",
+      "final_statutory_text": "Amends 5 U.S.C. 101 and also repeals or rewrites related standalone public-law provisions that are outside the direct USC codification pass.",
+      "chronology": "Current enactment. The source is usable, no later repeal of PL 19-152 itself was identified, and section 8 is the only direct USC amendment in the act.",
+      "repeal_transfer_redesignation": "Direct amendment of 5 U.S.C. 101; other sections amend standalone public laws and are not direct USC codification targets.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": false,
+      "decision": "amend-existing-text",
+      "status": "current",
+      "status_basis": "The act is still operative as a general and permanent enactment, and no specific repealer of PL 19-152 was found.",
+      "current_implementation": {
+        "assessment": "implemented",
+        "placement": "/us/usc/t5/s101",
+        "detail": "The Title 5 amendment is the correct codification target; the non-USC repeals are outside this direct amendment pass."
+      },
+      "recommended_actions": [
+        "Keep the 5 U.S.C. 101 amendment aligned with the later-law sequence.",
+        "Leave the standalone public-law repeals to the non-USC law history."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-021-123",
+      "public_law": "21-123",
+      "title": "Public Law 21-123 | Freedom In Removing Employees and Deregulation Act of 2024",
+      "final_statutory_text": "Source unavailable; no operative statutory text can be verified.",
+      "chronology": "Source-limited. The accessible file is only a Google Drive permission-denial page, so no lawful chronology can be fixed from the text itself.",
+      "repeal_transfer_redesignation": "No determinable repeal, transfer, or redesignation chain could be resolved from the available source.",
+      "standalone_general_permanent": null,
+      "new_code_section_required": null,
+      "note_treatment_legally_sufficient": true,
+      "decision": "source-limited-historical-note",
+      "status": "unresolved",
+      "status_basis": "The only accessible source is unrecoverable permission-denial content, so no operative conclusion about the act can be supported.",
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "placement": "/us/usc/t5/s101",
+        "detail": "The existing XML treats the act as repealed or superseded, but the source does not support that certainty."
+      },
+      "recommended_actions": [
+        "Retain only as a source-limited historical note.",
+        "Remove boilerplate certainty about repeal or supersession.",
+        "Do not invent operative text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-022-153",
+      "public_law": "22-153",
+      "title": "Public Law 22-153 | Fire Department Reform and Nurturing (FDRN)",
+      "final_statutory_text": "Reorganizes the District of Columbia fire and emergency medical services, defines duties and reporting, and sets home-rule contingencies, but cites no direct USC amendment host.",
+      "chronology": "Current enactment. The source is usable and no later law in the reviewed set repeals PL 22-153 itself.",
+      "repeal_transfer_redesignation": "No Code repeal or transfer chain was resolved; the act is properly handled as a statutory note.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "note-only",
+      "status": "current",
+      "status_basis": "The act is a generally applicable permanent enactment with no cited USC host and no identified repeal.",
+      "current_implementation": {
+        "assessment": "implemented",
+        "placement": "/us/usc/t50/s1",
+        "detail": "The Title 50 note placement is a reasonable statutory-note anchor for the D.C. fire-service reorganization."
+      },
+      "recommended_actions": [
+        "Keep the note-only treatment.",
+        "Do not invent a positive-law Code section for the act."
+      ],
+      "confidence": "medium"
+    }
+  ]
+}

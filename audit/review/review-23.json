@@ -1,0 +1,409 @@
+{
+  "reviewer": "law-auditor-K",
+  "group_index": 23,
+  "law_count": 10,
+  "reviewed_against": [
+    "codification/mass_migration/latest/plans",
+    "codification/mass_migration/latest/reports",
+    "usc XML in current branch",
+    "origin/main comparison"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-032-231",
+      "public_law": "32-231",
+      "title": "District Improvement Act (DIA)",
+      "final_legal_status": "repealed",
+      "required_code_treatment": "NO_CODE_CHANGE",
+      "provisions": [
+        {
+          "refs": [
+            "SEC 5",
+            "SEC 7"
+          ],
+          "targets": [],
+          "disposition": "NONOPERATIVE_OR_REPEALED",
+          "current_implementation": {
+            "status": "absent",
+            "detail": "No current Code insertion and no branch XML change; the plan classifies the law as repealed and nonoperative."
+          },
+          "source_evidence": [
+            "codification/mass_migration/latest/plans/PL-032-231.json: status=repealed, disposition=NONOPERATIVE_OR_REPEALED",
+            "source_sha256=b985611164aafed13aa9effd99b3a3c6c623d2d500c8f464040019d293fd2144"
+          ],
+          "recommended_action": "Leave out of the Code; retain only as repealed public-law history."
+        }
+      ],
+      "current_implementation": {
+        "status": "absent",
+        "detail": "No XML implementation found in the current branch."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/plans/PL-032-231.json",
+        "current-branch XML review found no matching implementation"
+      ],
+      "recommended_action": "No Code change."
+    },
+    {
+      "law_id": "PL-032-232",
+      "public_law": "32-232",
+      "title": "The Federal Pay Standardization Act",
+      "final_legal_status": "current",
+      "required_code_treatment": "DIRECT_AMENDMENT",
+      "provisions": [
+        {
+          "refs": [
+            "SEC 4",
+            "SEC 5(a)"
+          ],
+          "targets": [
+            "/us/usc/t5/s5332"
+          ],
+          "disposition": "ALREADY_INCORPORATED",
+          "current_implementation": {
+            "status": "implemented",
+            "detail": "Current branch includes the integrated 5 U.S.C. 5332 text and the USAR amendments note.",
+            "xml_evidence": [
+              "usc/usc05.xml:38391"
+            ]
+          },
+          "source_evidence": [
+            "codification/mass_migration/latest/plans/PL-032-232.json: disposition=ALREADY_INCORPORATED",
+            "codification/mass_migration/latest/plans/PL-032-232.json: already_incorporated_locations=/us/usc/t5/s5332",
+            "usc/usc05.xml:38391",
+            "git diff origin/main...HEAD -- usc/usc05.xml"
+          ],
+          "recommended_action": "Keep the integrated positive-law text and concise amendment note; no further Code change."
+        }
+      ],
+      "current_implementation": {
+        "status": "implemented",
+        "location": "/us/usc/t5/s5332",
+        "detail": "Branch contains the incorporated amendment."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/plans/PL-032-232.json",
+        "usc/usc05.xml:38391"
+      ],
+      "recommended_action": "No additional change."
+    },
+    {
+      "law_id": "PL-032-233",
+      "public_law": "32-233",
+      "title": "Literally Introducing Taxes (LIT)",
+      "final_legal_status": "current",
+      "required_code_treatment": "DIRECT_AMENDMENT",
+      "provisions": [
+        {
+          "refs": [
+            "SEC 5(1)",
+            "SEC 5(2)"
+          ],
+          "targets": [
+            "/us/usc/t26/s1"
+          ],
+          "disposition": "ALREADY_INCORPORATED",
+          "current_implementation": {
+            "status": "implemented",
+            "detail": "Current branch contains the tax-section amendment note and statutory-note codification."
+          },
+          "source_evidence": [
+            "codification/mass_migration/latest/plans/PL-032-233.json: disposition=ALREADY_INCORPORATED",
+            "codification/mass_migration/latest/plans/PL-032-233.json: already_incorporated_locations=/us/usc/t26/s1",
+            "usc/usc26.xml:5689",
+            "git diff origin/main...HEAD -- usc/usc26.xml"
+          ],
+          "recommended_action": "Keep the integrated 26 U.S.C. 1 amendment text and history note; no further Code change."
+        }
+      ],
+      "current_implementation": {
+        "status": "implemented",
+        "location": "/us/usc/t26/s1",
+        "detail": "Branch includes the replacement tax text and statutory history note."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/plans/PL-032-233.json",
+        "usc/usc26.xml:5689"
+      ],
+      "recommended_action": "No additional change."
+    },
+    {
+      "law_id": "PL-032-234",
+      "public_law": "32-234",
+      "title": "Intelligence Appointment Transparency and Oversight Act",
+      "final_legal_status": "current",
+      "required_code_treatment": "DIRECT_AMENDMENT",
+      "provisions": [
+        {
+          "refs": [
+            "SEC 3(a)(i)-(iii)",
+            "SEC 4(a)"
+          ],
+          "targets": [
+            "/us/usc/t50/s3041",
+            "/us/usc/t50/s3041/b/2"
+          ],
+          "disposition": "ALREADY_INCORPORATED",
+          "current_implementation": {
+            "status": "implemented",
+            "detail": "Current branch includes the added subsection (d) and the amended concurrence list."
+          },
+          "source_evidence": [
+            "codification/mass_migration/latest/plans/PL-032-234.json: disposition=ALREADY_INCORPORATED",
+            "codification/mass_migration/latest/plans/PL-032-234.json: already_incorporated_locations=/us/usc/t50/s3041",
+            "usc/usc50.xml:39515",
+            "usc/usc50.xml:39538",
+            "git diff origin/main...HEAD -- usc/usc50.xml"
+          ],
+          "recommended_action": "Keep the integrated 50 U.S.C. 3041 text and amendment note; no further Code change."
+        }
+      ],
+      "current_implementation": {
+        "status": "implemented",
+        "location": "/us/usc/t50/s3041",
+        "detail": "Branch contains subsection (d) and the updated subsection (b)(2) treatment."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/plans/PL-032-234.json",
+        "usc/usc50.xml:39515",
+        "usc/usc50.xml:39538"
+      ],
+      "recommended_action": "No additional change."
+    },
+    {
+      "law_id": "PL-032-235",
+      "public_law": "32-235",
+      "title": "Command Responsibility And Noncompliance Enforcement (CRANE) Act",
+      "final_legal_status": "current",
+      "required_code_treatment": "NON_CODE",
+      "provisions": [
+        {
+          "refs": [
+            "SEC 4-5",
+            "SEC 6-7",
+            "SEC 8-10"
+          ],
+          "targets": [],
+          "disposition": "NON_CODE",
+          "current_implementation": {
+            "status": "absent",
+            "detail": "Classified as commemorative rather than general and permanent Code material."
+          },
+          "source_evidence": [
+            "codification/mass_migration/latest/plans/PL-032-235.json: disposition=NON_CODE",
+            "source_sha256=aed8ae97fd686916761236374e33b665ff88fa1e921eead9b3df6296a15ca785"
+          ],
+          "recommended_action": "No Code insertion."
+        }
+      ],
+      "current_implementation": {
+        "status": "non-code",
+        "detail": "No XML implementation expected or present."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/plans/PL-032-235.json"
+      ],
+      "recommended_action": "Leave as non-Code public-law history only."
+    },
+    {
+      "law_id": "PL-032-236",
+      "public_law": "32-236",
+      "title": "Military Operational Authority Reform Act",
+      "final_legal_status": "current",
+      "required_code_treatment": "DIRECT_AMENDMENT",
+      "provisions": [
+        {
+          "refs": [
+            "SEC 4(a)",
+            "SEC 5(a)-(d)"
+          ],
+          "targets": [
+            "/us/usc/t10/s153",
+            "/us/usc/t10/s154"
+          ],
+          "disposition": "ALREADY_INCORPORATED",
+          "current_implementation": {
+            "status": "implemented",
+            "detail": "Current branch contains the added 10 U.S.C. 153 subsection (e), the amended 10 U.S.C. 154 subsection (g), and the corresponding USAR amendments notes."
+          },
+          "source_evidence": [
+            "codification/mass_migration/latest/plans/PL-032-236.json: disposition=ALREADY_INCORPORATED",
+            "codification/mass_migration/latest/plans/PL-032-236.json: already_incorporated_locations=/us/usc/t10/s153,/us/usc/t10/s154",
+            "usc/usc10.xml:15555",
+            "usc/usc10.xml:15641",
+            "usc/usc10.xml:15670",
+            "usc/usc10.xml:15690",
+            "git diff origin/main...HEAD -- usc/usc10.xml"
+          ],
+          "recommended_action": "Keep the integrated 10 U.S.C. amendments and notes; no further Code change."
+        }
+      ],
+      "current_implementation": {
+        "status": "implemented",
+        "location": [
+          "/us/usc/t10/s153",
+          "/us/usc/t10/s154"
+        ],
+        "detail": "Branch contains both amended sections."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/plans/PL-032-236.json",
+        "usc/usc10.xml:15555",
+        "usc/usc10.xml:15641",
+        "usc/usc10.xml:15670",
+        "usc/usc10.xml:15690"
+      ],
+      "recommended_action": "No additional change."
+    },
+    {
+      "law_id": "PL-033-238",
+      "public_law": "33-238",
+      "title": "Conference Oversight of Discipline and Ethics Act",
+      "final_legal_status": "current",
+      "required_code_treatment": "STATUTORY_NOTE",
+      "provisions": [
+        {
+          "refs": [
+            "SEC 11-14",
+            "SEC 3(a)-(c)",
+            "SEC 4-6",
+            "SEC 7-10"
+          ],
+          "targets": [
+            "/us/usc/t28/s526"
+          ],
+          "disposition": "STATUTORY_NOTE",
+          "current_implementation": {
+            "status": "absent",
+            "detail": "No matching XML entry was found in the current branch for the statutory note placement."
+          },
+          "source_evidence": [
+            "codification/mass_migration/latest/plans/PL-033-238.json: disposition=STATUTORY_NOTE",
+            "codification/mass_migration/latest/plans/PL-033-238.json: target=/us/usc/t28/s526",
+            "rg -n '33-238|PL-033-238|Conference Oversight of Discipline and Ethics Act' usc/usc28.xml returned no match"
+          ],
+          "recommended_action": "Add a statutory note at 28 U.S.C. 526 if the law is being implemented in the Code."
+        }
+      ],
+      "current_implementation": {
+        "status": "absent",
+        "detail": "Not yet implemented in current XML."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/plans/PL-033-238.json",
+        "usc/usc28.xml search returned no match"
+      ],
+      "recommended_action": "Implement as a statutory note at /us/usc/t28/s526."
+    },
+    {
+      "law_id": "PL-034-239",
+      "public_law": "34-239",
+      "title": "Judicial Recall Act",
+      "final_legal_status": "active",
+      "required_code_treatment": "NON_CODE",
+      "provisions": [
+        {
+          "refs": [
+            "SEC 3(a)",
+            "SEC 4(a)-(b)"
+          ],
+          "targets": [],
+          "disposition": "NON_CODE",
+          "current_implementation": {
+            "status": "absent",
+            "detail": "Predominantly temporary or self-expiring law; no Code insertion."
+          },
+          "source_evidence": [
+            "codification/mass_migration/latest/plans/PL-034-239.json: disposition=NON_CODE",
+            "source_sha256=e7351a41bb88df60f12b5050ac03a7bad126fad78ec8c42b2ee42788381ba367"
+          ],
+          "recommended_action": "No Code insertion."
+        }
+      ],
+      "current_implementation": {
+        "status": "non-code",
+        "detail": "No XML implementation expected or present."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/plans/PL-034-239.json"
+      ],
+      "recommended_action": "Leave as public-law history only."
+    },
+    {
+      "law_id": "PL-034-240",
+      "public_law": "34-240",
+      "title": "Literally Fixing Taxes",
+      "final_legal_status": "repealed",
+      "required_code_treatment": "HISTORICAL_NOTE_ONLY",
+      "provisions": [
+        {
+          "refs": [
+            "SEC 4(a)",
+            "SEC 4(b)"
+          ],
+          "targets": [
+            "/us/usc/t26/s1"
+          ],
+          "disposition": "NONOPERATIVE_OR_REPEALED",
+          "current_implementation": {
+            "status": "history-note-only",
+            "detail": "Current XML already preserves the law as a statutory history note in 26 U.S.C. 1."
+          },
+          "source_evidence": [
+            "codification/mass_migration/latest/plans/PL-034-240.json: disposition=NONOPERATIVE_OR_REPEALED",
+            "usc/usc26.xml:5689",
+            "rp-pl034240-codification note present in usc/usc26.xml"
+          ],
+          "recommended_action": "Keep the statutory-history note only; do not restore any live Code text."
+        }
+      ],
+      "current_implementation": {
+        "status": "history-note-only",
+        "location": "/us/usc/t26/s1",
+        "detail": "Historical note is already present in the current branch."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/plans/PL-034-240.json",
+        "usc/usc26.xml:5689"
+      ],
+      "recommended_action": "No live Code change."
+    },
+    {
+      "law_id": "PL-034-241",
+      "public_law": "34-241",
+      "title": "Protecting Working Americans",
+      "final_legal_status": "current",
+      "required_code_treatment": "STATUTORY_NOTE",
+      "provisions": [
+        {
+          "refs": [
+            "SEC 3(a)"
+          ],
+          "targets": [
+            "/us/usc/t2/s29"
+          ],
+          "disposition": "STATUTORY_NOTE",
+          "current_implementation": {
+            "status": "absent",
+            "detail": "No matching XML entry was found in the current branch for the note placement."
+          },
+          "source_evidence": [
+            "codification/mass_migration/latest/plans/PL-034-241.json: disposition=STATUTORY_NOTE",
+            "codification/mass_migration/latest/plans/PL-034-241.json: target=/us/usc/t2/s29",
+            "rg -n '34-241|PL-034-241|Protecting Working Americans' usc/usc02.xml returned no match"
+          ],
+          "recommended_action": "Add a statutory note at 2 U.S.C. 29 if the law is being implemented in the Code."
+        }
+      ],
+      "current_implementation": {
+        "status": "absent",
+        "detail": "Not yet implemented in current XML."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/plans/PL-034-241.json",
+        "usc/usc02.xml search returned no match"
+      ],
+      "recommended_action": "Implement as a statutory note at /us/usc/t2/s29."
+    }
+  ]
+}

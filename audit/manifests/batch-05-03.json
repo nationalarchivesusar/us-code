@@ -1,0 +1,577 @@
+﻿{
+    "batch":  5,
+    "auditor":  "law-auditor-C",
+    "report_path":  "audit/primary/batch-05-03.json",
+    "law_count":  10,
+    "laws":  [
+                 {
+                     "law_id":  "PL-018-142",
+                     "public_law":  "18-142",
+                     "title":  "Public Law 18-142 | Business Licensing Act",
+                     "list_name":  "11th - 20th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "Forced exact-link Drive viewer text extraction",
+                     "law_txt_path":  "codification/laws/laws/PL-018-142/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  244241,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  true,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-018-142/source/drive_viewer_extracted_text.txt",
+                                              "format":  "txt",
+                                              "size":  245388,
+                                              "sha256":  "3645fbbd4157b3e6a6d3dcfdd2e89255419bf29b0aa85918d86498943bee8b53"
+                                          },
+                                          {
+                                              "file":  "codification/laws/laws/PL-018-142/source/drive_viewer_rendered.html",
+                                              "format":  "html",
+                                              "size":  251891,
+                                              "sha256":  "e18fc40ed6c22346a6b7aceaeb8b48e45eee6a609066406be362519b20d1da9e"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "insert"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc15.xml",
+                                                   "note_id":  "rp-pl018142-codification",
+                                                   "public_law":  "18-142",
+                                                   "congress_from_id":  18,
+                                                   "seq_from_id":  142,
+                                                   "heading_cited_pl":  "18-142",
+                                                   "heading":  "Business Licensing Actâ€”Pub. L. 18â€“142",
+                                                   "placement_identifier":  "/us/usc/t15/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/DGX26umR/364-public-law-18-142-business-licensing-art"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  706
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-018-143",
+                     "public_law":  "18-143",
+                     "title":  "Public Law 18-143 | United States Capitol Police Technical Corrections Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "meaningful text",
+                     "law_txt_path":  "codification/laws/laws/PL-018-143/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  209,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  true,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-018-143/source/downloaded_file.html",
+                                              "format":  "html",
+                                              "size":  1789,
+                                              "sha256":  "9c4194468a7f04287a1c7e0a321b5f9e10025079b3539c2634d6919e5d293d32"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc18.xml",
+                                                   "note_id":  "rp-pl018143-codification",
+                                                   "public_law":  "18-143",
+                                                   "congress_from_id":  18,
+                                                   "seq_from_id":  143,
+                                                   "heading_cited_pl":  "18-143",
+                                                   "heading":  "United States Capitol Police Technical Corrections Actâ€”Pub. L. 18â€“143",
+                                                   "placement_identifier":  "/us/usc/t18/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/OZwEUpDY/365-public-law-18-143-united-states-capitol-police-technical-corrections-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  765
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-019-144",
+                     "public_law":  "19-144",
+                     "title":  "Public Law 19-144 | Public Area Management Act (PAMA)",
+                     "list_name":  "11th - 20th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-019-144/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  5114,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-019-144/source/H.R. 1901 - Public Area Management Act (PAMA) (1).pdf",
+                                              "format":  "pdf",
+                                              "size":  135153,
+                                              "sha256":  "d8ce8434378e6eb4a0f6660313e9f1e54d5ccb46310be8cc7f55ea1201e2b7a0"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc54.xml",
+                                                   "note_id":  "rp-pl019144-codification",
+                                                   "public_law":  "19-144",
+                                                   "congress_from_id":  19,
+                                                   "seq_from_id":  144,
+                                                   "heading_cited_pl":  "19-144",
+                                                   "heading":  "Public Area Management Act (PAMA)â€”Pub. L. 19â€“144",
+                                                   "placement_identifier":  "/us/usc/t54/s100101/b/2",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/XhO3vpoh/370-public-law-19-144-public-area-management-act-pama"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  726
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-019-145",
+                     "public_law":  "19-145",
+                     "title":  "Public Law 19-145 | Military Officer Accountability Act (MOAA)",
+                     "list_name":  "11th - 20th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-019-145/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  5405,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-019-145/source/H.R. 1904 - Military Officer Accountability Act (MOAA).pdf",
+                                              "format":  "pdf",
+                                              "size":  134545,
+                                              "sha256":  "9506d2342c254417ec1e0645709e1796e557cd967d33b9ffface2b27dece4686"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "Â§ 1161shallberepealedinitsentirety",
+                                                     "Â§ 1181shallberepealedinitsentirety",
+                                                     "Â§ 1184shallberepealedinitsentirety",
+                                                     "Â§ 1185",
+                                                     "Â§1161shallnowreadas",
+                                                     "Â§1181shallnowstate",
+                                                     "Â§1182",
+                                                     "Â§1184shallnowstate",
+                                                     "Â§1185",
+                                                     "Â§1186",
+                                                     "Â§1187"
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc10.xml",
+                                                   "note_id":  "rp-pl019145-codification",
+                                                   "public_law":  "19-145",
+                                                   "congress_from_id":  19,
+                                                   "seq_from_id":  145,
+                                                   "heading_cited_pl":  "19-145",
+                                                   "heading":  "Military Officer Accountability Act (MOAA)â€”Pub. L. 19â€“145",
+                                                   "placement_identifier":  "/us/usc/t10/s101/h",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/WhYWaRb2/371-public-law-19-145-military-officer-accountability-act-moaa"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  768
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-019-146",
+                     "public_law":  "19-146",
+                     "title":  "Public Law 19-146 | Refurbishing the Military Legal System Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "meaningful text",
+                     "law_txt_path":  "codification/laws/laws/PL-019-146/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  209,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  true,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-019-146/source/downloaded_file.html",
+                                              "format":  "html",
+                                              "size":  1789,
+                                              "sha256":  "908d330d6ec5506d6852ecd68a80fa6bc24c4f1b0493ccd188bf11868cb6038e"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc10.xml",
+                                                   "note_id":  "rp-pl019146-codification",
+                                                   "public_law":  "19-146",
+                                                   "congress_from_id":  19,
+                                                   "seq_from_id":  146,
+                                                   "heading_cited_pl":  "19-146",
+                                                   "heading":  "Refurbishing the Military Legal System Actâ€”Pub. L. 19â€“146",
+                                                   "placement_identifier":  "/us/usc/t10/s101/h",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/PjI4mRd8/372-public-law-19-146-refurbishing-the-military-legal-system-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  741
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-019-147",
+                     "public_law":  "19-147",
+                     "title":  "Public Law 19-147 | Diplomatic Standards Act (DSA)",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-019-147/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  10304,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-019-147/source/H.R. 1902 - Diplomatic Standards Act (DSA).pdf",
+                                              "format":  "pdf",
+                                              "size":  148930,
+                                              "sha256":  "20cdcdc23d03f9bdb556199c5c25e7eeff3262ad83711cfa68298a3b6aa0657d"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "Â§1102shallberepealedinitsentirety"
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc08.xml",
+                                                   "note_id":  "rp-pl019147-codification",
+                                                   "public_law":  "19-147",
+                                                   "congress_from_id":  19,
+                                                   "seq_from_id":  147,
+                                                   "heading_cited_pl":  "19-147",
+                                                   "heading":  "Diplomatic Standards Act (DSA)â€”Pub. L. 19â€“147",
+                                                   "placement_identifier":  "/us/usc/t8/s1101/i/2",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/5FARLGIq/373-public-law-19-147-diplomatic-standards-act-dsa"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  739
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-019-148",
+                     "public_law":  "19-148",
+                     "title":  "Public Law 19-148 | Badges and Entrapment Act (BEA)",
+                     "list_name":  "11th - 20th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-019-148/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  2682,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-019-148/source/H.R. 1906 - Badges and Entrapment Act (BEA).pdf",
+                                              "format":  "pdf",
+                                              "size":  125217,
+                                              "sha256":  "abec73b8101bedbeee3c5b68d0da144519ca94ee78de6fe6d9e575b6f289618a"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc50.xml",
+                                                   "note_id":  "rp-pl019148-codification",
+                                                   "public_law":  "19-148",
+                                                   "congress_from_id":  19,
+                                                   "seq_from_id":  148,
+                                                   "heading_cited_pl":  "19-148",
+                                                   "heading":  "Badges and Entrapment Act (BEA)â€”Pub. L. 19â€“148",
+                                                   "placement_identifier":  "/us/usc/t50/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/WN5hO9xx/374-public-law-19-148-badges-and-entrapment-act-bea"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  722
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-019-149",
+                     "public_law":  "19-149",
+                     "title":  "Public Law 19-149 | Criminal Justice Reform Act (CJRA)",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-019-149/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  3469,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-019-149/source/H.R. 1903 - Criminal Justice Reform Act (CJRA).pdf",
+                                              "format":  "pdf",
+                                              "size":  129606,
+                                              "sha256":  "500b762b1d151069f0ebebb856cd5d4efa2b3b5273578002598ddd39b246f2ad"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "Â§ 1116",
+                                                     "Â§1111",
+                                                     "Â§1113",
+                                                     "Â§1114",
+                                                     "Â§1117",
+                                                     "Â§1118",
+                                                     "Â§1119",
+                                                     "Â§1120",
+                                                     "Â§2113",
+                                                     "Â§3156",
+                                                     "Â§912",
+                                                     "Â§917"
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc18.xml",
+                                                   "note_id":  "rp-pl019149-codification",
+                                                   "public_law":  "19-149",
+                                                   "congress_from_id":  19,
+                                                   "seq_from_id":  149,
+                                                   "heading_cited_pl":  "19-149",
+                                                   "heading":  "Criminal Justice Reform Act (CJRA)â€”Pub. L. 19â€“149",
+                                                   "placement_identifier":  "/us/usc/t18/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/i1EkjA7B/377-public-law-19-149-criminal-justice-reform-act-cjra"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  747
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-019-150",
+                     "public_law":  "19-150",
+                     "title":  "Public Law 19-150 | Small Businesses Empowerment Act",
+                     "list_name":  "11th - 20th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "substantive HTML text",
+                     "law_txt_path":  "codification/laws/laws/PL-019-150/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  4964,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  true,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-019-150/source/rendered.html",
+                                              "format":  "html",
+                                              "size":  263429,
+                                              "sha256":  "fbc1e1994c266678bb8a4ebb2ebf757eac8214e27a12c5784b1aaa47e9ac9a47"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "establish",
+                                                         "insert",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc15.xml",
+                                                   "note_id":  "rp-pl019150-codification",
+                                                   "public_law":  "19-150",
+                                                   "congress_from_id":  19,
+                                                   "seq_from_id":  150,
+                                                   "heading_cited_pl":  "19-150",
+                                                   "heading":  "Small Businesses Empowerment Actâ€”Pub. L. 19â€“150",
+                                                   "placement_identifier":  "/us/usc/t15/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/jhmPVyUX/378-public-law-19-150-small-businesses-empowerment-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  726
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-019-151",
+                     "public_law":  "19-151",
+                     "title":  "Public Law 19-151 | Court Fees Prohibition and Protection Act (CTPPA)",
+                     "list_name":  "11th - 20th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-019-151/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  2459,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-019-151/source/H.R. 1909 - Court Fees Prohibition and Protection Act (CTPPA).pdf",
+                                              "format":  "pdf",
+                                              "size":  122854,
+                                              "sha256":  "9d9abbd5d0d6de82ec346813ca2e1cb6df9055597fd65d05357e1956d8024457"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "Â§1911shallberepealedinitsentirety",
+                                                     "Â§1913shallberepealedinitsentirety",
+                                                     "Â§1914shallberepealedinitsentirety",
+                                                     "Â§1916shallberepealedinitsentirety",
+                                                     "Â§1917shallberepealedinitsentirety",
+                                                     "Â§1918",
+                                                     "Â§1920shallberepealedinitsentirety",
+                                                     "Â§1921shallberepealedinitsentirety",
+                                                     "Â§1922shallberepealedinitsentirety",
+                                                     "Â§1923shallberepealedinitsentirety",
+                                                     "Â§1924shallberepealedinitsentirety",
+                                                     "Â§1925shallberepealedinitsentirety",
+                                                     "Â§1926shallberepealedinitsentirety",
+                                                     "Â§1930shallberepealedinitsentirety",
+                                                     "Â§1931shallberepealedinitsentirety",
+                                                     "Â§1932shallberepealedinitsentirety",
+                                                     "Â§2041shallberepealedinitsentirety",
+                                                     "Â§2042shallberepealedinitsentirety",
+                                                     "Â§2043shallberepealedinitsentirety",
+                                                     "Â§2045shallberepealedinitsentirety"
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc28.xml",
+                                                   "note_id":  "rp-pl019151-codification",
+                                                   "public_law":  "19-151",
+                                                   "congress_from_id":  19,
+                                                   "seq_from_id":  151,
+                                                   "heading_cited_pl":  "19-151",
+                                                   "heading":  "Court Fees Prohibition and Protection Act (CTPPA)â€”Pub. L. 19â€“151",
+                                                   "placement_identifier":  "/us/usc/t28/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/XqzHvpkk/379-public-law-19-151-court-fees-prohibition-and-protection-act-ctppa"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  782
+                                               }
+                                           ]
+                 }
+             ]
+}

@@ -1,0 +1,579 @@
+﻿{
+    "batch":  6,
+    "auditor":  "law-auditor-B",
+    "report_path":  "audit/primary/batch-06-02.json",
+    "law_count":  10,
+    "laws":  [
+                 {
+                     "law_id":  "PL-022-161",
+                     "public_law":  "22-161",
+                     "title":  "Public Law 22â€“161 | Second Chance Act",
+                     "list_name":  "21st - 30th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "substantive HTML text",
+                     "law_txt_path":  "codification/laws/laws/PL-022-161/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  5504,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  true,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-022-161/source/rendered.html",
+                                              "format":  "html",
+                                              "size":  277187,
+                                              "sha256":  "1b704ff83494917e07c17db1780b75afca505ffdd5701b628d9bc3265413f610"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "Title 18"
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "findings",
+                                                         "insert",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc50.xml",
+                                                   "note_id":  "rp-pl022161-codification",
+                                                   "public_law":  "22-161",
+                                                   "congress_from_id":  22,
+                                                   "seq_from_id":  161,
+                                                   "heading_cited_pl":  "22-161",
+                                                   "heading":  "Second Chance Actâ€”Pub. L. 22â€“161",
+                                                   "placement_identifier":  "/us/usc/t50/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/YowrejH0/649-public-law-22-161-second-chance-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  696
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-022-162",
+                     "public_law":  "22-162",
+                     "title":  "Public Law 22â€“162 | Judicial Fairness Act",
+                     "list_name":  "21st - 30th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-022-162/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  5618,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-022-162/source/S. 4 - Judicial Fairness Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  87131,
+                                              "sha256":  "082d2ca1c4d882514aa0c88593e810a432932264e4c33cb21d57f206414a63e0"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "Â§1253shallbeamendedtoread",
+                                                     "Â§1257shallbeamendedtoread",
+                                                     "Â§1291shallbeamendedtoread"
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc28.xml",
+                                                   "note_id":  "rp-pl022162-codification",
+                                                   "public_law":  "22-162",
+                                                   "congress_from_id":  22,
+                                                   "seq_from_id":  162,
+                                                   "heading_cited_pl":  "22-162",
+                                                   "heading":  "Judicial Fairness Actâ€”Pub. L. 22â€“162",
+                                                   "placement_identifier":  "/us/usc/t28/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/RrdvEidF/650-public-law-22-162-judicial-fairness-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  728
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-022-163",
+                     "public_law":  "22-163",
+                     "title":  "Public Law 22â€“163 | Employee\u0027s Bill of Rights",
+                     "list_name":  "21st - 30th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "substantive HTML text",
+                     "law_txt_path":  "codification/laws/laws/PL-022-163/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  5508,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  true,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-022-163/source/rendered.html",
+                                              "format":  "html",
+                                              "size":  269353,
+                                              "sha256":  "b4d9db5b52a9e53a83b10162f5c1a7e110d4cb4d24b75c662dd42ac3b9c2ac20"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "Title 5"
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "appropriat",
+                                                         "effective",
+                                                         "insert",
+                                                         "shorttitle",
+                                                         "sunset"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc05.xml",
+                                                   "note_id":  "rp-pl022163-codification",
+                                                   "public_law":  "22-163",
+                                                   "congress_from_id":  22,
+                                                   "seq_from_id":  163,
+                                                   "heading_cited_pl":  "22-163",
+                                                   "heading":  "Employee\u0027s Bill of Rightsâ€”Pub. L. 22â€“163",
+                                                   "placement_identifier":  "/us/usc/t5/s101",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/t8do1FiF/651-public-law-22-163-employees-bill-of-rights"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  711
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-022-164",
+                     "public_law":  "22-164",
+                     "title":  "Public Law 22â€“164 | Streamlining and Protecting American Security Act",
+                     "list_name":  "21st - 30th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-022-164/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  9748,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-022-164/source/S6 A Bill to Streamline and Protect American Security (SPAS).pdf",
+                                              "format":  "pdf",
+                                              "size":  103134,
+                                              "sha256":  "4341f52bd6784b9bb8a5a4e0c6132b413901dc6daa822761818711c114627c4b"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "establish",
+                                                         "severab"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc18.xml",
+                                                   "note_id":  "rp-pl022164-codification",
+                                                   "public_law":  "22-164",
+                                                   "congress_from_id":  22,
+                                                   "seq_from_id":  164,
+                                                   "heading_cited_pl":  "22-164",
+                                                   "heading":  "Streamlining and Protecting American Security Actâ€”Pub. L. 22â€“164",
+                                                   "placement_identifier":  "/us/usc/t18/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/nODDuKmV/652-public-law-22-164-streamlining-and-protecting-american-security-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  760
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-023-165",
+                     "public_law":  "23-165",
+                     "title":  "Public Law 23-165 | 2nd Amendment Protection Act (2APA)",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-023-165/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  2091,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-023-165/source/H.R. 2 - 2nd Amendment Protection Act (2APA).pdf",
+                                              "format":  "pdf",
+                                              "size":  121743,
+                                              "sha256":  "9349a531fc6dfb78a054c3058286e403937b52ab0b95d4729428a6e099fc8691"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "Â§ 930",
+                                                     "Â§930"
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc18.xml",
+                                                   "note_id":  "rp-pl023165-codification",
+                                                   "public_law":  "23-165",
+                                                   "congress_from_id":  23,
+                                                   "seq_from_id":  165,
+                                                   "heading_cited_pl":  "23-165",
+                                                   "heading":  "2nd Amendment Protection Act (2APA)â€”Pub. L. 23â€“165",
+                                                   "placement_identifier":  "/us/usc/t18/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/yI5aPZhd/653-public-law-23-165-2nd-amendment-protection-act-2apa"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  749
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-023-166",
+                     "public_law":  "23-166",
+                     "title":  "Public Law 23-166 | Amended Federal Employment Act of 2023",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "unrecoverable",
+                     "source_reason":  "Source deleted or not found",
+                     "law_txt_path":  "codification/laws/laws/PL-023-166/law.txt",
+                     "text_extracted":  false,
+                     "text_length":  0,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc05.xml",
+                                                   "note_id":  "rp-pl023166-codification",
+                                                   "public_law":  "23-166",
+                                                   "congress_from_id":  23,
+                                                   "seq_from_id":  166,
+                                                   "heading_cited_pl":  "23-166",
+                                                   "heading":  "Amended Federal Employment Act of 2023â€”Pub. L. 23â€“166",
+                                                   "placement_identifier":  "/us/usc/t5/s101",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/TBMABRDz/654-public-law-23-166-amended-federal-employment-act-of-2023"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  733
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-023-167",
+                     "public_law":  "23-167",
+                     "title":  "Public Law 23-167 | Uh Oh Act",
+                     "list_name":  "21st - 30th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-023-167/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  1685,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-023-167/source/H.R. 5 - Uh Oh Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  119318,
+                                              "sha256":  "ac6c8f80fc537d81653dd5545789853dd7c60f79b2d3e04e6b023070ec180307"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc50.xml",
+                                                   "note_id":  "rp-pl023167-codification",
+                                                   "public_law":  "23-167",
+                                                   "congress_from_id":  23,
+                                                   "seq_from_id":  167,
+                                                   "heading_cited_pl":  "23-167",
+                                                   "heading":  "Uh Oh Actâ€”Pub. L. 23â€“167",
+                                                   "placement_identifier":  "/us/usc/t50/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/0QSxd2G1/655-public-law-23-167-uh-oh-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  680
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-023-168",
+                     "public_law":  "23-168",
+                     "title":  "Public Law 23-168 | Affirming Innovation Act",
+                     "list_name":  "21st - 30th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-023-168/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  3409,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-023-168/source/H.R. 6 - Affirming Innovation Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  150103,
+                                              "sha256":  "22e70525b3ead94d2daace60f7f895085da2169c987e613f05cbf84e75c0bec4"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc29.xml",
+                                                   "note_id":  "rp-pl023168-codification",
+                                                   "public_law":  "23-168",
+                                                   "congress_from_id":  23,
+                                                   "seq_from_id":  168,
+                                                   "heading_cited_pl":  "23-168",
+                                                   "heading":  "Affirming Innovation Actâ€”Pub. L. 23â€“168",
+                                                   "placement_identifier":  "/us/usc/t29/s201",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/zyeEr3W3/658-public-law-23-168-affirming-innovation-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  734
+                                               },
+                                               {
+                                                   "file":  "usc29.xml",
+                                                   "note_id":  "rp-pl023168-208-prior",
+                                                   "public_law":  "23-168",
+                                                   "congress_from_id":  23,
+                                                   "seq_from_id":  168,
+                                                   "heading_cited_pl":  null,
+                                                   "heading":  "Prior Provisions",
+                                                   "placement_identifier":  "/us/usc/t29/s208/d",
+                                                   "declared_status":  "",
+                                                   "declared_codification":  "",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  611
+                                               },
+                                               {
+                                                   "file":  "usc29.xml",
+                                                   "note_id":  "rp-pl023168-208-usar",
+                                                   "public_law":  "23-168",
+                                                   "congress_from_id":  23,
+                                                   "seq_from_id":  168,
+                                                   "heading_cited_pl":  null,
+                                                   "heading":  "USAR Amendments",
+                                                   "placement_identifier":  "/us/usc/t29/s208/d",
+                                                   "declared_status":  "",
+                                                   "declared_codification":  "",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  366
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-023-169",
+                     "public_law":  "23-169",
+                     "title":  "Public Law 23-169 | Military Readiness Act",
+                     "list_name":  "21st - 30th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "substantive HTML text",
+                     "law_txt_path":  "codification/laws/laws/PL-023-169/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  5376,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  true,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-023-169/source/rendered.html",
+                                              "format":  "html",
+                                              "size":  245560,
+                                              "sha256":  "c6b08bab7a908f390755ff1eb86dd78db54113d4c1db2c7e57d579bda762a6ac"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "establish",
+                                                         "insert",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc10.xml",
+                                                   "note_id":  "rp-pl023169-codification",
+                                                   "public_law":  "23-169",
+                                                   "congress_from_id":  23,
+                                                   "seq_from_id":  169,
+                                                   "heading_cited_pl":  "23-169",
+                                                   "heading":  "Military Readiness Actâ€”Pub. L. 23â€“169",
+                                                   "placement_identifier":  "/us/usc/t10/s101/h",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/OKOHosp6/659-public-law-23-169-military-readiness-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  706
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-023-170",
+                     "public_law":  "23-170",
+                     "title":  "Public Law 23-170 | The Get Around DC Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "meaningful text",
+                     "law_txt_path":  "codification/laws/laws/PL-023-170/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  209,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  true,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-023-170/source/downloaded_file.html",
+                                              "format":  "html",
+                                              "size":  1789,
+                                              "sha256":  "226899dc90ab62c30bc6f1aa6fd4eeb9a37bbdad86f835a4e0331af743e99bdc"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc01.xml",
+                                                   "note_id":  "rp-pl023170-codification",
+                                                   "public_law":  "23-170",
+                                                   "congress_from_id":  23,
+                                                   "seq_from_id":  170,
+                                                   "heading_cited_pl":  "23-170",
+                                                   "heading":  "The Get Around DC Actâ€”Pub. L. 23â€“170",
+                                                   "placement_identifier":  "/us/usc/t1/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/Wo2lCnpC/660-public-law-23-170-the-get-around-dc-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  750
+                                               }
+                                           ]
+                 }
+             ]
+}

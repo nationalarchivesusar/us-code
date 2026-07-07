@@ -1,0 +1,604 @@
+﻿{
+    "batch":  1,
+    "auditor":  "law-auditor-A",
+    "report_path":  "audit/primary/batch-01-01.json",
+    "law_count":  10,
+    "laws":  [
+                 {
+                     "law_id":  "PL-001-001",
+                     "public_law":  "1-1",
+                     "title":  "Public Law 1-1 | Enactment of the U.S. Codes Act",
+                     "list_name":  "1st - 10th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-001-001/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  3797,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-001-001/source/S. 01 - Enactment of the U.S. Codes Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  145536,
+                                              "sha256":  "2d5c85a2c829e17c45cf8afd5911c84862543f4b385e0733a40b5ed5ba60fb85"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "TITLE 1",
+                                                     "TITLE 10",
+                                                     "TITLE 11",
+                                                     "TITLE 12",
+                                                     "TITLE 13",
+                                                     "TITLE 14",
+                                                     "TITLE 15",
+                                                     "TITLE 16",
+                                                     "TITLE 17",
+                                                     "TITLE 18",
+                                                     "TITLE 19",
+                                                     "TITLE 2",
+                                                     "TITLE 20",
+                                                     "TITLE 21",
+                                                     "TITLE 22",
+                                                     "TITLE 23",
+                                                     "TITLE 24",
+                                                     "TITLE 25",
+                                                     "TITLE 26",
+                                                     "TITLE 27",
+                                                     "TITLE 28",
+                                                     "TITLE 29",
+                                                     "TITLE 3",
+                                                     "TITLE 30",
+                                                     "TITLE 31",
+                                                     "TITLE 32",
+                                                     "TITLE 33",
+                                                     "TITLE 34",
+                                                     "TITLE 35",
+                                                     "TITLE 36",
+                                                     "TITLE 37",
+                                                     "TITLE 38",
+                                                     "TITLE 39",
+                                                     "TITLE 4",
+                                                     "TITLE 40",
+                                                     "TITLE 41",
+                                                     "TITLE 42",
+                                                     "TITLE 43",
+                                                     "TITLE 44",
+                                                     "TITLE 45",
+                                                     "TITLE 46",
+                                                     "TITLE 47",
+                                                     "TITLE 48",
+                                                     "TITLE 49",
+                                                     "TITLE 5",
+                                                     "TITLE 50",
+                                                     "TITLE 51",
+                                                     "TITLE 52",
+                                                     "TITLE 53",
+                                                     "TITLE 54",
+                                                     "TITLE 6",
+                                                     "TITLE 7",
+                                                     "TITLE 8",
+                                                     "TITLE 9"
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "establish",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc01.xml",
+                                                   "note_id":  "rp-pl001001-codification",
+                                                   "public_law":  "1-1",
+                                                   "congress_from_id":  1,
+                                                   "seq_from_id":  1,
+                                                   "heading_cited_pl":  "1-1",
+                                                   "heading":  "Enactment of the U.S. Codes Actâ€”Pub. L. 1â€“1",
+                                                   "placement_identifier":  "/us/usc/t1/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "Foundational enactment recognized as a statutory note; the existing repository remains the technical Code baseline.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/9pxHaJHM/2-public-law-1-1-enactment-of-the-us-codes-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "d0ae2f595c3f52938015db0ef981b4143cd881a7100c253750239db90c1f48ee"
+                                                                      ],
+                                                   "note_char_length":  4464
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-001-002",
+                     "public_law":  "1-2",
+                     "title":  "Public Law 1-2 | United States Bar Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-001-002/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  1488,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-001-002/source/S._2_United_States_Bar_Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  322647,
+                                              "sha256":  "3dab377567bcffc19280e810eec1720837d796763eeaeeec073aad49b5c21b80"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc03.xml",
+                                                   "note_id":  "rp-pl001002-codification",
+                                                   "public_law":  "1-2",
+                                                   "congress_from_id":  1,
+                                                   "seq_from_id":  2,
+                                                   "heading_cited_pl":  "1-2",
+                                                   "heading":  "United States Bar Actâ€”Pub. L. 1â€“2",
+                                                   "placement_identifier":  "/us/usc/t3/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/m93ng58Z/3-public-law-1-2-united-states-bar-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  691
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-001-003",
+                     "public_law":  "1-3",
+                     "title":  "Public Law 1-3 | Closing Cabinet Doors Act",
+                     "list_name":  "1st - 10th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-001-003/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  1994,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-001-003/source/S.007 - Closing Cabinet Doors.pdf",
+                                              "format":  "pdf",
+                                              "size":  893588,
+                                              "sha256":  "c2c20df12c6b68bdfc10f12c1b2f52276c0109dbce1eaf363f50a6dbe60f12ed"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc05.xml",
+                                                   "note_id":  "rp-pl001003-codification",
+                                                   "public_law":  "1-3",
+                                                   "congress_from_id":  1,
+                                                   "seq_from_id":  3,
+                                                   "heading_cited_pl":  "1-3",
+                                                   "heading":  "Closing Cabinet Doors Actâ€”Pub. L. 1â€“3",
+                                                   "placement_identifier":  "/us/usc/t5/s101",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable. No additional direct substitution was made where the enactment used only a blanket clause, contained a source defect, or was displaced by later legislation.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/HVuYY8wV/4-public-law-1-3-closing-cabinet-doors-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "724d361f50e41be4eaad12c875173b49479ec59b9fc75e82d50b87d6a9120240"
+                                                                      ],
+                                                   "note_char_length":  2873
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-001-004",
+                     "public_law":  "1-4",
+                     "title":  "Public Law 1-4 | Retracting of Resignations Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-001-004/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  1543,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-001-004/source/S. 4. - Retracting of Resignations Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  121434,
+                                              "sha256":  "81e7a7ff29b230b21b2c01895bd1575abaf18d67a3e99274a9bfe164e7f1814f"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "Chapter 43 of Title 18",
+                                                     "Title 18"
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc18.xml",
+                                                   "note_id":  "rp-pl001004-codification",
+                                                   "public_law":  "1-4",
+                                                   "congress_from_id":  1,
+                                                   "seq_from_id":  4,
+                                                   "heading_cited_pl":  "1-4",
+                                                   "heading":  "Retracting of Resignations Actâ€”Pub. L. 1â€“4",
+                                                   "placement_identifier":  "/us/usc/t18/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable. No additional direct substitution was made where the enactment used only a blanket clause, contained a source defect, or was displaced by later legislation.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/ejK08GQp/5-public-law-1-4-retracting-of-resignations-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "0bb711f21855c273259a4d2e20319a02c2b1e482e81574db53601d61e01ef07f"
+                                                                      ],
+                                                   "note_char_length":  2421
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-002-005",
+                     "public_law":  "2-5",
+                     "title":  "Public Law 2-5 | Judicial Efficiency Act (Keywords: Maximum, Minimum, Sentence, Sentencing)",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-002-005/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  3426,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-002-005/source/H.R.14 - Judicial Efficiency Act .pdf",
+                                              "format":  "pdf",
+                                              "size":  119020,
+                                              "sha256":  "2c3b41e1dc2d91351cb77d567df23eb465ac8b2d8f7605d4645ffbe3d1cfd4b3"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "Title 18"
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc18.xml",
+                                                   "note_id":  "rp-pl002005-codification",
+                                                   "public_law":  "2-5",
+                                                   "congress_from_id":  2,
+                                                   "seq_from_id":  5,
+                                                   "heading_cited_pl":  "2-5",
+                                                   "heading":  "Judicial Efficiency Act (Keywords: Maximum, Minimum, Sentence, Sentencing)â€”Pub. L. 2â€“5",
+                                                   "placement_identifier":  "/us/usc/t18/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable. No additional direct substitution was made where the enactment used only a blanket clause, contained a source defect, or was displaced by later legislation.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/TMfIY95T/112-public-law-2-5-judicial-efficiency-act-keywords-maximum-minimum-sentence-sentencing"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "bdaff04ae2eaf92c3ef47a155be1627391f5bff27314701cbe359a99a107a5e7"
+                                                                      ],
+                                                   "note_char_length":  4389
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-002-006",
+                     "public_law":  "2-6",
+                     "title":  "Public Law 2-6 | Shelby-Kabob Act of 2021",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-002-006/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  2470,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-002-006/source/H.R.2 - Shelby-Kabob Act of 2021 (1).pdf",
+                                              "format":  "pdf",
+                                              "size":  110908,
+                                              "sha256":  "c5eada7cdb9b67f121ed0f620f828ce8f8af9efdab3d12b380c2a51ce7766c17"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "Chapter 41 of Title 18",
+                                                     "Title 18"
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc18.xml",
+                                                   "note_id":  "rp-pl002006-codification",
+                                                   "public_law":  "2-6",
+                                                   "congress_from_id":  2,
+                                                   "seq_from_id":  6,
+                                                   "heading_cited_pl":  "2-6",
+                                                   "heading":  "Shelby-Kabob Act of 2021â€”Pub. L. 2â€“6",
+                                                   "placement_identifier":  "/us/usc/t18/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable. No additional direct substitution was made where the enactment used only a blanket clause, contained a source defect, or was displaced by later legislation.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/5Pv3Uu5p/1-public-law-2-6-shelby-kabob-act-of-2021"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "0a1880d6e475b73694aea982357123b1f052fb299eedd26dd4180154d9401730"
+                                                                      ],
+                                                   "note_char_length":  3358
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-002-007",
+                     "public_law":  "2-7",
+                     "title":  "Public Law 2-7 | Court of Appeals Temporary Suspension Act of 2021",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-002-007/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  2269,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-002-007/source/S. 7 - Court of Appeals Temporary Suspension Act of 2021.pdf",
+                                              "format":  "pdf",
+                                              "size":  73577,
+                                              "sha256":  "630632ed61ac87c5cb386ff362ada84ff0489e2ba6afb1b49ade21dce02cfff2"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc28.xml",
+                                                   "note_id":  "rp-pl002007-codification",
+                                                   "public_law":  "2-7",
+                                                   "congress_from_id":  2,
+                                                   "seq_from_id":  7,
+                                                   "heading_cited_pl":  "2-7",
+                                                   "heading":  "Court of Appeals Temporary Suspension Act of 2021â€”Pub. L. 2â€“7",
+                                                   "placement_identifier":  "/us/usc/t28/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/BBd9T4W9/6-public-law-2-7-court-of-appeals-temporary-suspension-act-of-2021"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "47b0dc6cd43c75c4219f839057fc95e651ba50da444040bce1feb7b52b4975d0"
+                                                                      ],
+                                                   "note_char_length":  2988
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-002-008",
+                     "public_law":  "2-8",
+                     "title":  "Public Law 2-8 | National Security Act of 2021",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-002-008/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  11695,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-002-008/source/H.R.6 - National Security Act of 2021 .pdf",
+                                              "format":  "pdf",
+                                              "size":  129597,
+                                              "sha256":  "939d3dac8a37f95f2dccb4a09462113e43cf16c24175af2f9ee4fbddf140f23c"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "appropriat",
+                                                         "effective",
+                                                         "establish",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc50.xml",
+                                                   "note_id":  "rp-pl002008-codification",
+                                                   "public_law":  "2-8",
+                                                   "congress_from_id":  2,
+                                                   "seq_from_id":  8,
+                                                   "heading_cited_pl":  "2-8",
+                                                   "heading":  "National Security Act of 2021â€”Pub. L. 2â€“8",
+                                                   "placement_identifier":  "/us/usc/t50/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/ZKKurvQq/7-public-law-2-8-national-security-act-of-2021"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "a36aee0d517da4d6f09807f0edb85e9db4f947afa17482e6682fd1a9ee7c21bd"
+                                                                      ],
+                                                   "note_char_length":  12419
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-002-009",
+                     "public_law":  "2-9",
+                     "title":  "Public Law 2-9 | District of Columbia City Charter",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-002-009/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  14734,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-002-009/source/District of Columbia City Charter (1).pdf",
+                                              "format":  "pdf",
+                                              "size":  112454,
+                                              "sha256":  "1824ce9cc4b8406cd0f7b701b9e14bced28b089ef8e9f47fefaa0e464524d76a"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "appropriat",
+                                                         "establish",
+                                                         "severab"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc40.xml",
+                                                   "note_id":  "rp-pl002009-codification",
+                                                   "public_law":  "2-9",
+                                                   "congress_from_id":  2,
+                                                   "seq_from_id":  9,
+                                                   "heading_cited_pl":  "2-9",
+                                                   "heading":  "District of Columbia City Charterâ€”Pub. L. 2â€“9",
+                                                   "placement_identifier":  "/us/usc/t40/s101/4",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/Pwy7qyo8/11-public-law-2-9-district-of-columbia-city-charter"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  767
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-002-010",
+                     "public_law":  "2-10",
+                     "title":  "Public Law 2-10 | Amendment to the District of Columbia City Charter",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-002-010/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  1385,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-002-010/source/H.R.8 - Amendment to the District of Columbia City Charter.pdf",
+                                              "format":  "pdf",
+                                              "size":  104353,
+                                              "sha256":  "b49b33b258e337777f75c8cc6d2bd0420c04798712a9a49eb8745e1cdaaf500c"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "amend",
+                                                         "effective",
+                                                         "repeal",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc40.xml",
+                                                   "note_id":  "rp-pl002010-codification",
+                                                   "public_law":  "2-10",
+                                                   "congress_from_id":  2,
+                                                   "seq_from_id":  10,
+                                                   "heading_cited_pl":  "2-10",
+                                                   "heading":  "Amendment to the District of Columbia City Charterâ€”Pub. L. 2â€“10",
+                                                   "placement_identifier":  "/us/usc/t40/s101/4",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/b4JkZ7ps/8-public-law-2-10-amendment-to-the-district-of-columbia-city-charter"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "c8be40e5e2065bf78aea230e8959245699e5548911741a9f5f91463266a46f57"
+                                                                      ],
+                                                   "note_char_length":  2160
+                                               }
+                                           ]
+                 }
+             ]
+}
