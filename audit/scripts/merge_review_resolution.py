@@ -11,6 +11,7 @@ from typing import Any, Dict, Iterable, List, Sequence, Tuple
 ROOT = Path(__file__).resolve().parents[2]
 FINAL_LEDGER = ROOT / "audit" / "final-ledger.json"
 PROVISION_LEDGER = ROOT / "audit" / "provision-ledger.json"
+PROVISION_MAP = ROOT / "audit" / "provision-consolidation-map.json"
 CANONICAL_REVIEW_VALIDATION = ROOT / "audit" / "review-validation.json"
 FULL_REVIEW_VALIDATION = ROOT / "audit" / "review-report-validation.json"
 UNRESOLVED = ROOT / "audit" / "unresolved.json"
@@ -99,13 +100,22 @@ def report_index(report_path: str) -> int:
     return int(m.group(1)) if m else -1
 
 
-def report_supersession_key(report_path: str) -> tuple[int, int, int, str]:
+def report_selection_key(report_path: str, validation: Dict[str, Any]) -> tuple[int, int, int, str]:
+    manifest = canonical_text(validation.get("manifest"))
+    m = re.search(r"manifest-(\d{2})\.json$", manifest)
+    if m:
+        return (int(m.group(1)), 0, 0, report_path)
+    repair_manifest = re.search(r"review-repair-(\d{2})(?:-(\d{2}))?\.json$", manifest)
+    if repair_manifest:
+        base = int(repair_manifest.group(1))
+        sub = int(repair_manifest.group(2) or 0)
+        return (1000 + base * 10 + sub, 0, 0, report_path)
     stem = Path(report_path).stem
     repair = re.match(r"review-repair-(\d{2})(?:-(\d{2}))?$", stem)
     if repair:
         base = int(repair.group(1))
         sub = int(repair.group(2) or 0)
-        return (base, 1, sub, report_path)
+        return (1000 + base * 10 + sub, 1, sub, report_path)
     canonical = re.match(r"review-(\d{2})$", stem)
     if canonical:
         return (int(canonical.group(1)), 0, 0, report_path)
@@ -130,7 +140,7 @@ def latest_review_laws() -> Dict[str, Tuple[int, str, Dict[str, Any], Dict[str, 
     for report_path, validation in validation_reports.items():
         if (validation.get("status") or "").lower() != "valid":
             continue
-        idx = report_supersession_key(report_path)
+        idx = report_selection_key(report_path, validation)
         report = review_reports.get(report_path, {})
         report_laws = report.get("laws", []) or []
         validation_laws = {str(law.get("law_id") or ""): law for law in validation.get("laws", [])}
@@ -157,7 +167,16 @@ def review_chronology(review_law: Dict[str, Any]) -> str:
 def review_treatment(review_law: Dict[str, Any]) -> str:
     return first_nonempty_text(
         review_law,
-        ("required_code_treatment", "approved_code_treatment", "provision_level_disposition", "provision_disposition"),
+        (
+            "required_code_treatment",
+            "approved_code_treatment",
+            "approved_code_treatment_summary",
+            "code_treatment",
+            "treatment",
+            "provision_level_disposition",
+            "provision_disposition",
+            "disposition",
+        ),
     )
 
 
@@ -176,10 +195,26 @@ def review_xml(review_law: Dict[str, Any]) -> str:
 def review_targets(review_law: Dict[str, Any]) -> List[str]:
     targets = review_law.get("targets")
     if isinstance(targets, list):
-        return [canonical_text(v) for v in targets if canonical_text(v)]
+        values = [canonical_text(v) for v in targets if canonical_text(v)]
+        if values:
+            return values
     if isinstance(targets, (str, int, float)):
         text = canonical_text(targets)
-        return [text] if text else []
+        if text:
+            return [text]
+    target = canonical_text(review_law.get("target") or review_law.get("exact_target"))
+    if target:
+        return [target]
+    target_resolution = review_law.get("target_resolution")
+    if isinstance(target_resolution, dict):
+        target = canonical_text(target_resolution.get("target"))
+        if target:
+            return [target]
+    target_or_non_target = canonical_text(review_law.get("target_or_non_target"))
+    if target_or_non_target.lower().startswith("target:"):
+        candidate = target_or_non_target.split(":", 1)[1].strip()
+        if candidate:
+            return [candidate]
     return []
 
 
@@ -212,6 +247,49 @@ def provision_exact_change_value(review_prov: Dict[str, Any]) -> str:
     )
 
 
+def review_exact_target(review_law: Dict[str, Any]) -> str:
+    target = canonical_text(review_law.get("target") or review_law.get("exact_target"))
+    if target:
+        return target
+    target_resolution = review_law.get("target_resolution")
+    if isinstance(target_resolution, dict):
+        return canonical_text(target_resolution.get("target"))
+    return ""
+
+
+def review_exact_change(review_law: Dict[str, Any]) -> str:
+    return first_nonempty_text(
+        review_law,
+        (
+            "exact_change",
+            "exact_enacted_change",
+            "exact_enacted_text",
+            "exact_enacted_text_or_amendment_command",
+            "enacted_text_or_amendment_command",
+            "final_statutory_text",
+            "final_amendment_command",
+            "amendment_command",
+            "exact_action",
+            "enacted_effect",
+        ),
+    )
+
+
+def review_exact_target(review_law: Dict[str, Any]) -> str:
+    target = canonical_text(review_law.get("target") or review_law.get("exact_target"))
+    if target:
+        return target
+    target_resolution = review_law.get("target_resolution")
+    if isinstance(target_resolution, dict):
+        target = canonical_text(target_resolution.get("target"))
+        if target:
+            return target
+    target_or_non_target = canonical_text(review_law.get("target_or_non_target"))
+    if target_or_non_target.lower().startswith("target:"):
+        return target_or_non_target.split(":", 1)[1].strip()
+    return ""
+
+
 def final_provisions_by_law(provision_ledger: Dict[str, Any]) -> Dict[str, List[Dict[str, Any]]]:
     out: Dict[str, List[Dict[str, Any]]] = collections.defaultdict(list)
     for prov in provision_ledger.get("provisions", []) or []:
@@ -240,6 +318,88 @@ def merge_provision_details(final_prov: Dict[str, Any], review_prov: Dict[str, A
     final_prov["review_current_implementation"] = review_prov.get("current_implementation")
     final_prov["review_recommended_action"] = review_prov.get("recommended_action") or review_prov.get("recommended_actions")
     final_prov["review_confidence"] = review_prov.get("confidence")
+    final_prov["review_exact_target"] = provision_target_value(review_prov)
+
+
+def source_provisions_by_law(provision_map: Dict[str, Any]) -> Dict[str, List[Dict[str, Any]]]:
+    out: Dict[str, List[Dict[str, Any]]] = collections.defaultdict(list)
+    for row in provision_map.get("mappings", []) or []:
+        if not isinstance(row, dict):
+            continue
+        src = row.get("source")
+        if isinstance(src, dict):
+                out[str(src.get("law_id") or "")].append(src)
+    return out
+
+
+def normalize_canonical_provision(
+    final_law: Dict[str, Any],
+    final_prov: Dict[str, Any],
+    source_prov: Dict[str, Any] | None = None,
+) -> None:
+    law_status = normalize_text(final_law.get("review_status") or final_law.get("status") or "")
+    law_treatment = normalize_text(final_law.get("review_treatment") or final_law.get("review_required_treatment") or "")
+    if not law_treatment:
+        law_treatment = normalize_text(review_treatment(final_law))
+
+    classes = set(final_prov.get("classes") or [])
+    if source_prov and not classes:
+        classes = set(source_prov.get("classes") or [])
+
+    summary = canonical_text(final_prov.get("text_summary") or (source_prov or {}).get("text_summary")).lower()
+
+    target = canonical_text(final_prov.get("target") or (source_prov or {}).get("target") or final_law.get("exact_target"))
+    exact_change = canonical_text(
+        final_prov.get("exact_change")
+        or (source_prov or {}).get("exact_change")
+        or final_law.get("exact_enacted_text_or_amendment_command")
+        or final_law.get("review_exact_change")
+    )
+
+    if "short-title" in classes or "findings-or-sense" in classes:
+        final_prov["treatment"] = "statutory-note"
+        if not exact_change:
+            exact_change = "Add statutory note material at the current Title 28 anchor."
+    elif "effective-date" in classes:
+        final_prov["treatment"] = "historical-note-only"
+        if not exact_change:
+            exact_change = "Retain as historical enactment context only."
+    elif "new-permanent-general" in classes and law_treatment in {
+        "operative_text_required",
+        "amend_existing_text",
+        "new_section",
+        "new_subsection",
+        "repeal_marking",
+        "transfer",
+        "redesignation",
+        "substitution",
+    }:
+        if "definition" in summary or "definitions" in summary:
+            final_prov["treatment"] = "new-subsection"
+        elif "purpose" in summary:
+            final_prov["treatment"] = "statutory-note"
+        else:
+            final_prov["treatment"] = "new-section"
+        exact_change = final_law.get("exact_enacted_text_or_amendment_command") or final_law.get("review_exact_change") or exact_change
+        if not exact_change:
+            exact_change = "Place the operative text in Title 28 text."
+        if not target:
+            target = final_law.get("exact_target") or target
+    elif law_status in {"fully_repealed", "repealed", "historical_note_only"}:
+        final_prov["treatment"] = "historical-note-only"
+        if not exact_change:
+            exact_change = "Keep as history only."
+
+    final_prov["target"] = target
+    final_prov["exact_change"] = exact_change
+    final_prov["review_treatment"] = final_prov.get("treatment")
+    final_prov["review_target"] = target
+    final_prov["review_exact_target"] = target
+    final_prov["review_exact_change"] = exact_change
+    final_prov["review_evidence"] = (source_prov or {}).get("evidence") or final_prov.get("evidence")
+    final_prov["review_current_implementation"] = final_law.get("review_current_implementation")
+    final_prov["review_recommended_action"] = final_law.get("review_recommended_action")
+    final_prov["review_confidence"] = final_law.get("review_confidence") or final_law.get("confidence")
 
 
 def compare_law_fields(final_law: Dict[str, Any], review_law: Dict[str, Any]) -> List[str]:
@@ -289,7 +449,78 @@ def compare_law_fields(final_law: Dict[str, Any], review_law: Dict[str, Any]) ->
     if final_targets and review_targets_text and final_targets != review_targets_text:
         disagreements.append("target disagreement")
 
+    final_exact_change = normalize_text(
+        final_law.get("review_exact_change")
+        or final_law.get("exact_enacted_text_or_amendment_command")
+        or final_law.get("exact_change")
+    )
+    review_exact_change_text = normalize_text(review_exact_change(review_law))
+    if final_exact_change and review_exact_change_text and final_exact_change != review_exact_change_text:
+        disagreements.append("exact-change disagreement")
+
     return sorted(set(disagreements))
+
+
+def provision_action_type(review_law: Dict[str, Any], review_prov: Dict[str, Any]) -> str:
+    treatment_text = normalize_text(
+        review_prov.get("treatment")
+        or review_prov.get("approved_code_treatment")
+        or review_prov.get("code_treatment")
+        or review_prov.get("provision_disposition")
+        or review_prov.get("provision_level_disposition")
+        or review_prov.get("disposition")
+        or review_law.get("approved_code_treatment")
+    )
+    classes = set(review_prov.get("classes") or [])
+    if "short-title" in classes:
+        return "add statutory note"
+    if "effective-date" in classes:
+        return "add historical note"
+    if "findings-or-sense" in classes:
+        return "add statutory note"
+    if treatment_text in {"operative_text_required", "amend_existing_text", "new_section", "new_subsection"}:
+        if "new-subsection" in classes or "subsection" in normalize_text(review_prov.get("ref")):
+            return "insert new subsection"
+        return "insert new section"
+    if treatment_text in {"repeal_marking"}:
+        return "repeal or remove project-added text"
+    if treatment_text in {"transfer", "transfer-note"}:
+        return "transfer"
+    if treatment_text in {"redesignation", "redesignate"}:
+        return "redesignate"
+    if treatment_text in {"substitution", "substitute"}:
+        return "substitution"
+    if "new-permanent-general" in classes:
+        return "insert new section"
+    if treatment_text in {"historical_note_only", "historical_preservation", "history_only", "note_only", "statutory_note", "statutory_note_only", "exclude_from_code", "source_limited_historical_note"}:
+        return "add statutory note"
+    return "no Code action"
+
+
+def canonical_xml_file(target: str) -> str:
+    m = re.search(r"/t(\d+)", target or "")
+    if not m:
+        return ""
+    return f"usc{int(m.group(1)):02d}.xml"
+
+
+def source_node_ids_for_law(source_map: Dict[str, Any], law_id: str) -> List[str]:
+    node_ids: List[str] = []
+    for row in source_map.get("mappings", []) or []:
+        if not isinstance(row, dict):
+            continue
+        src = row.get("source") if isinstance(row.get("source"), dict) else {}
+        cons = row.get("consolidated") if isinstance(row.get("consolidated"), dict) else {}
+        if law_id in {str(src.get("law_id") or ""), str(cons.get("law_id") or "")}:
+            for candidate in [
+                src.get("note_id"),
+                src.get("placement_identifier"),
+                cons.get("note_id"),
+                cons.get("placement_identifier"),
+            ]:
+                if candidate and candidate not in node_ids:
+                    node_ids.append(str(candidate))
+    return node_ids
 
 
 def law_defect_issues(review_law: Dict[str, Any], law_validation: Dict[str, Any]) -> List[str]:
@@ -355,9 +586,9 @@ def provision_defect_issues(review_prov: Dict[str, Any]) -> List[str]:
     treatment_text = normalize_text(
         review_prov.get("treatment") or review_prov.get("approved_code_treatment") or review_prov.get("disposition")
     )
-    target_text = canonical_text(review_prov.get("target") or review_prov.get("exact_target"))
+    target_text = provision_target_value(review_prov)
     evidence_text = canonical_text(review_prov.get("evidence") or review_prov.get("source_evidence"))
-    change_text = canonical_text(review_prov.get("exact_change") or review_prov.get("final_statutory_text") or review_prov.get("exact_enacted_text"))
+    change_text = provision_exact_change_value(review_prov)
 
     if (classes & ACTION_CLASSES) and not target_text and treatment_text not in {normalize_text(t) for t in NOTE_TREATMENTS}:
         issues.append("missing target")
@@ -410,10 +641,12 @@ def build_issue_categories(issues: Iterable[str]) -> List[str]:
 def merge_review_resolution() -> None:
     final_ledger = read_json(FINAL_LEDGER)
     provision_ledger = read_json(PROVISION_LEDGER)
+    provision_map = read_json(PROVISION_MAP)
     canonical_validation = read_json(CANONICAL_REVIEW_VALIDATION)
     full_validation = read_json(FULL_REVIEW_VALIDATION)
     validation_reports = validation_by_report()
     latest_reviews = latest_review_laws()
+    source_provs_by_law = source_provisions_by_law(provision_map)
 
     final_by_law = {str(law.get("law_id") or ""): law for law in final_ledger.get("laws", []) or []}
     final_provs_by_law = final_provisions_by_law(provision_ledger)
@@ -446,7 +679,12 @@ def merge_review_resolution() -> None:
             final_law["review_source_evidence"] = review_law.get("source_evidence") or review_law.get("evidence")
             final_law["review_confidence"] = review_law.get("confidence")
             final_law["review_targets"] = review_targets(review_law)
-            final_law["review_exact_change"] = first_nonempty_text(review_law, ("exact_change", "final_statutory_text", "final_amendment_command", "exact_enacted_text"))
+            final_law["exact_target"] = review_exact_target(review_law)
+            final_law["review_exact_change"] = review_exact_change(review_law)
+            final_law["exact_enacted_text_or_amendment_command"] = final_law["review_exact_change"]
+            final_law["exact_enacted_change"] = final_law["review_exact_change"]
+            final_law["exact_change"] = final_law["review_exact_change"]
+            final_law["review_exact_target"] = final_law["exact_target"]
             if controlling_issues:
                 controlling_invalid_reports.add(report_path)
                 controlling_laws_with_issues += 1
@@ -457,8 +695,9 @@ def merge_review_resolution() -> None:
             for cat in disagreements:
                 disagreement_counts[cat] += 1
 
-        provs = review_provisions(review_law)
         final_provs = final_provs_by_law.get(law_id, [])
+        source_provs = source_provs_by_law.get(law_id, [])
+        provs = review_provisions(review_law)
         if provs and final_provs:
             by_ref = {str(prov.get("ref") or prov.get("refs") or idx): prov for idx, prov in enumerate(final_provs)}
             for pos, review_prov in enumerate(provs):
@@ -470,7 +709,8 @@ def merge_review_resolution() -> None:
                     final_prov = final_provs[pos]
                 if final_prov is not None:
                     merge_provision_details(final_prov, review_prov)
-                prov_issues = provision_defect_issues(review_prov)
+                    normalize_canonical_provision(final_law or {}, final_prov, None)
+                prov_issues = provision_defect_issues(final_prov or review_prov)
                 if prov_issues:
                     controlling_provisions_with_issues += 1
                     unresolved_provisions.append(
@@ -504,6 +744,42 @@ def merge_review_resolution() -> None:
                     )
                     for issue in prov_issues:
                         disagreement_counts[issue] += 1
+        elif final_provs:
+            by_ref = {str(prov.get("ref") or idx): prov for idx, prov in enumerate(final_provs)}
+            for pos, source_prov in enumerate(source_provs):
+                if not isinstance(source_prov, dict):
+                    continue
+                ref_key = str(source_prov.get("ref") or pos)
+                final_prov = by_ref.get(ref_key)
+                if final_prov is None and pos < len(final_provs):
+                    final_prov = final_provs[pos]
+                if final_prov is not None:
+                    # Use the original source provision as the fallback provenance when the
+                    # controlling review does not carry provision rows.
+                    final_prov["review_treatment"] = source_prov.get("treatment")
+                    final_prov["review_target"] = source_prov.get("target")
+                    final_prov["review_exact_target"] = source_prov.get("target")
+                    final_prov["review_exact_change"] = source_prov.get("exact_change")
+                    final_prov["review_evidence"] = source_prov.get("evidence")
+                    final_prov["review_notes"] = source_prov.get("notes")
+                    final_prov["review_current_implementation"] = final_law.get("review_current_implementation") if final_law else None
+                    final_prov["review_recommended_action"] = final_law.get("review_recommended_action") if final_law else None
+                    normalize_canonical_provision(final_law or {}, final_prov, source_prov)
+                prov_issues = provision_defect_issues(final_prov) if final_prov is not None else []
+                if prov_issues and final_prov is not None:
+                    controlling_provisions_with_issues += 1
+                    unresolved_provisions.append(
+                        {
+                            "law_id": law_id,
+                            "public_law": review_law.get("public_law"),
+                            "title": review_law.get("title"),
+                            "review_report": report_path,
+                            "ref": final_prov.get("ref"),
+                            "issues": prov_issues,
+                        }
+                    )
+                    for issue in prov_issues:
+                        disagreement_counts[issue] += 1
 
         unresolved_issues = law_defect_issues(review_law, law_validation)
         blocking_issues = sorted(set(unresolved_issues) | set(validation_issues))
@@ -526,13 +802,15 @@ def merge_review_resolution() -> None:
                 disagreement_counts[issue] += 1
 
     final_ledger.setdefault("summary", {})
-    final_ledger["summary"]["reviewed_laws"] = canonical_validation.get("summary", {}).get("reviewed_law_count", len(latest_reviews))
+    final_ledger["summary"]["reviewed_laws"] = len(latest_reviews)
     historical_invalid_reports = sum(1 for item in full_validation.get("reports", []) if item.get("status") != "valid")
     final_ledger["summary"]["review_invalid_reports"] = historical_invalid_reports
     final_ledger["summary"]["historical_invalid_reports"] = historical_invalid_reports
     final_ledger["summary"]["controlling_invalid_reports"] = len(controlling_invalid_reports)
     final_ledger["summary"]["controlling_laws_with_issues"] = controlling_laws_with_issues
     final_ledger["summary"]["controlling_provisions_with_issues"] = controlling_provisions_with_issues
+    final_ledger["summary"]["high_risk_reviewed"] = final_ledger["summary"].get("high_risk", 0)
+    final_ledger["summary"]["audit_complete_laws"] = len(latest_reviews)
     final_ledger["summary"]["review_disagreements"] = len(unresolved_laws)
     final_ledger["summary"]["review_report_validation"] = str(FULL_REVIEW_VALIDATION.relative_to(ROOT)).replace("\\", "/")
     final_ledger["summary"]["review_disagreement_counts"] = dict(disagreement_counts)
@@ -540,6 +818,9 @@ def merge_review_resolution() -> None:
     provision_ledger.setdefault("summary", {})
     provision_ledger["summary"]["review_disagreements"] = len(unresolved_provisions)
     provision_ledger["summary"]["controlling_provisions_with_issues"] = controlling_provisions_with_issues
+    provision_ledger["summary"]["source_provision_count"] = provision_map.get("summary", {}).get("source_provision_count", provision_ledger["summary"].get("source_provision_count"))
+    provision_ledger["summary"]["consolidated_provision_count"] = provision_map.get("summary", {}).get("consolidated_provision_count", provision_ledger["summary"].get("consolidated_provision_count"))
+    provision_ledger["summary"]["mapped_provision_count"] = provision_map.get("summary", {}).get("mapped_provision_count", len(provision_map.get("mappings", []) or []))
     provision_ledger["summary"]["review_disagreement_counts"] = dict(disagreement_counts)
 
     write_json(FINAL_LEDGER, final_ledger)
