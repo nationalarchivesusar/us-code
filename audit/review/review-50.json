@@ -1,0 +1,1631 @@
+{
+  "batch": 9,
+  "auditor": "law-auditor-50",
+  "law_count": 19,
+  "source_manifest": "audit/manifests/manifest-50.json",
+  "output_path": "audit/review/review-50.json",
+  "reviewed_against": [
+    "audit/manifests/manifest-50.json",
+    "audit/review/review-38.json",
+    "codification/laws/laws/PL-034-251/law.txt",
+    "codification/laws/laws/PL-035-252/law.txt",
+    "codification/laws/laws/PL-035-254/law.txt",
+    "codification/laws/laws/PL-035-256/law.txt",
+    "codification/laws/laws/PL-036-256/law.txt",
+    "codification/laws/laws/PL-036-257/law.txt",
+    "codification/laws/laws/PL-036-258/law.txt",
+    "codification/laws/laws/PL-036-260/law.txt",
+    "codification/laws/laws/PL-037-261/law.txt",
+    "codification/laws/laws/PL-038-262/law.txt",
+    "codification/laws/laws/PL-038-263/law.txt",
+    "codification/laws/laws/PL-038-264/law.txt",
+    "codification/laws/laws/PL-038-265/law.txt",
+    "codification/laws/laws/PL-038-266/law.txt",
+    "codification/laws/laws/PL-039-267/law.txt",
+    "codification/laws/laws/PL-040-268/law.txt",
+    "codification/laws/laws/PL-041-269/law.txt",
+    "codification/laws/laws/PL-041-270/law.txt",
+    "codification/laws/laws/PL-041-271/law.txt",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-034-251",
+      "public_law": "34-251",
+      "title": "Public Law 34-251 | In-Game Sentencing Guidelines Bill",
+      "final_legal_status": "superseded",
+      "chronology_conclusion": "Later law PL-039-267 repeals PL-034-251 in full, so this enactment remains only historical.",
+      "approved_code_treatment": "historical-note-only",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Sections 1 through 3 are limited to the title, severability, and effective date."
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Defines the Title 18 sentencing framework and aggregate-sentence limits.",
+          "classes": [
+            "new-permanent-general",
+            "statutory-note-material"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 4 sets the sentencing caps and aggregate-sentence limits for the in-game framework."
+        }
+      ],
+      "current_xml_comparison": {
+        "assessment": "correct-in-baseline",
+        "placement": "/us/usc/t18/s1",
+        "detail": "The branch already treats this as superseded history; the remaining issue is cleanup of the quoted-content dump and Trello link."
+      },
+      "final_recommended_action": [
+        "Keep this enactment as historical note material only.",
+        "Do not revive it as live positive-law text.",
+        "Trim the quoted-content dump and remove the Trello link."
+      ],
+      "source_evidence": [
+        "Sections 1 through 3 are limited to the title, severability, and effective date. | Section 4 sets the sentencing caps and aggregate-sentence limits for the in-game framework."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-035-252",
+      "public_law": "35-252",
+      "title": "Public Law 35-252 | Magistrate Appointment Act of 2025",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The act remains operative as note-level statutory history; it amends PL 26-190 rather than a clean positive-law Code section.",
+      "approved_code_treatment": "statutory-note",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and purpose.",
+          "classes": [
+            "short-title",
+            "purpose"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 1 names the Act and Section 2 states the magistrate-judge purpose."
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Amends Section 106(c)(i) of Public Law 26-190.",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ],
+          "treatment": "statutory-note",
+          "target": "Public Law 26-190 section 106(c)(i)",
+          "exact_change": "Update the magistrate-appointment rule in PL 26-190 to require 30 days as a bar-certified individual, with the federal-bar suspension proviso.",
+          "evidence": "Section 3 says Section 106(c)(i) of Public Law 26-190 \"shall be amended to read as follows.\""
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Severability clause.",
+          "classes": [
+            "severability"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 4 preserves the remainder of the Act if any provision is invalid."
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "Effective date.",
+          "classes": [
+            "effective-date"
+          ],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 5 makes the Act effective upon enactment."
+        }
+      ],
+      "current_xml_comparison": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t28/s1",
+        "detail": "The branch keeps this as a note-only entry at a plausible Title 28 anchor, but it still carries a full-text dump and Trello link."
+      },
+      "final_recommended_action": [
+        "Keep the enactment as note history at the closest Title 28 anchor.",
+        "Do not fabricate a positive-law section rewrite.",
+        "Remove the quoted-content dump and Trello link."
+      ],
+      "source_evidence": [
+        "Section 1 names the Act and Section 2 states the magistrate-judge purpose. | Section 3 says Section 106(c)(i) of Public Law 26-190 \"shall be amended to read as follows.\""
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-035-254",
+      "public_law": "35-254",
+      "title": "Public Law 35-254 | An Act to repeal Public Law 28-205",
+      "final_legal_status": "current",
+      "chronology_conclusion": "This is the operative repealer for PL 28-205 and no later law in the reviewed materials undoes that repeal.",
+      "approved_code_treatment": "repeal-marking",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and findings about Public Law 28-205.",
+          "classes": [
+            "short-title",
+            "findings-or-sense"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The bill says it may be cited as \"An Act to repeal Public Law 28-205\" and explains the Council failure."
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Repeals Public Law 28-205 in full.",
+          "classes": [
+            "repeal"
+          ],
+          "treatment": "repeal-marking",
+          "target": "Public Law 28-205",
+          "exact_change": "Repeal Public Law 28-205 in its entirety.",
+          "evidence": "The source states that Public Law 28-205 \"is hereby repealed.\""
+        }
+      ],
+      "current_xml_comparison": {
+        "assessment": "incorrectly-implemented",
+        "placement": "/us/usc/t5/s101",
+        "detail": "The branch misclassifies the repealer as history-only instead of recording the repeal of PL 28-205 as the operative enactment."
+      },
+      "final_recommended_action": [
+        "Retain the enactment as a current repealer law.",
+        "Mark Public Law 28-205 fully repealed.",
+        "Remove the quoted-content dump and Trello link."
+      ],
+      "source_evidence": [
+        "The bill says it may be cited as \"An Act to repeal Public Law 28-205\" and explains the Council failure. | The source states that Public Law 28-205 \"is hereby repealed.\""
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-035-256",
+      "public_law": "35-256",
+      "title": "Public Law 35-256 | Workers First Act of 2025",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The act remains operative, but the accessible text does not name a precise U.S. Code rewrite target for the tax-rate change.",
+      "approved_code_treatment": "statutory-note",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and definitions.",
+          "classes": [
+            "short-title",
+            "definitions"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The bill may be cited as the \"Workers First Act of 2025\" and defines the core terms."
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Reduces the income tax rate on American dollar income from 28 percent to 23 percent.",
+          "classes": [
+            "new-permanent-general",
+            "non-code"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The source says the tax rate \"shall be reduced from twenty-eight (28%) to twenty-three percent (23%).\""
+        },
+        {
+          "ref": "SEC 4-5",
+          "text_summary": "Purpose and limitations clauses.",
+          "classes": [
+            "findings-or-sense",
+            "uncodified-admin-direction"
+          ],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The text says no American shall be taxed above 23 percent under this bill."
+        },
+        {
+          "ref": "SEC 6",
+          "text_summary": "Immediate enactment clause.",
+          "classes": [
+            "effective-date"
+          ],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The bill shall take effect immediately after its passage."
+        }
+      ],
+      "current_xml_comparison": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t29/s201",
+        "detail": "The branch keeps the measure as a note-level entry at a plausible statutory anchor, but the full dump and Trello link remain and no exact Code target is identified."
+      },
+      "final_recommended_action": [
+        "Remove the quoted-content dump and Trello link.",
+        "Keep this as a statutory note unless a later source identifies a precise Code target.",
+        "Do not invent a codified target from the general tax-rate language."
+      ],
+      "source_evidence": [
+        "The bill may be cited as the \"Workers First Act of 2025\" and defines the core terms. | The source says the tax rate \"shall be reduced from twenty-eight (28%) to twenty-three percent (23%).\""
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-036-256",
+      "public_law": "36-256",
+      "title": "Public Law 36-256 | Commerce Dispersal Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The act is an operative structural reorganization that transfers Commerce and Labor functions rather than expiring or being repealed.",
+      "approved_code_treatment": "transfer-note",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and severability.",
+          "classes": [
+            "short-title",
+            "severability"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The act may be cited as the \"Commerce Dispersal Act\" and includes severability."
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Dissolves Commerce and Labor and transfers its functions, enforcement, and related offices.",
+          "classes": [
+            "transfer",
+            "uncodified-admin-direction"
+          ],
+          "treatment": "transfer-note",
+          "target": "Department of Commerce and Labor and related successor offices",
+          "exact_change": "Transfer Commerce and Labor functions to State or Justice as specified in subsections (a) through (j).",
+          "evidence": "The source says the Department of Commerce and Labor \"shall be rendered inoperable\" and its functions \"transferred.\""
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Transfers the Copyright Office and Copyright Royalty Board functions to the Department of State and the D.C. district court.",
+          "classes": [
+            "transfer",
+            "uncodified-admin-direction"
+          ],
+          "treatment": "transfer-note",
+          "target": "Library of Congress / Copyright Office / Copyright Royalty Board",
+          "exact_change": "Move copyright administration out of the Library of Congress and into the Department of State, with CRB jurisdiction transferred to the D.C. district court.",
+          "evidence": "The source says the Copyright Office \"shall be transferred from the Library of Congress to the Department of State.\""
+        }
+      ],
+      "current_xml_comparison": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t15/s1",
+        "detail": "The branch has a subject-matter transfer note, but it still needs to be reduced to concise transfer history and cleaned of dump/Trello baggage."
+      },
+      "final_recommended_action": [
+        "Keep only a concise transfer note.",
+        "Remove the quoted-content dump and Trello link.",
+        "Do not convert the restructuring into permanent positive-law sections."
+      ],
+      "source_evidence": [
+        "The act may be cited as the \"Commerce Dispersal Act\" and includes severability. | The source says the Department of Commerce and Labor \"shall be rendered inoperable\" and its functions \"transferred.\""
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-036-257",
+      "public_law": "36-257",
+      "title": "Public Law 36-257 | Maritime Operations & Policy Overhaul Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The act is an ongoing corrective and transfer measure for maritime and Coast Guard policy, not a repealed enactment.",
+      "approved_code_treatment": "mixed: amendment-note + transfer-note",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, purpose, and severability.",
+          "classes": [
+            "short-title",
+            "findings-or-sense",
+            "severability"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The Act may be cited as the \"Maritime Operations & Policy Overhaul Act\" and includes severability."
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Amends the Streamlining and Protecting American Security Act section 6(m).",
+          "classes": [
+            "direct-amendment",
+            "amendment-note"
+          ],
+          "treatment": "amendment-note",
+          "target": "Streamlining and Protecting American Security Act, section 6(m)",
+          "exact_change": "Add the United States Coast Guard and subordinate military intelligence leadership to the listed heads.",
+          "evidence": "Section 6(m) \"shall be amended\" to list the Coast Guard and subordinate units."
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "Amends the Military Officer Commissioning Reform Act section 9(g).",
+          "classes": [
+            "direct-amendment",
+            "amendment-note"
+          ],
+          "treatment": "amendment-note",
+          "target": "Military Officer Commissioning Reform Act, section 9(g)",
+          "exact_change": "Add Coast Guard Commandant attendance and limited voting authority language.",
+          "evidence": "Section 9(g) \"shall be amended\" to add the Coast Guard Commandant paragraph."
+        },
+        {
+          "ref": "SEC 6",
+          "text_summary": "Amends the Military Justice Reform Act of 2024 to redefine Armed Services.",
+          "classes": [
+            "direct-amendment",
+            "amendment-note"
+          ],
+          "treatment": "amendment-note",
+          "target": "Military Justice Reform Act of 2024, section 4(a)",
+          "exact_change": "Redefine Armed Services to list the Army, Marine Corps, Air Force, Space Force, and Navy.",
+          "evidence": "Section 4(a) of the Military Justice Reform Act of 2024 \"shall be amended\" to redefine Armed Services."
+        },
+        {
+          "ref": "SEC 7-12",
+          "text_summary": "Contingent Coast Guard assumption of duties and maritime-security coordination.",
+          "classes": [
+            "transfer",
+            "uncodified-admin-direction",
+            "new-permanent-general"
+          ],
+          "treatment": "transfer-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The Coast Guard \"may assume\" duties and the Commandant serves as principal maritime security adviser."
+        }
+      ],
+      "current_xml_comparison": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t46/s101",
+        "detail": "The branch parks the measure in a maritime note, but it still needs cleanup and should remain a concise amendment/transfer history."
+      },
+      "final_recommended_action": [
+        "Keep the Coast Guard amendments as concise amendment notes.",
+        "Remove the quoted-content dump and Trello link.",
+        "Do not fabricate a positive-law Code rewrite from the uncodified operational directives."
+      ],
+      "source_evidence": [
+        "The Act may be cited as the \"Maritime Operations & Policy Overhaul Act\" and includes severability. | Section 6(m) \"shall be amended\" to list the Coast Guard and subordinate units."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-036-258",
+      "public_law": "36-258",
+      "title": "Public Law 36-258 | National Root Beer Day Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The holiday insertion is already effective and remains part of the federal-holiday list under 5 U.S.C. 6103(a).",
+      "approved_code_treatment": "amend-existing-text",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and enactment clause.",
+          "classes": [
+            "short-title",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The bill may be cited as the \"National Root Beer Day Act\" and takes effect immediately."
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Amends 5 U.S.C. 6103(a) by inserting National Root Beer Day after Memorial Day.",
+          "classes": [
+            "direct-amendment",
+            "insertion"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t5/s6103",
+          "exact_change": "Insert \"National Root Beer Day, June 17.\" after the Memorial Day clause in subsection (a).",
+          "evidence": "The source says 5 U.S.C. 6103(a) \"is amended by inserting after 'Memorial Day, the last Monday in May.'\""
+        }
+      ],
+      "current_xml_comparison": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t5/s6103",
+        "detail": "The 5 U.S.C. 6103(a) insertion is present in the branch and matches origin/main; only the collateral note wrapper at Title 5 needs cleanup."
+      },
+      "final_recommended_action": [
+        "Apply or retain the 5 U.S.C. 6103(a) insertion.",
+        "Remove the quoted-content dump and Trello link.",
+        "Keep the short-title and effective-date language only as a note."
+      ],
+      "source_evidence": [
+        "The bill may be cited as the \"National Root Beer Day Act\" and takes effect immediately. | The source says 5 U.S.C. 6103(a) \"is amended by inserting after 'Memorial Day, the last Monday in May.'\""
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-036-260",
+      "public_law": "36-260",
+      "title": "Public Law 36-260 | Fixing the District of Columbia Act of 2025",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The District transition act remains operative and governs the repeal, transfer, adoption, and amendment chain for the District-related laws it names.",
+      "approved_code_treatment": "mixed: repeal-marking + transfer-note + amendment-note",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, purpose, and findings.",
+          "classes": [
+            "short-title",
+            "findings-or-sense"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The act may be cited as the \"Fixing the District of Columbia Act of 2025\" and includes extensive findings."
+        },
+        {
+          "ref": "SEC 4(a)(i)-(vi)",
+          "text_summary": "Repeals Public Laws 16-120, 25-181, 29-213, 29-216, 30-223, and 32-231.",
+          "classes": [
+            "repeal"
+          ],
+          "treatment": "repeal-marking",
+          "target": "Public Laws 16-120, 25-181, 29-213, 29-216, 30-223, and 32-231",
+          "exact_change": "Repeal each listed public law in full.",
+          "evidence": "Section 4(a) says the listed laws \"shall be repealed in their entirety.\""
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "Definitions for the municipal-government transition.",
+          "classes": [
+            "definitions"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The section defines \"municipal government,\" \"Metropolitan Police Department,\" and related transition terms."
+        },
+        {
+          "ref": "SEC 6-9",
+          "text_summary": "Dissolves the municipal government, transfers MPD to DOJ, transfers DCFEMS to DHS, and reestablishes the D.C. Delegate.",
+          "classes": [
+            "transfer",
+            "local-district",
+            "uncodified-admin-direction"
+          ],
+          "treatment": "transfer-note",
+          "target": "District of Columbia municipal government, MPD, DCFEMS, and Delegate office",
+          "exact_change": "Transfer the named functions and offices exactly as described in sections 6 through 9.",
+          "evidence": "The source says the municipal government is \"hereby dissolved\" and the MPD and DCFEMS are \"hereby transferred.\""
+        },
+        {
+          "ref": "SEC 10",
+          "text_summary": "Adopts several District municipal laws into federal law with specified amendments.",
+          "classes": [
+            "new-permanent-general",
+            "amendment-note",
+            "local-district"
+          ],
+          "treatment": "amendment-note",
+          "target": "District Tort Act, DC Criminal Code, Protecting our Firefighters Act, and Fire Marshals Act",
+          "exact_change": "Adopt the named municipal laws into federal law and apply the stated textual amendments.",
+          "evidence": "It says those municipal laws are \"hereby adopted and enacted as federal law\" with listed amendments."
+        },
+        {
+          "ref": "SEC 11",
+          "text_summary": "Amends Public Law 22-156 to place MPD under DOJ authority and revise leadership language.",
+          "classes": [
+            "direct-amendment",
+            "amendment-note"
+          ],
+          "treatment": "amendment-note",
+          "target": "Public Law 22-156, sections 6(1)(1), 6(2)(1), and 6(2)(2)",
+          "exact_change": "Rewrite the listed subsections to make MPD a DOJ component with Attorney General-appointed leadership.",
+          "evidence": "Section 11 says the listed subsections of Public Law 22-156 \"shall be amended to read.\""
+        },
+        {
+          "ref": "SEC 12-13",
+          "text_summary": "Severability and enactment clause.",
+          "classes": [
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The act includes severability and says it takes effect immediately after enactment."
+        }
+      ],
+      "current_xml_comparison": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "The branch flattens multiple repeal, transfer, and amendment actions into one bloated note instead of preserving the specific actions, and the dump/Trello link remain."
+      },
+      "final_recommended_action": [
+        "Record the six repeals explicitly.",
+        "Add the listed transfer and amendment notes for the District transition provisions.",
+        "Remove the quoted-content dump and Trello link."
+      ],
+      "confidence": "high",
+      "source_evidence": [
+        "The act may be cited as the \"Fixing the District of Columbia Act of 2025\" and includes extensive findings. | Section 4(a) says the listed laws \"shall be repealed in their entirety.\""
+      ]
+    },
+    {
+      "law_id": "PL-037-261",
+      "public_law": "37-261",
+      "title": "Public Law 37-261 | Federal Criminal Code Act of 2025",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The act remains operative, but the attached criminal code text is not recoverable from the accessible source, so it can only be treated as source-limited history.",
+      "approved_code_treatment": "statutory-note",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The source says the bill may be cited as the \"Federal Criminal Code Act\" and becomes effective immediately upon enactment."
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Adopts the attached criminal code as the Federal Criminal Code to be enforced in the District of Columbia.",
+          "classes": [
+            "new-permanent-general",
+            "statutory-note-material",
+            "non-code"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t18/s1",
+          "exact_change": "Adopt the attached code as the operative Federal Criminal Code; the accessible source does not expose a section-by-section replacement text.",
+          "evidence": "The source says the attached Criminal Code \"shall act as the Federal Criminal Code.\""
+        }
+      ],
+      "current_xml_comparison": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t18/s1",
+        "detail": "The branch keeps a source-limited note at the title-18 anchor, but the attached code text is not recoverable and the Trello link should be removed."
+      },
+      "final_recommended_action": [
+        "Keep the law as a source-limited statutory note at the existing anchor.",
+        "Remove the Trello link.",
+        "Do not invent unattested attached-code text."
+      ],
+      "confidence": "medium",
+      "source_evidence": [
+        "The source says the bill may be cited as the \"Federal Criminal Code Act\" and becomes effective immediately upon enactment. | The source says the attached Criminal Code \"shall act as the Federal Criminal Code.\""
+      ]
+    },
+    {
+      "law_id": "PL-038-262",
+      "public_law": "38-262",
+      "title": "Public Law 38-262 | Fund the Government Act of 2026",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The act is temporary appropriations legislation with one repeal of PL 32-230 section 6; it should not become permanent Code text.",
+      "approved_code_treatment": "mixed: exclude-from-code + amendment-note",
+      "provisions": [
+        {
+          "ref": "SEC. I",
+          "text_summary": "Short title only.",
+          "classes": [
+            "short-title"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Fund the Government Act of 2026\""
+        },
+        {
+          "ref": "SEC. II",
+          "text_summary": "Definitions for department, appropriations, and emergency fund.",
+          "classes": [
+            "statutory-note-material"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Definitions\""
+        },
+        {
+          "ref": "SEC. III",
+          "text_summary": "Budget allocations and emergency fund appropriations.",
+          "classes": [
+            "appropriation",
+            "temporary"
+          ],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"hereby appropriated\""
+        },
+        {
+          "ref": "SEC. IV",
+          "text_summary": "Oversight and accountability for fund misuse.",
+          "classes": [
+            "uncodified-admin-direction"
+          ],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Oversight and Accountability\""
+        },
+        {
+          "ref": "SEC. V",
+          "text_summary": "General schedule pay scale table.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"General Schedule Pay Scale\""
+        },
+        {
+          "ref": "SEC. VI",
+          "text_summary": "Repeals section 6 of PL 32-230 and assigns schedule authority to OPM.",
+          "classes": [
+            "repeal",
+            "direct-amendment"
+          ],
+          "treatment": "amendment-note",
+          "target": "PL 32-230 sec. 6",
+          "exact_change": "Repeal section 6 of PL 32-230; vest schedule-defining authority in the Office of Personnel Management / human capital officer.",
+          "evidence": "\"shall be repealed in its entirety\""
+        },
+        {
+          "ref": "SEC. VII",
+          "text_summary": "Immediate enactment / effective date.",
+          "classes": [
+            "effective-date"
+          ],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"take effect immediately\""
+        }
+      ],
+      "current_xml_comparison": {
+        "assessment": "improperly-inserted-into-permanent-text",
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "The branch carries a full appropriations dump at a Title 40 anchor even though the act is temporary appropriations legislation."
+      },
+      "final_recommended_action": [
+        "Exclude the appropriations and oversight provisions from permanent Code text.",
+        "Replace the full dump with a brief historical note only if needed.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high",
+      "source_evidence": [
+        "\"Fund the Government Act of 2026\" | \"Definitions\""
+      ]
+    },
+    {
+      "law_id": "PL-038-263",
+      "public_law": "38-263",
+      "title": "Public Law 38-263 | National Security Act of 2026",
+      "final_legal_status": "current",
+      "chronology_conclusion": "This act is the first half of the CRACK Act replacement: it repeals titles I-IV and leaves titles V-VI alive until PL 38-264 finishes the replacement.",
+      "approved_code_treatment": "statutory-note",
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "text_summary": "Short title.",
+          "classes": [
+            "short-title"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"National Security Act of 2026\""
+        },
+        {
+          "ref": "SEC. 2",
+          "text_summary": "Findings and purposes.",
+          "classes": [
+            "findings-or-sense"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Findings and Purposes\""
+        },
+        {
+          "ref": "SEC. 3",
+          "text_summary": "Definitions for covered position, protected information, and related terms.",
+          "classes": [
+            "statutory-note-material"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"For purposes of this Act\""
+        },
+        {
+          "ref": "SEC. 4",
+          "text_summary": "Severability.",
+          "classes": [
+            "severability"
+          ],
+          "treatment": "savings-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"shall not be affected\""
+        },
+        {
+          "ref": "SEC. 5",
+          "text_summary": "Repeals CRACK Act titles I-IV; retains titles V-VI until this act takes effect.",
+          "classes": [
+            "repeal",
+            "savings",
+            "effective-date"
+          ],
+          "treatment": "amendment-note",
+          "target": "Pub. L. 3-21",
+          "exact_change": "Repeal titles I-IV of the CRACK Act of 2022; preserve titles V-VI only until the effective date of this act.",
+          "evidence": "\"are repealed\""
+        },
+        {
+          "ref": "TITLE I, SEC. 101-102",
+          "text_summary": "National Security Council governance and records preservation.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"shall be governed by 50 U.S.C. 3021\""
+        },
+        {
+          "ref": "TITLE II, SEC. 201-212",
+          "text_summary": "Eligibility determinations, notice, response, review, disclosure limits, and implementation safeguards.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"eligibility framework\""
+        },
+        {
+          "ref": "TITLE III, SEC. 301-302",
+          "text_summary": "Classification limits and in-camera / ex parte procedure safeguards.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"may not be designated or withheld\""
+        },
+        {
+          "ref": "TITLE IV, SEC. 401-402",
+          "text_summary": "Administrative subpoenas and security-sensitive licensing protections.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"administrative subpoenas\""
+        }
+      ],
+      "current_xml_comparison": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t50/s1",
+        "detail": "The branch note captures the CRACK Act national-security replacement, but it remains note-only and still carries dump/Trello cleanup."
+      },
+      "final_recommended_action": [
+        "Replace the full-text dump with a concise statutory note at the title-50 anchor.",
+        "Remove the Trello link.",
+        "If later codification is desired, split the act into actual Title 50 amendments instead of leaving the whole framework in note form."
+      ],
+      "confidence": "high",
+      "source_evidence": [
+        "\"National Security Act of 2026\" | \"Findings and Purposes\""
+      ]
+    },
+    {
+      "law_id": "PL-038-264",
+      "public_law": "38-264",
+      "title": "Public Law 38-264 | Organized Crime and Racketeering Modernization Act of 2026",
+      "final_legal_status": "current",
+      "chronology_conclusion": "This act completes the CRACK Act replacement by repealing titles V-VI after PL 38-263 already repealed titles I-IV.",
+      "approved_code_treatment": "statutory-note",
+      "provisions": [
+        {
+          "ref": "SEC. 1-4",
+          "text_summary": "Short title, findings/purposes, definitions, severability.",
+          "classes": [
+            "short-title",
+            "findings-or-sense",
+            "statutory-note-material",
+            "severability"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Short Title\""
+        },
+        {
+          "ref": "SEC. 5",
+          "text_summary": "Repeals CRACK Act titles V and VI, supplies savings, supersession, and immediate effective date.",
+          "classes": [
+            "repeal",
+            "savings",
+            "effective-date"
+          ],
+          "treatment": "amendment-note",
+          "target": "Pub. L. 3-21",
+          "exact_change": "Repeal titles V and VI of the CRACK Act of 2022 and preserve only the stated savings and effective-date rules.",
+          "evidence": "\"Titles V and VI\""
+        },
+        {
+          "ref": "SEC. 6",
+          "text_summary": "Prohibited racketeering conduct and attempt/conspiracy rule.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Conduct prohibited\""
+        },
+        {
+          "ref": "SEC. 7",
+          "text_summary": "Criminal penalties, forfeiture, and procedural protections.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Forfeiture\""
+        },
+        {
+          "ref": "SEC. 8",
+          "text_summary": "Civil remedies and no private damages action.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"No private right of action\""
+        },
+        {
+          "ref": "SEC. 9",
+          "text_summary": "Public-trust disqualification rules.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Public Trust Disqualification\""
+        },
+        {
+          "ref": "SEC. 10",
+          "text_summary": "Venue and expedited proceedings.",
+          "classes": [
+            "applicability"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Expedited Proceedings\""
+        }
+      ],
+      "current_xml_comparison": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t18/s1",
+        "detail": "The branch note captures the racketeering replacement, but it remains note-only and still carries dump/Trello cleanup."
+      },
+      "final_recommended_action": [
+        "Remove the quoted-content dump and Trello link from the note.",
+        "Keep the repeal history and racketeering framework as a concise statutory note unless and until a precise Title 18 placement is identified.",
+        "Mark the CRACK Act title repeal in the prior-law history trail."
+      ],
+      "confidence": "medium",
+      "source_evidence": [
+        "\"Short Title\" | \"Titles V and VI\""
+      ]
+    },
+    {
+      "law_id": "PL-038-265",
+      "public_law": "38-265",
+      "title": "Public Law 38-265 | Employment Clarity and Federal Workforce Modernization Act of 2026",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The act remains operative as a broad employment framework and repeals earlier employment statutes without self-expiring.",
+      "approved_code_treatment": "statutory-note",
+      "provisions": [
+        {
+          "ref": "SEC. 1-3",
+          "text_summary": "Short title, findings/purposes, and definitions.",
+          "classes": [
+            "short-title",
+            "findings-or-sense",
+            "statutory-note-material"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Employment Clarity and Federal Workforce Modernization Act of 2026\""
+        },
+        {
+          "ref": "SEC. 4",
+          "text_summary": "Repeals FERA24, the Intelligence Community Employment Act, and the redundant separation framework.",
+          "classes": [
+            "repeal",
+            "savings",
+            "non-code"
+          ],
+          "treatment": "amendment-note",
+          "target": "Pub. L. 26-191; Pub. L. 28-204; Pub. L. 21-123",
+          "exact_change": "Repeal the named prior laws to the extent stated and preserve only the non-revival / supersession rules.",
+          "evidence": "\"is repealed in its entirety\""
+        },
+        {
+          "ref": "SEC. 5-6",
+          "text_summary": "Severability and immediate effective date.",
+          "classes": [
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "savings-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"takes effect immediately\""
+        },
+        {
+          "ref": "TITLE I, SEC. 7-9",
+          "text_summary": "Private-sector at-will default, discrimination/retaliation limits, and notice rules.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"at-will default rule\""
+        },
+        {
+          "ref": "TITLE II, SEC. 10-15",
+          "text_summary": "Federal service categories, adverse-action process, provisional service, at-will agreements, emergency suspension, internal review, and judicial review.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"adverse action\""
+        },
+        {
+          "ref": "TITLE III, SEC. 16-17",
+          "text_summary": "Intelligence-community at-will exceptions and security-clearance access limits.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Security Clearance and Access\""
+        },
+        {
+          "ref": "TITLE IV, SEC. 18-18A",
+          "text_summary": "Dual-employment and conflict-of-interest restrictions with enforcement.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Conflicts of Interest\""
+        },
+        {
+          "ref": "TITLE V, SEC. 19-22",
+          "text_summary": "Bureau enforcement, private remedies, anti-retaliation, and limitation periods.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Enforcement Authority\""
+        }
+      ],
+      "current_xml_comparison": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t5/s101",
+        "detail": "The branch keeps the employment framework as a Title 5 note; no exact Code target is identified and the dump/Trello link remain."
+      },
+      "final_recommended_action": [
+        "Remove the full-text dump and Trello link.",
+        "Retain a concise statutory note at a Title 5 employment anchor.",
+        "If the repository later codifies this framework, move the direct amendments into actual Title 5 and related-title text."
+      ],
+      "confidence": "high",
+      "source_evidence": [
+        "\"Employment Clarity and Federal Workforce Modernization Act of 2026\" | \"is repealed in its entirety\""
+      ]
+    },
+    {
+      "law_id": "PL-038-266",
+      "public_law": "38-266",
+      "title": "Public Law 38-266 | Speedy Trial Act of 2026",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The act establishes continuing speedy-trial rules and directly amends PL 4-32; it does not self-terminate.",
+      "approved_code_treatment": "amend-existing-text",
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "text_summary": "Short title.",
+          "classes": [
+            "short-title"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Speedy Trial Act of 2026\""
+        },
+        {
+          "ref": "SEC. 2",
+          "text_summary": "Repeals prior speedy-trial provisions in PL 22-162 and the prior chaptered framework.",
+          "classes": [
+            "repeal"
+          ],
+          "treatment": "amendment-note",
+          "target": "Pub. L. 22-162 / 18 U.S. Code Chapter 208 Part II",
+          "exact_change": "Repeal the named prior speedy-trial provisions in full.",
+          "evidence": "\"shall be repealed in its entirety\""
+        },
+        {
+          "ref": "SEC. 3-5",
+          "text_summary": "Trial timing rules, sanctions, and filing/response deadlines.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"time limits\""
+        },
+        {
+          "ref": "SEC. 6(a)",
+          "text_summary": "Amends Public Law 4-32 section IV(b)(iii).",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "PL 4-32 sec. IV(b)(iii)",
+          "exact_change": "Replace the arrest-warrant execution text with the five-day nonappearance / Discord-or-ROBLOX-PM language.",
+          "evidence": "\"Section IV(b)(iii) of Public Law 4-32 shall be amended\""
+        },
+        {
+          "ref": "SEC. 6(b)",
+          "text_summary": "Amends Public Law 4-32 section B(b)(iii).",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "PL 4-32 sec. B(b)(iii)",
+          "exact_change": "Replace the bench-warrant execution text with the five-day nonappearance / Discord-or-ROBLOX-PM language.",
+          "evidence": "\"Section B(b)(iii) of Public Law 4-32 shall be amended\""
+        },
+        {
+          "ref": "SEC. 7-8",
+          "text_summary": "Severability and effective date.",
+          "classes": [
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"effective upon enactment\""
+        }
+      ],
+      "current_xml_comparison": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t18/s1",
+        "detail": "The branch note has not yet integrated the determinable amendment to PL 4-32 section IV(b)(iii) and B(b)(iii)."
+      },
+      "final_recommended_action": [
+        "Apply the SEC. 6 amendment text to the PL 4-32 history chain or the proper codified home of that enactment.",
+        "Replace the current note-only block with a concise history note.",
+        "Remove the Trello link and the full-text dump."
+      ],
+      "source_evidence": [
+        "\"Speedy Trial Act of 2026\" | \"shall be repealed in its entirety\""
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-039-267",
+      "public_law": "39-267",
+      "title": "Public Law 39-267 | Reform Sentencing Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "This act supersedes PL 34-251 and installs the replacement sentencing rules; the earlier in-game sentencing law becomes historical only.",
+      "approved_code_treatment": "amendment-note",
+      "provisions": [
+        {
+          "ref": "SEC. 1-4",
+          "text_summary": "Short title, purpose, severability, and definitions.",
+          "classes": [
+            "short-title",
+            "findings-or-sense",
+            "severability",
+            "statutory-note-material"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Reform Sentencing Act\""
+        },
+        {
+          "ref": "SEC. 5",
+          "text_summary": "Repeals Public Law 34-251 in its entirety.",
+          "classes": [
+            "repeal"
+          ],
+          "treatment": "amendment-note",
+          "target": "PL 34-251",
+          "exact_change": "Repeal PL 34-251 in full.",
+          "evidence": "\"shall be repealed in its entirety\""
+        },
+        {
+          "ref": "SEC. 6",
+          "text_summary": "Felony sentencing reform.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Felony Sentencing Reform\""
+        },
+        {
+          "ref": "SEC. 7",
+          "text_summary": "Misdemeanor sentencing reform.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Misdemeanor Sentencing Reform\""
+        },
+        {
+          "ref": "SEC. 8",
+          "text_summary": "Enforcement by law-enforcement officers.",
+          "classes": [
+            "uncodified-admin-direction"
+          ],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"ENFORCEMENT\""
+        },
+        {
+          "ref": "SEC. 9",
+          "text_summary": "Multi-charge sentencing cap.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"shall not be jailed for more than thirty (30) minutes\""
+        }
+      ],
+      "current_xml_comparison": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t18/s1",
+        "detail": "The live entry is still a note block at the Title 18 anchor, but the source is a real repeal-and-rewrite act; the branch keeps the note-only approach and still carries dump/Trello baggage."
+      },
+      "final_recommended_action": [
+        "Remove the full-text dump and Trello link from the current note.",
+        "Keep the repeal history for PL 34-251 as a concise note.",
+        "If the sentencing rules are meant to be permanent Code text, assign a precise Title 18 placement and codify them textually."
+      ],
+      "source_evidence": [
+        "\"Reform Sentencing Act\" | \"shall be repealed in its entirety\""
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-040-268",
+      "public_law": "40-268",
+      "title": "Public Law 40-268 | Big Beautiful Budget Act",
+      "final_legal_status": "temporary-operative",
+      "chronology_conclusion": "This is one-off appropriations legislation; its budget language is time-bound and should not be carried into permanent Code text.",
+      "approved_code_treatment": "exclude-from-code",
+      "provisions": [
+        {
+          "ref": "SEC. I-II",
+          "text_summary": "Short title and definitions.",
+          "classes": [
+            "short-title",
+            "statutory-note-material"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Big Beautiful Budget Act\""
+        },
+        {
+          "ref": "SEC. III",
+          "text_summary": "Budget allocations and emergency fund appropriations.",
+          "classes": [
+            "appropriation",
+            "temporary"
+          ],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"hereby appropriated\""
+        },
+        {
+          "ref": "SEC. IV",
+          "text_summary": "Relocation of funds to the Treasury.",
+          "classes": [
+            "appropriation",
+            "temporary"
+          ],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Relocation of funds\""
+        },
+        {
+          "ref": "SEC. V",
+          "text_summary": "Oversight and accountability.",
+          "classes": [
+            "uncodified-admin-direction"
+          ],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Oversight and Accountability\""
+        },
+        {
+          "ref": "SEC. VI",
+          "text_summary": "Enactment / effective date.",
+          "classes": [
+            "effective-date"
+          ],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"take effect immediately\""
+        }
+      ],
+      "current_xml_comparison": {
+        "assessment": "improperly-inserted-into-permanent-text",
+        "placement": "/us/usc/t31/s101",
+        "detail": "The branch parks a full appropriations dump in permanent Code text even though the act is temporary appropriations legislation."
+      },
+      "final_recommended_action": [
+        "Exclude the appropriations and oversight provisions from permanent Code text.",
+        "Replace the full dump with a brief historical note only if needed.",
+        "Remove the Trello link."
+      ],
+      "source_evidence": [
+        "\"Big Beautiful Budget Act\" | \"hereby appropriated\""
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-041-269",
+      "public_law": "41-269",
+      "title": "Public Law 41-269 | Federal Enhancement Against Foreign Intrusion Amendments Act of 2026",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The act remains operative and makes continuing amendments to PL 24-173 without self-expiring.",
+      "approved_code_treatment": "amend-existing-text",
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "text_summary": "Short title.",
+          "classes": [
+            "short-title"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Federal Enhancement Against Foreign Intrusion Amendments Act of 2026\""
+        },
+        {
+          "ref": "SEC. 2",
+          "text_summary": "Amends Section III of PL 24-173 to bar elected officials from foreign employment or formal affiliation.",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "PL 24-173 Section III",
+          "exact_change": "Replace Section III of PL 24-173 with the foreign-affiliation prohibition and referral language.",
+          "evidence": "\"Section III of Public Law 24-173 is amended\""
+        },
+        {
+          "ref": "SEC. 3",
+          "text_summary": "Inserts a new disclosure and enforcement section after Section IV of PL 24-173.",
+          "classes": [
+            "direct-amendment",
+            "insertion"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "PL 24-173 Section IV",
+          "exact_change": "Insert a new Section V requiring disclosure of foreign affiliation and routing enforcement to 22 U.S.C. 618.",
+          "evidence": "\"amended by inserting after Section IV\""
+        },
+        {
+          "ref": "SEC. 4-5",
+          "text_summary": "Severability and immediate effective date.",
+          "classes": [
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"shall take effect immediately\""
+        }
+      ],
+      "current_xml_comparison": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t50/s1",
+        "detail": "The branch note does not yet split out the PL 24-173 section III replacement and section V insertion as actual amendment history; origin/main does not carry the branch note."
+      },
+      "final_recommended_action": [
+        "Apply the PL 24-173 Section III replacement text and the new Section V insertion as actual amendment history.",
+        "Replace the full note dump with a concise statutory note.",
+        "Remove the Trello link."
+      ],
+      "source_evidence": [
+        "\"Federal Enhancement Against Foreign Intrusion Amendments Act of 2026\" | \"Section III of Public Law 24-173 is amended\""
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-041-270",
+      "public_law": "41-270",
+      "title": "Public Law 41-270 | Washington Diplomacy Complex Corrections Act of 2026",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The act is an ongoing corrective amendment to the Washington Diplomacy Complex Act 2025 and should be carried as actual amendment history.",
+      "approved_code_treatment": "amend-existing-text",
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "text_summary": "Short title.",
+          "classes": [
+            "short-title"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Washington Diplomacy Complex Corrections Act of 2026\""
+        },
+        {
+          "ref": "SEC. 2",
+          "text_summary": "Amends Section 3 of the Washington Diplomacy Complex Act 2025 definitions.",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "Washington Diplomacy Complex Act 2025 Section 3",
+          "exact_change": "Replace the definitions section with the new definitions of Complex, Restricted Security Area, Department, and United Nations Secretariat.",
+          "evidence": "\"Section 3 ... is amended to read as follows\""
+        },
+        {
+          "ref": "SEC. 3",
+          "text_summary": "Amends Section 4 jurisdiction, security, and control provisions.",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "Washington Diplomacy Complex Act 2025 Section 4",
+          "exact_change": "Replace Section 4 with the expanded jurisdiction, restricted-area, and enforcement text.",
+          "evidence": "\"Section 4 ... is amended to read as follows\""
+        },
+        {
+          "ref": "SEC. 4",
+          "text_summary": "Amends Section 5 United Nations access provisions.",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "Washington Diplomacy Complex Act 2025 Section 5",
+          "exact_change": "Strike 'free and full access' and replace subsection (c) with the revised access-limitation text.",
+          "evidence": "\"Section 5 ... is amended\""
+        },
+        {
+          "ref": "SEC. 5",
+          "text_summary": "Technical corrections and redesignation of Section 6.",
+          "classes": [
+            "redesignation",
+            "transfer"
+          ],
+          "treatment": "amendment-note",
+          "target": "Washington Diplomacy Complex Act 2025 Section 6",
+          "exact_change": "Redesignate Section 6 as implementing regulations and correct duplicate headings / numbering issues.",
+          "evidence": "\"Technical Corrections\""
+        },
+        {
+          "ref": "SEC. 6",
+          "text_summary": "Rule of construction and immediate effective date.",
+          "classes": [
+            "savings",
+            "effective-date"
+          ],
+          "treatment": "savings-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"take effect immediately upon enactment\""
+        }
+      ],
+      "current_xml_comparison": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "The branch note does not yet implement the section-by-section corrections to the Washington Diplomacy Complex Act 2025; origin/main does not carry the branch note."
+      },
+      "final_recommended_action": [
+        "Apply the section-by-section text amendments to the Washington Diplomacy Complex Act 2025 history chain.",
+        "Replace the current full note with a concise statutory note and technical-correction history.",
+        "Remove the Trello link."
+      ],
+      "source_evidence": [
+        "\"Washington Diplomacy Complex Corrections Act of 2026\" | \"Section 3 ... is amended to read as follows\""
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-041-271",
+      "public_law": "41-271",
+      "title": "Public Law 41-271 | The Great Change Act of 2026",
+      "final_legal_status": "current",
+      "chronology_conclusion": "This broad integrating act repeals, amends, transfers, and preserves multiple prior laws while installing continuing reforms across security, commerce, ethics, military service, and whistleblower enforcement.",
+      "approved_code_treatment": "mixed: amend-existing-text + amendment-note + toc-update",
+      "provisions": [
+        {
+          "ref": "SEC. 1-6",
+          "text_summary": "Short title, table of contents, definitions, construction, severability, and effective date.",
+          "classes": [
+            "short-title",
+            "statutory-note-material",
+            "savings",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"General Rule of Construction\""
+        },
+        {
+          "ref": "TITLE I, SEC. 101-107",
+          "text_summary": "Repeals the Washington Diplomacy Complex Boundary Act, terminates obsolete commission authorities, strips anti-supersession clauses, preserves valid final actions, corrects clerical defects, blocks revival, and repeals the Oath and Offices Protection Act.",
+          "classes": [
+            "repeal",
+            "savings",
+            "non-revival",
+            "technical-correction"
+          ],
+          "treatment": "amendment-note",
+          "target": "WDCBA; National Commission on Judicial Activity, Efficiency and Accountability Act; OOP",
+          "exact_change": "Repeal or terminate the named prior laws and preserve only the stated savings / no-revival rules.",
+          "evidence": "\"is hereby repealed in its entirety\""
+        },
+        {
+          "ref": "TITLE II, SEC. 201-207",
+          "text_summary": "Removes automatic security clearances, amends the National Security Act of 2026, bars automatic SCI/SAP access, creates expedited review, oversight, anti-retaliation, and classification safeguards.",
+          "classes": [
+            "direct-amendment",
+            "new-permanent-general"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "SPASA; National Security Act of 2026",
+          "exact_change": "Amend the cited national-security statutes to eliminate automatic clearances/access and to add the new oversight and retaliation protections.",
+          "evidence": "\"is amended\""
+        },
+        {
+          "ref": "TITLE III, SEC. 301-311",
+          "text_summary": "Commerce Dispersal Act amendments and function transfers to State and Justice.",
+          "classes": [
+            "direct-amendment",
+            "transfer"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "Commerce Dispersal Act",
+          "exact_change": "Amend the Commerce Dispersal Act sections on commerce, trade, intellectual property, enforcement, and copyright functions as enacted.",
+          "evidence": "\"Section 3(b) ... is amended\""
+        },
+        {
+          "ref": "TITLE IV, SEC. 401-406",
+          "text_summary": "Amendments to 18 U.S.C. 205, definitions, protected government legal work, and savings clauses.",
+          "classes": [
+            "direct-amendment",
+            "savings"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "18 U.S.C. 205",
+          "exact_change": "Replace and supplement the 18 U.S.C. 205 text as enacted.",
+          "evidence": "\"section 205 of title 18\""
+        },
+        {
+          "ref": "TITLE V, SEC. 501-504",
+          "text_summary": "Commissioned-officer minimums, temporary waivers, command authority, and validity of actions during noncompliance.",
+          "classes": [
+            "direct-amendment",
+            "temporary",
+            "savings"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "Commissioned-officer staffing laws",
+          "exact_change": "Amend the affected staffing laws to the new minimum, waiver, command, and validity rules.",
+          "evidence": "\"minimum number of commissioned officers\""
+        },
+        {
+          "ref": "TITLE VI, SEC. 601-607",
+          "text_summary": "Whistleblower-protection amendments, retaliation rules, burden of proof, identity protection, noncompliance rules, command responsibility, and reporting.",
+          "classes": [
+            "direct-amendment",
+            "new-permanent-general"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "Whistleblower Protection Act of 2023 / H.R. 1501",
+          "exact_change": "Insert the new whistleblower, retaliation, remedies, identity, oversight, and command-responsibility provisions into the prior whistleblower framework.",
+          "evidence": "\"amended by inserting\""
+        },
+        {
+          "ref": "TITLE VII, SEC. 701",
+          "text_summary": "Conforming amendments and successor-reference rules.",
+          "classes": [
+            "conforming"
+          ],
+          "treatment": "toc-update",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Conforming Amendments\""
+        }
+      ],
+      "current_xml_comparison": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t18/s205",
+        "detail": "The branch has the major 18 U.S.C. 205 rewrite present, but the title-18 note still needs to be collapsed to concise history; origin/main does not appear to carry the branch-only text."
+      },
+      "final_recommended_action": [
+        "Convert the direct amendments in Titles II-VI into actual text changes in the affected Code or prior-law sections.",
+        "Trim the note block down to a concise history note for the residual uncodified material.",
+        "Remove the Trello link and the full-text dump."
+      ],
+      "source_evidence": [
+        "\"General Rule of Construction\" | \"is hereby repealed in its entirety\""
+      ],
+      "confidence": "high"
+    }
+  ]
+}

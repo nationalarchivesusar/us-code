@@ -1,0 +1,199 @@
+{
+  "reviewer": "review-repair-48",
+  "group_index": 148,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/manifest-48.json",
+  "output_path": "audit/review/review-48.json",
+  "reviewed_against": [
+    "audit/manifests/manifest-48.json",
+    "audit/review/review-09.json",
+    "audit/chronology-report.json",
+    "usc/usc02.xml",
+    "usc/usc03.xml",
+    "usc/usc15.xml",
+    "usc/usc18.xml",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-012-083",
+      "public_law": "12-83",
+      "title": "Public Law 12-83 | Dannybec Went to Jail Act",
+      "chronology_conclusion": "The chronology shows a current enactment that is preserved as a statutory note rather than a positive-law rewrite.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t2/s142j",
+      "exact_enacted_text_or_amendment_command": "Preserve the full act as a statutory note at 2 U.S.C. 142j; no express, uniquely executable Code amendment was found.",
+      "source_evidence": [
+        "codification/laws/laws/PL-012-083/law.txt contains the enacted repeal-and-history text.",
+        "codification/mass_migration/latest/plans/PL-012-083.json and codification/mass_migration/latest/reports/laws/PL-012-083.md classify it as STATUTORY_NOTE at 2 U.S.C. 142j.",
+        "codification/mass_migration/latest/reports/MASTER-CODIFICATION-REPORT.md lists the same target and disposition."
+      ],
+      "current_xml_comparison": "No matching PL-012-083 note was found in current branch XML or origin/main.",
+      "final_recommended_action": "Insert the statutory note at 2 U.S.C. 142j.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-012-084",
+      "public_law": "12-84",
+      "title": "Public Law 12-84 | Municipal Act of 2023",
+      "chronology_conclusion": "The chronology places this as repealed District-local legislation, so it stays history-only.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "No Code operation authorized; retain the repeal history only.",
+      "source_evidence": [
+        "codification/laws/laws/PL-012-084/law.txt contains the District government rewrite text.",
+        "codification/mass_migration/latest/reports/TRELLO-COMMENTS.json and codification/mass_migration/latest/plans/PL-012-084.json classify the law as NONOPERATIVE_OR_REPEALED.",
+        "audit/chronology-report.json does not record a competing same-target issue for this law."
+      ],
+      "current_xml_comparison": "No matching note or amendment was found in current branch XML or origin/main.",
+      "final_recommended_action": "Leave as historical note only.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-012-086",
+      "public_law": "12-86",
+      "title": "Public Law 12-86 | H.R. 1302",
+      "chronology_conclusion": "The chronology shows a current repeal note, not a live Code rewrite; it belongs at 2 U.S.C. 25a as statutory history.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t2/s25a",
+      "exact_enacted_text_or_amendment_command": "Preserve the act as a statutory note at 2 U.S.C. 25a; no express, uniquely executable Code amendment was found.",
+      "source_evidence": [
+        "codification/laws/laws/PL-012-086/law.txt contains the repeal of the District of Columbia Home Rule provision.",
+        "codification/mass_migration/latest/plans/PL-012-086.json and codification/mass_migration/latest/reports/laws/PL-012-086.md classify it as STATUTORY_NOTE at 2 U.S.C. 25a.",
+        "codification/mass_migration/latest/reports/MASTER-CODIFICATION-REPORT.md repeats the same disposition."
+      ],
+      "current_xml_comparison": "No matching PL-012-086 note was found in current branch XML or origin/main.",
+      "final_recommended_action": "Insert the statutory note at 2 U.S.C. 25a.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-012-087",
+      "public_law": "12-87",
+      "title": "Public Law 12-87 | An act to repeal the Smart Label Congress Act (Public Law 9-54)",
+      "chronology_conclusion": "The chronology shows a current repeal-history enactment with a statutory-note anchor at 2 U.S.C. 4572.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t2/s4572",
+      "exact_enacted_text_or_amendment_command": "Preserve the act as a statutory note at 2 U.S.C. 4572; no express, uniquely executable Code amendment was found.",
+      "source_evidence": [
+        "codification/laws/laws/PL-012-087/law.txt contains the repeal of Public Law 9-54 and the accompanying history language.",
+        "codification/mass_migration/latest/plans/PL-012-087.json and codification/mass_migration/latest/reports/laws/PL-012-087.md classify it as STATUTORY_NOTE at 2 U.S.C. 4572.",
+        "codification/mass_migration/latest/reports/MASTER-CODIFICATION-REPORT.md lists the same disposition."
+      ],
+      "current_xml_comparison": "No matching PL-012-087 note was found in current branch XML or origin/main.",
+      "final_recommended_action": "Insert the statutory note at 2 U.S.C. 4572.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-012-088",
+      "public_law": "12-88",
+      "title": "Public Law 12-88 | New District of Columbia Home Rule Act",
+      "chronology_conclusion": "The chronology places this as repealed District-local legislation, so no current Code insert is warranted.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "No Code operation authorized; retain the repeal history only.",
+      "source_evidence": [
+        "codification/laws/laws/PL-012-088/law.txt contains the District home-rule rewrite text.",
+        "codification/mass_migration/latest/reports/TRELLO-COMMENTS.json and codification/mass_migration/latest/plans/PL-012-088.json classify the law as NONOPERATIVE_OR_REPEALED.",
+        "codification/mass_migration/latest/reports/MASTER-CODIFICATION-REPORT.md lists the same disposition."
+      ],
+      "current_xml_comparison": "No matching note or amendment was found in current branch XML or origin/main.",
+      "final_recommended_action": "Leave as historical note only.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-012-103",
+      "public_law": "12-103",
+      "title": "Public Law 12-103 | Ceremonial 5-Star Officer Creation Act",
+      "chronology_conclusion": "The chronology shows a current general law with a statutory-note anchor at 2 U.S.C. 4576; no operative Title 10 rewrite is warranted.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t2/s4576",
+      "exact_enacted_text_or_amendment_command": "Preserve the full act as a statutory note at 2 U.S.C. 4576; no express, uniquely executable Code amendment was found.",
+      "source_evidence": [
+        "codification/laws/laws/PL-012-103/law.txt contains the ceremonial O-11 officer text.",
+        "codification/mass_migration/latest/plans/PL-012-103.json and codification/mass_migration/latest/reports/laws/PL-012-103.md classify it as STATUTORY_NOTE at 2 U.S.C. 4576.",
+        "codification/mass_migration/latest/reports/TRELLO-COMMENTS.json and MASTER-CODIFICATION-REPORT.md repeat the same anchor."
+      ],
+      "current_xml_comparison": "No matching PL-012-103 note was found in current branch XML or origin/main.",
+      "final_recommended_action": "Insert the statutory note at 2 U.S.C. 4576.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-014-089",
+      "public_law": "14-89",
+      "title": "Public Law 14-89 | Americans Safety and Smart Act of 2023",
+      "chronology_conclusion": "The chronology shows a current enactment already captured as the statutory note to 18 U.S.C. 242.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t18/s242",
+      "exact_enacted_text_or_amendment_command": "Preserve sections 3 through 6 as the statutory note to 18 U.S.C. 242; the law repeals PL 2-6 and enacts the federal-agent misconduct framework.",
+      "source_evidence": [
+        "codification/laws/laws/PL-014-089/law.txt contains the enacted misconduct and force framework.",
+        "codification/reports/FINAL-PUBLIC-LAWS-REPORT.md and codification/state.json both record the statutory-note treatment at 18 U.S.C. 242.",
+        "audit/chronology-report.json and codification/reference/all_270_laws_classification.csv are consistent with the current disposition."
+      ],
+      "current_xml_comparison": "The note is already present in usc/usc18.xml on the current branch and in origin/main, so no XML delta is needed.",
+      "final_recommended_action": "Leave the statutory note in place.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-014-090",
+      "public_law": "14-90",
+      "title": "Public Law 14-90 | Presidential Suck Up Act",
+      "chronology_conclusion": "The chronology shows a current enactment preserved as a statutory note at 2 U.S.C. 4509, with no separately executable positive-law text.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t2/s4509",
+      "exact_enacted_text_or_amendment_command": "Preserve the act as a statutory note at 2 U.S.C. 4509; no express, uniquely executable Code amendment was found.",
+      "source_evidence": [
+        "codification/laws/laws/PL-014-090/law.txt contains the acting-service rule text.",
+        "codification/mass_migration/latest/plans/PL-014-090.json and codification/mass_migration/latest/reports/laws/PL-014-090.md classify it as STATUTORY_NOTE at 2 U.S.C. 4509.",
+        "codification/mass_migration/latest/reports/MASTER-CODIFICATION-REPORT.md lists the same target and disposition."
+      ],
+      "current_xml_comparison": "No matching PL-014-090 note was found in current branch XML or origin/main, although the anchor section 2 U.S.C. 4509 exists in both.",
+      "final_recommended_action": "Insert the statutory note at 2 U.S.C. 4509.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-014-091",
+      "public_law": "14-91",
+      "title": "Public Law 14-91 | Uniform Code of Military Justice Reform Act of 2023",
+      "chronology_conclusion": "The chronology shows a current enactment preserved as a statutory note at 2 U.S.C. 190d.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t2/s190d",
+      "exact_enacted_text_or_amendment_command": "Preserve the act as a statutory note at 2 U.S.C. 190d; no express, uniquely executable Code amendment was found.",
+      "source_evidence": [
+        "codification/laws/laws/PL-014-091/law.txt contains the proposed-UCMJ directive text.",
+        "codification/mass_migration/latest/plans/PL-014-091.json and codification/mass_migration/latest/reports/laws/PL-014-091.md classify it as STATUTORY_NOTE at 2 U.S.C. 190d.",
+        "codification/mass_migration/latest/reports/TRELLO-COMMENTS.json and MASTER-CODIFICATION-REPORT.md repeat the same anchor."
+      ],
+      "current_xml_comparison": "No matching PL-014-091 note was found in current branch XML or origin/main.",
+      "final_recommended_action": "Insert the statutory note at 2 U.S.C. 190d.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-092",
+      "public_law": "15-92",
+      "title": "Public Law 15-92 | Commerce and Labor Innovation Initiative Act",
+      "chronology_conclusion": "The chronology shows the act was superseded before codification by PL 31-226, so no current Code insertion survives.",
+      "final_legal_status": "superseded",
+      "approved_code_treatment": "superseded-before-codification",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "No current Code insertion is made because PL 31-226 repeals this law.",
+      "source_evidence": [
+        "codification/laws/laws/PL-015-092/law.txt contains the commerce-and-labor licensing framework.",
+        "codification/mass_migration/latest/reports/NONOPERATIVE-REGISTER.md and codification/mass_migration/latest/reports/OVERRIDES-AND-REPEALS.md classify it as SUPERSEDED_BEFORE_CODIFICATION.",
+        "codification/mass_migration/latest/reports/MASTER-CODIFICATION-REPORT.md lists PL-015-092 as superseded before codification."
+      ],
+      "current_xml_comparison": "No matching note or amendment was found in current branch XML or origin/main.",
+      "final_recommended_action": "Do not insert into the Code; leave as superseded history.",
+      "confidence": "high"
+    }
+  ]
+}

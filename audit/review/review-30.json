@@ -1,0 +1,174 @@
+{
+  "reviewer": "law-auditor-D",
+  "group_index": 130,
+  "law_count": 6,
+  "source_manifest": "audit/manifests/manifest-30.json",
+  "output_path": "audit/review/review-30.json",
+  "reviewed_against": [
+    "audit/manifests/manifest-30.json",
+    "audit/primary/batch-04-02.json",
+    "audit/primary/batch-04-03.json",
+    "audit/primary/batch-05-01.json",
+    "audit/chronology-report.json",
+    "usc XML in current branch",
+    "usc XML in origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-015-110",
+      "public_law": "15-110",
+      "title": "Public Law 15-110 | A Bill to Direct the DoD Inspector General to Investigate the Attack on the U.S. Embassy in Damascus",
+      "report_path": "audit/primary/batch-04-02.json",
+      "status": "unresolved",
+      "decision": "source-limited-historical-note",
+      "status_basis": "The source is unrecoverable, so no operative enactment text can be authenticated. The current XML note's repeal/supersession label is unsupported by the source.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "treatment": "historical-note-only",
+          "target": null,
+          "conclusion": "Keep only as a source-limited historical note; no operative text can be verified.",
+          "evidence": "No authenticated enactment text could be recovered from the source file.",
+          "notes": "No chronology conflict was identified in audit/chronology-report.json."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "placement": "/us/usc/t22/s2651",
+        "detail": "The branch note uses boilerplate repeal/supersession language instead of disclosing that the source is unrecoverable."
+      },
+      "recommended_action": "Replace the boilerplate with a concise source-limited historical note and remove the Trello link.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-016-112",
+      "public_law": "16-112",
+      "title": "Public Law 16-112 | The Contempt of Congress Act",
+      "report_path": "audit/primary/batch-04-03.json",
+      "status": "unresolved",
+      "decision": "source-limited-historical-note",
+      "status_basis": "The supplied attachment is a Google Drive access-denied page, so the enactment text cannot be verified.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "treatment": "historical-note-only",
+          "target": null,
+          "conclusion": "Keep only as a source-limited historical note; no operative text can be verified.",
+          "evidence": "The recovered file is a Drive permission-denial page rather than statutory text.",
+          "notes": "No chronology conflict was identified in audit/chronology-report.json."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "placement": "/us/usc/t2/s1",
+        "detail": "The branch note asserts repeal/supersession instead of stating that the source cannot be authenticated."
+      },
+      "recommended_action": "Retain only a source-limited historical note and remove the boilerplate status prose and Trello link.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-016-119",
+      "public_law": "16-119",
+      "title": "Public Law 16-119 | The Criminal Organization Act of 2023",
+      "report_path": "audit/primary/batch-04-03.json",
+      "status": "unresolved",
+      "decision": "source-limited-historical-note",
+      "status_basis": "The supplied attachment is a Google Drive access-denied page, so the enactment text cannot be verified.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "treatment": "historical-note-only",
+          "target": null,
+          "conclusion": "Keep only as a source-limited historical note; no operative text can be verified.",
+          "evidence": "The recovered file is a Drive permission-denial page rather than statutory text.",
+          "notes": "No chronology conflict was identified in audit/chronology-report.json."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "placement": "/us/usc/t18/s1",
+        "detail": "The branch note asserts repeal/supersession instead of stating that the source cannot be authenticated."
+      },
+      "recommended_action": "Retain only a source-limited historical note and remove the boilerplate status prose and Trello link.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-016-120",
+      "public_law": "16-120",
+      "title": "Public Law 16-120 | The Hail Columbia Act",
+      "report_path": "audit/primary/batch-04-03.json",
+      "status": "unresolved",
+      "decision": "source-limited-historical-note",
+      "status_basis": "The supplied attachment is a Google Drive access-denied page, so the enactment text cannot be verified.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "treatment": "historical-note-only",
+          "target": null,
+          "conclusion": "Keep only as a source-limited historical note; the title alone does not support a lawful codification conclusion.",
+          "evidence": "The recovered file is a Drive permission-denial page rather than statutory text.",
+          "notes": "No chronology conflict was identified in audit/chronology-report.json."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "placement": "/us/usc/t1/s1",
+        "detail": "The branch note asserts repeal/supersession and uses a generic anchor even though the source text is not recoverable."
+      },
+      "recommended_action": "Retain only a source-limited historical note and remove the boilerplate status prose and Trello link.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-016-121",
+      "public_law": "16-121",
+      "title": "Public Law 16-121 | The Bill Transparency Understanding Act",
+      "report_path": "audit/primary/batch-05-01.json",
+      "status": "unresolved",
+      "decision": "source-limited-historical-note",
+      "status_basis": "The source is unrecoverable, so no operative enactment text can be authenticated.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "treatment": "historical-note-only",
+          "target": null,
+          "conclusion": "Keep only as a source-limited historical note; do not assert repeal or supersession.",
+          "evidence": "No authentic enactment text could be recovered from the supplied source.",
+          "notes": "No chronology conflict was identified in audit/chronology-report.json."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": "/us/usc/t1/s1",
+        "detail": "The branch note declares repeal/supersession without acknowledging that the source cannot be authenticated."
+      },
+      "recommended_action": "Replace the boilerplate with a concise source-limited historical note and remove the Trello link.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-016-122",
+      "public_law": "16-122",
+      "title": "Public Law 16-122 | The Congressional Competency Act of 2023",
+      "report_path": "audit/primary/batch-05-01.json",
+      "status": "unresolved",
+      "decision": "source-limited-historical-note",
+      "status_basis": "The source is unrecoverable, so no operative enactment text can be authenticated.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "treatment": "historical-note-only",
+          "target": null,
+          "conclusion": "Keep only as a source-limited historical note; do not assert repeal or supersession.",
+          "evidence": "No authentic enactment text could be recovered from the supplied source.",
+          "notes": "No chronology conflict was identified in audit/chronology-report.json."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": "/us/usc/t2/s1",
+        "detail": "The branch note declares repeal/supersession without acknowledging that the source cannot be authenticated."
+      },
+      "recommended_action": "Replace the boilerplate with a concise source-limited historical note and remove the Trello link.",
+      "confidence": "high"
+    }
+  ]
+}

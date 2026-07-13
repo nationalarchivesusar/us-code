@@ -1,0 +1,211 @@
+{
+  "reviewer": "law-auditor-S",
+  "group_index": 18,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/review-repair-18.json",
+  "output_path": "audit/review/review-repair-18.json",
+  "laws": [
+    {
+      "law_id": "PL-024-176",
+      "public_law": "24-176",
+      "title": "Public Law 24-176 | Comprehensive Federal Government Funding Act",
+      "final_status": "source_unavailable",
+      "provision_disposition": "historical-note-only",
+      "required_code_treatment": "retain only source-limited history; exclude appropriations from permanent Code text",
+      "current_implementation": {
+        "state": "not-applicable",
+        "xml": "no verified XML placement",
+        "branch_vs_origin": "no relevant branch change identified"
+      },
+      "source_evidence": {
+        "law_report": "codification/laws/laws/PL-024-176/metadata.json",
+        "status_basis": "Source was deleted or not found, so no operative text could be audited."
+      },
+      "recommended_action": "Keep only a source-limited historical note and flag the source for reacquisition.",
+      "chronology_conclusion": "The source is unavailable, so chronology supports only a historical-note disposition and no verified operative-code rewrite.",
+      "confidence": "low"
+    },
+    {
+      "law_id": "PL-024-177",
+      "public_law": "24-177",
+      "title": "Public Law 24-177 | SS Jurisdiction Act",
+      "final_status": "source_unavailable",
+      "provision_disposition": "historical-note-only",
+      "required_code_treatment": "retain only source-limited history; no permanent Code text",
+      "current_implementation": {
+        "state": "not-applicable",
+        "xml": "no verified XML placement",
+        "branch_vs_origin": "no relevant branch change identified"
+      },
+      "source_evidence": {
+        "law_report": "codification/laws/laws/PL-024-177/metadata.json",
+        "status_basis": "Source was deleted or not found, so no lawful codification conclusion can be drawn."
+      },
+      "recommended_action": "Keep only a source-limited historical note and flag the source for reacquisition.",
+      "chronology_conclusion": "The source is unavailable, so chronology supports only a historical-note disposition and no verified operative-code rewrite.",
+      "confidence": "low"
+    },
+    {
+      "law_id": "PL-024-178",
+      "public_law": "24-178",
+      "title": "Public Law 24-178 | Equality in Employment Act",
+      "final_status": "current",
+      "provision_disposition": "amend-existing-text",
+      "required_code_treatment": "keep the 42 U.S.C. 2000e-2(a) amendment and a concise statutory note; do not carry a full-text dump",
+      "current_implementation": {
+        "state": "already-incorporated",
+        "xml": "usc/usc42.xml",
+        "branch_vs_origin": "HEAD includes the amendment text and note; origin/main does not show the same insertion"
+      },
+      "source_evidence": {
+        "law_report": "codification/laws/laws/PL-024-178/law.txt",
+        "status_basis": "SEC 6(a)(1)-(2) expressly amends 42 U.S.C. 2000e-2(a) by adding gender identity and sexual orientation."
+      },
+      "recommended_action": "Leave the Title 42 amendment in place and keep only a concise statutory note for the amendment history.",
+      "chronology_conclusion": "The source evidence supports the stated disposition, with the current implementation reflecting the surviving code history.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-179",
+      "public_law": "25-179",
+      "title": "Public Law 25-179 | Fiscal Year 21-2",
+      "final_status": "temporary-operative",
+      "provision_disposition": "temporary-statute-note",
+      "required_code_treatment": "treat SEC 5 as a temporary note at 2 U.S.C. 4501 and exclude appropriations from permanent Code text",
+      "current_implementation": {
+        "state": "already-incorporated",
+        "xml": "usc/usc31.xml",
+        "branch_vs_origin": "HEAD contains the statutory note; origin/main does not show the same note"
+      },
+      "source_evidence": {
+        "law_report": "codification/laws/laws/PL-025-179/law.txt",
+        "status_basis": "The act is a short-term appropriations measure and SEC 5 is a temporary COLA suspension under 2 U.S.C. 4501."
+      },
+      "recommended_action": "Keep only a concise historical note and preserve SEC 5 as a temporary note at 2 U.S.C. 4501.",
+      "chronology_conclusion": "The source evidence supports the stated disposition, with the current implementation reflecting the surviving code history.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-025-180",
+      "public_law": "25-180",
+      "title": "Public Law 25-180 | Sanction Repealment Act",
+      "final_status": "current",
+      "provision_disposition": "repeal-marking-and-statute-note",
+      "required_code_treatment": "record the PL 9-55 repeal at the target's home and keep SEC 3(c) as a concise note",
+      "current_implementation": {
+        "state": "no_verified_code_location",
+        "xml": "no verified XML placement",
+        "branch_vs_origin": "no relevant branch change identified"
+      },
+      "source_evidence": {
+        "law_report": "codification/laws/laws/PL-025-180/law.txt",
+        "status_basis": "SEC 3(b) repeals PL 9-55 in its entirety and SEC 3(c) declares the sanctions null and void."
+      },
+      "recommended_action": "Add the repeal-marking at the PL 9-55 home and keep the sanctions-nullification as a concise statutory note.",
+      "chronology_conclusion": "The source evidence supports the stated disposition, with the current implementation reflecting the surviving code history.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-181",
+      "public_law": "25-181",
+      "title": "Public Law 25-181 | Federal District of Columbia Criminal Code",
+      "final_status": "current_local_enactment",
+      "provision_disposition": "local-substantive-code-only",
+      "required_code_treatment": "keep only a current local statutory note at /us/usc/t40/s101/4; do not convert the local code into permanent U.S. Code text",
+      "current_implementation": {
+        "state": "incorrectly_marked_repealed_or_superseded",
+        "xml": "/us/usc/t40/s101/4",
+        "branch_vs_origin": "HEAD is still not aligned with the source treatment; origin/main also lacks a corrected local note"
+      },
+      "source_evidence": {
+        "law_report": "codification/laws/laws/PL-025-181/law.txt",
+        "status_basis": "SEC 4 makes the attached criminal code the Criminal Code for the District of Columbia and the operative provisions are local code material."
+      },
+      "recommended_action": "Replace the repealed/superseded label with a current local statutory note at /us/usc/t40/s101/4.",
+      "chronology_conclusion": "The source evidence supports the stated disposition, with the current implementation reflecting the surviving code history.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-182",
+      "public_law": "25-182",
+      "title": "Public Law 25-182 | Pentagon Expansion and National Territory Authorization Act",
+      "final_status": "source_limited_unverified",
+      "provision_disposition": "historical-note-only",
+      "required_code_treatment": "retain only source-limited history until the actual statutory text is recovered",
+      "current_implementation": {
+        "state": "current_note_claimed_but_source_unavailable",
+        "xml": "/us/usc/t10/s101/h",
+        "branch_vs_origin": "no relevant branch change identified"
+      },
+      "source_evidence": {
+        "law_report": "codification/laws/laws/PL-025-182/metadata.json",
+        "status_basis": "The attachment resolves to viewer debris and no operative statutory text could be recovered or verified."
+      },
+      "recommended_action": "Keep only a source-limited historical note and do not invent any operative language.",
+      "chronology_conclusion": "The source is unavailable, so chronology supports only a historical-note disposition and no verified operative-code rewrite.",
+      "confidence": "low"
+    },
+    {
+      "law_id": "PL-025-183",
+      "public_law": "25-183",
+      "title": "Public Law 25-183 | Commerce and Labor Advancement Act (CLAA)",
+      "final_status": "repealed_or_superseded_before_codification",
+      "provision_disposition": "historical-note-only",
+      "required_code_treatment": "keep only repeal/history because PL 31-226 repeals the law in full",
+      "current_implementation": {
+        "state": "aligned_as_historical_note",
+        "xml": "/us/usc/t29/s201",
+        "branch_vs_origin": "no relevant branch change identified"
+      },
+      "source_evidence": {
+        "law_report": "codification/laws/laws/PL-025-183/law.txt",
+        "later_law": "PL-031-226 repeals PL-025-183 in its entirety",
+        "status_basis": "The source establishes a licensing framework, but the later repeal controls final codification."
+      },
+      "recommended_action": "Keep the law only as superseded history and do not insert operative Code text.",
+      "chronology_conclusion": "The source evidence supports the stated disposition, with the current implementation reflecting the surviving code history.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-184",
+      "public_law": "25-184",
+      "title": "Public Law 25-184 | Legal Advisors, Representatives, and Professionals Exam Regulations (LARPER)",
+      "final_status": "repealed_or_superseded_before_codification",
+      "provision_disposition": "historical-note-only",
+      "required_code_treatment": "keep only repeal/history because PL 33-238 repeals the law in full",
+      "current_implementation": {
+        "state": "aligned_as_historical_note",
+        "xml": "/us/usc/t28/s1",
+        "branch_vs_origin": "no relevant branch change identified"
+      },
+      "source_evidence": {
+        "law_report": "codification/laws/laws/PL-025-184/law.txt",
+        "later_law": "PL-033-238 repeals PL-025-184 in its entirety",
+        "status_basis": "The act creates a licensing framework in the source, but later repeal makes it historical only."
+      },
+      "recommended_action": "Keep the law only as superseded history and do not insert operative Code text.",
+      "chronology_conclusion": "The source evidence supports the stated disposition, with the current implementation reflecting the surviving code history.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-185",
+      "public_law": "25-185",
+      "title": "Public Law 25-185 | Fiscal Year 21-3",
+      "final_status": "expired_appropriations",
+      "provision_disposition": "historical-note-only",
+      "required_code_treatment": "exclude from permanent Code text and retain only a concise historical note if desired",
+      "current_implementation": {
+        "state": "incorrectly_marked_current",
+        "xml": "/us/usc/t31/s101",
+        "branch_vs_origin": "HEAD contains the note, but the act remains expired appropriations history"
+      },
+      "source_evidence": {
+        "law_report": "codification/laws/laws/PL-025-185/law.txt",
+        "status_basis": "The act is a one-year appropriations measure for fiscal year 21-3 and contains no permanent positive-law amendment."
+      },
+      "recommended_action": "Reclassify the measure as expired appropriations history and remove any implication that it is current Code text.",
+      "chronology_conclusion": "The source evidence supports the stated disposition, with the current implementation reflecting the surviving code history.",
+      "confidence": "high"
+    }
+  ]
+}

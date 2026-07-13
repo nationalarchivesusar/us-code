@@ -1,0 +1,436 @@
+{
+  "batch": 11,
+  "auditor": "law-auditor-O",
+  "report_path": "audit/primary/batch-11-03.json",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-009-052",
+      "public_law": "9-52",
+      "title": "Public Law 9-52 | The Federal District Wages Act of 2022",
+      "status": "repealed",
+      "status_basis": "The canonical Trello record places this law in Repealed Laws. The mass-migration disposition report marks the source unavailable, so the enactment text cannot be reconstructed and the record can remain only as a source-limited historical note.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "No operative text can be verified from the available source files.",
+          "classes": [
+            "source-limited",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep only a concise historical note; do not invent wage text or a new Code section.",
+          "evidence": "The mass-migration disposition report lists Source: unavailable and Source characters: 0; the canonical Trello record is in Repealed Laws.",
+          "notes": "The subject appears wage-related, but the enactment itself cannot be reconstructed."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t29/s201",
+        "detail": "The source report marks the enactment text unavailable, so no operative language can be reconstructed. The record should remain historical only."
+      },
+      "recommended_actions": [
+        "Retain only a concise source-limited historical note.",
+        "Remove the guessed Title 29 placement if the archive still carries it.",
+        "Do not codify any wage provisions without a recoverable enactment text."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-009-053",
+      "public_law": "9-53",
+      "title": "Public Law 9-53 | Save Our Businesses Act of 2022",
+      "status": "current",
+      "status_basis": "The law is already incorporated in the current codification state at 3 U.S.C. section 301, and the codification decision for this law found no express later repeal or replacement of that amendment. The earlier repeal label on the Trello card does not displace the already-incorporated Code text.",
+      "provisions": [
+        {
+          "ref": "SEC. 5",
+          "text_summary": "Expands 3 U.S.C. section 301 to broaden presidential delegation authority and add related executive-branch powers.",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t3/s301",
+          "exact_change": "Keep the expanded delegation language in 3 U.S.C. section 301 as current text.",
+          "evidence": "The source text says 3 U.S. Code section 301 is amended to add authority for departments, agencies, personnel transfers, Capitol Police authority changes, and training/certification requirements.",
+          "notes": "This is the operative codification target and is already incorporated."
+        },
+        {
+          "ref": "SECS. 1-4, 6-10",
+          "text_summary": "Short title, repeal of PL 7-40 and PL 3-22, business-regulatory directions, collateral amendments, D.C. status language, definitions, severability, and effective date.",
+          "classes": [
+            "short-title",
+            "repeal",
+            "new-permanent-general",
+            "local-district",
+            "effective-date"
+          ],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": "Leave these collateral sections uncodified; only the section 5 amendment belongs in the Code.",
+          "evidence": "Sections 2, 3, 4, 6, 7, 8, 9, and 10 are present in the enactment text but do not create a separate positive-law target here.",
+          "notes": "Section 2 repeals PL 7-40 and PL 3-22 as history, not as new Code text."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "already-incorporated",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t3/s301",
+        "detail": "The live branch already carries the section 301 amendment at the correct title and section. The mass-migration ledger records this law as already incorporated rather than duplicated."
+      },
+      "recommended_actions": [
+        "Keep the 3 U.S.C. section 301 amendment as current text.",
+        "Retain only a concise amendment-history note.",
+        "Do not duplicate the section 301 language elsewhere."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-009-054",
+      "public_law": "9-54",
+      "title": "Public Law 9-54 | The Smart Label Congress Act",
+      "status": "repealed",
+      "status_basis": "The canonical Trello record places this law in Repealed Laws. The mass-migration disposition report marks the source unavailable, so the enactment text cannot be reconstructed and the record can remain only as a source-limited historical note.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "No operative text can be verified from the available source files.",
+          "classes": [
+            "source-limited",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep only a concise historical note; do not invent congressional-labeling or rules text.",
+          "evidence": "The mass-migration disposition report lists Source: unavailable and Source characters: 0; the canonical Trello record is in Repealed Laws.",
+          "notes": "The record appears to be a congressional/rules-type enactment, but the text cannot be reconstructed."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t2/s1",
+        "detail": "The source report marks the enactment text unavailable, so no operative language can be reconstructed. The record should remain historical only."
+      },
+      "recommended_actions": [
+        "Retain only a concise source-limited historical note.",
+        "Remove the guessed Title 2 placement if the archive still carries it.",
+        "Do not invent a statutory or chamber-rule target without text."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-009-055",
+      "public_law": "9-55",
+      "title": "Public Law 9-55 | Economic Sanctions on Iran Act of 2022",
+      "status": "fully-repealed",
+      "status_basis": "The source text is available and shows a sanctions framework, but the law is recorded as repealed in the codification inventory and does not remain current positive law. It survives only as repeal history.",
+      "provisions": [
+        {
+          "ref": "SECS. 1-3",
+          "text_summary": "Short title, purpose, and the sanctions framework against Iran.",
+          "classes": [
+            "short-title",
+            "findings-or-sense",
+            "new-permanent-general"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep only repeal history; do not codify the sanctions regime as live text.",
+          "evidence": "The source says sanctions will be levied and later lifted if the act is repealed or Iran changes course.",
+          "notes": "Substantive in form, but no current Code text survives."
+        },
+        {
+          "ref": "SEC. 6",
+          "text_summary": "Immediate effective date.",
+          "classes": [
+            "effective-date"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep only a brief history note if needed.",
+          "evidence": "The enactment clause says the bill takes effect immediately after passage and signature.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t22/s2651",
+        "detail": "The branch parks a repealed sanctions act as a note in Title 22 territory and still carries a full-text dump and Trello link."
+      },
+      "recommended_actions": [
+        "Remove the full-text dump and Trello link.",
+        "Keep only a concise repeal-history note in the foreign-relations area if the archive needs one.",
+        "Do not treat the sanctions language as current Code text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-009-056",
+      "public_law": "9-56",
+      "title": "Public Law 9-56 | Federal Judicial Reform Act",
+      "status": "fully-repealed",
+      "status_basis": "The source text is available and contains a complete judiciary overhaul, but the law is recorded as repealed in the codification inventory and is not current positive law. It should remain history only.",
+      "provisions": [
+        {
+          "ref": "SECS. 1-4",
+          "text_summary": "Short title, purposes, definitions, and Supreme Court restructuring.",
+          "classes": [
+            "short-title",
+            "findings-or-sense",
+            "new-permanent-general"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Do not codify the court-restructuring language as live Title 28 text.",
+          "evidence": "The bill establishes a new Supreme Court size and duties and sets out reform purposes and definitions.",
+          "notes": ""
+        },
+        {
+          "ref": "SECS. 5-8",
+          "text_summary": "District Court structure, magistrates, applicability, and effective date.",
+          "classes": [
+            "new-permanent-general",
+            "effective-date"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep only repeal-history treatment; do not place this in current judicial Code text.",
+          "evidence": "The source creates a District Court structure and magistrate rules, but the law is not current in the archive.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The branch keeps the act as a Title 50 note with a quoted source dump, which is the wrong treatment for a repealed judiciary bill."
+      },
+      "recommended_actions": [
+        "Remove the quoted source dump and Trello link.",
+        "Keep only a concise repeal-history note in the Title 28 subject area if any note remains.",
+        "Do not publish the judiciary overhaul as operative Code text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-009-057",
+      "public_law": "9-57",
+      "title": "Public Law 9-57 | Repealing S.B.1/Pub. Law 7-39",
+      "status": "fully-repealed",
+      "status_basis": "The mass-migration disposition report marks the law repealed / NONOPERATIVE_OR_REPEALED, and the later RESET Act repeal list also names Public Law 9-57. This law now survives only as history.",
+      "provisions": [
+        {
+          "ref": "SECS. 1-4",
+          "text_summary": "Short title, purpose, definitions, and repeal of Public Law 7-39 with revival of prior law.",
+          "classes": [
+            "short-title",
+            "findings-or-sense",
+            "repeal",
+            "savings"
+          ],
+          "treatment": "historical-note-only",
+          "target": "PL-007-039",
+          "exact_change": "Record the repeal of PL 7-39 only as history; no standalone Code text is needed for the repealer itself.",
+          "evidence": "The source states that S.B.1 / Public Law 7-39 is repealed and prior law is restored or revived as if the act had not been enacted.",
+          "notes": "The later RESET Act repeal list also names Public Law 9-57."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t54/s100101/b/2",
+        "detail": "The note is parked in Title 54, which is the wrong subject for a FLETC repeal/history entry."
+      },
+      "recommended_actions": [
+        "Move the note off Title 54 and attach it to the PL 7-39 repeal history.",
+        "Keep the repeal and revival effect only as a concise historical note.",
+        "Do not create new positive-law text for the repealer itself."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-009-058",
+      "public_law": "9-58",
+      "title": "Public Law 9-58 | To Bar PhillipRobecq From Public Office",
+      "status": "fully-repealed",
+      "status_basis": "This is a private, person-specific barment measure and the codification inventory records it as repealed. It is inherently not permanent general law and belongs in history only.",
+      "provisions": [
+        {
+          "ref": "SECS. I-V",
+          "text_summary": "Short title, severability, effective date, documentation, barment, and individual restrictions.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date",
+            "private-relief",
+            "local-district"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Exclude this individual barment measure from permanent Code text.",
+          "evidence": "The source bars a named person from public office and then spells out private exceptions and restrictions.",
+          "notes": "The measure is person-specific and not suitable for general Code codification."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t46/s101",
+        "detail": "The retained note sits in an unrelated shipping title and should not be treated as current law."
+      },
+      "recommended_actions": [
+        "Exclude from permanent Code.",
+        "Keep at most a concise historical note with no operative codification.",
+        "Remove the unrelated Title 46 placement."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-009-059",
+      "public_law": "9-59",
+      "title": "Public Law 9-59 | M.P.D Act",
+      "status": "fully-repealed",
+      "status_basis": "The act is a local District of Columbia policing measure and is recorded as repealed. It is superseded by Public Law 9-60 and now survives only as repeal history.",
+      "provisions": [
+        {
+          "ref": "SECS. I-IV",
+          "text_summary": "Short title, severability, effective date, and MPD placement under DOJ jurisdiction.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date",
+            "local-district",
+            "new-permanent-general"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep only a concise repeal-history note tied to the MPD subject area.",
+          "evidence": "The source places the Metropolitan Police Department under the Department of Justice and sets a confirmation rule for the Chief of Police.",
+          "notes": "Public Law 9-60 later repeals this act."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "The note is in the right general subject area, but it should be reduced to a concise repeal-history entry because the act is no longer operative."
+      },
+      "recommended_actions": [
+        "Keep only a concise repeal-history note.",
+        "Remove any noisy or duplicative note material.",
+        "Do not retain this as current police-organization text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-009-060",
+      "public_law": "9-60",
+      "title": "Public Law 9-60 | The Federal Metro Policing Act",
+      "status": "fully-repealed",
+      "status_basis": "The mass-migration disposition report marks the act repealed / NONOPERATIVE_OR_REPEALED and no current Code text survives. It also operates as the later repealer of Public Law 9-59, but it now belongs in history only.",
+      "provisions": [
+        {
+          "ref": "SECS. I-IV",
+          "text_summary": "Short title, severability, effective date, and repeal of Public Law 9-59.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date",
+            "repeal",
+            "local-district"
+          ],
+          "treatment": "historical-note-only",
+          "target": "PL-009-059",
+          "exact_change": "Record the repeal of PL 9-59 only as history; do not keep the repealer as live Code text.",
+          "evidence": "Section IV says H.R. 8 / the MPD Act shall be repealed.",
+          "notes": "The later review context also notes a further repeal by PL 12-84."
+        },
+        {
+          "ref": "SEC. V",
+          "text_summary": "Reorganizes the Metropolitan Police Department under DOJ and sets out bureau, leadership, removal, and federal-law-enforcement rules.",
+          "classes": [
+            "local-district",
+            "new-permanent-general"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Do not keep this as current Code text; retain only repeal history.",
+          "evidence": "The source creates a DOJ-based MPD framework and detailed internal staffing rules.",
+          "notes": "Section 5(c)-(d) is separately amended by PL 9-53 in the source corpus."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The retained note is in the wrong subject area and still carries a full-text dump and Trello link."
+      },
+      "recommended_actions": [
+        "Remove the full-text dump and Trello link.",
+        "Keep only a concise repeal-history note tied to the MPD subject matter.",
+        "Do not preserve the full DOJ/MPD framework as current law."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-009-061",
+      "public_law": "9-61",
+      "title": "Public Law 9-61 | Charter Repeal Act",
+      "status": "fully-repealed",
+      "status_basis": "The local District of Columbia charter repeal is recorded as repealed and the review context notes that later Public Law 12-84 expressly repeals H.R. 7. The law now survives only as history.",
+      "provisions": [
+        {
+          "ref": "SECS. 1-2",
+          "text_summary": "Short title and repeal of the Washington, District of Columbia City Charter.",
+          "classes": [
+            "short-title",
+            "repeal",
+            "local-district"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep only a concise repeal-history note; no U.S. Code section is needed.",
+          "evidence": "The source says the City Charter in its complete entirety shall be repealed.",
+          "notes": "This is local/District repeal material, not positive-law U.S. Code text."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t40/s101",
+        "detail": "The note is in the right District-charter subject area, but it still carries a source dump and should be trimmed."
+      },
+      "recommended_actions": [
+        "Trim the note to a concise repeal-history statement.",
+        "Remove the quoted source dump and keep the D.C. charter repeal only as history.",
+        "Do not treat it as current positive law."
+      ],
+      "confidence": "high"
+    }
+  ]
+}

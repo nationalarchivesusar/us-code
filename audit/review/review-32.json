@@ -1,0 +1,270 @@
+{
+  "batch": 32,
+  "reviewer": "law-auditor-F",
+  "group_index": 132,
+  "law_count": 6,
+  "source_manifest": "audit/manifests/manifest-32.json",
+  "reviewed_against": [
+    "audit/manifests/manifest-32.json",
+    "audit/primary/batch-06-01.json",
+    "audit/primary/batch-06-03.json",
+    "audit/primary/batch-07-01.json",
+    "audit/chronology-report.json",
+    "usc/usc01.xml",
+    "usc/usc05.xml",
+    "usc/usc10.xml",
+    "usc/usc22.xml",
+    "usc/usc31.xml",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-021-123",
+      "public_law": "21-123",
+      "title": "Public Law 21-123 | Freedom In Removing Employees and Deregulation Act of 2024",
+      "status": "unresolved",
+      "decision": "source-unavailable-historical-note",
+      "status_basis": "The supplied source is only Google Drive permission-error debris, so no operative statutory text could be authenticated and no safe Code operation can be assigned.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Source text unavailable.",
+          "classes": [
+            "non-code"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "codification/laws/laws/PL-021-123/law.txt contains only a Google Drive download denial message; audit/primary/batch-06-01.json classifies the act as unresolved with no recoverable operative text.",
+          "notes": "Retain only a source-limited historical note and re-acquire the authentic source before any codification work."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s101",
+        "detail": "No recoverable source text exists, so any current note cannot support substantive codification."
+      },
+      "source_evidence": [
+        "audit/primary/batch-06-01.json says the act is unresolved because the source is only Google Drive permission-error debris.",
+        "codification/laws/laws/PL-021-123/law.txt is only a Google Drive download-denial page.",
+        "codification/laws/laws/PL-021-123/law.html is the same permission-denial debris."
+      ],
+      "recommended_actions": [
+        "Retain only a concise source-unavailable historical note.",
+        "Do not invent operative text or a stronger Code anchor.",
+        "Re-acquire the authentic source before any codification work."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-023-171",
+      "public_law": "23-171",
+      "title": "Public Law 23-171 | Diplomatic Immunity Act",
+      "status": "unresolved",
+      "decision": "source-limited-historical-note",
+      "status_basis": "The source is a scanned PDF with text_extracted false, so the enactment cannot be verified at provision level and must remain source-limited.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Text not recovered from the scanned source.",
+          "classes": [
+            "non-code"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "audit/primary/batch-06-03.json records text_extracted=false and image_only_or_scanned=true for the source PDF.",
+          "notes": "Keep as a historical note only; do not promote to permanent positive-law text."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t22/s2651",
+        "detail": "A note anchor exists in the current XML, but the recovered source text is insufficient to verify any substantive codification result."
+      },
+      "source_evidence": [
+        "audit/primary/batch-06-03.json classifies the act as unresolved because the source is scanned and text_extracted is false.",
+        "codification/laws/laws/PL-023-171/law.txt is degraded scanned-source output rather than readable operative text.",
+        "codification/laws/laws/PL-023-171/law.txt and the source-index metadata show the source is image-only/scanned."
+      ],
+      "recommended_actions": [
+        "Keep only a concise source-limited historical note.",
+        "Do not promote this material to permanent positive-law text.",
+        "Remove any Trello-derived implementation claim unless the text can be re-extracted."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-024-175",
+      "public_law": "24-175",
+      "title": "Public Law 24-175 | MPD Relocation Act",
+      "status": "unresolved",
+      "decision": "source-unavailable-historical-note",
+      "status_basis": "The source is unrecoverable and no operative text was available to audit, so only source-limited historical handling is supportable.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Statutory text unavailable.",
+          "classes": [
+            "non-code"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "codification/laws/laws/PL-024-175/_UNRECOVERABLE.txt states that the source was deleted or not found; audit/primary/batch-06-03.json marks the act unresolved.",
+          "notes": "Retain only as source-limited history and re-acquire the source before any codification work."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t1/s1",
+        "detail": "The working tree includes a note anchor, but the source is missing so no substantive placement can be verified."
+      },
+      "source_evidence": [
+        "codification/laws/laws/PL-024-175/_UNRECOVERABLE.txt says the source was deleted or not found.",
+        "audit/primary/batch-06-03.json marks the enactment unresolved because no text was available to audit.",
+        "The manifest source index identifies the law as unrecoverable."
+      ],
+      "recommended_actions": [
+        "Retain only as source-limited history.",
+        "Remove any Trello-derived certainty claim.",
+        "Flag the law for source re-acquisition."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-024-176",
+      "public_law": "24-176",
+      "title": "Public Law 24-176 | Comprehensive Federal Government Funding Act",
+      "status": "unresolved",
+      "decision": "source-unavailable-historical-note",
+      "status_basis": "The source is unrecoverable, and the title indicates appropriations rather than permanent positive-law text, so the law should remain historical-note-only.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Statutory text unavailable; title indicates appropriations.",
+          "classes": [
+            "appropriation",
+            "non-code"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "codification/laws/laws/PL-024-176/_UNRECOVERABLE.txt states the source was deleted or not found; audit/primary/batch-06-03.json flags the act as unresolved and notes its appropriations character.",
+          "notes": "Exclude appropriations from permanent Code text and keep only a source-limited history note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t31/s101",
+        "detail": "The branch note anchor is plausible for appropriations history, but the missing source prevents any substantive codification verification."
+      },
+      "source_evidence": [
+        "codification/laws/laws/PL-024-176/_UNRECOVERABLE.txt says the source was deleted or not found.",
+        "audit/primary/batch-06-03.json classifies the act as unresolved and describes it as an appropriations measure.",
+        "The manifest source index marks the law as unrecoverable."
+      ],
+      "recommended_actions": [
+        "Retain only as source-limited history.",
+        "Exclude appropriations from permanent Code text.",
+        "Remove any Trello link claim until the source is restored."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-024-177",
+      "public_law": "24-177",
+      "title": "Public Law 24-177 | SS Jurisdiction Act",
+      "status": "unresolved",
+      "decision": "source-unavailable-historical-note",
+      "status_basis": "The source is unrecoverable and no operative text was available to audit, so no lawful codification conclusion can be drawn.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Statutory text unavailable.",
+          "classes": [
+            "non-code"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "codification/laws/laws/PL-024-177/_UNRECOVERABLE.txt states that the source was deleted or not found; audit/primary/batch-06-03.json marks the act unresolved.",
+          "notes": "Retain only as source-limited history and re-acquire the source before any codification work."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t1/s1",
+        "detail": "The working tree includes a note anchor, but the source is missing so no substantive placement can be verified."
+      },
+      "source_evidence": [
+        "codification/laws/laws/PL-024-177/_UNRECOVERABLE.txt says the source was deleted or not found.",
+        "audit/primary/batch-06-03.json marks the enactment unresolved because no text was available to audit.",
+        "The manifest source index identifies the law as unrecoverable."
+      ],
+      "recommended_actions": [
+        "Retain only as source-limited history.",
+        "Remove any Trello-derived certainty claim.",
+        "Flag the law for source re-acquisition."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-182",
+      "public_law": "25-182",
+      "title": "Public Law 25-182 | Pentagon Expansion and National Territory Authorization Act",
+      "status": "unresolved",
+      "decision": "source-unavailable-historical-note",
+      "status_basis": "The supplied attachment is a deleted Google Docs page, so no operative statutory text can be recovered or verified.",
+      "provisions": [
+        {
+          "ref": "SOURCE FILE",
+          "text_summary": "No recoverable operative provisions; the only supplied source is deleted viewer debris.",
+          "classes": [
+            "non-code",
+            "statutory-note-material"
+          ],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "codification/laws/laws/PL-025-182/law.txt says the file was deleted; audit/primary/batch-07-01.json classifies the enactment as unresolved.",
+          "notes": "Preserve only a source-limited historical note and do not claim the law is presently codable."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t10/s101/h",
+        "detail": "The current note claims a local or statutory-note treatment, but the attachment is deleted and the recovered source cannot verify any substantive code result."
+      },
+      "source_evidence": [
+        "audit/primary/batch-07-01.json says the supplied attachment is a deleted Google Docs page.",
+        "codification/laws/laws/PL-025-182/law.txt states that the requested file was deleted.",
+        "The manifest source index marks the law as missing source evidence."
+      ],
+      "recommended_actions": [
+        "Retain only a source-limited historical note.",
+        "Remove the certainty claim that the law is current or codable.",
+        "Do not invent operative provisions or a stronger positive-law anchor."
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "batch": 13,
+  "reviewer": "law-auditor-D",
+  "group_index": 161,
+  "law_count": 10,
+  "source_manifest": "audit/primary/batch-13-01.json",
+  "output_path": "audit/review/review-61.json",
+  "reviewed_against": [
+    "audit/primary/batch-13-01.json",
+    "audit/claude-validation.json",
+    "codification/mass_migration/latest/reports/MASTER-CODIFICATION-REPORT.md",
+    "codification/mass_migration/latest/reports/laws/PL-014-091.md",
+    "codification/mass_migration/latest/reports/laws/PL-015-092.md",
+    "codification/mass_migration/latest/reports/laws/PL-015-093.md",
+    "codification/mass_migration/latest/reports/laws/PL-015-094.md",
+    "codification/mass_migration/latest/reports/laws/PL-015-095.md",
+    "codification/mass_migration/latest/reports/laws/PL-015-096.md",
+    "codification/mass_migration/latest/reports/laws/PL-015-097.md",
+    "codification/mass_migration/latest/reports/laws/PL-015-098.md",
+    "codification/mass_migration/latest/reports/laws/PL-015-099.md",
+    "codification/mass_migration/latest/reports/laws/PL-015-100.md",
+    "usc/usc02.xml",
+    "usc/usc05.xml",
+    "usc/usc18.xml",
+    "usc/usc28.xml",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-014-091",
+      "public_law": "14-91",
+      "title": "Public Law 14-91 | Military Code of Military Justice Reform Act of 2023",
+      "chronology_conclusion": "The source is a shell/proposed-UCMJ text, so no executable military-code rewrite can be verified from the archive.",
+      "final_legal_status": "unresolved",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t2/s190d",
+      "exact_enacted_text_or_amendment_command": "Keep only a short historical note and do not infer any UCMJ rewrite.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-014-091.md classifies the act as a general statutory note at 2 U.S.C. section 190d.",
+        "audit/claude-validation.json marks PL-014-091 unresolved with missing source evidence.",
+        "The current branch implementation is overextended relative to the source-limited shell text."
+      ],
+      "current_xml_comparison": "The branch treats the law as a note entry in the military-justice area, but the source packet does not support any operative UCMJ rewrite; origin/main does not improve that record.",
+      "final_recommended_action": "Retain only a concise source-limited historical note.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-092",
+      "public_law": "15-92",
+      "title": "Public Law 15-92 | Commerce and Labor Innovation Initiative Act",
+      "chronology_conclusion": "PL 31-226 repeals this law in full before codification, so no current Code insertion survives.",
+      "final_legal_status": "superseded-before-codification",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "Keep only repeal-history treatment and do not insert current Code text.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-015-092.md identifies the law as superseded before codification.",
+        "audit/claude-validation.json marks PL-015-092 as superseded with missing chronology analysis.",
+        "The source report explicitly states that PL 31-226 repeals PL 15-92 in its entirety."
+      ],
+      "current_xml_comparison": "No matching current XML note was recovered in the branch or in origin/main, which is consistent with the superseded-before-codification result.",
+      "final_recommended_action": "Leave only the superseded-history record.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-093",
+      "public_law": "15-93",
+      "title": "Public Law 15-93 | Checks and Balances Act of 2023",
+      "chronology_conclusion": "The act remains current as repeal-history legislation because nothing in the supplied materials repeals PL 15-93 itself.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t2/s271",
+      "exact_enacted_text_or_amendment_command": "Keep a concise note only and explicitly record the repeal of PL 3-15 in the history chain.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-015-093.md places the act at 2 U.S.C. section 271 as a statutory note.",
+        "audit/claude-validation.json marks PL-015-093 current with missing chronology analysis.",
+        "The source text expressly repeals H.R. 10 / Public Law 3-15."
+      ],
+      "current_xml_comparison": "The branch note belongs at the 2 U.S.C. anchor, but it should be trimmed and should record the PL 3-15 repeal explicitly; origin/main does not carry the same branch note.",
+      "final_recommended_action": "Trim to a concise historical entry and add the repeal history for PL 3-15.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-094",
+      "public_law": "15-94",
+      "title": "Public Law 15-94 | Whistleblower Protections Act of 2023",
+      "chronology_conclusion": "The PDF is image-only and no recoverable enactment text is available, so the operative statutory content cannot be verified.",
+      "final_legal_status": "unresolved",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "Keep only a source-limited historical note and avoid false precision.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-015-094.md says no readable enactment text was recovered.",
+        "audit/claude-validation.json marks PL-015-094 unresolved with missing source evidence.",
+        "The source record is image-only/scanned, so no executable amendment can be grounded."
+      ],
+      "current_xml_comparison": "The current branch had been placed into permanent-text treatment without readable source support; origin/main does not supply a better operative placement.",
+      "final_recommended_action": "Retain only a concise source-limited historical note.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-095",
+      "public_law": "15-95",
+      "title": "Public Law 15-95 | An Act to Repeal the White House Protection Act",
+      "chronology_conclusion": "The source is unrecoverable, so the repeal target and scope cannot be authenticated.",
+      "final_legal_status": "unresolved",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "Retain only a source-limited historical note and do not invent the repeal chain.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-015-095.md classifies the record as repeal-history only.",
+        "audit/claude-validation.json marks PL-015-095 unsupported and unrecoverable.",
+        "The source packet is missing, so no operative text can be confirmed."
+      ],
+      "current_xml_comparison": "The branch note is generic repeal-history material, but it must continue to acknowledge the missing source instead of implying a verified chain.",
+      "final_recommended_action": "Keep only a source-limited historical note.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-096",
+      "public_law": "15-96",
+      "title": "Public Law 15-96 | Prisoner Bail Protection Act",
+      "chronology_conclusion": "PL 16-113 expressly repeals PL 15-96 in full, so the law belongs in history only.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "Keep only a concise historical note citing the later repeal by PL 16-113.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-015-096.md says the law is repealed and should be historical only.",
+        "audit/claude-validation.json marks PL-015-096 fully-repealed with partially-implemented current treatment.",
+        "The later repealer is identified in the source report as PL 16-113."
+      ],
+      "current_xml_comparison": "The branch treatment is directionally correct but still needs a concise repeal-history note that cites the later repealer; origin/main does not improve the record.",
+      "final_recommended_action": "Keep a short repeal-history note citing PL 16-113.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-097",
+      "public_law": "15-97",
+      "title": "Public Law 15-97 | Uniform Legal Practice Authority Act",
+      "chronology_conclusion": "Title I was later repealed in full, while Title II remains operative and PL 15-105 partially amended Title I before that repeal.",
+      "final_legal_status": "partially-current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t28/s598",
+      "exact_enacted_text_or_amendment_command": "Keep the enactment as a Title 28 statutory note, reflect the later amendments, and preserve only the operative Title II history.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-015-097.md assigns the act to 28 U.S.C. section 598.",
+        "audit/claude-validation.json marks PL-015-097 partially-current and notes the later repeal of Title I.",
+        "The source report identifies PL 25-184 as repealing Title I and PL 15-105 as a partial earlier amendment."
+      ],
+      "current_xml_comparison": "The branch implementation is too generic and does not track the Title I repeal chronology, though origin/main does not supply a better resolved note.",
+      "final_recommended_action": "Replace the boilerplate note with one that records the later amendments and the Title I repeal history.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-098",
+      "public_law": "15-98",
+      "title": "Public Law 15-98 | Inspector General Act (2023)",
+      "chronology_conclusion": "The enactment is a general and permanent executive-organization statute with no repeal or sunset in the supplied materials, so it belongs as a statutory note.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t5/s101",
+      "exact_enacted_text_or_amendment_command": "Keep it as statutory-note material and correct the heading to Inspector General Protection Act of 2023.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-015-098.md classifies the act as a non-code statutory note at Title 5.",
+        "audit/claude-validation.json marks PL-015-098 current with improperly-inserted-into-permanent-text treatment.",
+        "The source text identifies the short title as the Inspector General Protection Act of 2023."
+      ],
+      "current_xml_comparison": "The branch note exists in usc/usc05.xml but it still carries a dump-style body and a misnamed heading; origin/main does not show the same note.",
+      "final_recommended_action": "Remove the dump-style text and correct the heading to Inspector General Protection Act of 2023.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-099",
+      "public_law": "15-99",
+      "title": "Public Law 15-99 | Second National Federal Torts Act",
+      "chronology_conclusion": "The act is a general and permanent tort statute, and nothing in the supplied materials repeals it.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t18/s158",
+      "exact_enacted_text_or_amendment_command": "Keep it as a Title 18 statutory note and explicitly record the repeal of PL 2-14.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-015-099.md places the act at 18 U.S.C. section 158.",
+        "audit/claude-validation.json marks PL-015-099 current with note-only-but-amendment-required treatment.",
+        "The source text expressly repeals Public Law 2-14, the first National Federal Torts Act."
+      ],
+      "current_xml_comparison": "The branch belongs at the Title 18 anchor, but the repeal of PL 2-14 still needs to be marked explicitly; origin/main does not carry the same branch note.",
+      "final_recommended_action": "Record the repeal of PL 2-14 explicitly and keep the act as a Title 18 statutory note.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-100",
+      "public_law": "15-100",
+      "title": "Public Law 15-100 | Employee Rights and Limitations Act (leave, employment, termination)",
+      "chronology_conclusion": "The source text is substantive and permanent, and later amendment PL 17-131 confirms that it remains live rather than repealed.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t5/s101",
+      "exact_enacted_text_or_amendment_command": "Keep it as a Title 5 statutory note and trim any repealed-language treatment.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-015-100.md classifies the act as a current Title 5 note.",
+        "audit/claude-validation.json marks PL-015-100 current with incorrectly-implemented branch treatment.",
+        "The source report says later amendment PL 17-131 confirms the act remains live."
+      ],
+      "current_xml_comparison": "The branch implementation overstates repeal or supersession, even though the source and later-law chronology keep the act live; origin/main does not supply a better operative placement.",
+      "final_recommended_action": "Correct the status to current and keep only a concise Title 5 history entry.",
+      "confidence": "high"
+    }
+  ]
+}

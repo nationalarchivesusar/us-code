@@ -1,0 +1,205 @@
+{
+  "reviewer": "law-auditor-K",
+  "group_index": 168,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/manifest-68.json",
+  "reviewed_against": [
+    "audit/primary/batch-15-02.json",
+    "usc/usc01.xml",
+    "usc/usc05.xml",
+    "usc/usc10.xml",
+    "usc/usc18.xml",
+    "usc/usc22.xml",
+    "usc/usc28.xml",
+    "usc/usc29.xml",
+    "usc/usc50.xml",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-022-162",
+      "public_law": "22-162",
+      "title": "Public Law 22-162 | Judicial Fairness Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The recovered source and the existing codification reports support an already-incorporated disposition for the title 28 amendments.",
+      "approved_code_treatment": "already-incorporated",
+      "exact_target": [
+        "/us/usc/t28/s1253",
+        "/us/usc/t28/s1257",
+        "/us/usc/t28/s1291",
+        "/us/usc/t28/ptIV/ch83"
+      ],
+      "exact_enacted_text_or_amendment_command": "Replace 28 U.S.C. sections 1253, 1257, and 1291 with the enacted text, and record the collateral chapter 83 transfer note.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-022-162.md",
+        "codification/laws/laws/PL-022-162/law.txt",
+        "audit/primary/batch-15-02.json"
+      ],
+      "current_xml_comparison": "Current branch contains `rp-pl022162-codification`; origin/main does not. The visible section text in both trees remains the stock 28 U.S.C. headings, so the branch is carrying the already-incorporated treatment as a note rather than a visible rewrite.",
+      "final_recommended_action": "Keep the integrated title 28 amendments in place and retain the branch-only statutory note.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-022-163",
+      "public_law": "22-163",
+      "title": "Public Law 22-163 | Employee's Bill of Rights",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The source is readable and the act has no uniquely executable positive-law rewrite; it belongs as a statutory note.",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t5/s101",
+      "exact_enacted_text_or_amendment_command": "No express, uniquely executable Code amendment was found; preserve the act as a statutory note at the closest employment-law anchor.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-022-163.md",
+        "codification/laws/laws/PL-022-163/source/rendered.html",
+        "audit/primary/batch-15-02.json"
+      ],
+      "current_xml_comparison": "No law-specific XML placement is visible in either the current branch or origin/main. The source text points to federal employee protections and Title 5 section 2302, but not to a clean positive-law rewrite.",
+      "final_recommended_action": "Keep it as a statutory note and do not fabricate a Code amendment.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-022-164",
+      "public_law": "22-164",
+      "title": "Public Law 22-164 | Streamlining and Protecting American Security Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The act is a general security statute with no express, uniquely executable Code amendment; the intended treatment is a statutory note.",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t50/s3352d",
+      "exact_enacted_text_or_amendment_command": "No express, uniquely executable Code amendment was found; preserve the act as a statutory note at 50 U.S.C. 3352d.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-022-164.md",
+        "codification/laws/laws/PL-022-164/law.txt",
+        "audit/primary/batch-15-02.json"
+      ],
+      "current_xml_comparison": "No law-specific XML placement surfaced in the current branch or origin/main. The batch anchor at 50 U.S.C. 3352d is not visible in the tree, so the current XML does not yet show a dedicated note.",
+      "final_recommended_action": "Preserve the statutory note anchor if it is restored, but do not synthesize positive-law text.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-023-165",
+      "public_law": "23-165",
+      "title": "Public Law 23-165 | 2nd Amendment Protection Act (2APA)",
+      "final_legal_status": "current",
+      "chronology_conclusion": "Section 4(1) is an already-incorporated title 18 amendment; Section 4(2) is uncodified commentary.",
+      "approved_code_treatment": "already-incorporated",
+      "exact_target": "/us/usc/t18/s930/g/1",
+      "exact_enacted_text_or_amendment_command": "Replace subsection (g)(1) with the enacted Federal facility definition including the D.C. roads-and-sidewalks exemption.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-023-165.md",
+        "codification/laws/laws/PL-023-165/source/H.R. 2 - 2nd Amendment Protection Act (2APA).pdf",
+        "audit/primary/batch-15-02.json"
+      ],
+      "current_xml_comparison": "Current branch contains `rp-pl023165-codification`; origin/main does not. The visible 18 U.S.C. 930(g)(1) text remains the base section in both trees, so the already-incorporated treatment is tracked by the branch note rather than a visible section rewrite.",
+      "final_recommended_action": "Leave the amended 18 U.S.C. 930(g)(1) text in place and keep Section 4(2) uncodified.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-023-166",
+      "public_law": "23-166",
+      "title": "Public Law 23-166 | Amended Federal Employment Act of 2023",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source is unrecoverable, so no safe Code conclusion can be grounded beyond historical handling.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": null,
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-023-166.md",
+        "codification/laws/laws/PL-023-166/_UNRECOVERABLE.txt",
+        "audit/primary/batch-15-02.json"
+      ],
+      "current_xml_comparison": "No law-specific XML placement is visible in the current branch or origin/main, which matches the source-recovery failure.",
+      "final_recommended_action": "Retain only a source-limited historical note and do not infer any Code effect.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-023-167",
+      "public_law": "23-167",
+      "title": "Public Law 23-167 | Uh Oh Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The recovered source is a repeal-and-grandfathering act that carries historical effect only and does not create positive-law text.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "Repeal-mark Public Law 16-121 wherever it is carried.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-023-167.md",
+        "codification/laws/laws/PL-023-167/law.txt",
+        "audit/primary/batch-15-02.json"
+      ],
+      "current_xml_comparison": "Current branch contains `rp-pl023167-codification`; origin/main does not. The source text expressly repeals Public Law 16-121, so the branch note is appropriate as historical-only treatment.",
+      "final_recommended_action": "Keep the repeal-history note on Pub. L. 16-121 and do not add positive-law text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-023-168",
+      "public_law": "23-168",
+      "title": "Public Law 23-168 | Affirming Innovation Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "Section 3(a) is already incorporated into title 29 section 208; Section 3(b) remains uncodified.",
+      "approved_code_treatment": "already-incorporated",
+      "exact_target": "/us/usc/t29/s208",
+      "exact_enacted_text_or_amendment_command": "Replace section 208 with the enacted non-compete restrictions and update the heading accordingly.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-023-168.md",
+        "codification/laws/laws/PL-023-168/law.txt",
+        "audit/primary/batch-15-02.json"
+      ],
+      "current_xml_comparison": "Current branch contains `rp-pl023168-codification`; origin/main does not. The amended section 208 text is visible, and the branch note records the already-incorporated status.",
+      "final_recommended_action": "Keep the section 208 insertion and heading update, and leave Section 3(b) uncodified.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-023-169",
+      "public_law": "23-169",
+      "title": "Public Law 23-169 | Military Readiness Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The source is recoverable and supports a note-only disposition; the law does not present a uniquely executable Code rewrite.",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t10/s101/h",
+      "exact_enacted_text_or_amendment_command": "No express, uniquely executable Code amendment was found; preserve the act as a statutory note at the closest military anchor.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-023-169.md",
+        "codification/laws/laws/PL-023-169/law.txt",
+        "audit/primary/batch-15-02.json"
+      ],
+      "current_xml_comparison": "Current branch contains `rp-pl023169-codification`; origin/main does not. The note's source-limitation language is stale because the source text is recoverable in the workspace, so the note should be retained but the limitation claim should be corrected if it remains in XML.",
+      "final_recommended_action": "Keep the statutory note at 10 U.S.C. 101(h) and fix the false source-limitation language if it is still present.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-023-170",
+      "public_law": "23-170",
+      "title": "Public Law 23-170 | The Get Around DC Act",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The enactment is preserved as historical-only material and does not create permanent Code text.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": null,
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-023-170.md",
+        "codification/laws/laws/PL-023-170/source/downloaded_file.html",
+        "audit/primary/batch-15-02.json"
+      ],
+      "current_xml_comparison": "Current branch contains `rp-pl023170-codification`; origin/main does not. The source file is a Google Drive permission-denial stub, so the branch correctly keeps only a historical note.",
+      "final_recommended_action": "Keep only a historical note and do not add positive-law Code text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-023-171",
+      "public_law": "23-171",
+      "title": "Public Law 23-171 | Diplomatic Immunity Act",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The law is superseded before codification and remains historical-only.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": null,
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-023-171.md",
+        "codification/laws/laws/PL-023-171/law.txt",
+        "audit/primary/batch-15-02.json"
+      ],
+      "current_xml_comparison": "Current branch contains `rp-pl023171-codification`; origin/main does not. The source file is fragmentary and does not authenticate substantive operative text, so the historical-only note is the correct treatment.",
+      "final_recommended_action": "Keep only a source-limited historical note and do not assert any substantive Code effect.",
+      "confidence": "high"
+    }
+  ]
+}

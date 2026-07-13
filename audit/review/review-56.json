@@ -1,0 +1,401 @@
+{
+  "batch": 56,
+  "reviewer": "review-repair-56",
+  "group_index": 156,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/manifest-80.json",
+  "output_path": "audit/review/review-56.json",
+  "reviewed_against": [
+    "audit/manifests/manifest-80.json",
+    "audit/primary/batch-11-02.json",
+    "audit/primary/batch-11-03.json",
+    "audit/chronology-report.json",
+    "codification/mass_migration/latest/reports/laws/PL-007-049.md",
+    "codification/mass_migration/latest/reports/laws/PL-007-050.md",
+    "codification/mass_migration/latest/reports/laws/PL-007-051.md",
+    "codification/mass_migration/latest/reports/laws/PL-009-052.md",
+    "codification/mass_migration/latest/reports/laws/PL-009-053.md",
+    "codification/mass_migration/latest/reports/laws/PL-009-054.md",
+    "codification/mass_migration/latest/reports/laws/PL-009-055.md",
+    "codification/mass_migration/latest/reports/laws/PL-009-056.md",
+    "codification/mass_migration/latest/reports/laws/PL-009-057.md",
+    "codification/mass_migration/latest/reports/laws/PL-009-058.md",
+    "usc/usc01.xml",
+    "usc/usc02.xml",
+    "usc/usc03.xml",
+    "usc/usc14.xml",
+    "usc/usc22.xml",
+    "usc/usc29.xml",
+    "usc/usc31.xml",
+    "usc/usc46.xml",
+    "usc/usc50.xml",
+    "usc/usc54.xml",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-007-049",
+      "public_law": "7-49",
+      "title": "Public Law 7-49 | Legislative Initiative to Grow Monetary Access Act of 2022 (LIGMA Act)",
+      "chronology_conclusion": "The act is treated as historical only. The branch retains a statutory note in Title 31, but the source record does not support any live Code amendment.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t31",
+      "exact_enacted_text_or_amendment_command": "Retain only a concise historical note for the repealed pay-compensation enactment; do not duplicate the quoted source dump.",
+      "provisions": [
+        {
+          "ref": "SEC. 3",
+          "conclusion": "Compensation policy for legislative officials is the only substantive enactment, but it is historical after repeal.",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t31",
+          "evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-007-049.md marks the law as repealed or superseded.",
+            "usc/usc31.xml carries the branch-local statutory note for the law.",
+            "origin/main does not carry the matching note ID."
+          ],
+          "notes": "The statute is not a live positive-law rewrite."
+        },
+        {
+          "ref": "SEC. 4-6",
+          "conclusion": "Effective-date, duration, and purpose clauses are explanatory and do not require any separate Code text.",
+          "treatment": "historical-note-only",
+          "target": null,
+          "evidence": [
+            "The primary report treats the law as history only.",
+            "The branch note is retained as background, not executable text."
+          ],
+          "notes": "No separate codification target is justified."
+        }
+      ],
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-007-049.md classifies the act as repealed or superseded.",
+        "audit/chronology-report.json places the enactment in the historical repealer family rather than active positive law.",
+        "usc/usc31.xml contains the branch-only note with quoted content, while origin/main does not."
+      ],
+      "current_xml_comparison": "Current branch keeps the historical note in usc/usc31.xml; origin/main does not carry the same note ID or dump.",
+      "final_recommended_action": "Trim the branch note to a concise repeal-history entry and keep it as Title 31 history only.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-007-050",
+      "public_law": "7-50",
+      "title": "Public Law 7-50 | Coast Guard Base Repurposing Act of 2022",
+      "chronology_conclusion": "The act is historical only. The branch note sits in Title 14, but the source record supports no live Code rewrite.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t14",
+      "exact_enacted_text_or_amendment_command": "Retain only a concise historical note for the repealed Coast Guard base repurposing measure.",
+      "provisions": [
+        {
+          "ref": "SEC. 4 and SEC. 6",
+          "conclusion": "The repurposing and jurisdiction-transfer clauses are the operative substance, but they are historical after repeal.",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t14",
+          "evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-007-050.md marks the law as repealed or superseded.",
+            "usc/usc14.xml carries the branch-local statutory note for the law.",
+            "origin/main does not carry the matching note ID."
+          ],
+          "notes": "No current Code section should be created from the repealed act."
+        },
+        {
+          "ref": "SEC. 1-3, 5, 7",
+          "conclusion": "Short title, severability, effective date, and purpose material are explanatory only.",
+          "treatment": "historical-note-only",
+          "target": null,
+          "evidence": [
+            "The primary report does not identify any surviving positive-law target.",
+            "The note should remain purely historical."
+          ],
+          "notes": "Do not expand the branch note into executable text."
+        }
+      ],
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-007-050.md classifies the act as repealed or superseded.",
+        "audit/chronology-report.json does not identify a surviving codification target for a live amendment.",
+        "usc/usc14.xml contains the branch-only note with quoted content, while origin/main does not."
+      ],
+      "current_xml_comparison": "Current branch keeps the historical note in usc/usc14.xml; origin/main does not carry the same note ID or dump.",
+      "final_recommended_action": "Trim the branch note to a concise repeal-history entry and keep it as Title 14 history only.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-007-051",
+      "public_law": "7-51",
+      "title": "Public Law 7-51 | Federal Agent Law Training Mandate",
+      "chronology_conclusion": "The source is unavailable, so no lawful executable amendment can be reconstructed. The record supports history-only treatment.",
+      "final_legal_status": "unresolved",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t1",
+      "exact_enacted_text_or_amendment_command": "Keep only a source-limited historical note; do not invent operative language.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "conclusion": "No recoverable operative text exists in the source record.",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t1",
+          "evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-007-051.md reports source unavailability.",
+            "usc/usc01.xml contains the branch note with a source-limitation statement.",
+            "origin/main does not carry the same note ID."
+          ],
+          "notes": "This is a source-limited history entry, not a substantive amendment."
+        }
+      ],
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-007-051.md says authenticated statutory text was unavailable or unrecoverable.",
+        "audit/chronology-report.json does not supply a recoverable live target for the act.",
+        "usc/usc01.xml contains the branch-only source-limited note; origin/main does not."
+      ],
+      "current_xml_comparison": "Current branch keeps a concise source-limited note in usc/usc01.xml; origin/main does not carry the same note ID.",
+      "final_recommended_action": "Retain only the source-limited historical note and do not infer operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-009-052",
+      "public_law": "9-52",
+      "title": "Public Law 9-52 | The Federal District Wages Act of 2022",
+      "chronology_conclusion": "The source is unavailable, so the act cannot be validated as operative law. The branch placement is a default historical note only.",
+      "final_legal_status": "unresolved",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t29/s201",
+      "exact_enacted_text_or_amendment_command": "Keep only a source-limited historical note and remove any implication that the Title 29 placement reflects verified operative text.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "conclusion": "The enactment cannot be reconstructed from the archive.",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t29/s201",
+          "evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-009-052.md marks the source as unavailable.",
+            "The review record shows a branch note in usc/usc29.xml.",
+            "origin/main does not carry the same note ID."
+          ],
+          "notes": "The review should not endorse a guessed operative amendment."
+        }
+      ],
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-009-052.md says no operative statutory text can be verified.",
+        "audit/chronology-report.json does not recover a lawful executable target from the source itself.",
+        "usc/usc29.xml contains the branch-only note at the Title 29 anchor; origin/main does not."
+      ],
+      "current_xml_comparison": "Current branch has a source-limited note in usc/usc29.xml; origin/main does not carry the same note ID.",
+      "final_recommended_action": "Keep only the source-limited historical note and do not infer a new Title 29 provision.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-009-053",
+      "public_law": "9-53",
+      "title": "Public Law 9-53 | Save Our Businesses Act of 2022",
+      "chronology_conclusion": "Section 5 remains the live executable amendment to 3 U.S.C. 301, but later law PL 12-84 partially strikes sections 5-7, so the act is only partially current.",
+      "final_legal_status": "partially-current",
+      "approved_code_treatment": "amend-existing-text",
+      "exact_target": "/us/usc/t3/s301",
+      "exact_enacted_text_or_amendment_command": "Preserve the section 5 amendment to 3 U.S.C. 301 and account for the later partial strike of sections 5-7 by PL 12-84.",
+      "provisions": [
+        {
+          "ref": "SEC. 5",
+          "conclusion": "This is the operative amendment to 3 U.S.C. 301 and remains live in substance.",
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t3/s301",
+          "evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-009-053.md identifies section 5 as the executable target.",
+            "usc/usc03.xml contains the branch implementation at Title 3.",
+            "origin/main does not show the same note implementation."
+          ],
+          "notes": "This provision should remain in the positive-law chain."
+        },
+        {
+          "ref": "SEC. 1-4, 6-10",
+          "conclusion": "Short title, severability, later repeal language, and purpose/implementation material are not separate executable Code text.",
+          "treatment": "historical-note-only",
+          "target": null,
+          "evidence": [
+            "The primary report flags later-law displacement of part of the act.",
+            "Only section 5 is the durable amendment target."
+          ],
+          "notes": "Retain only as amendment history."
+        }
+      ],
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-009-053.md classifies the law as partially current.",
+        "audit/chronology-report.json ties the law to /us/usc/t3/s301.",
+        "usc/usc03.xml contains the branch note for the law, while origin/main does not carry the same note ID."
+      ],
+      "current_xml_comparison": "Current branch has the Title 3 note; origin/main does not. The branch still needs later-law awareness for the partial strike of sections 5-7.",
+      "final_recommended_action": "Keep the section 5 amendment, trim the note, and carry the later-law partial-strike limitation forward.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-009-054",
+      "public_law": "9-54",
+      "title": "Public Law 9-54 | The Smart Label Congress Act",
+      "chronology_conclusion": "The source is unavailable, so the act remains a history-only entry. The Title 2 note is a closest-anchor treatment, not verified operative text.",
+      "final_legal_status": "unresolved",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t2/s4572",
+      "exact_enacted_text_or_amendment_command": "Keep only a concise historical note at the closest Title 2 anchor; do not invent operative language.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "conclusion": "No verified operative language is available from the source archive.",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t2/s4572",
+          "evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-009-054.md reports source unavailability.",
+            "usc/usc02.xml contains the branch-local history note.",
+            "origin/main does not carry the same note ID."
+          ],
+          "notes": "This remains a note-only historical record."
+        }
+      ],
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-009-054.md says no operative statutory text can be verified.",
+        "audit/chronology-report.json does not resolve a live codification target from the source itself.",
+        "usc/usc02.xml contains the branch-only note; origin/main does not."
+      ],
+      "current_xml_comparison": "Current branch has the historical note in usc/usc02.xml; origin/main does not carry the same note ID.",
+      "final_recommended_action": "Keep only the source-limited historical note and do not create a new operative Code section.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-009-055",
+      "public_law": "9-55",
+      "title": "Public Law 9-55 | Economic Sanctions on Iran Act of 2022",
+      "chronology_conclusion": "The act is repealed or superseded and belongs in history only. The branch note in Title 22 should be reduced to concise repeal history.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t22/s2651",
+      "exact_enacted_text_or_amendment_command": "Retain only a concise repeal-history note in Title 22; remove the dumped text and tracking noise.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-3",
+          "conclusion": "The sanctions framework is historical only after repeal.",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t22/s2651",
+          "evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-009-055.md marks the law as repealed or superseded.",
+            "usc/usc22.xml contains the branch-local note at the foreign-relations anchor.",
+            "origin/main does not carry the same note ID."
+          ],
+          "notes": "No live sanctions text remains to codify."
+        },
+        {
+          "ref": "SEC. 6",
+          "conclusion": "The enactment clause is historical only and does not justify additional Code text.",
+          "treatment": "historical-note-only",
+          "target": null,
+          "evidence": [
+            "The primary report treats the law as fully historical.",
+            "The branch note should be kept concise."
+          ],
+          "notes": "Do not retain quoted source dump material."
+        }
+      ],
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-009-055.md classifies the law as repealed or superseded.",
+        "audit/chronology-report.json treats the act as fully repealed or superseded in the archive.",
+        "usc/usc22.xml contains the branch-only note; origin/main does not."
+      ],
+      "current_xml_comparison": "Current branch has the Title 22 note, but it still carries dump/tracking material; origin/main does not.",
+      "final_recommended_action": "Remove the full-text dump and keep only a concise repeal-history note in Title 22.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-009-056",
+      "public_law": "9-56",
+      "title": "Public Law 9-56 | Federal Judicial Reform Act",
+      "chronology_conclusion": "The act is historical only. The current branch parks the note in Title 50, which is the wrong subject for a judiciary bill.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t50/s1",
+      "exact_enacted_text_or_amendment_command": "Keep only a concise historical note and move it out of Title 50 if any note is retained.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "conclusion": "Judiciary reform provisions are historical after repeal and do not warrant positive-law text.",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t50/s1",
+          "evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-009-056.md marks the law as repealed.",
+            "The current branch note is parked in usc/usc50.xml.",
+            "origin/main does not carry the same note ID."
+          ],
+          "notes": "The current placement is subject-matter incorrect."
+        }
+      ],
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-009-056.md treats the law as historical and repealed.",
+        "audit/chronology-report.json does not identify a surviving positive-law placement.",
+        "usc/usc50.xml contains the branch-local note; origin/main does not."
+      ],
+      "current_xml_comparison": "Current branch keeps the note in usc/usc50.xml at a war-and-national-defense anchor; origin/main does not carry the same note ID.",
+      "final_recommended_action": "Trim the note to concise repeal history and relocate any retained history to the correct judiciary subject area.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-009-057",
+      "public_law": "9-57",
+      "title": "Public Law 9-57 | Repealing S.B.1/Pub. Law 7-39",
+      "chronology_conclusion": "The law is a spent repealer. Its operative effect remains meaningful as history, but it is not standalone positive-law text. The current note is misanchored in Title 54.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t54/s100101/b/2",
+      "exact_enacted_text_or_amendment_command": "Keep the repeal-history note only, but tie it to the PL 7-39 anchor rather than Title 54.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "conclusion": "The repeal of S.B.1 / Public Law 7-39 is the entire legal effect and should be preserved as history.",
+          "treatment": "statutory-note",
+          "target": "/us/usc/t54/s100101/b/2",
+          "evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-009-057.md says the act is repealing Pub. Law 7-39.",
+            "usc/usc54.xml contains the branch-local note.",
+            "origin/main does not carry the same note ID."
+          ],
+          "notes": "This is a note-only repealer, not a new positive-law section."
+        }
+      ],
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-009-057.md classifies the law as repealing S.B.1 / Pub. Law 7-39.",
+        "audit/chronology-report.json treats the repeal effect as still meaningful history.",
+        "usc/usc54.xml contains the branch-only note; origin/main does not."
+      ],
+      "current_xml_comparison": "Current branch has a misanchored historical note in usc/usc54.xml; origin/main does not carry the same note ID.",
+      "final_recommended_action": "Keep the repeal history only and relocate the note to the PL 7-39 anchor.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-009-058",
+      "public_law": "9-58",
+      "title": "Public Law 9-58 | To Bar PhillipRobecq From Public Office",
+      "chronology_conclusion": "The act is a private, person-specific measure and remains history only after repeal. It should not be treated as permanent Code text.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t46/s101",
+      "exact_enacted_text_or_amendment_command": "Keep only a concise historical note and do not codify a person-specific barment measure as positive law.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "conclusion": "The measure is individual-specific and excluded from permanent positive-law codification.",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t46/s101",
+          "evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-009-058.md classifies the law as repealed or superseded.",
+            "usc/usc46.xml contains the branch-local history note.",
+            "origin/main does not carry the same note ID."
+          ],
+          "notes": "The note is parked in an unrelated shipping title."
+        }
+      ],
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-009-058.md treats the law as repealed or superseded.",
+        "audit/chronology-report.json does not support permanent positive-law codification for an individual barment bill.",
+        "usc/usc46.xml contains the branch-only note; origin/main does not."
+      ],
+      "current_xml_comparison": "Current branch has the note in usc/usc46.xml, but it is anchored in an unrelated title; origin/main does not carry the same note ID.",
+      "final_recommended_action": "Exclude the measure from permanent Code text and keep only concise history if any note is retained.",
+      "confidence": "high"
+    }
+  ]
+}

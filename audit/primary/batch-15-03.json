@@ -1,0 +1,509 @@
+{
+  "batch": 15,
+  "auditor": "law-auditor-O",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-023-172",
+      "public_law": "23-172",
+      "title": "Public Law 23-172 | Congressional Military Service Act",
+      "status": "repealed",
+      "status_basis": "Claude's archived disposition classifies the enactment as repealed, so no current Code text is authorized even though the recovered source contains direct amendments and repeals.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-3",
+          "text_summary": "Short title, severability, and immediate-effective-date language.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The source includes the act's opening clauses, but no current Code operation is authorized.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 4(1)",
+          "text_summary": "Amends PL 18-140 section 304(a) to revise enlistment and commissioning rules.",
+          "classes": ["direct-amendment", "substitution"],
+          "treatment": "historical-note-only",
+          "target": "PL 18-140 sec.304(a)",
+          "exact_change": "Do not create live Code text from this repealed enactment.",
+          "evidence": "The source directs a replacement of section 304(a) of PL 18-140.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 5(a)-(b)",
+          "text_summary": "Repeals 10 U.S.C. 12204 and rewrites 10 U.S.C. 12203.",
+          "classes": ["repeal", "direct-amendment", "substitution"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t10/s12203",
+          "exact_change": "Keep only the repeal history; do not apply the withdrawn text as current law.",
+          "evidence": "The source states that section 12204 is repealed and section 12203 is rewritten.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 9(a) and SEC. 5(c)/9(b-c)",
+          "text_summary": "Rewrites 10 U.S.C. 151 and adds uncodified protections and limitations.",
+          "classes": ["direct-amendment", "new-permanent-general", "uncodified-admin-direction"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t10/s151",
+          "exact_change": "Preserve only as repeal history; no live section text should be created.",
+          "evidence": "The source rewrites section 151 and adds ancillary protections that are not current Code text.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "historical note only",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "title 22 statutory note",
+        "detail": "The current XML preserves the enactment as history rather than as live Code text, which matches the repealed disposition."
+      },
+      "recommended_actions": [
+        "Retain the enactment only as a historical note.",
+        "Do not promote any of the repealed or rewritten sections into current Code text.",
+        "Remove the Trello link if it remains attached."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-024-173",
+      "public_law": "24-173",
+      "title": "Public Law 24-173 | Federal Enhancement Against Foreign Intrusion Act",
+      "status": "active",
+      "status_basis": "The recovered source is a general and permanent foreign-affairs statute with no express Code citation; Claude preserved it as a statutory note rather than a positive-law amendment.",
+      "provisions": [
+        {
+          "ref": "SECTION I",
+          "text_summary": "Short title, severability, effective date, and definitions.",
+          "classes": ["short-title", "severability", "effective-date", "definitions"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s172",
+          "exact_change": "Keep as concise note material only.",
+          "evidence": "The act's opening section contains the general clauses and definitions.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION II",
+          "text_summary": "Bars federal employees from holding positions in foreign governments.",
+          "classes": ["new-permanent-general", "uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Preserve as statutory note only.",
+          "evidence": "The section prohibits federal employees from holding foreign-government posts.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION III",
+          "text_summary": "Bars elected officials from foreign-government or foreign-military employment.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Preserve as statutory note only.",
+          "evidence": "The section prohibits elected officials from foreign-government or foreign-military employment.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION IV",
+          "text_summary": "Extends the foreign-position bar to Senate-confirmed officials.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Preserve as statutory note only.",
+          "evidence": "The section extends the same rule to Senate-confirmed officials.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The current XML already treats the enactment as a national-security statutory note; no unique positive-law section was determinable."
+      },
+      "recommended_actions": [
+        "Retain a concise statutory note.",
+        "Do not invent a permanent Code section.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-024-174",
+      "public_law": "24-174",
+      "title": "Public Law 24-174 | Washington, D.C. Permitless Carry Act",
+      "status": "repealed",
+      "status_basis": "Claude's archived disposition classifies the enactment as repealed, so it is retained only as statutory history and not as current Code text.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-3",
+          "text_summary": "Short title, purpose, and definitions.",
+          "classes": ["short-title", "definitions", "local-district"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep as history only.",
+          "evidence": "The source identifies the act as a District of Columbia carry measure.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 4-5",
+          "text_summary": "Eligibility and location restrictions for permitless carry in D.C.",
+          "classes": ["local-district", "new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Do not elevate to permanent Code text.",
+          "evidence": "The source sets eligibility criteria and location restrictions for carry in D.C.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 6-8",
+          "text_summary": "Special rules for Congress, judges, law enforcement, parks, and enforcement.",
+          "classes": ["local-district", "new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep as historical note material only.",
+          "evidence": "The source adds special rules and enforcement provisions for the D.C. context.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 9-10",
+          "text_summary": "Rights restoration, supremacy clause, and Secret Service identification rules.",
+          "classes": ["local-district", "savings", "applicability"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep as historical note material only.",
+          "evidence": "The source includes a restoration clause, a supremacy clause, and identification rules.",
+          "notes": "Source numbering includes duplicate section labels."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "The current XML keeps the act as a District of Columbia statutory note, which is the right general treatment for a repealed local enactment."
+      },
+      "recommended_actions": [
+        "Keep only as a concise D.C. historical note.",
+        "Do not promote to permanent positive-law text.",
+        "Remove the Trello link and verify any superseded labeling separately."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-024-175",
+      "public_law": "24-175",
+      "title": "Public Law 24-175 | MPD Relocation Act",
+      "status": "unresolved",
+      "status_basis": "No readable authenticated enactment text could be recovered, so the law remains source-limited and cannot safely alter the Code.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Source text unavailable.",
+          "classes": ["non-code"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "No operative Code change can be stated.",
+          "evidence": "No readable authenticated enactment text could be recovered.",
+          "notes": "Retain only as source-limited history."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "source-limited historical note",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t1/s1",
+        "detail": "A note exists, but the recovered source is missing, so the report cannot verify any substantive codification."
+      },
+      "recommended_actions": [
+        "Retain only as source-limited history.",
+        "Remove the Trello link.",
+        "Flag the source for reacquisition."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-024-176",
+      "public_law": "24-176",
+      "title": "Public Law 24-176 | Comprehensive Federal Government Funding Act",
+      "status": "unresolved",
+      "status_basis": "No readable authenticated enactment text could be recovered; the title indicates appropriations, so the law should not become permanent Code text even if later recovered.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Appropriations-oriented source text unavailable.",
+          "classes": ["appropriation", "non-code"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Exclude from permanent Code.",
+          "evidence": "The source is unrecoverable and the title is funding-oriented.",
+          "notes": "Treat as historical record only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "source-limited historical note",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t31/s101",
+        "detail": "The existing XML note is a plausible appropriations anchor, but the missing source prevents any substantive codification finding."
+      },
+      "recommended_actions": [
+        "Retain only as source-limited history.",
+        "Exclude appropriations from permanent Code text.",
+        "Remove the Trello link and flag for source reacquisition."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-024-177",
+      "public_law": "24-177",
+      "title": "Public Law 24-177 | SS Jurisdiction Act",
+      "status": "repealed",
+      "status_basis": "Claude's archived disposition classifies the enactment as repealed, but the source bundle is unrecoverable, so the current treatment must remain historical only.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Source text unavailable.",
+          "classes": ["non-code"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "No operative Code change can be stated.",
+          "evidence": "No readable authenticated enactment text could be recovered.",
+          "notes": "Retain only as source-limited history."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "source-limited historical note",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t1/s1",
+        "detail": "A note exists, but the missing source prevents verification of any substantive placement."
+      },
+      "recommended_actions": [
+        "Retain only as source-limited history.",
+        "Remove the Trello link.",
+        "Flag for source reacquisition."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-024-178",
+      "public_law": "24-178",
+      "title": "Public Law 24-178 | Equality in Employment Act",
+      "status": "active",
+      "status_basis": "The recovered source expressly amends 42 U.S.C. 2000e-2(a) to add gender identity and sexual orientation, and Claude's later-law record treats the substantive change as already incorporated.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-5",
+          "text_summary": "Short title, severability, effective date, preamble, and findings.",
+          "classes": ["short-title", "severability", "effective-date", "findings-or-sense"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Keep as note material only.",
+          "evidence": "The opening sections introduce the act and contain findings rather than direct Code text.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 6(a)(1)-(2)",
+          "text_summary": "Amends 42 U.S.C. 2000e-2(a) to add gender identity and sexual orientation.",
+          "classes": ["direct-amendment", "substitution"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t42/s2000e-2",
+          "exact_change": "Add gender identity and sexual orientation to the protected characteristics in subsection (a).",
+          "evidence": "Section 6(a) expressly directs amendment of 42 U.S.C. 2000e-2(a).",
+          "notes": "The substantive amendment is already present in the XML."
+        },
+        {
+          "ref": "SEC. 6(b)-7",
+          "text_summary": "EEOC and Labor implementation directives.",
+          "classes": ["uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Keep as concise note material only.",
+          "evidence": "The source directs agency enforcement and rulemaking.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 8",
+          "text_summary": "Conclusion and sense language.",
+          "classes": ["findings-or-sense"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep only as conclusion text.",
+          "evidence": "The closing section is a concluding sense statement rather than positive-law text.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t29/s201",
+        "detail": "The Title 42 amendment is present, but the codification note is mis-anchored to Title 29 and still carries a full-text dump that should be removed."
+      },
+      "recommended_actions": [
+        "Keep the Title 42 amendment as applied text.",
+        "Remove the full-text dump and Trello link from the note.",
+        "Move or replace the note at the correct Title 42 anchor.",
+        "Retain the EEOC and Labor directives as concise statutory notes."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-179",
+      "public_law": "25-179",
+      "title": "Public Law 25-179 | Fiscal Year 21-2",
+      "status": "active",
+      "status_basis": "The recovered enactment is a temporary appropriations law with a short fiscal window, so it belongs as a statutory note rather than permanent Code text.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-2",
+          "text_summary": "Short title and immediate-effective-date rule.",
+          "classes": ["short-title", "effective-date"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep as introductory note material only.",
+          "evidence": "The opening sections give the title and immediate-effect clause.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 3-4, 6-14",
+          "text_summary": "Appropriations and reporting provisions.",
+          "classes": ["appropriation", "temporary"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": "Exclude appropriations from permanent Code text.",
+          "evidence": "The act appropriates funds for the stated short fiscal period.",
+          "notes": "Temporary spending directive only."
+        },
+        {
+          "ref": "SEC. 5",
+          "text_summary": "Temporary COLA suspension under 2 U.S.C. 4501.",
+          "classes": ["temporary", "direct-amendment"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s4501",
+          "exact_change": "Record the temporary suspension as a note only.",
+          "evidence": "Section 5 expressly suspends the COLA adjustment for the fiscal year.",
+          "notes": "Temporary note only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t31/s101",
+        "detail": "The current XML note is an acceptable appropriations-history anchor, but the act itself is temporary and should not be treated as permanent Code text."
+      },
+      "recommended_actions": [
+        "Keep only a concise historical note.",
+        "Exclude appropriations from permanent Code text.",
+        "Record the temporary section 5 note at 2 U.S.C. 4501.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-180",
+      "public_law": "25-180",
+      "title": "Public Law 25-180 | Sanction Repealment Act",
+      "status": "repealed",
+      "status_basis": "Claude's archived disposition marks the enactment as repealed, but the recovered source still matters because it expressly repeals PL 9-55 and nullifies the sanctions regime on Iran.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-2",
+          "text_summary": "Short title and purpose.",
+          "classes": ["short-title", "findings-or-sense"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Keep as concise note material only.",
+          "evidence": "The opening clauses identify the repealing statute and its purpose.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 3(b)",
+          "text_summary": "Repeals PL 9-55 in its entirety.",
+          "classes": ["repeal"],
+          "treatment": "repeal-marking",
+          "target": "PL 9-55",
+          "exact_change": "Record repeal-marking at the original law's home.",
+          "evidence": "Section 3(b) expressly repeals Public Law 9-55 in its entirety.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 3(c)",
+          "text_summary": "Declares sanctions on Iran null and void.",
+          "classes": ["repeal", "new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Keep the sanctions-nullification language as a short note only.",
+          "evidence": "Section 3(c) declares all sanctions on Iran null and void.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 4-5",
+          "text_summary": "Severability and effective date.",
+          "classes": ["severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Keep as standard note material only.",
+          "evidence": "The source includes severability and immediate-effect language.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t22/s2651",
+        "detail": "The current XML note is a reasonable foreign-relations anchor, but the repeal of PL 9-55 should also be recorded at the original Code home."
+      },
+      "recommended_actions": [
+        "Record the PL 9-55 repeal as a repeal-marking at its original Code home.",
+        "Keep the sanctions-nullification language as a concise statutory note.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-181",
+      "public_law": "25-181",
+      "title": "Public Law 25-181 | Federal District of Columbia Criminal Code",
+      "status": "repealed",
+      "status_basis": "Claude's archived disposition classifies the enactment as repealed; the recovered source is a District of Columbia/local criminal code and does not supply any current positive-law U.S. Code text.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "District of Columbia local criminal code; no current U.S. Code text supplied.",
+          "classes": ["local-district", "non-code"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep only as a historical note.",
+          "evidence": "The source is a D.C. criminal code enactment and Claude marks it repealed.",
+          "notes": "No permanent Code text should be derived from it."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "title 1 statutory note",
+        "detail": "The current XML treats the enactment as historical only, which is appropriate for a repealed D.C. local code enactment."
+      },
+      "recommended_actions": [
+        "Keep only as a historical note.",
+        "Do not create positive-law Code text.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    }
+  ]
+}

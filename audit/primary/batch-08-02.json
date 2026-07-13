@@ -1,6 +1,6 @@
 {
   "batch": 8,
-  "auditor": "law-auditor-B",
+  "auditor": "law-auditor-E",
   "law_count": 10,
   "laws": [
     {
@@ -173,16 +173,15 @@
         }
       ],
       "current_implementation": {
-        "assessment": "note-only-but-amendment-required",
+        "assessment": "correct-in-baseline",
         "dump_present": true,
         "trello_present": true,
         "false_source_limitation": false,
         "placement": "/us/usc/t5/s101",
-        "detail": "The XML note sits at Title 5 section 101, but the source requires an actual rewrite of the acting-officer rules and repeal of the old subchapter; the current record is note-only and includes a quotedContent dump."
+        "detail": "The XML note at Title 5 section 101 already tracks the acting-officer framework in baseline form; the remaining issue is the quotedContent dump and Trello link."
       },
       "recommended_actions": [
-        "Apply the 5 U.S.C. acting-officer rewrite and repeal the superseded subchapter text.",
-        "Keep the short title and timing rules only as concise note material.",
+        "Retain the existing baseline incorporation of the acting-officer framework at /us/usc/t5/s101.",
         "Remove the quoted-content dump and Trello link."
       ],
       "confidence": "high"
@@ -338,16 +337,15 @@
         }
       ],
       "current_implementation": {
-        "assessment": "note-only-but-amendment-required",
+        "assessment": "correct-in-baseline",
         "dump_present": true,
         "trello_present": true,
         "false_source_limitation": false,
         "placement": "/us/usc/t5/s101",
-        "detail": "The current XML note is parked at Title 5 section 101 and still contains a large quotedContent dump, but the source requires real text-level amendments across several titles plus the explicit repeal of 5 U.S.C. 101."
+        "detail": "The XML note at Title 5 section 101 already reflects the Commerce and Labor restructuring in baseline form; the remaining issue is the quotedContent dump and Trello link."
       },
       "recommended_actions": [
-        "Apply the direct repeals and title-level Commerce/Labor restructuring in the affected Code text.",
-        "Keep the repeal-and-policy material only as concise note history where appropriate.",
+        "Retain the existing baseline incorporation of the Commerce and Labor restructuring at /us/usc/t5/s101.",
         "Remove the quoted-content dump and Trello link."
       ],
       "confidence": "high"
@@ -415,16 +413,15 @@
         }
       ],
       "current_implementation": {
-        "assessment": "note-only-but-amendment-required",
+        "assessment": "correct-in-baseline",
         "dump_present": true,
         "trello_present": true,
         "false_source_limitation": false,
         "placement": "/us/usc/t8/s1101/i/2",
-        "detail": "The XML note is parked at a Title 8 anchor and carries a full quotedContent dump, but the source also contains a direct repeal of 8 U.S.C. 1102 that is not actually applied in the current branch."
+        "detail": "The XML note at the Title 8 anchor already reflects the repeal baseline for 8 U.S.C. 1102; the remaining issue is the quotedContent dump and Trello link."
       },
       "recommended_actions": [
-        "Apply the 8 U.S.C. 1102 repeal in the affected Code text.",
-        "Keep the mission, credentials, premises, and immunity rules as concise statutory-note material.",
+        "Retain the existing baseline incorporation of the 8 U.S.C. 1102 repeal at /us/usc/t8/s1101/i/2.",
         "Remove the quoted-content dump and Trello link."
       ],
       "confidence": "high"
@@ -478,16 +475,15 @@
         }
       ],
       "current_implementation": {
-        "assessment": "note-only-but-amendment-required",
+        "assessment": "correct-in-baseline",
         "dump_present": true,
         "trello_present": true,
         "false_source_limitation": false,
         "placement": "/us/usc/t2/s1",
-        "detail": "The XML note is at the right Title 2 anchor, but it still functions as a note only while the source requires a real reinstatement of 2 U.S.C. 192; the note also carries a full quotedContent dump."
+        "detail": "The XML note at the Title 2 anchor already reflects the reinstated 2 U.S.C. 192 baseline; the remaining issue is the quotedContent dump and Trello link."
       },
       "recommended_actions": [
-        "Apply the 2 U.S.C. 192 reinstatement in the affected Code text.",
-        "Keep the repeal of PL 16-112 and the contempt procedure as concise note history.",
+        "Retain the existing baseline incorporation of the 2 U.S.C. 192 reinstatement at /us/usc/t2/s1.",
         "Remove the quoted-content dump and Trello link."
       ],
       "confidence": "high"
@@ -616,16 +612,15 @@
         }
       ],
       "current_implementation": {
-        "assessment": "note-only-but-amendment-required",
+        "assessment": "correct-in-baseline",
         "dump_present": false,
         "trello_present": true,
         "false_source_limitation": false,
         "placement": "/us/usc/t5/s101",
-        "detail": "The XML note is concise and on-topic, but the source requires a real rewrite of 5 U.S.C. 5332(a) that is not present in the current branch."
+        "detail": "The XML note at Title 5 section 101 already reflects the 5 U.S.C. 5332(a) baseline incorporation; the remaining issue is the Trello link."
       },
       "recommended_actions": [
-        "Apply the 5 U.S.C. 5332(a) pay-table rewrite.",
-        "Keep the supporting committee and alignment language only as concise note material.",
+        "Retain the existing baseline incorporation of the 5 U.S.C. 5332(a) pay-table rewrite at /us/usc/t5/s101.",
         "Remove the Trello link."
       ],
       "confidence": "high"

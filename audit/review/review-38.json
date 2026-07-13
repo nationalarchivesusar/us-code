@@ -1,0 +1,541 @@
+{
+  "reviewer": "law-auditor-L",
+  "group_index": 138,
+  "law_count": 19,
+  "source_manifest": "audit/manifests/manifest-38.json",
+  "output_path": "audit/review/review-38.json",
+  "reviewed_against": [
+    "audit/manifests/manifest-38.json",
+    "audit/primary/batch-09-01.json",
+    "audit/primary/batch-09-02.json",
+    "audit/primary/batch-09-03.json",
+    "audit/chronology-report.json",
+    "usc/usc01.xml",
+    "usc/usc02.xml",
+    "usc/usc05.xml",
+    "usc/usc18.xml",
+    "usc/usc22.xml",
+    "usc/usc28.xml",
+    "usc/usc50.xml",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-034-251",
+      "public_law": "34-251",
+      "title": "Public Law 34-251 | In-Game Sentencing Guidelines Bill",
+      "status": "superseded",
+      "decision": "historical-note-only",
+      "status_basis": "Superseded before codification, so it remains historical only.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "No current Code insertion is warranted.",
+          "classes": [
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The source report classifies the act as SUPERSEDED_BEFORE_CODIFICATION.",
+          "notes": "No current Code implementation should be carried forward."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No current Code implementation should be carried forward."
+      }
+    },
+    {
+      "law_id": "PL-035-252",
+      "public_law": "35-252",
+      "title": "Public Law 35-252 | Magistrate Appointment Act of 2025",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "General and permanent enactment classified to a statutory note at 28 U.S.C. 362, but the branch does not yet carry it.",
+      "provisions": [
+        {
+          "ref": "SEC. 3",
+          "text_summary": "Amends PL 26-190 section 106(c)(i), which the source report maps to a Title 28 statutory note.",
+          "classes": [
+            "statutory-note"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/s362",
+          "exact_change": null,
+          "evidence": "The source report classifies the act as STATUTORY_NOTE at 28 U.S.C. 362.",
+          "notes": "Current branch and origin/main do not yet carry the note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "absent",
+        "placement": "/us/usc/t28/s362",
+        "detail": "No matching note was found in usc/usc28.xml or origin/main."
+      }
+    },
+    {
+      "law_id": "PL-035-254",
+      "public_law": "35-254",
+      "title": "Public Law 35-254 | An Act to repeal Public Law 28-205",
+      "status": "repealed",
+      "decision": "historical-note-only",
+      "status_basis": "Operative repealer with no direct Code target of its own; keep it as repeal history only.",
+      "provisions": [
+        {
+          "ref": "SEC. 3",
+          "text_summary": "Repeals Public Law 28-205 in full.",
+          "classes": [
+            "repeal"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The source report classifies the act as NONOPERATIVE_OR_REPEALED.",
+          "notes": "No separate Code insertion is expected."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No separate Code insertion is expected."
+      }
+    },
+    {
+      "law_id": "PL-035-256",
+      "public_law": "35-256",
+      "title": "Public Law 35-256 | Workers First Act of 2025",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "General and permanent enactment classified to a statutory note at 2 U.S.C. 4313; current tree lacks the note.",
+      "provisions": [
+        {
+          "ref": "SEC. 3",
+          "text_summary": "Reduces the income tax rate but does not name a precise U.S. Code rewrite target.",
+          "classes": [
+            "statutory-note"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s4313",
+          "exact_change": null,
+          "evidence": "The source report classifies the act as STATUTORY_NOTE at 2 U.S.C. 4313.",
+          "notes": "Current branch and origin/main do not yet carry the note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "absent",
+        "placement": "/us/usc/t2/s4313",
+        "detail": "No matching note was found in usc/usc02.xml or origin/main."
+      }
+    },
+    {
+      "law_id": "PL-036-256",
+      "public_law": "36-256",
+      "title": "Public Law 36-256 | Commerce Dispersal Act",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "General and permanent enactment classified to a statutory note at 2 U.S.C. 142e; current tree lacks the note.",
+      "provisions": [
+        {
+          "ref": "SEC. 3-4",
+          "text_summary": "Dissolves Commerce and Labor and transfers the copyright-related functions.",
+          "classes": [
+            "transfer",
+            "statutory-note"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s142e",
+          "exact_change": null,
+          "evidence": "The source report classifies the act as STATUTORY_NOTE at 2 U.S.C. 142e.",
+          "notes": "Current branch and origin/main do not yet carry the note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "absent",
+        "placement": "/us/usc/t2/s142e",
+        "detail": "No matching note was found in usc/usc02.xml or origin/main."
+      }
+    },
+    {
+      "law_id": "PL-036-257",
+      "public_law": "36-257",
+      "title": "Public Law 36-257 | Maritime Operations & Policy Overhaul Act",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "General and permanent enactment classified to a statutory note at 22 U.S.C. 3927; current tree lacks the note.",
+      "provisions": [
+        {
+          "ref": "SEC. 4-12",
+          "text_summary": "Directs maritime and Coast Guard policy changes but does not supply a precise positive-law rewrite target.",
+          "classes": [
+            "statutory-note"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t22/s3927",
+          "exact_change": null,
+          "evidence": "The source report classifies the act as STATUTORY_NOTE at 22 U.S.C. 3927.",
+          "notes": "Current branch and origin/main do not yet carry the note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "absent",
+        "placement": "/us/usc/t22/s3927",
+        "detail": "No matching note was found in usc/usc22.xml or origin/main."
+      }
+    },
+    {
+      "law_id": "PL-036-258",
+      "public_law": "36-258",
+      "title": "Public Law 36-258 | National Root Beer Day Act",
+      "status": "current",
+      "decision": "already-incorporated",
+      "status_basis": "The law is already incorporated at 5 U.S.C. 6103(a), and the branch inserts the National Root Beer Day amendment there.",
+      "provisions": [
+        {
+          "ref": "SEC. 3",
+          "text_summary": "Inserts National Root Beer Day after Memorial Day in 5 U.S.C. 6103(a).",
+          "classes": [
+            "already-incorporated"
+          ],
+          "treatment": "already-incorporated",
+          "target": "/us/usc/t5/s6103",
+          "exact_change": null,
+          "evidence": "The plan lists /us/usc/t5/s6103 as the already incorporated location.",
+          "notes": "The current branch adds the insertion; origin/main does not."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correctly-implemented",
+        "placement": "/us/usc/t5/s6103",
+        "detail": "The current branch inserts the Memorial Day / National Root Beer Day amendment in usc/usc05.xml, and origin/main does not."
+      }
+    },
+    {
+      "law_id": "PL-036-260",
+      "public_law": "36-260",
+      "title": "Public Law 36-260 | Fixing the District of Columbia Act of 2025",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "General and permanent enactment classified to a statutory note at 28 U.S.C. 528; current tree lacks the note.",
+      "provisions": [
+        {
+          "ref": "SEC. 4-11",
+          "text_summary": "Repeals six prior public laws and makes multiple District transition amendments.",
+          "classes": [
+            "repeal",
+            "statutory-note"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/s528",
+          "exact_change": null,
+          "evidence": "The source report classifies the act as STATUTORY_NOTE at 28 U.S.C. 528.",
+          "notes": "Current branch and origin/main do not yet carry the note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "absent",
+        "placement": "/us/usc/t28/s528",
+        "detail": "No matching note was found in usc/usc28.xml or origin/main."
+      }
+    },
+    {
+      "law_id": "PL-037-261",
+      "public_law": "37-261",
+      "title": "Public Law 37-261 | Federal Criminal Code Act of 2025",
+      "status": "unresolved",
+      "decision": "source-unavailable-historical-note",
+      "status_basis": "No readable authenticated enactment text could be recovered.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "No operative text can be verified from the accessible source.",
+          "classes": [
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The source report says no readable authenticated enactment text could be recovered.",
+          "notes": "Retain only source-limited history."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "Retain only source-limited history."
+      }
+    },
+    {
+      "law_id": "PL-038-262",
+      "public_law": "38-262",
+      "title": "Public Law 38-262 | Fund the Government Act of 2026",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "General and permanent enactment classified to a statutory note at 2 U.S.C. 142e; current tree lacks the note.",
+      "provisions": [
+        {
+          "ref": "SEC. III-VI",
+          "text_summary": "Appropriations, oversight, schedule rules, and repeal of PL 32-230 section 6.",
+          "classes": [
+            "appropriation",
+            "statutory-note"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s142e",
+          "exact_change": null,
+          "evidence": "The source report classifies the act as STATUTORY_NOTE at 2 U.S.C. 142e.",
+          "notes": "Current branch and origin/main do not yet carry the note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "absent",
+        "placement": "/us/usc/t2/s142e",
+        "detail": "No matching note was found in usc/usc02.xml or origin/main."
+      }
+    },
+    {
+      "law_id": "PL-038-263",
+      "public_law": "38-263",
+      "title": "Public Law 38-263 | National Security Act of 2026",
+      "status": "current",
+      "decision": "already-incorporated",
+      "status_basis": "Already incorporated at 50 U.S.C. 3021; no separate note insertion is required.",
+      "provisions": [
+        {
+          "ref": "TITLE II-IV",
+          "text_summary": "Continuing national-security eligibility, classification, and subpoena safeguards.",
+          "classes": [
+            "already-incorporated"
+          ],
+          "treatment": "already-incorporated",
+          "target": "/us/usc/t50/s3021",
+          "exact_change": null,
+          "evidence": "The plan lists /us/usc/t50/s3021 as an already incorporated location.",
+          "notes": "No separate XML insertion is expected."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": "/us/usc/t50/s3021",
+        "detail": "Already incorporated at 50 U.S.C. 3021; no separate note insertion is required."
+      }
+    },
+    {
+      "law_id": "PL-038-264",
+      "public_law": "38-264",
+      "title": "Public Law 38-264 | Organized Crime and Racketeering Modernization Act of 2026",
+      "status": "current",
+      "decision": "already-incorporated",
+      "status_basis": "Already incorporated at 18 U.S.C. 1961-1964, but the branch note still carries a full quoted-content dump.",
+      "provisions": [
+        {
+          "ref": "SEC. 5-10",
+          "text_summary": "Repeals the CRACK Act titles and installs the continuing racketeering framework.",
+          "classes": [
+            "already-incorporated"
+          ],
+          "treatment": "already-incorporated",
+          "target": "/us/usc/t18/s1961",
+          "exact_change": null,
+          "evidence": "The plan lists /us/usc/t18/s1961, /us/usc/t18/s1962, /us/usc/t18/s1963, and /us/usc/t18/s1964 as already incorporated locations.",
+          "notes": "The branch note is present, but it still contains a quoted-content dump."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t18/s1961",
+        "detail": "The branch adds the racketeering history note, but the note still carries a full quoted-content dump."
+      }
+    },
+    {
+      "law_id": "PL-038-265",
+      "public_law": "38-265",
+      "title": "Public Law 38-265 | Employment Clarity and Federal Workforce Modernization Act of 2026",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "General and permanent enactment classified to a statutory note at 50 U.S.C. 3003; current tree lacks the note.",
+      "provisions": [
+        {
+          "ref": "TITLE I-V",
+          "text_summary": "Private-sector and federal workforce rules, anti-retaliation safeguards, and enforcement provisions.",
+          "classes": [
+            "statutory-note"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t50/s3003",
+          "exact_change": null,
+          "evidence": "The source report classifies the act as STATUTORY_NOTE at 50 U.S.C. 3003.",
+          "notes": "Current branch and origin/main do not yet carry the note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "absent",
+        "placement": "/us/usc/t50/s3003",
+        "detail": "No matching note was found in usc/usc50.xml or origin/main."
+      }
+    },
+    {
+      "law_id": "PL-038-266",
+      "public_law": "38-266",
+      "title": "Public Law 38-266 | Speedy Trial Act of 2026",
+      "status": "current",
+      "decision": "already-incorporated",
+      "status_basis": "Already incorporated at 18 U.S.C. 3161-3174; no separate note insertion is required.",
+      "provisions": [
+        {
+          "ref": "SEC. 2-6",
+          "text_summary": "Repeals the prior speedy-trial framework and installs the new timing rules.",
+          "classes": [
+            "already-incorporated"
+          ],
+          "treatment": "already-incorporated",
+          "target": "/us/usc/t18/s3161",
+          "exact_change": null,
+          "evidence": "The plan lists /us/usc/t18/s3161 through /us/usc/t18/s3174 as already incorporated locations.",
+          "notes": "No separate XML insertion is expected."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": "/us/usc/t18/s3161",
+        "detail": "Already incorporated across sections 3161-3174; no separate note insertion is required."
+      }
+    },
+    {
+      "law_id": "PL-039-267",
+      "public_law": "39-267",
+      "title": "Public Law 39-267 | Reform Sentencing Act",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "General and permanent enactment classified to a statutory note at 18 U.S.C. 713; current tree lacks the note.",
+      "provisions": [
+        {
+          "ref": "SEC. 5-9",
+          "text_summary": "Repeals PL 34-251 and installs the new sentencing rules.",
+          "classes": [
+            "statutory-note"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t18/s713",
+          "exact_change": null,
+          "evidence": "The source report classifies the act as STATUTORY_NOTE at 18 U.S.C. 713.",
+          "notes": "Current branch and origin/main do not yet carry the note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "absent",
+        "placement": "/us/usc/t18/s713",
+        "detail": "No matching note was found in usc/usc18.xml or origin/main."
+      }
+    },
+    {
+      "law_id": "PL-040-268",
+      "public_law": "40-268",
+      "title": "Public Law 40-268 | Big Beautiful Budget Act",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "General and permanent enactment classified to a statutory note at 2 U.S.C. 142e; current tree lacks the note.",
+      "provisions": [
+        {
+          "ref": "SEC. III-V",
+          "text_summary": "Temporary appropriations and oversight language that should stay out of permanent code text.",
+          "classes": [
+            "appropriation",
+            "statutory-note"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s142e",
+          "exact_change": null,
+          "evidence": "The source report classifies the act as STATUTORY_NOTE at 2 U.S.C. 142e.",
+          "notes": "Current branch and origin/main do not yet carry the note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "absent",
+        "placement": "/us/usc/t2/s142e",
+        "detail": "No matching note was found in usc/usc02.xml or origin/main."
+      }
+    },
+    {
+      "law_id": "PL-041-269",
+      "public_law": "41-269",
+      "title": "Public Law 41-269 | Federal Enhancement Against Foreign Intrusion Amendments Act of 2026",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "General and permanent enactment classified to a statutory note at 22 U.S.C. 618; current tree lacks the note.",
+      "provisions": [
+        {
+          "ref": "SEC. 2-3",
+          "text_summary": "Amends PL 24-173 and inserts the foreign-affiliation disclosure/enforcement rule.",
+          "classes": [
+            "statutory-note"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t22/s618",
+          "exact_change": null,
+          "evidence": "The source report classifies the act as STATUTORY_NOTE at 22 U.S.C. 618.",
+          "notes": "Current branch and origin/main do not yet carry the note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "absent",
+        "placement": "/us/usc/t22/s618",
+        "detail": "No matching note was found in usc/usc22.xml or origin/main."
+      }
+    },
+    {
+      "law_id": "PL-041-270",
+      "public_law": "41-270",
+      "title": "Public Law 41-270 | Washington Diplomacy Complex Corrections Act of 2026",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "General and permanent enactment classified to a statutory note at 18 U.S.C. 111; current tree lacks the note.",
+      "provisions": [
+        {
+          "ref": "SEC. 2-5",
+          "text_summary": "Makes technical corrections to the Washington Diplomacy Complex Act sections and related references.",
+          "classes": [
+            "statutory-note"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t18/s111",
+          "exact_change": null,
+          "evidence": "The source report classifies the act as STATUTORY_NOTE at 18 U.S.C. 111.",
+          "notes": "Current branch and origin/main do not yet carry the note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "absent",
+        "placement": "/us/usc/t18/s111",
+        "detail": "No matching note was found in usc/usc18.xml or origin/main."
+      }
+    },
+    {
+      "law_id": "PL-041-271",
+      "public_law": "41-271",
+      "title": "Public Law 41-271 | The Great Change Act of 2026",
+      "status": "current",
+      "decision": "already-incorporated",
+      "status_basis": "Already incorporated at 18 U.S.C. 205; the branch note exists but still includes the full-text dump.",
+      "provisions": [
+        {
+          "ref": "TITLE IV",
+          "text_summary": "Amends 18 U.S.C. 205 and related ethics rules.",
+          "classes": [
+            "already-incorporated"
+          ],
+          "treatment": "already-incorporated",
+          "target": "/us/usc/t18/s205",
+          "exact_change": null,
+          "evidence": "The plan lists /us/usc/t18/s205 as an already incorporated location.",
+          "notes": "The branch note is present, but it still includes the full act text."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t18/s205",
+        "detail": "The branch adds the note at 18 U.S.C. 205, but the entry still contains the full act text."
+      }
+    }
+  ]
+}

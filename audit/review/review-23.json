@@ -27,6 +27,8 @@
             "status": "absent",
             "detail": "No current Code insertion and no branch XML change; the plan classifies the law as repealed and nonoperative."
           },
+          "chronology_conclusion": "The law is repealed history only and should remain out of current Code text.",
+          "confidence": "high",
           "source_evidence": [
             "codification/mass_migration/latest/plans/PL-032-231.json: status=repealed, disposition=NONOPERATIVE_OR_REPEALED",
             "source_sha256=b985611164aafed13aa9effd99b3a3c6c623d2d500c8f464040019d293fd2144"
@@ -42,7 +44,9 @@
         "codification/mass_migration/latest/plans/PL-032-231.json",
         "current-branch XML review found no matching implementation"
       ],
-      "recommended_action": "No Code change."
+      "recommended_action": "No Code change.",
+      "chronology_conclusion": "The law is repealed history only and should remain out of current Code text.",
+      "confidence": "high"
     },
     {
       "law_id": "PL-032-232",
@@ -81,6 +85,8 @@
         "location": "/us/usc/t5/s5332",
         "detail": "Branch contains the incorporated amendment."
       },
+      "chronology_conclusion": "The amendment remains current and is already incorporated in the branch.",
+      "confidence": "high",
       "source_evidence": [
         "codification/mass_migration/latest/plans/PL-032-232.json",
         "usc/usc05.xml:38391"
@@ -121,6 +127,8 @@
         "location": "/us/usc/t26/s1",
         "detail": "Branch includes the replacement tax text and statutory history note."
       },
+      "chronology_conclusion": "The amendment remains current and is already incorporated in the branch.",
+      "confidence": "high",
       "source_evidence": [
         "codification/mass_migration/latest/plans/PL-032-233.json",
         "usc/usc26.xml:5689"
@@ -163,6 +171,8 @@
         "location": "/us/usc/t50/s3041",
         "detail": "Branch contains subsection (d) and the updated subsection (b)(2) treatment."
       },
+      "chronology_conclusion": "The amendment remains current and is already incorporated in the branch.",
+      "confidence": "high",
       "source_evidence": [
         "codification/mass_migration/latest/plans/PL-032-234.json",
         "usc/usc50.xml:39515",
@@ -200,6 +210,8 @@
         "status": "non-code",
         "detail": "No XML implementation expected or present."
       },
+      "chronology_conclusion": "The act is non-Code history only and should not be inserted as permanent text.",
+      "confidence": "high",
       "source_evidence": [
         "codification/mass_migration/latest/plans/PL-032-235.json"
       ],
@@ -246,6 +258,8 @@
         ],
         "detail": "Branch contains both amended sections."
       },
+      "chronology_conclusion": "The amendments remain current and are already incorporated in the branch.",
+      "confidence": "high",
       "source_evidence": [
         "codification/mass_migration/latest/plans/PL-032-236.json",
         "usc/usc10.xml:15555",
@@ -277,6 +291,8 @@
             "status": "absent",
             "detail": "No matching XML entry was found in the current branch for the statutory note placement."
           },
+          "chronology_conclusion": "The law remains current and should be implemented as a statutory note if codified.",
+          "confidence": "high",
           "source_evidence": [
             "codification/mass_migration/latest/plans/PL-033-238.json: disposition=STATUTORY_NOTE",
             "codification/mass_migration/latest/plans/PL-033-238.json: target=/us/usc/t28/s526",
@@ -293,7 +309,9 @@
         "codification/mass_migration/latest/plans/PL-033-238.json",
         "usc/usc28.xml search returned no match"
       ],
-      "recommended_action": "Implement as a statutory note at /us/usc/t28/s526."
+      "recommended_action": "Implement as a statutory note at /us/usc/t28/s526.",
+      "chronology_conclusion": "The law remains current and should be implemented as a statutory note if codified.",
+      "confidence": "high"
     },
     {
       "law_id": "PL-034-239",
@@ -313,6 +331,8 @@
             "status": "absent",
             "detail": "Predominantly temporary or self-expiring law; no Code insertion."
           },
+          "chronology_conclusion": "The law is non-Code history only and should remain out of permanent text.",
+          "confidence": "high",
           "source_evidence": [
             "codification/mass_migration/latest/plans/PL-034-239.json: disposition=NON_CODE",
             "source_sha256=e7351a41bb88df60f12b5050ac03a7bad126fad78ec8c42b2ee42788381ba367"
@@ -327,7 +347,9 @@
       "source_evidence": [
         "codification/mass_migration/latest/plans/PL-034-239.json"
       ],
-      "recommended_action": "Leave as public-law history only."
+      "recommended_action": "Leave as public-law history only.",
+      "chronology_conclusion": "The law is non-Code history only and should remain out of permanent text.",
+      "confidence": "high"
     },
     {
       "law_id": "PL-034-240",
@@ -349,6 +371,8 @@
             "status": "history-note-only",
             "detail": "Current XML already preserves the law as a statutory history note in 26 U.S.C. 1."
           },
+          "chronology_conclusion": "The law is repealed history and should stay as a historical note only.",
+          "confidence": "high",
           "source_evidence": [
             "codification/mass_migration/latest/plans/PL-034-240.json: disposition=NONOPERATIVE_OR_REPEALED",
             "usc/usc26.xml:5689",
@@ -366,7 +390,9 @@
         "codification/mass_migration/latest/plans/PL-034-240.json",
         "usc/usc26.xml:5689"
       ],
-      "recommended_action": "No live Code change."
+      "recommended_action": "No live Code change.",
+      "chronology_conclusion": "The law is repealed history and should stay as a historical note only.",
+      "confidence": "high"
     },
     {
       "law_id": "PL-034-241",
@@ -399,6 +425,8 @@
         "status": "absent",
         "detail": "Not yet implemented in current XML."
       },
+      "chronology_conclusion": "The law remains current and should be implemented as a statutory note if codified.",
+      "confidence": "high",
       "source_evidence": [
         "codification/mass_migration/latest/plans/PL-034-241.json",
         "usc/usc02.xml search returned no match"

@@ -2,7 +2,13 @@
   "reviewer": "reviewer-26",
   "group_index": 26,
   "law_count": 8,
+  "source_manifest": "audit/manifests/review-repair-26.json",
   "output_path": "audit/review/review-26.json",
+  "reviewed_against": [
+    "audit/manifests/review-repair-26.json",
+    "audit/primary/batch-09-03.json",
+    "usc XML in current branch"
+  ],
   "laws": [
     {
       "law_id": "PL-038-264",
@@ -10,25 +16,28 @@
       "title": "Public Law 38-264 | Organized Crime and Racketeering Modernization Act of 2026",
       "report_path": "audit/primary/batch-09-03.json",
       "batch": 9,
-      "source_status": "current",
-      "validation_status": "missing chronology analysis",
-      "confidence": "medium",
-      "reasons": [
-        "confidence:medium",
-        "direct-action-provision",
-        "multiple-laws-same-target",
-        "standalone-permanent-provision"
-      ],
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "The act repeals CRACK Act titles V and VI and creates an ongoing racketeering framework, but the record still resolves it as note-level history rather than a clean positive-law rewrite.",
       "provision_refs": [
+        "SEC. 1-4",
         "SEC. 5",
         "SEC. 6",
         "SEC. 7",
         "SEC. 8",
-        "SEC. 9"
+        "SEC. 9",
+        "SEC. 10"
       ],
       "targets": [
         "Pub. L. 3-21"
-      ]
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t18/s1",
+        "detail": "The branch keeps the act at the Title 18 anchor, but the entry still carries dump and link material instead of a concise history note."
+      },
+      "recommended_action": "Keep the repeal history and racketeering framework as a concise statutory note, and remove the dump/link material.",
+      "confidence": "medium"
     },
     {
       "law_id": "PL-038-265",
@@ -36,13 +45,9 @@
       "title": "Public Law 38-265 | Employment Clarity and Federal Workforce Modernization Act of 2026",
       "report_path": "audit/primary/batch-09-03.json",
       "batch": 9,
-      "source_status": "current",
-      "validation_status": "missing chronology analysis",
-      "confidence": "high",
-      "reasons": [
-        "direct-action-provision",
-        "standalone-permanent-provision"
-      ],
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "The act repeals several prior employment laws and lays out a continuing workforce framework, but no precise positive-law target is identified in the record.",
       "provision_refs": [
         "SEC. 4",
         "TITLE I, SEC. 7-9",
@@ -53,7 +58,14 @@
       ],
       "targets": [
         "Pub. L. 26-191; Pub. L. 28-204; Pub. L. 21-123"
-      ]
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t5/s101",
+        "detail": "The note is in Title 5 territory, but it still carries dump and link material and should stay concise."
+      },
+      "recommended_action": "Retain a concise statutory note at the Title 5 employment anchor and preserve the repeal history only.",
+      "confidence": "high"
     },
     {
       "law_id": "PL-038-266",
@@ -61,13 +73,9 @@
       "title": "Public Law 38-266 | Speedy Trial Act of 2026",
       "report_path": "audit/primary/batch-09-03.json",
       "batch": 9,
-      "source_status": "current",
-      "validation_status": "missing chronology analysis",
-      "confidence": "high",
-      "reasons": [
-        "direct-action-provision",
-        "standalone-permanent-provision"
-      ],
+      "status": "current",
+      "decision": "amend-existing-text",
+      "status_basis": "Sections 6(a) and 6(b) directly amend Public Law 4-32, while the remaining provisions can stay as history material.",
       "provision_refs": [
         "SEC. 2",
         "SEC. 3-5",
@@ -78,7 +86,14 @@
         "PL 4-32 sec. B(b)(iii)",
         "PL 4-32 sec. IV(b)(iii)",
         "Pub. L. 22-162 / 18 U.S. Code Chapter 208 Part II"
-      ]
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t18/s1",
+        "detail": "The current note block is still parked at the Title 18 anchor, but the source includes a determinable amendment to the prior Public Law 4-32 text."
+      },
+      "recommended_action": "Apply the SEC. 6 amendments to the prior-law chain and keep only a concise history note.",
+      "confidence": "high"
     },
     {
       "law_id": "PL-039-267",
@@ -86,14 +101,9 @@
       "title": "Public Law 39-267 | Reform Sentencing Act",
       "report_path": "audit/primary/batch-09-03.json",
       "batch": 9,
-      "source_status": "current",
-      "validation_status": "missing chronology analysis",
-      "confidence": "medium",
-      "reasons": [
-        "confidence:medium",
-        "direct-action-provision",
-        "standalone-permanent-provision"
-      ],
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "The source repeals PL 34-251 and adds ongoing sentencing rules and a multi-charge cap, but the record does not resolve a safe positive-law section to rewrite.",
       "provision_refs": [
         "SEC. 5",
         "SEC. 6",
@@ -102,7 +112,14 @@
       ],
       "targets": [
         "PL 34-251"
-      ]
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t18/s1",
+        "detail": "The branch still uses a note at the Title 18 anchor, but it keeps the repeal history and sentencing framework as a note-only treatment."
+      },
+      "recommended_action": "Keep the repeal history for PL 34-251 as a concise note; if codified later, assign a precise Title 18 placement.",
+      "confidence": "medium"
     },
     {
       "law_id": "PL-040-268",
@@ -110,14 +127,24 @@
       "title": "Public Law 40-268 | Big Beautiful Budget Act",
       "report_path": "audit/primary/batch-09-03.json",
       "batch": 9,
-      "source_status": "temporary-operative",
-      "validation_status": "missing chronology analysis",
-      "confidence": "high",
-      "reasons": [
-        "status:temporary-operative"
+      "status": "temporary-operative",
+      "decision": "non-code",
+      "status_basis": "This is a time-bound appropriations act; its allocations and oversight instructions are not permanent Code text.",
+      "provision_refs": [
+        "SEC. I-II",
+        "SEC. III",
+        "SEC. IV",
+        "SEC. V",
+        "SEC. VI"
       ],
-      "provision_refs": [],
-      "targets": []
+      "targets": [],
+      "current_implementation": {
+        "assessment": "improperly-inserted-into-permanent-text",
+        "placement": "/us/usc/t31/s101",
+        "detail": "The act is sitting in a Title 31 anchor as a full dump, but it should not be carried as permanent Code text."
+      },
+      "recommended_action": "Exclude the appropriations and oversight provisions from permanent Code text and keep only a brief history note if needed.",
+      "confidence": "high"
     },
     {
       "law_id": "PL-041-269",
@@ -125,20 +152,25 @@
       "title": "Public Law 41-269 | Federal Enhancement Against Foreign Intrusion Amendments Act of 2026",
       "report_path": "audit/primary/batch-09-03.json",
       "batch": 9,
-      "source_status": "current",
-      "validation_status": "missing chronology analysis",
-      "confidence": "high",
-      "reasons": [
-        "direct-action-provision"
-      ],
+      "status": "current",
+      "decision": "amend-existing-text",
+      "status_basis": "Sections 2 and 3 directly amend Public Law 24-173, including a replacement of Section III and a new Section V insertion.",
       "provision_refs": [
         "SEC. 2",
-        "SEC. 3"
+        "SEC. 3",
+        "SEC. 4-5"
       ],
       "targets": [
         "PL 24-173 Section III",
         "PL 24-173 Section IV"
-      ]
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t50/s1",
+        "detail": "The current note lives at the Title 50 anchor, but the actual PL 24-173 amendments are not integrated."
+      },
+      "recommended_action": "Apply the PL 24-173 section amendments and replace the full note with a concise statutory note.",
+      "confidence": "high"
     },
     {
       "law_id": "PL-041-270",
@@ -146,24 +178,29 @@
       "title": "Public Law 41-270 | Washington Diplomacy Complex Corrections Act of 2026",
       "report_path": "audit/primary/batch-09-03.json",
       "batch": 9,
-      "source_status": "current",
-      "validation_status": "missing chronology analysis",
-      "confidence": "high",
-      "reasons": [
-        "direct-action-provision"
-      ],
+      "status": "current",
+      "decision": "amend-existing-text",
+      "status_basis": "The act makes section-by-section corrections to the Washington Diplomacy Complex Act of 2025 and adds technical corrections.",
       "provision_refs": [
         "SEC. 2",
         "SEC. 3",
         "SEC. 4",
-        "SEC. 5"
+        "SEC. 5",
+        "SEC. 6"
       ],
       "targets": [
         "Washington Diplomacy Complex Act 2025 Section 3",
         "Washington Diplomacy Complex Act 2025 Section 4",
         "Washington Diplomacy Complex Act 2025 Section 5",
         "Washington Diplomacy Complex Act 2025 Section 6"
-      ]
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "The note block at the Title 40 anchor does not yet reflect the underlying section-by-section amendments."
+      },
+      "recommended_action": "Apply the section amendments to the Washington Diplomacy Complex Act 2025 history chain and trim the note.",
+      "confidence": "high"
     },
     {
       "law_id": "PL-041-271",
@@ -171,29 +208,34 @@
       "title": "Public Law 41-271 | The Great Change Act of 2026",
       "report_path": "audit/primary/batch-09-03.json",
       "batch": 9,
-      "source_status": "current",
-      "validation_status": "missing chronology analysis",
-      "confidence": "high",
-      "reasons": [
-        "direct-action-provision",
-        "standalone-permanent-provision"
-      ],
+      "status": "current",
+      "decision": "mixed-amendment-and-note",
+      "status_basis": "The act combines repeals, direct amendments, transfers, and conforming amendments across several existing laws.",
       "provision_refs": [
+        "SEC. 1-6",
         "TITLE I, SEC. 101-107",
         "TITLE II, SEC. 201-207",
         "TITLE III, SEC. 301-311",
         "TITLE IV, SEC. 401-406",
         "TITLE V, SEC. 501-504",
-        "TITLE VI, SEC. 601-607"
+        "TITLE VI, SEC. 601-607",
+        "TITLE VII, SEC. 701"
       ],
       "targets": [
-        "18 U.S.C. 205",
-        "Commerce Dispersal Act",
-        "Commissioned-officer staffing laws",
-        "SPASA; National Security Act of 2026",
         "WDCBA; National Commission on Judicial Activity, Efficiency and Accountability Act; OOP",
+        "SPASA; National Security Act of 2026",
+        "Commerce Dispersal Act",
+        "18 U.S.C. 205",
+        "Commissioned-officer staffing laws",
         "Whistleblower Protection Act of 2023 / H.R. 1501"
-      ]
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t18/s1",
+        "detail": "The current note block remains at the Title 18 anchor, but the source demands multiple direct amendments rather than a note-only treatment."
+      },
+      "recommended_action": "Convert the direct amendments in Titles II-VI into the affected Code or prior-law text and keep only a concise residual note.",
+      "confidence": "high"
     }
   ]
 }

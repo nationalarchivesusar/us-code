@@ -1,0 +1,439 @@
+{
+  "batch": 18,
+  "auditor": "law-auditor-18-02",
+  "law_count": 10,
+  "source_manifest": "audit/manifests/review-repair-18-02.json",
+  "output_path": "audit/review/review-repair-18-02.json",
+  "laws": [
+    {
+      "law_id": "PL-024-176",
+      "public_law": "24-176",
+      "title": "Public Law 24-176 | Comprehensive Federal Government Funding Act",
+      "status": "unresolved",
+      "status_basis": "codification/laws/laws/PL-024-176/metadata.json marks the source as unrecoverable with reason 'Source deleted or not found'.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "No operative text could be reconstructed from the supplied source set.",
+          "classes": ["historical-note-only", "non-code"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"status\": \"unrecoverable\"; \"reason\": \"Source deleted or not found\"",
+          "notes": "Keep only a source-limited historical note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": "no verified code placement",
+        "detail": "No lawful codification conclusion can be verified from the missing source."
+      },
+      "recommended_actions": [
+        "Retain only a source-limited historical note.",
+        "Flag the source for reacquisition before any further codification work."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-024-177",
+      "public_law": "24-177",
+      "title": "Public Law 24-177 | SS Jurisdiction Act",
+      "status": "unresolved",
+      "status_basis": "codification/laws/laws/PL-024-177/metadata.json marks the source as unrecoverable with reason 'Source deleted or not found'.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "No operative text could be reconstructed from the supplied source set.",
+          "classes": ["historical-note-only", "non-code"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"status\": \"unrecoverable\"; \"reason\": \"Source deleted or not found\"",
+          "notes": "Keep only a source-limited historical note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": "no verified code placement",
+        "detail": "No lawful codification conclusion can be verified from the missing source."
+      },
+      "recommended_actions": [
+        "Retain only a source-limited historical note.",
+        "Flag the source for reacquisition before any further codification work."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-024-178",
+      "public_law": "24-178",
+      "title": "Public Law 24-178 | Equality in Employment Act",
+      "status": "current",
+      "status_basis": "SEC. 6(a)(1)-(2) expressly amends 42 U.S.C. 2000e-2(a) to add gender identity and sexual orientation and to broaden the protected classes.",
+      "provisions": [
+        {
+          "ref": "SEC 1-5, 7-8",
+          "text_summary": "Short title, severability, effective date, preamble, findings, enforcement direction, and conclusion are note material.",
+          "classes": ["short-title", "severability", "effective-date", "findings-or-sense", "uncodified-admin-direction", "statutory-note-material"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "SEC 1. SHORT TITLE. This Act may be cited as the \"Equality in Employment Act.\"",
+          "notes": "These provisions do not create permanent Code text."
+        },
+        {
+          "ref": "SEC 6(a)(1)",
+          "text_summary": "Direct amendment to 42 U.S.C. 2000e-2(a) to add gender identity and sexual orientation as protected classes.",
+          "classes": ["direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t42/s2000e-2",
+          "exact_change": "Add gender identity and sexual orientation as protected classes in section 703(a) of the Civil Rights Act of 1964.",
+          "evidence": "Amend Section 703(a) of the Civil Rights Act of 1964 (42 U.S.C. 2000e-2(a)) to include gender identity and sexual orientation as protected classes.",
+          "notes": "This is the controlling codification hook."
+        },
+        {
+          "ref": "SEC 6(a)(2)",
+          "text_summary": "Broader employment-discrimination amendment expanding the protected classes list.",
+          "classes": ["direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t42/s2000e-2",
+          "exact_change": "Expand employment-discrimination protections to include race, color, religion, sex, national origin, age, disability, genetic information, gender identity, and sexual orientation.",
+          "evidence": "Expand protections against discrimination to explicitly include race, color, religion, sex, national origin, age, disability, genetic information, gender identity, and sexual orientation.",
+          "notes": "Keep as part of the Title VII amendment."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t29/s201",
+        "detail": "The branch note carries a full-text dump and archive link; the substantive Title VII amendment belongs in Title 42, not as a dump-heavy note."
+      },
+      "recommended_actions": [
+        "Keep the Title 42 amendment in place.",
+        "Remove the full-text dump and Trello link from the note and replace it with a concise statutory note."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-179",
+      "public_law": "25-179",
+      "title": "Public Law 25-179 | Fiscal Year 21-2",
+      "status": "temporary-operative",
+      "status_basis": "The act is a temporary appropriations measure, and SEC 5 suspends COLA adjustments under 2 U.S.C. 4501 during fiscal year 21-2.",
+      "provisions": [
+        {
+          "ref": "SEC 1-4",
+          "text_summary": "Short title, severability, effective date, and appropriations setup are temporary-note material.",
+          "classes": ["temporary", "appropriation", "statutory-note-material"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "SEC3.STATEMENTOFAPPROPRIATIONS.Thefollowingsumsin thisActareappropriated,outof anymoneyintheTreasurynototherwiseappropriated,forthefiscalyearending30daysfollowingtheenactment.",
+          "notes": "Do not promote the appropriations text into permanent positive law."
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "Temporary suspension of COLA adjustments under 2 U.S.C. 4501.",
+          "classes": ["temporary", "statutory-note-material"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s4501",
+          "exact_change": "Suspend section 601(a) COLA adjustments during fiscal year 21-2.",
+          "evidence": "SEC5.ADJUSTMENTTOCOMPENSATION.Notwithstandinganyotherprovisionoflaw, noadjustmentshallbemadeundersection601(a)oftheLegislativeReorganizationAct of 1946(2 U.S.C.4501)...duringthefiscalyear21-2.",
+          "notes": "Keep as a temporary note only."
+        },
+        {
+          "ref": "SEC 6-8",
+          "text_summary": "Additional fiscal-year funding and administrative directions remain temporary appropriations material.",
+          "classes": ["temporary", "appropriation", "exclude-from-code"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "SEC.13.EMERGENCYAPPROPRIATIONS.Thereshallbeestablishedemergencyappropriationswhichshallhold$23,000,000forwhichallagenciesmaypetitioncongresstowithdrawfrom.",
+          "notes": "These provisions are temporary and should not be treated as permanent Code text."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t31/s101",
+        "detail": "The note is the right kind of temporary statutory note, not permanent code text."
+      },
+      "recommended_actions": [
+        "Keep only a temporary note for SEC 5 at 2 U.S.C. 4501.",
+        "Exclude the appropriations text from permanent Code text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-180",
+      "public_law": "25-180",
+      "title": "Public Law 25-180 | Sanction Repealment Act",
+      "status": "current",
+      "status_basis": "SEC 3(b) repeals Pub. L. 9-55 in its entirety and SEC 3(c) nullifies the sanctions.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3(a)",
+          "text_summary": "Short title, purpose, and findings establish a repeal-and-relief act rather than new permanent Code text.",
+          "classes": ["short-title", "findings-or-sense", "statutory-note-material"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Torepeal\"PublicLaw9-55.\"",
+          "notes": "These provisions only frame the repeal."
+        },
+        {
+          "ref": "SEC 3(b)",
+          "text_summary": "Express repeal of Pub. L. 9-55.",
+          "classes": ["repeal"],
+          "treatment": "repeal-marking",
+          "target": "/us/pl/9/55",
+          "exact_change": "Mark Pub. L. 9-55 as repealed in full.",
+          "evidence": "PublicLaw9-55isherebyrepealedinitsentirety",
+          "notes": "This is the controlling operative clause."
+        },
+        {
+          "ref": "SEC 3(c)",
+          "text_summary": "Sanctions are declared null and void and lifted on passage.",
+          "classes": ["statutory-note-material", "repeal"],
+          "treatment": "statutory-note",
+          "target": "/us/pl/9/55",
+          "exact_change": "Record the sanctions-nullification as a concise note at the repeal home.",
+          "evidence": "allimposedsanctionsontheIslamicRepublicIranisherebydeclarednullandvoidandshallbelifteduponpassage",
+          "notes": "Keep as a note only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/pl/9/55",
+        "detail": "The branch treatment should clearly encode the repeal and sanctions-nullification, not generic boilerplate."
+      },
+      "recommended_actions": [
+        "Add a repeal-marking at the Pub. L. 9-55 home.",
+        "Keep SEC 3(c) as a concise statutory note."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-181",
+      "public_law": "25-181",
+      "title": "Public Law 25-181 | Federal District of Columbia Criminal Code",
+      "status": "fully-repealed",
+      "status_basis": "SEC 4 adopts the attached District of Columbia criminal code, and later PL 36-260 repeals Pub. L. 25-181 in its entirety.",
+      "provisions": [
+        {
+          "ref": "SEC 4 / attached code",
+          "text_summary": "Local District of Columbia criminal code adoption and subsequent local-code machinery.",
+          "classes": ["local-district", "new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t40/s101/4",
+          "exact_change": "Retain only a local historical note; do not convert the attached D.C. criminal code into permanent U.S. Code text.",
+          "evidence": "TheCriminalCodeattachedtothisdocumentshallactastheCriminalCodefortheDistrictofColumbia.",
+          "notes": "This is local law material, and the later repeal makes it historical only."
+        },
+        {
+          "ref": "Later repeal",
+          "text_summary": "The act is repealed in full by later legislation.",
+          "classes": ["repeal"],
+          "treatment": "historical-note-only",
+          "target": "/us/pl/25/181",
+          "exact_change": "Mark Pub. L. 25-181 as repealed in full.",
+          "evidence": "Pub. L. 25-181 (Federal District of Columbia Criminal Code) ... repealed in their entirety",
+          "notes": "Later law controls the final codification."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "The draft note is consistent with the law's final historical-only treatment."
+      },
+      "recommended_actions": [
+        "Keep the District of Columbia criminal code as historical-only material.",
+        "Ensure the later repeal is reflected in the note treatment."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-182",
+      "public_law": "25-182",
+      "title": "Public Law 25-182 | Pentagon Expansion and National Territory Authorization Act",
+      "status": "unresolved",
+      "status_basis": "The supplied HTML is a deleted Google Docs page and the recoverable text does not support a lawful operative-text conclusion.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "The attachment resolves to deleted-page viewer debris, so no operative language can be verified.",
+          "classes": ["historical-note-only", "non-code"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Sorry, the file you have requested has been deleted.",
+          "notes": "Do not invent any operative language."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": "no verified code placement",
+        "detail": "The source is viewer debris, so there is no verifiable codification target."
+      },
+      "recommended_actions": [
+        "Keep only a source-limited historical note.",
+        "Do not add operative language until the actual statutory text is recovered."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-025-183",
+      "public_law": "25-183",
+      "title": "Public Law 25-183 | Commerce and Labor Advancement Act (CLAA)",
+      "status": "fully-repealed",
+      "status_basis": "The act creates a Commerce and Labor/IP/labor-relations framework, but PL 31-226 later repeals Pub. L. 25-183 in its entirety.",
+      "provisions": [
+        {
+          "ref": "SEC 1-5",
+          "text_summary": "Short title, severability, effective date, definitions, and the Solicitor of Labor mission are the core setup provisions.",
+          "classes": ["short-title", "new-permanent-general", "statutory-note-material"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t29/s201",
+          "exact_change": "Keep only a historical note reflecting the repealed Commerce and Labor framework.",
+          "evidence": "SEC1.SHORTTITLEThisbillshallbereferredtobyitsshorttitle, \"CommerceandLaborAdvancementAct\"or \"CLAA\".",
+          "notes": "The enactment is historical only after the later repeal."
+        },
+        {
+          "ref": "SEC 6-11",
+          "text_summary": "IP protection, adverse-action rules, labor-cases jurisdiction, delegation, enforcement, and quo warranto provisions are also historical only.",
+          "classes": ["new-permanent-general", "statutory-note-material"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t29/s201",
+          "exact_change": "Preserve only repeal/history; do not insert operative Code text.",
+          "evidence": "SEC6.PROTECTIONOFINTELLECTUALPROPERTY...; SEC7.ADVERSEUNLAWFULACTIONS...; SEC8.LABORCASESBEFORETHECOURTS...",
+          "notes": "Later repeal controls the final treatment."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t29/s201",
+        "detail": "The branch note is the right historical-only treatment for a later-repealed act."
+      },
+      "recommended_actions": [
+        "Keep the law only as superseded history.",
+        "Do not insert operative Code text for any of the CLAA provisions."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-184",
+      "public_law": "25-184",
+      "title": "Public Law 25-184 | Legal Advisors, Representatives, and Professionals Exam Regulations (LARPER)",
+      "status": "fully-repealed",
+      "status_basis": "The act sets out LARPER labor/licensing rules, but PL 33-238 later repeals Pub. L. 25-184 in its entirety.",
+      "provisions": [
+        {
+          "ref": "SEC 1-4",
+          "text_summary": "Short title, severability, effective date, definitions, and DOCAL/labor-rule provisions are historical only.",
+          "classes": ["short-title", "new-permanent-general", "statutory-note-material"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t28/s1",
+          "exact_change": "Keep only a historical note for the repealed LARPER framework.",
+          "evidence": "SEC1.SHORTTITLEThisbillshallbereferredtobyitsshorttitle, \"LegalAdvisors,Representatives,andProfessionalsExamRegulations\"or \"LARPER\".",
+          "notes": "The act is not current positive law after the later repeal."
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "The repealment clause is itself historical now because later law repeals this act in full.",
+          "classes": ["repeal", "statutory-note-material"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t28/s1",
+          "exact_change": "Preserve only repeal/history at the closest local anchor.",
+          "evidence": "SEC5.REPEALMENT(1)TitleI ofPublicLaw15-97shallberepealed,initsentirety.",
+          "notes": "Later repeal controls the final disposition."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s1",
+        "detail": "The draft note is aligned with the act's final historical-only treatment."
+      },
+      "recommended_actions": [
+        "Keep the law only as superseded history.",
+        "Do not insert operative Code text for the LARPER provisions."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-185",
+      "public_law": "25-185",
+      "title": "Public Law 25-185 | Fiscal Year 21-3",
+      "status": "expired",
+      "status_basis": "The act is an appropriations measure for fiscal year 21-3, and SEC 5 makes the COLA suspension temporary under 2 U.S.C. 4501.",
+      "provisions": [
+        {
+          "ref": "SEC 3",
+          "text_summary": "Appropriations are temporary and should not become permanent positive law.",
+          "classes": ["appropriation", "temporary"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "SEC3.STATEMENTOFAPPROPRIATIONS.Thefollowingsumsin thisActareappropriated,outof anymoneyintheTreasurynototherwiseappropriated,forthefiscalyearending30daysfollowingtheenactment.",
+          "notes": "This is temporary funding history only."
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "Temporary suspension of COLA adjustments under 2 U.S.C. 4501.",
+          "classes": ["temporary", "statutory-note-material"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s4501",
+          "exact_change": "Suspend section 601(a) COLA adjustments during the fiscal year referenced in the act.",
+          "evidence": "SEC5.ADJUSTMENTTOCOMPENSATION.Notwithstandinganyotherprovisionoflaw, noadjustmentshallbemadeundersection601(a)oftheLegislativeReorganizationAct of 1946(2 U.S.C.4501)...duringthefiscalyear21-2.",
+          "notes": "Keep as a temporary note only."
+        },
+        {
+          "ref": "SEC 13",
+          "text_summary": "Emergency appropriations are also temporary and do not create permanent Code text.",
+          "classes": ["appropriation", "temporary", "exclude-from-code"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "SEC.13.EMERGENCYAPPROPRIATIONS.Thereshallbeestablishedemergencyappropriationswhichshallhold$23,000,000forwhichallagenciesmaypetitioncongresstowithdrawfrom.",
+          "notes": "Do not elevate emergency appropriations into permanent text."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t31/s101",
+        "detail": "The branch treats the measure as current note material, but the act is expired appropriations history."
+      },
+      "recommended_actions": [
+        "Reclassify the measure as expired appropriations history.",
+        "Remove any implication that the act is current Code text."
+      ],
+      "confidence": "high"
+    }
+  ]
+}

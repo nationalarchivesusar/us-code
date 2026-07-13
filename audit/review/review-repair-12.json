@@ -1,0 +1,287 @@
+{
+  "reviewer": "codex-repair-12",
+  "group_index": 12,
+  "law_count": 10,
+  "source_manifest": "audit/review/manifest-12.json",
+  "output_path": "audit/review/review-repair-12.json",
+  "reviewed_against": [
+    "audit/review/manifest-12.json",
+    "audit/review/review-12.json",
+    "audit/primary/batch-04-03.json",
+    "audit/primary/batch-05-01.json",
+    "codification/laws/laws/PL-016-114/law.txt",
+    "codification/laws/laws/PL-016-114/metadata.json",
+    "codification/laws/laws/PL-016-115/law.txt",
+    "codification/laws/laws/PL-016-115/metadata.json",
+    "codification/laws/laws/PL-016-116/law.txt",
+    "codification/laws/laws/PL-016-116/metadata.json",
+    "codification/laws/laws/PL-016-117/law.txt",
+    "codification/laws/laws/PL-016-117/metadata.json",
+    "codification/laws/laws/PL-016-118/law.txt",
+    "codification/laws/laws/PL-016-118/metadata.json",
+    "codification/laws/laws/PL-016-119/law.txt",
+    "codification/laws/laws/PL-016-119/metadata.json",
+    "codification/laws/laws/PL-016-120/law.txt",
+    "codification/laws/laws/PL-016-120/metadata.json",
+    "codification/laws/laws/PL-016-121/law.txt",
+    "codification/laws/laws/PL-016-121/metadata.json",
+    "codification/laws/laws/PL-016-122/law.txt",
+    "codification/laws/laws/PL-016-122/metadata.json",
+    "codification/laws/laws/PL-017-124/law.txt",
+    "codification/laws/laws/PL-017-124/metadata.json",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-016-114",
+      "public_law": "16-114",
+      "title": "Public Law 16-114 | Amended Ambassadorial Organization and Reporting Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "Current enactment. The source is intact and operative, and it expressly amends PL 15-102 Sec. III(e); nothing in the reviewed materials repeals PL 16-114.",
+      "approved_code_treatment": "amend-existing-text",
+      "target": "PL 15-102 Sec. III(e)",
+      "exact_change": "Strike the existing regional-ambassadorship prohibition and insert the new presidential authority, Senate-notice, and Senate-consent language.",
+      "source_evidence": [
+        "SEC II says Section III, Subsection e shall now read the following.",
+        "The source text gives the President the only authority to create regional ambassadorships and requires Senate notice and consent."
+      ],
+      "current_xml_comparison": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t22/s2651",
+        "detail": "The branch is only carrying a note in the title 22 area; it does not implement the textual amendment to PL 15-102 Sec. III(e)."
+      },
+      "final_recommended_action": [
+        "Apply the Sec. III(e) substitution to PL 15-102.",
+        "Replace the boilerplate note with an honest amendment note.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-016-115",
+      "public_law": "16-115",
+      "title": "Public Law 16-115 | National Security Threat Mandatory Notification to Congressional Leadership Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "Current enactment. It creates an operative congressional-notification duty and defines the triggering terms; the 18 U.S.C. 1512 reference is a cross-reference, not a textual amendment.",
+      "approved_code_treatment": "statutory-note",
+      "target": "/us/usc/t50",
+      "exact_change": "Add a title 50 statutory note for the mandatory notification scheme and treat the 18 U.S.C. 1512 reference as cross-reference only.",
+      "source_evidence": [
+        "SEC III assigns a designated Executive Branch individual to notify Congressional Leadership of foreign threats.",
+        "SEC IV says failures are classified as a crime under U.S. Code 1512."
+      ],
+      "current_xml_comparison": {
+        "assessment": "incorrectly-implemented",
+        "placement": "/us/usc/t50/s1",
+        "detail": "The branch note is boilerplate and does not distinguish the 18 U.S.C. 1512 reference as cross-reference only; the Trello link remains."
+      },
+      "final_recommended_action": [
+        "Replace the boilerplate note with an honest statutory note under title 50.",
+        "Record the 18 U.S.C. 1512 reference as cross-reference only.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-016-116",
+      "public_law": "16-116",
+      "title": "Public Law 16-116 | Combatant Command Re-establishment Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "Current enactment. It repeals the OCJCS Reform Act of 2022 / PL 7-48 and re-establishes six Unified Combatant Commands with reporting and command-and-control rules.",
+      "approved_code_treatment": "repeal-marking and statutory-note",
+      "target": "PL 7-48; /us/usc/t10",
+      "exact_change": "Mark PL 7-48 as repealed and add a title 10 note for the re-established combatant-command framework and reporting chain.",
+      "source_evidence": [
+        "The source says the OCJCS Reform Act of 2022 shall be repealed in its entirety.",
+        "The source says the following Unified Combatant Commands shall be established in the United States Military."
+      ],
+      "current_xml_comparison": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t50/s1",
+        "detail": "The branch only carries a note in title 50 and does not apply the repeal-marking for PL 7-48."
+      },
+      "final_recommended_action": [
+        "Apply repeal-marking to the OCJCS Reform Act of 2022 / PL 7-48.",
+        "Re-anchor the note toward title 10 combatant-command provisions.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-016-117",
+      "public_law": "16-117",
+      "title": "Public Law 16-117 | The Clean Up Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "Current repealing enactment. Its only substantive effect is to repeal Senate Joint Resolution 2 and Senate Joint Resolution 3.",
+      "approved_code_treatment": "historical-note-only",
+      "target": "Senate Joint Resolution 2; Senate Joint Resolution 3",
+      "exact_change": "Record the repeal of the two joint resolutions and keep PL 16-117 only as repeal history.",
+      "source_evidence": [
+        "SEC 3 repeals Senate Joint Resolution 2.",
+        "SEC 3 repeals Senate Joint Resolution 3."
+      ],
+      "current_xml_comparison": {
+        "assessment": "incorrectly-implemented",
+        "placement": "/us/usc/t50/s1",
+        "detail": "The branch mislabels a current repealing resolution as repealed or superseded and uses a generic title 50 anchor even though the target is uncodified joint resolutions."
+      },
+      "final_recommended_action": [
+        "Replace the boilerplate note with a concise historical note.",
+        "Correct the status to current.",
+        "Remove the Trello link.",
+        "Exclude PL 16-117 from permanent Code."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-016-118",
+      "public_law": "16-118",
+      "title": "Public Law 16-118 | The Uniformed Capitol Police Act of 2023",
+      "final_legal_status": "current",
+      "chronology_conclusion": "Current enactment. It repeals H.R. 8013 Section III and replaces that section with a new Capitol Police Board structure and powers.",
+      "approved_code_treatment": "amend-existing-text",
+      "target": "H.R. 8013 Section III; /us/usc/t2",
+      "exact_change": "Re-anchor to title 2 and replace H.R. 8013 Section III with the new Capitol Police Board membership and powers.",
+      "source_evidence": [
+        "SEC 2 says the listed section of H.R. 8013 shall be repealed in its entirety.",
+        "SEC 3 says Section III shall now state the following."
+      ],
+      "current_xml_comparison": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t18/s1",
+        "detail": "The branch note sits in title 18, but the operative target is Capitol Police governance under title 2, so the repeal and replacement are not implemented."
+      },
+      "final_recommended_action": [
+        "Apply the repeal/substitution to the Capitol Police Board text at the title 2 anchor.",
+        "Re-anchor from title 18 to title 2.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-016-119",
+      "public_law": "16-119",
+      "title": "Public Law 16-119 | The Criminal Organization Act of 2023",
+      "final_legal_status": "unresolved",
+      "chronology_conclusion": "Source-limited. The accessible file is only a Google Drive permission-denial page, so no lawful chronology or content can be fixed from the text itself.",
+      "approved_code_treatment": "historical-note-only",
+      "target": null,
+      "exact_change": "None determinable from the supplied source.",
+      "source_evidence": [
+        "The downloaded file is a Google Drive access-denied page, not the enactment text.",
+        "The source does not provide operative statutory language to authenticate."
+      ],
+      "current_xml_comparison": {
+        "assessment": "incorrectly-implemented",
+        "placement": "/us/usc/t18/s1",
+        "detail": "The branch asserts a confident repealed-or-superseded status even though the accessible source is an inaccessible-file error page."
+      },
+      "final_recommended_action": [
+        "Retain only as a source-limited historical note.",
+        "Remove the Trello link and boilerplate status prose.",
+        "Do not infer any operative text."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-016-120",
+      "public_law": "16-120",
+      "title": "Public Law 16-120 | The Hail Columbia Act",
+      "final_legal_status": "unresolved",
+      "chronology_conclusion": "Source-limited. The accessible file is only a Google Drive permission-denial page, so no lawful chronology can be fixed from the text itself.",
+      "approved_code_treatment": "historical-note-only",
+      "target": null,
+      "exact_change": "None determinable from the supplied source.",
+      "source_evidence": [
+        "The downloaded file is a Google Drive access-denied page, not the enactment text.",
+        "The title alone does not support a lawful conclusion about content or placement."
+      ],
+      "current_xml_comparison": {
+        "assessment": "incorrectly-implemented",
+        "placement": "/us/usc/t1/s1",
+        "detail": "The branch labels the source repealed or superseded and uses a generic title 1 anchor, but the actual source is just an unreadable Drive error page."
+      },
+      "final_recommended_action": [
+        "Retain only as a source-limited historical note.",
+        "If text is later recovered and ceremonial, exclude it from permanent Code text.",
+        "Remove the Trello link and boilerplate prose."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-016-121",
+      "public_law": "16-121",
+      "title": "Public Law 16-121 | The Bill Transparency Understanding Act",
+      "final_legal_status": "unresolved",
+      "chronology_conclusion": "Source-limited. The supplied file is a Google Drive permission-denial page, so no operative chronology can be fixed.",
+      "approved_code_treatment": "historical-note-only",
+      "target": null,
+      "exact_change": "Retain only a source-limited historical note stating that the enactment text could not be authenticated.",
+      "source_evidence": [
+        "The source file says the owner has not given permission to download the file.",
+        "No operative statutory language is recoverable from the captured attachment."
+      ],
+      "current_xml_comparison": {
+        "assessment": "not-applicable",
+        "placement": "/us/usc/t1/s1",
+        "detail": "The note declares repealed or superseded and uses boilerplate closest-subject-matter language, but the real problem is that the source is unrecoverable."
+      },
+      "final_recommended_action": [
+        "Retain as a source-limited historical note.",
+        "Remove the Trello link.",
+        "Re-acquire the authentic source before any substantive codification."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-016-122",
+      "public_law": "16-122",
+      "title": "Public Law 16-122 | The Congressional Competency Act of 2023",
+      "final_legal_status": "unresolved",
+      "chronology_conclusion": "Source-limited. The supplied file is the same Google Drive permission-denial page, so no operative chronology can be fixed.",
+      "approved_code_treatment": "historical-note-only",
+      "target": null,
+      "exact_change": "Retain only a source-limited historical note stating that the enactment text could not be authenticated.",
+      "source_evidence": [
+        "The source file says the owner has not given permission to download the file.",
+        "No operative statutory language is recoverable from the captured attachment."
+      ],
+      "current_xml_comparison": {
+        "assessment": "not-applicable",
+        "placement": "/us/usc/t2/s1",
+        "detail": "The note asserts repealed or superseded status without support; the real issue is that the source is unrecoverable."
+      },
+      "final_recommended_action": [
+        "Retain as a source-limited historical note.",
+        "Remove the Trello link.",
+        "Re-acquire the authentic source."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-124",
+      "public_law": "17-124",
+      "title": "Public Law 17-124 | Law Enforcement Accountability Act (LEAA)",
+      "final_legal_status": "current",
+      "chronology_conclusion": "Current enactment. It is a free-standing, generally applicable law-enforcement framework with no self-repeal or sunset, and it should not be reduced to a mere note.",
+      "approved_code_treatment": "operative-text-required",
+      "target": null,
+      "exact_change": "Create real Code sections for the definitions, canine deployment rules, use-of-force rules, and enforcement provisions instead of keeping the act as a note-only wrapper.",
+      "source_evidence": [
+        "The source contains a definitions section, a canine-deployment section, a use-of-force section, and an enforcement section.",
+        "The Act says law enforcement shall only use force that is objectively reasonable."
+      ],
+      "current_xml_comparison": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t18/s1",
+        "detail": "The branch adds only a boilerplate note at title 18. Because the act is substantive permanent general law, it should be enacted as real Code section(s), not merely a note."
+      },
+      "final_recommended_action": [
+        "Codify as new permanent sections in the appropriate law-enforcement placement rather than a bare note.",
+        "Remove the Trello link.",
+        "Correct the duplicated SEC5 numbering and the missing SEC6 in editorial notes."
+      ],
+      "confidence": "medium"
+    }
+  ]
+}

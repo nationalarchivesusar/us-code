@@ -1,0 +1,205 @@
+{
+  "reviewer": "law-auditor-67-2",
+  "group_index": 672,
+  "law_count": 5,
+  "source_manifest": "audit/manifests/review-repair-67-02.json",
+  "output_path": "audit/review/review-repair-67-02.json",
+  "reviewed_against": [
+    "audit/review/review-67.json",
+    "audit/manifests/review-repair-67-02.json",
+    "audit/chronology-report.json",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-022-157",
+      "public_law": "Public Law 22-157",
+      "title": "PAMA amendment",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The migration report treats this as a statutory note to title 2, and the source text is an amendment instruction rather than a freestanding codification rewrite.",
+      "approved_code_treatment": "statutory-note",
+      "source_evidence": [
+        "codification/laws/laws/PL-022-157/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-022-157.md",
+        "usc/usc18.xml"
+      ],
+      "current_xml_comparison": "The current branch placement is in title 18 instead of title 2. | The current branch has a placeholder note, but it is attached to the wrong title file.",
+      "final_recommended_action": "Add the note to title 2 section 1438 without changing operative code text. | Move the note to /us/usc/t2/s1438. | Remove the mislocated title 18 entry.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "section6",
+          "text_summary": "Amends section 6 of Public Law 19-144 to revise the stated language.",
+          "classes": [
+            "statutory-note",
+            "amendment-instruction"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s1438",
+          "exact_change": "Add the note to title 2 section 1438 without changing operative code text.",
+          "evidence": [
+            "codification/laws/laws/PL-022-157/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-022-157.md",
+            "usc/usc18.xml"
+          ],
+          "notes": "The current branch placement is in title 18 instead of title 2."
+        }
+      ],
+      "exact_target": "/us/usc/t2/s1438"
+    },
+    {
+      "law_id": "PL-022-158",
+      "public_law": "Public Law 22-158",
+      "title": "Military pay and service provision",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The migration report classifies this as a statutory note directed to title 10, and the source text does not indicate a direct operational rewrite.",
+      "approved_code_treatment": "statutory-note",
+      "source_evidence": [
+        "codification/laws/laws/PL-022-158/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-022-158.md",
+        "usc/usc50.xml"
+      ],
+      "current_xml_comparison": "The branch artifact is misfiled in title 50. | A placeholder note exists, but it is not in the target title.",
+      "final_recommended_action": "Record the enactment as a note at title 10 section 1060. | Move the note to /us/usc/t10/s1060. | Delete the wrong-title placeholder.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "General military provision affecting title 10 section 1060.",
+          "classes": [
+            "statutory-note",
+            "military"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t10/s1060",
+          "exact_change": "Record the enactment as a note at title 10 section 1060.",
+          "evidence": [
+            "codification/laws/laws/PL-022-158/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-022-158.md",
+            "usc/usc50.xml"
+          ],
+          "notes": "The branch artifact is misfiled in title 50."
+        }
+      ],
+      "exact_target": "/us/usc/t10/s1060"
+    },
+    {
+      "law_id": "PL-022-159",
+      "public_law": "Public Law 22-159",
+      "title": "Historic limitations amendment",
+      "final_legal_status": "fully-repealed",
+      "chronology_conclusion": "The audited migration material marks the law as repealed/nonoperative, and no live codification action is warranted from the available source package.",
+      "approved_code_treatment": "nonoperative-history",
+      "source_evidence": [
+        "codification/laws/laws/PL-022-159/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-022-159.md"
+      ],
+      "current_xml_comparison": "The source package supports a historical classification rather than a live amendment. | No live XML implementation was located for this law.",
+      "final_recommended_action": "No code change is authorized. | Keep the law classified as nonoperative history. | Do not introduce XML changes.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "section_iv",
+          "text_summary": "Amendment-style language referencing a prior public law and limitations language.",
+          "classes": [
+            "history-only",
+            "nonoperative"
+          ],
+          "treatment": "nonoperative-history",
+          "target": "none",
+          "exact_change": "No code change is authorized.",
+          "evidence": [
+            "codification/laws/laws/PL-022-159/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-022-159.md"
+          ],
+          "notes": "The source package supports a historical classification rather than a live amendment."
+        }
+      ]
+    },
+    {
+      "law_id": "PL-022-160",
+      "public_law": "Public Law 22-160",
+      "title": "Title 18 section 205 amendment",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The source text directly amends title 18 section 205, and the current XML already includes the substituted text and new subsection.",
+      "approved_code_treatment": "already-incorporated",
+      "source_evidence": [
+        "codification/laws/laws/PL-022-160/law.txt",
+        "usc/usc18.xml",
+        "codification/mass_migration/latest/reports/laws/PL-022-160.md"
+      ],
+      "current_xml_comparison": "The live XML already reflects the amended text. | The live XML already contains the added subsection. | The operative amendment is already present in the baseline XML.",
+      "final_recommended_action": "No change is needed because the substitution is already integrated. | No change is needed because the insertion is already integrated. | Leave the current XML unchanged. | Treat the baseline as the canonical implementation.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "sec_iv_a",
+          "text_summary": "Replaces language in title 18 section 205 subsection (a).",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ],
+          "treatment": "already-incorporated",
+          "target": "/us/usc/t18/s205",
+          "exact_change": "No change is needed because the substitution is already integrated.",
+          "evidence": [
+            "codification/laws/laws/PL-022-160/law.txt",
+            "usc/usc18.xml",
+            "codification/mass_migration/latest/reports/laws/PL-022-160.md"
+          ],
+          "notes": "The live XML already reflects the amended text."
+        },
+        {
+          "ref": "sec_iv_b",
+          "text_summary": "Adds an additional subsection to title 18 section 205.",
+          "classes": [
+            "direct-amendment",
+            "insertion"
+          ],
+          "treatment": "already-incorporated",
+          "target": "/us/usc/t18/s205",
+          "exact_change": "No change is needed because the insertion is already integrated.",
+          "evidence": [
+            "codification/laws/laws/PL-022-160/law.txt",
+            "usc/usc18.xml",
+            "codification/mass_migration/latest/reports/laws/PL-022-160.md"
+          ],
+          "notes": "The live XML already contains the added subsection."
+        }
+      ],
+      "exact_target": "/us/usc/t18/s205"
+    },
+    {
+      "law_id": "PL-022-161",
+      "public_law": "Public Law 22-161",
+      "title": "Source-unavailable enactment",
+      "final_legal_status": "unresolved",
+      "chronology_conclusion": "The authoritative package exposes only a Google Drive viewer page, so the enactment text could not be authenticated from the available source files.",
+      "approved_code_treatment": "source-limited",
+      "source_evidence": [
+        "codification/laws/laws/PL-022-161/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-022-161.md"
+      ],
+      "current_xml_comparison": "Hold as unresolved until a readable enactment is available. | No authenticated XML implementation could be matched to the source package.",
+      "final_recommended_action": "No code change can be recommended until the source text is recovered. | Recover the readable enactment text. | Re-audit once the source is available.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "Authenticated enactment text is not recoverable from the provided source package.",
+          "classes": [
+            "source-unavailable"
+          ],
+          "treatment": "source-limited",
+          "target": "none",
+          "exact_change": "No code change can be recommended until the source text is recovered.",
+          "evidence": [
+            "codification/laws/laws/PL-022-161/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-022-161.md"
+          ],
+          "notes": "Hold as unresolved until a readable enactment is available."
+        }
+      ]
+    }
+  ]
+}

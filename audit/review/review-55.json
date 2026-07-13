@@ -1,0 +1,274 @@
+{
+  "batch": 55,
+  "reviewer": "review-repair-55",
+  "group_index": 155,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/manifest-79.json",
+  "output_path": "audit/review/review-55.json",
+  "reviewed_against": [
+    "audit/manifests/manifest-79.json",
+    "audit/primary/batch-11-01.json",
+    "audit/primary/batch-11-02.json",
+    "audit/chronology-report.json",
+    "codification/laws/laws/PL-007-039/law.txt",
+    "codification/laws/laws/PL-007-039/metadata.json",
+    "codification/laws/laws/PL-007-040/law.txt",
+    "codification/laws/laws/PL-007-040/metadata.json",
+    "codification/laws/laws/PL-007-041/law.txt",
+    "codification/laws/laws/PL-007-041/metadata.json",
+    "codification/laws/laws/PL-007-042/law.txt",
+    "codification/laws/laws/PL-007-042/metadata.json",
+    "codification/laws/laws/PL-007-043/law.txt",
+    "codification/laws/laws/PL-007-043/metadata.json",
+    "codification/laws/laws/PL-007-044/law.txt",
+    "codification/laws/laws/PL-007-044/metadata.json",
+    "codification/laws/laws/PL-007-045/law.txt",
+    "codification/laws/laws/PL-007-045/metadata.json",
+    "codification/laws/laws/PL-007-046/law.html",
+    "codification/laws/laws/PL-007-046/metadata.json",
+    "codification/laws/laws/PL-007-047/law.txt",
+    "codification/laws/laws/PL-007-047/metadata.json",
+    "codification/laws/laws/PL-007-048/law.txt",
+    "codification/laws/laws/PL-007-048/metadata.json",
+    "usc/usc03.xml",
+    "usc/usc05.xml",
+    "usc/usc10.xml",
+    "usc/usc18.xml",
+    "usc/usc40.xml",
+    "usc/usc49.xml",
+    "usc/usc50.xml",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-007-039",
+      "public_law": "7-39",
+      "title": "Public Law 7-39 | Mandatory FLETC Training ACT",
+      "chronology_conclusion": "Public Law 7-39 is fully repealed by later Public Law 9-57, so the source supports history-only treatment rather than executable text.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t50/s1",
+      "exact_enacted_text_or_amendment_command": "Keep only a concise historical note; do not retain the full-text dump or Trello link.",
+      "source_evidence": [
+        "codification/laws/laws/PL-007-039/law.txt contains the FLETC training act text.",
+        "codification/laws/laws/PL-007-039/metadata.json marks the packet as usable and identifies the law as Public Law 7-39.",
+        "audit/primary/batch-11-01.json classifies the law as fully repealed and directs a historical note only.",
+        "usc/usc50.xml contains a branch-local statutory-note entry for the law, while origin/main does not surface the same note string."
+      ],
+      "current_xml_comparison": {
+        "assessment": "branch-note-only",
+        "placement": "/us/usc/t50/s1",
+        "detail": "The current branch contains the repealed-law note at the Title 50 anchor; origin/main does not show the same note string."
+      },
+      "final_recommended_action": "Retain only concise repeal history and remove the dump-style note if integration work resumes.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-007-040",
+      "public_law": "7-40",
+      "title": "Public Law 7-40 | Media Companies Protection Act of 2022",
+      "chronology_conclusion": "Public Law 7-40 is expressly repealed by Public Law 9-53, so it remains historical only.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t50/s1",
+      "exact_enacted_text_or_amendment_command": "Keep only a concise historical note at a commerce-related anchor; do not keep the full dump or Trello link.",
+      "source_evidence": [
+        "codification/laws/laws/PL-007-040/law.txt contains the media-companies act text.",
+        "codification/laws/laws/PL-007-040/metadata.json marks the packet usable and identifies the law as Public Law 7-40.",
+        "audit/primary/batch-11-01.json classifies the law as fully repealed and history-only.",
+        "usc/usc50.xml contains the branch-local note for the law, while origin/main does not surface the same note string."
+      ],
+      "current_xml_comparison": {
+        "assessment": "branch-note-only",
+        "placement": "/us/usc/t50/s1",
+        "detail": "The current branch contains the repealed-law note at Title 50; origin/main does not show the same note string."
+      },
+      "final_recommended_action": "Retain only a concise repeal-history note for the law.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-007-041",
+      "public_law": "7-41",
+      "title": "Public Law 7-41 | Common Sense Defense Act of 2022",
+      "chronology_conclusion": "Public Law 7-41 is repealed and its content is game-specific and uncodified, so the legal status is history only.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t10/s101/h",
+      "exact_enacted_text_or_amendment_command": "Exclude the law from permanent Code and keep only a concise historical note.",
+      "source_evidence": [
+        "codification/laws/laws/PL-007-041/law.txt contains the firearm/game-mechanics text.",
+        "codification/laws/laws/PL-007-041/metadata.json marks the packet usable and identifies the law as Public Law 7-41.",
+        "audit/primary/batch-11-01.json classifies the law as fully repealed and history-only.",
+        "usc/usc10.xml contains the branch-local repealed-law note, while origin/main does not surface the same note string."
+      ],
+      "current_xml_comparison": {
+        "assessment": "branch-note-only",
+        "placement": "/us/usc/t10/s101/h",
+        "detail": "The current branch contains the note at the Title 10 history anchor; origin/main does not show the same note string."
+      },
+      "final_recommended_action": "Keep only historical material and do not codify the game-mechanics directions.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-007-042",
+      "public_law": "7-42",
+      "title": "Public Law 7-42 | Transportation Act of 2022",
+      "chronology_conclusion": "Public Law 7-42 is repealed and the remaining text is a historical transportation reorganization record, not a live Code rewrite.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t49/s101/b/6",
+      "exact_enacted_text_or_amendment_command": "Retain a concise historical note in title 49 and flag the anachronistic cross-reference to Pub. L. 12-9 for later integration review.",
+      "source_evidence": [
+        "codification/laws/laws/PL-007-042/law.txt contains the transportation act text.",
+        "codification/laws/laws/PL-007-042/metadata.json marks the packet usable and identifies the law as Public Law 7-42.",
+        "audit/primary/batch-11-02.json classifies the law as fully repealed and directs historical-note treatment.",
+        "usc/usc49.xml contains the branch-local note for the law, while origin/main does not surface the same note string."
+      ],
+      "current_xml_comparison": {
+        "assessment": "branch-note-only",
+        "placement": "/us/usc/t49/s101/b/6",
+        "detail": "The current branch contains the history note at the transportation anchor; origin/main does not show the same note string."
+      },
+      "final_recommended_action": "Keep only a concise historical note and do not promote the local transportation directives to permanent Code text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-007-043",
+      "public_law": "7-43",
+      "title": "Public Law 7-43 | District of Columbia Reorganization Initiative Act",
+      "chronology_conclusion": "Public Law 7-43 is a repealed local/District charter amendment and not U.S. Code text, so it stays as history only.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t40/s101/4",
+      "exact_enacted_text_or_amendment_command": "Exclude the local charter amendments from the U.S. Code and keep only a concise historical note.",
+      "source_evidence": [
+        "codification/laws/laws/PL-007-043/law.txt contains the District charter amendment text.",
+        "codification/laws/laws/PL-007-043/metadata.json marks the packet usable and identifies the law as Public Law 7-43.",
+        "audit/primary/batch-11-02.json classifies the law as fully repealed and local-only.",
+        "usc/usc40.xml contains the branch-local note for the law, while origin/main does not surface the same note string."
+      ],
+      "current_xml_comparison": {
+        "assessment": "branch-note-only",
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "The current branch contains the note at the Title 40 anchor; origin/main does not show the same note string."
+      },
+      "final_recommended_action": "Keep only a concise historical note and do not treat the D.C. charter amendment as federal Code text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-007-044",
+      "public_law": "7-44",
+      "title": "Public Law 7-44 | The Bye Bye Terrorism Act",
+      "chronology_conclusion": "Public Law 7-44 is repealed and its operative content is mostly game-mechanics direction, so it is history only.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t18/s1",
+      "exact_enacted_text_or_amendment_command": "Keep only a concise historical note at the firearms subject anchor; do not keep the full dump or Trello link.",
+      "source_evidence": [
+        "codification/laws/laws/PL-007-044/law.txt contains the bye-bye-terrorism text.",
+        "codification/laws/laws/PL-007-044/metadata.json marks the packet usable and identifies the law as Public Law 7-44.",
+        "audit/primary/batch-11-02.json classifies the law as fully repealed and history-only.",
+        "usc/usc18.xml contains the branch-local note for the law, while origin/main does not surface the same note string."
+      ],
+      "current_xml_comparison": {
+        "assessment": "branch-note-only",
+        "placement": "/us/usc/t18/s1",
+        "detail": "The current branch contains the note at the Title 18 anchor; origin/main does not show the same note string."
+      },
+      "final_recommended_action": "Keep only historical material and do not codify the game-specific firing and pricing language.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-007-045",
+      "public_law": "7-45",
+      "title": "Public Law 7-45 | United States Capitol Police Reorganization Act of 2022",
+      "chronology_conclusion": "Public Law 7-45 is repealed, but the substantive content is a Capitol Police reorganization that belongs in the historical record rather than permanent positive-law text.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t18/s1",
+      "exact_enacted_text_or_amendment_command": "Move any retained note out of title 18 and keep only a concise historical note capturing the repeal of the earlier Capitol Police provisions.",
+      "source_evidence": [
+        "codification/laws/laws/PL-007-045/law.txt contains the Capitol Police reorganization text.",
+        "codification/laws/laws/PL-007-045/metadata.json marks the packet usable and identifies the law as Public Law 7-45.",
+        "audit/primary/batch-11-02.json classifies the law as fully repealed and recommends a note at a congressional or title 40 anchor.",
+        "usc/usc18.xml contains the branch-local note for the law, while origin/main does not surface the same note string."
+      ],
+      "current_xml_comparison": {
+        "assessment": "branch-note-only",
+        "placement": "/us/usc/t18/s1",
+        "detail": "The current branch contains the note at the Title 18 anchor, but the review conclusion is that the note should be moved to a more suitable congressional or title 40 history anchor; origin/main does not show the same note string."
+      },
+      "final_recommended_action": "Keep only a concise historical note and move it out of Title 18 if the branch is repaired further.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-007-046",
+      "public_law": "7-46",
+      "title": "Public Law 7-46 | Whistleblower Protection Act",
+      "chronology_conclusion": "The packet is source-limited and the supplied HTML is only a Google Drive permission-denied page, so no executable codification conclusion can be verified.",
+      "final_legal_status": "unresolved",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "Leave the law unresolved and do not invent operative text; if recovery later becomes possible, add only a source-limited historical note.",
+      "source_evidence": [
+        "codification/laws/laws/PL-007-046/law.html is a Google Drive permission-denied page.",
+        "codification/laws/laws/PL-007-046/metadata.json marks the packet usable only because of the recovered HTML placeholder, not because of recoverable statutory text.",
+        "audit/primary/batch-11-02.json classifies the law as unresolved / missing.",
+        "usc/usc05.xml and usc/usc50.xml do not surface a matching Public Law 7-46 note string in either the current branch or origin/main."
+      ],
+      "current_xml_comparison": {
+        "assessment": "missing",
+        "placement": null,
+        "detail": "Neither the current branch nor origin/main exposes a matching Public Law 7-46 statutory note, and the source packet does not contain recoverable enactment text."
+      },
+      "final_recommended_action": "Keep the law unresolved until authentic source text is recovered.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-007-047",
+      "public_law": "7-47",
+      "title": "Public Law 7-47 | The Federal Bar Association Act of 2022",
+      "chronology_conclusion": "Public Law 7-47 is repealed and its legal profession content belongs only in history, not in permanent war/defense text.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t28/s1",
+      "exact_enacted_text_or_amendment_command": "Move any retained note out of title 50 to title 28 and keep only a concise historical note.",
+      "source_evidence": [
+        "codification/laws/laws/PL-007-047/law.txt contains the Federal Bar Association act text.",
+        "codification/laws/laws/PL-007-047/metadata.json marks the packet usable and identifies the law as Public Law 7-47.",
+        "audit/primary/batch-11-02.json classifies the law as fully repealed and directs a title 28 history note.",
+        "usc/usc50.xml contains the branch-local note for the law, while origin/main does not surface the same note string."
+      ],
+      "current_xml_comparison": {
+        "assessment": "branch-note-only",
+        "placement": "/us/usc/t50/s1",
+        "detail": "The current branch contains the note at the Title 50 anchor; origin/main does not show the same note string."
+      },
+      "final_recommended_action": "Keep only historical material and move the note to a Title 28 history anchor if the branch is repaired further.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-007-048",
+      "public_law": "7-48",
+      "title": "Public Law 7-48 | OCJCS Reform Act of 2022",
+      "chronology_conclusion": "Public Law 7-48 is repealed and the substantive Joint Chiefs reforms belong only in history, not in a Title 50 note.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t10/s101/h",
+      "exact_enacted_text_or_amendment_command": "Move any retained note out of title 50 to title 10 and keep only a concise historical note.",
+      "source_evidence": [
+        "codification/laws/laws/PL-007-048/law.txt contains the OCJCS reform text.",
+        "codification/laws/laws/PL-007-048/metadata.json marks the packet usable and identifies the law as Public Law 7-48.",
+        "audit/primary/batch-11-02.json classifies the law as fully repealed and history-only.",
+        "usc/usc50.xml contains the branch-local note for the law, while origin/main does not surface the same note string."
+      ],
+      "current_xml_comparison": {
+        "assessment": "branch-note-only",
+        "placement": "/us/usc/t50/s1",
+        "detail": "The current branch contains the note at the Title 50 anchor; origin/main does not show the same note string."
+      },
+      "final_recommended_action": "Keep only historical material and move the note to a Title 10 history anchor if the branch is repaired further.",
+      "confidence": "high"
+    }
+  ]
+}

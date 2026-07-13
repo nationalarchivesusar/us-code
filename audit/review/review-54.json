@@ -1,0 +1,466 @@
+{
+  "batch": 54,
+  "reviewer": "review-repair-54",
+  "group_index": 154,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/manifest-78.json",
+  "output_path": "audit/review/review-54.json",
+  "reviewed_against": [
+    "audit/manifests/manifest-78.json",
+    "audit/primary/batch-10-03.json",
+    "audit/primary/batch-11-01.json",
+    "audit/chronology-report.json",
+    "codification/reference/all_270_laws_classification.csv",
+    "codification/decisions/PL-004-036.md",
+    "codification/plans/approved/PL-004-036.json",
+    "usc/usc03.xml",
+    "usc/usc08.xml",
+    "usc/usc10.xml",
+    "usc/usc18.xml",
+    "usc/usc28.xml",
+    "usc/usc29.xml",
+    "usc/usc44.xml",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-004-029",
+      "public_law": "4-29",
+      "title": "Public Law 4-29 | Department of Commerce and Labor Act of 2022",
+      "chronology_conclusion": "PL 31-226 later repeals Public Law 4-29 in its entirety, so the Commerce and Labor restructuring survives only as repeal history.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t29",
+      "exact_enacted_text_or_amendment_command": "Do not keep the Section II-IV transfer framework as current Code text; if surfaced, treat it only as repeal history.",
+      "provisions": [
+        {
+          "ref": "SECTION II",
+          "text_summary": "Definitions for Labor, Commerce, Secretary of Commerce and Labor, and President.",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t29",
+          "exact_change": "Treat the definitions as repeal history only, not current text.",
+          "evidence": "SECTION II. DEFINITIONS"
+        },
+        {
+          "ref": "SECTION III-IV",
+          "text_summary": "Transfers and consolidates departments and sets department powers and reporting structure.",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t29",
+          "exact_change": "Treat the transfer framework as repealed history, not live text.",
+          "evidence": "\"assets, personnel, liabilities, and responsibilities are to be allocated and transferred\""
+        }
+      ],
+      "source_evidence": [
+        "audit/primary/batch-10-03.json marks PL-004-029 fully-repealed and ties that result to later repeal by PL 31-226.",
+        "codification/reference/all_270_laws_classification.csv classifies PL-004-029 as a standalone general permanent law in repealed-recorded posture.",
+        "No matching PL-004-029 note or operative text was located in usc/usc29.xml or origin/main during this review."
+      ],
+      "current_xml_comparison": "No matching PL-004-029 XML note or operative text was located in the current branch or origin/main.",
+      "final_recommended_action": "Keep this law historical only; do not add operative title 29 text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-030",
+      "public_law": "4-30",
+      "title": "Public Law 4-30 | Fugitive Justice Reform Act",
+      "chronology_conclusion": "PL 29-207 later repeals Public Law 4-30, so the fugitive-list and warrant-database framework survives only as history.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t18 and /us/usc/t28",
+      "exact_enacted_text_or_amendment_command": "Treat the fugitive-list and warrant-database regime as repeal history only.",
+      "provisions": [
+        {
+          "ref": "SECTIONS 1-3",
+          "text_summary": "Short title, purpose, and enactment trigger.",
+          "treatment": "historical-note-only",
+          "target": "n/a",
+          "exact_change": "Keep only a concise historical note.",
+          "evidence": "\"Fugitive Justice Reform Act\" and the enactment trigger text"
+        },
+        {
+          "ref": "SECTIONS 4-7",
+          "text_summary": "Fugitive-list regime, warrant database, removal mechanisms, and repeal of H.R. 4.",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18 and /us/usc/t28",
+          "exact_change": "Do not keep this as current text because PL 29-207 repeals PL 4-30.",
+          "evidence": "\"The Marshal Services shall maintain the list of persons/parties who are ordered onto The Fugitive List\""
+        }
+      ],
+      "source_evidence": [
+        "audit/primary/batch-10-03.json marks PL-004-030 fully-repealed and says later law PL 29-207 repeals it.",
+        "codification/reference/all_270_laws_classification.csv classifies PL-004-030 as a standalone general permanent law in repealed-recorded posture.",
+        "No matching PL-004-030 note or operative text was located in current branch XML or origin/main."
+      ],
+      "current_xml_comparison": "No matching note or operative text was located in current branch XML or origin/main.",
+      "final_recommended_action": "Keep only repeal history; do not add live Code text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-031",
+      "public_law": "4-31",
+      "title": "Public Law 4-31 | Stand Your Ground Act",
+      "chronology_conclusion": "The archive treats this enactment as repealed, so the self-defense framework is history only.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t18",
+      "exact_enacted_text_or_amendment_command": "Do not keep the Section 101-105 self-defense framework as current Code text.",
+      "provisions": [
+        {
+          "ref": "SECTION 1-3",
+          "text_summary": "Short title, purpose, and effective date.",
+          "treatment": "historical-note-only",
+          "target": "n/a",
+          "exact_change": "Keep only repeal-history if needed.",
+          "evidence": "\"Stand Your Ground Act\""
+        },
+        {
+          "ref": "SEC. 101-105",
+          "text_summary": "Definitions, justified force, presumptions, exceptions, and criminal entry rules.",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18",
+          "exact_change": "Treat the self-defense framework as repealed history, not live text.",
+          "evidence": "\"A person who is in a dwelling or residence in which the person has a right to be has no duty to retreat\""
+        }
+      ],
+      "source_evidence": [
+        "audit/primary/batch-10-03.json marks PL-004-031 fully-repealed and keeps the substantive self-defense provisions in history-only posture.",
+        "codification/reference/all_270_laws_classification.csv classifies PL-004-031 as a standalone general permanent law in repealed-recorded posture.",
+        "No matching PL-004-031 note or operative text was located in usc/usc50.xml or origin/main during this review."
+      ],
+      "current_xml_comparison": "No matching note or operative text was located in usc/usc50.xml or origin/main; the earlier title-50 placement is not present in the current tree.",
+      "final_recommended_action": "Remove any live Code text and keep only a concise historical note under Title 18 if the archive surfaces this law.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-032",
+      "public_law": "4-32",
+      "title": "Public Law 4-32 | Warrants, Subpoenas, and Summons Act",
+      "chronology_conclusion": "The recovered source is an Executive Order that cites Public Law 4-32, so the enacted statute itself was not recovered from the reviewed materials.",
+      "final_legal_status": "source-defect",
+      "approved_code_treatment": "source-limited-history",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": null,
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "No authentic statutory text is recoverable from the supplied source; the file is an executive order referencing the act.",
+          "treatment": "source-limited-history",
+          "target": null,
+          "exact_change": "Keep only a concise historical note flagging that the supplied file is an executive order, not the enacted act.",
+          "evidence": "Under Public Law 4-32, the \"Warrants, Subpoenas, and Summons Act\""
+        }
+      ],
+      "source_evidence": [
+        "audit/primary/batch-11-01.json marks PL-004-032 unresolved because the supplied file is an Executive Order referencing the public law, not the act text.",
+        "codification/reference/all_270_laws_classification.csv classifies PL-004-032 as standalone_general_permanent but source-reviewable in a source-defect posture.",
+        "No matching codification note or operative text appears in current branch XML or origin/main."
+      ],
+      "current_xml_comparison": "No matching note or operative text appears in the current branch XML or in origin/main.",
+      "final_recommended_action": "Recover the authentic enacted text before any Code action; do not codify the EO surrogate.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-004-033",
+      "public_law": "4-33",
+      "title": "Public Law 4-33 | National Archives Act",
+      "chronology_conclusion": "The source text is complete, but the law is classified as repealed in the archive, so it should remain a historical note only.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t44",
+      "exact_enacted_text_or_amendment_command": "Retain the enactment as a concise historical note at the Title 44 archive anchor; do not insert operative text.",
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "text_summary": "Short title, severability, immediate effective date, and authority to edit or copy prior bills.",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t44",
+          "exact_change": "Keep as a concise historical note only.",
+          "evidence": "This piece of legislation shall be referred to as National Archives Act of 2022"
+        },
+        {
+          "ref": "SEC. II",
+          "text_summary": "Establishes the National Archives and Records Administration as an independent federal agency headed by the Archivist and Co-Archivists.",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t44",
+          "exact_change": "Do not insert operative text because the act is repealed; retain history only.",
+          "evidence": "The National Archives and Records Administration will be established as an independent federal agency"
+        },
+        {
+          "ref": "SEC. III",
+          "text_summary": "Assigns records-maintenance duties for laws, court decisions, elections, and the Federal Register.",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t44",
+          "exact_change": "Do not insert operative text because the act is repealed; retain history only.",
+          "evidence": "will keep an up-to-date record of all laws"
+        }
+      ],
+      "source_evidence": [
+        "audit/primary/batch-11-01.json lists PL-004-033 under Repealed Laws and treats it as history only.",
+        "codification/reference/all_270_laws_classification.csv classifies PL-004-033 as a standalone general permanent law in repealed-recorded posture.",
+        "usc/usc44.xml contains a statutory note for PL-004-033 in the current branch, while origin/main does not show the matching note."
+      ],
+      "current_xml_comparison": "Current branch contains a historical note in usc/usc44.xml; origin/main does not show a matching note. The note is acceptable only as history, not operative text.",
+      "final_recommended_action": "Keep the historical note only and do not add operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-034",
+      "public_law": "4-34",
+      "title": "Public Law 4-34 | An Act to Prevent the Proliferation of Magistrates and Ensure Basic Judicial Competence",
+      "chronology_conclusion": "The archive classifies the act as repealed, so the magistrate and judge certification framework is history only.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t28",
+      "exact_enacted_text_or_amendment_command": "Do not keep Sections II-IV as current Code text; retain only history.",
+      "provisions": [
+        {
+          "ref": "SEC. I",
+          "text_summary": "Short title, severability, and effective date.",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t28",
+          "exact_change": "Keep as a concise historical note only.",
+          "evidence": "This Resolution shall be referred to as \"H.R. 4015, an Act to Prevent the Proliferation of Magistrates\""
+        },
+        {
+          "ref": "SEC. II",
+          "text_summary": "Certification requirement for magistrate appointments and impeachment liability for appointing officers.",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t28",
+          "exact_change": "Do not insert operative text because the act is repealed; retain history only.",
+          "evidence": "No person shall be appointed as a Magistrate"
+        },
+        {
+          "ref": "SEC. III",
+          "text_summary": "Adds the same certification requirement for judges and justices.",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t28",
+          "exact_change": "Do not insert operative text because the act is repealed; retain history only.",
+          "evidence": "No person shall be appointed as a Judge or Justice"
+        },
+        {
+          "ref": "SEC. IV",
+          "text_summary": "Gives already-appointed officials ten days to comply or face impeachment or removal.",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t28",
+          "exact_change": "Keep as repeal history only.",
+          "evidence": "shall have ten days from its passing into law to become in compliance"
+        }
+      ],
+      "source_evidence": [
+        "audit/primary/batch-11-01.json lists PL-004-034 under Repealed Laws and treats the judicial certification framework as history only.",
+        "codification/reference/all_270_laws_classification.csv classifies PL-004-034 as a standalone general permanent law in repealed-recorded posture.",
+        "No matching PL-004-034 note or operative text was located in usc/usc28.xml or origin/main."
+      ],
+      "current_xml_comparison": "No matching note or operative text was located in current branch XML or origin/main.",
+      "final_recommended_action": "Keep only historical note treatment under Title 28 if the archive surfaces this law; do not add live text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-035",
+      "public_law": "4-35",
+      "title": "Public Law 4-35 | Recommissioning of the United States Ship New Jersey Act of 2022",
+      "chronology_conclusion": "The source packet is unreadable permission-denied debris, so the act can only be treated as source-limited history and not reconstructed into operative text.",
+      "final_legal_status": "source-unavailable",
+      "approved_code_treatment": "source-limited-history",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": null,
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "Text unavailable; the source is an access-denied page and cannot support codification.",
+          "treatment": "source-limited-history",
+          "target": null,
+          "exact_change": "Recover the true source text before any codification; for now keep only a source-limited historical note.",
+          "evidence": "Sorry, the owner hasn't given you permission to download this file."
+        }
+      ],
+      "source_evidence": [
+        "audit/primary/batch-11-01.json marks PL-004-035 unresolved because the source is a Google Drive permission-denied page.",
+        "codification/reference/all_270_laws_classification.csv marks PL-004-035 as no_code_text with source_reviewable set to false.",
+        "No matching PL-004-035 note or operative text was located in current branch XML or origin/main."
+      ],
+      "current_xml_comparison": "No matching note or operative text was located in current branch XML or origin/main.",
+      "final_recommended_action": "Recover the true source text before any codification; keep only source-limited history and do not invent operative text.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-004-036",
+      "public_law": "4-36",
+      "title": "Public Law 4-36 | Defense Heraldic Services Act",
+      "chronology_conclusion": "This is a current direct amendment package that reserves section 7594 and inserts section 206, with a corresponding TOC update.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "mixed-amendment-and-repeal-marking",
+      "exact_target": [
+        "/us/usc/t10/s7594",
+        "/us/usc/t10/s205"
+      ],
+      "exact_enacted_text_or_amendment_command": [
+        "Reserve 10 U.S.C. 7594 and mark it [Reserved].",
+        "Insert new 10 U.S.C. 206 after /us/usc/t10/s205.",
+        "Insert the title 10 TOC item for 206 after /us/usc/t10/s205."
+      ],
+      "provisions": [
+        {
+          "ref": "SEC. I",
+          "text_summary": "Short title, immediate effective date, conflict clause, and severability.",
+          "treatment": "statutory-note",
+          "target": "/us/usc/t10",
+          "exact_change": "Keep as enactment context only.",
+          "evidence": "referred to as the \"Defense Heraldic Services Act of 2022\""
+        },
+        {
+          "ref": "SEC. II",
+          "text_summary": "Repeals section 7594 of chapter 767 of title 10 and reserves the section number.",
+          "treatment": "repeal-marking",
+          "target": "/us/usc/t10/s7594",
+          "exact_change": "Repeal 10 U.S.C. 7594 and mark it reserved.",
+          "evidence": "by repealing section 7594 in its entirety"
+        },
+        {
+          "ref": "SEC. III",
+          "text_summary": "Adds a new section for furnishing heraldic services in title 10, chapter 48, subchapter II.",
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t10/s205",
+          "exact_change": "Insert the new heraldic-services section in chapter 48, subchapter II with the source text's subsections on design, advice, and reimbursement.",
+          "evidence": "Subchapter II of Chapter 48 of Title 10, United States Code, is amended"
+        }
+      ],
+      "source_evidence": [
+        "codification/plans/approved/PL-004-036.json approves reserving 7594 and inserting section 206 with a TOC item.",
+        "codification/decisions/PL-004-036.md explains that section II repeals 10 U.S.C. 7594 and section III creates 10 U.S.C. 206.",
+        "audit/primary/batch-11-01.json classifies PL-004-036 as a direct code amendment at Title 10."
+      ],
+      "current_xml_comparison": "No matching note or operative text was located in current branch XML or origin/main; the approved PL-004-036 plan/decision exists but has not been installed.",
+      "final_recommended_action": "Align the branch with the approved plan by reserving 7594 and keeping the 206 insertion and TOC update.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-037",
+      "public_law": "4-37",
+      "title": "Public Law 4-37 | Border Awareness and Naturalization Act",
+      "chronology_conclusion": "The archive classifies the act as repealed, so the immigration and naturalization framework is history only.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t8",
+      "exact_enacted_text_or_amendment_command": "Keep the public-law material as a concise historical note only.",
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "text_summary": "Short title (BAN Act / S. 37).",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t8",
+          "exact_change": "Keep as a concise historical note only.",
+          "evidence": "This Act may be cited as the \"Border Awareness and Naturalization Act\""
+        },
+        {
+          "ref": "SEC. 2",
+          "text_summary": "Purpose clauses about CIS background checks and organizational structure.",
+          "treatment": "historical-note-only",
+          "target": "n/a",
+          "exact_change": "Exclude from the Code and keep only as history.",
+          "evidence": "It is the purpose of this act to create regulations"
+        },
+        {
+          "ref": "SEC. 3-3.4",
+          "text_summary": "CIS background-check regulations, alternate-account handling, immigration regulations, and CIS organizational structure.",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t8",
+          "exact_change": "Do not insert operative text because the act is repealed; retain history only.",
+          "evidence": "Citizenship and Immigration Services shall be an agency under the Department of Homeland Security"
+        },
+        {
+          "ref": "SEC. 4",
+          "text_summary": "Special tagging of accounts flagged for further investigation.",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t8",
+          "exact_change": "Keep as history only.",
+          "evidence": "SPECIAL TAGGING OF ACCOUNTS."
+        },
+        {
+          "ref": "SEC. 5",
+          "text_summary": "Immigration closure seven days before elections, with optional national-security closure.",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t8",
+          "exact_change": "Do not insert operative text because the act is repealed; retain history only.",
+          "evidence": "Immigration shall be closed seven days prior to a Congressional or Presidential Election"
+        },
+        {
+          "ref": "SEC. 6",
+          "text_summary": "Denaturalization process through the courts on later-found evidence.",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t8",
+          "exact_change": "Do not insert operative text because the act is repealed; retain history only.",
+          "evidence": "may file a case to the court systems"
+        },
+        {
+          "ref": "SEC. 7",
+          "text_summary": "Enactment on passage and signature.",
+          "treatment": "historical-note-only",
+          "target": "n/a",
+          "exact_change": "n/a",
+          "evidence": "This bill shall be enacted once passed through both chambers of Congress and signed by the President"
+        }
+      ],
+      "source_evidence": [
+        "audit/primary/batch-11-01.json lists PL-004-037 under Repealed Laws and keeps the immigration framework in history-only posture.",
+        "codification/reference/all_270_laws_classification.csv classifies PL-004-037 as a standalone general permanent law in repealed-recorded posture.",
+        "usc/usc08.xml contains the historical note for PL-004-037 in the current branch, while origin/main does not show the matching note."
+      ],
+      "current_xml_comparison": "Current branch has the historical note in usc/usc08.xml; origin/main lacks a matching note. The note remains history only.",
+      "final_recommended_action": "Keep only history and do not add operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-038",
+      "public_law": "4-38",
+      "title": "Public Law 4-38 | White House Protection Act",
+      "chronology_conclusion": "The archive classifies the act as repealed, so the White House protection framework belongs in history only.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t18/s3056",
+      "exact_enacted_text_or_amendment_command": "Do not insert operative text; keep only a concise historical note at the 18 U.S.C. 3056 anchor.",
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "text_summary": "Short title (White House Protection Act / S. 36).",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t3",
+          "exact_change": "Keep as a concise historical note only.",
+          "evidence": "This Act may be cited as the \"White House Protection Act\""
+        },
+        {
+          "ref": "SEC. 2",
+          "text_summary": "Purpose to broaden Secret Service jurisdiction around the White House and protectees.",
+          "treatment": "historical-note-only",
+          "target": "n/a",
+          "exact_change": "Exclude from the Code and keep only as history.",
+          "evidence": "To broaden Secret Services jurisdiction around the White House"
+        },
+        {
+          "ref": "SEC. 3 (Actions)",
+          "text_summary": "Road and sidewalk enforcement, detention/frisking authority, and weapons ban on White House grounds.",
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18/s3056",
+          "exact_change": "Do not insert operative text because the act is repealed; retain history only.",
+          "evidence": "North Road, West Road, East Road of the White House shall be enforced"
+        },
+        {
+          "ref": "SEC. 3 (Enactment)",
+          "text_summary": "Effective on passage and signature.",
+          "treatment": "historical-note-only",
+          "target": "n/a",
+          "exact_change": "n/a",
+          "evidence": "This bill shall be enacted once passed through both chambers of Congress and signed by the President of the United States"
+        }
+      ],
+      "source_evidence": [
+        "audit/primary/batch-11-01.json lists PL-004-038 under Repealed Laws and keeps the White House protection framework in history-only posture.",
+        "codification/reference/all_270_laws_classification.csv classifies PL-004-038 as a standalone general permanent law in repealed-recorded posture.",
+        "usc/usc03.xml contains the historical note in the current branch, while origin/main does not show a matching note."
+      ],
+      "current_xml_comparison": "Current branch parks the note in usc/usc03.xml at a title 3 anchor, while origin/main has no matching note; the subject-matter anchor should be 18 U.S.C. 3056 if the history is retained.",
+      "final_recommended_action": "Keep only history and normalize the note to the Title 18 anchor if the archive retains it.",
+      "confidence": "high"
+    }
+  ]
+}

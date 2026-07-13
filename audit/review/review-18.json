@@ -17,6 +17,8 @@
         "xml": "no verified XML placement",
         "branch_vs_origin": "no relevant branch change identified"
       },
+      "chronology_conclusion": "Source unavailable; no current operative Code text can be safely enacted from the recovered record.",
+      "confidence": "medium",
       "source_evidence": {
         "law_report": "codification/mass_migration/latest/reports/laws/PL-024-176.md",
         "classification": "manifest marks the source unrecoverable; final report says SOURCE_UNAVAILABLE",
@@ -36,6 +38,8 @@
         "xml": "no verified XML placement",
         "branch_vs_origin": "no relevant branch change identified"
       },
+      "chronology_conclusion": "The enactment is repealed history only and should not be restored as operative Code text.",
+      "confidence": "high",
       "source_evidence": {
         "law_report": "codification/mass_migration/latest/reports/laws/PL-024-177.md",
         "classification": "final report classifies the Trello record as repealed and says it is not inserted as current Code text",
@@ -55,6 +59,8 @@
         "xml": "usc/usc42.xml",
         "branch_vs_origin": "origin/main differs from HEAD; HEAD includes the inserted gender-identity and sexual-orientation amendment plus the USAR note"
       },
+      "chronology_conclusion": "The amendment remains current and the branch already incorporates the Title 42 change.",
+      "confidence": "high",
       "source_evidence": {
         "law_report": "codification/mass_migration/latest/reports/laws/PL-024-178.md",
         "source_text": "SEC 6(a)(1)-(2) expressly amends 42 U.S.C. 2000e-2(a)",
@@ -74,6 +80,8 @@
         "xml": "usc/usc31.xml",
         "branch_vs_origin": "origin/main differs from HEAD; HEAD contains a statutory note for PL-025-179"
       },
+      "chronology_conclusion": "Temporary appropriations history only; keep the note limited to the short fiscal period.",
+      "confidence": "high",
       "source_evidence": {
         "law_report": "codification/mass_migration/latest/reports/laws/PL-025-179.md",
         "source_text": "SEC 5 suspends adjustments under 2 U.S.C. 4501 for FY 21-2",
@@ -93,6 +101,8 @@
         "xml": "no relevant XML placement found",
         "branch_vs_origin": "no relevant branch change identified"
       },
+      "chronology_conclusion": "The statute is repealed history only and should stay out of current Code text.",
+      "confidence": "high",
       "source_evidence": {
         "law_report": "codification/mass_migration/latest/reports/laws/PL-025-180.md",
         "source_text": "SEC 3(b) repeals PL 9-55 and SEC 3(c) nullifies the sanctions",
@@ -112,6 +122,8 @@
         "xml": "no verified XML placement",
         "branch_vs_origin": "no relevant branch change identified"
       },
+      "chronology_conclusion": "Source unavailable; the unrecoverable record cannot support operative codification.",
+      "confidence": "medium",
       "source_evidence": {
         "law_report": "codification/mass_migration/latest/reports/laws/PL-025-181.md",
         "classification": "final report classifies the Trello record as repealed and rejects current Code insertion",
@@ -131,6 +143,8 @@
         "xml": "no verified XML placement",
         "branch_vs_origin": "no relevant branch change identified"
       },
+      "chronology_conclusion": "Source unavailable; the unrecoverable record cannot support operative codification.",
+      "confidence": "medium",
       "source_evidence": {
         "law_report": "codification/mass_migration/latest/reports/laws/PL-025-182.md",
         "classification": "final report says no readable authenticated enactment text could be recovered",
@@ -150,6 +164,8 @@
         "xml": "no verified XML placement for this law in the current branch",
         "branch_vs_origin": "no relevant branch change identified"
       },
+      "chronology_conclusion": "The law is superseded before codification and should remain history only.",
+      "confidence": "high",
       "source_evidence": {
         "law_report": "codification/mass_migration/latest/reports/laws/PL-025-183.md",
         "later_law": "PL-031-226 repeals PL-025-183 in its entirety",
@@ -169,6 +185,8 @@
         "xml": "no verified XML placement for this law in the current branch",
         "branch_vs_origin": "no relevant branch change identified"
       },
+      "chronology_conclusion": "The law is superseded before codification and should remain history only.",
+      "confidence": "high",
       "source_evidence": {
         "law_report": "codification/mass_migration/latest/reports/laws/PL-025-184.md",
         "later_law": "PL-033-238 repeals PL-025-184 in its entirety",
@@ -188,6 +206,8 @@
         "xml": "usc/usc31.xml",
         "branch_vs_origin": "origin/main differs from HEAD; HEAD includes a statutory note that still presents the act as current"
       },
+      "chronology_conclusion": "Expired appropriations history only; remove any implication that it is current Code text.",
+      "confidence": "high",
       "source_evidence": {
         "law_report": "codification/mass_migration/latest/reports/laws/PL-025-185.md",
         "source_text": "SEC 3-14 are appropriations and reporting provisions for a short fiscal period; SEC 5 is a temporary 2 U.S.C. 4501 adjustment",

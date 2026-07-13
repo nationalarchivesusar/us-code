@@ -1,0 +1,518 @@
+{
+  "batch": 12,
+  "auditor": "law-auditor-J",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-009-062",
+      "public_law": "9-62",
+      "title": "Public Law 9-62 | Repealing the District of Columbia Home Rule Act",
+      "status": "current",
+      "status_basis": "Operative local/District repeal act; it repeals the D.C. Home Rule Act and does not create a new positive-law section or self-repeal.",
+      "provisions": [
+        {
+          "ref": "SECTION 1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Keep only a concise short-title note.",
+          "evidence": "This Act may be cited as the \"Repealing the District of Columbia Home Rule Act.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 2",
+          "text_summary": "Repeals the District of Columbia Home Rule Act of 2010 and restores or revives law amended or repealed by it.",
+          "classes": ["repeal", "savings", "local-district"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": "Local/District repeal and revival clause; no U.S. Code section is directly amended.",
+          "evidence": "The District of Columbia Home Rule Act of 2010 (Pub.L. 93-198) is repealed, and the provisions of law amended or repealed by that Act are restored or revived as if the Act had not been enacted.",
+          "notes": "Keep, at most, a brief historical note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "The current note sits in the D.C. charter subject area, but it still carries a source dump and should be reduced to a concise repeal-history entry."
+      },
+      "recommended_actions": [
+        "Trim the note to a concise repeal-history statement.",
+        "Remove the quoted source dump and Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-009-063",
+      "public_law": "9-63",
+      "title": "Public Law 9-63 | The Federal District Employment Act of 2022",
+      "status": "unresolved",
+      "status_basis": "The source is unrecoverable, so no operative statutory text can be authenticated from the record provided.",
+      "provisions": [
+        {
+          "ref": "(entire act)",
+          "text_summary": "Source-limited historical note only; no recoverable statutory text is available.",
+          "classes": ["non-code", "source-unavailable"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "No codification possible without the missing statutory text.",
+          "evidence": "The recovered source is unreadable Google Drive viewer debris and no enactment text was recovered.",
+          "notes": "Keep only an honest source-limited historical note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s101",
+        "detail": "The branch has a default Title 5 note anchor, but the true issue is source unavailability."
+      },
+      "recommended_actions": [
+        "Remove the Trello link.",
+        "Retain only a concise source-limited historical note; do not invent operative text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-009-064",
+      "public_law": "9-64",
+      "title": "Public Law 9-64 | To Bar T800Ninja123 From Public Office",
+      "status": "current",
+      "status_basis": "Operative individual barment resolution; it takes effect by its terms and does not self-repeal or expire.",
+      "provisions": [
+        {
+          "ref": "SECTION I",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Keep only a concise short-title note.",
+          "evidence": "This Act may be cited as the \"HJR 1 - To Bar T800Ninja123FromPublic Office\".",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION II",
+          "text_summary": "Severability and anti-supersession clause.",
+          "classes": ["severability", "savings"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": "Non-code clause; do not convert to U.S. Code text.",
+          "evidence": "This Act shall be severable ... This Act shall not be superseded by any newer law unless that law specifically declares its intent to supersede this Act's provisions.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION III",
+          "text_summary": "Immediate effective date after both chambers approve it.",
+          "classes": ["effective-date"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": "Non-code effective-date clause.",
+          "evidence": "This Act shall become effective following a majority approval by both the House of Representatives and Senate.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION IV",
+          "text_summary": "Documentation/name clause for T800Ninja123.",
+          "classes": ["non-code"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": "Pure documentation clause; no U.S. Code treatment.",
+          "evidence": "T800Ninja123 shall be known as here",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION V",
+          "text_summary": "Bars T800Ninja123 from public office and imposes related employment restrictions.",
+          "classes": ["private-relief", "findings-or-sense", "non-code"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": "Individual/private barment measure; keep out of the U.S. Code.",
+          "evidence": "T800Ninja123, shall be hereby barred from holding any public office under the seal of the United States.",
+          "notes": "This is a named-person measure and should remain historical only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-inserted-into-permanent-text",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t46/s101",
+        "detail": "The XML note is anchored in Title 46 and carries a full-text dump plus Trello link. This is a private/individual barment measure, so it does not belong in permanent U.S. Code text."
+      },
+      "recommended_actions": [
+        "Remove the full-text dump and Trello link.",
+        "Exclude this private/individual measure from permanent U.S. Code text; keep only a short historical note if needed."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-010-065",
+      "public_law": "10-65",
+      "title": "Public Law 10-65 | Federal Judicial Reform Act ii",
+      "status": "fully-repealed",
+      "status_basis": "The supplied source is a court opinion, not enacted statutory text, and it declares the challenged sections unconstitutional and null and void.",
+      "provisions": [
+        {
+          "ref": "(entire document)",
+          "text_summary": "Court opinion and order; not enacted public-law text.",
+          "classes": ["non-code"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "No U.S. Code amendment is possible because the source is judicial output, not legislation.",
+          "evidence": "OPINION AND ORDER ... That sections di-ii, e, and f be ruled unconstitutional, and null and void.",
+          "notes": "Keep only a short historical cross-reference note, if any."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "A judicial opinion was treated like a statutory note and parked in an unrelated title. The source should remain historical only."
+      },
+      "recommended_actions": [
+        "Remove the full-text dump and Trello link.",
+        "Keep only a short historical cross-reference note, if any."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-010-066",
+      "public_law": "10-66",
+      "title": "Public Law 10-66 | The Americans First Act",
+      "status": "current",
+      "status_basis": "Operative repeal act; it repeals prior laws on its own terms and does not self-repeal or expire.",
+      "provisions": [
+        {
+          "ref": "SECTION 1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Keep only a concise short-title note.",
+          "evidence": "This act shall be referred to as the \"The Americans First Act.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 2(a)",
+          "text_summary": "Repeals the Diplomatic Relations Act of 1978.",
+          "classes": ["repeal"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Record repeal of the prior act as a historical cross-reference.",
+          "evidence": "The Diplomatic Relations Act of 1978 is repealed.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 2(b)",
+          "text_summary": "Repeals Public Law 3-17, the Diplomatic Protections Act.",
+          "classes": ["repeal"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Record repeal of PL 3-17 as a historical cross-reference.",
+          "evidence": "Public Law 3-17, The Diplomatic Protections Act is repealed.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 3",
+          "text_summary": "Immediate effective date upon passage.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": "Keep as a short effective-date note.",
+          "evidence": "This act shall immediately take effect upon passage.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t8/s1101/i/2",
+        "detail": "The note is dump-heavy and anchored in an awkward subject area; it should be reduced to a concise repeal cross-reference."
+      },
+      "recommended_actions": [
+        "Remove the full-text dump and Trello link.",
+        "Keep only concise historical notes recording the repeals."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-010-067",
+      "public_law": "10-67",
+      "title": "Public Law 10-67 | Ambassadorial Readjustment Act",
+      "status": "current",
+      "status_basis": "General foreign-affairs organizational legislation; the source creates permanent ambassadorial rules and does not self-repeal or expire.",
+      "provisions": [
+        {
+          "ref": "SECTION 1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Keep only a concise short-title note.",
+          "evidence": "This act shall be referred to as the \"Ambassadorial Readjustment Act\".",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 2(1)-(6)",
+          "text_summary": "Creates ambassador nomination and acting rules, allows multi-portfolio assignments, sets portfolio geography, establishes five ambassadorial portfolios, gives the UN ambassador Under Secretary seniority, and requires notice to the Secretary of State.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t22/s2651a",
+          "exact_change": "Create a new Title 22 provision covering ambassador nomination, interim service, multiple portfolios, portfolio assignment, and the five named portfolios.",
+          "evidence": "The President shall nominate Ambassadors to be commissioned by and with the consent of the Senate. ... The following portfolios shall be established by law:",
+          "notes": "This is substantive permanent foreign-affairs law."
+        },
+        {
+          "ref": "SECTION 3",
+          "text_summary": "Blanket repeal of conflicting laws and Code provisions; immediate effective date.",
+          "classes": ["repeal", "effective-date"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Treat the conflict clause as a source-defect, nondeterminable repeal note; do not invent specific strike text.",
+          "evidence": "Any act, part of the United States Code, or law that may come into conflict with clauses mentioned under Section 2 are to be rescinded and repealed immediately.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t22/s2651",
+        "detail": "The current treatment is only a boilerplate note with a dump and Trello link; the substantive foreign-affairs rules still need real codification."
+      },
+      "recommended_actions": [
+        "Remove the full-text dump and Trello link.",
+        "Codify the substantive Section 2 rules as a new Title 22 provision near 22 U.S.C. 2651a.",
+        "Treat the Section 3 conflict clause as a nondeterminable statutory note only."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-010-068",
+      "public_law": "10-68",
+      "title": "Public Law 10-68 | American Jobs Act",
+      "status": "current",
+      "status_basis": "Operative repeal act; the repeal of prior law takes effect on passage and the law does not self-repeal.",
+      "provisions": [
+        {
+          "ref": "SECTION 1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Keep only a concise short-title note.",
+          "evidence": "This act shall be referred to as the \"American Jobs Act\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 2",
+          "text_summary": "Repeals Public Law 3-20, the National Immigration Employment Act of 2021.",
+          "classes": ["repeal"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Record the repeal of PL 3-20 as a historical cross-reference.",
+          "evidence": "Public Law 3-20, National Immigration Employment Act of 2021 is repealed.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 3",
+          "text_summary": "Immediate effective date upon passage.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": "Keep as a short effective-date note.",
+          "evidence": "This act shall immediately take effect upon passage.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t46/s101",
+        "detail": "The current note is parked in the wrong subject area and still carries a full-text dump and Trello link."
+      },
+      "recommended_actions": [
+        "Remove the full-text dump and Trello link.",
+        "Record the repeal of Public Law 3-20 as a concise historical cross-reference."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-011-069",
+      "public_law": "11-69",
+      "title": "Public Law 11-69 | DC Criminal Code Act",
+      "status": "current",
+      "status_basis": "Comprehensive local/District criminal code; the source creates enforceable D.C. offenses and traffic rules and does not self-repeal or expire.",
+      "provisions": [
+        {
+          "ref": "SECTION 1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Keep only a concise short-title note.",
+          "evidence": "This act shall be referred to as the \"DC Criminal Code Act\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 2",
+          "text_summary": "Creates a local District of Columbia criminal code and citation regime.",
+          "classes": ["local-district", "new-permanent-general"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": "Local/District criminal code material; do not place in federal U.S. Code text.",
+          "evidence": "The following statutes may be enforced by any law enforcement officer performing duties within the District of Columbia.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 3",
+          "text_summary": "Creates local traffic offenses for the Metropolitan Police Department of the District of Columbia.",
+          "classes": ["local-district", "new-permanent-general"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": "Local/District traffic offense material; exclude from permanent U.S. Code text.",
+          "evidence": "The following shall be traffic offenses, and shall be enforceable by any law enforcement officer employed by the Metropolitan Police Department of the District of Columbia.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 4",
+          "text_summary": "Immediate effective date upon passage.",
+          "classes": ["effective-date"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": "Non-code effective-date clause.",
+          "evidence": "This act shall immediately take effect upon passage.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-inserted-into-permanent-text",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "The XML treats a local D.C. criminal code as if it were federal permanent text and adds a dump plus Trello link."
+      },
+      "recommended_actions": [
+        "Remove the full-text dump and Trello link.",
+        "Exclude this local/District criminal code from permanent U.S. Code text; keep only a concise historical note if needed."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-011-070",
+      "public_law": "11-70",
+      "title": "Public Law 11-70 | Supreme Court Please Act",
+      "status": "current",
+      "status_basis": "Operative transfer statute; it transfers Supreme Court Police duties to the U.S. Marshals Service and does not self-repeal or expire.",
+      "provisions": [
+        {
+          "ref": "SECTION 1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Keep only a concise short-title note.",
+          "evidence": "This act shall be referred to as the \"Supreme Court Please Act\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 2(a)-(b)",
+          "text_summary": "Transfers the Marshal of the U.S. Supreme Court and Supreme Court Police duties to the U.S. Marshals Service and terminates Supreme Court Police employees.",
+          "classes": ["transfer", "repeal", "new-permanent-general"],
+          "treatment": "transfer-note",
+          "target": "/us/usc/t40/s6121",
+          "exact_change": "Transfer the duties tied to 40 U.S.C. 6121 to the U.S. Marshals Service and terminate the Supreme Court Police workforce.",
+          "evidence": "All duties of the Marshal of the United States Supreme Court and the Supreme Court Police (40U.S.Code 6121) shall be transferred to the United States Marshals Service. ... All employees of the Supreme Court Police shall be terminated.",
+          "notes": "The current placement in Title 28 is wrong for the cited 40 U.S.C. target."
+        },
+        {
+          "ref": "SECTION 3",
+          "text_summary": "Immediate effective date upon passage.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": "Keep as a short effective-date note.",
+          "evidence": "This act shall immediately take effect upon passage.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s1",
+        "detail": "The current note is anchored in the wrong title and only captures a boilerplate summary; the real target is 40 U.S.C. 6121."
+      },
+      "recommended_actions": [
+        "Remove the full-text dump and Trello link.",
+        "Move the transfer to the 40 U.S.C. 6121 anchor and codify the duty transfer there."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-011-071",
+      "public_law": "11-71",
+      "title": "Public Law 11-71 | Supreme Court Needs Act",
+      "status": "current",
+      "status_basis": "Section 2(a) repeals 28 U.S.C. section 1 and section 2(b) immediately replaces it with new text setting the Court at a Chief Justice plus four associate justices. The source contains no self-repeal or sunset.",
+      "provisions": [
+        {
+          "ref": "SEC 1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This act shall be referred to as the Supreme Court Needs Act.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 2(a)-(b)",
+          "text_summary": "Repeals 28 U.S.C. section 1 and replaces it with new Supreme Court membership and quorum text.",
+          "classes": ["repeal", "substitution", "direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t28/s1",
+          "exact_change": "Replace 28 U.S.C. section 1 with text stating that the Supreme Court consists of a Chief Justice and four associate justices and may determine quorum.",
+          "evidence": "28 U.S. Code section 1 is repealed. 28 U.S. Code section 1 shall read as: The Supreme Court of the United States shall consist of a Chief Justice of the United States and four associate justices.",
+          "notes": "This is a determinable strike-and-replace amendment, not a note."
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Immediate effective date.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": "/us/usc/t28/s1",
+          "exact_change": null,
+          "evidence": "This act shall immediately take effect upon passage.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s1",
+        "detail": "The note is parked at the right anchor but remains boilerplate with a dump and Trello link; the actual section text still needs replacement."
+      },
+      "recommended_actions": [
+        "Remove the full-text dump and Trello link.",
+        "Actually amend 28 U.S.C. 1 to the new Chief Justice plus four associate justices text."
+      ],
+      "confidence": "high"
+    }
+  ]
+}

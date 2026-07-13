@@ -1,0 +1,203 @@
+{
+  "reviewer": "review-repair-52",
+  "group_index": 152,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/manifest-76.json",
+  "output_path": "audit/review/review-52.json",
+  "reviewed_against": [
+    "audit/manifests/manifest-76.json",
+    "audit/primary/batch-10-01.json",
+    "audit/primary/batch-10-02.json",
+    "audit/chronology-report.json",
+    "audit/claude-validation.json",
+    "usc/usc03.xml",
+    "usc/usc05.xml",
+    "usc/usc18.xml",
+    "usc/usc28.xml",
+    "usc/usc40.xml",
+    "usc/usc50.xml",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-001-002",
+      "public_law": "1-2",
+      "title": "Public Law 1-2 | United States Bar Act",
+      "chronology_conclusion": "The chronology leaves the bar-exam rule current; the act is substantive and still needs a real operative Title 28 anchor.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "operative-text-required",
+      "exact_target": "/us/usc/t28",
+      "exact_enacted_text_or_amendment_command": "Place the Attorney General control rule and bar-exam definition in operative Title 28 text, not as a Title 3 history note.",
+      "source_evidence": [
+        "codification/laws/laws/PL-001-002/law.txt states the Attorney General control rule and the bar-exam definition.",
+        "audit/primary/batch-10-01.json treats the act as operative-text-required with a Title 28 target.",
+        "usc/usc03.xml carries rp-pl001002-codification, while origin/main lacks the same note."
+      ],
+      "current_xml_comparison": "The current branch keeps the act as a note in usc/usc03.xml; origin/main does not carry that same implementation, and neither branch location is the proper operative Title 28 anchor.",
+      "final_recommended_action": "Move the rule to an operative Title 28 anchor and remove the mislocated note and Trello link.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-001-003",
+      "public_law": "1-3",
+      "title": "Public Law 1-3 | Closing Cabinet Doors Act",
+      "chronology_conclusion": "The chronology keeps the act current, but its enactment is structural and belongs in a concise history note rather than direct section strikes.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t5",
+      "exact_enacted_text_or_amendment_command": "Keep a concise structural history note at Title 5 and record the department closures, VA transfer, and blanket repeal history without inventing section-level strikes.",
+      "source_evidence": [
+        "codification/laws/laws/PL-001-003/law.txt shows the department-closure and blanket-repeal language.",
+        "audit/primary/batch-10-01.json classifies the law as note-only with a blanket repeal component.",
+        "usc/usc05.xml carries rp-pl001003-codification, while origin/main lacks the same note."
+      ],
+      "current_xml_comparison": "The current branch note in usc/usc05.xml still contains the long quoted-content dump and archive link; origin/main lacks that same branch note.",
+      "final_recommended_action": "Keep only the structural history note and strip the dump and archive link from the branch note.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-002-005",
+      "public_law": "2-5",
+      "title": "Public Law 2-5 | Judicial Efficiency Act (Keywords: Maximum, Minimum, Sentence, Sentencing)",
+      "chronology_conclusion": "The chronology and later repeal history make this a repealed law that should remain history only.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t18",
+      "exact_enacted_text_or_amendment_command": "Retain only a concise historical note for PL 2-5; do not restore the superseded sentencing ceilings.",
+      "source_evidence": [
+        "codification/laws/laws/PL-002-005/law.txt is the original sentencing-reform text, but later law PL 19-149 replaced it.",
+        "audit/primary/batch-10-01.json marks PL 2-5 as fully repealed by PL 19-149.",
+        "usc/usc18.xml carries rp-pl002005-codification, while origin/main lacks that same branch note."
+      ],
+      "current_xml_comparison": "The current branch keeps a repeal-history note in usc/usc18.xml with a long dump and archive link; origin/main does not show the same branch note.",
+      "final_recommended_action": "Keep only a concise repeal-history note and remove the dump and archive link.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-006",
+      "public_law": "2-6",
+      "title": "Public Law 2-6 | Shelby-Kabob Act of 2021",
+      "chronology_conclusion": "The chronology and later repeal history make this a repealed law that should remain history only.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t18",
+      "exact_enacted_text_or_amendment_command": "Retain only a concise repeal-history note for PL 2-6 covering the taser and abuse-of-power offenses as superseded by later replacement law.",
+      "source_evidence": [
+        "codification/laws/laws/PL-002-006/law.txt contains the original Title 18 offense instructions and codification directions.",
+        "audit/primary/batch-10-01.json marks PL 2-6 as fully repealed by PL 14-89.",
+        "usc/usc18.xml carries rp-pl002006-codification, while origin/main lacks that same branch note."
+      ],
+      "current_xml_comparison": "The current branch keeps a repeal-history note in usc/usc18.xml with a long dump and archive link; origin/main does not show the same branch note.",
+      "final_recommended_action": "Keep only a concise repeal-history note and remove the dump and archive link.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-007",
+      "public_law": "2-7",
+      "title": "Public Law 2-7 | Court of Appeals Temporary Suspension Act of 2021",
+      "chronology_conclusion": "The chronology shows full repeal by later law PL 3-24, so the act is history only.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t28",
+      "exact_enacted_text_or_amendment_command": "Retain only a concise historical note for PL 2-7 with a repeal-by cross-reference to PL 3-24.",
+      "source_evidence": [
+        "codification/laws/laws/PL-002-007/law.txt provides the temporary suspension text and repeal history.",
+        "audit/primary/batch-10-01.json marks the act as fully repealed by PL 3-24.",
+        "usc/usc28.xml carries rp-pl002007-codification, while origin/main lacks that same branch note."
+      ],
+      "current_xml_comparison": "The current branch keeps a repeal-history note in usc/usc28.xml with a long dump and archive link; origin/main does not show the same branch note.",
+      "final_recommended_action": "Keep only a concise historical note, add the repeal-by cross-reference, and remove the dump and archive link.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-008",
+      "public_law": "2-8",
+      "title": "Public Law 2-8 | National Security Act of 2021",
+      "chronology_conclusion": "The chronology leaves this act repealed in full and replaced by later national-security legislation.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t50",
+      "exact_enacted_text_or_amendment_command": "Retain only a concise historical note stating enactment and repeal in favor of later national-security legislation.",
+      "source_evidence": [
+        "codification/laws/laws/PL-002-008/law.txt contains the National Security Council framework and codification directions.",
+        "audit/primary/batch-10-01.json marks the act as fully repealed and replaced in revised form.",
+        "usc/usc50.xml and origin/main both carry a Title 50 history note, so the live issue is cleanup rather than a new insertion."
+      ],
+      "current_xml_comparison": "The current branch and origin/main both carry the Title 50 history note for PL 2-8; neither source supports adding new positive-law text here.",
+      "final_recommended_action": "Keep the history-note treatment, trim the quoted-content dump, and preserve the repeal/replacement cross-reference.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-009",
+      "public_law": "2-9",
+      "title": "Public Law 2-9 | District of Columbia City Charter",
+      "chronology_conclusion": "The chronology leaves the charter current as a local-law note, not as positive-law Code text.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t40",
+      "exact_enacted_text_or_amendment_command": "Keep the charter as a concise local-law statutory note and remove the archive-link clutter.",
+      "source_evidence": [
+        "codification/laws/laws/PL-002-009/law.txt is the local City Charter source text.",
+        "audit/primary/batch-10-01.json treats the charter as a live local-law note.",
+        "usc/usc40.xml carries rp-pl002009-codification, while origin/main lacks the same branch note."
+      ],
+      "current_xml_comparison": "The current branch adds rp-pl002009-codification to usc/usc40.xml; origin/main lacks the same branch note.",
+      "final_recommended_action": "Keep the charter as a concise local-law note and remove the Trello link.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-002-010",
+      "public_law": "2-10",
+      "title": "Public Law 2-10 | Amendment to the District of Columbia City Charter",
+      "chronology_conclusion": "The chronology leaves this local amendment current, and the charter text must be updated rather than only noted.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "amend-existing-text",
+      "exact_target": "/us/usc/t40",
+      "exact_enacted_text_or_amendment_command": "Amend the charter's mayoral term to 90 days and council term to 45 days, and apply the stated partial repeal and amendment to Article III 3.02(a) and Article II 2.01(A(a)(i)).",
+      "source_evidence": [
+        "codification/laws/laws/PL-002-010/law.txt sets the 90-day and 45-day charter changes.",
+        "audit/primary/batch-10-01.json classifies the act as a live local charter amendment that needs operative text handling.",
+        "usc/usc40.xml carries rp-pl002010-codification, while origin/main lacks the same branch note."
+      ],
+      "current_xml_comparison": "The current branch shows rp-pl002010-codification in usc/usc40.xml; origin/main lacks the same branch note, and the charter amendment is still note-only.",
+      "final_recommended_action": "Carry the term changes into the charter text or proper local-law apparatus and remove the archive link.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-002-011",
+      "public_law": "2-11",
+      "title": "Public Law 2-11 | Criminal Statute of Limitations Act",
+      "chronology_conclusion": "The chronology and repeal history show this statute is repealed, so it should stay as history only.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t18",
+      "exact_enacted_text_or_amendment_command": "Keep only a historical note for the statute-of-limitations rules and preserve the repeal posture rather than reviving the 75-day or 150-day scheme.",
+      "source_evidence": [
+        "codification/laws/laws/PL-002-011/law.txt sets the 75-day general rule, the 150-day exceptions, and the accrual rule.",
+        "audit/primary/batch-10-02.json classifies the act as repealed / NONOPERATIVE_OR_REPEALED with high confidence.",
+        "usc/usc18.xml carries rp-pl002011-codification, while origin/main lacks the same branch note."
+      ],
+      "current_xml_comparison": "The current branch keeps a note-only placeholder in usc/usc18.xml; origin/main does not provide a better resolved section anchor either.",
+      "final_recommended_action": "Keep only a historical note and ensure the repeal marker remains intact.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-012",
+      "public_law": "2-12",
+      "title": "Public Law 2-12 | Fee Prohibition Act",
+      "chronology_conclusion": "The act is no longer operative because a later law expressly repeals it in full; only repeal history survives.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t28",
+      "exact_enacted_text_or_amendment_command": "Keep only a historical note for the court-fee prohibition and record the later repeal by PL 4-30 section 7.",
+      "source_evidence": [
+        "audit/primary/batch-10-02.json classifies PL-002-012 as fully-repealed and ties the repeal to PL 4-30 section 7.",
+        "usc/usc50.xml:1583 contains rp-pl002012-codification with a repealed or superseded history note.",
+        "origin/main has no matching PL-002-012 note in the live XML."
+      ],
+      "current_xml_comparison": "The branch preserves a history note in usc/usc50.xml, but the proper posture is repeal history only at the Title 28 anchor; origin/main does not carry the note.",
+      "final_recommended_action": "Leave PL-002-012 as repeal history only and ensure the repeal marker remains intact.",
+      "confidence": "high"
+    }
+  ]
+}

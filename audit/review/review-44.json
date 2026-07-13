@@ -1,0 +1,412 @@
+{
+  "reviewer": "law-auditor-R",
+  "group_index": 144,
+  "law_count": 19,
+  "source_manifest": "audit/manifests/manifest-44.json",
+  "output_path": "audit/review/review-44.json",
+  "reviewed_against": [
+    "audit/manifests/manifest-44.json",
+    "audit/primary/batch-09-01.json",
+    "audit/primary/batch-09-02.json",
+    "audit/primary/batch-09-03.json",
+    "audit/chronology-report.json",
+    "usc/usc05.xml",
+    "usc/usc18.xml",
+    "usc/usc22.xml",
+    "usc/usc40.xml",
+    "usc/usc50.xml",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-034-251",
+      "public_law": "34-251",
+      "title": "Public Law 34-251 | In-Game Sentencing Guidelines Bill",
+      "chronology_conclusion": "The chronology confirms this act was superseded before codification, so it remains history-only.",
+      "final_legal_status": "superseded",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": null,
+      "source_evidence": [
+        "audit/primary/batch-09-01.json classifies the act as superseded before codification.",
+        "audit/chronology-report.json preserves the supersession chronology.",
+        "No live Code insertion is warranted in the current branch or origin/main."
+      ],
+      "current_xml_comparison": "Current branch already matches the historical-note-only posture; origin/main comparison does not require a live amendment.",
+      "final_recommended_action": "Leave as historical note only.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-035-252",
+      "public_law": "35-252",
+      "title": "Public Law 35-252 | Magistrate Appointment Act of 2025",
+      "chronology_conclusion": "The enactment is operative but routes through a statutory note rather than a direct positive-law rewrite.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t28/s362",
+      "exact_enacted_text_or_amendment_command": "Add the statutory note for the Pub. L. 35-252 amendment to PL 26-190 sec. 106(c)(i); no direct Code text rewrite is determinable from the accessible source.",
+      "source_evidence": [
+        "audit/primary/batch-09-01.json maps SEC. 3 to a Title 28 statutory note.",
+        "audit/chronology-report.json treats the law as current and note-based.",
+        "Current branch and origin/main do not show a matching live note."
+      ],
+      "current_xml_comparison": "No matching note was found in usc/usc28.xml or origin/main.",
+      "final_recommended_action": "Insert the statutory note at 28 U.S.C. 362.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-035-254",
+      "public_law": "35-254",
+      "title": "Public Law 35-254 | An Act to repeal Public Law 28-205",
+      "chronology_conclusion": "This is an operative repealer; its own codification duty is to mark the repeal history, not to add substantive Code text.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "repeal-marking",
+      "exact_target": "Public Law 28-205",
+      "exact_enacted_text_or_amendment_command": "Repeal Public Law 28-205 in its entirety.",
+      "source_evidence": [
+        "audit/primary/batch-09-01.json identifies SEC. 3 as a repeal of Public Law 28-205.",
+        "audit/chronology-report.json treats the act as repeal history rather than new operative text.",
+        "The current branch should not carry a positive-law rewrite for this act."
+      ],
+      "current_xml_comparison": "The branch treatment should be repeal history only; origin/main likewise does not justify a substantive Code insertion.",
+      "final_recommended_action": "Record the repeal as history only and ensure any linked repeal marker is correct.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-035-256",
+      "public_law": "35-256",
+      "title": "Public Law 35-256 | Workers First Act of 2025",
+      "chronology_conclusion": "The enactment is current but the accessible source does not yield a clean positive-law rewrite target, so the safe treatment is note-based.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t2/s4313",
+      "exact_enacted_text_or_amendment_command": "Treat the SEC. 3 tax-rate change as a statutory note; no exact Code text replacement is determinable from the available source packet.",
+      "source_evidence": [
+        "audit/primary/batch-09-01.json classifies the act as a statutory note at 2 U.S.C. 4313.",
+        "audit/chronology-report.json keeps the act in the current sequence.",
+        "The branch does not expose a readable positive-law rewrite for this item."
+      ],
+      "current_xml_comparison": "No matching note was found in the current branch XML search or origin/main comparison.",
+      "final_recommended_action": "Add the statutory note at 2 U.S.C. 4313 when the source is available.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-036-256",
+      "public_law": "36-256",
+      "title": "Public Law 36-256 | Commerce Dispersal Act",
+      "chronology_conclusion": "The chronology shows a permanent transfer-and-dissolution law whose codification belongs in a statutory note, not a freestanding title rewrite.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "transfer-note",
+      "exact_target": "/us/usc/t2/s142e",
+      "exact_enacted_text_or_amendment_command": "Transfer Commerce and Labor functions to State or Justice as specified in secs. 3-4, and record the disposition as a statutory note.",
+      "source_evidence": [
+        "audit/primary/batch-09-01.json treats SECS. 3-4 as a transfer/disposition law at 2 U.S.C. 142e.",
+        "audit/chronology-report.json places the law among current permanent enactments.",
+        "The current branch does not yet provide a matching live note."
+      ],
+      "current_xml_comparison": "No matching note was found in usc/usc02.xml or origin/main.",
+      "final_recommended_action": "Insert the transfer note at 2 U.S.C. 142e.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-036-257",
+      "public_law": "36-257",
+      "title": "Public Law 36-257 | Maritime Operations & Policy Overhaul Act",
+      "chronology_conclusion": "This act is a multi-section amendment package: some sections require direct text changes while later sections are operational note material.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "mixed-amendment-and-note",
+      "exact_target": [
+        "/us/usc/t46/s101",
+        "Public Law 4-32",
+        "Public Law 74-430",
+        "Public Law 97-123"
+      ],
+      "exact_enacted_text_or_amendment_command": [
+        "Amend Streamlining and Protecting American Security Act sec. 6(m) as directed in SEC. 4.",
+        "Amend Military Officer Commissioning Reform Act sec. 9(g) as directed in SEC. 5.",
+        "Amend Military Justice Reform Act of 2024 sec. 4(a) as directed in SEC. 6.",
+        "Treat SECS. 7-12 as operational transfer/note material."
+      ],
+      "source_evidence": [
+        "audit/primary/batch-09-01.json lists direct amendments in SECS. 4-6 and uncodified directives in SECS. 7-12.",
+        "audit/chronology-report.json keeps the act current and permanent.",
+        "Current branch coverage remains partial."
+      ],
+      "current_xml_comparison": "The current branch does not present a fully settled codification path, and origin/main does not resolve the missing amendments.",
+      "final_recommended_action": "Apply the three direct amendments and carry the rest as note/transfer material.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-036-258",
+      "public_law": "36-258",
+      "title": "Public Law 36-258 | National Root Beer Day Act",
+      "chronology_conclusion": "The chronology confirms the act is already incorporated at 5 U.S.C. 6103(a) with the new holiday insertion.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "already-incorporated",
+      "exact_target": "/us/usc/t5/s6103/a",
+      "exact_enacted_text_or_amendment_command": "Insert \"National Root Beer Day, June 17.\" after the Memorial Day item in 5 U.S.C. 6103(a).",
+      "source_evidence": [
+        "codification/plans/applied/PL-036-258.json gives the exact replacement text and statutory note.",
+        "audit/primary/batch-09-01.json treats the amendment as already incorporated.",
+        "usc/usc05.xml contains the current-branch insertion."
+      ],
+      "current_xml_comparison": "The current branch carries the 5 U.S.C. 6103(a) insertion; origin/main does not.",
+      "final_recommended_action": "Leave the inserted holiday text in place and keep the statutory note.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-036-260",
+      "public_law": "36-260",
+      "title": "Public Law 36-260 | Fixing the District of Columbia Act of 2025",
+      "chronology_conclusion": "The law is a compound District transition measure with repeals, transfers, and follow-on amendments that belong in note/marking form.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "mixed-repeal-transfer-note",
+      "exact_target": [
+        "Public Laws 16-120, 25-181, 29-213, 29-216, 30-223, 32-231",
+        "/us/usc/t40/s101/4",
+        "Public Law 22-156 sec. 6(1)(1)",
+        "Public Law 22-156 sec. 6(2)(1)",
+        "Public Law 22-156 sec. 6(2)(2)"
+      ],
+      "exact_enacted_text_or_amendment_command": [
+        "Repeal Public Laws 16-120, 25-181, 29-213, 29-216, 30-223, and 32-231.",
+        "Transfer the municipal-government and public-safety functions as directed in the act.",
+        "Amend Public Law 22-156 sections 6(1)(1), 6(2)(1), and 6(2)(2)."
+      ],
+      "source_evidence": [
+        "audit/primary/batch-09-01.json identifies six repeals plus multiple transfer and amendment directives.",
+        "audit/chronology-report.json places the law in the current permanent sequence.",
+        "Current branch coverage remains incomplete."
+      ],
+      "current_xml_comparison": "No complete live codification path was found in the current branch or origin/main for the District transition package.",
+      "final_recommended_action": "Carry the repeals and transfers as note material, and apply the referenced PL 22-156 corrections.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-037-261",
+      "public_law": "37-261",
+      "title": "Public Law 37-261 | Federal Criminal Code Act of 2025",
+      "chronology_conclusion": "The act is current, but the accessible source only supports a source-limited note treatment rather than a fully reconstructed code package.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "source-limited-note",
+      "exact_target": "/us/usc/t18/s1",
+      "exact_enacted_text_or_amendment_command": "Use the attached Federal Criminal Code text as the operative source, but preserve only source-limited history in the review because the attachment text is not fully recoverable here.",
+      "source_evidence": [
+        "audit/primary/batch-09-01.json treats SEC. 4 as adopting the attached Federal Criminal Code.",
+        "audit/chronology-report.json confirms the act remains current.",
+        "The attachment text is not fully readable from the accessible source set."
+      ],
+      "current_xml_comparison": "The branch is only partially settled and origin/main does not supply a better recoverable text base.",
+      "final_recommended_action": "Keep the law source-limited until the attachment text can be reconstructed.",
+      "confidence": "low"
+    },
+    {
+      "law_id": "PL-038-262",
+      "public_law": "38-262",
+      "title": "Public Law 38-262 | Fund the Government Act of 2026",
+      "chronology_conclusion": "This is a budget/appropriations act with one repeal component; it should not be treated as ordinary positive-law text.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "appropriation-note",
+      "exact_target": "/us/usc/t2/s142e",
+      "exact_enacted_text_or_amendment_command": "Treat the appropriations and schedule language as note material, and carry the SEC. VI repeal of PL 32-230 sec. 6 as the codified change.",
+      "source_evidence": [
+        "audit/primary/batch-09-02.json flags SECS. III-VI as note/appropriation material with a repeal component.",
+        "audit/chronology-report.json keeps the enactment in the current sequence.",
+        "Current branch XML contains only the note-style treatment."
+      ],
+      "current_xml_comparison": "The current branch contains the note dump, but no clean permanent-code rewrite; origin/main does not resolve it either.",
+      "final_recommended_action": "Keep this out of positive-law text and retain only the note/repeal treatment.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-038-263",
+      "public_law": "38-263",
+      "title": "Public Law 38-263 | National Security Act of 2026",
+      "chronology_conclusion": "The chronology indicates the act is current, but the review evidence does not support a live codification insert in the branch snapshot.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "already-incorporated",
+      "exact_target": "/us/usc/t50/s3021",
+      "exact_enacted_text_or_amendment_command": "No standalone amendment command is justified from the accessible review set; preserve only the already-incorporated classification if supported elsewhere.",
+      "source_evidence": [
+        "audit/primary/batch-09-03.json places the law at 50 U.S.C. 3021.",
+        "audit/chronology-report.json keeps it current.",
+        "The current branch XML search did not find a matching note or insertion, and origin/main likewise does not surface one."
+      ],
+      "current_xml_comparison": "No matching entry was found in usc/usc50.xml or origin/main for the batch-reported target.",
+      "final_recommended_action": "Do not fabricate a new insert; keep the source-limited classification until the target text is recovered.",
+      "confidence": "low"
+    },
+    {
+      "law_id": "PL-038-264",
+      "public_law": "38-264",
+      "title": "Public Law 38-264 | Organized Crime and Racketeering Modernization Act of 2026",
+      "chronology_conclusion": "The chronology shows the racketeering framework is already in place; the remaining issue is note cleanup, not a new Code structure.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "already-incorporated",
+      "exact_target": [
+        "/us/usc/t18/s1961",
+        "/us/usc/t18/s1962",
+        "/us/usc/t18/s1963",
+        "/us/usc/t18/s1964"
+      ],
+      "exact_enacted_text_or_amendment_command": "Add the statutory notes at 18 U.S.C. 1961-1964 describing the CRACK Act repeal and replacement scheme; do not rewrite the statutory text itself.",
+      "source_evidence": [
+        "codification/plans/applied/PL-038-264.json identifies the four note targets.",
+        "audit/primary/batch-09-03.json marks the law as already incorporated.",
+        "usc/usc18.xml contains the branch note but still carries the quoted-content dump."
+      ],
+      "current_xml_comparison": "The branch has the racketeering history note; origin/main lacks the branch-only note and the current entry still needs cleanup.",
+      "final_recommended_action": "Keep the already-incorporated note structure and trim the quoted-content dump.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-038-265",
+      "public_law": "38-265",
+      "title": "Public Law 38-265 | Employment Clarity and Federal Workforce Modernization Act of 2026",
+      "chronology_conclusion": "The act is current, but the review set does not supply a recoverable positive-law insert for the branch snapshot.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t50/s3003",
+      "exact_enacted_text_or_amendment_command": "Treat the employment modernization package as a statutory note at 50 U.S.C. 3003; no precise code replacement text is available here.",
+      "source_evidence": [
+        "audit/primary/batch-09-03.json assigns the law to 50 U.S.C. 3003.",
+        "audit/chronology-report.json keeps the enactment current.",
+        "No matching live note was found in the current branch XML or origin/main."
+      ],
+      "current_xml_comparison": "No matching note was found in usc/usc50.xml or origin/main.",
+      "final_recommended_action": "Insert the note when the exact source packet is available.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-038-266",
+      "public_law": "38-266",
+      "title": "Public Law 38-266 | Speedy Trial Act of 2026",
+      "chronology_conclusion": "The chronology shows the act is already incorporated in the code structure, but the branch copy still needs cleanup around the historical note.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "already-incorporated",
+      "exact_target": [
+        "/us/usc/t18/s3161",
+        "/us/usc/t18/s3162",
+        "/us/usc/t18/s3163",
+        "/us/usc/t18/s3164",
+        "/us/usc/t18/s3165",
+        "/us/usc/t18/s3166",
+        "/us/usc/t18/s3167",
+        "/us/usc/t18/s3168",
+        "/us/usc/t18/s3169",
+        "/us/usc/t18/s3170",
+        "/us/usc/t18/s3171",
+        "/us/usc/t18/s3172",
+        "/us/usc/t18/s3173",
+        "/us/usc/t18/s3174"
+      ],
+      "exact_enacted_text_or_amendment_command": "Replace the active sections 3161-3163 with the current-speedy-trial text and retain 3164-3174 as repealed placeholders.",
+      "source_evidence": [
+        "codification/plans/applied/PL-038-266.json supplies the replacement and repealed-placeholder structure.",
+        "audit/primary/batch-09-03.json treats the law as already incorporated.",
+        "usc/usc18.xml includes the branch note but still needs presentation cleanup."
+      ],
+      "current_xml_comparison": "The branch has the speed-trial note and structure; origin/main does not carry the same cleanup state.",
+      "final_recommended_action": "Keep the already-incorporated text and normalize the repealed placeholders and note presentation.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-039-267",
+      "public_law": "39-267",
+      "title": "Public Law 39-267 | Reform Sentencing Act",
+      "chronology_conclusion": "The chronology places this as a current repealer-plus-rewrite law, but the branch snapshot does not contain the needed live codification.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t18/s713",
+      "exact_enacted_text_or_amendment_command": "Record the repeal of PL 34-251 and the sentencing-rule rewrite as a statutory note at 18 U.S.C. 713.",
+      "source_evidence": [
+        "audit/primary/batch-09-03.json maps the act to 18 U.S.C. 713.",
+        "audit/chronology-report.json keeps the law in the current period.",
+        "No matching branch insertion was found in usc/usc18.xml or origin/main."
+      ],
+      "current_xml_comparison": "No matching note was found in usc/usc18.xml or origin/main.",
+      "final_recommended_action": "Insert the sentencing note at 18 U.S.C. 713.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-040-268",
+      "public_law": "40-268",
+      "title": "Public Law 40-268 | Big Beautiful Budget Act",
+      "chronology_conclusion": "The chronology identifies this as a budget act with temporary appropriations, so it belongs outside permanent positive-law text.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "appropriation-note",
+      "exact_target": "/us/usc/t2/s142e",
+      "exact_enacted_text_or_amendment_command": "Keep the temporary appropriations and oversight language as note material rather than codified positive law.",
+      "source_evidence": [
+        "audit/primary/batch-09-03.json treats the act as appropriations-based note material.",
+        "audit/chronology-report.json keeps the act current.",
+        "The current branch and origin/main do not show a matching permanent-code insert."
+      ],
+      "current_xml_comparison": "No matching note was found in usc/usc02.xml or origin/main.",
+      "final_recommended_action": "Exclude the appropriations language from permanent text and keep only the note treatment.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-041-269",
+      "public_law": "41-269",
+      "title": "Public Law 41-269 | Federal Enhancement Against Foreign Intrusion Amendments Act of 2026",
+      "chronology_conclusion": "The chronology shows direct amendments to Public Law 24-173, but the branch snapshot does not yet carry the live codification.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t22/s618",
+      "exact_enacted_text_or_amendment_command": "Replace Section III of Public Law 24-173 and insert the new Section V after Section IV, then carry the result as the statutory-note treatment at 22 U.S.C. 618.",
+      "source_evidence": [
+        "audit/primary/batch-09-03.json identifies the Section III replacement and Section V insertion.",
+        "audit/chronology-report.json keeps the act current.",
+        "No matching live note or rewrite was found in the current branch XML or origin/main."
+      ],
+      "current_xml_comparison": "No matching note was found in usc/usc22.xml or origin/main.",
+      "final_recommended_action": "Add the statutory note at 22 U.S.C. 618 and preserve the direct amendment history.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-041-270",
+      "public_law": "41-270",
+      "title": "Public Law 41-270 | Washington Diplomacy Complex Corrections Act of 2026",
+      "chronology_conclusion": "The chronology shows a corrections act with direct amendments to an existing framework, and the branch currently records only a bulky note version.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t18/s111",
+      "exact_enacted_text_or_amendment_command": "Amend Public Law 41-270 secs. 3-6 as directed for the Washington Diplomacy Complex Act definitions, jurisdiction, access, and redesignation fixes.",
+      "source_evidence": [
+        "audit/primary/batch-09-03.json classifies the law as a statutory-note item at 18 U.S.C. 111.",
+        "usc/usc40.xml contains rp-pl041270-codification in the current branch.",
+        "origin/main does not show the same branch-only note."
+      ],
+      "current_xml_comparison": "The current branch has a note dump in usc/usc40.xml; origin/main lacks it.",
+      "final_recommended_action": "Replace the dump with the structured corrections note and keep the direct amendment history explicit.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-041-271",
+      "public_law": "41-271",
+      "title": "Public Law 41-271 | The Great Change Act of 2026",
+      "chronology_conclusion": "The chronology confirms this is a current integrating act; the branch has the 18 U.S.C. 205 rewrites, but the note still carries the full-text dump.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "already-incorporated",
+      "exact_target": [
+        "/us/usc/t18/s205/a",
+        "/us/usc/t18/s205/j",
+        "/us/usc/t18/s205"
+      ],
+      "exact_enacted_text_or_amendment_command": [
+        "Replace 18 U.S.C. 205(a) with the amended subsection text from the applied plan.",
+        "Replace 18 U.S.C. 205(j) with the amended subsection text from the applied plan.",
+        "Add the statutory note beginning \"Pub. L. 41-271, title IV, secs. 403-406, provided: Sec. 403. Definitions...\""
+      ],
+      "source_evidence": [
+        "codification/plans/applied/PL-041-271.json supplies the exact 205(a) and 205(j) replacements and the statutory note.",
+        "usc/usc18.xml shows the branch amendments at 18 U.S.C. 205.",
+        "origin/main does not contain the same branch-only note/amendment state."
+      ],
+      "current_xml_comparison": "The current branch has both the 18 U.S.C. 205 subsection rewrites and the note dump; origin/main lacks them.",
+      "final_recommended_action": "Keep the subsection rewrites and trim the note to the compact statutory-summary form.",
+      "confidence": "high"
+    }
+  ]
+}

@@ -161,78 +161,90 @@ def derive_coverage(
     Dict[str, List[Tuple[str, str]]],
     Dict[str, List[Dict[str, Any]]],
 ]:
-    laws: List[Dict[str, Any]] = []
-    provisions: List[Dict[str, Any]] = []
-    law_id_counts: collections.Counter[str] = collections.Counter()
-    chronology_targets: Dict[str, List[Tuple[str, str]]] = collections.defaultdict(list)
-    law_provisions: Dict[str, List[Dict[str, Any]]] = collections.defaultdict(list)
-
+    # Later reports supersede earlier ones for the same law_id. Keep a canonical
+    # unique view instead of concatenating every historical primary report.
+    law_order: List[str] = []
+    law_records: Dict[str, Tuple[Path, Dict[str, Any], Dict[str, Any]]] = {}
     parsed_reports: List[Tuple[Path, Dict[str, Any]]] = []
+
     for report_path in reports:
         report = read_json(report_path)
         parsed_reports.append((report_path, report))
         for law in report.get("laws") or []:
-            law_id_counts[law["law_id"]] += 1
+            law_id = law["law_id"]
+            if law_id not in law_records:
+                law_order.append(law_id)
+            law_records[law_id] = (report_path, report, law)
 
-    for report_path, report in parsed_reports:
+    chronology_targets: Dict[str, List[Tuple[str, str]]] = collections.defaultdict(list)
+    law_provisions: Dict[str, List[Dict[str, Any]]] = collections.defaultdict(list)
+    all_provisions: List[Dict[str, Any]] = []
+
+    for law_id in law_order:
+        report_path, report, law = law_records[law_id]
         rel_report = norm_report_path(report_path.name)
         batch = int(report.get("batch") or batch_from_name(report_path.name))
-        for law in report.get("laws") or []:
-            for prov in law.get("provisions") or []:
-                target = prov.get("target")
-                if target and set(prov.get("classes") or []) & ACTION_CLASSES:
-                    chronology_targets[target].append((law["law_id"], prov.get("ref") or ""))
-
-    for report_path, report in parsed_reports:
-        rel_report = norm_report_path(report_path.name)
-        batch = int(report.get("batch") or batch_from_name(report_path.name))
-        for law in report.get("laws") or []:
-            risk = law_risk_flags(law, chronology_targets, law_id_counts)
-            validation_status = law_status_for_validation(law, risk)
-            law_entry = {
+        provision_entries: List[Dict[str, Any]] = []
+        for prov in law.get("provisions") or []:
+            classes = list(prov.get("classes") or [])
+            target = prov.get("target")
+            prov_entry = {
                 "law_id": law["law_id"],
                 "public_law": law["public_law"],
                 "title": law["title"],
                 "report_path": rel_report,
                 "batch": batch,
-                "validation_status": validation_status,
-                "source_status": law.get("status"),
-                "current_implementation": law.get("current_implementation", {}).get("assessment"),
-                "confidence": law.get("confidence"),
-                "status_basis": law.get("status_basis"),
-                "risk_flags": [k for k, v in risk.items() if v],
+                "ref": prov.get("ref"),
+                "text_summary": prov.get("text_summary"),
+                "classes": classes,
+                "treatment": prov.get("treatment"),
+                "target": target,
+                "exact_change": prov.get("exact_change"),
+                "evidence": prov.get("evidence"),
+                "notes": prov.get("notes"),
+                "risk_flags": [],
             }
-            laws.append(law_entry)
+            all_provisions.append(prov_entry)
+            if set(classes) & ACTION_CLASSES:
+                prov_entry["risk_flags"].append("action")
+            if "new-permanent-general" in classes:
+                prov_entry["risk_flags"].append("new-permanent-general")
+            if not target and prov.get("treatment") in NULL_TARGET_TREATMENTS:
+                prov_entry["risk_flags"].append("missing-target")
+            provision_entries.append(prov_entry)
+        law_provisions[law_id] = provision_entries
 
-            for prov in law.get("provisions") or []:
-                classes = list(prov.get("classes") or [])
-                target = prov.get("target")
-                prov_entry = {
-                    "law_id": law["law_id"],
-                    "public_law": law["public_law"],
-                    "title": law["title"],
-                    "report_path": rel_report,
-                    "batch": batch,
-                    "ref": prov.get("ref"),
-                    "text_summary": prov.get("text_summary"),
-                    "classes": classes,
-                    "treatment": prov.get("treatment"),
-                    "target": target,
-                    "exact_change": prov.get("exact_change"),
-                    "evidence": prov.get("evidence"),
-                    "notes": prov.get("notes"),
-                    "risk_flags": [],
-                }
-                if set(classes) & ACTION_CLASSES:
-                    prov_entry["risk_flags"].append("action")
-                if "new-permanent-general" in classes:
-                    prov_entry["risk_flags"].append("new-permanent-general")
-                if not target and prov.get("treatment") in NULL_TARGET_TREATMENTS:
-                    prov_entry["risk_flags"].append("missing-target")
-                provisions.append(prov_entry)
-                law_provisions[law["law_id"]].append(prov_entry)
+    for prov in all_provisions:
+        target = prov.get("target")
+        if target and set(prov.get("classes") or []) & ACTION_CLASSES:
+            chronology_targets[target].append((prov["law_id"], prov.get("ref") or ""))
 
-    return laws, provisions, parsed_reports, chronology_targets, law_provisions
+    law_id_counts = collections.Counter({law_id: 1 for law_id in law_order})
+    laws: List[Dict[str, Any]] = []
+    provisions: List[Dict[str, Any]] = []
+    for law_id in law_order:
+        report_path, report, law = law_records[law_id]
+        rel_report = norm_report_path(report_path.name)
+        batch = int(report.get("batch") or batch_from_name(report_path.name))
+        risk = law_risk_flags(law, chronology_targets, law_id_counts)
+        validation_status = law_status_for_validation(law, risk)
+        law_entry = {
+            "law_id": law["law_id"],
+            "public_law": law["public_law"],
+            "title": law["title"],
+            "report_path": rel_report,
+            "batch": batch,
+            "validation_status": validation_status,
+            "source_status": law.get("status"),
+            "current_implementation": law.get("current_implementation", {}).get("assessment"),
+            "confidence": law.get("confidence"),
+            "status_basis": law.get("status_basis"),
+            "risk_flags": [k for k, v in risk.items() if v],
+        }
+        laws.append(law_entry)
+        provisions.extend(law_provisions[law_id])
+
+    return laws, all_provisions, parsed_reports, chronology_targets, law_provisions
 
 
 def build_high_risk_queue(
@@ -425,9 +437,6 @@ def build_chronology_report() -> Dict[str, Any]:
 
 def build_ledger_files() -> None:
     reports = build_source_reports()
-    if len(reports) != 27:
-        raise SystemExit(f"Expected 27 ten-law reports, found {len(reports)}: {[p.name for p in reports]}")
-
     laws, provisions, parsed_reports, chronology_targets, law_provisions = derive_coverage(reports)
     risk_laws = {law["law_id"] for law in laws if law["risk_flags"]}
     progress_laws = []

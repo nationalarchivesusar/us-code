@@ -1,0 +1,961 @@
+{
+  "batch": 36,
+  "reviewer": "law-auditor-J",
+  "group_index": 136,
+  "law_count": 19,
+  "source_manifest": "audit/manifests/manifest-36.json",
+  "reviewed_against": [
+    "audit/manifests/manifest-36.json",
+    "audit/primary/batch-06-01.json",
+    "audit/primary/batch-06-03.json",
+    "audit/primary/batch-07-01.json",
+    "audit/chronology-report.json",
+    "usc/usc02.xml",
+    "usc/usc05.xml",
+    "usc/usc08.xml",
+    "usc/usc22.xml",
+    "usc/usc28.xml",
+    "usc/usc31.xml",
+    "usc/usc42.xml",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-024-177",
+      "public_law": "24-177",
+      "title": "Public Law 24-177 | SS Jurisdiction Act",
+      "status": "unresolved",
+      "decision": "source-unavailable-historical-note",
+      "status_basis": "The source is unrecoverable and the canonical record treats the enactment as repealed, so only history-only handling is supportable.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Statutory text unavailable.",
+          "classes": [
+            "non-code"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-024-177.md classifies the act as NONOPERATIVE_OR_REPEALED and reports no readable source text.",
+          "notes": "Retain only as source-limited history."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t1/s1",
+        "detail": "No recoverable source text exists, so no substantive Code placement can be verified."
+      },
+      "source_evidence": [
+        "audit/primary/batch-06-03.json marks PL-024-177 unresolved because the source is deleted or not found.",
+        "codification/mass_migration/latest/reports/laws/PL-024-177.md reports zero recovered source characters and no express Code citation.",
+        "The chronology report does not supply any later codification target for this act."
+      ],
+      "recommended_actions": [
+        "Keep only a concise historical note.",
+        "Do not invent operative text or a code anchor.",
+        "Treat the record as source unavailable."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-024-178",
+      "public_law": "24-178",
+      "title": "Public Law 24-178 | Equality in Employment Act",
+      "status": "current",
+      "decision": "already-incorporated",
+      "status_basis": "The source is fully recovered and the act makes a determinable amendment to 42 U.S.C. 2000e-2(a). The branch already carries the substantive text, though the note handling is mis-anchored.",
+      "provisions": [
+        {
+          "ref": "SEC1-5",
+          "text_summary": "Introductory note material, findings, and effective-date language.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date",
+            "findings-or-sense"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The primary report classifies these sections as note material rather than positive-law text.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC6(a)(1)-(2)",
+          "text_summary": "Amends 42 U.S.C. 2000e-2(a) to add gender identity and sexual orientation.",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t42/s2000e-2",
+          "exact_change": "Add gender identity and sexual orientation to the protected characteristics in subsection (a).",
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-024-178.md identifies 42 U.S.C. 2000e-2 as the express code citation and reports the public law as already incorporated.",
+          "notes": "The substantive Title 42 amendment is the determinable Code change."
+        },
+        {
+          "ref": "SEC6(b)-7",
+          "text_summary": "EEOC and Labor implementation directives.",
+          "classes": [
+            "uncodified-admin-direction"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "These sections direct agency implementation rather than supplying a separate positive-law code target.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC8",
+          "text_summary": "Concluding sense statement.",
+          "classes": [
+            "findings-or-sense"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The source closes with a sense-style statement rather than another executable code amendment.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t29/s201",
+        "detail": "The Title 42 amendment is present, but the codification note is mis-anchored and carries full-text dump material that should be removed."
+      },
+      "source_evidence": [
+        "audit/primary/batch-06-03.json says the source is valid and already incorporated in generated code.",
+        "audit/chronology-report.json groups PL-024-178 with target /us/usc/t42/s2000e-2.",
+        "usc/usc42.xml is the relevant current code home for the amendment text."
+      ],
+      "recommended_actions": [
+        "Keep the Title 42 amendment as applied text.",
+        "Move or replace the note at the correct Title 42 anchor.",
+        "Remove the full-text dump and any stale note anchoring."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-179",
+      "public_law": "25-179",
+      "title": "Public Law 25-179 | Fiscal Year 21-2",
+      "status": "temporary-operative",
+      "decision": "statutory-note",
+      "status_basis": "The act is an appropriations measure with a temporary COLA suspension, so it belongs as a statutory note and not permanent positive-law text.",
+      "provisions": [
+        {
+          "ref": "SEC1-4",
+          "text_summary": "Short title, immediate-effect language, and appropriations/reporting provisions.",
+          "classes": [
+            "short-title",
+            "effective-date",
+            "appropriation",
+            "temporary"
+          ],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The primary report treats the appropriations body as temporary and not suitable for permanent Code text.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC5",
+          "text_summary": "Temporary COLA suspension under 2 U.S.C. 4501.",
+          "classes": [
+            "temporary",
+            "direct-amendment"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s4501",
+          "exact_change": "Suspend the 2 U.S.C. 4501 adjustment for fiscal year 21-2.",
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-025-179.md identifies 2 U.S.C. 4501 and recommends a statutory note there.",
+          "notes": "Temporary note only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s4501",
+        "detail": "The note at section 4501 is the correct treatment for this temporary enactment."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-025-179.md classifies the act as STATUTORY_NOTE and points to 2 U.S.C. 4501.",
+        "audit/chronology-report.json groups PL-025-179 and PL-031-229 at the same 2 U.S.C. 4501 target.",
+        "usc/usc02.xml contains the section 4501 home for the note."
+      ],
+      "recommended_actions": [
+        "Keep only a concise statutory note.",
+        "Do not promote appropriations text to permanent Code text.",
+        "Treat the COLA suspension as temporary history."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-180",
+      "public_law": "25-180",
+      "title": "Public Law 25-180 | Sanction Repealment Act",
+      "status": "repealed",
+      "decision": "nonoperative_or_repealed",
+      "status_basis": "The canonical record classifies the act as repealed, and no positive-law insertion is authorized.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Repeal-only history.",
+          "classes": [
+            "non-code"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-025-180.md classifies the enactment as NONOPERATIVE_OR_REPEALED.",
+          "notes": "History-only treatment is sufficient."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "The act should remain historical only; no readable code target is required from the source record."
+      },
+      "source_evidence": [
+        "The primary report states the canonical Trello record is repealed.",
+        "No express U.S. Code citation is detected in the law report.",
+        "The report authorizes no code operation."
+      ],
+      "recommended_actions": [
+        "Retain as a repeal history note only.",
+        "Do not invent a code amendment.",
+        "Keep the record non-operative."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-181",
+      "public_law": "25-181",
+      "title": "Public Law 25-181 | Federal District of Columbia Criminal Code",
+      "status": "repealed",
+      "decision": "nonoperative_or_repealed",
+      "status_basis": "The source is a D.C.-specific criminal code and the canonical record classifies it as repealed, so it should stay out of permanent positive-law U.S. Code text.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "District of Columbia criminal code history.",
+          "classes": [
+            "local-district",
+            "non-code"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-025-181.md treats the act as NONOPERATIVE_OR_REPEALED and not suitable for Code insertion.",
+          "notes": "Do not convert the D.C. code into federal positive law."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "The current handling should remain historical or note-only, not a positive-law insertion."
+      },
+      "source_evidence": [
+        "The law report identifies no express Code citation and no authorized Code operation.",
+        "The source is a local District of Columbia criminal code rather than federal positive law.",
+        "The canonical disposition is repealed."
+      ],
+      "recommended_actions": [
+        "Keep only a historical note.",
+        "Do not place the D.C. criminal code into positive-law text.",
+        "Preserve the repeal classification."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-182",
+      "public_law": "25-182",
+      "title": "Public Law 25-182 | Pentagon Expansion and National Territory Authorization Act",
+      "status": "unresolved",
+      "decision": "source-unavailable-historical-note",
+      "status_basis": "The attachment is deleted or otherwise unrecoverable, so no operative statutory text can be authenticated.",
+      "provisions": [
+        {
+          "ref": "SOURCE FILE",
+          "text_summary": "No recoverable operative text.",
+          "classes": [
+            "non-code",
+            "statutory-note-material"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-025-182.md says no readable authenticated enactment text could be recovered.",
+          "notes": "Source-limited disposition only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t10/s101/h",
+        "detail": "The current note cannot be verified because the source is unavailable."
+      },
+      "source_evidence": [
+        "The primary report says the source was deleted and no readable enactment text was recovered.",
+        "The manifest and law report both classify the act as source unavailable.",
+        "No express Code citation was detected."
+      ],
+      "recommended_actions": [
+        "Retain only a source-limited historical note.",
+        "Do not claim the act is codifiable.",
+        "Re-acquire the source before any codification decision."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-183",
+      "public_law": "25-183",
+      "title": "Public Law 25-183 | Commerce and Labor Advancement Act (CLAA)",
+      "status": "repealed",
+      "decision": "superseded-before-codification",
+      "status_basis": "The act was later repealed in full by PL-031-226, so no current code insertion should be made for it.",
+      "provisions": [
+        {
+          "ref": "SEC1-4",
+          "text_summary": "Short title, general provisions, and operative labor/commerce rules.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date",
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The law report treats the act as active when enacted, but later legislation supersedes it.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC5-6",
+          "text_summary": "Repeal package and Department of Commerce and Labor framework.",
+          "classes": [
+            "repeal",
+            "direct-amendment",
+            "substitution"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t5/s101",
+          "exact_change": "Record the repeal of PL-025-183 itself as later history rather than as present code text.",
+          "evidence": "The report quotes PL-031-226 as repealing PL-025-183 in its entirety.",
+          "notes": "The later CLARA act controls the current posture."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "The law should remain historical only because later PL-031-226 repeals it."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-025-183.md says no current Code insertion is made because PL-031-226 repeals this law.",
+        "The report contains multiple repeal references to PL-025-183 inside CLAA itself and the later repealer.",
+        "audit/chronology-report.json ties PL-031-226 to 5 U.S.C. 101."
+      ],
+      "recommended_actions": [
+        "Keep the act as historical only.",
+        "Do not create duplicate code text.",
+        "Let PL-031-226 govern the present Code state."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-184",
+      "public_law": "25-184",
+      "title": "Public Law 25-184 | Legal Advisors, Representatives, and Professionals Exam Regulations (LARPER)",
+      "status": "repealed",
+      "decision": "superseded-before-codification",
+      "status_basis": "The act was later repealed by PL-033-238, so it should remain historical rather than positive-law text.",
+      "provisions": [
+        {
+          "ref": "SEC1-4",
+          "text_summary": "Introductory and licensing framework material.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date",
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The original enactment created an ongoing licensing framework, but later repeal controls the present posture.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC5-12",
+          "text_summary": "Repeal package, authority structure, licensing rules, and discipline regime.",
+          "classes": [
+            "repeal",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Retain only repeal history for the earlier public laws and no permanent Code text.",
+          "evidence": "The report says no current Code insertion is made because PL-033-238 repeals this law.",
+          "notes": "The act is superseded before codification."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "The act should stay historical only because it was later repealed."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-025-184.md says no current Code insertion is made because PL-033-238 repeals this law.",
+        "The report identifies the act as a repealed law with a full source attachment.",
+        "The source contains repeal language for prior public laws, not a durable positive-law target."
+      ],
+      "recommended_actions": [
+        "Keep only repeal history.",
+        "Do not emit positive-law text.",
+        "Let the later repealer control the present state."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-185",
+      "public_law": "25-185",
+      "title": "Public Law 25-185 | Fiscal Year 21-3",
+      "status": "temporary-operative",
+      "decision": "statutory-note",
+      "status_basis": "The act is another appropriations-style temporary measure and should remain a statutory note at 2 U.S.C. 4501.",
+      "provisions": [
+        {
+          "ref": "SEC1-4",
+          "text_summary": "Short title, immediate-effect language, and temporary fiscal-year appropriations.",
+          "classes": [
+            "short-title",
+            "effective-date",
+            "appropriation",
+            "temporary"
+          ],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The report classifies the enactment as temporary and not suitable for permanent positive-law text.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC5",
+          "text_summary": "Temporary COLA adjustment note.",
+          "classes": [
+            "temporary",
+            "direct-amendment"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s4501",
+          "exact_change": "Record the temporary fiscal-year rule at section 4501 rather than as permanent text.",
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-025-185.md recommends a statutory note at 2 U.S.C. 4501.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s4501",
+        "detail": "The note at section 4501 is the correct treatment for this temporary appropriations enactment."
+      },
+      "source_evidence": [
+        "The primary report classifies the act as STATUTORY_NOTE and identifies 2 U.S.C. 4501 as the anchor.",
+        "The chronology report groups PL-025-185 with the same 2 U.S.C. 4501 target family as later fiscal-year legislation.",
+        "usc/usc02.xml contains the section 4501 home for the note."
+      ],
+      "recommended_actions": [
+        "Keep the act as a concise statutory note.",
+        "Do not promote appropriations text to permanent code.",
+        "Treat the COLA suspension as temporary history."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-030-221",
+      "public_law": "30-221",
+      "title": "Public Law 30-221 | Judicial Efficiency and Procedure Act",
+      "status": "current",
+      "decision": "already-incorporated",
+      "status_basis": "The source is an amendment act and the mass migration report says the project-generated U.S. Code already contains it, so no duplicate insertion is needed.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Procedural clarification tied to Supreme Court rulemaking and PL-26-190.",
+          "classes": [
+            "direct-amendment",
+            "statutory-note"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/s2074",
+          "exact_change": "Preserve the already-incorporated rulemaking and transmittal clarification without duplicating it.",
+          "evidence": "The law report states that project-generated U.S. Code material already contains this public law.",
+          "notes": "The act is handled as existing code history."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s2074",
+        "detail": "The existing title 28 rulemaking text is the right home and should not be duplicated."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-030-221.md marks the law ALREADY_INCORPORATED.",
+        "The report references the Supreme Court rulemaking process and the later-law linkage to PL-026-190.",
+        "usc/usc28.xml is the current code home for the rulemaking provisions."
+      ],
+      "recommended_actions": [
+        "Do not duplicate already-incorporated text.",
+        "Leave the rulemaking clarification in the existing Title 28 home.",
+        "Keep the record as integration history only."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-030-222",
+      "public_law": "30-222",
+      "title": "Public Law 30-222 | Foreign Intelligence Surveillance Court Establishment Act",
+      "status": "unresolved",
+      "decision": "source-unavailable-historical-note",
+      "status_basis": "No readable authenticated enactment text was recovered, so the law cannot safely alter the Code.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Source unavailable.",
+          "classes": [
+            "non-code"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-030-222.md reports source unavailable and no authorized code operation.",
+          "notes": "Keep as history only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": null,
+        "detail": "No recoverable source text or code target exists for a substantive placement."
+      },
+      "source_evidence": [
+        "The primary report says no readable authenticated enactment text could be recovered.",
+        "No express U.S. Code citation is detected in the report.",
+        "The report authorizes no Code operation."
+      ],
+      "recommended_actions": [
+        "Retain only a source-limited historical note.",
+        "Do not fabricate a code amendment.",
+        "Leave the law unresolved until source recovery."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-030-223",
+      "public_law": "30-223",
+      "title": "Public Law 30-223 | Municipal Transportation Act",
+      "status": "repealed",
+      "decision": "nonoperative_or_repealed",
+      "status_basis": "The canonical record classifies the act as repealed, so no current code text should be carried forward.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Repealed history only.",
+          "classes": [
+            "non-code"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-030-223.md classifies the act as NONOPERATIVE_OR_REPEALED.",
+          "notes": "History-only treatment is sufficient."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "The act should remain historical only."
+      },
+      "source_evidence": [
+        "The primary report says the canonical Trello record is repealed.",
+        "No express U.S. Code citation was detected.",
+        "No Code operation was authorized."
+      ],
+      "recommended_actions": [
+        "Keep only a repeal history note.",
+        "Do not insert code text.",
+        "Preserve the repeal classification."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-030-224",
+      "public_law": "30-224",
+      "title": "Public Law 30-224 | Vacancies and Acting Officer Reform Act",
+      "status": "current",
+      "decision": "already-incorporated",
+      "status_basis": "The source is recovered and the current branch already reflects the acting-officer overhaul, including the section 3345-3349e family.",
+      "provisions": [
+        {
+          "ref": "SEC4-5",
+          "text_summary": "Direct amendments and repeal/rewrite of the acting-officer framework in 5 U.S.C. 3345-3349e.",
+          "classes": [
+            "direct-amendment",
+            "repeal",
+            "substitution"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t5/s3345",
+          "exact_change": "Shorten the recess-or-adjournment period and revise the holdover, exclusion, and nomination-notice rules across sections 3345 through 3349e.",
+          "evidence": "usc/usc05.xml contains the current acting-officer text and a Pub. L. 30-224 amendment note at the section 3349e family.",
+          "notes": "The update spans the full subchapter III framework."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s3345",
+        "detail": "The branch already contains the revised acting-officer framework and the related amendment notes."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-030-224.md marks the law ALREADY_INCORPORATED.",
+        "usc/usc05.xml contains the revised 3345-3349e family and the Pub. L. 30-224 amendment note.",
+        "The report identifies 5 U.S.C. 3345 as the code family affected by the act."
+      ],
+      "recommended_actions": [
+        "Keep the existing acting-officer text.",
+        "Do not duplicate the already-incorporated amendments.",
+        "Retain only the integration history."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-031-225",
+      "public_law": "31-225",
+      "title": "Public Law 31-225 | Collaborative Officer Partnership and Safety (COPS) Act",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "The act establishes a continuing statutory note at 2 U.S.C. 4532 rather than a unique positive-law insertion.",
+      "provisions": [
+        {
+          "ref": "SEC1-3",
+          "text_summary": "Short title, severability, and effective-date provisions.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The law report classifies the act as a statutory note rather than direct code text.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC4-11",
+          "text_summary": "Definitions, cooperative law-enforcement rules, reporting, and enforcement provisions.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s4532",
+          "exact_change": "Keep the act as a note at the House compensation anchor chosen by the report.",
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-031-225.md recommends a statutory note at 2 U.S.C. 4532.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s4532",
+        "detail": "The current note placement is the correct treatment for this law."
+      },
+      "source_evidence": [
+        "The primary report marks the act as STATUTORY_NOTE at 2 U.S.C. 4532.",
+        "The report's dependency section references PL-025-181 as a background source.",
+        "usc/usc02.xml contains the Title 2 note home."
+      ],
+      "recommended_actions": [
+        "Keep the act as a concise statutory note.",
+        "Do not promote it to permanent positive-law text.",
+        "Retain the dependency history only."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-031-226",
+      "public_law": "31-226",
+      "title": "Public Law 31-226 | Commerce and Labor Administrative Reform Act (CLARA)",
+      "status": "current",
+      "decision": "already-incorporated",
+      "status_basis": "The source is fully recovered and the report says the existing U.S. Code already contains the act's operative changes, including the section 101 and repeal package.",
+      "chronology_conclusion": "The source is complete and the codification record already integrates the act, including the Department of Commerce and Labor restructuring, the 22 U.S.C. 2421 transfer note, and the 5 U.S.C. 101 replacement/history treatment.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "amend-existing-text",
+      "exact_target": "multiple: /us/usc/t22/s2421; /us/usc/t5/s101",
+      "exact_enacted_text_or_amendment_command": "Preserve the already-integrated Commerce and Labor restructuring, keep the U.S. Trade and Development Agency transfer note at 22 U.S.C. 2421, and retain the 5 U.S.C. 101 replacement/history note without duplicating the text.",
+      "provisions": [
+        {
+          "ref": "SEC5-6",
+          "text_summary": "Department of Commerce and Labor framework and related labor/commercial rules.",
+          "classes": [
+            "new-permanent-general",
+            "direct-amendment"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5/s101",
+          "exact_change": "Preserve the already-integrated executive-department change rather than duplicating it.",
+          "evidence": "audit/chronology-report.json groups PL-031-226 with target /us/usc/t5/s101 and the current branch XML carries the related amendment note.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC5",
+          "text_summary": "Repeals prior public laws, including PL-025-183.",
+          "classes": [
+            "repeal",
+            "historical-note-only"
+          ],
+          "treatment": "repeal-marking",
+          "target": "/us/usc/t5/s101",
+          "exact_change": "Record the repeals as history and do not create duplicate positive-law text.",
+          "evidence": "The source explicitly repeals PL-025-183 and several earlier public laws.",
+          "notes": "The later repeal package controls the current posture."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s101",
+        "detail": "The branch already contains the section 101 change and the repeal history."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-031-226.md marks the law ALREADY_INCORPORATED and says the project-generated U.S. Code already contains the operative changes.",
+        "audit/chronology-report.json groups PL-031-226 with /us/usc/t5/s101.",
+        "usc/usc05.xml contains the Pub. L. 31-226 amendment note on section 101 in both the current branch and origin/main.",
+        "usc/usc22.xml contains the Pub. L. 31-226 USAR transfer note for 22 U.S.C. 2421 in both the current branch and origin/main."
+      ],
+      "current_xml_comparison": "Both the current branch and origin/main already contain the section 101 Commerce and Labor replacement/history note and the section 2421 Trade and Development Agency transfer note, so there is no remaining missing implementation to add.",
+      "final_recommended_action": "Leave the integrated text in place and do not duplicate the Commerce/Labor restructuring or the TDA transfer note.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-031-227",
+      "public_law": "31-227",
+      "title": "Public Law 31-227 | Foreign Affairs Representation and Treatment Statute (FARTS)",
+      "status": "current",
+      "decision": "already-incorporated",
+      "status_basis": "The source is recovered and the current branch already records the repeal of 8 U.S.C. 1102 plus related foreign-affairs history.",
+      "provisions": [
+        {
+          "ref": "SEC6-10",
+          "text_summary": "Definitions, mission functions, notification rules, persona non grata, and immunity waiver rules.",
+          "classes": [
+            "new-permanent-general",
+            "statutory-note"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t8/s1102",
+          "exact_change": "Keep the foreign-affairs framework as existing code history and note text, not as duplicate positive law.",
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-031-227.md identifies 8 U.S.C. 1102 as the repeal target.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC7(1)-(4)",
+          "text_summary": "Repeals 8 U.S.C. 1102 and related earlier public laws.",
+          "classes": [
+            "repeal",
+            "repeal-marking"
+          ],
+          "treatment": "repeal-marking",
+          "target": "/us/usc/t8/s1102",
+          "exact_change": "Record the repeal of section 1102 and the earlier public laws without reviving prior text.",
+          "evidence": "usc/usc08.xml contains a Pub. L. 31-227 amendment note on section 1102 and shows the section as reserved.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t8/s1102",
+        "detail": "The branch correctly preserves the repeal note at section 1102."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-031-227.md marks the law ALREADY_INCORPORATED.",
+        "audit/chronology-report.json groups PL-031-227 with target /us/usc/t8/s1102.",
+        "usc/usc08.xml shows the Pub. L. 31-227 amendment note on section 1102."
+      ],
+      "recommended_actions": [
+        "Keep the section 1102 repeal history.",
+        "Do not duplicate the diplomatic-privileges text.",
+        "Retain the already-incorporated status."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-031-228",
+      "public_law": "31-228",
+      "title": "Public Law 31-228 | Protecting Congressional Authority Act (PCAA)",
+      "status": "current",
+      "decision": "already-incorporated",
+      "status_basis": "The source is recovered and the branch already records the reinstatement of 2 U.S.C. 192 together with the repeal of PL-16-112.",
+      "provisions": [
+        {
+          "ref": "SEC4-5",
+          "text_summary": "Repeals PL-16-112 and reinstates 2 U.S.C. 192 in full.",
+          "classes": [
+            "repeal",
+            "direct-amendment",
+            "reinstatement"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t2/s192",
+          "exact_change": "Reinstate section 192 and preserve the contempt-of-Congress procedures as existing code text.",
+          "evidence": "usc/usc02.xml contains the Pub. L. 31-228 amendment note that reinstates section 192 in full.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s192",
+        "detail": "The section 192 reinstatement note is the correct treatment."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-031-228.md marks the law ALREADY_INCORPORATED.",
+        "usc/usc02.xml contains the Pub. L. 31-228 amendment note on section 192.",
+        "The source report makes the repeal/reinstatement package explicit."
+      ],
+      "recommended_actions": [
+        "Keep the section 192 reinstatement note.",
+        "Do not invent new positive-law text.",
+        "Retain the repeal of PL-16-112 only as history."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-031-229",
+      "public_law": "31-229",
+      "title": "Public Law 31-229 | Fiscal Year 25-1",
+      "status": "unresolved",
+      "decision": "source-unavailable-historical-note",
+      "status_basis": "No readable authenticated source was recovered, so the law cannot safely alter the Code.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Source unavailable.",
+          "classes": [
+            "non-code"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-031-229.md reports source unavailable and no authorized Code operation.",
+          "notes": "History only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": null,
+        "detail": "No recoverable source text or Code target exists for a substantive placement."
+      },
+      "source_evidence": [
+        "The primary report says no readable authenticated enactment text could be recovered.",
+        "The report detects no express Code citation.",
+        "The report authorizes no Code operation."
+      ],
+      "recommended_actions": [
+        "Retain only a source-limited historical note.",
+        "Do not fabricate a code amendment.",
+        "Leave the law unresolved until source recovery."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-032-230",
+      "public_law": "32-230",
+      "title": "Public Law 32-230 | Federal Executive & Senior Leadership Pay Standardization Act of 2025",
+      "status": "current",
+      "decision": "already-incorporated",
+      "status_basis": "The source is unavailable, but the mass migration report says the generated U.S. Code already contains the pay-standardization changes, so no duplicate insertion is needed.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Already-incorporated pay standardization history.",
+          "classes": [
+            "direct-amendment",
+            "statutory-note"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5/s5332",
+          "exact_change": "Preserve the existing General Schedule text and related pay-standardization history without duplication.",
+          "evidence": "The law report marks the act ALREADY_INCORPORATED and notes that later PL-038-262 repeals it.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t5/s5332",
+        "detail": "The branch already contains the incorporated pay schedule changes even though the source attachment is unavailable."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-032-230.md marks the law ALREADY_INCORPORATED.",
+        "The report explicitly warns that later PL-038-262 repeals this already-incorporated law.",
+        "usc/usc05.xml contains the General Schedule text and related note structure."
+      ],
+      "recommended_actions": [
+        "Keep the already-incorporated General Schedule changes.",
+        "Do not duplicate pay text.",
+        "Treat the later repeal as separate history."
+      ],
+      "confidence": "high"
+    }
+  ]
+}

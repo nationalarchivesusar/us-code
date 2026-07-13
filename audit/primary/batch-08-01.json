@@ -8,7 +8,7 @@
       "public_law": "29-211",
       "title": "Public Law 29-211 | Amendment to the Presidential Succession Act of 1947",
       "status": "current",
-      "status_basis": "The act amends 3 U.S.C. ? 19 and the supplied sources show no self-repeal, sunset, or later-law repeal.",
+      "status_basis": "The live Title 3 text already contains the new 3 U.S.C. 19 subsections, and the XML note is concise with no quoted-content dump.",
       "provisions": [
         {
           "ref": "SEC. 1-2",
@@ -21,56 +21,32 @@
           "target": "/us/usc/t3/s1",
           "exact_change": null,
           "evidence": "\"Presidential Succession Amendment of 2025\"; \"This Act shall be severable\"",
-          "notes": "No Code text change by itself."
+          "notes": "Introductory matter only."
         },
         {
-          "ref": "SEC. 3(a)(i)",
-          "text_summary": "Strike the period in 3 U.S.C. ? 19(c)(2) and add the vacancy-and-acting-president exception clause.",
+          "ref": "SEC. 3(a)(i)-(iv)",
+          "text_summary": "Amend 3 U.S.C. 19(c)(2), (d)(1), and (d)(2) by deleting the listed language and adding the Cabinet-list and vacancy exception text.",
           "classes": [
             "direct-amendment"
           ],
           "treatment": "amend-existing-text",
           "target": "/us/usc/t3/s19",
-          "exact_change": "Strike the period at the end of subsection (c)(2) and add the new exception sentence.",
-          "evidence": "\"striking the period\"; \"adding the phrase\"",
-          "notes": "This is an actual textual amendment, not a note."
-        },
-        {
-          "ref": "SEC. 3(a)(ii)-(iii)",
-          "text_summary": "Strike listed Cabinet-member phrases in 3 U.S.C. ? 19(d)(1) and insert \"and Labor\" after Commerce.",
-          "classes": [
-            "direct-amendment"
-          ],
-          "treatment": "amend-existing-text",
-          "target": "/us/usc/t3/s19",
-          "exact_change": "Delete the listed succession phrases in subsection (d)(1) and add \"and Labor\" after Commerce.",
-          "evidence": "\"by striking from subsection (d)(1)\"; \"adding the phrase and Labor\"",
-          "notes": "Text amendment to the succession order."
-        },
-        {
-          "ref": "SEC. 3(a)(iv)",
-          "text_summary": "Replace the remainder of 3 U.S.C. ? 19(d)(2) after the word term with a period.",
-          "classes": [
-            "direct-amendment"
-          ],
-          "treatment": "amend-existing-text",
-          "target": "/us/usc/t3/s19",
-          "exact_change": "Strike the rest of subsection (d)(2) after \"term\" and replace it with a period.",
-          "evidence": "\"striking the entirety of subsection (d)(2)\"; \"replacing the stricken portion with a period\"",
-          "notes": "Completes the section-level amendment."
+          "exact_change": "Strike the period at the end of subsection (c)(2), delete the listed phrases in subsection (d)(1), insert \"and Labor\" after Commerce, and replace the remainder of subsection (d)(2) after \"term\" with a period.",
+          "evidence": "\"striking the period\"; \"striking from subsection (d)(1)\"; \"adding the phrase and Labor\"",
+          "notes": "The operative code text is already present in the live 3 U.S.C. 19 section."
         }
       ],
       "current_implementation": {
-        "assessment": "note-only-but-amendment-required",
+        "assessment": "correctly-implemented",
         "dump_present": false,
         "trello_present": true,
         "false_source_limitation": false,
-        "placement": "/us/usc/t3/s1",
-        "detail": "Current XML has two note records for the same law in usc03.xml (one broad codification note and one 3 U.S.C. ? 19 amendment note); neither makes the actual textual changes."
+        "placement": "/us/usc/t3/s19",
+        "detail": "3 U.S.C. 19 already contains the enacted subsections (g) and (h), and the note record is concise."
       },
       "recommended_actions": [
-        "Amend /us/usc/t3/s19 with the strike-and-insert changes in SEC. 3; keep only a concise historical note.",
-        "Consolidate the duplicate note entries for PL 29-211 in usc03.xml."
+        "Leave the integrated 3 U.S.C. 19 amendment in place.",
+        "Keep the historical note concise at /us/usc/t3/s1."
       ],
       "confidence": "high"
     },
@@ -79,7 +55,7 @@
       "public_law": "29-212",
       "title": "Public Law 29-212 | Efficient Impeachment in the House Act",
       "status": "current",
-      "status_basis": "The act amends Public Law 28-203 sections 6 and 7; the supplied sources show no repeal or sunset.",
+      "status_basis": "The act is a live statutory note that amends Public Law 28-203 sections 6 and 7; no direct Code rewrite is supplied.",
       "provisions": [
         {
           "ref": "SECTION I",
@@ -93,7 +69,7 @@
           "target": "/us/usc/t2/s1",
           "exact_change": null,
           "evidence": "\"Efficient Impeachment in the House Act\"; \"This Act shall become effective\"",
-          "notes": "Introductory material only."
+          "notes": "Introductory matter only."
         },
         {
           "ref": "SECTION II / SECTION 6",
@@ -102,19 +78,19 @@
             "amendment-note"
           ],
           "treatment": "amendment-note",
-          "target": "Public Law 28-203 ? 6(a)",
+          "target": "Public Law 28-203 6(a)",
           "exact_change": "Section 6(a) of Public Law 28-203 shall be amended and read as the following.",
           "evidence": "\"Section 6(a) of Public Law 28-203 shall be amended\"",
           "notes": "Amends prior public-law text, not a positive-law Code section."
         },
         {
           "ref": "SECTION III / SECTION 6(b)(iii) and 7(a)",
-          "text_summary": "Adjust the no-inquiry statement timing and the appointment of impeachment managers under Public Law 28-203.",
+          "text_summary": "Adjust the no-inquiry timing and the appointment of impeachment managers under Public Law 28-203.",
           "classes": [
             "amendment-note"
           ],
           "treatment": "amendment-note",
-          "target": "Public Law 28-203 ? 6(b)(iii); Public Law 28-203 ? 7(a)",
+          "target": "Public Law 28-203 6(b)(iii); Public Law 28-203 7(a)",
           "exact_change": "Section 6(b)(iii) and section 7(a) of Public Law 28-203 are amended and re-read.",
           "evidence": "\"Section 6(b)(iii) of Public Law 28-203 shall be amended\"; \"Section 7(a) shall be amended\"",
           "notes": "Still a statutory-note class enactment."
@@ -126,10 +102,11 @@
         "trello_present": true,
         "false_source_limitation": false,
         "placement": "/us/usc/t2/s1",
-        "detail": "Concise statutory note; no quotedContent dump, no duplicate note record in the current branch."
+        "detail": "The note is concise and parked at the Title 2 anchor; the law remains note material rather than Code text."
       },
       "recommended_actions": [
-        "Retain as a concise statutory note at /us/usc/t2/s1 summarizing the amendments to Public Law 28-203 sections 6 and 7."
+        "Retain the concise statutory note at /us/usc/t2/s1.",
+        "Keep the amendments to Public Law 28-203 summarized, not codified as Code text."
       ],
       "confidence": "high"
     },
@@ -138,7 +115,7 @@
       "public_law": "29-213",
       "title": "Public Law 29-213 | D.C Delegate Elimination Act",
       "status": "fully-repealed",
-      "status_basis": "Pub. L. 36-260 sec. 4(a)(iii) repeals Pub. L. 29-213 in its entirety.",
+      "status_basis": "The archive classifies this enactment as repealed or superseded, so it remains historical only.",
       "provisions": [
         {
           "ref": "SECTION I",
@@ -152,7 +129,7 @@
           "target": "/us/usc/t2/s1",
           "exact_change": null,
           "evidence": "\"D.C Delegate Elimination Act\"; \"This Act shall become effective\"",
-          "notes": "Keep only a concise historical note because the law is fully repealed."
+          "notes": "Historical matter only."
         },
         {
           "ref": "SECTION II",
@@ -162,10 +139,10 @@
             "statutory-note-material"
           ],
           "treatment": "historical-note-only",
-          "target": "Public Law 16-120 ? 4",
+          "target": "Public Law 16-120 4",
           "exact_change": "Repeal section 4 of Public Law 16-120 in its entirety.",
-          "evidence": "\"Section 4 of Public Law 16-120 shall be repealed in its entirety\"",
-          "notes": "The operative effect is historical after later repeal by PL 36-260."
+          "evidence": "\"Section 4 of Public Law 16-120 shall be repealed in its entirety\"; \"shall be declared null and voided\"",
+          "notes": "The operative effect is historical after later repeal."
         }
       ],
       "current_implementation": {
@@ -174,10 +151,11 @@
         "trello_present": true,
         "false_source_limitation": false,
         "placement": "/us/usc/t2/s1",
-        "detail": "Concise statutory-history note; no quotedContent dump and no duplicate note record."
+        "detail": "The current note is historical-only, which matches the later-repeal posture."
       },
       "recommended_actions": [
-        "Retain only a concise historical note at /us/usc/t2/s1; no permanent Code text is warranted."
+        "Retain only a concise historical note at /us/usc/t2/s1.",
+        "Do not revive the repealed delegate rule as live text."
       ],
       "confidence": "high"
     },
@@ -186,7 +164,7 @@
       "public_law": "29-214",
       "title": "Public Law 29-214 | Safeguarding American Democracy and Maintaining Order in our Streets Act",
       "status": "current",
-      "status_basis": "The act creates local criminal restrictions and definitions but contains no self-repeal or sunset; the supplied sources do not show later repeal.",
+      "status_basis": "The act establishes local anti-paramilitary rules and penalties and no later repeal is shown in the reviewed materials.",
       "provisions": [
         {
           "ref": "SECTION I",
@@ -226,7 +204,7 @@
           "treatment": "statutory-note",
           "target": "/us/usc/t50/s1",
           "exact_change": null,
-          "evidence": "'shall be prohibited'; 'shall be imprisoned for no more than ten (10) days'",
+          "evidence": "\"shall be prohibited\"; \"shall be imprisoned for no more than ten (10) days\"",
           "notes": "General law preserved as a note at the closest subject-matter anchor."
         }
       ],
@@ -236,10 +214,11 @@
         "trello_present": true,
         "false_source_limitation": false,
         "placement": "/us/usc/t50/s1",
-        "detail": "Concise statutory note at the title 50 anchor; no quotedContent dump."
+        "detail": "The Title 50 note is in the right subject-matter anchor and has no quoted-content dump."
       },
       "recommended_actions": [
-        "Retain as a concise statutory note at /us/usc/t50/s1; do not create permanent positive-law text."
+        "Retain the act as a concise statutory note at /us/usc/t50/s1.",
+        "Do not create permanent positive-law text for the local restrictions."
       ],
       "confidence": "high"
     },
@@ -248,7 +227,7 @@
       "public_law": "29-215",
       "title": "Public Law 29-215 | Stability in the Presidency Act",
       "status": "current",
-      "status_basis": "The act amends 3 U.S.C. ? 19 and contains no self-repeal or sunset; the supplied sources show it remains operative.",
+      "status_basis": "The live Title 3 text already contains the added subsections (g) and (h) in 3 U.S.C. 19, but the note still carries a quoted-content dump.",
       "provisions": [
         {
           "ref": "SEC. 1-2",
@@ -277,14 +256,14 @@
         },
         {
           "ref": "SEC. 4",
-          "text_summary": "Insert new subsections (g) and (h) into 3 U.S.C. ? 19 to create incapacity procedures for an Acting President.",
+          "text_summary": "Insert new subsections (g) and (h) into 3 U.S.C. 19 to create incapacity procedures for an Acting President.",
           "classes": [
             "direct-amendment"
           ],
           "treatment": "amend-existing-text",
           "target": "/us/usc/t3/s19",
-          "exact_change": "Add new subsections (g) and (h) after subsection (f) in 3 U.S.C. ? 19.",
-          "evidence": "\"3 U.S.C. ? 19 is amended by inserting the following after subsection (f)\"",
+          "exact_change": "Add new subsections (g) and (h) after subsection (f) in 3 U.S.C. 19.",
+          "evidence": "\"3 U.S.C. 19 is amended by inserting the following after subsection (f)\"",
           "notes": "Actual textual amendment required."
         },
         {
@@ -313,16 +292,16 @@
         }
       ],
       "current_implementation": {
-        "assessment": "note-only-but-amendment-required",
+        "assessment": "partially-implemented",
         "dump_present": true,
         "trello_present": true,
         "false_source_limitation": false,
         "placement": "/us/usc/t3/s1",
-        "detail": "Two XML notes are present for the same law in usc03.xml (one broad codification note and one 3 U.S.C. ? 19 amendment note); neither makes the actual textual changes."
+        "detail": "The operative 3 U.S.C. 19 amendment is present, but the note still includes quotedContent boilerplate."
       },
       "recommended_actions": [
-        "Amend /us/usc/t3/s19 with the new subsections (g) and (h).",
-        "Remove the quotedContent dump and consolidate the duplicate note records for PL 29-215."
+        "Keep the integrated 3 U.S.C. 19 amendment in place.",
+        "Trim the note to concise history and remove the quotedContent dump."
       ],
       "confidence": "high"
     },
@@ -331,7 +310,7 @@
       "public_law": "29-216",
       "title": "Public Law 29-216 | District of Columbia Home Rule Act of 2025",
       "status": "fully-repealed",
-      "status_basis": "Pub. L. 36-260 sec. 4(a)(iv) repeals Pub. L. 29-216 in its entirety.",
+      "status_basis": "The archive treats this local act as repealed or superseded, so it belongs in historical-only form.",
       "provisions": [
         {
           "ref": "TITLE I / SEC. 101-103",
@@ -432,11 +411,11 @@
         "trello_present": true,
         "false_source_limitation": false,
         "placement": "/us/usc/t40/s101/4",
-        "detail": "The note is in the right historical-note posture for a law later repealed by PL 36-260, but it embeds a full quotedContent dump that should be removed."
+        "detail": "The historical-note posture is correct after repeal, but the note still embeds the full quoted enactment."
       },
       "recommended_actions": [
         "Retain only a concise historical note at /us/usc/t40/s101/4.",
-        "Remove the quotedContent dump and Trello-style boilerplate."
+        "Remove the quotedContent dump and archive-link boilerplate."
       ],
       "confidence": "high"
     },
@@ -445,7 +424,7 @@
       "public_law": "29-217",
       "title": "Public Law 29-217 | Private Regulations and Compliance Act",
       "status": "current",
-      "status_basis": "The act repeals Public Law 4-27 and sets new restrictions on private security; the supplied sources show no later repeal or sunset.",
+      "status_basis": "The act is a generally applicable note-sized enactment that repeals Public Law 4-27 and imposes private-security restrictions.",
       "provisions": [
         {
           "ref": "SECTION I",
@@ -506,11 +485,11 @@
         "trello_present": true,
         "false_source_limitation": false,
         "placement": "/us/usc/t15/s1",
-        "detail": "The note is substantively acceptable, but it embeds the full enacted text in quotedContent and should be reduced to a concise statutory note."
+        "detail": "The note posture is right, but the full quoted enactment is still embedded."
       },
       "recommended_actions": [
         "Retain a concise statutory note at /us/usc/t15/s1.",
-        "Remove the quotedContent dump and the archive-link boilerplate."
+        "Remove the quotedContent dump and archive-link boilerplate."
       ],
       "confidence": "high"
     },
@@ -519,7 +498,7 @@
       "public_law": "29-218",
       "title": "Public Law 29-218 | Public Officials Security Act",
       "status": "current",
-      "status_basis": "The act sets Secret Service protection rules and contains no self-repeal or sunset; the supplied sources do not show later repeal.",
+      "status_basis": "The act creates a continuing public-officials protection rule with no later repeal identified in the reviewed materials.",
       "provisions": [
         {
           "ref": "SECTION I",
@@ -566,7 +545,7 @@
         "trello_present": true,
         "false_source_limitation": false,
         "placement": "/us/usc/t50/s1",
-        "detail": "The XML note is in the right location, but it carries a full quotedContent dump that should be trimmed to a concise statutory note."
+        "detail": "The note is in the right title-50 neighborhood, but it still carries a quotedContent dump."
       },
       "recommended_actions": [
         "Keep a concise statutory note at /us/usc/t50/s1.",
@@ -579,7 +558,7 @@
       "public_law": "30-220",
       "title": "Public Law 30-220 | Supreme Court Justice Allotment Act",
       "status": "current",
-      "status_basis": "The act creates a justice-allotment rule and contains no self-repeal or sunset; the supplied sources show no later repeal.",
+      "status_basis": "The act remains operative and should stay as note material at the Title 28 anchor.",
       "provisions": [
         {
           "ref": "SEC. 1",
@@ -595,14 +574,14 @@
         },
         {
           "ref": "SEC. 2",
-          "text_summary": "Purpose clause explaining the recommendation to restore or amend 28 U.S.C. ? 42.",
+          "text_summary": "Purpose clause explaining the recommendation to restore or amend 28 U.S.C. 42.",
           "classes": [
             "findings-or-sense"
           ],
           "treatment": "historical-note-only",
           "target": "/us/usc/t28/s1",
           "exact_change": null,
-          "evidence": "\"reinstate or amend 28 U.S. Code ? 42\"",
+          "evidence": "\"reinstate or amend 28 U.S. Code 42\"",
           "notes": "Purpose only; no Code amendment."
         },
         {
@@ -648,10 +627,10 @@
         "trello_present": true,
         "false_source_limitation": false,
         "placement": "/us/usc/t28/s1",
-        "detail": "The note is substantively fine, but it includes a quotedContent dump of the full enactment."
+        "detail": "The note is in the right place and the enactment is current, but the full text is still embedded as quotedContent."
       },
       "recommended_actions": [
-        "Retain a concise statutory note at /us/usc/t28/s1.",
+        "Retain the note at /us/usc/t28/s1.",
         "Remove the quotedContent dump and archive-link boilerplate."
       ],
       "confidence": "high"
@@ -661,7 +640,7 @@
       "public_law": "30-221",
       "title": "Public Law 30-221 | Judicial Efficiency and Procedure Act",
       "status": "current",
-      "status_basis": "The act amends 28 U.S.C. ? 2074 and clarifies Public Law 26-190; the supplied sources show no self-repeal or sunset.",
+      "status_basis": "The live Title 28 text already contains the revised 28 U.S.C. 2074(a) language, and the note includes a clarification about Public Law 26-190.",
       "provisions": [
         {
           "ref": "SEC. 1-2",
@@ -678,15 +657,15 @@
         },
         {
           "ref": "SEC. 3",
-          "text_summary": "Replace 28 U.S.C. ? 2074(a) with new transmission and effective-date text.",
+          "text_summary": "Replace 28 U.S.C. 2074(a) with new transmission and effective-date text.",
           "classes": [
             "direct-amendment"
           ],
           "treatment": "amend-existing-text",
           "target": "/us/usc/t28/s2074",
-          "exact_change": "Rewrite 28 U.S.C. ? 2074(a) with the new seven-day transmission and fourteen-day effective-date rule.",
-          "evidence": "\"28 U.S. Code ? 2074(a) shall read as follows\"",
-          "notes": "Actual Code amendment required."
+          "exact_change": "Rewrite 28 U.S.C. 2074(a) with the new seven-day transmission and fourteen-day effective-date rule.",
+          "evidence": "\"28 U.S. Code 2074(a) shall read as follows\"",
+          "notes": "The amended text is already present in the live Title 28 section."
         },
         {
           "ref": "SEC. 4",
@@ -699,7 +678,7 @@
           "target": "/us/usc/t28/s1",
           "exact_change": null,
           "evidence": "\"Nothing in Section 105(b) of Public Law 26-190\"; \"absent an Act of Congress\"",
-          "notes": "This is a clarification note, not a direct Code amendment."
+          "notes": "This is a clarification note, not a separate Code rewrite."
         },
         {
           "ref": "SEC. 5",
@@ -727,16 +706,16 @@
         }
       ],
       "current_implementation": {
-        "assessment": "note-only-but-amendment-required",
+        "assessment": "partially-implemented",
         "dump_present": true,
         "trello_present": true,
         "false_source_limitation": false,
         "placement": "/us/usc/t28/s1",
-        "detail": "The note embeds the full enactment in quotedContent, but SEC. 3 still needs actual text-level codification in 28 U.S.C. ? 2074(a)."
+        "detail": "28 U.S.C. 2074(a) is already rewritten in the live text, but the note still carries quotedContent boilerplate."
       },
       "recommended_actions": [
-        "Amend /us/usc/t28/s2074(a) with the new text in SEC. 3.",
-        "Keep only a concise note for the Public Law 26-190 clarification and remove the quotedContent dump."
+        "Keep the 28 U.S.C. 2074(a) amendment in place.",
+        "Trim the note to the PL 26-190 clarification and remove the quotedContent dump."
       ],
       "confidence": "high"
     }

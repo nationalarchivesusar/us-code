@@ -1,0 +1,203 @@
+{
+  "reviewer": "review-repair-57",
+  "group_index": 157,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/manifest-81.json",
+  "output_path": "audit/review/review-57.json",
+  "reviewed_against": [
+    "audit/manifests/manifest-81.json",
+    "audit/primary/batch-11-03.json",
+    "audit/primary/batch-12-01.json",
+    "audit/primary/batch-12-02.json",
+    "audit/chronology-report.json",
+    "audit/claude-validation.json",
+    "usc/usc05.xml",
+    "usc/usc22.xml",
+    "usc/usc28.xml",
+    "usc/usc40.xml",
+    "usc/usc50.xml",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-009-059",
+      "public_law": "9-59",
+      "title": "Public Law 9-59 | M.P.D Act",
+      "chronology_conclusion": "The chronology keeps PL-009-059 in repeal history only; it is not live Code text and should remain a concise historical record.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t40/s101/4",
+      "exact_enacted_text_or_amendment_command": "Retain only a concise repeal-history note for the M.P.D. Act and remove the long dump-style note content and Trello link.",
+      "source_evidence": [
+        "codification/laws/laws/PL-009-059/law.txt contains the enacted M.P.D. Act text and repeal posture.",
+        "audit/primary/batch-11-03.json classifies PL-009-059 as fully-repealed with historical-note-only treatment.",
+        "usc/usc40.xml keeps the branch note at the Title 40 anchor, while origin/main does not carry the same cleaned-up branch note."
+      ],
+      "current_xml_comparison": "The current branch retains a repeal-history note in usc/usc40.xml at the Title 40 anchor, but it is overlong and still needs cleanup; origin/main does not show the same branch note.",
+      "final_recommended_action": "Keep only a concise repeal-history note and strip the dump-style retention and Trello link.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-009-060",
+      "public_law": "9-60",
+      "title": "Public Law 9-60 | The Federal Metro Policing Act",
+      "chronology_conclusion": "The chronology leaves PL-009-060 fully repealed, so the act belongs in historical notes only and not as operative Code text.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t50/s1",
+      "exact_enacted_text_or_amendment_command": "Keep only a concise repeal-history note for the Federal Metro Policing Act, including the repeal chain back to PL-009-059, and remove the long dump-style material.",
+      "source_evidence": [
+        "codification/laws/laws/PL-009-060/law.txt contains the Federal Metro Policing Act text and its codification directions.",
+        "audit/primary/batch-11-03.json classifies PL-009-060 as fully-repealed and historical-note-only.",
+        "usc/usc50.xml keeps the branch note at the Title 50 anchor, while origin/main does not carry the same branch note."
+      ],
+      "current_xml_comparison": "The current branch keeps PL-009-060 as a history note in usc/usc50.xml, but the note is overlong and should be trimmed; origin/main does not show the same branch note.",
+      "final_recommended_action": "Leave only a concise repeal-history note and remove the dump-style retention and Trello link.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-009-061",
+      "public_law": "9-61",
+      "title": "Public Law 9-61 | Charter Repeal Act",
+      "chronology_conclusion": "The chronology confirms full repeal and leaves only repeal history, not a live charter change.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t40/s101",
+      "exact_enacted_text_or_amendment_command": "Trim PL-009-061 to a concise repeal-history note and remove the retained text that overstates any live charter effect.",
+      "source_evidence": [
+        "codification/laws/laws/PL-009-061/law.txt contains the Charter Repeal Act text and repeal posture.",
+        "audit/primary/batch-11-03.json classifies PL-009-061 as fully-repealed with historical-note-only treatment.",
+        "usc/usc40.xml shows the branch implementation at the Title 40 anchor, while origin/main lacks the same branch note."
+      ],
+      "current_xml_comparison": "The current branch only partially implements the repeal history in usc/usc40.xml, and the retained note is still broader than it should be; origin/main does not show the same branch note.",
+      "final_recommended_action": "Keep only a concise repeal-history note and remove the excess retained text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-009-063",
+      "public_law": "9-63",
+      "title": "Public Law 9-63 | The Federal District Employment Act of 2022",
+      "chronology_conclusion": "The chronology does not support operative codification here; the source record remains unresolved and should be limited to a source-aware historical note.",
+      "final_legal_status": "unresolved",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t5/s101",
+      "exact_enacted_text_or_amendment_command": "Keep only a source-limited historical note for the Federal District Employment Act of 2022 and do not imply the missing source text is operative Code text.",
+      "source_evidence": [
+        "codification/laws/laws/PL-009-063/law.txt and law.html preserve the unresolved source record for the act.",
+        "audit/primary/batch-12-01.json marks PL-009-063 as unresolved and source-unavailable for operative codification.",
+        "usc/usc05.xml holds the branch note at the Title 5 anchor, but origin/main does not provide a better operative placement."
+      ],
+      "current_xml_comparison": "The current branch keeps only a note-only placeholder at the Title 5 anchor in usc/usc05.xml, and the record remains source-limited; origin/main does not improve the placement.",
+      "final_recommended_action": "Remove the Trello link and keep only a concise source-limited historical note.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-010-065",
+      "public_law": "10-65",
+      "title": "Public Law 10-65 | Federal Judicial Reform Act ii",
+      "chronology_conclusion": "The chronology treats PL-010-065 as a historical court-opinion record rather than enacted statutory text, so it remains history only.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t50/s1",
+      "exact_enacted_text_or_amendment_command": "Do not codify the court opinion as positive law; keep only a short historical cross-reference if the record must be preserved at all.",
+      "source_evidence": [
+        "codification/laws/laws/PL-010-065/law.txt identifies the source as a court opinion rather than enacted statutory text.",
+        "audit/primary/batch-12-01.json classifies PL-010-065 as fully-repealed / incorrectly implemented with historical-note-only treatment.",
+        "usc/usc50.xml carries the branch history-note treatment, while origin/main does not supply a better statutory anchor."
+      ],
+      "current_xml_comparison": "The current branch treats the opinion as a Title 50 note in usc/usc50.xml, but that does not make it enacted law; origin/main does not supply a proper positive-law codification.",
+      "final_recommended_action": "Remove the dump-style retention and keep only a short historical cross-reference.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-011-070",
+      "public_law": "11-70",
+      "title": "Public Law 11-70 | Supreme Court Please Act",
+      "chronology_conclusion": "The chronology keeps PL-011-070 current, but the transfer instruction must be placed as a real transfer note at the correct 40 U.S.C. anchor rather than left in a note-only Title 28 wrapper.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "transfer-note",
+      "exact_target": "/us/usc/t40/s6121",
+      "exact_enacted_text_or_amendment_command": "Carry the Section 2 transfer instruction to the 40 U.S.C. 6121 anchor, keep the short title and effective date as notes, and remove the dump-style wrapper.",
+      "source_evidence": [
+        "codification/laws/laws/PL-011-070/law.txt contains the short-title, transfer, and effective-date provisions.",
+        "audit/primary/batch-12-01.json classifies the transfer instruction as a transfer-note that points to 40 U.S.C. 6121.",
+        "usc/usc28.xml shows the current branch still parked at a Title 28 note anchor, while origin/main does not show the same branch note."
+      ],
+      "current_xml_comparison": "The current branch leaves PL-011-070 in a note-only block at Title 28, but the transfer instruction still belongs at 40 U.S.C. 6121; origin/main does not show the same branch note.",
+      "final_recommended_action": "Move the transfer note to 40 U.S.C. 6121 and keep the remaining material as concise note history.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-011-071",
+      "public_law": "11-71",
+      "title": "Public Law 11-71 | Supreme Court Needs Act",
+      "chronology_conclusion": "The chronology keeps PL-011-071 current and requires the Court-size amendment to be carried as operative text in 28 U.S.C. 1.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "amend-existing-text",
+      "exact_target": "/us/usc/t28/s1",
+      "exact_enacted_text_or_amendment_command": "Replace the note-only treatment with the actual amendment to 28 U.S.C. 1 that updates the Supreme Court membership rule and quorum language.",
+      "source_evidence": [
+        "codification/laws/laws/PL-011-071/law.txt contains the Supreme Court membership amendment text.",
+        "audit/primary/batch-12-01.json classifies PL-011-071 as a live amendment that should change 28 U.S.C. 1.",
+        "usc/usc28.xml shows the branch still using a note-only placeholder, while origin/main does not show the required substantive rewrite."
+      ],
+      "current_xml_comparison": "The current branch still parks PL-011-071 as a note-only entry at Title 28, but the actual 28 U.S.C. 1 rewrite is still missing; origin/main does not provide the needed amendment either.",
+      "final_recommended_action": "Apply the substantive 28 U.S.C. 1 amendment and remove the note-only substitute.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-011-072",
+      "public_law": "11-72",
+      "title": "Public Law 11-72 | No More Mariah Act (Keywords: Judges, Justices, Circuit Court)",
+      "chronology_conclusion": "The chronology keeps PL-011-072 current, with section 3 as the operative 28 U.S.C. 133 amendment and section 2 as repeal history for PL-010-065.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "amend-existing-text",
+      "exact_target": "/us/usc/t28/s133",
+      "exact_enacted_text_or_amendment_command": "Amend 28 U.S.C. 133 as enacted, and keep the repeal of PL-010-065 as a concise historical note only.",
+      "source_evidence": [
+        "codification/laws/laws/PL-011-072/law.txt contains the section 133 amendment and the repeal-of-PL-010-065 instruction.",
+        "audit/primary/batch-12-02.json classifies PL-011-072 as a live amendment to 28 U.S.C. 133 with historical-note-only repeal treatment for PL-010-065.",
+        "usc/usc28.xml still shows only a note-only placeholder in the current branch, while origin/main does not show the required 28 U.S.C. 133 rewrite."
+      ],
+      "current_xml_comparison": "The current branch keeps PL-011-072 in a note-only placeholder at Title 28, but the actual 28 U.S.C. 133 amendment is still missing; origin/main does not yet carry the required operative rewrite.",
+      "final_recommended_action": "Carry the section 133 amendment into operative text and leave the PL-010-065 repeal as history only.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-011-073",
+      "public_law": "11-73",
+      "title": "Public Law 11-73 | Let Me Act",
+      "chronology_conclusion": "The chronology shows PL-011-073 as fully repealed, so it should remain only a concise history note.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t22/s2651a",
+      "exact_enacted_text_or_amendment_command": "Keep only a concise historical note for the acting-service rule and remove the misanchored dump-style retention.",
+      "source_evidence": [
+        "codification/laws/laws/PL-011-073/law.txt contains the acting-service rule and effective-date text.",
+        "audit/primary/batch-12-02.json classifies PL-011-073 as fully-repealed with historical-note-only treatment.",
+        "usc/usc22.xml carries the branch history note at the Title 22 anchor, while origin/main does not carry the same branch note."
+      ],
+      "current_xml_comparison": "The current branch misanchors the history note in usc/usc22.xml at 22 U.S.C. 2651a, and origin/main does not carry the same branch note.",
+      "final_recommended_action": "Keep only a concise repeal-history note and remove the misanchored retained text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-012-074",
+      "public_law": "12-74",
+      "title": "Public Law 12-74 | Federal Bar Association Act of 2023",
+      "chronology_conclusion": "The chronology keeps PL-012-074 current, with sections 4 and 5 requiring positive-law Title 5 placement while the PL-007-047 repeal remains history only.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "operative-text-required",
+      "exact_target": "/us/usc/t5",
+      "exact_enacted_text_or_amendment_command": "Codify sections 4 and 5 as new Title 5 provisions at the proper Title 5 anchor, and keep the repeal of PL-007-047 as history only.",
+      "source_evidence": [
+        "codification/laws/laws/PL-012-074/law.txt contains the short title, severability, repeal, and Title 5 organizational provisions.",
+        "audit/primary/batch-12-02.json classifies PL-012-074 as a current act that needs new Title 5 codification for sections 4 and 5.",
+        "usc/usc05.xml shows the branch note in Title 5, while origin/main does not yet show the needed positive-law Title 5 sections."
+      ],
+      "current_xml_comparison": "The current branch parks PL-012-074 as a note-only block in usc/usc05.xml, but the operative sections still need to be codified in Title 5; origin/main does not show the needed Title 5 implementation.",
+      "final_recommended_action": "Create the new Title 5 provisions for sections 4 and 5 and keep the repeal history concise.",
+      "confidence": "medium"
+    }
+  ]
+}

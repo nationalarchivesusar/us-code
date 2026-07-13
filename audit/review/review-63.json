@@ -1,0 +1,611 @@
+{
+  "reviewer": "law-auditor-63",
+  "group_index": 163,
+  "law_count": 10,
+  "source_manifest_path": "audit/manifests/review-repair-63.json",
+  "source_review_path": "audit/review/review-63.json",
+  "output_path": "audit/review/review-repair-63.json",
+  "reviewed_against": [
+    "audit/manifests/review-repair-63.json",
+    "audit/review/review-63.json",
+    "audit/primary/batch-13-03.json",
+    "audit/chronology-report.json",
+    "codification/mass_migration/latest/reports/laws/PL-016-112.md",
+    "codification/mass_migration/latest/reports/laws/PL-016-113.md",
+    "codification/mass_migration/latest/reports/laws/PL-016-114.md",
+    "codification/mass_migration/latest/reports/laws/PL-016-115.md",
+    "codification/mass_migration/latest/reports/laws/PL-016-116.md",
+    "codification/mass_migration/latest/reports/laws/PL-016-117.md",
+    "codification/mass_migration/latest/reports/laws/PL-016-118.md",
+    "codification/mass_migration/latest/reports/laws/PL-016-119.md",
+    "codification/mass_migration/latest/reports/laws/PL-016-120.md",
+    "codification/mass_migration/latest/reports/laws/PL-016-121.md",
+    "usc/usc01.xml",
+    "usc/usc02.xml",
+    "usc/usc18.xml",
+    "usc/usc22.xml",
+    "usc/usc50.xml",
+    "origin/main"
+  ],
+  "summary": {
+    "status_counts": {
+      "current": 7,
+      "superseded": 1,
+      "fully-repealed": 2
+    },
+    "xml_match_count": 0,
+    "origin_main_match_count": 0
+  },
+  "laws": [
+    {
+      "law_id": "PL-016-112",
+      "public_law": "16-112",
+      "title": "Public Law 16-112 | The Contempt of Congress Act",
+      "final_legal_status": "superseded",
+      "chronology_conclusion": "Later-law supersession controls: Pub. L. 31-228 repeals PL 16-112 and reinstates 2 U.S.C. 192 in full, so the enactment survives only as history.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "approved_code_treatment": "historical-note-only",
+          "target": "/us/usc/t2",
+          "exact_change": "Keep only a supersession history note; do not create operative Code text.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: Pub. L. 31-228 later repealed Public Law 16-112 and reinstated 2 U.S.C. 192 in full.",
+            "codification/mass_migration/latest/reports/laws/PL-016-112.md: No current Code insertion is made because PL-031-228 repeals this law."
+          ],
+          "current_xml_comparison": "No matching `rp-pl016112-codification` node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Retain only the supersession history and the restored 2 U.S.C. 192 reference; do not infer operative text.",
+          "confidence": "high"
+        }
+      ],
+      "approved_code_treatment": "historical-note-only",
+      "source_evidence": [
+        "audit/primary/batch-13-03.json: Pub. L. 31-228 later repealed Public Law 16-112 and reinstated 2 U.S.C. 192 in full.",
+        "codification/mass_migration/latest/reports/laws/PL-016-112.md: No current Code insertion is made because PL-031-228 repeals this law."
+      ],
+      "current_xml_comparison": "No matching `rp-pl016112-codification` node was found in the current branch XML searched, and no match was found in `origin/main`.",
+      "final_recommended_action": "Retain only the supersession history and the restored 2 U.S.C. 192 reference; do not infer operative text."
+    },
+    {
+      "law_id": "PL-016-113",
+      "public_law": "16-113",
+      "title": "Public Law 16-113 | The Bing Bong Act of 2023",
+      "final_legal_status": "current",
+      "chronology_conclusion": "No later-law repeal or sunset was identified in the reviewed materials; the repealing statute itself remains current.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "SEC 1",
+          "approved_code_treatment": "statutory-note",
+          "target": "/us/usc/t2/s6132",
+          "exact_change": "Short-title note only.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: The act may be cited as the Bing Bong Act of 2023.",
+            "codification/mass_migration/latest/reports/laws/PL-016-113.md: preserved as a statutory note at 2 U.S.C. § 6132."
+          ],
+          "current_xml_comparison": "No matching PL-016-113 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Create a concise title 2 statutory note at the designated anchor.",
+          "confidence": "high"
+        },
+        {
+          "ref": "SEC 2(a)",
+          "approved_code_treatment": "repeal-marking",
+          "target": "PL 15-96 (Prisoner Bail Protection Act)",
+          "exact_change": "Mark Public Law 15-96 repealed in its entirety.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: Public Law 15-96 shall be repealed in its entirety.",
+            "audit/primary/batch-13-03.json: The source is readable and operative."
+          ],
+          "current_xml_comparison": "No matching PL-016-113 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Apply repeal-marking to PL 15-96 wherever it is codified.",
+          "confidence": "high"
+        },
+        {
+          "ref": "SEC 3(a)",
+          "approved_code_treatment": "effective-date-note",
+          "target": "/us/usc/t2/s6132",
+          "exact_change": "Effective-date note only.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: This resolution takes effect immediately after passage.",
+            "codification/mass_migration/latest/reports/laws/PL-016-113.md: No express, uniquely executable Code amendment was found."
+          ],
+          "current_xml_comparison": "No matching PL-016-113 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Keep the immediate-effect clause as history only.",
+          "confidence": "high"
+        }
+      ],
+      "approved_code_treatment": "statutory-note; repeal-marking; effective-date-note",
+      "source_evidence": [
+        "audit/primary/batch-13-03.json: The act may be cited as the Bing Bong Act of 2023.",
+        "codification/mass_migration/latest/reports/laws/PL-016-113.md: preserved as a statutory note at 2 U.S.C. § 6132.",
+        "audit/primary/batch-13-03.json: Public Law 15-96 shall be repealed in its entirety.",
+        "audit/primary/batch-13-03.json: The source is readable and operative.",
+        "audit/primary/batch-13-03.json: This resolution takes effect immediately after passage.",
+        "codification/mass_migration/latest/reports/laws/PL-016-113.md: No express, uniquely executable Code amendment was found."
+      ],
+      "current_xml_comparison": "No matching PL-016-113 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+      "final_recommended_action": "Create a concise title 2 statutory note at the designated anchor. | Apply repeal-marking to PL 15-96 wherever it is codified. | Keep the immediate-effect clause as history only."
+    },
+    {
+      "law_id": "PL-016-114",
+      "public_law": "16-114",
+      "title": "Public Law 16-114 | Amended Ambassadorial Organization and Reporting Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "No later-law repeal was identified; the act remains a live amendment to PL 15-102 SEC III(e).",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "SEC I(a-c)",
+          "approved_code_treatment": "statutory-note",
+          "target": "/us/usc/t22/s1438",
+          "exact_change": "Title, severability, and effective-date note only.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: The act may be cited as the Amended Ambassadorial Organization and Reporting Act.",
+            "codification/mass_migration/latest/reports/laws/PL-016-114.md: preserved as a statutory note at 2 U.S.C. § 1438."
+          ],
+          "current_xml_comparison": "No matching PL-016-114 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Add the title 22 note and keep only a concise amendment note.",
+          "confidence": "high"
+        },
+        {
+          "ref": "SEC II(a-c)",
+          "approved_code_treatment": "amendment-note",
+          "target": "PL 15-102 SEC III(e)",
+          "exact_change": "Strike the old prohibition and insert the new presidential authority, notice, and Senate-consent language.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: Section III, Subsection e shall now read the following.",
+            "audit/primary/batch-13-03.json: Its only substantive effect is an express amendment to PL 15-102 SEC III(e)."
+          ],
+          "current_xml_comparison": "No matching PL-016-114 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Apply the PL 15-102 SEC III(e) substitution exactly as enacted.",
+          "confidence": "high"
+        }
+      ],
+      "approved_code_treatment": "statutory-note; amendment-note",
+      "source_evidence": [
+        "audit/primary/batch-13-03.json: The act may be cited as the Amended Ambassadorial Organization and Reporting Act.",
+        "codification/mass_migration/latest/reports/laws/PL-016-114.md: preserved as a statutory note at 2 U.S.C. § 1438.",
+        "audit/primary/batch-13-03.json: Section III, Subsection e shall now read the following.",
+        "audit/primary/batch-13-03.json: Its only substantive effect is an express amendment to PL 15-102 SEC III(e)."
+      ],
+      "current_xml_comparison": "No matching PL-016-114 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+      "final_recommended_action": "Add the title 22 note and keep only a concise amendment note. | Apply the PL 15-102 SEC III(e) substitution exactly as enacted."
+    },
+    {
+      "law_id": "PL-016-115",
+      "public_law": "16-115",
+      "title": "Public Law 16-115 | National Security Threat Mandatory Notification to Congressional Leadership Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "No later-law repeal or supersession was identified; the notification regime remains operative.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "SEC I(a-c)",
+          "approved_code_treatment": "statutory-note",
+          "target": "/us/usc/t50",
+          "exact_change": "Title, severability, and effective-date note only.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: The act may be cited as the National Security Threat Mandatory Notification to Congressional Leadership Act.",
+            "codification/mass_migration/latest/reports/laws/PL-016-115.md: preserved as a statutory note at 2 U.S.C. § 6132."
+          ],
+          "current_xml_comparison": "No matching PL-016-115 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Replace boilerplate with a title 50 statutory note.",
+          "confidence": "high"
+        },
+        {
+          "ref": "SEC II(a-b)",
+          "approved_code_treatment": "statutory-note",
+          "target": "/us/usc/t50",
+          "exact_change": "Definitions note.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: Congressional Leadership shall be defined as the Speaker of the House and related leaders.",
+            "audit/primary/batch-13-03.json: The source is readable and fully operative."
+          ],
+          "current_xml_comparison": "No matching PL-016-115 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Keep the definitions in the title 50 note, not as standalone positive-law text.",
+          "confidence": "high"
+        },
+        {
+          "ref": "SEC III(a-c)",
+          "approved_code_treatment": "statutory-note",
+          "target": "/us/usc/t50",
+          "exact_change": "Mandatory-notification duty and information-sharing rules.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: A designated individual from the Executive Branch shall notify the Congressional Leadership of foreign threats.",
+            "audit/primary/batch-13-03.json: Nothing repeals it."
+          ],
+          "current_xml_comparison": "No matching PL-016-115 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Record the operative notification duty as a statutory note under title 50.",
+          "confidence": "high"
+        },
+        {
+          "ref": "SEC IV(a)",
+          "approved_code_treatment": "statutory-note",
+          "target": "/us/usc/t18/s1512",
+          "exact_change": "Cross-reference to 18 U.S.C. 1512 only; no textual amendment supplied.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: Any failure to provide the information is classified as a crime under U.S. Code 1512.",
+            "codification/mass_migration/latest/reports/laws/PL-016-115.md: Cross-reference only."
+          ],
+          "current_xml_comparison": "No matching PL-016-115 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Treat 18 U.S.C. 1512 as reference-only; do not rewrite it.",
+          "confidence": "high"
+        }
+      ],
+      "approved_code_treatment": "statutory-note",
+      "source_evidence": [
+        "audit/primary/batch-13-03.json: The act may be cited as the National Security Threat Mandatory Notification to Congressional Leadership Act.",
+        "codification/mass_migration/latest/reports/laws/PL-016-115.md: preserved as a statutory note at 2 U.S.C. § 6132.",
+        "audit/primary/batch-13-03.json: Congressional Leadership shall be defined as the Speaker of the House and related leaders.",
+        "audit/primary/batch-13-03.json: The source is readable and fully operative.",
+        "audit/primary/batch-13-03.json: A designated individual from the Executive Branch shall notify the Congressional Leadership of foreign threats.",
+        "audit/primary/batch-13-03.json: Nothing repeals it.",
+        "audit/primary/batch-13-03.json: Any failure to provide the information is classified as a crime under U.S. Code 1512.",
+        "codification/mass_migration/latest/reports/laws/PL-016-115.md: Cross-reference only."
+      ],
+      "current_xml_comparison": "No matching PL-016-115 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+      "final_recommended_action": "Replace boilerplate with a title 50 statutory note. | Keep the definitions in the title 50 note, not as standalone positive-law text. | Record the operative notification duty as a statutory note under title 50. | Treat 18 U.S.C. 1512 as reference-only; do not rewrite it."
+    },
+    {
+      "law_id": "PL-016-116",
+      "public_law": "16-116",
+      "title": "Public Law 16-116 | Combatant Command Re-establishment Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "No later-law repeal was identified; the act remains operative and includes both repeal-marking and continuing structural commands.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "approved_code_treatment": "statutory-note",
+          "target": "/us/usc/t2/s172",
+          "exact_change": "Title and definitions note.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: This act may also be referred to as the Combatant Command Re-establishment Act.",
+            "codification/mass_migration/latest/reports/laws/PL-016-116.md: preserved as a statutory note at 2 U.S.C. § 172."
+          ],
+          "current_xml_comparison": "No matching PL-016-116 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Add the title 2 note and keep the definitions only as note material.",
+          "confidence": "high"
+        },
+        {
+          "ref": "SEC 3(a)",
+          "approved_code_treatment": "repeal-marking",
+          "target": "OCJCS Reform Act of 2022 / PL 7-48",
+          "exact_change": "Repeal-mark PL 7-48 in full.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: The OCJCS Reform Act of 2022 shall be repealed in its entirety.",
+            "audit/primary/batch-13-03.json: Caption also references repeal of Public Law 7-48."
+          ],
+          "current_xml_comparison": "No matching PL-016-116 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Apply the repeal marking to PL 7-48 wherever it is codified.",
+          "confidence": "high"
+        },
+        {
+          "ref": "SEC 4",
+          "approved_code_treatment": "statutory-note",
+          "target": "/us/usc/t2/s172",
+          "exact_change": "Severability note.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: This Act shall be severable.",
+            "codification/mass_migration/latest/reports/laws/PL-016-116.md: No express, uniquely executable Code amendment was found."
+          ],
+          "current_xml_comparison": "No matching PL-016-116 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Keep the severability clause as history only.",
+          "confidence": "high"
+        },
+        {
+          "ref": "SEC 5(a-b)",
+          "approved_code_treatment": "statutory-note",
+          "target": "/us/usc/t2/s172",
+          "exact_change": "Establish Cyber, SOCOM, STRATCOM, TRANSCOM, EUCOM, and SPACECOM as the sole combatant commands.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: The following Unified Combatant Commands shall be established in the United States Military.",
+            "audit/primary/batch-13-03.json: Re-establishes six Unified Combatant Commands and makes them the sole commands."
+          ],
+          "current_xml_comparison": "No matching PL-016-116 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Record the command re-establishment as title 2 note material.",
+          "confidence": "high"
+        },
+        {
+          "ref": "SEC 6(a-e)",
+          "approved_code_treatment": "statutory-note",
+          "target": "/us/usc/t2/s172",
+          "exact_change": "Reporting chain and operational authority rules.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: All Combatant Commanders will report directly to the Chairman of the Joint Chiefs of Staff.",
+            "audit/primary/batch-13-03.json: command-and-control rules."
+          ],
+          "current_xml_comparison": "No matching PL-016-116 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Keep the command chain rules in the note only.",
+          "confidence": "high"
+        },
+        {
+          "ref": "SEC 7(a-b)",
+          "approved_code_treatment": "statutory-note",
+          "target": "/us/usc/t2/s172",
+          "exact_change": "Conflict and supersession clause only.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: Nothing repeals PL 16-116.",
+            "codification/mass_migration/latest/reports/laws/PL-016-116.md: Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable."
+          ],
+          "current_xml_comparison": "No matching PL-016-116 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Preserve the conflict clause as historical note text.",
+          "confidence": "high"
+        }
+      ],
+      "approved_code_treatment": "statutory-note; repeal-marking",
+      "source_evidence": [
+        "audit/primary/batch-13-03.json: This act may also be referred to as the Combatant Command Re-establishment Act.",
+        "codification/mass_migration/latest/reports/laws/PL-016-116.md: preserved as a statutory note at 2 U.S.C. § 172.",
+        "audit/primary/batch-13-03.json: The OCJCS Reform Act of 2022 shall be repealed in its entirety.",
+        "audit/primary/batch-13-03.json: Caption also references repeal of Public Law 7-48.",
+        "audit/primary/batch-13-03.json: This Act shall be severable.",
+        "codification/mass_migration/latest/reports/laws/PL-016-116.md: No express, uniquely executable Code amendment was found.",
+        "audit/primary/batch-13-03.json: The following Unified Combatant Commands shall be established in the United States Military.",
+        "audit/primary/batch-13-03.json: Re-establishes six Unified Combatant Commands and makes them the sole commands.",
+        "audit/primary/batch-13-03.json: All Combatant Commanders will report directly to the Chairman of the Joint Chiefs of Staff.",
+        "audit/primary/batch-13-03.json: command-and-control rules.",
+        "audit/primary/batch-13-03.json: Nothing repeals PL 16-116.",
+        "codification/mass_migration/latest/reports/laws/PL-016-116.md: Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable."
+      ],
+      "current_xml_comparison": "No matching PL-016-116 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+      "final_recommended_action": "Add the title 2 note and keep the definitions only as note material. | Apply the repeal marking to PL 7-48 wherever it is codified. | Keep the severability clause as history only. | Record the command re-establishment as title 2 note material. | Keep the command chain rules in the note only. | Preserve the conflict clause as historical note text."
+    },
+    {
+      "law_id": "PL-016-117",
+      "public_law": "16-117",
+      "title": "Public Law 16-117 | The Clean Up Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "No later-law repeal was identified; the repealing resolution itself remains current and the repeal history is the operative result.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "SEC 1(a)",
+          "approved_code_treatment": "historical-note-only",
+          "target": "/us/usc/t2",
+          "exact_change": "Short-title note only.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: This Joint Resolution may be cited as the Clean Up Act of 2023.",
+            "codification/mass_migration/latest/reports/laws/PL-016-117.md: This Joint Resolution may be cited as the Clean Up Act of 2023."
+          ],
+          "current_xml_comparison": "No matching PL-016-117 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Keep the short title as history only.",
+          "confidence": "high"
+        },
+        {
+          "ref": "SEC 2(a)",
+          "approved_code_treatment": "historical-note-only",
+          "target": "/us/usc/t2",
+          "exact_change": "Historical note for the reasoning clause.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: Senate Joint Resolution 2 and 3 will never be used for their intended purposes.",
+            "audit/primary/batch-13-03.json: The source is readable and operative."
+          ],
+          "current_xml_comparison": "No matching PL-016-117 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Retain the rationale only as a historical note.",
+          "confidence": "high"
+        },
+        {
+          "ref": "SEC 3(a)",
+          "approved_code_treatment": "historical-note-only",
+          "target": "Senate Joint Resolution 2",
+          "exact_change": "Record repeal of SJRes 2.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: Senate Joint Resolution 2 ... shall be hereby repealed.",
+            "audit/primary/batch-13-03.json: The repealing resolution itself remains current."
+          ],
+          "current_xml_comparison": "No matching PL-016-117 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Record the repeal of Senate Joint Resolution 2 as history only.",
+          "confidence": "high"
+        },
+        {
+          "ref": "SEC 3(b)",
+          "approved_code_treatment": "historical-note-only",
+          "target": "Senate Joint Resolution 3",
+          "exact_change": "Record repeal of SJRes 3.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: Senate Joint Resolution 3 ... shall be hereby repealed.",
+            "audit/primary/batch-13-03.json: The repealing resolution itself remains current."
+          ],
+          "current_xml_comparison": "No matching PL-016-117 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Record the repeal of Senate Joint Resolution 3 as history only.",
+          "confidence": "high"
+        },
+        {
+          "ref": "SEC 4(a)",
+          "approved_code_treatment": "historical-note-only",
+          "target": "/us/usc/t2",
+          "exact_change": "Effective-date note.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: This Joint Resolution will take effect immediately after passage.",
+            "codification/mass_migration/latest/reports/laws/PL-016-117.md: historical-note-only."
+          ],
+          "current_xml_comparison": "No matching PL-016-117 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Keep the effective-date clause as history only.",
+          "confidence": "high"
+        }
+      ],
+      "approved_code_treatment": "historical-note-only",
+      "source_evidence": [
+        "audit/primary/batch-13-03.json: This Joint Resolution may be cited as the Clean Up Act of 2023.",
+        "codification/mass_migration/latest/reports/laws/PL-016-117.md: This Joint Resolution may be cited as the Clean Up Act of 2023.",
+        "audit/primary/batch-13-03.json: Senate Joint Resolution 2 and 3 will never be used for their intended purposes.",
+        "audit/primary/batch-13-03.json: The source is readable and operative.",
+        "audit/primary/batch-13-03.json: Senate Joint Resolution 2 ... shall be hereby repealed.",
+        "audit/primary/batch-13-03.json: The repealing resolution itself remains current.",
+        "audit/primary/batch-13-03.json: Senate Joint Resolution 3 ... shall be hereby repealed.",
+        "audit/primary/batch-13-03.json: This Joint Resolution will take effect immediately after passage.",
+        "codification/mass_migration/latest/reports/laws/PL-016-117.md: historical-note-only."
+      ],
+      "current_xml_comparison": "No matching PL-016-117 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+      "final_recommended_action": "Keep the short title as history only. | Retain the rationale only as a historical note. | Record the repeal of Senate Joint Resolution 2 as history only. | Record the repeal of Senate Joint Resolution 3 as history only. | Keep the effective-date clause as history only."
+    },
+    {
+      "law_id": "PL-016-118",
+      "public_law": "16-118",
+      "title": "Public Law 16-118 | The Uniformed Capitol Police Act of 2023",
+      "final_legal_status": "current",
+      "chronology_conclusion": "No later-law repeal was identified; the act remains operative and should be treated as a title 2 amendment note rather than title 18 boilerplate.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "SEC 1",
+          "approved_code_treatment": "statutory-note",
+          "target": "/us/usc/t2",
+          "exact_change": "Short-title note.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: This Act may be cited as the Uniformed Capitol Police Act of 2023.",
+            "codification/mass_migration/latest/reports/laws/PL-016-118.md: short-title note."
+          ],
+          "current_xml_comparison": "No matching PL-016-118 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Create the short-title note at the title 2 anchor.",
+          "confidence": "high"
+        },
+        {
+          "ref": "SEC 2(a)",
+          "approved_code_treatment": "amendment-note",
+          "target": "H.R. 8013 Section III",
+          "exact_change": "Repeal Section III of H.R. 8013.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: The following section of H.R. 8013 shall be repealed in its entirety; Section III.",
+            "audit/primary/batch-13-03.json: It repeals H.R. 8013 Section III and replaces that section with a new Capitol Police Board structure and powers."
+          ],
+          "current_xml_comparison": "No matching PL-016-118 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Apply the repeal to H.R. 8013 Section III exactly as enacted.",
+          "confidence": "high"
+        },
+        {
+          "ref": "SEC 3(a-c)",
+          "approved_code_treatment": "amendment-note",
+          "target": "H.R. 8013 Section III",
+          "exact_change": "Replace Section III with the new Capitol Police Board membership and powers.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: Section III shall now state the following.",
+            "audit/primary/batch-13-03.json: replaces that section with a new Capitol Police Board structure and powers."
+          ],
+          "current_xml_comparison": "No matching PL-016-118 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Apply the substitution to H.R. 8013 Section III exactly as enacted.",
+          "confidence": "high"
+        },
+        {
+          "ref": "SEC 4(a)",
+          "approved_code_treatment": "effective-date-note",
+          "target": "/us/usc/t2",
+          "exact_change": "Effective-date note.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: This Resolution will take effect immediately after passage.",
+            "codification/mass_migration/latest/reports/laws/PL-016-118.md: The authoritative source text is readable and operative."
+          ],
+          "current_xml_comparison": "No matching PL-016-118 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Keep the immediate-effect clause as history only.",
+          "confidence": "high"
+        }
+      ],
+      "approved_code_treatment": "statutory-note; amendment-note; effective-date-note",
+      "source_evidence": [
+        "audit/primary/batch-13-03.json: This Act may be cited as the Uniformed Capitol Police Act of 2023.",
+        "codification/mass_migration/latest/reports/laws/PL-016-118.md: short-title note.",
+        "audit/primary/batch-13-03.json: The following section of H.R. 8013 shall be repealed in its entirety; Section III.",
+        "audit/primary/batch-13-03.json: It repeals H.R. 8013 Section III and replaces that section with a new Capitol Police Board structure and powers.",
+        "audit/primary/batch-13-03.json: Section III shall now state the following.",
+        "audit/primary/batch-13-03.json: replaces that section with a new Capitol Police Board structure and powers.",
+        "audit/primary/batch-13-03.json: This Resolution will take effect immediately after passage.",
+        "codification/mass_migration/latest/reports/laws/PL-016-118.md: The authoritative source text is readable and operative."
+      ],
+      "current_xml_comparison": "No matching PL-016-118 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+      "final_recommended_action": "Create the short-title note at the title 2 anchor. | Apply the repeal to H.R. 8013 Section III exactly as enacted. | Apply the substitution to H.R. 8013 Section III exactly as enacted. | Keep the immediate-effect clause as history only."
+    },
+    {
+      "law_id": "PL-016-119",
+      "public_law": "16-119",
+      "title": "Public Law 16-119 | The Criminal Organization Act of 2023",
+      "final_legal_status": "current",
+      "chronology_conclusion": "No later-law repeal was identified, but the source bundle is unreadable; the law remains current only as a source-limited record.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "approved_code_treatment": "statutory-note",
+          "target": null,
+          "target_justification": "No exact anchor can be verified from the access-denied source bundle, so a positive-law target would be speculative.",
+          "exact_change": "No verified operative language can be stated.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: The source bundle is an access-denied page, so no operative text can be authenticated.",
+            "codification/mass_migration/latest/reports/laws/PL-016-119.md: No readable authenticated enactment text could be recovered."
+          ],
+          "current_xml_comparison": "No matching PL-016-119 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Retain only a source-limited historical note until a readable source is recovered.",
+          "confidence": "high"
+        }
+      ],
+      "approved_code_treatment": "statutory-note",
+      "source_evidence": [
+        "audit/primary/batch-13-03.json: The source bundle is an access-denied page, so no operative text can be authenticated.",
+        "codification/mass_migration/latest/reports/laws/PL-016-119.md: No readable authenticated enactment text could be recovered."
+      ],
+      "current_xml_comparison": "No matching PL-016-119 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+      "final_recommended_action": "Retain only a source-limited historical note until a readable source is recovered."
+    },
+    {
+      "law_id": "PL-016-120",
+      "public_law": "16-120",
+      "title": "Public Law 16-120 | The Hail Columbia Act",
+      "final_legal_status": "fully-repealed",
+      "chronology_conclusion": "The chronology keeps this as historical-note material only; no executable Code text survives the source gap.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "approved_code_treatment": "historical-note-only",
+          "target": "/us/usc/t1",
+          "exact_change": "Keep only a historical note; do not invent operative text.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: The source bundle is an access-denied page and no readable enactment was recovered.",
+            "codification/mass_migration/latest/reports/laws/PL-016-120.md: Historical note only; no readable enactment text was recovered."
+          ],
+          "current_xml_comparison": "No matching PL-016-120 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Retain only the historical note and do not invent operative text.",
+          "confidence": "high"
+        }
+      ],
+      "approved_code_treatment": "historical-note-only",
+      "source_evidence": [
+        "audit/primary/batch-13-03.json: The source bundle is an access-denied page and no readable enactment was recovered.",
+        "codification/mass_migration/latest/reports/laws/PL-016-120.md: Historical note only; no readable enactment text was recovered."
+      ],
+      "current_xml_comparison": "No matching PL-016-120 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+      "final_recommended_action": "Retain only the historical note and do not invent operative text."
+    },
+    {
+      "law_id": "PL-016-121",
+      "public_law": "16-121",
+      "title": "Public Law 16-121 | The Bill Transparency Understanding Act",
+      "final_legal_status": "fully-repealed",
+      "chronology_conclusion": "The chronology keeps this as a repealed historical note, and the source bundle remains unreadable.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "approved_code_treatment": "historical-note-only",
+          "target": "/us/usc/t1",
+          "exact_change": "Keep only a historical note; do not invent operative text.",
+          "source_evidence": [
+            "audit/primary/batch-13-03.json: The source bundle is an access-denied page and no readable enactment was recovered.",
+            "codification/mass_migration/latest/reports/laws/PL-016-121.md: Historical note only; the enactment text was not recovered."
+          ],
+          "current_xml_comparison": "No matching PL-016-121 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+          "final_recommended_action": "Retain only the historical note and do not invent operative text.",
+          "confidence": "high"
+        }
+      ],
+      "approved_code_treatment": "historical-note-only",
+      "source_evidence": [
+        "audit/primary/batch-13-03.json: The source bundle is an access-denied page and no readable enactment was recovered.",
+        "codification/mass_migration/latest/reports/laws/PL-016-121.md: Historical note only; the enactment text was not recovered."
+      ],
+      "current_xml_comparison": "No matching PL-016-121 node was found in the current branch XML searched, and no match was found in `origin/main`.",
+      "final_recommended_action": "Retain only the historical note and do not invent operative text."
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "reviewer": "law-auditor-67-1",
+  "group_index": 671,
+  "law_count": 5,
+  "source_manifest": "audit/manifests/review-repair-67-01.json",
+  "output_path": "audit/review/review-repair-67-01.json",
+  "reviewed_against": [
+    "audit/review/review-67.json",
+    "audit/manifests/review-repair-67-01.json",
+    "audit/chronology-report.json",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-021-123",
+      "public_law": "Public Law 21-123",
+      "title": "Unavailable source enactment",
+      "final_legal_status": "fully-repealed",
+      "chronology_conclusion": "The authoritative law package only exposes a permission-denied placeholder, and the prior migration report classifies the law as repealed with no operative codification work remaining.",
+      "approved_code_treatment": "nonoperative-history",
+      "source_evidence": [
+        "codification/laws/laws/PL-021-123/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-021-123.md"
+      ],
+      "current_xml_comparison": "Treat as nonoperative because the source package does not expose usable text. | No current XML integration was located for this law.",
+      "final_recommended_action": "No code change is authorized from the available source material. | Retain the repeal-history classification. | Do not draft XML changes without a recoverable enactment text.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "No readable enactment text is available in the authoritative source package.",
+          "classes": [
+            "source-unavailable",
+            "history-only"
+          ],
+          "treatment": "nonoperative-history",
+          "target": "none",
+          "exact_change": "No code change is authorized from the available source material.",
+          "evidence": [
+            "codification/laws/laws/PL-021-123/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-021-123.md"
+          ],
+          "notes": "Treat as nonoperative because the source package does not expose usable text."
+        }
+      ]
+    },
+    {
+      "law_id": "PL-022-153",
+      "public_law": "Public Law 22-153",
+      "title": "General provision",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The migration report classifies this as a statutory note directed to title 2, and the authoritative source text is a general provision rather than a title amendment.",
+      "approved_code_treatment": "statutory-note",
+      "source_evidence": [
+        "codification/laws/laws/PL-022-153/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-022-153.md",
+        "usc/usc50.xml"
+      ],
+      "current_xml_comparison": "Current branch placement appears to be in the wrong title file and should be moved to title 2. | The branch has a placeholder note in title 50, but the law belongs in title 2.",
+      "final_recommended_action": "Append a statutory note at title 2 section 6567 rather than altering operative code text. | Relocate the note to /us/usc/t2/s6567. | Remove the misfiled placeholder from title 50.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "sec4",
+          "text_summary": "General provision stating that code listings in the act are applicable pursuant to Public Law 1-1.",
+          "classes": [
+            "statutory-note",
+            "general-provision"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s6567",
+          "exact_change": "Append a statutory note at title 2 section 6567 rather than altering operative code text.",
+          "evidence": [
+            "codification/laws/laws/PL-022-153/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-022-153.md",
+            "usc/usc50.xml"
+          ],
+          "notes": "Current branch placement appears to be in the wrong title file and should be moved to title 2."
+        }
+      ],
+      "exact_target": "/us/usc/t2/s6567"
+    },
+    {
+      "law_id": "PL-022-154",
+      "public_law": "Public Law 22-154",
+      "title": "Definitions provision",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The migration report identifies the act as a statutory note, and the source text is a definitions section with no direct operative code rewrite.",
+      "approved_code_treatment": "statutory-note",
+      "source_evidence": [
+        "codification/laws/laws/PL-022-154/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-022-154.md",
+        "usc/usc52.xml"
+      ],
+      "current_xml_comparison": "The current branch note is mislocated in title 52. | A placeholder note exists, but the current placement does not match the target code location.",
+      "final_recommended_action": "Attach the note to title 28 section 1361. | Move the note to /us/usc/t28/s1361. | Delete the misplaced title 52 artifact.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "sec4",
+          "text_summary": "Definitions section for the act.",
+          "classes": [
+            "statutory-note",
+            "definitions"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/s1361",
+          "exact_change": "Attach the note to title 28 section 1361.",
+          "evidence": [
+            "codification/laws/laws/PL-022-154/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-022-154.md",
+            "usc/usc52.xml"
+          ],
+          "notes": "The current branch note is mislocated in title 52."
+        }
+      ],
+      "exact_target": "/us/usc/t28/s1361"
+    },
+    {
+      "law_id": "PL-022-155",
+      "public_law": "Public Law 22-155",
+      "title": "Department of Education repeal",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The migration report classifies the enactment as a statutory note and the source text contains direct repeal language for the cited public law and agency closure language.",
+      "approved_code_treatment": "statutory-note",
+      "source_evidence": [
+        "codification/laws/laws/PL-022-155/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-022-155.md",
+        "usc/usc20.xml"
+      ],
+      "current_xml_comparison": "The current branch artifact is filed in title 20 instead of title 2. | Branch content exists, but it is not placed at the target title section.",
+      "final_recommended_action": "Record the enactment as a note at title 2 section 1438 rather than an operative title rewrite. | Relocate the note to /us/usc/t2/s1438. | Remove the title 20 placeholder.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "section_v",
+          "text_summary": "Repeals Public Law 17-129 and provides that the United States Department of Education shall cease to exist.",
+          "classes": [
+            "statutory-note",
+            "repeal"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s1438",
+          "exact_change": "Record the enactment as a note at title 2 section 1438 rather than an operative title rewrite.",
+          "evidence": [
+            "codification/laws/laws/PL-022-155/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-022-155.md",
+            "usc/usc20.xml"
+          ],
+          "notes": "The current branch artifact is filed in title 20 instead of title 2."
+        }
+      ],
+      "exact_target": "/us/usc/t2/s1438"
+    },
+    {
+      "law_id": "PL-022-156",
+      "public_law": "Public Law 22-156",
+      "title": "Capitol Police and related title 2 amendments",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The source text contains direct title 2 amendments and repeals, and the current XML already reflects the incorporated changes.",
+      "approved_code_treatment": "already-incorporated",
+      "source_evidence": [
+        "codification/laws/laws/PL-022-156/law.txt",
+        "usc/usc02.xml",
+        "codification/mass_migration/latest/reports/laws/PL-022-156.md"
+      ],
+      "current_xml_comparison": "The authoritative current XML already contains the live text. | This provision is part of the already-incorporated package. | The operative text is already present in the baseline XML.",
+      "final_recommended_action": "No further XML change is needed because the amendment is already integrated. | No further XML change is needed because the repeal is already integrated. | Leave the current XML unchanged. | Use the baseline-integrated text as the canonical implementation.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "sec7",
+          "text_summary": "Amends title 2 Capitol Police provisions and related cross references.",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ],
+          "treatment": "already-incorporated",
+          "target": "/us/usc/t2/s1901",
+          "exact_change": "No further XML change is needed because the amendment is already integrated.",
+          "evidence": [
+            "codification/laws/laws/PL-022-156/law.txt",
+            "usc/usc02.xml",
+            "codification/mass_migration/latest/reports/laws/PL-022-156.md"
+          ],
+          "notes": "The authoritative current XML already contains the live text."
+        },
+        {
+          "ref": "sec7_repeal",
+          "text_summary": "Repeals title 2 section 1961 and related language.",
+          "classes": [
+            "direct-amendment",
+            "repeal"
+          ],
+          "treatment": "already-incorporated",
+          "target": "/us/usc/t2/s1961",
+          "exact_change": "No further XML change is needed because the repeal is already integrated.",
+          "evidence": [
+            "codification/laws/laws/PL-022-156/law.txt",
+            "usc/usc02.xml",
+            "codification/mass_migration/latest/reports/laws/PL-022-156.md"
+          ],
+          "notes": "This provision is part of the already-incorporated package."
+        }
+      ],
+      "exact_target": "/us/usc/t2/s1901"
+    }
+  ]
+}
