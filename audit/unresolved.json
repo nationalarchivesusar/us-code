@@ -3,21 +3,39 @@
   "provisions": [],
   "report_validation": {
     "summary": {
-      "review_report_count": 103,
+      "review_report_count": 115,
       "status_counts": {
-        "valid": 103
+        "source-defect-unresolved": 2,
+        "missing evidence": 8,
+        "valid": 105
       },
       "reviewed_law_count": 267,
-      "unknown_law_count": 0,
-      "reports_with_unknowns": [],
-      "reports_lacking_source_grounded_conclusions": []
+      "unknown_law_count": 3,
+      "reports_with_unknowns": [
+        "audit/review/review-01.json",
+        "audit/review/review-09.json"
+      ],
+      "reports_lacking_source_grounded_conclusions": [
+        "audit/review/review-02.json",
+        "audit/review/review-18.json",
+        "audit/review/review-41.json",
+        "audit/review/review-47.json",
+        "audit/review/review-54.json",
+        "audit/review/review-repair-18.json",
+        "audit/review/review-repair-50-01.json",
+        "audit/review/review-repair-80.json",
+        "audit/review/review-repair-83.json"
+      ]
     },
     "reports": [
       {
         "review_report": "audit/review/review-01.json",
         "manifest": "audit/review/manifest-01.json",
-        "status": "valid",
-        "issues": [],
+        "status": "source-defect-unresolved",
+        "issues": [
+          "operative-text-required-but-target-unresolved",
+          "source-defect-unresolved"
+        ],
         "law_count": 10,
         "manifest_law_count": 10,
         "missing_law_ids": [],
@@ -63,7 +81,8 @@
             "issues": [
               "missing confidence",
               "missing current XML comparison",
-              "missing final recommended action"
+              "missing final recommended action",
+              "source-defect-unresolved"
             ]
           },
           {
@@ -129,7 +148,8 @@
             "issues": [
               "missing confidence",
               "missing current XML comparison",
-              "missing final recommended action"
+              "missing final recommended action",
+              "operative-text-required-but-target-unresolved"
             ]
           }
         ]
@@ -137,8 +157,10 @@
       {
         "review_report": "audit/review/review-02.json",
         "manifest": "audit/review/manifest-02.json",
-        "status": "valid",
-        "issues": [],
+        "status": "missing evidence",
+        "issues": [
+          "missing evidence"
+        ],
         "law_count": 10,
         "manifest_law_count": 10,
         "missing_law_ids": [],
@@ -239,7 +261,8 @@
             "issues": [
               "missing confidence",
               "missing current XML comparison",
-              "missing final recommended action"
+              "missing final recommended action",
+              "unsupported source"
             ]
           },
           {
@@ -270,7 +293,8 @@
             "title": "Public Law 3-22 | District of Columbia Administration Act",
             "status": "unresolved",
             "issues": [
-              "missing approved code treatment"
+              "missing approved code treatment",
+              "unresolved conclusion"
             ]
           },
           {
@@ -279,7 +303,8 @@
             "title": "Public Law 3-23 | Federal Law Enforcement Training Center Establishment Act",
             "status": "unresolved",
             "issues": [
-              "missing approved code treatment"
+              "missing approved code treatment",
+              "unresolved conclusion"
             ]
           },
           {
@@ -528,7 +553,8 @@
             "title": "Public Law 7-46 | Whistleblower Protection Act",
             "status": "unresolved",
             "issues": [
-              "missing approved code treatment"
+              "missing approved code treatment",
+              "unresolved conclusion"
             ]
           },
           {
@@ -573,7 +599,8 @@
             "title": "Public Law 7-51 | Federal Agent Law Training Mandate",
             "status": "unresolved",
             "issues": [
-              "missing approved code treatment"
+              "missing approved code treatment",
+              "unresolved conclusion"
             ]
           }
         ]
@@ -592,7 +619,9 @@
             "public_law": "9-52",
             "title": "Public Law 9-52 | The Federal District Wages Act of 2022",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-009-053",
@@ -606,7 +635,9 @@
             "public_law": "9-54",
             "title": "Public Law 9-54 | The Smart Label Congress Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-009-055",
@@ -680,7 +711,9 @@
             "public_law": "9-63",
             "title": "Public Law 9-63 | The Federal District Employment Act of 2022",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-010-065",
@@ -775,28 +808,36 @@
             "public_law": "12-76",
             "title": "Public Law 12-76 | Removing Idiocy Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-012-077",
             "public_law": "12-77",
             "title": "Public Law 12-77 | Preventing Abuse and Promoting Democracy Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-012-078",
             "public_law": "12-78",
             "title": "Public Law 12-78 | Balancing Executive Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-012-079",
             "public_law": "12-79",
             "title": "Public Law 12-79 | Anti-Terrorism Act of 2023",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-012-080",
@@ -824,8 +865,10 @@
       {
         "review_report": "audit/review/review-09.json",
         "manifest": "audit/review/manifest-09.json",
-        "status": "valid",
-        "issues": [],
+        "status": "source-defect-unresolved",
+        "issues": [
+          "source-defect-unresolved"
+        ],
         "law_count": 10,
         "manifest_law_count": 10,
         "missing_law_ids": [],
@@ -926,7 +969,8 @@
             "issues": [
               "missing confidence",
               "missing current XML comparison",
-              "missing final recommended action"
+              "missing final recommended action",
+              "source-defect-unresolved"
             ]
           },
           {
@@ -963,14 +1007,18 @@
             "public_law": "15-94",
             "title": "Public Law 15-94 | Whistleblower Protections Act of 2023",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-015-095",
             "public_law": "15-95",
             "title": "Public Law 15-95 | An Act to Repeal the White House Protection Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-015-096",
@@ -1058,7 +1106,9 @@
             "public_law": "15-107",
             "title": "Public Law 15-107 | Guidance to Guidances Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-015-108",
@@ -1079,7 +1129,9 @@
             "public_law": "15-110",
             "title": "Public Law 15-110 | A Bill to Direct the DoD Inspector General to Investigate the Attack on the U.S. Embassy in Damascus",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-015-111",
@@ -1093,7 +1145,9 @@
             "public_law": "16-112",
             "title": "Public Law 16-112 | The Contempt of Congress Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-016-113",
@@ -1153,28 +1207,36 @@
             "public_law": "16-119",
             "title": "Public Law 16-119 | The Criminal Organization Act of 2023",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-016-120",
             "public_law": "16-120",
             "title": "Public Law 16-120 | The Hail Columbia Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-016-121",
             "public_law": "16-121",
             "title": "Public Law 16-121 | The Bill Transparency Understanding Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-016-122",
             "public_law": "16-122",
             "title": "Public Law 16-122 | The Congressional Competency Act of 2023",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-017-124",
@@ -1368,7 +1430,9 @@
             "public_law": "19-146",
             "title": "Public Law 19-146 | Refurbishing the Military Legal System Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-019-147",
@@ -1417,7 +1481,9 @@
             "public_law": "21-123",
             "title": "Public Law 21-123 | Freedom In Removing Employees and Deregulation Act of 2024",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-022-153",
@@ -1593,8 +1659,10 @@
       {
         "review_report": "audit/review/review-18.json",
         "manifest": "audit/review/manifest-18.json",
-        "status": "valid",
-        "issues": [],
+        "status": "missing evidence",
+        "issues": [
+          "missing evidence"
+        ],
         "law_count": 10,
         "manifest_law_count": 10,
         "missing_law_ids": [],
@@ -1604,7 +1672,9 @@
             "public_law": "24-176",
             "title": "Public Law 24-176 | Comprehensive Federal Government Funding Act",
             "status": "source_unavailable",
-            "issues": []
+            "issues": [
+              "source unavailable"
+            ]
           },
           {
             "law_id": "PL-024-177",
@@ -1646,7 +1716,9 @@
             "public_law": "25-182",
             "title": "Public Law 25-182 | Pentagon Expansion and National Territory Authorization Act",
             "status": "source_unavailable",
-            "issues": []
+            "issues": [
+              "source unavailable"
+            ]
           },
           {
             "law_id": "PL-025-183",
@@ -2319,42 +2391,54 @@
             "public_law": "3-20",
             "title": "Public Law 3-20 | National Immigration Employment Act of 2021",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-003-022",
             "public_law": "3-22",
             "title": "Public Law 3-22 | District of Columbia Administration Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-003-023",
             "public_law": "3-23",
             "title": "Public Law 3-23 | Federal Law Enforcement Training Center Establishment Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-004-032",
             "public_law": "4-32",
             "title": "Public Law 4-32 | Warrants, Subpoenas, and Summons Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-004-035",
             "public_law": "4-35",
             "title": "Public Law 4-35 | Recommissioning of the United States Ship New Jersey Act of 2022",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-007-046",
             "public_law": "7-46",
             "title": "Public Law 7-46 | Whistleblower Protection Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           }
         ]
       },
@@ -2372,42 +2456,54 @@
             "public_law": "7-51",
             "title": "Public Law 7-51 | Federal Agent Law Training Mandate",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-009-052",
             "public_law": "9-52",
             "title": "Public Law 9-52 | The Federal District Wages Act of 2022",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-009-054",
             "public_law": "9-54",
             "title": "Public Law 9-54 | The Smart Label Congress Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-009-063",
             "public_law": "9-63",
             "title": "Public Law 9-63 | The Federal District Employment Act of 2022",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-012-076",
             "public_law": "12-76",
             "title": "Public Law 12-76 | Removing Idiocy Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-012-077",
             "public_law": "12-77",
             "title": "Public Law 12-77 | Preventing Abuse and Promoting Democracy Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           }
         ]
       },
@@ -2425,42 +2521,54 @@
             "public_law": "12-78",
             "title": "Public Law 12-78 | Balancing Executive Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-012-079",
             "public_law": "12-79",
             "title": "Public Law 12-79 | Anti-Terrorism Act of 2023",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-014-091",
             "public_law": "14-91",
             "title": "Public Law 14-91 | Uniform Code of Military Justice Reform Act of 2023",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-015-094",
             "public_law": "15-94",
             "title": "Public Law 15-94 | Whistleblower Protections Act of 2023",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-015-095",
             "public_law": "15-95",
             "title": "Public Law 15-95 | An Act to Repeal the White House Protection Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-015-107",
             "public_law": "15-107",
             "title": "Public Law 15-107 | Guidance to Guidances Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           }
         ]
       },
@@ -2478,42 +2586,54 @@
             "public_law": "15-110",
             "title": "Public Law 15-110 | A Bill to Direct the DoD Inspector General to Investigate the Attack on the U.S. Embassy in Damascus",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-016-112",
             "public_law": "16-112",
             "title": "Public Law 16-112 | The Contempt of Congress Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-016-119",
             "public_law": "16-119",
             "title": "Public Law 16-119 | The Criminal Organization Act of 2023",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-016-120",
             "public_law": "16-120",
             "title": "Public Law 16-120 | The Hail Columbia Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-016-121",
             "public_law": "16-121",
             "title": "Public Law 16-121 | The Bill Transparency Understanding Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-016-122",
             "public_law": "16-122",
             "title": "Public Law 16-122 | The Congressional Competency Act of 2023",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           }
         ]
       },
@@ -2538,35 +2658,45 @@
             "public_law": "18-140",
             "title": "Public Law 18-140 | Federal Employment Act of 2023",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-018-141",
             "public_law": "18-141",
             "title": "Public Law 18-141 | Foreign Service Act of 2023",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-018-142",
             "public_law": "18-142",
             "title": "Public Law 18-142 | Business Licensing Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-018-143",
             "public_law": "18-143",
             "title": "Public Law 18-143 | United States Capitol Police Technical Corrections Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-019-146",
             "public_law": "19-146",
             "title": "Public Law 19-146 | Refurbishing the Military Legal System Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           }
         ]
       },
@@ -2584,42 +2714,54 @@
             "public_law": "21-123",
             "title": "Public Law 21-123 | Freedom In Removing Employees and Deregulation Act of 2024",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-023-171",
             "public_law": "23-171",
             "title": "Public Law 23-171 | Diplomatic Immunity Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-024-175",
             "public_law": "24-175",
             "title": "Public Law 24-175 | MPD Relocation Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-024-176",
             "public_law": "24-176",
             "title": "Public Law 24-176 | Comprehensive Federal Government Funding Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-024-177",
             "public_law": "24-177",
             "title": "Public Law 24-177 | SS Jurisdiction Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-025-182",
             "public_law": "25-182",
             "title": "Public Law 25-182 | Pentagon Expansion and National Territory Authorization Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           }
         ]
       },
@@ -2638,7 +2780,8 @@
             "title": "Public Law 3-20 | National Immigration Employment Act of 2021",
             "status": "unresolved",
             "issues": [
-              "missing approved code treatment"
+              "missing approved code treatment",
+              "unresolved conclusion"
             ]
           },
           {
@@ -2647,7 +2790,8 @@
             "title": "Public Law 3-22 | District of Columbia Administration Act",
             "status": "unresolved",
             "issues": [
-              "missing approved code treatment"
+              "missing approved code treatment",
+              "unresolved conclusion"
             ]
           },
           {
@@ -2656,7 +2800,8 @@
             "title": "Public Law 3-23 | Federal Law Enforcement Training Center Establishment Act",
             "status": "unresolved",
             "issues": [
-              "missing approved code treatment"
+              "missing approved code treatment",
+              "unresolved conclusion"
             ]
           },
           {
@@ -2737,7 +2882,8 @@
             "title": "Public Law 4-32 | Warrants, Subpoenas, and Summons Act",
             "status": "unresolved",
             "issues": [
-              "missing approved code treatment"
+              "missing approved code treatment",
+              "unresolved conclusion"
             ]
           },
           {
@@ -2746,7 +2892,8 @@
             "title": "Public Law 4-35 | Recommissioning of the United States Ship New Jersey Act of 2022",
             "status": "unresolved",
             "issues": [
-              "missing approved code treatment"
+              "missing approved code treatment",
+              "unresolved conclusion"
             ]
           },
           {
@@ -2791,7 +2938,8 @@
             "title": "Public Law 7-46 | Whistleblower Protection Act",
             "status": "unresolved",
             "issues": [
-              "missing approved code treatment"
+              "missing approved code treatment",
+              "unresolved conclusion"
             ]
           },
           {
@@ -3026,35 +3174,45 @@
             "public_law": "18-140",
             "title": "Public Law 18-140 | Federal Employment Act of 2023",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-018-141",
             "public_law": "18-141",
             "title": "Public Law 18-141 | Foreign Service Act of 2023",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-018-142",
             "public_law": "18-142",
             "title": "Public Law 18-142 | Business Licensing Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-018-143",
             "public_law": "18-143",
             "title": "Public Law 18-143 | United States Capitol Police Technical Corrections Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-019-146",
             "public_law": "19-146",
             "title": "Public Law 19-146 | Refurbishing the Military Legal System Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-021-123",
@@ -3117,7 +3275,9 @@
             "public_law": "22-161",
             "title": "Public Law 22-161 | Second Chance Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-022-162",
@@ -3131,7 +3291,9 @@
             "public_law": "22-163",
             "title": "Public Law 22-163 | Employee's Bill of Rights",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-023-171",
@@ -3145,14 +3307,18 @@
             "public_law": "24-175",
             "title": "Public Law 24-175 | MPD Relocation Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-024-176",
             "public_law": "24-176",
             "title": "Public Law 24-176 | Comprehensive Federal Government Funding Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           }
         ]
       },
@@ -3170,7 +3336,9 @@
             "public_law": "24-177",
             "title": "Public Law 24-177 | SS Jurisdiction Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-024-178",
@@ -3205,7 +3373,9 @@
             "public_law": "25-182",
             "title": "Public Law 25-182 | Pentagon Expansion and National Territory Authorization Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-025-183",
@@ -3240,7 +3410,9 @@
             "public_law": "30-222",
             "title": "Public Law 30-222 | Foreign Intelligence Surveillance Court Establishment Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-030-223",
@@ -3289,7 +3461,9 @@
             "public_law": "31-229",
             "title": "Public Law 31-229 | Fiscal Year 25-1",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-032-230",
@@ -3540,7 +3714,8 @@
             "status": "unresolved",
             "issues": [
               "missing confidence",
-              "missing final recommended action"
+              "missing final recommended action",
+              "unresolved conclusion"
             ]
           },
           {
@@ -3659,21 +3834,27 @@
             "public_law": "3-20",
             "title": "Public Law 3-20 | National Immigration Employment Act of 2021",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-003-022",
             "public_law": "3-22",
             "title": "Public Law 3-22 | District of Columbia Administration Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-003-023",
             "public_law": "3-23",
             "title": "Public Law 3-23 | Federal Law Enforcement Training Center Establishment Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-003-024",
@@ -3736,14 +3917,18 @@
             "public_law": "4-32",
             "title": "Public Law 4-32 | Warrants, Subpoenas, and Summons Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-004-035",
             "public_law": "4-35",
             "title": "Public Law 4-35 | Recommissioning of the United States Ship New Jersey Act of 2022",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-007-042",
@@ -3778,7 +3963,9 @@
             "public_law": "7-46",
             "title": "Public Law 7-46 | Whistleblower Protection Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-007-047",
@@ -3950,8 +4137,10 @@
       {
         "review_report": "audit/review/review-41.json",
         "manifest": "audit/manifests/manifest-41.json",
-        "status": "valid",
-        "issues": [],
+        "status": "missing evidence",
+        "issues": [
+          "missing evidence"
+        ],
         "law_count": 20,
         "manifest_law_count": 20,
         "missing_law_ids": [],
@@ -3968,35 +4157,45 @@
             "public_law": "18-140",
             "title": "Public Law 18-140 | Federal Employment Act of 2023",
             "status": "source-unavailable",
-            "issues": []
+            "issues": [
+              "source unavailable"
+            ]
           },
           {
             "law_id": "PL-018-141",
             "public_law": "18-141",
             "title": "Public Law 18-141 | Foreign Service Act of 2023",
             "status": "source-unavailable",
-            "issues": []
+            "issues": [
+              "source unavailable"
+            ]
           },
           {
             "law_id": "PL-018-142",
             "public_law": "18-142",
             "title": "Public Law 18-142 | Business Licensing Act",
             "status": "source-unavailable",
-            "issues": []
+            "issues": [
+              "source unavailable"
+            ]
           },
           {
             "law_id": "PL-018-143",
             "public_law": "18-143",
             "title": "Public Law 18-143 | United States Capitol Police Technical Corrections Act",
             "status": "source-unavailable",
-            "issues": []
+            "issues": [
+              "source unavailable"
+            ]
           },
           {
             "law_id": "PL-019-146",
             "public_law": "19-146",
             "title": "Public Law 19-146 | Refurbishing the Military Legal System Act",
             "status": "source-unavailable",
-            "issues": []
+            "issues": [
+              "source unavailable"
+            ]
           },
           {
             "law_id": "PL-021-123",
@@ -4059,7 +4258,9 @@
             "public_law": "22-161",
             "title": "Public Law 22-161 | Second Chance Act",
             "status": "source-unavailable",
-            "issues": []
+            "issues": [
+              "source unavailable"
+            ]
           },
           {
             "law_id": "PL-022-162",
@@ -4073,7 +4274,9 @@
             "public_law": "22-163",
             "title": "Public Law 22-163 | Employee's Bill of Rights",
             "status": "source-unavailable",
-            "issues": []
+            "issues": [
+              "source unavailable"
+            ]
           },
           {
             "law_id": "PL-023-171",
@@ -4087,14 +4290,18 @@
             "public_law": "24-175",
             "title": "Public Law 24-175 | MPD Relocation Act",
             "status": "source-unavailable",
-            "issues": []
+            "issues": [
+              "source unavailable"
+            ]
           },
           {
             "law_id": "PL-024-176",
             "public_law": "24-176",
             "title": "Public Law 24-176 | Comprehensive Federal Government Funding Act",
             "status": "source-unavailable",
-            "issues": []
+            "issues": [
+              "source unavailable"
+            ]
           }
         ]
       },
@@ -4681,7 +4888,9 @@
             "public_law": "3-20",
             "title": "Public Law 3-20 | National Immigration Employment Act of 2021",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-003-021",
@@ -4695,8 +4904,10 @@
       {
         "review_report": "audit/review/review-47.json",
         "manifest": "audit/manifests/manifest-47.json",
-        "status": "valid",
-        "issues": [],
+        "status": "missing evidence",
+        "issues": [
+          "missing evidence"
+        ],
         "law_count": 10,
         "manifest_law_count": 10,
         "missing_law_ids": [],
@@ -4727,7 +4938,9 @@
             "public_law": "4-35",
             "title": "Public Law 4-35 | Recommissioning of the United States Ship New Jersey Act of 2022",
             "status": "source-unavailable",
-            "issues": []
+            "issues": [
+              "source unavailable"
+            ]
           },
           {
             "law_id": "PL-004-036",
@@ -4868,7 +5081,9 @@
             "public_law": "24-177",
             "title": "Public Law 24-177 | SS Jurisdiction Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-024-178",
@@ -4903,7 +5118,9 @@
             "public_law": "25-182",
             "title": "Public Law 25-182 | Pentagon Expansion and National Territory Authorization Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-025-183",
@@ -4987,7 +5204,9 @@
             "public_law": "31-229",
             "title": "Public Law 31-229 | Fiscal Year 25-1",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-032-230",
@@ -5325,8 +5544,10 @@
       {
         "review_report": "audit/review/review-54.json",
         "manifest": "audit/manifests/manifest-78.json",
-        "status": "valid",
-        "issues": [],
+        "status": "missing evidence",
+        "issues": [
+          "missing evidence"
+        ],
         "law_count": 10,
         "manifest_law_count": 10,
         "missing_law_ids": [],
@@ -5378,7 +5599,9 @@
             "public_law": "4-35",
             "title": "Public Law 4-35 | Recommissioning of the United States Ship New Jersey Act of 2022",
             "status": "source-unavailable",
-            "issues": []
+            "issues": [
+              "source unavailable"
+            ]
           },
           {
             "law_id": "PL-004-036",
@@ -5466,7 +5689,9 @@
             "public_law": "7-46",
             "title": "Public Law 7-46 | Whistleblower Protection Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-007-047",
@@ -5512,14 +5737,18 @@
             "public_law": "7-51",
             "title": "Public Law 7-51 | Federal Agent Law Training Mandate",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-009-052",
             "public_law": "9-52",
             "title": "Public Law 9-52 | The Federal District Wages Act of 2022",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-009-053",
@@ -5533,7 +5762,9 @@
             "public_law": "9-54",
             "title": "Public Law 9-54 | The Smart Label Congress Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-009-055",
@@ -5600,7 +5831,9 @@
             "public_law": "9-63",
             "title": "Public Law 9-63 | The Federal District Employment Act of 2022",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-010-065",
@@ -5667,7 +5900,9 @@
             "public_law": "9-63",
             "title": "Public Law 9-63 | The Federal District Employment Act of 2022",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-009-064",
@@ -5769,7 +6004,9 @@
             "public_law": "12-76",
             "title": "Public Law 12-76 | Removing Idiocy Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-012-077",
@@ -5903,7 +6140,9 @@
             "public_law": "14-91",
             "title": "Public Law 14-91 | Military Code of Military Justice Reform Act of 2023",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-015-092",
@@ -5924,14 +6163,18 @@
             "public_law": "15-94",
             "title": "Public Law 15-94 | Whistleblower Protections Act of 2023",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-015-095",
             "public_law": "15-95",
             "title": "Public Law 15-95 | An Act to Repeal the White House Protection Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-015-096",
@@ -6019,28 +6262,36 @@
             "public_law": "15-107",
             "title": "Public Law 15-107 | Guidance to Guidances Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-015-108",
             "public_law": "15-108",
             "title": "Public Law 15-108 | Reclassification of Labeling Act of 2023",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-015-109",
             "public_law": "15-109",
             "title": "Public Law 15-109 | Ending Tigray for the Last Time",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-015-110",
             "public_law": "15-110",
             "title": "Public Law 15-110 | A Bill to Direct the Inspector General of the Department of Defense to Conduct an Investigation Into the Attack on the United States Embassy in Damascus, and for Other Purposes",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-015-111",
@@ -6815,7 +7066,9 @@
             "public_law": "28-205",
             "title": "Public Law 28-205 | Inspector General Reform Act of 2024",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-028-206",
@@ -6843,7 +7096,9 @@
             "public_law": "29-209",
             "title": "Public Law 29-209 | Terms of Service Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-029-210",
@@ -6998,7 +7253,9 @@
             "public_law": "31-229",
             "title": "Public Law 31-229 | Fiscal Year 25-1",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-032-230",
@@ -7105,7 +7362,7 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1070.json",
+        "review_report": "audit/review/review-repair-07.json",
         "manifest": "audit/manifests/review-repair-07.json",
         "status": "valid",
         "issues": [],
@@ -7128,7 +7385,8 @@
             "title": "Public Law 9-63 | The Federal District Employment Act of 2022",
             "status": "unresolved",
             "issues": [
-              "missing approved code treatment"
+              "missing approved code treatment",
+              "unresolved conclusion"
             ]
           },
           {
@@ -7206,7 +7464,7 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1072.json",
+        "review_report": "audit/review/review-repair-07-02.json",
         "manifest": "audit/manifests/review-repair-07-02.json",
         "status": "valid",
         "issues": [],
@@ -7229,7 +7487,8 @@
             "title": "Public Law 9-63 | The Federal District Employment Act of 2022",
             "status": "unresolved",
             "issues": [
-              "missing approved code treatment"
+              "missing approved code treatment",
+              "unresolved conclusion"
             ]
           },
           {
@@ -7307,7 +7566,7 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1080.json",
+        "review_report": "audit/review/review-repair-08.json",
         "manifest": "audit/review/manifest-08.json",
         "status": "valid",
         "issues": [],
@@ -7348,7 +7607,8 @@
             "title": "Public Law 12-76 | Removing Idiocy Act",
             "status": "unresolved",
             "issues": [
-              "missing current XML comparison"
+              "missing current XML comparison",
+              "unresolved conclusion"
             ]
           },
           {
@@ -7357,7 +7617,8 @@
             "title": "Public Law 12-77 | Preventing Abuse and Promoting Democracy Act",
             "status": "unresolved",
             "issues": [
-              "missing current XML comparison"
+              "missing current XML comparison",
+              "unresolved conclusion"
             ]
           },
           {
@@ -7366,7 +7627,8 @@
             "title": "Public Law 12-78 | Balancing Executive Act",
             "status": "unresolved",
             "issues": [
-              "missing current XML comparison"
+              "missing current XML comparison",
+              "unresolved conclusion"
             ]
           },
           {
@@ -7375,7 +7637,8 @@
             "title": "Public Law 12-79 | Anti-Terrorism Act of 2023",
             "status": "unresolved",
             "issues": [
-              "missing current XML comparison"
+              "missing current XML comparison",
+              "unresolved conclusion"
             ]
           },
           {
@@ -7408,7 +7671,7 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1110.json",
+        "review_report": "audit/review/review-repair-11.json",
         "manifest": "audit/review/manifest-11.json",
         "status": "valid",
         "issues": [],
@@ -7449,7 +7712,8 @@
             "title": "Public Law 15-107 | Guidance to Guidances Act",
             "status": "unresolved",
             "issues": [
-              "missing current XML comparison"
+              "missing current XML comparison",
+              "unresolved conclusion"
             ]
           },
           {
@@ -7458,7 +7722,8 @@
             "title": "Public Law 15-108 | The Reclassification of Labeling Act of 2023",
             "status": "unresolved",
             "issues": [
-              "missing current XML comparison"
+              "missing current XML comparison",
+              "unresolved conclusion"
             ]
           },
           {
@@ -7467,7 +7732,8 @@
             "title": "Public Law 15-109 | Ending Tigray for the Last Time",
             "status": "unresolved",
             "issues": [
-              "missing current XML comparison"
+              "missing current XML comparison",
+              "unresolved conclusion"
             ]
           },
           {
@@ -7476,7 +7742,8 @@
             "title": "Public Law 15-110 | A Bill to Direct the DoD Inspector General to Investigate the Attack on the U.S. Embassy in Damascus",
             "status": "unresolved",
             "issues": [
-              "missing current XML comparison"
+              "missing current XML comparison",
+              "unresolved conclusion"
             ]
           },
           {
@@ -7509,7 +7776,7 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1120.json",
+        "review_report": "audit/review/review-repair-12.json",
         "manifest": "audit/review/manifest-12.json",
         "status": "valid",
         "issues": [],
@@ -7557,28 +7824,36 @@
             "public_law": "16-119",
             "title": "Public Law 16-119 | The Criminal Organization Act of 2023",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-016-120",
             "public_law": "16-120",
             "title": "Public Law 16-120 | The Hail Columbia Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-016-121",
             "public_law": "16-121",
             "title": "Public Law 16-121 | The Bill Transparency Understanding Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-016-122",
             "public_law": "16-122",
             "title": "Public Law 16-122 | The Congressional Competency Act of 2023",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-017-124",
@@ -7590,10 +7865,12 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1180.json",
+        "review_report": "audit/review/review-repair-18.json",
         "manifest": "audit/manifests/review-repair-18.json",
-        "status": "valid",
-        "issues": [],
+        "status": "missing evidence",
+        "issues": [
+          "missing evidence"
+        ],
         "law_count": 10,
         "manifest_law_count": 10,
         "missing_law_ids": [],
@@ -7603,14 +7880,18 @@
             "public_law": "24-176",
             "title": "Public Law 24-176 | Comprehensive Federal Government Funding Act",
             "status": "source_unavailable",
-            "issues": []
+            "issues": [
+              "source unavailable"
+            ]
           },
           {
             "law_id": "PL-024-177",
             "public_law": "24-177",
             "title": "Public Law 24-177 | SS Jurisdiction Act",
             "status": "source_unavailable",
-            "issues": []
+            "issues": [
+              "source unavailable"
+            ]
           },
           {
             "law_id": "PL-024-178",
@@ -7671,7 +7952,7 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1182.json",
+        "review_report": "audit/review/review-repair-18-02.json",
         "manifest": "audit/manifests/review-repair-18-02.json",
         "status": "valid",
         "issues": [],
@@ -7685,7 +7966,8 @@
             "title": "Public Law 24-176 | Comprehensive Federal Government Funding Act",
             "status": "unresolved",
             "issues": [
-              "missing approved code treatment"
+              "missing approved code treatment",
+              "unresolved conclusion"
             ]
           },
           {
@@ -7694,7 +7976,8 @@
             "title": "Public Law 24-177 | SS Jurisdiction Act",
             "status": "unresolved",
             "issues": [
-              "missing approved code treatment"
+              "missing approved code treatment",
+              "unresolved conclusion"
             ]
           },
           {
@@ -7739,7 +8022,8 @@
             "title": "Public Law 25-182 | Pentagon Expansion and National Territory Authorization Act",
             "status": "unresolved",
             "issues": [
-              "missing approved code treatment"
+              "missing approved code treatment",
+              "unresolved conclusion"
             ]
           },
           {
@@ -7772,7 +8056,7 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1230.json",
+        "review_report": "audit/review/review-repair-23.json",
         "manifest": "audit/manifests/review-repair-23.json",
         "status": "valid",
         "issues": [],
@@ -7853,7 +8137,7 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1260.json",
+        "review_report": "audit/review/review-repair-26.json",
         "manifest": "audit/manifests/review-repair-26.json",
         "status": "valid",
         "issues": [],
@@ -7936,7 +8220,7 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1262.json",
+        "review_report": "audit/review/review-repair-26-02.json",
         "manifest": "audit/manifests/review-repair-26-02.json",
         "status": "valid",
         "issues": [],
@@ -8019,10 +8303,12 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1501.json",
+        "review_report": "audit/review/review-repair-50-01.json",
         "manifest": "audit/manifests/review-repair-50-01.json",
-        "status": "valid",
-        "issues": [],
+        "status": "missing evidence",
+        "issues": [
+          "missing evidence"
+        ],
         "law_count": 10,
         "manifest_law_count": 10,
         "missing_law_ids": [],
@@ -8067,7 +8353,9 @@
             "public_law": "37-261",
             "title": "Public Law 37-261 | Federal Criminal Code Act of 2025",
             "status": "source_unavailable",
-            "issues": []
+            "issues": [
+              "source unavailable"
+            ]
           },
           {
             "law_id": "PL-038-262",
@@ -8100,7 +8388,7 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1502.json",
+        "review_report": "audit/review/review-repair-50-02.json",
         "manifest": "audit/manifests/review-repair-50-02.json",
         "status": "valid",
         "issues": [],
@@ -8157,10 +8445,8 @@
             "law_id": "PL-037-261",
             "public_law": "37-261",
             "title": "Public Law 37-261 | Federal Criminal Code Act of 2025",
-            "status": "unresolved",
-            "issues": [
-              "missing approved code treatment"
-            ]
+            "status": "current",
+            "issues": []
           },
           {
             "law_id": "PL-038-262",
@@ -8201,7 +8487,7 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1580.json",
+        "review_report": "audit/review/review-repair-58.json",
         "manifest": "audit/manifests/review-repair-58.json",
         "status": "valid",
         "issues": [],
@@ -8221,7 +8507,9 @@
             "public_law": "9-63",
             "title": "Public Law 9-63 | The Federal District Employment Act of 2022",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-009-064",
@@ -8282,7 +8570,7 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1590.json",
+        "review_report": "audit/review/review-repair-59.json",
         "manifest": "audit/manifests/review-repair-59.json",
         "status": "valid",
         "issues": [],
@@ -8323,7 +8611,9 @@
             "public_law": "12-76",
             "title": "Public Law 12-76 | Removing Idiocy Act",
             "status": "unresolved",
-            "issues": []
+            "issues": [
+              "unresolved conclusion"
+            ]
           },
           {
             "law_id": "PL-012-077",
@@ -8363,7 +8653,7 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1600.json",
+        "review_report": "audit/review/review-repair-60.json",
         "manifest": "audit/manifests/review-repair-60.json",
         "status": "valid",
         "issues": [],
@@ -8444,7 +8734,7 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1620.json",
+        "review_report": "audit/review/review-repair-62.json",
         "manifest": "audit/manifests/review-repair-62.json",
         "status": "valid",
         "issues": [],
@@ -8525,7 +8815,7 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1622.json",
+        "review_report": "audit/review/review-repair-62-02.json",
         "manifest": "audit/manifests/review-repair-62-02.json",
         "status": "valid",
         "issues": [],
@@ -8606,8 +8896,8 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1630.json",
-        "manifest": "audit/review/manifest-1630.json",
+        "review_report": "audit/review/review-repair-63.json",
+        "manifest": "audit/review/review-repair-63.json",
         "status": "valid",
         "issues": [],
         "law_count": 10,
@@ -8687,7 +8977,7 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1640.json",
+        "review_report": "audit/review/review-repair-64.json",
         "manifest": "audit/manifests/review-repair-64.json",
         "status": "valid",
         "issues": [],
@@ -8768,7 +9058,7 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1650.json",
+        "review_report": "audit/review/review-repair-65.json",
         "manifest": "audit/manifests/review-repair-65.json",
         "status": "valid",
         "issues": [],
@@ -8849,7 +9139,7 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1660.json",
+        "review_report": "audit/review/review-repair-66.json",
         "manifest": "audit/manifests/review-repair-66.json",
         "status": "valid",
         "issues": [],
@@ -8930,7 +9220,7 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1670.json",
+        "review_report": "audit/review/review-repair-67.json",
         "manifest": "audit/manifests/review-repair-67.json",
         "status": "valid",
         "issues": [],
@@ -9011,7 +9301,7 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1671.json",
+        "review_report": "audit/review/review-repair-67-01.json",
         "manifest": "audit/manifests/review-repair-67-01.json",
         "status": "valid",
         "issues": [],
@@ -9057,7 +9347,7 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1672.json",
+        "review_report": "audit/review/review-repair-67-02.json",
         "manifest": "audit/manifests/review-repair-67-02.json",
         "status": "valid",
         "issues": [],
@@ -9096,14 +9386,14 @@
           {
             "law_id": "PL-022-161",
             "public_law": "Public Law 22-161",
-            "title": "Source-unavailable enactment",
-            "status": "unresolved",
+            "title": "Second Chance Act",
+            "status": "current",
             "issues": []
           }
         ]
       },
       {
-        "review_report": "audit/review/review-1690.json",
+        "review_report": "audit/review/review-repair-69.json",
         "manifest": "audit/manifests/review-repair-69.json",
         "status": "valid",
         "issues": [],
@@ -9184,8 +9474,8 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1701.json",
-        "manifest": "audit/review/manifest-1701.json",
+        "review_report": "audit/review/review-repair-70-01.json",
+        "manifest": "audit/review/review-repair-70-01.json",
         "status": "valid",
         "issues": [],
         "law_count": 10,
@@ -9291,7 +9581,7 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1711.json",
+        "review_report": "audit/review/review-repair-71-01.json",
         "manifest": "audit/manifests/review-repair-71-01.json",
         "status": "valid",
         "issues": [],
@@ -9359,7 +9649,8 @@
             "title": "Public Law 31-229 | Fiscal Year 25-1",
             "status": "unresolved",
             "issues": [
-              "missing approved code treatment"
+              "missing approved code treatment",
+              "unresolved conclusion"
             ]
           },
           {
@@ -9392,7 +9683,7 @@
         ]
       },
       {
-        "review_report": "audit/review/review-1721.json",
+        "review_report": "audit/review/review-repair-72-01.json",
         "manifest": "audit/manifests/review-repair-72-01.json",
         "status": "valid",
         "issues": [],
@@ -9491,9 +9782,535 @@
             ]
           }
         ]
+      },
+      {
+        "review_report": "audit/review/review-repair-80.json",
+        "manifest": "audit/manifests/review-repair-80.json",
+        "status": "valid",
+        "issues": [],
+        "law_count": 4,
+        "manifest_law_count": null,
+        "missing_law_ids": [],
+        "laws": [
+          {
+            "law_id": "PL-003-020",
+            "public_law": "3-20",
+            "title": "Public Law 3-20 | National Immigration Employment Act of 2021",
+            "status": "repealed",
+            "issues": [
+              "missing chronology conclusion"
+            ]
+          },
+          {
+            "law_id": "PL-003-022",
+            "public_law": "3-22",
+            "title": "Public Law 3-22 | District of Columbia Administration Act",
+            "status": "repealed",
+            "issues": [
+              "missing chronology conclusion"
+            ]
+          },
+          {
+            "law_id": "PL-003-023",
+            "public_law": "3-23",
+            "title": "Public Law 3-23 | Federal Law Enforcement Training Center Establishment Act",
+            "status": "repealed",
+            "issues": [
+              "missing chronology conclusion"
+            ]
+          },
+          {
+            "law_id": "PL-004-032",
+            "public_law": "4-32",
+            "title": "Public Law 4-32 | Warrants, Subpoenas, and Summons Act",
+            "status": "superseded",
+            "issues": [
+              "missing chronology conclusion"
+            ]
+          }
+        ]
+      },
+      {
+        "review_report": "audit/review/review-repair-81.json",
+        "manifest": "audit/manifests/review-repair-81.json",
+        "status": "valid",
+        "issues": [],
+        "law_count": 4,
+        "manifest_law_count": null,
+        "missing_law_ids": [],
+        "laws": [
+          {
+            "law_id": "PL-004-035",
+            "public_law": "4-35",
+            "title": "Public Law 4-35 | Recommissioning of the United States Ship New Jersey Act of 2022",
+            "status": "source-limited-historical-note",
+            "issues": []
+          },
+          {
+            "law_id": "PL-007-046",
+            "public_law": "7-46",
+            "title": "Public Law 7-46 | Whistleblower Protection Act",
+            "status": "source-limited-historical-note",
+            "issues": []
+          },
+          {
+            "law_id": "PL-009-063",
+            "public_law": "9-63",
+            "title": "Public Law 9-63 | The Federal District Employment Act of 2022",
+            "status": "source-limited-historical-note",
+            "issues": []
+          },
+          {
+            "law_id": "PL-012-076",
+            "public_law": "12-76",
+            "title": "Public Law 12-76 | Removing Idiocy Act",
+            "status": "unresolved",
+            "issues": [
+              "unresolved conclusion"
+            ]
+          }
+        ]
+      },
+      {
+        "review_report": "audit/review/review-repair-82.json",
+        "manifest": "audit/manifests/review-repair-82.json",
+        "status": "valid",
+        "issues": [],
+        "law_count": 4,
+        "manifest_law_count": null,
+        "missing_law_ids": [],
+        "laws": [
+          {
+            "law_id": "PL-014-091",
+            "public_law": "14-91",
+            "title": "Public Law 14-91 | Military Code of Military Justice Reform Act of 2023",
+            "status": "current",
+            "issues": [
+              "missing approved code treatment"
+            ]
+          },
+          {
+            "law_id": "PL-015-094",
+            "public_law": "15-94",
+            "title": "Public Law 15-94 | Whistleblower Protections Act of 2023",
+            "status": "current",
+            "issues": [
+              "missing approved code treatment"
+            ]
+          },
+          {
+            "law_id": "PL-015-095",
+            "public_law": "15-95",
+            "title": "Public Law 15-95 | An Act to Repeal the White House Protection Act",
+            "status": "repealed",
+            "issues": [
+              "missing approved code treatment"
+            ]
+          },
+          {
+            "law_id": "PL-015-107",
+            "public_law": "15-107",
+            "title": "Public Law 15-107 | Guidance to Guidances Act",
+            "status": "repealed",
+            "issues": [
+              "missing approved code treatment"
+            ]
+          }
+        ]
+      },
+      {
+        "review_report": "audit/review/review-repair-83.json",
+        "manifest": "audit/manifests/review-repair-83.json",
+        "status": "missing evidence",
+        "issues": [
+          "missing evidence"
+        ],
+        "law_count": 4,
+        "manifest_law_count": null,
+        "missing_law_ids": [],
+        "laws": [
+          {
+            "law_id": "PL-015-108",
+            "public_law": "15-108",
+            "title": "Public Law 15-108 | Reclassification of Labeling Act of 2023",
+            "status": "current",
+            "issues": []
+          },
+          {
+            "law_id": "PL-015-109",
+            "public_law": "15-109",
+            "title": "Public Law 15-109 | Ending Tigray for the Last Time",
+            "status": "current",
+            "issues": []
+          },
+          {
+            "law_id": "PL-015-110",
+            "public_law": "15-110",
+            "title": "Public Law 15-110 | A Bill to Direct the Inspector General of the Department of Defense to Conduct an Investigation Into the Attack on the United States Embassy in Damascus, and for Other Purposes",
+            "status": "source_unavailable",
+            "issues": [
+              "source unavailable"
+            ]
+          },
+          {
+            "law_id": "PL-016-122",
+            "public_law": "16-122",
+            "title": "Public Law 16-122 | The Bill Transparency Understanding Act",
+            "status": "historical-note-only",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "review_report": "audit/review/review-repair-84.json",
+        "manifest": "audit/manifests/review-repair-84.json",
+        "status": "valid",
+        "issues": [],
+        "law_count": 4,
+        "manifest_law_count": null,
+        "missing_law_ids": [],
+        "laws": [
+          {
+            "law_id": "PL-018-143",
+            "public_law": "18-143",
+            "title": "Public Law 18-143 | United States Capitol Police Technical Corrections Act",
+            "status": "historical-note-only",
+            "issues": []
+          },
+          {
+            "law_id": "PL-019-146",
+            "public_law": "19-146",
+            "title": "Public Law 19-146 | Refurbishing the Military Legal System Act",
+            "status": "historical-note-only",
+            "issues": []
+          },
+          {
+            "law_id": "PL-024-175",
+            "public_law": "24-175",
+            "title": "Public Law 24-175 | MPD Relocation Act",
+            "status": "historical-note-only",
+            "issues": []
+          },
+          {
+            "law_id": "PL-024-176",
+            "public_law": "24-176",
+            "title": "Public Law 24-176 | Comprehensive Federal Government Funding Act",
+            "status": "historical-note-only",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "review_report": "audit/review/review-repair-85.json",
+        "manifest": "audit/manifests/review-repair-85.json",
+        "status": "valid",
+        "issues": [],
+        "law_count": 3,
+        "manifest_law_count": null,
+        "missing_law_ids": [],
+        "laws": [
+          {
+            "law_id": "PL-028-205",
+            "public_law": "28-205",
+            "title": "Public Law 28-205 | Inspector General Reform Act of 2024",
+            "status": "current",
+            "issues": []
+          },
+          {
+            "law_id": "PL-029-209",
+            "public_law": "29-209",
+            "title": "Public Law 29-209 | Terms of Service Act",
+            "status": "current",
+            "issues": []
+          },
+          {
+            "law_id": "PL-031-229",
+            "public_law": "31-229",
+            "title": "Public Law 31-229 | Fiscal Year 25-1",
+            "status": "current",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "review_report": "audit/review/review-repair-86.json",
+        "manifest": "audit/manifests/review-repair-86.json",
+        "status": "valid",
+        "issues": [],
+        "law_count": 5,
+        "manifest_law_count": null,
+        "missing_law_ids": [],
+        "laws": [
+          {
+            "law_id": "PL-003-020",
+            "public_law": "3-20",
+            "title": "Public Law 3-20 | National Immigration Employment Act of 2021",
+            "status": "fully-repealed",
+            "issues": []
+          },
+          {
+            "law_id": "PL-004-029",
+            "public_law": "4-29",
+            "title": "Public Law 4-29 | Department of Commerce and Labor Act of 2022",
+            "status": "repealed",
+            "issues": []
+          },
+          {
+            "law_id": "PL-004-030",
+            "public_law": "4-30",
+            "title": "Public Law 4-30 | Fugitive Justice Reform Act",
+            "status": "repealed",
+            "issues": []
+          },
+          {
+            "law_id": "PL-004-031",
+            "public_law": "4-31",
+            "title": "Public Law 4-31 | Stand Your Ground Act",
+            "status": "repealed",
+            "issues": []
+          },
+          {
+            "law_id": "PL-004-032",
+            "public_law": "4-32",
+            "title": "Public Law 4-32 | Warrants, Subpoenas, and Summons Act",
+            "status": "source-defect",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "review_report": "audit/review/review-repair-87.json",
+        "manifest": "audit/manifests/review-repair-87.json",
+        "status": "valid",
+        "issues": [],
+        "law_count": 5,
+        "manifest_law_count": null,
+        "missing_law_ids": [],
+        "laws": [
+          {
+            "law_id": "PL-004-033",
+            "public_law": "4-33",
+            "title": "Public Law 4-33 | National Archives Act",
+            "status": "current",
+            "issues": []
+          },
+          {
+            "law_id": "PL-004-034",
+            "public_law": "4-34",
+            "title": "Public Law 4-34 | An Act to Prevent the Proliferation of Magistrates and Ensure Basic Judicial Competence",
+            "status": "repealed",
+            "issues": []
+          },
+          {
+            "law_id": "PL-004-035",
+            "public_law": "4-35",
+            "title": "Public Law 4-35 | Recommissioning of the United States Ship New Jersey Act of 2022",
+            "status": "source-limited-historical-note",
+            "issues": []
+          },
+          {
+            "law_id": "PL-004-036",
+            "public_law": "4-36",
+            "title": "Public Law 4-36 | Defense Heraldic Services Act",
+            "status": "current",
+            "issues": []
+          },
+          {
+            "law_id": "PL-004-037",
+            "public_law": "4-37",
+            "title": "Public Law 4-37 | Border Awareness and Naturalization Act",
+            "status": "repealed",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "review_report": "audit/review/review-repair-88.json",
+        "manifest": "audit/manifests/review-repair-88.json",
+        "status": "valid",
+        "issues": [],
+        "law_count": 5,
+        "manifest_law_count": null,
+        "missing_law_ids": [],
+        "laws": [
+          {
+            "law_id": "PL-004-038",
+            "public_law": "4-38",
+            "title": "Public Law 4-38 | White House Protection Act",
+            "status": "repealed",
+            "issues": []
+          },
+          {
+            "law_id": "PL-007-046",
+            "public_law": "7-46",
+            "title": "Public Law 7-46 | Whistleblower Protection Act",
+            "status": "source-limited-historical-note",
+            "issues": []
+          },
+          {
+            "law_id": "PL-007-051",
+            "public_law": "7-51",
+            "title": "Public Law 7-51 | Federal Agent Law Training Mandate",
+            "status": "source-limited-historical-note",
+            "issues": []
+          },
+          {
+            "law_id": "PL-009-052",
+            "public_law": "9-52",
+            "title": "Public Law 9-52 | The Federal District Wages Act of 2022",
+            "status": "source-limited-historical-note",
+            "issues": []
+          },
+          {
+            "law_id": "PL-009-054",
+            "public_law": "9-54",
+            "title": "Public Law 9-54 | The Smart Label Congress Act",
+            "status": "source-limited-historical-note",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "review_report": "audit/review/review-repair-89.json",
+        "manifest": "audit/manifests/review-repair-89.json",
+        "status": "valid",
+        "issues": [],
+        "law_count": 5,
+        "manifest_law_count": null,
+        "missing_law_ids": [],
+        "laws": [
+          {
+            "law_id": "PL-009-063",
+            "public_law": "9-63",
+            "title": "Public Law 9-63 | The Federal District Employment Act of 2022",
+            "status": "repealed",
+            "issues": []
+          },
+          {
+            "law_id": "PL-012-076",
+            "public_law": "12-76",
+            "title": "Public Law 12-76 | Removing Idiocy Act",
+            "status": "source-limited-historical-note",
+            "issues": []
+          },
+          {
+            "law_id": "PL-014-091",
+            "public_law": "14-91",
+            "title": "Public Law 14-91 | Military Code of Military Justice Reform Act of 2023",
+            "status": "current",
+            "issues": []
+          },
+          {
+            "law_id": "PL-015-094",
+            "public_law": "15-94",
+            "title": "Public Law 15-94 | Whistleblower Protections Act of 2023",
+            "status": "source-limited-historical-note",
+            "issues": []
+          },
+          {
+            "law_id": "PL-015-095",
+            "public_law": "15-95",
+            "title": "Public Law 15-95 | An Act to Repeal the White House Protection Act",
+            "status": "repealed",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "review_report": "audit/review/review-repair-90.json",
+        "manifest": "audit/manifests/review-repair-90.json",
+        "status": "valid",
+        "issues": [],
+        "law_count": 5,
+        "manifest_law_count": null,
+        "missing_law_ids": [],
+        "laws": [
+          {
+            "law_id": "PL-015-107",
+            "public_law": "15-107",
+            "title": "Public Law 15-107 | Guidance to Guidances Act",
+            "status": "repealed",
+            "issues": []
+          },
+          {
+            "law_id": "PL-015-108",
+            "public_law": "15-108",
+            "title": "Public Law 15-108 | Reclassification of Labeling Act of 2023",
+            "status": "current",
+            "issues": []
+          },
+          {
+            "law_id": "PL-015-109",
+            "public_law": "15-109",
+            "title": "Public Law 15-109 | Ending Tigray for the Last Time",
+            "status": "repealed",
+            "issues": []
+          },
+          {
+            "law_id": "PL-015-110",
+            "public_law": "15-110",
+            "title": "Public Law 15-110 | Damascus Embassy IG Investigation Act",
+            "status": "repealed",
+            "issues": []
+          },
+          {
+            "law_id": "PL-028-205",
+            "public_law": "28-205",
+            "title": "Public Law 28-205 | Inspector General Reform Act of 2024",
+            "status": "current",
+            "issues": []
+          }
+        ]
+      },
+      {
+        "review_report": "audit/review/review-repair-91.json",
+        "manifest": "audit/manifests/review-repair-91.json",
+        "status": "valid",
+        "issues": [],
+        "law_count": 2,
+        "manifest_law_count": null,
+        "missing_law_ids": [],
+        "laws": [
+          {
+            "law_id": "PL-029-209",
+            "public_law": "29-209",
+            "title": "Public Law 29-209 | Terms of Service Act",
+            "status": "current",
+            "issues": []
+          },
+          {
+            "law_id": "PL-031-229",
+            "public_law": "31-229",
+            "title": "Public Law 31-229 | Fiscal Year 25-1",
+            "status": "current",
+            "issues": []
+          }
+        ]
       }
     ],
-    "unknown_laws": [],
+    "unknown_laws": [
+      {
+        "report": "audit/review/review-01.json",
+        "law_id": "PL-001-004",
+        "public_law": "1-4",
+        "title": "Public Law 1-4 | Retracting of Resignations Act",
+        "issue": "missing conclusion"
+      },
+      {
+        "report": "audit/review/review-01.json",
+        "law_id": "PL-002-011",
+        "public_law": "2-11",
+        "title": "Public Law 2-11 | Criminal Statute of Limitations Act",
+        "issue": "missing conclusion"
+      },
+      {
+        "report": "audit/review/review-09.json",
+        "law_id": "PL-014-091",
+        "public_law": "14-91",
+        "title": "Public Law 14-91 | Uniform Code of Military Justice Reform Act of 2023",
+        "issue": "missing conclusion"
+      }
+    ],
     "latest_laws": [
       {
         "law_id": "PL-001-001",
@@ -9643,9 +10460,9 @@
         "law_id": "PL-003-020",
         "public_law": "3-20",
         "title": "Public Law 3-20 | National Immigration Employment Act of 2021",
-        "status": "unresolved",
+        "status": "fully-repealed",
         "issues": [],
-        "source_report": "audit/review/review-46.json"
+        "source_report": "audit/review/review-repair-86.json"
       },
       {
         "law_id": "PL-003-021",
@@ -9660,16 +10477,20 @@
         "public_law": "3-22",
         "title": "Public Law 3-22 | District of Columbia Administration Act",
         "status": "repealed",
-        "issues": [],
-        "source_report": "audit/review/review-53.json"
+        "issues": [
+          "missing chronology conclusion"
+        ],
+        "source_report": "audit/review/review-repair-80.json"
       },
       {
         "law_id": "PL-003-023",
         "public_law": "3-23",
         "title": "Public Law 3-23 | Federal Law Enforcement Training Center Establishment Act",
         "status": "repealed",
-        "issues": [],
-        "source_report": "audit/review/review-53.json"
+        "issues": [
+          "missing chronology conclusion"
+        ],
+        "source_report": "audit/review/review-repair-80.json"
       },
       {
         "law_id": "PL-003-024",
@@ -9717,7 +10538,7 @@
         "title": "Public Law 4-29 | Department of Commerce and Labor Act of 2022",
         "status": "repealed",
         "issues": [],
-        "source_report": "audit/review/review-54.json"
+        "source_report": "audit/review/review-repair-86.json"
       },
       {
         "law_id": "PL-004-030",
@@ -9725,7 +10546,7 @@
         "title": "Public Law 4-30 | Fugitive Justice Reform Act",
         "status": "repealed",
         "issues": [],
-        "source_report": "audit/review/review-54.json"
+        "source_report": "audit/review/review-repair-86.json"
       },
       {
         "law_id": "PL-004-031",
@@ -9733,7 +10554,7 @@
         "title": "Public Law 4-31 | Stand Your Ground Act",
         "status": "repealed",
         "issues": [],
-        "source_report": "audit/review/review-54.json"
+        "source_report": "audit/review/review-repair-86.json"
       },
       {
         "law_id": "PL-004-032",
@@ -9741,15 +10562,15 @@
         "title": "Public Law 4-32 | Warrants, Subpoenas, and Summons Act",
         "status": "source-defect",
         "issues": [],
-        "source_report": "audit/review/review-54.json"
+        "source_report": "audit/review/review-repair-86.json"
       },
       {
         "law_id": "PL-004-033",
         "public_law": "4-33",
         "title": "Public Law 4-33 | National Archives Act",
-        "status": "repealed",
+        "status": "current",
         "issues": [],
-        "source_report": "audit/review/review-54.json"
+        "source_report": "audit/review/review-repair-87.json"
       },
       {
         "law_id": "PL-004-034",
@@ -9757,15 +10578,15 @@
         "title": "Public Law 4-34 | An Act to Prevent the Proliferation of Magistrates and Ensure Basic Judicial Competence",
         "status": "repealed",
         "issues": [],
-        "source_report": "audit/review/review-54.json"
+        "source_report": "audit/review/review-repair-87.json"
       },
       {
         "law_id": "PL-004-035",
         "public_law": "4-35",
         "title": "Public Law 4-35 | Recommissioning of the United States Ship New Jersey Act of 2022",
-        "status": "source-unavailable",
+        "status": "source-limited-historical-note",
         "issues": [],
-        "source_report": "audit/review/review-54.json"
+        "source_report": "audit/review/review-repair-87.json"
       },
       {
         "law_id": "PL-004-036",
@@ -9773,7 +10594,7 @@
         "title": "Public Law 4-36 | Defense Heraldic Services Act",
         "status": "current",
         "issues": [],
-        "source_report": "audit/review/review-54.json"
+        "source_report": "audit/review/review-repair-87.json"
       },
       {
         "law_id": "PL-004-037",
@@ -9781,7 +10602,7 @@
         "title": "Public Law 4-37 | Border Awareness and Naturalization Act",
         "status": "repealed",
         "issues": [],
-        "source_report": "audit/review/review-54.json"
+        "source_report": "audit/review/review-repair-87.json"
       },
       {
         "law_id": "PL-004-038",
@@ -9789,7 +10610,7 @@
         "title": "Public Law 4-38 | White House Protection Act",
         "status": "repealed",
         "issues": [],
-        "source_report": "audit/review/review-54.json"
+        "source_report": "audit/review/review-repair-88.json"
       },
       {
         "law_id": "PL-007-039",
@@ -9851,9 +10672,9 @@
         "law_id": "PL-007-046",
         "public_law": "7-46",
         "title": "Public Law 7-46 | Whistleblower Protection Act",
-        "status": "unresolved",
+        "status": "source-limited-historical-note",
         "issues": [],
-        "source_report": "audit/review/review-55.json"
+        "source_report": "audit/review/review-repair-88.json"
       },
       {
         "law_id": "PL-007-047",
@@ -9891,17 +10712,17 @@
         "law_id": "PL-007-051",
         "public_law": "7-51",
         "title": "Public Law 7-51 | Federal Agent Law Training Mandate",
-        "status": "unresolved",
+        "status": "source-limited-historical-note",
         "issues": [],
-        "source_report": "audit/review/review-56.json"
+        "source_report": "audit/review/review-repair-88.json"
       },
       {
         "law_id": "PL-009-052",
         "public_law": "9-52",
         "title": "Public Law 9-52 | The Federal District Wages Act of 2022",
-        "status": "unresolved",
+        "status": "source-limited-historical-note",
         "issues": [],
-        "source_report": "audit/review/review-56.json"
+        "source_report": "audit/review/review-repair-88.json"
       },
       {
         "law_id": "PL-009-053",
@@ -9915,9 +10736,9 @@
         "law_id": "PL-009-054",
         "public_law": "9-54",
         "title": "Public Law 9-54 | The Smart Label Congress Act",
-        "status": "unresolved",
+        "status": "source-limited-historical-note",
         "issues": [],
-        "source_report": "audit/review/review-56.json"
+        "source_report": "audit/review/review-repair-88.json"
       },
       {
         "law_id": "PL-009-055",
@@ -9987,9 +10808,9 @@
         "law_id": "PL-009-063",
         "public_law": "9-63",
         "title": "Public Law 9-63 | The Federal District Employment Act of 2022",
-        "status": "unresolved",
+        "status": "repealed",
         "issues": [],
-        "source_report": "audit/review/review-repair-58.json"
+        "source_report": "audit/review/review-repair-89.json"
       },
       {
         "law_id": "PL-010-065",
@@ -10083,9 +10904,9 @@
         "law_id": "PL-012-076",
         "public_law": "12-76",
         "title": "Public Law 12-76 | Removing Idiocy Act",
-        "status": "unresolved",
+        "status": "source-limited-historical-note",
         "issues": [],
-        "source_report": "audit/review/review-repair-59.json"
+        "source_report": "audit/review/review-repair-89.json"
       },
       {
         "law_id": "PL-012-077",
@@ -10203,9 +11024,9 @@
         "law_id": "PL-014-091",
         "public_law": "14-91",
         "title": "Public Law 14-91 | Military Code of Military Justice Reform Act of 2023",
-        "status": "unresolved",
+        "status": "current",
         "issues": [],
-        "source_report": "audit/review/review-61.json"
+        "source_report": "audit/review/review-repair-89.json"
       },
       {
         "law_id": "PL-015-092",
@@ -10227,17 +11048,17 @@
         "law_id": "PL-015-094",
         "public_law": "15-94",
         "title": "Public Law 15-94 | Whistleblower Protections Act of 2023",
-        "status": "unresolved",
+        "status": "source-limited-historical-note",
         "issues": [],
-        "source_report": "audit/review/review-61.json"
+        "source_report": "audit/review/review-repair-89.json"
       },
       {
         "law_id": "PL-015-095",
         "public_law": "15-95",
         "title": "Public Law 15-95 | An Act to Repeal the White House Protection Act",
-        "status": "unresolved",
+        "status": "repealed",
         "issues": [],
-        "source_report": "audit/review/review-61.json"
+        "source_report": "audit/review/review-repair-89.json"
       },
       {
         "law_id": "PL-015-096",
@@ -10323,33 +11144,33 @@
         "law_id": "PL-015-107",
         "public_law": "15-107",
         "title": "Public Law 15-107 | Guidance to Guidances Act",
-        "status": "unrecoverable",
+        "status": "repealed",
         "issues": [],
-        "source_report": "audit/review/review-repair-62-02.json"
+        "source_report": "audit/review/review-repair-90.json"
       },
       {
         "law_id": "PL-015-108",
         "public_law": "15-108",
-        "title": "Public Law 15-108 | The Reclassification of Labeling Act of 2023",
+        "title": "Public Law 15-108 | Reclassification of Labeling Act of 2023",
         "status": "current",
         "issues": [],
-        "source_report": "audit/review/review-repair-62-02.json"
+        "source_report": "audit/review/review-repair-90.json"
       },
       {
         "law_id": "PL-015-109",
         "public_law": "15-109",
         "title": "Public Law 15-109 | Ending Tigray for the Last Time",
-        "status": "current",
+        "status": "repealed",
         "issues": [],
-        "source_report": "audit/review/review-repair-62-02.json"
+        "source_report": "audit/review/review-repair-90.json"
       },
       {
         "law_id": "PL-015-110",
         "public_law": "15-110",
-        "title": "Public Law 15-110 | A Bill to Direct the Inspector General of the Department of Defense to Conduct an Investigation Into the Attack on the United States Embassy in Damascus, and for Other Purposes",
-        "status": "unrecoverable",
+        "title": "Public Law 15-110 | Damascus Embassy IG Investigation Act",
+        "status": "repealed",
         "issues": [],
-        "source_report": "audit/review/review-repair-62-02.json"
+        "source_report": "audit/review/review-repair-90.json"
       },
       {
         "law_id": "PL-015-111",
@@ -10442,10 +11263,10 @@
       {
         "law_id": "PL-016-122",
         "public_law": "16-122",
-        "title": "Public Law 16-122 | The Congressional Competency Act of 2023",
-        "status": "source-limited-historical-note",
+        "title": "Public Law 16-122 | The Bill Transparency Understanding Act",
+        "status": "historical-note-only",
         "issues": [],
-        "source_report": "audit/review/review-repair-64.json"
+        "source_report": "audit/review/review-repair-83.json"
       },
       {
         "law_id": "PL-017-124",
@@ -10603,9 +11424,9 @@
         "law_id": "PL-018-143",
         "public_law": "18-143",
         "title": "Public Law 18-143 | United States Capitol Police Technical Corrections Act",
-        "status": "source-limited-historical-note",
+        "status": "historical-note-only",
         "issues": [],
-        "source_report": "audit/review/review-repair-66.json"
+        "source_report": "audit/review/review-repair-84.json"
       },
       {
         "law_id": "PL-019-144",
@@ -10627,9 +11448,9 @@
         "law_id": "PL-019-146",
         "public_law": "19-146",
         "title": "Public Law 19-146 | Refurbishing the Military Legal System Act",
-        "status": "source-limited-historical-note",
+        "status": "historical-note-only",
         "issues": [],
-        "source_report": "audit/review/review-repair-66.json"
+        "source_report": "audit/review/review-repair-84.json"
       },
       {
         "law_id": "PL-019-147",
@@ -10754,8 +11575,8 @@
       {
         "law_id": "PL-022-161",
         "public_law": "Public Law 22-161",
-        "title": "Source-unavailable enactment",
-        "status": "unresolved",
+        "title": "Second Chance Act",
+        "status": "current",
         "issues": [],
         "source_report": "audit/review/review-repair-67-02.json"
       },
@@ -10851,17 +11672,17 @@
         "law_id": "PL-024-175",
         "public_law": "24-175",
         "title": "Public Law 24-175 | MPD Relocation Act",
-        "status": "source-limited-historical-note",
+        "status": "historical-note-only",
         "issues": [],
-        "source_report": "audit/review/review-repair-69.json"
+        "source_report": "audit/review/review-repair-84.json"
       },
       {
         "law_id": "PL-024-176",
         "public_law": "24-176",
         "title": "Public Law 24-176 | Comprehensive Federal Government Funding Act",
-        "status": "source-limited-historical-note",
+        "status": "historical-note-only",
         "issues": [],
-        "source_report": "audit/review/review-repair-69.json"
+        "source_report": "audit/review/review-repair-84.json"
       },
       {
         "law_id": "PL-024-177",
@@ -10909,7 +11730,8 @@
         "title": "Public Law 25-182 | Pentagon Expansion and National Territory Authorization Act",
         "status": "unresolved",
         "issues": [
-          "missing approved code treatment"
+          "missing approved code treatment",
+          "unresolved conclusion"
         ],
         "source_report": "audit/review/review-repair-18-02.json"
       },
@@ -11091,9 +11913,9 @@
         "law_id": "PL-028-205",
         "public_law": "28-205",
         "title": "Public Law 28-205 | Inspector General Reform Act of 2024",
-        "status": "unresolved",
+        "status": "current",
         "issues": [],
-        "source_report": "audit/review/review-72.json"
+        "source_report": "audit/review/review-repair-90.json"
       },
       {
         "law_id": "PL-029-207",
@@ -11286,11 +12108,9 @@
         "law_id": "PL-031-229",
         "public_law": "31-229",
         "title": "Public Law 31-229 | Fiscal Year 25-1",
-        "status": "unresolved",
-        "issues": [
-          "missing approved code treatment"
-        ],
-        "source_report": "audit/review/review-repair-71-01.json"
+        "status": "current",
+        "issues": [],
+        "source_report": "audit/review/review-repair-91.json"
       },
       {
         "law_id": "PL-032-230",
@@ -11556,10 +12376,8 @@
         "law_id": "PL-037-261",
         "public_law": "37-261",
         "title": "Public Law 37-261 | Federal Criminal Code Act of 2025",
-        "status": "unresolved",
-        "issues": [
-          "missing approved code treatment"
-        ],
+        "status": "current",
+        "issues": [],
         "source_report": "audit/review/review-repair-50-02.json"
       },
       {
@@ -11722,9 +12540,9 @@
         "law_id": "PL-029-209",
         "public_law": "29-209",
         "title": "Public Law 29-209 | Terms of Service Act",
-        "status": "unresolved",
+        "status": "current",
         "issues": [],
-        "source_report": "audit/review/review-72.json"
+        "source_report": "audit/review/review-repair-91.json"
       },
       {
         "law_id": "PL-029-212",

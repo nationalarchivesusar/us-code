@@ -1,6 +1,6 @@
 {
   "total_laws": 270,
-  "high_risk_laws": 244,
+  "high_risk_laws": 241,
   "queue": [
     {
       "law_id": "PL-001-001",
@@ -32,6 +32,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "medium",
       "reasons": [
+        "chronology-required",
         "confidence:medium",
         "multiple-laws-same-target",
         "standalone-permanent-provision",
@@ -55,6 +56,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "medium",
       "reasons": [
+        "chronology-required",
         "confidence:medium",
         "direct-action-provision"
       ],
@@ -77,6 +79,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "medium",
       "reasons": [
+        "chronology-required",
         "confidence:medium",
         "multiple-laws-same-target",
         "standalone-permanent-provision",
@@ -100,6 +103,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "multiple-laws-same-target",
         "standalone-permanent-provision",
@@ -123,6 +127,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "multiple-laws-same-target",
         "standalone-permanent-provision",
         "status:fully-repealed"
@@ -147,6 +152,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "multiple-laws-same-target",
         "status:fully-repealed"
@@ -168,6 +174,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "standalone-permanent-provision",
         "status:fully-repealed"
       ],
@@ -193,6 +200,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "status:fully-repealed"
       ],
       "provision_refs": [],
@@ -210,6 +218,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "medium",
       "reasons": [
+        "chronology-required",
         "confidence:medium",
         "direct-action-provision",
         "status:fully-repealed"
@@ -231,6 +240,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "multiple-laws-same-target",
         "standalone-permanent-provision"
       ],
@@ -251,6 +261,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "multiple-laws-same-target",
         "standalone-permanent-provision"
       ],
@@ -271,6 +282,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "standalone-permanent-provision"
       ],
       "provision_refs": [
@@ -290,6 +302,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "multiple-laws-same-target",
         "standalone-permanent-provision"
       ],
@@ -329,6 +342,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "standalone-permanent-provision"
       ],
       "provision_refs": [
@@ -368,6 +382,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -394,23 +409,6 @@
       ],
       "targets": [
         "/us/usc/t44/s6506"
-      ]
-    },
-    {
-      "law_id": "PL-003-020",
-      "public_law": "3-20",
-      "title": "Public Law 3-20 | National Immigration Employment Act of 2021",
-      "report_path": "audit/primary/batch-10-02.json",
-      "batch": 10,
-      "source_status": "repealed",
-      "validation_status": "contradicted by source",
-      "confidence": "low",
-      "reasons": [
-        "confidence:low"
-      ],
-      "provision_refs": [],
-      "targets": [
-        "n/a"
       ]
     },
     {
@@ -443,6 +441,7 @@
       "validation_status": "missing source evidence",
       "confidence": "high",
       "reasons": [
+        "missing-source",
         "status:unresolved"
       ],
       "provision_refs": [],
@@ -458,7 +457,9 @@
       "validation_status": "unsupported",
       "confidence": "high",
       "reasons": [
-        "status:unresolved"
+        "missing-source",
+        "status:unresolved",
+        "unsupported-source"
       ],
       "provision_refs": [],
       "targets": []
@@ -473,6 +474,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "multiple-laws-same-target",
         "standalone-permanent-provision",
@@ -496,6 +498,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "multiple-laws-same-target",
         "status:fully-repealed"
@@ -510,21 +513,6 @@
       ]
     },
     {
-      "law_id": "PL-004-026",
-      "public_law": "4-26",
-      "title": "Public Law 4-26 | H.J. Res. 06 (Keywords: Tigray)",
-      "report_path": "audit/primary/batch-01-03.json",
-      "batch": 1,
-      "source_status": "current",
-      "validation_status": "accepted with corrections",
-      "confidence": "medium",
-      "reasons": [
-        "confidence:medium"
-      ],
-      "provision_refs": [],
-      "targets": []
-    },
-    {
       "law_id": "PL-004-027",
       "public_law": "4-27",
       "title": "Public Law 4-27 | Right to Security Act of 2022",
@@ -534,6 +522,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "multiple-laws-same-target",
         "standalone-permanent-provision",
         "status:fully-repealed"
@@ -556,6 +545,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "medium",
       "reasons": [
+        "chronology-required",
         "confidence:medium",
         "standalone-permanent-provision",
         "status:fully-repealed"
@@ -578,6 +568,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision",
         "status:fully-repealed"
@@ -599,6 +590,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision",
         "status:fully-repealed"
@@ -621,6 +613,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "multiple-laws-same-target",
         "standalone-permanent-provision",
         "status:fully-repealed"
@@ -644,6 +637,7 @@
       "confidence": "medium",
       "reasons": [
         "confidence:medium",
+        "missing-source",
         "status:unresolved"
       ],
       "provision_refs": [],
@@ -659,6 +653,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "standalone-permanent-provision",
         "status:fully-repealed"
       ],
@@ -681,6 +676,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "multiple-laws-same-target",
         "standalone-permanent-provision",
         "status:fully-repealed"
@@ -705,6 +701,7 @@
       "confidence": "medium",
       "reasons": [
         "confidence:medium",
+        "missing-source",
         "status:unresolved"
       ],
       "provision_refs": [],
@@ -720,6 +717,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision"
       ],
@@ -743,6 +741,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "standalone-permanent-provision",
         "status:fully-repealed"
       ],
@@ -767,6 +766,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "standalone-permanent-provision",
         "status:fully-repealed"
       ],
@@ -789,6 +789,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "standalone-permanent-provision",
         "status:fully-repealed"
       ],
@@ -810,6 +811,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "standalone-permanent-provision",
         "status:fully-repealed"
       ],
@@ -832,6 +834,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "standalone-permanent-provision",
         "status:fully-repealed"
       ],
@@ -855,6 +858,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision",
         "status:fully-repealed"
@@ -883,6 +887,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision",
         "status:fully-repealed"
@@ -909,6 +914,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "multiple-laws-same-target",
         "standalone-permanent-provision",
         "status:fully-repealed"
@@ -934,6 +940,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision",
         "status:fully-repealed"
@@ -960,7 +967,9 @@
       "confidence": "medium",
       "reasons": [
         "confidence:medium",
-        "status:unresolved"
+        "missing-source",
+        "status:unresolved",
+        "unsupported-source"
       ],
       "provision_refs": [],
       "targets": [
@@ -977,6 +986,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "multiple-laws-same-target",
         "standalone-permanent-provision",
@@ -1004,6 +1014,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision",
         "status:fully-repealed"
@@ -1027,6 +1038,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "status:fully-repealed"
       ],
       "provision_refs": [],
@@ -1045,6 +1057,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "status:fully-repealed"
       ],
@@ -1066,7 +1079,9 @@
       "validation_status": "unsupported",
       "confidence": "high",
       "reasons": [
-        "status:fully-repealed"
+        "chronology-required",
+        "status:fully-repealed",
+        "unsupported-source"
       ],
       "provision_refs": [],
       "targets": [
@@ -1083,7 +1098,8 @@
       "validation_status": "missing source evidence",
       "confidence": "medium",
       "reasons": [
-        "confidence:medium"
+        "confidence:medium",
+        "missing-source"
       ],
       "provision_refs": [],
       "targets": []
@@ -1098,6 +1114,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "missing-target",
         "standalone-permanent-provision"
@@ -1120,7 +1137,8 @@
       "validation_status": "missing source evidence",
       "confidence": "medium",
       "reasons": [
-        "confidence:medium"
+        "confidence:medium",
+        "missing-source"
       ],
       "provision_refs": [],
       "targets": []
@@ -1135,6 +1153,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "standalone-permanent-provision",
         "status:fully-repealed"
       ],
@@ -1153,6 +1172,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "standalone-permanent-provision",
         "status:fully-repealed"
       ],
@@ -1172,6 +1192,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "status:fully-repealed"
       ],
@@ -1192,6 +1213,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "status:fully-repealed"
       ],
       "provision_refs": [],
@@ -1207,6 +1229,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "standalone-permanent-provision",
         "status:fully-repealed"
       ],
@@ -1225,6 +1248,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision",
         "status:fully-repealed"
@@ -1247,6 +1271,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "missing-target",
         "status:fully-repealed"
@@ -1284,7 +1309,9 @@
       "validation_status": "unsupported",
       "confidence": "high",
       "reasons": [
-        "status:unresolved"
+        "missing-source",
+        "status:unresolved",
+        "unsupported-source"
       ],
       "provision_refs": [],
       "targets": []
@@ -1299,6 +1326,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "status:fully-repealed"
       ],
       "provision_refs": [],
@@ -1392,6 +1420,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "medium",
       "reasons": [
+        "chronology-required",
         "confidence:medium",
         "direct-action-provision",
         "standalone-permanent-provision"
@@ -1413,6 +1442,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -1432,6 +1462,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "missing-target"
       ],
@@ -1453,6 +1484,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "standalone-permanent-provision",
         "status:fully-repealed"
       ],
@@ -1471,6 +1503,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "medium",
       "reasons": [
+        "chronology-required",
         "confidence:medium",
         "direct-action-provision",
         "missing-target",
@@ -1495,6 +1528,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -1517,7 +1551,9 @@
       "confidence": "low",
       "reasons": [
         "confidence:low",
-        "status:unresolved"
+        "missing-source",
+        "status:unresolved",
+        "unsupported-source"
       ],
       "provision_refs": [],
       "targets": []
@@ -1532,8 +1568,10 @@
       "validation_status": "unsupported",
       "confidence": "low",
       "reasons": [
+        "chronology-required",
         "confidence:low",
-        "status:fully-repealed"
+        "status:fully-repealed",
+        "unsupported-source"
       ],
       "provision_refs": [],
       "targets": [
@@ -1550,6 +1588,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "low",
       "reasons": [
+        "chronology-required",
         "confidence:low",
         "status:fully-repealed"
       ],
@@ -1568,7 +1607,8 @@
       "validation_status": "unsupported",
       "confidence": "low",
       "reasons": [
-        "confidence:low"
+        "confidence:low",
+        "unsupported-source"
       ],
       "provision_refs": [],
       "targets": [
@@ -1585,6 +1625,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "standalone-permanent-provision",
         "status:fully-repealed"
       ],
@@ -1620,6 +1661,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "medium",
       "reasons": [
+        "chronology-required",
         "confidence:medium",
         "direct-action-provision",
         "standalone-permanent-provision"
@@ -1642,6 +1684,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "multiple-laws-same-target"
       ],
@@ -1780,6 +1823,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "medium",
       "reasons": [
+        "chronology-required",
         "confidence:medium",
         "direct-action-provision",
         "missing-target",
@@ -1822,6 +1866,7 @@
       "validation_status": "missing source evidence",
       "confidence": "high",
       "reasons": [
+        "missing-source",
         "status:unresolved"
       ],
       "provision_refs": [],
@@ -1839,6 +1884,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "standalone-permanent-provision",
         "status:superseded"
       ],
@@ -1858,6 +1904,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -1877,6 +1924,7 @@
       "validation_status": "missing source evidence",
       "confidence": "high",
       "reasons": [
+        "missing-source",
         "status:unresolved"
       ],
       "provision_refs": [],
@@ -1893,8 +1941,10 @@
       "confidence": "high",
       "reasons": [
         "direct-action-provision",
+        "missing-source",
         "missing-target",
-        "status:unresolved"
+        "status:unresolved",
+        "unsupported-source"
       ],
       "provision_refs": [
         "entire enactment"
@@ -1911,6 +1961,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "missing-target",
         "status:fully-repealed"
@@ -1952,6 +2003,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "multiple-laws-same-target",
         "standalone-permanent-provision"
       ],
@@ -1974,6 +2026,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision"
       ],
@@ -1996,6 +2049,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "multiple-laws-same-target",
         "standalone-permanent-provision"
       ],
@@ -2019,6 +2073,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "standalone-permanent-provision"
       ],
       "provision_refs": [
@@ -2042,6 +2097,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision"
       ],
@@ -2090,6 +2146,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "multiple-laws-same-target",
         "standalone-permanent-provision"
@@ -2117,6 +2174,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -2137,7 +2195,10 @@
       "validation_status": "unsupported",
       "confidence": "high",
       "reasons": [
-        "status:unresolved"
+        "chronology-required",
+        "missing-source",
+        "status:unresolved",
+        "unsupported-source"
       ],
       "provision_refs": [],
       "targets": [
@@ -2154,6 +2215,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "standalone-permanent-provision"
       ],
       "provision_refs": [
@@ -2173,6 +2235,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -2192,7 +2255,9 @@
       "validation_status": "unsupported",
       "confidence": "high",
       "reasons": [
-        "status:unresolved"
+        "missing-source",
+        "status:unresolved",
+        "unsupported-source"
       ],
       "provision_refs": [],
       "targets": [
@@ -2209,6 +2274,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "multiple-laws-same-target",
         "standalone-permanent-provision"
       ],
@@ -2233,6 +2299,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "status:superseded"
       ],
       "provision_refs": [],
@@ -2250,6 +2317,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -2270,6 +2338,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -2290,6 +2359,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "standalone-permanent-provision"
       ],
       "provision_refs": [
@@ -2312,6 +2382,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision"
       ],
@@ -2336,6 +2407,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -2358,6 +2430,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision"
       ],
@@ -2380,6 +2453,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "status:fully-repealed"
       ],
       "provision_refs": [],
@@ -2397,6 +2471,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "status:fully-repealed"
       ],
       "provision_refs": [],
@@ -2414,7 +2489,9 @@
       "validation_status": "unsupported",
       "confidence": "high",
       "reasons": [
-        "status:unresolved"
+        "missing-source",
+        "status:unresolved",
+        "unsupported-source"
       ],
       "provision_refs": [],
       "targets": []
@@ -2467,6 +2544,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "medium",
       "reasons": [
+        "chronology-required",
         "confidence:medium",
         "standalone-permanent-provision",
         "status:superseded"
@@ -2486,6 +2564,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -2511,6 +2590,7 @@
       "validation_status": "incomplete",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision"
       ],
@@ -2589,6 +2669,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "multiple-laws-same-target",
         "standalone-permanent-provision"
@@ -2610,6 +2691,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "multiple-laws-same-target",
         "standalone-permanent-provision"
@@ -2631,6 +2713,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision"
       ],
@@ -2689,6 +2772,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -2708,6 +2792,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -2719,51 +2804,6 @@
       ]
     },
     {
-      "law_id": "PL-018-140",
-      "public_law": "18-140",
-      "title": "Public Law 18-140 | Federal Employment Act of 2023",
-      "report_path": "audit/primary/batch-14-02.json",
-      "batch": 14,
-      "source_status": "repealed",
-      "validation_status": "contradicted by source",
-      "confidence": "medium",
-      "reasons": [
-        "confidence:medium"
-      ],
-      "provision_refs": [],
-      "targets": []
-    },
-    {
-      "law_id": "PL-018-141",
-      "public_law": "18-141",
-      "title": "Public Law 18-141 | Foreign Service Act of 2023",
-      "report_path": "audit/primary/batch-14-02.json",
-      "batch": 14,
-      "source_status": "current",
-      "validation_status": "accepted with corrections",
-      "confidence": "medium",
-      "reasons": [
-        "confidence:medium"
-      ],
-      "provision_refs": [],
-      "targets": []
-    },
-    {
-      "law_id": "PL-018-142",
-      "public_law": "18-142",
-      "title": "Public Law 18-142 | Business Licensing Act",
-      "report_path": "audit/primary/batch-14-02.json",
-      "batch": 14,
-      "source_status": "current",
-      "validation_status": "accepted with corrections",
-      "confidence": "medium",
-      "reasons": [
-        "confidence:medium"
-      ],
-      "provision_refs": [],
-      "targets": []
-    },
-    {
       "law_id": "PL-018-143",
       "public_law": "18-143",
       "title": "Public Law 18-143 | United States Capitol Police Technical Corrections Act",
@@ -2773,7 +2813,9 @@
       "validation_status": "unsupported",
       "confidence": "high",
       "reasons": [
-        "status:unresolved"
+        "missing-source",
+        "status:unresolved",
+        "unsupported-source"
       ],
       "provision_refs": [],
       "targets": []
@@ -2788,6 +2830,7 @@
       "validation_status": "incomplete",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision"
       ],
@@ -2811,6 +2854,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -2842,7 +2886,9 @@
       "validation_status": "unsupported",
       "confidence": "high",
       "reasons": [
-        "status:unresolved"
+        "missing-source",
+        "status:unresolved",
+        "unsupported-source"
       ],
       "provision_refs": [],
       "targets": []
@@ -2857,6 +2903,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "multiple-laws-same-target",
         "standalone-permanent-provision"
@@ -2879,6 +2926,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "medium",
       "reasons": [
+        "chronology-required",
         "confidence:medium",
         "multiple-laws-same-target",
         "standalone-permanent-provision"
@@ -2902,6 +2950,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "multiple-laws-same-target",
         "standalone-permanent-provision"
@@ -2951,6 +3000,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "multiple-laws-same-target",
         "standalone-permanent-provision"
@@ -2974,6 +3024,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "multiple-laws-same-target",
         "standalone-permanent-provision"
@@ -3001,6 +3052,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "standalone-permanent-provision"
       ],
       "provision_refs": [
@@ -3020,7 +3072,8 @@
       "validation_status": "unsupported",
       "confidence": "high",
       "reasons": [
-        "standalone-permanent-provision"
+        "standalone-permanent-provision",
+        "unsupported-source"
       ],
       "provision_refs": [
         "entire enactment"
@@ -3039,6 +3092,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "multiple-laws-same-target",
         "standalone-permanent-provision"
       ],
@@ -3059,6 +3113,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -3078,6 +3133,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "multiple-laws-same-target"
       ],
@@ -3117,6 +3173,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -3125,6 +3182,23 @@
       ],
       "targets": [
         "/us/usc/t18/s205"
+      ]
+    },
+    {
+      "law_id": "PL-022-161",
+      "public_law": "22-161",
+      "title": "Public Law 22-161 | Second Chance Act",
+      "report_path": "audit/primary/batch-15-01.json",
+      "batch": 15,
+      "source_status": "active",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "unsupported-source"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "no code location"
       ]
     },
     {
@@ -3137,6 +3211,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "missing-target"
       ],
@@ -3198,6 +3273,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision"
       ],
@@ -3210,6 +3286,22 @@
       ]
     },
     {
+      "law_id": "PL-023-166",
+      "public_law": "23-166",
+      "title": "Public Law 23-166 | Amended Federal Employment Act of 2023",
+      "report_path": "audit/primary/batch-15-02.json",
+      "batch": 15,
+      "source_status": "repealed",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "missing-source",
+        "unsupported-source"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
       "law_id": "PL-023-167",
       "public_law": "23-167",
       "title": "Public Law 23-167 | Uh Oh Act",
@@ -3219,6 +3311,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision"
       ],
@@ -3239,6 +3332,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -3276,6 +3370,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "multiple-laws-same-target",
         "standalone-permanent-provision"
@@ -3340,6 +3435,7 @@
       "validation_status": "missing source evidence",
       "confidence": "high",
       "reasons": [
+        "missing-source",
         "status:unresolved"
       ],
       "provision_refs": [],
@@ -3356,7 +3452,24 @@
       "confidence": "high",
       "reasons": [
         "conditional-recommendation",
-        "status:unresolved"
+        "missing-source",
+        "status:unresolved",
+        "unsupported-source"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-024-177",
+      "public_law": "24-177",
+      "title": "Public Law 24-177 | SS Jurisdiction Act",
+      "report_path": "audit/primary/batch-15-03.json",
+      "batch": 15,
+      "source_status": "repealed",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "unsupported-source"
       ],
       "provision_refs": [],
       "targets": []
@@ -3371,6 +3484,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -3390,6 +3504,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -3409,6 +3524,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "missing-target",
         "standalone-permanent-provision"
@@ -3452,6 +3568,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "medium",
       "reasons": [
+        "chronology-required",
         "confidence:medium",
         "direct-action-provision",
         "standalone-permanent-provision"
@@ -3496,6 +3613,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -3504,21 +3622,6 @@
       "targets": [
         "/us/usc/t5/s6103/a"
       ]
-    },
-    {
-      "law_id": "PL-027-195",
-      "public_law": "27-195",
-      "title": "Public Law 27-195 | The Preservation of Laws Act (PLA)",
-      "report_path": "audit/primary/batch-07-02.json",
-      "batch": 7,
-      "source_status": "current",
-      "validation_status": "accepted with corrections",
-      "confidence": "medium",
-      "reasons": [
-        "confidence:medium"
-      ],
-      "provision_refs": [],
-      "targets": []
     },
     {
       "law_id": "PL-028-197",
@@ -3530,6 +3633,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "medium",
       "reasons": [
+        "chronology-required",
         "confidence:medium",
         "direct-action-provision"
       ],
@@ -3607,6 +3711,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -3626,6 +3731,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision"
       ],
@@ -3650,6 +3756,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision"
       ],
@@ -3674,6 +3781,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -3693,6 +3801,7 @@
       "validation_status": "missing source evidence",
       "confidence": "high",
       "reasons": [
+        "missing-source",
         "status:unresolved"
       ],
       "provision_refs": [],
@@ -3725,6 +3834,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "missing-target",
         "standalone-permanent-provision"
@@ -3751,6 +3861,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision"
       ],
@@ -3773,6 +3884,7 @@
       "validation_status": "missing source evidence",
       "confidence": "high",
       "reasons": [
+        "missing-source",
         "status:unresolved"
       ],
       "provision_refs": [],
@@ -3812,6 +3924,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "multiple-laws-same-target"
       ],
@@ -3833,6 +3946,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "status:fully-repealed"
       ],
@@ -3854,7 +3968,8 @@
       "validation_status": "unsupported",
       "confidence": "high",
       "reasons": [
-        "standalone-permanent-provision"
+        "standalone-permanent-provision",
+        "unsupported-source"
       ],
       "provision_refs": [
         "SECTION III"
@@ -3873,6 +3988,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "multiple-laws-same-target"
       ],
@@ -3895,6 +4011,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "status:fully-repealed"
       ],
@@ -3915,6 +4032,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision"
       ],
@@ -3956,6 +4074,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "standalone-permanent-provision"
       ],
       "provision_refs": [
@@ -3976,6 +4095,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -3997,6 +4117,7 @@
       "confidence": "low",
       "reasons": [
         "confidence:low",
+        "missing-source",
         "status:unresolved"
       ],
       "provision_refs": [],
@@ -4012,6 +4133,7 @@
       "validation_status": "unsupported",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "status:fully-repealed",
         "unsupported-source"
       ],
@@ -4030,6 +4152,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "multiple-laws-same-target",
         "standalone-permanent-provision"
@@ -4074,6 +4197,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "multiple-laws-same-target",
         "standalone-permanent-provision"
@@ -4100,6 +4224,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "multiple-laws-same-target",
         "standalone-permanent-provision"
@@ -4125,6 +4250,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision"
       ],
@@ -4147,6 +4273,8 @@
       "validation_status": "missing source evidence",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
+        "missing-source",
         "status:unresolved"
       ],
       "provision_refs": [],
@@ -4164,6 +4292,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "multiple-laws-same-target",
         "standalone-permanent-provision"
@@ -4187,6 +4316,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "status:fully-repealed"
       ],
       "provision_refs": [],
@@ -4204,6 +4334,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "multiple-laws-same-target",
         "standalone-permanent-provision",
@@ -4227,6 +4358,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -4246,6 +4378,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -4283,6 +4416,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -4328,6 +4462,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -4347,6 +4482,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -4367,6 +4503,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -4405,6 +4542,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision"
       ],
@@ -4426,6 +4564,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -4447,6 +4586,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision"
       ],
@@ -4469,6 +4609,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -4566,6 +4707,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "standalone-permanent-provision",
         "status:superseded"
       ],
@@ -4584,6 +4726,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "medium",
       "reasons": [
+        "chronology-required",
         "confidence:medium",
         "direct-action-provision"
       ],
@@ -4604,6 +4747,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -4641,6 +4785,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -4662,6 +4807,7 @@
       "validation_status": "incomplete",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "missing-target",
         "standalone-permanent-provision"
@@ -4688,6 +4834,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -4707,6 +4854,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision"
       ],
@@ -4753,6 +4901,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "medium",
       "reasons": [
+        "chronology-required",
         "confidence:medium",
         "direct-action-provision",
         "standalone-permanent-provision"
@@ -4775,6 +4924,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "multiple-laws-same-target",
         "standalone-permanent-provision"
@@ -4800,6 +4950,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "medium",
       "reasons": [
+        "chronology-required",
         "confidence:medium",
         "direct-action-provision",
         "multiple-laws-same-target",
@@ -4826,6 +4977,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision"
       ],
@@ -4851,6 +5003,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision"
       ],
@@ -4876,6 +5029,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "medium",
       "reasons": [
+        "chronology-required",
         "confidence:medium",
         "direct-action-provision",
         "standalone-permanent-provision"
@@ -4900,6 +5054,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "status:temporary-operative"
       ],
       "provision_refs": [],
@@ -4915,6 +5070,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -4936,6 +5092,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision"
       ],
       "provision_refs": [
@@ -4961,6 +5118,7 @@
       "validation_status": "missing chronology analysis",
       "confidence": "high",
       "reasons": [
+        "chronology-required",
         "direct-action-provision",
         "standalone-permanent-provision"
       ],

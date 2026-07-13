@@ -332,20 +332,43 @@
       "law_id": "PL-037-261",
       "public_law": "37-261",
       "title": "Public Law 37-261 | Federal Criminal Code Act of 2025",
-      "status": "unresolved",
-      "status_basis": "No readable authenticated enactment text could be recovered from the card, attachments, or description, so no lawful codification conclusion can be made.",
-      "provisions": [],
+      "approved_code_treatment": "statutory-note",
+      "status": "current",
+      "status_basis": "The act is operative, but the accessible source exposes only the short title, severability, effective date, and an instruction to adopt an attached Federal Criminal Code whose section-by-section text is not exposed by the source package.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "summary": "Short title, severability, and effective date.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The source says the bill may be cited as the Federal Criminal Code Act and becomes effective immediately upon enactment.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4",
+          "summary": "Adopts the attached criminal code as the Federal Criminal Code to be enforced in the District of Columbia.",
+          "classes": ["new-permanent-general", "statutory-note-material", "non-code"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t18/s1",
+          "exact_change": "Adopt the attached code as the operative Federal Criminal Code; the accessible source does not expose a section-by-section replacement text.",
+          "evidence": "The source says the attached Criminal Code shall act as the Federal Criminal Code.",
+          "notes": "This is source-limited because the attached code text is not determinable from the accessible extraction."
+        }
+      ],
       "current_implementation": {
-        "assessment": "not-applicable",
+        "assessment": "partially-implemented",
         "dump_present": false,
         "trello_present": false,
         "false_source_limitation": false,
-        "placement": null,
-        "detail": "No verified XML placement is available because the authenticated source could not be recovered."
+        "placement": "/us/usc/t18/s1",
+        "detail": "The branch should keep this as a source-limited statutory note at the existing anchor; the attached code text cannot be reconstructed from the accessible source package."
       },
       "recommended_actions": [
-        "Keep the law as unrecoverable-source history only.",
-        "Do not alter the Code until a readable source is recovered."
+        "Keep the law as a source-limited statutory note at the existing anchor.",
+        "Remove the Trello link.",
+        "Do not invent unattested attached-code text."
       ],
       "confidence": "high"
     },

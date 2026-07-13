@@ -172,34 +172,41 @@
     {
       "law_id": "PL-022-161",
       "public_law": "Public Law 22-161",
-      "title": "Source-unavailable enactment",
-      "final_legal_status": "unresolved",
-      "chronology_conclusion": "The authoritative package exposes only a Google Drive viewer page, so the enactment text could not be authenticated from the available source files.",
-      "approved_code_treatment": "source-limited",
+      "title": "Second Chance Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The source package is readable and the act is a generally applicable employment-and-sealing statute with short title, severability, effective date, employment standards, and sealing procedures, but it does not identify an express positive-law rewrite target.",
+      "approved_code_treatment": "statutory-note",
       "source_evidence": [
         "codification/laws/laws/PL-022-161/law.txt",
-        "codification/mass_migration/latest/reports/laws/PL-022-161.md"
+        "codification/mass_migration/latest/reports/laws/PL-022-161.md",
+        "codification/laws/laws/PL-022-161/source/rendered.html"
       ],
-      "current_xml_comparison": "Hold as unresolved until a readable enactment is available. | No authenticated XML implementation could be matched to the source package.",
-      "final_recommended_action": "No code change can be recommended until the source text is recovered. | Recover the readable enactment text. | Re-audit once the source is available.",
+      "current_xml_comparison": "The branch should treat this as a concise statutory note at the closest subject-matter anchor. | No positive-law section rewrite is identified in the source package.",
+      "final_recommended_action": "Retain the enactment as a concise statutory note at the closest subject-matter anchor. | Do not invent a positive-law section amendment. | Remove any stale unresolved flag or Trello-only placeholder.",
       "confidence": "high",
       "provisions": [
         {
           "ref": "entire_act",
-          "text_summary": "Authenticated enactment text is not recoverable from the provided source package.",
+          "text_summary": "Short title, severability, effective date, employment standards, findings, and sealing procedures.",
           "classes": [
-            "source-unavailable"
+            "short-title",
+            "severability",
+            "effective-date",
+            "findings-or-sense",
+            "new-permanent-general"
           ],
-          "treatment": "source-limited",
-          "target": "none",
-          "exact_change": "No code change can be recommended until the source text is recovered.",
+          "treatment": "statutory-note",
+          "target": "/us/usc/t50/s1",
+          "exact_change": "Retain the act as a concise statutory note at the closest subject-matter anchor.",
           "evidence": [
             "codification/laws/laws/PL-022-161/law.txt",
-            "codification/mass_migration/latest/reports/laws/PL-022-161.md"
+            "codification/mass_migration/latest/reports/laws/PL-022-161.md",
+            "codification/laws/laws/PL-022-161/source/rendered.html"
           ],
-          "notes": "Hold as unresolved until a readable enactment is available."
+          "notes": "The full source is readable and the act is a generally applicable employment-and-sealing statute."
         }
-      ]
+      ],
+      "exact_target": "/us/usc/t50/s1"
     }
   ]
 }

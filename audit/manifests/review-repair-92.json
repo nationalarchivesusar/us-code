@@ -1,0 +1,25 @@
+{
+  "manifest_id": "review-repair-92",
+  "output_path": "audit/review/review-repair-92.json",
+  "purpose": "Targeted re-review of three unreviewed laws with source-grounded dispositions.",
+  "laws": [
+    {
+      "law_id": "PL-035-253",
+      "public_law": "35-253",
+      "source_report": "audit/primary/batch-09-02.json",
+      "issue_hint": "unreviewed non-code disposition"
+    },
+    {
+      "law_id": "PL-035-255",
+      "public_law": "35-255",
+      "source_report": "audit/primary/batch-09-02.json",
+      "issue_hint": "unreviewed statutory-note disposition"
+    },
+    {
+      "law_id": "PL-036-259",
+      "public_law": "36-259",
+      "source_report": "audit/primary/batch-09-02.json",
+      "issue_hint": "unreviewed statutory-note disposition"
+    }
+  ]
+}

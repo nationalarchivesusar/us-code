@@ -1,0 +1,314 @@
+{
+  "reviewer": "law-auditor-83",
+  "group_index": 83,
+  "law_count": 4,
+  "source_manifest": "audit/manifests/review-repair-83.json",
+  "output_path": "audit/review/review-repair-83.json",
+  "reviewed_against": [
+    "audit/manifests/review-repair-83.json",
+    "codification/laws/laws/PL-015-108/law.txt",
+    "codification/laws/laws/PL-015-108/metadata.json",
+    "codification/laws/laws/PL-015-109/law.txt",
+    "codification/laws/laws/PL-015-109/metadata.json",
+    "codification/laws/laws/PL-015-110/metadata.json",
+    "codification/laws/laws/PL-015-110/_UNRECOVERABLE.txt",
+    "codification/laws/laws/PL-016-122/law.txt",
+    "codification/laws/laws/PL-016-122/metadata.json",
+    "codification/mass_migration/latest/reports/laws/PL-015-108.md",
+    "codification/mass_migration/latest/reports/laws/PL-015-109.md",
+    "codification/mass_migration/latest/reports/laws/PL-015-110.md",
+    "codification/mass_migration/latest/reports/laws/PL-016-122.md",
+    "codification/mass_migration/latest/sources/records/PL-016-122.json"
+  ],
+  "completion_summary": "Resolved the four assigned laws by source file: PL-015-108 and PL-015-109 are history-only enactments with no U.S. Code rewrite, while PL-015-110 and PL-016-122 remain source-unavailable and should stay limited to historical inventory treatment.",
+  "changed_law_ids": [
+    "PL-015-108",
+    "PL-015-109",
+    "PL-015-110",
+    "PL-016-122"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-015-108",
+      "public_law": "15-108",
+      "title": "Public Law 15-108 | Reclassification of Labeling Act of 2023",
+      "final_status": "current",
+      "status_basis": "The act standardizes congressional labeling conventions and does not direct any U.S. Code amendment.",
+      "provision_disposition": "historical-note-only",
+      "required_code_treatment": "Keep only a concise historical note; do not insert operative Code text.",
+      "source_evidence": [
+        "codification/laws/laws/PL-015-108/law.txt",
+        "codification/laws/laws/PL-015-108/metadata.json",
+        "codification/mass_migration/latest/reports/laws/PL-015-108.md"
+      ],
+      "current_implementation": {
+        "state": "not-applicable",
+        "xml": "no verified XML placement",
+        "branch_vs_origin": "no relevant branch change identified"
+      },
+      "recommended_action": "Retain the law as a concise archival note and do not synthesize a Code entry.",
+      "chronology_conclusion": "The source text governs internal legislative labeling only, so the proper codification treatment is history-only rather than a Code rewrite.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "SECTION 1",
+          "text_summary": "Short title.",
+          "classes": [
+            "short-title",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "none",
+          "exact_change": "No U.S. Code change is authorized.",
+          "evidence": [
+            "codification/laws/laws/PL-015-108/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-015-108.md"
+          ],
+          "notes": "Introductory matter only."
+        },
+        {
+          "ref": "SECTION 2",
+          "text_summary": "Purpose statement for fixing congressional labeling issues.",
+          "classes": [
+            "purpose",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "none",
+          "exact_change": "No U.S. Code change is authorized.",
+          "evidence": [
+            "codification/laws/laws/PL-015-108/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-015-108.md"
+          ],
+          "notes": "Policy statement only."
+        },
+        {
+          "ref": "SECTION 3",
+          "text_summary": "Rules governing bill labels and the content required in bills.",
+          "classes": [
+            "general-provision",
+            "labeling-rules",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "none",
+          "exact_change": "No U.S. Code change is authorized.",
+          "evidence": [
+            "codification/laws/laws/PL-015-108/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-015-108.md"
+          ],
+          "notes": "Legislative drafting convention only."
+        },
+        {
+          "ref": "SECTION 4",
+          "text_summary": "Rules governing resolutions and required resolution wording.",
+          "classes": [
+            "general-provision",
+            "labeling-rules",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "none",
+          "exact_change": "No U.S. Code change is authorized.",
+          "evidence": [
+            "codification/laws/laws/PL-015-108/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-015-108.md"
+          ],
+          "notes": "Legislative drafting convention only."
+        },
+        {
+          "ref": "SECTION 5",
+          "text_summary": "Rules governing concurrent resolutions.",
+          "classes": [
+            "general-provision",
+            "labeling-rules",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "none",
+          "exact_change": "No U.S. Code change is authorized.",
+          "evidence": [
+            "codification/laws/laws/PL-015-108/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-015-108.md"
+          ],
+          "notes": "Legislative drafting convention only."
+        },
+        {
+          "ref": "SECTION 6",
+          "text_summary": "Rules governing joint resolutions.",
+          "classes": [
+            "general-provision",
+            "labeling-rules",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "none",
+          "exact_change": "No U.S. Code change is authorized.",
+          "evidence": [
+            "codification/laws/laws/PL-015-108/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-015-108.md"
+          ],
+          "notes": "Legislative drafting convention only."
+        },
+        {
+          "ref": "SECTION 7",
+          "text_summary": "Rules governing amendments to legislative items and amendment-to-amendment labeling.",
+          "classes": [
+            "general-provision",
+            "labeling-rules",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "none",
+          "exact_change": "No U.S. Code change is authorized.",
+          "evidence": [
+            "codification/laws/laws/PL-015-108/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-015-108.md"
+          ],
+          "notes": "Legislative drafting convention only."
+        },
+        {
+          "ref": "SECTION 8",
+          "text_summary": "Miscellaneous labeling conventions for committee reports and treaty documents.",
+          "classes": [
+            "general-provision",
+            "labeling-rules",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "none",
+          "exact_change": "No U.S. Code change is authorized.",
+          "evidence": [
+            "codification/laws/laws/PL-015-108/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-015-108.md"
+          ],
+          "notes": "Legislative drafting convention only."
+        }
+      ]
+    },
+    {
+      "law_id": "PL-015-109",
+      "public_law": "15-109",
+      "title": "Public Law 15-109 | Ending Tigray for the Last Time",
+      "final_status": "current",
+      "status_basis": "The joint resolution repeals the formal notice of war against the Republic of Tigray and does not direct a U.S. Code amendment.",
+      "provision_disposition": "historical-note-only",
+      "required_code_treatment": "Keep only a concise repeal-history note; do not insert operative Code text.",
+      "source_evidence": [
+        "codification/laws/laws/PL-015-109/law.txt",
+        "codification/laws/laws/PL-015-109/metadata.json",
+        "codification/mass_migration/latest/reports/laws/PL-015-109.md"
+      ],
+      "current_implementation": {
+        "state": "not-applicable",
+        "xml": "no verified XML placement",
+        "branch_vs_origin": "no relevant branch change identified"
+      },
+      "recommended_action": "Retain the resolution as a concise historical note and do not invent a Code citation.",
+      "chronology_conclusion": "The source text is a repeal-history resolution, so the proper treatment is archival history rather than a live U.S. Code rewrite.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "Repeals the formal notice of war previously associated with House Joint Resolution 6.",
+          "classes": [
+            "repeal",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "none",
+          "exact_change": "No U.S. Code change is authorized.",
+          "evidence": [
+            "codification/laws/laws/PL-015-109/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-015-109.md"
+          ],
+          "notes": "The resolution operates as repeal history only."
+        }
+      ]
+    },
+    {
+      "law_id": "PL-015-110",
+      "public_law": "15-110",
+      "title": "Public Law 15-110 | A Bill to Direct the Inspector General of the Department of Defense to Conduct an Investigation Into the Attack on the United States Embassy in Damascus, and for Other Purposes",
+      "final_status": "source_unavailable",
+      "status_basis": "The authoritative local package does not expose readable enactment text, so no operative codification conclusion can be drawn from the available material.",
+      "provision_disposition": "source-limited-historical-note",
+      "required_code_treatment": "Retain only source-limited history; do not invent operative text.",
+      "source_evidence": [
+        "codification/laws/laws/PL-015-110/metadata.json",
+        "codification/laws/laws/PL-015-110/_UNRECOVERABLE.txt",
+        "codification/mass_migration/latest/reports/laws/PL-015-110.md"
+      ],
+      "current_implementation": {
+        "state": "not-applicable",
+        "xml": "no verified XML placement",
+        "branch_vs_origin": "no relevant branch change identified"
+      },
+      "recommended_action": "Keep the law as a source-limited historical entry and re-audit only if readable source text is recovered.",
+      "chronology_conclusion": "Because no readable enactment text was recovered, the only supportable conclusion is historical inventory treatment.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "No readable enactment text is available in the authoritative source package.",
+          "classes": [
+            "source-unavailable",
+            "history-only"
+          ],
+          "treatment": "source-limited-historical-note",
+          "target": "none",
+          "exact_change": "No code change is authorized from the available source material.",
+          "evidence": [
+            "codification/laws/laws/PL-015-110/metadata.json",
+            "codification/laws/laws/PL-015-110/_UNRECOVERABLE.txt",
+            "codification/mass_migration/latest/reports/laws/PL-015-110.md"
+          ],
+          "notes": "Treat as nonoperative because the source package does not expose usable text."
+        }
+      ]
+    },
+    {
+      "law_id": "PL-016-122",
+      "public_law": "16-122",
+      "title": "Public Law 16-122 | The Bill Transparency Understanding Act",
+      "final_status": "historical-note-only",
+      "status_basis": "The local source package resolves to viewer debris and does not expose readable enactment text, so the only supportable disposition is a source-limited historical note.",
+      "provision_disposition": "source-limited-historical-note",
+      "required_code_treatment": "Retain only source-limited history; do not invent operative text.",
+      "source_evidence": [
+        "codification/laws/laws/PL-016-122/law.txt",
+        "codification/laws/laws/PL-016-122/metadata.json",
+        "codification/mass_migration/latest/reports/laws/PL-016-122.md",
+        "codification/mass_migration/latest/sources/records/PL-016-122.json"
+      ],
+      "current_implementation": {
+        "state": "not-applicable",
+        "xml": "no verified XML placement",
+        "branch_vs_origin": "no relevant branch change identified"
+      },
+      "recommended_action": "Keep the law as a source-limited historical entry and re-audit only if readable source text is recovered.",
+      "chronology_conclusion": "Because no readable enactment text was recovered, the only supportable conclusion is historical inventory treatment.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "No readable enactment text is available in the authoritative source package.",
+          "classes": [
+            "source-unavailable",
+            "history-only"
+          ],
+          "treatment": "source-limited-historical-note",
+          "target": "none",
+          "exact_change": "No code change is authorized from the available source material.",
+          "evidence": [
+            "codification/laws/laws/PL-016-122/law.txt",
+            "codification/laws/laws/PL-016-122/metadata.json",
+            "codification/mass_migration/latest/reports/laws/PL-016-122.md",
+            "codification/mass_migration/latest/sources/records/PL-016-122.json"
+          ],
+          "notes": "Treat as nonoperative because the source package does not expose usable text."
+        }
+      ]
+    }
+  ]
+}

@@ -55,6 +55,14 @@ NOTE_TREATMENTS = {
     "note-only-but-amendment-required",
     "source-limited-historical-note",
 }
+NON_COMPLETED_STATUSES = {
+    "unresolved",
+    "unknown",
+    "source-defect-unresolved",
+    "source-unavailable",
+    "unsupported-source",
+    "operative-text-required-but-target-unresolved",
+}
 
 
 def read_json(path: Path) -> Any:
@@ -227,8 +235,20 @@ def law_issues(law: Dict[str, Any]) -> List[str]:
     conf_text = confidence(law)
     provisions = law.get("provisions") or []
 
-    if not status or status in {"unknown", "n_a", "na"}:
+    if not status or status in {"n_a", "na"}:
         issues.append("missing conclusion")
+    if status == "unknown":
+        issues.append("unresolved conclusion")
+    if status == "unresolved":
+        issues.append("unresolved conclusion")
+    if status == "source_defect_unresolved":
+        issues.append("source-defect-unresolved")
+    if status == "source_unavailable":
+        issues.append("source unavailable")
+    if status == "unsupported_source":
+        issues.append("unsupported source")
+    if status == "operative_text_required_but_target_unresolved":
+        issues.append("operative-text-required-but-target-unresolved")
     if not chrono:
         issues.append("missing chronology conclusion")
     if not treat:
@@ -283,6 +303,15 @@ def report_status(issues: List[str]) -> str:
         return "schema-invalid"
     if "missing laws" in issue_set:
         return "missing laws"
+    for status in (
+        "source unavailable",
+        "unsupported source",
+        "source-defect-unresolved",
+        "operative-text-required-but-target-unresolved",
+        "unresolved conclusion",
+    ):
+        if status in issue_set:
+            return status
     if "missing conclusion" in issue_set:
         return "missing conclusion"
     if "missing evidence" in issue_set:
@@ -331,8 +360,8 @@ def report_validation() -> Tuple[Dict[str, Any], Dict[str, Any]]:
             except Exception:
                 manifest = None
 
-        report_ref = f"audit/review/review-{idx:02d}.json"
-        manifest_ref = f"audit/review/manifest-{idx:02d}.json"
+        report_ref = f"audit/review/{report_path.name}" if report_path else f"audit/review/review-{idx:02d}.json"
+        manifest_ref = f"audit/review/{manifest_path.name}" if manifest_path else f"audit/review/manifest-{idx:02d}.json"
         if report and report.get("source_manifest"):
             manifest_ref = canonical_text(report.get("source_manifest"))
 
@@ -395,16 +424,17 @@ def report_validation() -> Tuple[Dict[str, Any], Dict[str, Any]]:
                 issues.append("schema-invalid")
                 continue
             detail_issues = law_issues(law)
+            law_status = legal_status(law)
             law_issue_rows.append(
                 {
                     "law_id": law.get("law_id"),
                     "public_law": law.get("public_law"),
                     "title": law.get("title"),
-                    "status": legal_status(law),
+                    "status": law_status,
                     "issues": detail_issues,
                 }
             )
-            if "missing conclusion" in detail_issues:
+            if set(detail_issues) & NON_COMPLETED_STATUSES or "missing conclusion" in detail_issues:
                 all_unknown_laws.append(
                     {
                         "report": report_report_ref,
@@ -414,7 +444,10 @@ def report_validation() -> Tuple[Dict[str, Any], Dict[str, Any]]:
                         "issue": "missing conclusion",
                     }
                 )
-                issues.append("missing conclusion")
+                if "missing conclusion" in detail_issues:
+                    issues.append("missing conclusion")
+                else:
+                    issues.extend(sorted(set(detail_issues) & NON_COMPLETED_STATUSES))
                 if idx <= 26:
                     canon_unknown_laws.append(
                         {
@@ -425,7 +458,7 @@ def report_validation() -> Tuple[Dict[str, Any], Dict[str, Any]]:
                             "issue": "missing conclusion",
                         }
                     )
-            if "missing source evidence" in detail_issues:
+            if "missing source evidence" in detail_issues or "source unavailable" in detail_issues or "unsupported source" in detail_issues:
                 issues.append("missing evidence")
                 all_laws_lacking_source.append(
                     {
@@ -433,7 +466,7 @@ def report_validation() -> Tuple[Dict[str, Any], Dict[str, Any]]:
                         "law_id": law.get("law_id"),
                         "public_law": law.get("public_law"),
                         "title": law.get("title"),
-                        "issues": ["missing source evidence"],
+                        "issues": sorted(set(detail_issues) & {"missing source evidence", "source unavailable", "unsupported source"}),
                     }
                 )
                 if idx <= 26:
@@ -443,17 +476,21 @@ def report_validation() -> Tuple[Dict[str, Any], Dict[str, Any]]:
                             "law_id": law.get("law_id"),
                             "public_law": law.get("public_law"),
                             "title": law.get("title"),
-                            "issues": ["missing source evidence"],
+                            "issues": sorted(set(detail_issues) & {"missing source evidence", "source unavailable", "unsupported source"}),
                         }
                     )
             if "missing target" in detail_issues:
                 issues.append("missing target")
+            if set(detail_issues) & NON_COMPLETED_STATUSES:
+                issues.extend(sorted(set(detail_issues) & NON_COMPLETED_STATUSES))
 
             if detail_issues:
                 if idx <= 26:
-                    canon_reports_with_unknowns.append(report_report_ref) if "missing conclusion" in detail_issues else None
-                all_reports_with_unknowns.append(report_report_ref) if "missing conclusion" in detail_issues else None
-            if not evidence(law) or not chronology(law):
+                    if set(detail_issues) & (NON_COMPLETED_STATUSES | {"missing conclusion"}):
+                        canon_reports_with_unknowns.append(report_report_ref)
+                if set(detail_issues) & (NON_COMPLETED_STATUSES | {"missing conclusion"}):
+                    all_reports_with_unknowns.append(report_report_ref)
+            if not evidence(law) or not chronology(law) or set(detail_issues) & {"source unavailable", "unsupported source"}:
                 all_reports_lacking_source.append(report_report_ref)
                 if idx <= 26:
                     canon_reports_lacking_source.append(report_report_ref)

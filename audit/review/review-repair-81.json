@@ -1,0 +1,172 @@
+{
+  "reviewer": "law-auditor-81",
+  "group_index": 181,
+  "law_count": 4,
+  "source_manifest": "audit/manifests/review-repair-81.json",
+  "output_path": "audit/review/review-repair-81.json",
+  "reviewed_against": [
+    "audit/manifests/review-repair-81.json",
+    "audit/primary/batch-11-01.json",
+    "audit/primary/batch-11-02.json",
+    "audit/primary/batch-12-01.json",
+    "audit/primary/batch-12-02.json",
+    "codification/laws/laws/PL-004-035/metadata.json",
+    "codification/laws/laws/PL-004-035/law.txt",
+    "codification/laws/laws/PL-007-046/metadata.json",
+    "codification/laws/laws/PL-007-046/law.txt",
+    "codification/laws/laws/PL-009-063/metadata.json",
+    "codification/laws/laws/PL-009-063/law.txt",
+    "codification/laws/laws/PL-012-076/metadata.json",
+    "codification/laws/laws/PL-012-076/_UNRECOVERABLE.txt",
+    "codification/laws/unrecoverable.json"
+  ],
+  "completion_summary": "Resolved all four assigned laws as source-limited history except PL-012-076, which still needs the boilerplate Title 1 placeholder replaced with an honest unrecoverable-source note.",
+  "changed_law_ids": [
+    "PL-004-035",
+    "PL-007-046",
+    "PL-009-063",
+    "PL-012-076"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-004-035",
+      "public_law": "4-35",
+      "title": "Public Law 4-35 | Recommissioning of the United States Ship New Jersey Act of 2022",
+      "final_legal_status": "source-limited-historical-note",
+      "chronology_conclusion": "The source is a Google Drive permission-denied page, so no authenticated enactment text can be recovered for codification.",
+      "approved_code_treatment": "historical-note-only",
+      "provisions": [
+        {
+          "ref": "whole act",
+          "final_legal_status": "unresolved",
+          "code_treatment": "historical-note-only",
+          "target": null,
+          "enacted_text_or_amendment_command": "Retain only a source-limited historical note and do not invent operative text.",
+          "source_evidence": [
+            "audit/primary/batch-11-01.json",
+            "codification/laws/laws/PL-004-035/metadata.json",
+            "codification/laws/laws/PL-004-035/law.txt"
+          ]
+        }
+      ],
+      "source_evidence": [
+        "audit/primary/batch-11-01.json",
+        "codification/laws/laws/PL-004-035/metadata.json",
+        "codification/laws/laws/PL-004-035/law.txt"
+      ],
+      "current_xml_comparison": {
+        "assessment": "missing",
+        "placement": null,
+        "branch_vs_origin": "No matching note or operative text was located in current branch XML or origin/main.",
+        "detail": "The reviewed materials do not show a lawful codification placement for this source-limited law."
+      },
+      "final_recommended_action": "Keep only a concise source-limited historical note.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-007-046",
+      "public_law": "7-46",
+      "title": "Public Law 7-46 | Whistleblower Protection Act",
+      "final_legal_status": "source-limited-historical-note",
+      "chronology_conclusion": "The source is a Google Drive access-denied page, so no authenticated enactment text can be recovered for codification.",
+      "approved_code_treatment": "historical-note-only",
+      "provisions": [
+        {
+          "ref": "whole act",
+          "final_legal_status": "unresolved",
+          "code_treatment": "historical-note-only",
+          "target": null,
+          "enacted_text_or_amendment_command": "Retain only a source-limited historical note and do not invent operative text.",
+          "source_evidence": [
+            "audit/primary/batch-11-02.json",
+            "codification/laws/laws/PL-007-046/metadata.json",
+            "codification/laws/laws/PL-007-046/law.txt"
+          ]
+        }
+      ],
+      "source_evidence": [
+        "audit/primary/batch-11-02.json",
+        "codification/laws/laws/PL-007-046/metadata.json",
+        "codification/laws/laws/PL-007-046/law.txt"
+      ],
+      "current_xml_comparison": {
+        "assessment": "missing",
+        "placement": null,
+        "branch_vs_origin": "No branch XML note was found, so the current tree lacks any lawful source-limited preservation.",
+        "detail": "The reviewed materials do not show a codification placement for this unrecoverable source."
+      },
+      "final_recommended_action": "Keep only a concise source-limited historical note.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-009-063",
+      "public_law": "9-63",
+      "title": "Public Law 9-63 | The Federal District Employment Act of 2022",
+      "final_legal_status": "source-limited-historical-note",
+      "chronology_conclusion": "The source is unrecoverable, so no authenticated enactment text can be verified from the supplied record.",
+      "approved_code_treatment": "historical-note-only",
+      "provisions": [
+        {
+          "ref": "entire act",
+          "final_legal_status": "unresolved",
+          "code_treatment": "historical-note-only",
+          "target": null,
+          "enacted_text_or_amendment_command": "Keep only a concise source-limited historical note and do not invent operative text.",
+          "source_evidence": [
+            "audit/primary/batch-12-01.json",
+            "codification/laws/laws/PL-009-063/metadata.json",
+            "codification/laws/laws/PL-009-063/law.txt"
+          ]
+        }
+      ],
+      "source_evidence": [
+        "audit/primary/batch-12-01.json",
+        "codification/laws/laws/PL-009-063/metadata.json",
+        "codification/laws/laws/PL-009-063/law.txt"
+      ],
+      "current_xml_comparison": {
+        "assessment": "not-applicable",
+        "placement": "/us/usc/t5/s101",
+        "branch_vs_origin": "The branch has a default Title 5 note anchor, but the true issue is source unavailability rather than a confirmed codification target.",
+        "detail": "The reviewed materials do not support any operative text or confirmed placement beyond a default placeholder anchor."
+      },
+      "final_recommended_action": "Remove the Trello link and keep only a concise source-limited historical note.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-012-076",
+      "public_law": "12-76",
+      "title": "Public Law 12-76 | Removing Idiocy Act",
+      "final_legal_status": "unresolved",
+      "chronology_conclusion": "The source packet is unrecoverable, so no executable codification can be verified from the archive.",
+      "approved_code_treatment": "historical-note-only",
+      "provisions": [
+        {
+          "ref": "entire act",
+          "final_legal_status": "unresolved",
+          "code_treatment": "historical-note-only",
+          "target": null,
+          "enacted_text_or_amendment_command": "Replace the boilerplate with an honest source-limited historical note stating that the source is unrecoverable.",
+          "source_evidence": [
+            "audit/primary/batch-12-02.json",
+            "codification/laws/laws/PL-012-076/_UNRECOVERABLE.txt",
+            "codification/laws/unrecoverable.json"
+          ]
+        }
+      ],
+      "source_evidence": [
+        "audit/primary/batch-12-02.json",
+        "codification/laws/laws/PL-012-076/_UNRECOVERABLE.txt",
+        "codification/laws/unrecoverable.json"
+      ],
+      "current_xml_comparison": {
+        "assessment": "incorrectly-implemented",
+        "placement": "/us/usc/t1/s1",
+        "branch_vs_origin": "The current XML still carries a boilerplate note and Trello link at Title 1, which does not satisfy the unrecoverable-source disposition.",
+        "detail": "The placeholder note should be replaced with a truthful source-limited historical entry."
+      },
+      "final_recommended_action": "Replace the Title 1 boilerplate with an honest unrecoverable-source historical note and remove the Trello link.",
+      "confidence": "low"
+    }
+  ]
+}

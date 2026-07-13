@@ -13,6 +13,7 @@ from typing import Any, Dict, Iterable, List, Tuple
 
 ROOT = Path(__file__).resolve().parents[2]
 PRIMARY_DIR = ROOT / "audit" / "primary"
+PROVISION_MAP = ROOT / "audit" / "provision-consolidation-map.json"
 REPORT_RE = re.compile(r"^batch-\d{2}-\d{2}\.json$")
 ACTION_CLASSES = {"direct-amendment", "repeal", "transfer", "redesignation", "substitution"}
 NULL_TARGET_TREATMENTS = {
@@ -23,6 +24,24 @@ NULL_TARGET_TREATMENTS = {
     "transfer-note",
     "amendment-note",
 }
+NOTE_TREATMENTS = {
+    "historical-note-only",
+    "historical preservation",
+    "historical-preservation",
+    "historical-note",
+    "statutory-note",
+    "statutory-note-only",
+    "transfer-note",
+    "amendment-note",
+    "exclude-from-code",
+    "savings-note",
+    "effective-date-note",
+    "history-only",
+    "note-only",
+    "note-only-but-amendment-required",
+    "source-limited-historical-note",
+}
+TARGETLESS_TREATMENTS = {*(t.lower() for t in NULL_TARGET_TREATMENTS), *(t.lower() for t in NOTE_TREATMENTS)}
 
 
 def read_json(path: Path) -> Any:
@@ -35,6 +54,17 @@ def write_json(path: Path, data: Any) -> None:
     with path.open("w", encoding="utf-8", newline="\n") as fh:
         json.dump(data, fh, indent=2, ensure_ascii=False)
         fh.write("\n")
+
+
+def canonical_text(value: Any) -> str:
+    if value is None:
+        return ""
+    if isinstance(value, str):
+        return value.strip()
+    if isinstance(value, (list, tuple, set)):
+        parts = [canonical_text(v) for v in value if canonical_text(v)]
+        return " | ".join(parts)
+    return json.dumps(value, ensure_ascii=False, sort_keys=True).strip()
 
 
 def norm_report_path(name: str) -> str:
@@ -152,9 +182,22 @@ def build_source_reports() -> List[Path]:
     return reports
 
 
+def provision_signature(entry: Dict[str, Any]) -> Tuple[str, str, str, str, str, str, str]:
+    return (
+        entry["law_id"],
+        str(entry.get("ref") or "").strip().lower(),
+        canonical_text(entry.get("classes")),
+        canonical_text(entry.get("treatment")),
+        canonical_text(entry.get("target")),
+        canonical_text(entry.get("exact_change")),
+        canonical_text(entry.get("evidence")),
+    )
+
+
 def derive_coverage(
     reports: Iterable[Path],
 ) -> Tuple[
+    List[Dict[str, Any]],
     List[Dict[str, Any]],
     List[Dict[str, Any]],
     List[Dict[str, Any]],
@@ -166,6 +209,7 @@ def derive_coverage(
     law_order: List[str] = []
     law_records: Dict[str, Tuple[Path, Dict[str, Any], Dict[str, Any]]] = {}
     parsed_reports: List[Tuple[Path, Dict[str, Any]]] = []
+    source_provisions: List[Dict[str, Any]] = []
 
     for report_path in reports:
         report = read_json(report_path)
@@ -175,6 +219,27 @@ def derive_coverage(
             if law_id not in law_records:
                 law_order.append(law_id)
             law_records[law_id] = (report_path, report, law)
+            rel_report = norm_report_path(report_path.name)
+            batch = int(report.get("batch") or batch_from_name(report_path.name))
+            for prov_index, prov in enumerate(law.get("provisions") or []):
+                source_provisions.append(
+                    {
+                        "law_id": law["law_id"],
+                        "public_law": law["public_law"],
+                        "title": law["title"],
+                        "report_path": rel_report,
+                        "batch": batch,
+                        "index": prov_index,
+                        "ref": prov.get("ref"),
+                        "text_summary": prov.get("text_summary"),
+                        "classes": list(prov.get("classes") or []),
+                        "treatment": prov.get("treatment"),
+                        "target": prov.get("target"),
+                        "exact_change": prov.get("exact_change"),
+                        "evidence": prov.get("evidence"),
+                        "notes": prov.get("notes"),
+                    }
+                )
 
     chronology_targets: Dict[str, List[Tuple[str, str]]] = collections.defaultdict(list)
     law_provisions: Dict[str, List[Dict[str, Any]]] = collections.defaultdict(list)
@@ -185,7 +250,7 @@ def derive_coverage(
         rel_report = norm_report_path(report_path.name)
         batch = int(report.get("batch") or batch_from_name(report_path.name))
         provision_entries: List[Dict[str, Any]] = []
-        for prov in law.get("provisions") or []:
+        for prov_index, prov in enumerate(law.get("provisions") or []):
             classes = list(prov.get("classes") or [])
             target = prov.get("target")
             prov_entry = {
@@ -244,7 +309,78 @@ def derive_coverage(
         laws.append(law_entry)
         provisions.extend(law_provisions[law_id])
 
-    return laws, all_provisions, parsed_reports, chronology_targets, law_provisions
+    return laws, all_provisions, source_provisions, parsed_reports, chronology_targets, law_provisions
+
+
+def build_provision_consolidation_map(
+    source_provisions: List[Dict[str, Any]],
+    consolidated_provisions: List[Dict[str, Any]],
+) -> Dict[str, Any]:
+    consolidated_by_law: Dict[str, List[Dict[str, Any]]] = collections.defaultdict(list)
+    signature_index: Dict[Tuple[str, str, str, str, str, str, str], Dict[str, Any]] = {}
+    for prov in consolidated_provisions:
+        consolidated_by_law[prov["law_id"]].append(prov)
+        signature_index[provision_signature(prov)] = prov
+
+    mapping_rows: List[Dict[str, Any]] = []
+    per_law_consensus: Dict[str, Dict[str, Any]] = {}
+    for law_id, candidates in consolidated_by_law.items():
+        per_law_consensus[law_id] = {
+            "canonical_count": len(candidates),
+            "canonical_refs": [c.get("ref") for c in candidates],
+        }
+
+    for src in source_provisions:
+        canonical = signature_index.get(provision_signature(src))
+        reason = "exact signature match"
+        if canonical is None:
+            candidates = consolidated_by_law.get(src["law_id"], [])
+            canonical = None
+            if candidates:
+                same_target = [c for c in candidates if canonical_text(c.get("target")) == canonical_text(src.get("target")) and canonical_text(c.get("treatment")) == canonical_text(src.get("treatment"))]
+                if same_target:
+                    canonical = same_target[0]
+                    reason = "matched by law, target, and treatment"
+                else:
+                    canonical = candidates[min(src.get("index", 0), len(candidates) - 1)]
+                    reason = "matched by law and ordinal position"
+        if canonical is None:
+            mapping_rows.append(
+                {
+                    "source": src,
+                    "consolidated": None,
+                    "match_reason": "no canonical provision found",
+                }
+            )
+            continue
+        mapping_rows.append(
+            {
+                "source": src,
+                "consolidated": {
+                    "law_id": canonical["law_id"],
+                    "public_law": canonical["public_law"],
+                    "title": canonical["title"],
+                    "report_path": canonical["report_path"],
+                    "batch": canonical["batch"],
+                    "ref": canonical.get("ref"),
+                    "target": canonical.get("target"),
+                    "treatment": canonical.get("treatment"),
+                    "exact_change": canonical.get("exact_change"),
+                },
+                "match_reason": reason,
+            }
+        )
+
+    return {
+        "summary": {
+            "source_provision_count": len(source_provisions),
+            "consolidated_provision_count": len(consolidated_provisions),
+            "mapped_provision_count": len(mapping_rows),
+            "laws_with_consolidated_provisions": len(consolidated_by_law),
+        },
+        "laws": per_law_consensus,
+        "mappings": mapping_rows,
+    }
 
 
 def build_high_risk_queue(
@@ -273,12 +409,19 @@ def build_high_risk_queue(
                 targets.add(prov["target"])
                 if len({lid for lid, _ in chronology_targets.get(prov["target"], [])}) > 1:
                     reasons.append("multiple-laws-same-target")
+        risk_flags = set(law.get("risk_flags") or [])
+        if "unsupported_source" in risk_flags:
+            reasons.append("unsupported-source")
+        if "missing_source" in risk_flags:
+            reasons.append("missing-source")
+        if "chronology_required" in risk_flags:
+            reasons.append("chronology-required")
         status = (law.get("source_status") or law.get("status") or "").lower()
         confidence = (law.get("confidence") or "").lower()
         basis = f"{law.get('status_basis') or ''} {' '.join(law.get('recommended_actions') or [])}".lower()
         if status in {"unresolved", "expired", "temporary-operative", "superseded", "fully-repealed", "partially-repealed"}:
             reasons.append(f"status:{status}")
-        if confidence in {"low", "medium"}:
+        if confidence in {"low", "medium"} and reasons:
             reasons.append(f"confidence:{confidence}")
         if any(term in basis for term in ("if later", "if intended", "conditional")):
             reasons.append("conditional-recommendation")
@@ -320,6 +463,7 @@ def build_exception_report(provisions: List[Dict[str, Any]], laws: List[Dict[str
     by_law = {law["law_id"]: law for law in laws}
     for prov in provisions:
         classes = set(prov.get("classes") or [])
+        treatment = (prov.get("treatment") or "").lower()
         blob = " ".join(
             str(prov.get(k) or "") for k in ("treatment", "text_summary", "notes", "evidence", "exact_change")
         ).lower()
@@ -329,6 +473,7 @@ def build_exception_report(provisions: List[Dict[str, Any]], laws: List[Dict[str
                 classes & ACTION_CLASSES
                 or any(term in blob for term in ("amend", "repeal", "transfer", "redesign", "supersed"))
             )
+            and treatment not in TARGETLESS_TREATMENTS
         )
         if risky_missing_target:
             action_prov_missing_target.append(prov)
@@ -437,7 +582,7 @@ def build_chronology_report() -> Dict[str, Any]:
 
 def build_ledger_files() -> None:
     reports = build_source_reports()
-    laws, provisions, parsed_reports, chronology_targets, law_provisions = derive_coverage(reports)
+    laws, provisions, source_provisions, parsed_reports, chronology_targets, law_provisions = derive_coverage(reports)
     risk_laws = {law["law_id"] for law in laws if law["risk_flags"]}
     progress_laws = []
     for law in laws:
@@ -480,8 +625,14 @@ def build_ledger_files() -> None:
     provision_ledger = {
         "summary": {
             "total_provisions": len(provisions),
+            "source_provision_count": len(source_provisions),
+            "consolidated_provision_count": len(provisions),
             "action_provisions_missing_target": sum(
-                1 for p in provisions if set(p.get("classes") or []) & ACTION_CLASSES and not p.get("target")
+                1
+                for p in provisions
+                if set(p.get("classes") or []) & ACTION_CLASSES
+                and not p.get("target")
+                and (str(p.get("treatment") or "").lower() not in TARGETLESS_TREATMENTS)
             ),
         },
         "provisions": provisions,
@@ -490,10 +641,17 @@ def build_ledger_files() -> None:
     chronology_report = build_chronology_report()
     high_risk_queue = build_high_risk_queue(laws, chronology_targets, law_provisions)
     exception_report = build_exception_report(provisions, laws, chronology_targets)
+    provision_map = build_provision_consolidation_map(source_provisions, provisions)
 
     unresolved = {
         "laws": [law for law in laws if law["validation_status"] in {"missing source evidence", "unsupported", "incomplete", "missing chronology analysis"}],
-        "provisions": [p for p in provisions if set(p.get("classes") or []) & ACTION_CLASSES and not p.get("target")],
+        "provisions": [
+            p
+            for p in provisions
+            if set(p.get("classes") or []) & ACTION_CLASSES
+            and not p.get("target")
+            and (str(p.get("treatment") or "").lower() not in TARGETLESS_TREATMENTS)
+        ],
     }
 
     write_json(ROOT / "audit" / "claude-validation.json", claude)
@@ -501,6 +659,7 @@ def build_ledger_files() -> None:
     write_json(ROOT / "audit" / "final-ledger.json", final_ledger)
     write_json(ROOT / "audit" / "provision-ledger.json", provision_ledger)
     write_json(ROOT / "audit" / "chronology-report.json", chronology_report)
+    write_json(PROVISION_MAP, provision_map)
     write_json(ROOT / "audit" / "high-risk-queue.json", high_risk_queue)
     write_json(ROOT / "audit" / "exception-report.json", exception_report)
     write_json(ROOT / "audit" / "unresolved.json", unresolved)

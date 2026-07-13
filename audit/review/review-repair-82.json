@@ -1,0 +1,241 @@
+{
+  "batch": 82,
+  "reviewer": "law-auditor-82",
+  "group_index": 82,
+  "law_count": 4,
+  "source_manifest": "audit/manifests/review-repair-82.json",
+  "output_path": "audit/review/review-repair-82.json",
+  "completion_summary": "Reviewed 4 laws: PL-014-091 and PL-015-094 are usable standalone general-permanent enactments with note-only provisions and no concrete U.S.C. rewrite target; PL-015-095 remains historical-only because the source is unrecoverable; PL-015-107 is historical-only and later-repealed.",
+  "reviewed_against": [
+    "audit/manifests/review-repair-82.json",
+    "codification/laws/laws/PL-014-091/metadata.json",
+    "codification/laws/laws/PL-014-091/law.txt",
+    "codification/laws/laws/PL-015-094/metadata.json",
+    "codification/laws/laws/PL-015-094/source/H.R. 1501 - WHISTLEBLOWER PROTECTIONS ACT OF 2023.pdf",
+    "codification/laws/laws/PL-015-095/metadata.json",
+    "codification/laws/laws/PL-015-095/_UNRECOVERABLE.txt",
+    "codification/laws/laws/PL-015-107/metadata.json",
+    "codification/laws/laws/PL-015-107/_UNRECOVERABLE.txt",
+    "codification/reference/all_270_laws_classification.csv",
+    "codification/decisions/PL-029-210.md",
+    "codification/decisions/PL-017-133.md"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-014-091",
+      "public_law": "14-91",
+      "title": "Public Law 14-91 | Military Code of Military Justice Reform Act of 2023",
+      "status": "current",
+      "status_basis": "The source is readable and the act is a standalone general-permanent military-justice measure, but it does not express a concrete current U.S.C. target. Treat the provisions as statutory-note material only.",
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "text_summary": "Short title naming the act.",
+          "classes": [
+            "short-title"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Preserve as note material; no direct Code rewrite is identified.",
+          "evidence": "\"Uniform Code of Military Justice Reform Act of 2023\"",
+          "notes": "Introductory material only."
+        },
+        {
+          "ref": "SEC. 2",
+          "text_summary": "Definition tying the act to the proposed UCMJ framework.",
+          "classes": [
+            "definitions"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Preserve the definition as note material.",
+          "evidence": "\"Proposed Uniform Code of Military Justice\"",
+          "notes": "No direct U.S.C. citation appears."
+        },
+        {
+          "ref": "SEC. 3",
+          "text_summary": "Severability plus a supercession clause that limits later laws unless they expressly override this act.",
+          "classes": [
+            "severability",
+            "supersession"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Keep the saving clause as historical note material only.",
+          "evidence": "\"shall be severable\"; \"shall not be superseded\"",
+          "notes": "This is background/savings language."
+        },
+        {
+          "ref": "SEC. 4",
+          "text_summary": "Immediate application of the revised military-justice framework to the armed forces.",
+          "classes": [
+            "new-permanent-general",
+            "uncodified-admin-direction"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Preserve the operational instruction as note material only.",
+          "evidence": "\"immediately applied to all branches of the U.S Armed Forces\"",
+          "notes": "No concrete Code section is named."
+        },
+        {
+          "ref": "SEC. 5",
+          "text_summary": "Findings and enactment language.",
+          "classes": [
+            "findings-or-sense",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Preserve the findings and enactment clause as note material.",
+          "evidence": "\"Uniform Code of Military Justice is an essential component\"",
+          "notes": "The source uses duplicated section numbering, so this should stay as concise history."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "The enactment is reviewable, but the recovered materials do not identify a concrete U.S.C. anchor for a live XML operation."
+      },
+      "recommended_actions": [
+        "Preserve the act as note material if a statutory-note anchor is assigned later.",
+        "Do not invent a direct Title 10 rewrite from the source text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-094",
+      "public_law": "15-94",
+      "title": "Public Law 15-94 | Whistleblower Protections Act of 2023",
+      "status": "current",
+      "status_basis": "The scanned PDF is usable and the enactment is a standalone general-permanent whistleblower measure, but it does not express a concrete current U.S.C. target. Treat the provisions as statutory-note material only.",
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "text_summary": "Short title, severability, effective date, and repeal of H.R. 8024.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date",
+            "repeal"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Preserve the introductory and repeal language as note material only.",
+          "evidence": "\"Whistleblower Protections Act\"; \"H.R. 8024 shall be repealed in its entirety\"",
+          "notes": "Introductory and repeal matter only."
+        },
+        {
+          "ref": "SEC. 2",
+          "text_summary": "Definition of whistleblower tied to reporting protected tips.",
+          "classes": [
+            "definitions"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Preserve the definition as note material.",
+          "evidence": "\"Whistleblower\" shall refer to any citizen who submits a tip",
+          "notes": "No explicit U.S.C. citation appears in the source."
+        },
+        {
+          "ref": "SEC. 3",
+          "text_summary": "Documentation, anti-retaliation, voiding of restrictive agreements, confidentiality, protected disclosures, and recipient list.",
+          "classes": [
+            "anti-retaliation",
+            "confidentiality",
+            "uncodified-admin-direction"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Preserve the protections and disclosure rules as note material only.",
+          "evidence": "\"retaliatory action\"; \"shall be considered void\"; \"keep the information not accessible to the public\"",
+          "notes": "The recovered source is complete enough to support the protection rules, but no Code target is named."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "The rendered PDF is readable, but the source does not identify a concrete current U.S.C. anchor for a live XML operation."
+      },
+      "recommended_actions": [
+        "Preserve the act as statutory-note material only.",
+        "Do not invent a direct Title 5 or Title 18 rewrite from the source."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-095",
+      "public_law": "15-95",
+      "title": "Public Law 15-95 | An Act to Repeal the White House Protection Act",
+      "status": "repealed",
+      "status_basis": "The source is deleted or not found, so only historical treatment is possible.",
+      "provisions": [
+        {
+          "ref": "entire act",
+          "text_summary": "Source-limited repealer preserved only as history.",
+          "classes": [
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep the enactment as historical record only.",
+          "evidence": "\"Source deleted or not found\"",
+          "notes": "No operative text can be verified."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "source-limited historical note",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": true,
+        "placement": null,
+        "detail": "The law is recorded as repealed, but the source bundle is unrecoverable, so no substantive codification can be verified."
+      },
+      "recommended_actions": [
+        "Retain only as historical record.",
+        "Do not infer operative text from the missing source."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-107",
+      "public_law": "15-107",
+      "title": "Public Law 15-107 | Guidance to Guidances Act",
+      "status": "repealed",
+      "status_basis": "The source is deleted or not found, and later repeal review confirms the act is historical-only.",
+      "provisions": [
+        {
+          "ref": "entire act",
+          "text_summary": "Source-limited repealer preserved only as history.",
+          "classes": [
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep the enactment as historical record only.",
+          "evidence": "\"Source deleted or not found\"; later repeal list in PL-017-133",
+          "notes": "No operative text can be verified."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "source-limited historical note",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": true,
+        "placement": null,
+        "detail": "The law is later-repealed and the source bundle is unrecoverable, so only a historical disposition can be recorded."
+      },
+      "recommended_actions": [
+        "Retain only as historical record.",
+        "Do not infer operative text from the missing source."
+      ],
+      "confidence": "high"
+    }
+  ]
+}
