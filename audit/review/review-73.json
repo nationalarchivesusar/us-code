@@ -61,7 +61,13 @@
         "Retain as a concise statutory note at /us/usc/t2/s1 summarizing the Public Law 28-203 amendments."
       ],
       "confidence": "high",
-      "approved_code_treatment": "statutory-note; amendment-note"
+      "approved_code_treatment": "statutory-note; amendment-note",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The classification layer marks this as a borderline note-or-rule enactment, and the current branch carries it as a statutory note rather than a freestanding Code section.",
+      "final_recommended_action": "Retain as a concise statutory note at /us/usc/t2/s1 summarizing the Public Law 28-203 amendments.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1bCeTpqHM_XELVZq3wgArhSkb7OxBl1NX/view | 3200f4e0513c56ea5df4f95f799e25db879b8e334c3714adb62f8b81fa1a71e1",
+      "exact_target": "/us/usc/t2/s1",
+      "exact_change": "Section 6(a) of Public Law 28-203 shall be amended and read as the following. | Section 6(b)(iii) and section 7(a) of Public Law 28-203 are amended and re-read."
     },
     {
       "law_id": "PL-029-213",
@@ -110,7 +116,13 @@
         "Retain only a concise historical note at /us/usc/t2/s1; no permanent Code text is warranted."
       ],
       "confidence": "high",
-      "approved_code_treatment": "historical-note-only"
+      "approved_code_treatment": "historical-note-only",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The classification layer marks this as a repealed-record law, and the current record treats it as historical-only after later repeal.",
+      "final_recommended_action": "Retain only a concise historical note at /us/usc/t2/s1; no permanent Code text is warranted.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1qQ7WpA9efYNXRzvYGIHKc99JruzqQYBf/view | 66b34a3a257f9c51924444146dfaa65681331dffa852dad8883d2a472d3bf9e5",
+      "exact_target": "/us/usc/t2/s1",
+      "exact_change": "Repeal section 4 of Public Law 16-120 in its entirety."
     },
     {
       "law_id": "PL-029-214",
@@ -173,7 +185,12 @@
         "Retain as a concise statutory note at /us/usc/t50/s1; do not create permanent positive-law text."
       ],
       "confidence": "high",
-      "approved_code_treatment": "statutory-note"
+      "approved_code_treatment": "statutory-note",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source creates generally applicable permanent restrictions and the classification layer treats it as a title-50 statutory note rather than a direct positive-law rewrite.",
+      "final_recommended_action": "Retain as a concise statutory note at /us/usc/t50/s1; do not create permanent positive-law text.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1MaGIK3JmHp7t6ItiGhmedfUpbNofQ-8d/view | 3ed2a1bab91fc78255fee9be9d55da92c32756627f136543194690551c1e5090",
+      "exact_target": "/us/usc/t50/s1"
     },
     {
       "law_id": "PL-029-215",
@@ -257,7 +274,13 @@
         "Keep only a concise historical note for the act."
       ],
       "confidence": "high",
-      "approved_code_treatment": "statutory-note; historical-note-only; amend-existing-text"
+      "approved_code_treatment": "statutory-note; historical-note-only; amend-existing-text",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The law directly amends 3 U.S.C. ? 19 and remains operative; the live XML already contains the inserted subsections.",
+      "final_recommended_action": "Leave the live 3 U.S.C. ? 19 text in place. | Keep only a concise historical note for the act.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1BRIdDvHMSNA-jVAlVVazZXrbsws3u86V/view | bbfaa8b6363a4f819eea7b1231a9a6ddb6342970d4f0e59a8c69809fde1265cf",
+      "exact_target": "/us/usc/t3/s19",
+      "exact_change": "Add new subsections (g) and (h) after subsection (f) in 3 U.S.C. ? 19. | Create the declaration, appeal, congressional determination, and judicial review mechanics inside the amended section."
     },
     {
       "law_id": "PL-029-216",
@@ -334,7 +357,12 @@
         "Remove the quotedContent dump and Trello-style boilerplate."
       ],
       "confidence": "high",
-      "approved_code_treatment": "historical-note-only"
+      "approved_code_treatment": "historical-note-only",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The classification layer marks this as a repealed-record law, and the current history record treats the enactment as municipal-only and no longer live.",
+      "final_recommended_action": "Retain only a concise historical note at /us/usc/t40/s101/4. | Remove the quotedContent dump and Trello-style boilerplate.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1RJ-oXnRwsW8E2Jl-RV9GyAL5WcWGSjb3/view | 07ceb01d79e38dd4ed5a7d896eb9c34e2f7a12235609b9e4fd672af9dfab6666",
+      "exact_target": "/us/usc/t40/s101/4"
     },
     {
       "law_id": "PL-029-217",
@@ -409,7 +437,13 @@
         "Remove the quotedContent dump and archive-link boilerplate."
       ],
       "confidence": "high",
-      "approved_code_treatment": "statutory-note; historical-note-only"
+      "approved_code_treatment": "statutory-note; historical-note-only",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The act repeals Public Law 4-27 and sets new restrictions on private security; the supplied sources show no later repeal or sunset.",
+      "final_recommended_action": "Retain a concise statutory note at /us/usc/t15/s1. | Remove the quotedContent dump and archive-link boilerplate.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1cPVNNI72NoHPaiOLfKAk8tzbXnqkmwIl/view | 825b7f3c32e359a52b5542898839d01c7c44007ec78e2e0245b34c39b7c9ffb2",
+      "exact_target": "/us/usc/t15/s1",
+      "exact_change": "Repeal Public Law 4-27 in its entirety."
     },
     {
       "law_id": "PL-029-218",
@@ -470,7 +504,12 @@
         "Delete the quotedContent dump and archive-link boilerplate."
       ],
       "confidence": "high",
-      "approved_code_treatment": "statutory-note"
+      "approved_code_treatment": "statutory-note",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The act sets Secret Service protection rules and contains no self-repeal or sunset; the supplied sources do not show later repeal.",
+      "final_recommended_action": "Keep a concise statutory note at /us/usc/t50/s1. | Delete the quotedContent dump and archive-link boilerplate.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1WfYWvB2lUDoG-TCXb3hqa3wUsjkfazY4/view | 0700465eea71e2144358ea717e6e2376c18c4c315eaeda8d90ef523d8e5fc223",
+      "exact_target": "/us/usc/t50/s1"
     },
     {
       "law_id": "PL-030-220",
@@ -553,7 +592,12 @@
         "Keep only a concise historical note at /us/usc/t28/s1."
       ],
       "confidence": "high",
-      "approved_code_treatment": "statutory-note; historical-note-only"
+      "approved_code_treatment": "statutory-note; historical-note-only",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The classification layer treats this as a direct title-28 amendment, and the current branch still shows the pre-amendment 28 U.S.C. ? 42 text.",
+      "final_recommended_action": "Amend /us/usc/t28/s42 with the allotment rule from SEC. 3. | Keep only a concise historical note at /us/usc/t28/s1.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1Di3x0EcWuYCGdj-avv5tbB0B_IpS5tnF/view | 1cb72cff04cb774b204659aa9c46757d2ec281f0c66b04e988d21341d2f21781",
+      "exact_target": "/us/usc/t28/s42"
     },
     {
       "law_id": "PL-030-221",
@@ -638,7 +682,13 @@
         "Keep only a concise note for the Public Law 26-190 clarification."
       ],
       "confidence": "high",
-      "approved_code_treatment": "statutory-note; amend-existing-text"
+      "approved_code_treatment": "statutory-note; amend-existing-text",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The classification layer treats this as a direct title-28 amendment, and the current branch still shows the pre-amendment 28 U.S.C. ? 2074(a) text.",
+      "final_recommended_action": "Amend /us/usc/t28/s2074(a) with the new text in SEC. 3. | Keep only a concise note for the Public Law 26-190 clarification.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1o8BKPNH9NtFmRJr4dCLMUy6lhzlvHjxX/view | 4a3019a974e3e3ebc239879ad44da8cf4d69cffc6d2f7d4e4b6833bd4a82aed0",
+      "exact_target": "/us/usc/t28/s2074",
+      "exact_change": "Rewrite 28 U.S.C. ? 2074(a) with the new seven-day transmission and fourteen-day effective-date rule."
     },
     {
       "law_id": "PL-030-222",
@@ -711,7 +761,12 @@
         "Remove the Trello link."
       ],
       "confidence": "high",
-      "approved_code_treatment": "statutory-note"
+      "approved_code_treatment": "statutory-note",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source text creates a new FISA Court and related procedures without any self-repeal or sunset, and the archive treats it as a live statutory note.",
+      "final_recommended_action": "Retain as a concise statutory note at /us/usc/t50/s1. | Remove the Trello link.",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t50/s1"
     }
   ],
   "reviewer": "law-auditor-J",

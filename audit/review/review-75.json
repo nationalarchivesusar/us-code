@@ -50,7 +50,13 @@
         "Trim the historical note to a concise statutory-history entry."
       ],
       "confidence": "high",
-      "approved_code_treatment": "statutory-note; amend-existing-text"
+      "approved_code_treatment": "statutory-note; amend-existing-text",
+      "final_legal_status": "superseded",
+      "chronology_conclusion": "The migration record marks this law as superseded but already incorporated, and the live XML contains the revised 26 U.S.C. 1 text imposing the flat 20 percent tax.",
+      "final_recommended_action": "Retain the updated 26 U.S.C. 1 text at /us/usc/t26/s1. | Trim the historical note to a concise statutory-history entry.",
+      "source_evidence": "status keyword `superseded` in list or label | view | https://drive.google.com/file/d/1ojj00XYNewGUdmEE-FaWK4FnJHESL6iA/view | 2743072becbaa50c0c0a35ae0c58e8c041b3db1ece8fe82070c3c66ea887d46b",
+      "exact_target": "/us/usc/t26/s1",
+      "exact_change": "Replace 26 U.S.C. 1 with the flat 20 percent individual income tax text."
     },
     {
       "law_id": "PL-032-234",
@@ -110,7 +116,13 @@
         "Retain only a concise historical note."
       ],
       "confidence": "high",
-      "approved_code_treatment": "statutory-note; amend-existing-text"
+      "approved_code_treatment": "statutory-note; amend-existing-text",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The law directly amends 50 U.S.C. 3041, and the live XML already contains the added notification, certification, and documentation provisions.",
+      "final_recommended_action": "Leave the integrated 50 U.S.C. 3041 amendments in place. | Retain only a concise historical note.",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t50/s3041",
+      "exact_change": "Add subsection (d) covering notifications, certifications, and documentation of DNI appointment actions. | Add the listed defense and intelligence positions to the concurrence requirement in subsection (b)(2)."
     },
     {
       "law_id": "PL-032-235",
@@ -172,7 +184,11 @@
         "Retain only archival history if a record entry is needed."
       ],
       "confidence": "high",
-      "approved_code_treatment": "historical-note-only"
+      "approved_code_treatment": "historical-note-only",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The enactment is classified as commemorative/non-Code material, so it remains a public law but does not warrant a U.S. Code insertion.",
+      "final_recommended_action": "Do not create any U.S. Code text for this act. | Retain only archival history if a record entry is needed.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1h1FDoyv-8_AbfN0qnK-i6iXwNGXJJxUp/view | aed8ae97fd686916761236374e33b665ff88fa1e921eead9b3df6296a15ca785"
     },
     {
       "law_id": "PL-032-236",
@@ -232,7 +248,13 @@
         "Keep the historical note concise."
       ],
       "confidence": "high",
-      "approved_code_treatment": "statutory-note; amend-existing-text"
+      "approved_code_treatment": "statutory-note; amend-existing-text",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The law directly amends 10 U.S.C. 153 and 154, and the live XML already carries the new operational-authority language.",
+      "final_recommended_action": "Leave the integrated 10 U.S.C. 153 and 154 amendments in place. | Keep the historical note concise.",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t10/s153",
+      "exact_change": "Add subsection (e) and the associated operational-authority language to 10 U.S.C. 153. | Revise 10 U.S.C. 154 so the Vice Chairman may exercise operational authority when approved, and add the new Annex E functions."
     },
     {
       "law_id": "PL-033-238",
@@ -310,7 +332,13 @@
         "Do not attempt a positive-law rewrite."
       ],
       "confidence": "high",
-      "approved_code_treatment": "statutory-note; historical-note-only"
+      "approved_code_treatment": "statutory-note; historical-note-only",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The act is general and permanent but the migration record classifies it as a statutory note at 28 U.S.C. 526; the live XML does not yet show that note.",
+      "final_recommended_action": "Add a concise statutory note at /us/usc/t28/s526. | Do not attempt a positive-law rewrite.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1fypr1xL7AfuFtvc5xxHBfuo1eXAFoXO0/view | a37a9d3f48a6d297d11d0db812ca4fe9c7e8ea9bfae7ff84ee77a8fa19989b2e",
+      "exact_target": "/us/usc/t28/s526",
+      "exact_change": "Repeal Public Law 25-184 in its entirety and preserve the prior repeal of Title I of Public Law 15-97."
     },
     {
       "law_id": "PL-034-239",
@@ -372,7 +400,13 @@
         "Do not create permanent Code text."
       ],
       "confidence": "high",
-      "approved_code_treatment": "historical-note-only"
+      "approved_code_treatment": "historical-note-only",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The act is temporary and self-repealing in effect, so it is treated as historical-only and not inserted into the Code.",
+      "final_recommended_action": "Keep this law as historical-only. | Do not create permanent Code text.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1oxixybZA4j8eQd0e-bdmkDnvGJfFxQJT/view?usp=sharing | e7351a41bb88df60f12b5050ac03a7bad126fad78ec8c42b2ee42788381ba367",
+      "exact_target": "Public Law 26-190 ? 108C",
+      "exact_change": "Repeal section 108, subsection C of Public Law 26-190 in its entirety."
     },
     {
       "law_id": "PL-034-240",
@@ -422,7 +456,13 @@
         "Remove the quotedContent dump and boilerplate from the note."
       ],
       "confidence": "high",
-      "approved_code_treatment": "historical-note-only"
+      "approved_code_treatment": "historical-note-only",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The canonical record is tagged repealed, so the enactment is not inserted as current Code text.",
+      "final_recommended_action": "Retain only a concise historical note at /us/usc/t26/s1. | Remove the quotedContent dump and boilerplate from the note.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1G8MTtTVPLZ8YP0QG5F5CZFYg_0y8zoYt/view?usp=sharing | ef745aa0e7d51591db386f16a31fd79b9f7a6c76a9cc285499ed25fc93a92af4",
+      "exact_target": "/us/usc/t26/s1",
+      "exact_change": "Replace the 20 percent flat tax language with a 28 percent flat tax and repeal inconsistent provisions."
     },
     {
       "law_id": "PL-034-241",
@@ -482,7 +522,12 @@
         "Do not create a positive-law rewrite."
       ],
       "confidence": "high",
-      "approved_code_treatment": "statutory-note"
+      "approved_code_treatment": "statutory-note",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The enactment is general and permanent but has no express, uniquely executable Code rewrite; it should be preserved as a statutory note at 2 U.S.C. 29.",
+      "final_recommended_action": "Add a concise statutory note at /us/usc/t2/s29. | Do not create a positive-law rewrite.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1o9A1TLTggmwbTEvl8G5ARYzWIuoOr68x/view | cdf2911d06ddfc5bd36ff00acb23f0c32bad8348545ec6909b53d9febcce08cb",
+      "exact_target": "/us/usc/t2/s29"
     },
     {
       "law_id": "PL-034-242",
@@ -532,7 +577,12 @@
         "Do not synthesize a positive-law amendment."
       ],
       "confidence": "high",
-      "approved_code_treatment": "statutory-note"
+      "approved_code_treatment": "statutory-note",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The enactment is general and permanent but has no express Code rewrite; it should be preserved as a statutory note at 28 U.S.C. 362.",
+      "final_recommended_action": "Add a concise statutory note at /us/usc/t28/s362. | Do not synthesize a positive-law amendment.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1ZLUmZnFw55lI876jHhEB_S2G6FWbgyKy/view | 76f2272a3a16788639201ea5f078376960829a0e9f69f778d5e60fc40317cf36",
+      "exact_target": "/us/usc/t28/s362"
     },
     {
       "law_id": "PL-034-243",
@@ -594,7 +644,13 @@
         "Do not duplicate the replaced provisions elsewhere in title 28."
       ],
       "confidence": "high",
-      "approved_code_treatment": "statutory-note; amend-existing-text"
+      "approved_code_treatment": "statutory-note; amend-existing-text",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The law replaces chapter 16 in title 28, and the live XML already contains the replacement chapter and editorial note treatment.",
+      "final_recommended_action": "Leave the replacement chapter 16 text in place. | Do not duplicate the replaced provisions elsewhere in title 28.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/157nu1Y1kMor84N5RWL8FSKHhnVC7pKOn/view | 892619c7e2f7886f7793b009896e61083a154238426e7ef01205e96c0b689d09",
+      "exact_target": "/us/usc/t28/ch16",
+      "exact_change": "Replace chapter 16 with sections 351-364 as enacted. | Install the new chapter 16 sections 351, 352, 354-360, 362-364 with the enacted text."
     }
   ],
   "reviewer": "law-auditor-N",

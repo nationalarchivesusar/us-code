@@ -48,7 +48,14 @@
         "detail": "No Code insertion is expected for this non-code enactment."
       },
       "recommended_actions": [],
-      "confidence": "medium"
+      "confidence": "medium",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Source report classifies the enactment as non-code/commemorative, so it is not a Code insertion even though the text uses amendment language aimed at Public Law 28-203.",
+      "approved_code_treatment": "non-code",
+      "final_recommended_action": "No Code operation was authorized.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1bCeTpqHM_XELVZq3wgArhSkb7OxBl1NX/view | 3200f4e0513c56ea5df4f95f799e25db879b8e334c3714adb62f8b81fa1a71e1",
+      "exact_target": "/us/usc/t2/s1",
+      "exact_change": "Do not insert this section into the Code; keep it outside permanent text. | Keep the amendment language out of the U.S. Code because the target is another public law, not a Code section."
     },
     {
       "law_id": "PL-029-213",
@@ -95,7 +102,14 @@
         "detail": "Historical repeal record only; no live Code text is expected."
       },
       "recommended_actions": [],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "Later enactment Pub. L. 36-260 repeals Pub. L. 29-213 in full.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "No Code operation was authorized.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1qQ7WpA9efYNXRzvYGIHKc99JruzqQYBf/view | 66b34a3a257f9c51924444146dfaa65681331dffa852dad8883d2a472d3bf9e5",
+      "exact_target": "/us/usc/t2/s1",
+      "exact_change": "Retain as historical-only material; do not create live Code text. | Keep the repeal as historical record only."
     },
     {
       "law_id": "PL-029-214",
@@ -130,7 +144,14 @@
       "recommended_actions": [
         "Add a concise statutory note at /us/usc/t2/s172."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source report preserves the enactment as an active statutory note at 2 U.S.C. 172, with no express Code amendment.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "Add a concise statutory note at /us/usc/t2/s172.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1MaGIK3JmHp7t6ItiGhmedfUpbNofQ-8d/view | 3ed2a1bab91fc78255fee9be9d55da92c32756627f136543194690551c1e5090",
+      "exact_target": "/us/usc/t2/s172",
+      "exact_change": "Insert a concise statutory note at the Title 2 anchor."
     },
     {
       "law_id": "PL-029-215",
@@ -176,7 +197,14 @@
         "detail": "Live XML matches origin/main and already includes the enacted subsections (g) and (h)."
       },
       "recommended_actions": [],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Current XML and origin/main both contain the 3 U.S.C. 19 amendment, including the added subsections (g) and (h).",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "No Code operation was authorized.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1BRIdDvHMSNA-jVAlVVazZXrbsws3u86V/view | bbfaa8b6363a4f819eea7b1231a9a6ddb6342970d4f0e59a8c69809fde1265cf",
+      "exact_target": "/us/usc/t3/s19",
+      "exact_change": "No change needed beyond the existing note structure. | Leave the enacted 3 U.S.C. 19 text in place; the amendment is already incorporated."
     },
     {
       "law_id": "PL-029-216",
@@ -209,7 +237,14 @@
         "detail": "Historical repeal record only; no live Code text is expected."
       },
       "recommended_actions": [],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "Later enactment Pub. L. 36-260 repeals Pub. L. 29-216 in full.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "No Code operation was authorized.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1RJ-oXnRwsW8E2Jl-RV9GyAL5WcWGSjb3/view | 07ceb01d79e38dd4ed5a7d896eb9c34e2f7a12235609b9e4fd672af9dfab6666",
+      "exact_target": "/us/usc/t2/s1",
+      "exact_change": "Keep the enactment as historical-only material; do not create live Code text."
     },
     {
       "law_id": "PL-029-217",
@@ -258,7 +293,14 @@
       "recommended_actions": [
         "Remove the quotedContent dump and keep only the concise statutory note."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source report classifies the enactment as a statutory note at 2 U.S.C. 4103.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "Remove the quotedContent dump and keep only the concise statutory note.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1cPVNNI72NoHPaiOLfKAk8tzbXnqkmwIl/view | 825b7f3c32e359a52b5542898839d01c7c44007ec78e2e0245b34c39b7c9ffb2",
+      "exact_target": "/us/usc/t2/s4103",
+      "exact_change": "Keep the enacted text as a statutory note; remove the dump wrapper. | Keep the note concise and strip the quotedContent dump."
     },
     {
       "law_id": "PL-029-218",
@@ -306,7 +348,14 @@
       "recommended_actions": [
         "Remove the quotedContent dump and leave only the concise statutory note."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source report classifies the enactment as a statutory note at 2 U.S.C. 4338.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "Remove the quotedContent dump and leave only the concise statutory note.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1WfYWvB2lUDoG-TCXb3hqa3wUsjkfazY4/view | 0700465eea71e2144358ea717e6e2376c18c4c315eaeda8d90ef523d8e5fc223",
+      "exact_target": "/us/usc/t2/s4338",
+      "exact_change": "Keep the framing text as a statutory note entry. | Preserve the enacted protection mandate as note material only."
     },
     {
       "law_id": "PL-030-220",
@@ -365,7 +414,14 @@
         "detail": "Current section 42 text matches origin/main and already reflects the enacted amendment."
       },
       "recommended_actions": [],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source report and current XML both show the section 42 amendment already integrated.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "No Code operation was authorized.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1Di3x0EcWuYCGdj-avv5tbB0B_IpS5tnF/view | 1cb72cff04cb774b204659aa9c46757d2ec281f0c66b04e988d21341d2f21781",
+      "exact_target": "/us/usc/t28/s42",
+      "exact_change": "No change needed beyond the existing baseline material. | Leave the live section 42 text as already amended. | Retain as note material alongside the already incorporated amendment."
     },
     {
       "law_id": "PL-030-221",
@@ -424,7 +480,14 @@
         "detail": "Current section 2074(a) text matches origin/main and already reflects the enacted amendment."
       },
       "recommended_actions": [],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source report and current XML both show the section 2074(a) amendment already integrated.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "No Code operation was authorized.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1o8BKPNH9NtFmRJr4dCLMUy6lhzlvHjxX/view | 4a3019a974e3e3ebc239879ad44da8cf4d69cffc6d2f7d4e4b6833bd4a82aed0",
+      "exact_target": "/us/usc/t28/s2074",
+      "exact_change": "No change needed beyond the existing baseline material. | Leave the live section 2074(a) text as already amended. | Keep as note material after the already incorporated amendment."
     },
     {
       "law_id": "PL-030-222",
@@ -536,7 +599,14 @@
       "recommended_actions": [
         "Replace the source-unavailable boilerplate with a concise authenticated-text statutory note at /us/usc/t50/s1."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Recovered source metadata marks the bill usable and the rendered text contains substantive sections 101 through 107, so the current note's source-unavailable claim is wrong.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "final_recommended_action": "Replace the source-unavailable boilerplate with a concise authenticated-text statutory note at /us/usc/t50/s1.",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t50/s1",
+      "exact_change": "Retain as concise statutory note material at the nearest Title 50 anchor. | Keep the purpose statement as note material. | Preserve the establishment language as a statutory note at the closest subject-matter anchor."
     }
   ]
 }

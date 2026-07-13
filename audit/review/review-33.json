@@ -29,7 +29,10 @@
         {
           "ref": "entire act",
           "text_summary": "No extractable statutory text was recovered from the scanned source.",
-          "classes": ["source-limited", "historical-note-only"],
+          "classes": [
+            "source-limited",
+            "historical-note-only"
+          ],
           "treatment": "historical-note-only",
           "target": "/us/usc/t8/s1101/i/2",
           "exact_change": "Keep only a concise historical note; do not invent operative text.",
@@ -48,7 +51,14 @@
         "Retain only a concise historical note at the Title 8 anchor.",
         "Do not infer operative statutory language from the scanned PDF."
       ],
-      "confidence": "low"
+      "confidence": "low",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The supplied source is a scanned PDF with no extractable text, so the enactment can only be preserved as source-limited history at the closest subject-matter anchor.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Retain only a concise historical note at the Title 8 anchor. | Do not infer operative statutory language from the scanned PDF.",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t8/s1101/i/2",
+      "exact_change": "Keep only a concise historical note; do not invent operative text."
     },
     {
       "law_id": "PL-003-022",
@@ -60,7 +70,10 @@
         {
           "ref": "entire act",
           "text_summary": "Recovered material is only a placeholder or copy stub, not statutory text.",
-          "classes": ["source-limited", "historical-note-only"],
+          "classes": [
+            "source-limited",
+            "historical-note-only"
+          ],
           "treatment": "historical-note-only",
           "target": "/us/usc/t40/s101/4",
           "exact_change": "Keep only a source-limited historical note; do not claim operative text.",
@@ -79,7 +92,14 @@
         "Retain only a concise historical note at the existing anchor.",
         "Do not infer substantive D.C. charter text from the viewer stub."
       ],
-      "confidence": "low"
+      "confidence": "low",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "Only a placeholder Google Drive copy was recovered in the source folder; no operative statutory text is available to audit.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Retain only a concise historical note at the existing anchor. | Do not infer substantive D.C. charter text from the viewer stub.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1eWd9FS7jz2jrxcr8Pzud8wb389GpwVGn/view | 880a39f94b201c50b7e5d3e603feefa9af7ab970381ee671a9a5c13068947f7a",
+      "exact_target": "/us/usc/t40/s101/4",
+      "exact_change": "Keep only a source-limited historical note; do not claim operative text."
     },
     {
       "law_id": "PL-003-023",
@@ -91,7 +111,10 @@
         {
           "ref": "entire act",
           "text_summary": "No recovered statutory text exists.",
-          "classes": ["source-limited", "historical-note-only"],
+          "classes": [
+            "source-limited",
+            "historical-note-only"
+          ],
           "treatment": "historical-note-only",
           "target": "/us/usc/t18/s1",
           "exact_change": "Keep only a source-limited historical note; no operative language can be recovered.",
@@ -110,7 +133,14 @@
         "Keep the entry as a source-limited historical note only.",
         "Do not infer any missing statutory language or target section."
       ],
-      "confidence": "low"
+      "confidence": "low",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The metadata marks this source unrecoverable and the recovery stub says the source was deleted or not found.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Keep the entry as a source-limited historical note only. | Do not infer any missing statutory language or target section.",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t18/s1",
+      "exact_change": "Keep only a source-limited historical note; no operative language can be recovered."
     },
     {
       "law_id": "PL-003-024",
@@ -122,7 +152,10 @@
         {
           "ref": "SEC II",
           "text_summary": "Reduces the Supreme Court to 1 Chief Justice and 4 Associate Justices.",
-          "classes": ["direct-amendment", "new-permanent-general"],
+          "classes": [
+            "direct-amendment",
+            "new-permanent-general"
+          ],
           "treatment": "amend-existing-text",
           "target": "/us/usc/t28",
           "exact_change": "Replace the Supreme Court composition with 1 Chief Justice and 4 Associate Justices.",
@@ -131,7 +164,10 @@
         {
           "ref": "SEC III",
           "text_summary": "Permanently closes the Court of Appeals.",
-          "classes": ["direct-amendment", "repeal"],
+          "classes": [
+            "direct-amendment",
+            "repeal"
+          ],
           "treatment": "amend-existing-text",
           "target": "/us/usc/t28",
           "exact_change": "Mark the Court of Appeals as permanently closed.",
@@ -140,7 +176,10 @@
         {
           "ref": "SEC IV",
           "text_summary": "Makes the District of Columbia district court the only federal district court and sets its seat count.",
-          "classes": ["direct-amendment", "new-permanent-general"],
+          "classes": [
+            "direct-amendment",
+            "new-permanent-general"
+          ],
           "treatment": "amend-existing-text",
           "target": "/us/usc/t28",
           "exact_change": "Set the D.C. district court to 1 Chief Judge and 4 Judges and make it the only federal district court.",
@@ -149,7 +188,10 @@
         {
           "ref": "SEC V",
           "text_summary": "Limits magistrates to three.",
-          "classes": ["direct-amendment", "new-permanent-general"],
+          "classes": [
+            "direct-amendment",
+            "new-permanent-general"
+          ],
           "treatment": "amend-existing-text",
           "target": "/us/usc/t28",
           "exact_change": "Set magistrates serving under the D.C. district court to three.",
@@ -158,7 +200,10 @@
         {
           "ref": "SEC VII",
           "text_summary": "Repeals and supersedes prior acts affecting the court structure.",
-          "classes": ["repeal", "savings"],
+          "classes": [
+            "repeal",
+            "savings"
+          ],
           "treatment": "repeal-marking",
           "target": "/us/usc/t28",
           "exact_change": "Mark the Court of Appeals Temporary Suspension Act of 2021 and conflicting U.S. Codes Act provisions as repealed or superseded.",
@@ -178,7 +223,14 @@
         "Carry forward the repeal and supersession clause as real statutory text.",
         "Remove any claim that the operative source was unavailable."
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source text is an operative structural overhaul: it changes Supreme Court seats, closes the Court of Appeals, makes the D.C. district court the only federal district court, sets magistrate count, and expressly repeals prior acts.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Replace the note with actual Title 28 text amendments. | Carry forward the repeal and supersession clause as real statutory text. | Remove any claim that the operative source was unavailable.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/11BtnbYCnloLGQEU06diE74moN738qB7A/view | d07f3efb8fd8da68ab254692b2caa3d2a1b85bdba6aa9d94bdf89d0eebf5eb04",
+      "exact_target": "/us/usc/t28/s1",
+      "exact_change": "Replace the Supreme Court composition with 1 Chief Justice and 4 Associate Justices. | Mark the Court of Appeals as permanently closed. | Set the D.C. district court to 1 Chief Judge and 4 Judges and make it the only federal district court."
     },
     {
       "law_id": "PL-003-025",
@@ -190,7 +242,11 @@
         {
           "ref": "SEC 101 and SECS 102-105",
           "text_summary": "Repeals the prior National Security Act framework and creates National Security Council rules, threat designations, access rules, and communications limits.",
-          "classes": ["direct-amendment", "repeal", "new-permanent-general"],
+          "classes": [
+            "direct-amendment",
+            "repeal",
+            "new-permanent-general"
+          ],
           "treatment": "amend-existing-text",
           "target": "/us/usc/t50",
           "exact_change": "Replace the national-security framework with the new National Security Council and threat-designation structure described in the act.",
@@ -199,7 +255,11 @@
         {
           "ref": "SEC 150",
           "text_summary": "Amends Title 18 definitions for terrorist activities and criminal investigation.",
-          "classes": ["direct-amendment", "insertion", "redesignation"],
+          "classes": [
+            "direct-amendment",
+            "insertion",
+            "redesignation"
+          ],
           "treatment": "amend-existing-text",
           "target": "/us/usc/t18/s2510",
           "exact_change": "Insert definitions for terrorist activities and criminal investigation and redesignate later paragraphs.",
@@ -208,7 +268,10 @@
         {
           "ref": "SEC 153",
           "text_summary": "Adds a new Title 18 section authorizing administrative subpoenas in terrorism investigations.",
-          "classes": ["insertion", "new-permanent-general"],
+          "classes": [
+            "insertion",
+            "new-permanent-general"
+          ],
           "treatment": "new-section",
           "target": "/us/usc/t18/s2332i",
           "exact_change": "Insert new 18 U.S.C. section 2332j as described in the act.",
@@ -217,7 +280,9 @@
         {
           "ref": "SEC 154(a)",
           "text_summary": "Amends the nondisclosure penalty provision in Title 18.",
-          "classes": ["direct-amendment"],
+          "classes": [
+            "direct-amendment"
+          ],
           "treatment": "amend-existing-text",
           "target": "/us/usc/t18/s1510e",
           "exact_change": "Replace section 1510(e) with the new penalty language.",
@@ -226,7 +291,10 @@
         {
           "ref": "SEC 154(b)",
           "text_summary": "Adds a new Title 18 enforcement section for information requests.",
-          "classes": ["insertion", "new-permanent-general"],
+          "classes": [
+            "insertion",
+            "new-permanent-general"
+          ],
           "treatment": "new-section",
           "target": "/us/usc/t18/s2332k",
           "exact_change": "Insert new 18 U.S.C. section 2332k as described in the act.",
@@ -235,7 +303,10 @@
         {
           "ref": "SEC 201-205",
           "text_summary": "Creates a Title 50 classification scheme for national-security information.",
-          "classes": ["new-permanent-general", "direct-amendment"],
+          "classes": [
+            "new-permanent-general",
+            "direct-amendment"
+          ],
           "treatment": "new-section",
           "target": "/us/usc/t50",
           "exact_change": "Establish classification standards, levels, authority, and categories in the national-security title.",
@@ -244,7 +315,9 @@
         {
           "ref": "SECS 302-303",
           "text_summary": "Creates remedial rules and disclosure protections for law-enforcement surveillance information.",
-          "classes": ["new-permanent-general"],
+          "classes": [
+            "new-permanent-general"
+          ],
           "treatment": "new-section",
           "target": "/us/usc/t18",
           "exact_change": "Add the new remedial and disclosure rules described in Title III.",
@@ -253,7 +326,10 @@
         {
           "ref": "SEC 420",
           "text_summary": "Refines Title 18 money-laundering and terrorism-financing language.",
-          "classes": ["direct-amendment", "insertion"],
+          "classes": [
+            "direct-amendment",
+            "insertion"
+          ],
           "treatment": "amend-existing-text",
           "target": "/us/usc/t18/s2339C",
           "exact_change": "Revise section 2339C(c)(2) and 2339C(e) as specified.",
@@ -262,7 +338,10 @@
         {
           "ref": "SECS 501-504 and SECS 601-609",
           "text_summary": "Creates criminal intelligence rules and a new racketeering chapter with penalties, civil remedies, venue, evidence, and CID provisions.",
-          "classes": ["new-permanent-general", "direct-amendment"],
+          "classes": [
+            "new-permanent-general",
+            "direct-amendment"
+          ],
           "treatment": "new-section",
           "target": "/us/usc/t18",
           "exact_change": "Add the criminal-intelligence framework and replace Chapter 96 with the new racketeering chapter.",
@@ -282,7 +361,14 @@
         "Create the required new sections for the inserted provisions.",
         "Preserve the repeal of the prior National Security Act framework in text, not in a note."
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source text is a large, operative multi-title reform bill with direct amendments to Title 18, Title 5, and Title 50, plus a new administrative framework.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Replace the note dump with actual textual amendments across Titles 18 and 50. | Create the required new sections for the inserted provisions. | Preserve the repeal of the prior National Security Act framework in text, not in a note.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1oqGCUriJxSe1DxDitPP3gg3kFmVP3TA1/view | 19d1fe745a3acc450dba280d81d4dac969466f1408301b8b128fd8d84e60c5c9",
+      "exact_target": "/us/usc/t18 and /us/usc/t50",
+      "exact_change": "Replace the national-security framework with the new National Security Council and threat-designation structure described in the act. | Insert definitions for terrorist activities and criminal investigation and redesignate later paragraphs. | Insert new 18 U.S.C. section 2332j as described in the act."
     },
     {
       "law_id": "PL-004-026",
@@ -294,7 +380,10 @@
         {
           "ref": "entire resolution",
           "text_summary": "Declares a state of war between the United States and Tigray.",
-          "classes": ["non-code", "findings-or-sense"],
+          "classes": [
+            "non-code",
+            "findings-or-sense"
+          ],
           "treatment": "exclude-from-code",
           "target": null,
           "exact_change": "No Code text should be created.",
@@ -313,7 +402,14 @@
         "Keep only a concise historical note.",
         "Do not add permanent Code text for this resolution."
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "This is a joint resolution declaring that a state of war exists. It is non-Code material and does not call for a positive-law insertion.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Keep only a concise historical note. | Do not add permanent Code text for this resolution.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1lS718hn58uPEyS0K7WbhMSVJ4g5JSEQ9/view?usp=sharing | 049cfbe0d1e52f98d8d44c0fc9a6867af160c8ceca067625b7bb67abb55ef891",
+      "exact_target": "/us/usc/t50/s1",
+      "exact_change": "No Code text should be created."
     },
     {
       "law_id": "PL-004-027",
@@ -325,7 +421,11 @@
         {
           "ref": "SECTION I",
           "text_summary": "Short title, severability, and immediate effective date.",
-          "classes": ["short-title", "effective-date", "severability"],
+          "classes": [
+            "short-title",
+            "effective-date",
+            "severability"
+          ],
           "treatment": "historical-note-only",
           "target": null,
           "exact_change": "Keep only historical context; no positive-law text survives after repeal.",
@@ -334,7 +434,10 @@
         {
           "ref": "SECTION II",
           "text_summary": "Defines Individuals, Private Security, and Federal Protection Services.",
-          "classes": ["definitions", "statutory-note-material"],
+          "classes": [
+            "definitions",
+            "statutory-note-material"
+          ],
           "treatment": "historical-note-only",
           "target": null,
           "exact_change": "Retain only a repeal-history note if needed.",
@@ -343,7 +446,10 @@
         {
           "ref": "SECTION III",
           "text_summary": "Sets out the private-security and self-defense policy provisions.",
-          "classes": ["new-permanent-general", "direct-amendment"],
+          "classes": [
+            "new-permanent-general",
+            "direct-amendment"
+          ],
           "treatment": "historical-note-only",
           "target": "/us/usc/t18",
           "exact_change": "Do not keep this as current Code text because the act has been repealed in entirety.",
@@ -363,7 +469,14 @@
         "Replace with a concise repeal-history note only.",
         "Do not leave the full source dump in the Code."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "PL 29-217 expressly says: Public Law 4-27 shall be repealed, in its entirety.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Remove any permanent-text treatment. | Replace with a concise repeal-history note only. | Do not leave the full source dump in the Code.",
+      "source_evidence": "status keyword `repealed` in list or label | edit | https://docs.google.com/document/d/1Qh6wt7WIHmxdy66K1d2Mm_8nlrLc4AJlkRFv98G5AQU/edit | 02ad4423f6105f7c2290962eac561698d8bf1d1dc59b6f029cb39e72ca80b013",
+      "exact_target": "/us/usc/t18/s1",
+      "exact_change": "Keep only historical context; no positive-law text survives after repeal. | Retain only a repeal-history note if needed. | Do not keep this as current Code text because the act has been repealed in entirety."
     },
     {
       "law_id": "PL-004-028",
@@ -375,7 +488,11 @@
         {
           "ref": "SECTION I",
           "text_summary": "Short title, severability, and immediate effective date.",
-          "classes": ["short-title", "effective-date", "severability"],
+          "classes": [
+            "short-title",
+            "effective-date",
+            "severability"
+          ],
           "treatment": "statutory-note",
           "target": "/us/usc/t38",
           "exact_change": "Keep only if needed as an editorial note; do not treat as the main enactment.",
@@ -384,7 +501,10 @@
         {
           "ref": "SECTION II",
           "text_summary": "Defines veteran and honorably discharged.",
-          "classes": ["definitions", "new-permanent-general"],
+          "classes": [
+            "definitions",
+            "new-permanent-general"
+          ],
           "treatment": "new-section",
           "target": "/us/usc/t38",
           "exact_change": "Add the definitions to the veterans title if codified.",
@@ -393,7 +513,10 @@
         {
           "ref": "SECTION III / SUB-SECTIONS 2-5",
           "text_summary": "Creates veterans employment, benefits, counseling, secretary, and reporting provisions.",
-          "classes": ["new-permanent-general", "direct-amendment"],
+          "classes": [
+            "new-permanent-general",
+            "direct-amendment"
+          ],
           "treatment": "new-section",
           "target": "/us/usc/t38",
           "exact_change": "Create substantive veterans-policy text rather than leaving it as a note.",
@@ -412,7 +535,14 @@
         "Create the veterans definitions and policy provisions as actual Title 38 text if the project is codifying them.",
         "Keep only a concise note if the project intentionally excludes policy-only enactments."
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source text is a substantive, general, permanent policy bill about veterans employment, legal aid, counseling, and the Secretary of Veterans Affairs.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Create the veterans definitions and policy provisions as actual Title 38 text if the project is codifying them. | Keep only a concise note if the project intentionally excludes policy-only enactments.",
+      "source_evidence": "status keyword `repealed` in list or label | https://docs.google.com/document/d/1DWg80LKeoLOQnyBY1uYJYcSdok18NydROrPrVsDuFQE/edit?usp=sharing | https://docs.google.com/document/d/1DWg80LKeoLOQnyBY1uYJYcSdok18NydROrPrVsDuFQE/edit?usp=sharing | e386a74f4db4c8ffe879c6b9f5d68947f6d72f82c31abd3030221a39c5f87fe1",
+      "exact_target": "/us/usc/t38/s1",
+      "exact_change": "Keep only if needed as an editorial note; do not treat as the main enactment. | Add the definitions to the veterans title if codified. | Create substantive veterans-policy text rather than leaving it as a note."
     },
     {
       "law_id": "PL-004-029",
@@ -424,7 +554,10 @@
         {
           "ref": "SECTION II",
           "text_summary": "Defines department, secretary, president, and related terms.",
-          "classes": ["definitions", "new-permanent-general"],
+          "classes": [
+            "definitions",
+            "new-permanent-general"
+          ],
           "treatment": "historical-note-only",
           "target": null,
           "exact_change": "Do not keep as current Code text after repeal.",
@@ -433,7 +566,10 @@
         {
           "ref": "SECTION III",
           "text_summary": "Transfers and consolidates the Department of Labor, Department of Commerce, and other agencies into Commerce and Labor.",
-          "classes": ["transfer", "new-permanent-general"],
+          "classes": [
+            "transfer",
+            "new-permanent-general"
+          ],
           "treatment": "historical-note-only",
           "target": "/us/usc/t29",
           "exact_change": "The transfer framework should be treated as repealed history, not live text.",
@@ -442,7 +578,10 @@
         {
           "ref": "SECTION IV",
           "text_summary": "Sets department powers, responsibilities, and internal reporting structure.",
-          "classes": ["new-permanent-general", "direct-amendment"],
+          "classes": [
+            "new-permanent-general",
+            "direct-amendment"
+          ],
           "treatment": "historical-note-only",
           "target": "/us/usc/t29",
           "exact_change": "Do not maintain as positive-law text because the act was later repealed in entirety.",
@@ -451,7 +590,9 @@
         {
           "ref": "SECTION 5",
           "text_summary": "Expressly repeals several prior public laws, including PL 4-29 itself as later repealed by PL 31-226.",
-          "classes": ["repeal"],
+          "classes": [
+            "repeal"
+          ],
           "treatment": "repeal-marking",
           "target": "/us/usc/t29",
           "exact_change": "Mark the listed repealments as historical repeals only.",
@@ -471,7 +612,14 @@
         "Keep only a concise repeal-history note if the archive needs one.",
         "Do not anchor the note as current positive law."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "PL 31-226 says: Public Law 4-29 shall be repealed, in its entirety.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Remove any live statutory text for this act. | Keep only a concise repeal-history note if the archive needs one. | Do not anchor the note as current positive law.",
+      "source_evidence": "status keyword `repealed` in list or label | edit | https://docs.google.com/document/d/10ltgagnoNky_Td8Ea2cxwtQiaAkBkkemFB7lyNr8qJg/edit?usp=sharing | f87bbe569c0f59c1efddffca679a6f8ae400da618e0e3240b5b852294eb29a5f",
+      "exact_target": "/us/usc/t29/s201",
+      "exact_change": "Do not keep as current Code text after repeal. | The transfer framework should be treated as repealed history, not live text. | Do not maintain as positive-law text because the act was later repealed in entirety."
     },
     {
       "law_id": "PL-004-030",
@@ -483,7 +631,11 @@
         {
           "ref": "SECTION 1-3",
           "text_summary": "Short title, purpose, and enactment trigger.",
-          "classes": ["short-title", "effective-date", "purpose"],
+          "classes": [
+            "short-title",
+            "effective-date",
+            "purpose"
+          ],
           "treatment": "statutory-note",
           "target": null,
           "exact_change": "These sections are supporting material for the substantive regime.",
@@ -492,7 +644,10 @@
         {
           "ref": "SECTION 4",
           "text_summary": "Creates the fugitive list regime and in-absentia trial consequences.",
-          "classes": ["new-permanent-general", "direct-amendment"],
+          "classes": [
+            "new-permanent-general",
+            "direct-amendment"
+          ],
           "treatment": "new-section",
           "target": "/us/usc/t18",
           "exact_change": "Codify the fugitive-list and in-absentia rules as real text.",
@@ -501,7 +656,9 @@
         {
           "ref": "SECTION 5",
           "text_summary": "Creates a warrant database and reporting framework.",
-          "classes": ["new-permanent-general"],
+          "classes": [
+            "new-permanent-general"
+          ],
           "treatment": "new-section",
           "target": "/us/usc/t28",
           "exact_change": "Add the warrant-database requirements as actual text if codified.",
@@ -510,7 +667,10 @@
         {
           "ref": "SECTION 6",
           "text_summary": "Lists the mechanisms for removal from the fugitive list.",
-          "classes": ["savings", "new-permanent-general"],
+          "classes": [
+            "savings",
+            "new-permanent-general"
+          ],
           "treatment": "new-section",
           "target": "/us/usc/t18",
           "exact_change": "Codify the pardon, sentence-completion, vacatur, and acquittal removal rules.",
@@ -519,7 +679,9 @@
         {
           "ref": "SECTION 7",
           "text_summary": "Repeals H.R. 4 and its amendments.",
-          "classes": ["repeal"],
+          "classes": [
+            "repeal"
+          ],
           "treatment": "repeal-marking",
           "target": "/us/usc/t18",
           "exact_change": "Record the repeal of H.R. 4 in the enactment history.",
@@ -539,7 +701,14 @@
         "Keep the repeal of H.R. 4 as text or historical note, not as boilerplate.",
         "Remove any claim that the source is merely note-only."
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source text is an operative fugitive-list and warrant-database regime with no full repeal found in the reviewed later enactments.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Convert the fugitive-list regime into actual text in Titles 18 and 28. | Keep the repeal of H.R. 4 as text or historical note, not as boilerplate. | Remove any claim that the source is merely note-only.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1j5dgSfUsjnIXGjUvGKHXCIAkpILLLEr2/view | a851dbd4010ee22178893a0027766c30b41d5dce482c62c967a12527617cbcd8",
+      "exact_target": "/us/usc/t18 and /us/usc/t28",
+      "exact_change": "These sections are supporting material for the substantive regime. | Codify the fugitive-list and in-absentia rules as real text. | Add the warrant-database requirements as actual text if codified."
     },
     {
       "law_id": "PL-004-031",
@@ -551,7 +720,11 @@
         {
           "ref": "SECTION 1-3",
           "text_summary": "Short title, purpose, and effective date.",
-          "classes": ["short-title", "effective-date", "purpose"],
+          "classes": [
+            "short-title",
+            "effective-date",
+            "purpose"
+          ],
           "treatment": "historical-note-only",
           "target": null,
           "exact_change": "Keep only as repeal-history if needed.",
@@ -560,7 +733,10 @@
         {
           "ref": "SEC. 101-105",
           "text_summary": "Defines terms, sets justified force rules, creates presumptions and exceptions, and criminal entry rules.",
-          "classes": ["new-permanent-general", "direct-amendment"],
+          "classes": [
+            "new-permanent-general",
+            "direct-amendment"
+          ],
           "treatment": "historical-note-only",
           "target": "/us/usc/t18",
           "exact_change": "Do not keep this as current text because the act is treated as repealed.",
@@ -580,7 +756,14 @@
         "Move to a concise historical note anchored to the proper Title 18 location if the archive retains it.",
         "Do not keep it at Title 50."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The master report classifies this enactment as NONOPERATIVE_OR_REPEALED, and the current record treats it as a repealed-law item.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Remove any live Code text. | Move to a concise historical note anchored to the proper Title 18 location if the archive retains it. | Do not keep it at Title 50.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1rkL_cdUvCEMkPD6fKfqy3i3mGLG9ruS-/view | b58bd544830fcf0cd7c926bf12be492c77735b3450be1f635f4188b55807f22e",
+      "exact_target": "/us/usc/t50/s1",
+      "exact_change": "Keep only as repeal-history if needed. | Do not keep this as current text because the act is treated as repealed."
     },
     {
       "law_id": "PL-004-032",
@@ -592,7 +775,10 @@
         {
           "ref": "entire act",
           "text_summary": "No authentic statutory text is recoverable from the supplied source.",
-          "classes": ["non-code", "source-limited"],
+          "classes": [
+            "non-code",
+            "source-limited"
+          ],
           "treatment": "historical-note-only",
           "target": null,
           "exact_change": "none; source text unavailable",
@@ -611,7 +797,13 @@
         "Locate the authentic PL 4-32 enactment before any codification.",
         "Until then, keep at most a concise historical note and do not codify the Executive Order as the Act."
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "final_legal_status": "superseded",
+      "chronology_conclusion": "The supplied source is an Executive Order that merely cites PL 4-32, so the enacted statute itself is not recoverable from the batch input.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Locate the authentic PL 4-32 enactment before any codification. | Until then, keep at most a concise historical note and do not codify the Executive Order as the Act.",
+      "source_evidence": "status keyword `superseded` in list or label | https://drive.google.com/file/d/1GHjlel-4ltLCxgKzJZf2stihqROafz9P/view?usp=sharing | https://drive.google.com/file/d/1GHjlel-4ltLCxgKzJZf2stihqROafz9P/view?usp=sharing | 872abcbd03fb8417e4e99d2db8db7a05a25d1332721ac9508e0abe5232fdb0a1",
+      "exact_change": "none; source text unavailable"
     },
     {
       "law_id": "PL-004-035",
@@ -623,7 +815,10 @@
         {
           "ref": "entire act",
           "text_summary": "Text unavailable; the source is access-denied debris.",
-          "classes": ["non-code", "source-limited"],
+          "classes": [
+            "non-code",
+            "source-limited"
+          ],
           "treatment": "historical-note-only",
           "target": "/us/usc/t46/s101",
           "exact_change": "Replace unsupported rationale with a concise source-limited history note.",
@@ -642,7 +837,14 @@
         "Recover the true source text before any codification.",
         "Retain only a source-limited historical note and remove unsupported rationale."
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source is a Google Drive permission-denied page, so no statutory text is recoverable and no lawful codification conclusion can be drawn.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Recover the true source text before any codification. | Retain only a source-limited historical note and remove unsupported rationale.",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t46/s101",
+      "exact_change": "Replace unsupported rationale with a concise source-limited history note."
     },
     {
       "law_id": "PL-007-042",
@@ -654,7 +856,9 @@
         {
           "ref": "PART III",
           "text_summary": "Creates a Bus Rapid Transit Division under the Department of Transportation and sets nationwide transit duties.",
-          "classes": ["new-permanent-general"],
+          "classes": [
+            "new-permanent-general"
+          ],
           "treatment": "historical-note-only",
           "target": "/us/usc/t49",
           "exact_change": "Retain only as historical note material; no live Title 49 text should be created from a repealed enactment.",
@@ -663,7 +867,9 @@
         {
           "ref": "PART IV",
           "text_summary": "Creates the Federal Transit Administration and assigns transit-routing duties.",
-          "classes": ["new-permanent-general"],
+          "classes": [
+            "new-permanent-general"
+          ],
           "treatment": "historical-note-only",
           "target": "/us/usc/t49",
           "exact_change": "Keep as history only; do not codify a new permanent section for a repealed act.",
@@ -672,7 +878,9 @@
         {
           "ref": "PART V",
           "text_summary": "Creates the Transportation Security Administration and gives it transit-security and air-traffic-related duties.",
-          "classes": ["new-permanent-general"],
+          "classes": [
+            "new-permanent-general"
+          ],
           "treatment": "historical-note-only",
           "target": "/us/usc/t49",
           "exact_change": "History note only; no present Code text is required after repeal.",
@@ -681,7 +889,10 @@
         {
           "ref": "PART VI(b)",
           "text_summary": "Bars municipalities from regulating public transit or towing services and repeals conflicting municipal laws.",
-          "classes": ["repeal", "local-district"],
+          "classes": [
+            "repeal",
+            "local-district"
+          ],
           "treatment": "historical-note-only",
           "target": "municipal law; non-U.S. Code target",
           "exact_change": "Record the municipal-law repeal as history only; do not invent a federal Code amendment.",
@@ -690,7 +901,9 @@
         {
           "ref": "PART VI(b) closing line",
           "text_summary": "Repeals the prior towing companies regulation act.",
-          "classes": ["repeal"],
+          "classes": [
+            "repeal"
+          ],
           "treatment": "historical-note-only",
           "target": "prior S. 63 towing act; non-U.S. Code target",
           "exact_change": "Keep the repeal cross-reference as history only.",
@@ -699,7 +912,10 @@
         {
           "ref": "PART IX",
           "text_summary": "Non-binding development suggestions about buses and gun-free zones.",
-          "classes": ["non-code", "ceremonial"],
+          "classes": [
+            "non-code",
+            "ceremonial"
+          ],
           "treatment": "exclude-from-code",
           "target": null,
           "exact_change": "Do not codify; this text expressly says it is not law of the United States.",
@@ -719,7 +935,14 @@
         "Remove any unnecessary quotedContent dump and archive-link clutter from the note if present.",
         "Do not create a new permanent Code section."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "This is a generally applicable transportation enactment that was later repealed externally.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Retain as statutory history only at the closest Title 49 anchor. | Remove any unnecessary quotedContent dump and archive-link clutter from the note if present. | Do not create a new permanent Code section.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1gqOSUmAQtOdwrQJhyQ3gh9dAj4P6j2WJ/view | 4bc2e6db3e3278f66219378221525d0b1365c5155595229c72b5f5332844ce73",
+      "exact_target": "/us/usc/t49",
+      "exact_change": "Retain only as historical note material; no live Title 49 text should be created from a repealed enactment. | Keep as history only; do not codify a new permanent section for a repealed act. | History note only; no present Code text is required after repeal."
     },
     {
       "law_id": "PL-007-043",
@@ -731,7 +954,11 @@
         {
           "ref": "SEC. III",
           "text_summary": "Reduces the D.C. council from six members to five and abolishes Article I, Section IV of the charter.",
-          "classes": ["direct-amendment", "local-district", "redesignation"],
+          "classes": [
+            "direct-amendment",
+            "local-district",
+            "redesignation"
+          ],
           "treatment": "exclude-from-code",
           "target": "D.C. City Charter Art. I",
           "exact_change": "Treat as local charter history; no federal Code amendment is appropriate.",
@@ -740,7 +967,10 @@
         {
           "ref": "SEC. IV",
           "text_summary": "Rewrites the mayoral designation rule in Article II of the charter.",
-          "classes": ["direct-amendment", "local-district"],
+          "classes": [
+            "direct-amendment",
+            "local-district"
+          ],
           "treatment": "exclude-from-code",
           "target": "D.C. City Charter Art. II",
           "exact_change": "Local charter text only; keep as historical note material.",
@@ -749,7 +979,10 @@
         {
           "ref": "SEC. V",
           "text_summary": "Establishes a line of succession for the D.C. mayor's office.",
-          "classes": ["local-district", "new-permanent-general"],
+          "classes": [
+            "local-district",
+            "new-permanent-general"
+          ],
           "treatment": "exclude-from-code",
           "target": "D.C. City Charter / local succession rule",
           "exact_change": "Do not map to permanent U.S. Code text; this is a local governance rule.",
@@ -769,7 +1002,14 @@
         "Treat the later charter repeal as superseding history.",
         "Do not promote any section of this act into permanent positive law."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "This is a local District of Columbia charter amendment, not a permanent U.S. Code enactment.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Keep only a local historical note; do not create U.S. Code text. | Treat the later charter repeal as superseding history. | Do not promote any section of this act into permanent positive law.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1ZHK6MhB1aEGb428dmJ_C7PoLzafD2LSk/view | 9ebd90c28e5b68c46159fc7ee2a4e19d7f2273c53a53e516455f6a6aab4b93c8",
+      "exact_target": "/us/usc/t40",
+      "exact_change": "Treat as local charter history; no federal Code amendment is appropriate. | Local charter text only; keep as historical note material. | Do not map to permanent U.S. Code text; this is a local governance rule."
     },
     {
       "law_id": "PL-007-044",
@@ -781,7 +1021,10 @@
         {
           "ref": "SEC. II",
           "text_summary": "Defines and reclassifies fully automatic firearms within the firearms code framework.",
-          "classes": ["new-permanent-general", "direct-amendment"],
+          "classes": [
+            "new-permanent-general",
+            "direct-amendment"
+          ],
           "treatment": "historical-note-only",
           "target": "/us/usc/t18",
           "exact_change": "History note only; no current Code text should be created from a repealed firearms policy law.",
@@ -790,7 +1033,9 @@
         {
           "ref": "SEC. III",
           "text_summary": "Contains the effective-date rule for the firearms policy.",
-          "classes": ["effective-date"],
+          "classes": [
+            "effective-date"
+          ],
           "treatment": "historical-note-only",
           "target": null,
           "exact_change": "Keep as a historical effective-date reference only.",
@@ -810,7 +1055,14 @@
         "No new Code section is required because the law is fully repealed.",
         "Keep the note concise and history-only."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source is a permanent general firearms-policy enactment, but later repeal removed it from live law.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Retain as historical note only at the Title 18 firearms anchor. | No new Code section is required because the law is fully repealed. | Keep the note concise and history-only.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1GrBb83r-_HNd5E8e-YTfEdBCU1zxlDCo/view | 88cffc56870143312d5f9fc8d457ee48a0535f344f343a6d8b30f98135bcf461",
+      "exact_target": "/us/usc/t18",
+      "exact_change": "History note only; no current Code text should be created from a repealed firearms policy law. | Keep as a historical effective-date reference only."
     },
     {
       "law_id": "PL-007-045",
@@ -822,7 +1074,11 @@
         {
           "ref": "SEC. II",
           "text_summary": "Repeals portions of the prior Capitol Police law and creates a new Capitol Police Board structure.",
-          "classes": ["repeal", "local-district", "direct-amendment"],
+          "classes": [
+            "repeal",
+            "local-district",
+            "direct-amendment"
+          ],
           "treatment": "exclude-from-code",
           "target": "/us/usc/t2 or /us/usc/t40",
           "exact_change": "Record as local or Congressional history only; no permanent federal Code section is required.",
@@ -831,7 +1087,10 @@
         {
           "ref": "SEC. III",
           "text_summary": "Sets Capitol Police protective authority and arrest powers.",
-          "classes": ["local-district", "new-permanent-general"],
+          "classes": [
+            "local-district",
+            "new-permanent-general"
+          ],
           "treatment": "exclude-from-code",
           "target": "/us/usc/t2 or /us/usc/t40",
           "exact_change": "Keep as history only because the enactment is fully repealed.",
@@ -840,7 +1099,10 @@
         {
           "ref": "SEC. V",
           "text_summary": "Restricts deployment outside the Capitol Police jurisdiction except for emergencies and protective services.",
-          "classes": ["local-district", "new-permanent-general"],
+          "classes": [
+            "local-district",
+            "new-permanent-general"
+          ],
           "treatment": "exclude-from-code",
           "target": "/us/usc/t2 or /us/usc/t40",
           "exact_change": "History note only; do not create live Code text.",
@@ -860,7 +1122,14 @@
         "Do not write a permanent U.S. Code section.",
         "Preserve the repeal chronology in the note."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "This is a Capitol Police reorganization measure with local and Congressional subject matter, and later repeal leaves only a historical note role.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Keep only as historical note material at the closest Congressional or Capitol anchor. | Do not write a permanent U.S. Code section. | Preserve the repeal chronology in the note.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1nDVUtIIO5mtqrZ_FvQXhNydMU_P0W8uw/view | 9fca785756c2a017307812b6455eb90d409f33b0e7e6d49a17d901429414a7cb",
+      "exact_target": "/us/usc/t2",
+      "exact_change": "Record as local or Congressional history only; no permanent federal Code section is required. | Keep as history only because the enactment is fully repealed. | History note only; do not create live Code text."
     },
     {
       "law_id": "PL-007-046",
@@ -872,7 +1141,10 @@
         {
           "ref": "entire act",
           "text_summary": "Text unavailable; the source is permission-denied debris.",
-          "classes": ["non-code", "source-limited"],
+          "classes": [
+            "non-code",
+            "source-limited"
+          ],
           "treatment": "historical-note-only",
           "target": null,
           "exact_change": "none; source text unavailable",
@@ -891,7 +1163,13 @@
         "Leave unresolved and do not invent operative text.",
         "If recovery later becomes possible, add only a source-limited historical note."
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source is not recoverable in the record available to this review, so the enacted statutory text cannot be lawfully reconstructed.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Leave unresolved and do not invent operative text. | If recovery later becomes possible, add only a source-limited historical note.",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_change": "none; source text unavailable"
     },
     {
       "law_id": "PL-007-047",
@@ -903,7 +1181,10 @@
         {
           "ref": "SEC. 3",
           "text_summary": "Creates the Federal Bar Association structure and membership or administration rules.",
-          "classes": ["new-permanent-general", "direct-amendment"],
+          "classes": [
+            "new-permanent-general",
+            "direct-amendment"
+          ],
           "treatment": "historical-note-only",
           "target": "/us/usc/t28",
           "exact_change": "Retain as history only because the law was later repealed in full.",
@@ -912,7 +1193,9 @@
         {
           "ref": "SEC. 4",
           "text_summary": "Creates the bar-exam and admission framework tied to the Federal Bar Association.",
-          "classes": ["new-permanent-general"],
+          "classes": [
+            "new-permanent-general"
+          ],
           "treatment": "historical-note-only",
           "target": "/us/usc/t28",
           "exact_change": "No active Code section is warranted after repeal.",
@@ -921,7 +1204,9 @@
         {
           "ref": "SEC. 5",
           "text_summary": "Sets the code of conduct for lawyers admitted under the act.",
-          "classes": ["new-permanent-general"],
+          "classes": [
+            "new-permanent-general"
+          ],
           "treatment": "historical-note-only",
           "target": "/us/usc/t28",
           "exact_change": "History note only.",
@@ -941,7 +1226,14 @@
         "Do not leave any live Title 28 text in place for this enactment.",
         "Preserve the later repeal chronology in the note."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "This was a generally applicable, permanent bar-governance enactment, but a later enactment expressly repealed it.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Keep as a repealed-history note only. | Do not leave any live Title 28 text in place for this enactment. | Preserve the later repeal chronology in the note.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1fgs3KXf8TudDvpaTesOasIULTGSl_ND1/view | 289867a5277da51ffff467a043ccb635cea0f60013a13f60d0bbd0e3c3210eb8",
+      "exact_target": "/us/usc/t28",
+      "exact_change": "Retain as history only because the law was later repealed in full. | No active Code section is warranted after repeal. | History note only."
     },
     {
       "law_id": "PL-007-048",
@@ -953,7 +1245,10 @@
         {
           "ref": "SEC. 2",
           "text_summary": "Abolishes or restructures combatant commands except for the specified exception and reassigns duties.",
-          "classes": ["direct-amendment", "new-permanent-general"],
+          "classes": [
+            "direct-amendment",
+            "new-permanent-general"
+          ],
           "treatment": "historical-note-only",
           "target": "/us/usc/t10",
           "exact_change": "History only; the later repeal means no live Title 10 section should remain from this act.",
@@ -962,7 +1257,9 @@
         {
           "ref": "later repeal chronology",
           "text_summary": "Later enactment repeals this law and restores or reworks the command structure.",
-          "classes": ["repeal"],
+          "classes": [
+            "repeal"
+          ],
           "treatment": "historical-note-only",
           "target": "/us/usc/t10",
           "exact_change": "Record the repeal chronology only.",
@@ -982,7 +1279,14 @@
         "Do not create a new Code section for a repealed reform act.",
         "Keep the repeal chronology explicit."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source is a permanent, generally applicable military reorganization, but it was later repealed by a subsequent enactment.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Retain as historical note material at the Title 10 anchor. | Do not create a new Code section for a repealed reform act. | Keep the repeal chronology explicit.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/17JYYdCHdeMHEAI_kzHIC-d3ueG0PYPfi/view | bd2124f9c9df023261e60585e55f6736971eff2924008da2ad5b09e749928c3a",
+      "exact_target": "/us/usc/t10",
+      "exact_change": "History only; the later repeal means no live Title 10 section should remain from this act. | Record the repeal chronology only."
     }
   ]
 }

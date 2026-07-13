@@ -48,7 +48,9 @@
         "xml_state": "current_note_claimed_but_source_unavailable",
         "placement": "/us/usc/t10/s101/h"
       },
-      "confidence": "medium"
+      "confidence": "medium",
+      "final_legal_status": "active",
+      "exact_target": "/us/usc/t10/s101/h"
     },
     {
       "law_id": "PL-025-183",
@@ -96,7 +98,9 @@
         "xml_state": "aligned_as_historical_note",
         "placement": "/us/usc/t29/s201"
       },
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "exact_target": "/us/usc/t29/s201"
     },
     {
       "law_id": "PL-025-184",
@@ -144,7 +148,9 @@
         "xml_state": "aligned_as_historical_note",
         "placement": "/us/usc/t28/s1"
       },
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "exact_target": "/us/usc/t28/s1"
     },
     {
       "law_id": "PL-025-185",
@@ -185,7 +191,9 @@
         "xml_state": "incorrectly_marked_current",
         "placement": "/us/usc/t31/s101"
       },
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "exact_target": "/us/usc/t31/s101"
     },
     {
       "law_id": "PL-026-186",
@@ -226,7 +234,9 @@
         "xml_state": "aligned",
         "placement": "/us/usc/t54/s100101/b/2"
       },
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "exact_target": "/us/usc/t54/s100101/b/2"
     },
     {
       "law_id": "PL-026-187",
@@ -267,7 +277,9 @@
         "xml_state": "incorrectly_marked_current",
         "placement": "/us/usc/t31/s101"
       },
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "exact_target": "/us/usc/t31/s101"
     },
     {
       "law_id": "PL-026-188",
@@ -329,7 +341,9 @@
         "xml_state": "deferred_or_not_fully_applied",
         "placement": "/us/usc/t50/s1"
       },
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "exact_target": "/us/usc/t50/s1"
     },
     {
       "law_id": "PL-026-189",
@@ -370,7 +384,9 @@
         "xml_state": "incorrectly_marked_current",
         "placement": "/us/usc/t31/s101"
       },
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "exact_target": "/us/usc/t31/s101"
     },
     {
       "law_id": "PL-026-190",
@@ -468,7 +484,9 @@
         "xml_state": "deferred_or_not_fully_applied",
         "placement": "/us/usc/t28/s1"
       },
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "exact_target": "/us/usc/t28/s1"
     },
     {
       "law_id": "PL-026-191",
@@ -573,7 +591,10 @@
       },
       "source_evidence": [
         "Full source recovered. The act is a free-standing employment repealer/amendment bill that expressly repeals prior laws and keeps conflicting law from superseding it, but the current XML records it only as a history note at Title 5 and the batch classification treats it as repealed or superseded history."
-      ]
+      ],
+      "final_legal_status": "repealed",
+      "final_recommended_action": "keep a concise history note only | do not codify permanent positive-law text | remove the Trello link",
+      "exact_target": "/us/usc/t5/s101"
     }
   ]
 }

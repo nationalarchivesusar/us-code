@@ -88,7 +88,10 @@
         "placement": null,
         "branch_vs_origin": "The authoritative disposition resolves to Title 28, but no live XML placement was verified in the current workspace snapshot.",
         "detail": "The codification record points to 28 U.S.C. § 503 as the statutory-note anchor."
-      }
+      },
+      "final_legal_status": "active",
+      "exact_target": "/us/usc/t28/s503",
+      "exact_change": "Preserve this opening material as note-only text; do not create live Code prose. | Keep the agency-creation language as statutory-note material only. | Preserve the archival duties as statutory-note material only."
     },
     {
       "law_id": "PL-004-034",
@@ -156,7 +159,9 @@
         "placement": null,
         "branch_vs_origin": "No current Code insertion is authorized for this repealed law.",
         "detail": "The source text is preserved only for repeal history."
-      }
+      },
+      "final_legal_status": "repealed",
+      "exact_change": "Keep this opening section as repeal history only. | Do not insert this certification rule as live Code text. | Do not insert this judicial-certification rule as live Code text."
     },
     {
       "law_id": "PL-004-035",
@@ -197,7 +202,9 @@
         "placement": null,
         "branch_vs_origin": "No current Code insertion is authorized from the available source package.",
         "detail": "The source resolves to unusable or unavailable material, so the law remains inventory-only."
-      }
+      },
+      "final_legal_status": "repealed",
+      "exact_change": "Keep only a source-limited historical note and do not invent operative text."
     },
     {
       "law_id": "PL-004-036",
@@ -263,7 +270,13 @@
         ],
         "branch_vs_origin": "The current codification report verifies both locations rather than requiring a new insertion plan.",
         "detail": "Title 10 already contains the enacted section 206 and the reserved 7594 location."
-      }
+      },
+      "final_legal_status": "active",
+      "exact_target": [
+        "/us/usc/t10/s206",
+        "/us/usc/t10/s7594"
+      ],
+      "exact_change": "Keep the enactment context as note material only. | Leave the verified reserved section in place. | Leave the verified section 206 location in place."
     },
     {
       "law_id": "PL-004-037",
@@ -358,7 +371,9 @@
         "placement": null,
         "branch_vs_origin": "No current Code insertion is authorized for this repealed law.",
         "detail": "The enactment remains repeal history only."
-      }
+      },
+      "final_legal_status": "repealed",
+      "exact_change": "Keep the short-title language as repeal history only. | Exclude these policy statements from live Code text. | Do not insert this regulatory framework as current Code text."
     }
   ]
 }

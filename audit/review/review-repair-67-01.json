@@ -42,7 +42,9 @@
           ],
           "notes": "Treat as nonoperative because the source package does not expose usable text."
         }
-      ]
+      ],
+      "exact_target": "none",
+      "exact_change": "No code change is authorized from the available source material."
     },
     {
       "law_id": "PL-022-153",
@@ -78,7 +80,8 @@
           "notes": "Current branch placement appears to be in the wrong title file and should be moved to title 2."
         }
       ],
-      "exact_target": "/us/usc/t2/s6567"
+      "exact_target": "/us/usc/t2/s6567",
+      "exact_change": "Append a statutory note at title 2 section 6567 rather than altering operative code text."
     },
     {
       "law_id": "PL-022-154",
@@ -114,7 +117,8 @@
           "notes": "The current branch note is mislocated in title 52."
         }
       ],
-      "exact_target": "/us/usc/t28/s1361"
+      "exact_target": "/us/usc/t28/s1361",
+      "exact_change": "Attach the note to title 28 section 1361."
     },
     {
       "law_id": "PL-022-155",
@@ -150,7 +154,8 @@
           "notes": "The current branch artifact is filed in title 20 instead of title 2."
         }
       ],
-      "exact_target": "/us/usc/t2/s1438"
+      "exact_target": "/us/usc/t2/s1438",
+      "exact_change": "Record the enactment as a note at title 2 section 1438 rather than an operative title rewrite."
     },
     {
       "law_id": "PL-022-156",
@@ -203,7 +208,8 @@
           "notes": "This provision is part of the already-incorporated package."
         }
       ],
-      "exact_target": "/us/usc/t2/s1901"
+      "exact_target": "/us/usc/t2/s1901",
+      "exact_change": "No further XML change is needed because the amendment is already integrated. | No further XML change is needed because the repeal is already integrated."
     }
   ]
 }

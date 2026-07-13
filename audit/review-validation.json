@@ -3,8 +3,10 @@
     "review_report_count": 26,
     "status_counts": {
       "source-defect-unresolved": 2,
-      "missing evidence": 2,
-      "valid": 22
+      "unsupported source": 1,
+      "unresolved conclusion": 7,
+      "incomplete": 1,
+      "valid": 15
     },
     "reviewed_law_count": 258,
     "unknown_law_count": 3,
@@ -13,8 +15,7 @@
       "audit/review/review-09.json"
     ],
     "reports_lacking_source_grounded_conclusions": [
-      "audit/review/review-02.json",
-      "audit/review/review-18.json"
+      "audit/review/review-02.json"
     ]
   },
   "reports": [
@@ -23,6 +24,9 @@
       "manifest": "audit/review/manifest-01.json",
       "status": "source-defect-unresolved",
       "issues": [
+        "missing confidence",
+        "missing current XML comparison",
+        "missing final recommended action",
         "operative-text-required-but-target-unresolved",
         "source-defect-unresolved"
       ],
@@ -147,9 +151,12 @@
     {
       "review_report": "audit/review/review-02.json",
       "manifest": "audit/review/manifest-02.json",
-      "status": "missing evidence",
+      "status": "unsupported source",
       "issues": [
-        "missing evidence"
+        "missing confidence",
+        "missing current XML comparison",
+        "missing final recommended action",
+        "unsupported source"
       ],
       "law_count": 10,
       "manifest_law_count": 10,
@@ -271,8 +278,11 @@
     {
       "review_report": "audit/review/review-03.json",
       "manifest": "audit/review/manifest-03.json",
-      "status": "valid",
-      "issues": [],
+      "status": "unresolved conclusion",
+      "issues": [
+        "missing approved code treatment",
+        "unresolved conclusion"
+      ],
       "law_count": 10,
       "manifest_law_count": 10,
       "missing_law_ids": [],
@@ -374,8 +384,12 @@
     {
       "review_report": "audit/review/review-04.json",
       "manifest": "audit/review/manifest-04.json",
-      "status": "valid",
-      "issues": [],
+      "status": "incomplete",
+      "issues": [
+        "missing confidence",
+        "missing current XML comparison",
+        "missing final recommended action"
+      ],
       "law_count": 10,
       "manifest_law_count": 10,
       "missing_law_ids": [],
@@ -495,8 +509,11 @@
     {
       "review_report": "audit/review/review-05.json",
       "manifest": "audit/review/manifest-05.json",
-      "status": "valid",
-      "issues": [],
+      "status": "unresolved conclusion",
+      "issues": [
+        "missing approved code treatment",
+        "unresolved conclusion"
+      ],
       "law_count": 10,
       "manifest_law_count": 10,
       "missing_law_ids": [],
@@ -598,8 +615,10 @@
     {
       "review_report": "audit/review/review-06.json",
       "manifest": "audit/review/manifest-06.json",
-      "status": "valid",
-      "issues": [],
+      "status": "unresolved conclusion",
+      "issues": [
+        "unresolved conclusion"
+      ],
       "law_count": 10,
       "manifest_law_count": 10,
       "missing_law_ids": [],
@@ -683,8 +702,10 @@
     {
       "review_report": "audit/review/review-07.json",
       "manifest": "audit/review/manifest-07.json",
-      "status": "valid",
-      "issues": [],
+      "status": "unresolved conclusion",
+      "issues": [
+        "unresolved conclusion"
+      ],
       "law_count": 10,
       "manifest_law_count": 10,
       "missing_law_ids": [],
@@ -766,8 +787,10 @@
     {
       "review_report": "audit/review/review-08.json",
       "manifest": "audit/review/manifest-08.json",
-      "status": "valid",
-      "issues": [],
+      "status": "unresolved conclusion",
+      "issues": [
+        "unresolved conclusion"
+      ],
       "law_count": 10,
       "manifest_law_count": 10,
       "missing_law_ids": [],
@@ -857,6 +880,9 @@
       "manifest": "audit/review/manifest-09.json",
       "status": "source-defect-unresolved",
       "issues": [
+        "missing confidence",
+        "missing current XML comparison",
+        "missing final recommended action",
         "source-defect-unresolved"
       ],
       "law_count": 10,
@@ -989,74 +1015,70 @@
           "law_id": "PL-015-093",
           "public_law": "15-93",
           "title": "Public Law 15-93 | Checks and Balances Act of 2023",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-015-094",
           "public_law": "15-94",
           "title": "Public Law 15-94 | Whistleblower Protections Act of 2023",
-          "status": "unresolved",
-          "issues": [
-            "unresolved conclusion"
-          ]
+          "status": "active",
+          "issues": []
         },
         {
           "law_id": "PL-015-095",
           "public_law": "15-95",
           "title": "Public Law 15-95 | An Act to Repeal the White House Protection Act",
-          "status": "unresolved",
-          "issues": [
-            "unresolved conclusion"
-          ]
+          "status": "repealed",
+          "issues": []
         },
         {
           "law_id": "PL-015-096",
           "public_law": "15-96",
           "title": "Public Law 15-96 | Prisoner Bail Protection Act",
-          "status": "fully-repealed",
+          "status": "repealed",
           "issues": []
         },
         {
           "law_id": "PL-015-097",
           "public_law": "15-97",
           "title": "Public Law 15-97 | Uniform Legal Practice Authority Act",
-          "status": "partially-current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-015-098",
           "public_law": "15-98",
           "title": "Public Law 15-98 | Inspector General Act (2023)",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-015-099",
           "public_law": "15-99",
           "title": "Public Law 15-99 | Second National Federal Torts Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-015-100",
           "public_law": "15-100",
           "title": "Public Law 15-100 | Employment Rights and Limitations Act",
-          "status": "current",
+          "status": "repealed",
           "issues": []
         },
         {
           "law_id": "PL-015-101",
           "public_law": "15-101",
           "title": "Public Law 15-101 | Guidance to Guidances Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-015-102",
           "public_law": "15-102",
           "title": "Public Law 15-102 | New Ambassadorial Organizational and Reporting Act",
-          "status": "partially-current",
+          "status": "active",
           "issues": []
         }
       ]
@@ -1064,8 +1086,10 @@
     {
       "review_report": "audit/review/review-11.json",
       "manifest": "audit/review/manifest-11.json",
-      "status": "valid",
-      "issues": [],
+      "status": "unresolved conclusion",
+      "issues": [
+        "unresolved conclusion"
+      ],
       "law_count": 10,
       "manifest_law_count": 10,
       "missing_law_ids": [],
@@ -1151,8 +1175,10 @@
     {
       "review_report": "audit/review/review-12.json",
       "manifest": "audit/review/manifest-12.json",
-      "status": "valid",
-      "issues": [],
+      "status": "unresolved conclusion",
+      "issues": [
+        "unresolved conclusion"
+      ],
       "law_count": 10,
       "manifest_law_count": 10,
       "missing_law_ids": [],
@@ -1250,42 +1276,42 @@
           "law_id": "PL-017-125",
           "public_law": "17-125",
           "title": "Public Law 17-125 | We Don't Read Minds Act of 2023",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-017-126",
           "public_law": "17-126",
           "title": "Public Law 17-126 | Special Events Act",
-          "status": "repealed",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-017-127",
           "public_law": "17-127",
           "title": "Public Law 17-127 | Border Security Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-017-128",
           "public_law": "17-128",
           "title": "Public Law 17-128 | Impeachment Procedures and Protocols Act (IPPA)",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-017-129",
           "public_law": "17-129",
           "title": "Public Law 17-129 | Department of Education Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-017-130",
           "public_law": "17-130",
           "title": "Public Law 17-130 | Oath and Offices Protection (OOP)",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
@@ -1299,21 +1325,21 @@
           "law_id": "PL-017-132",
           "public_law": "17-132",
           "title": "Public Law 17-132 | Standard Process for International Extraditions Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-017-133",
           "public_law": "17-133",
           "title": "Public Law 17-133 | Judicial Overhaul Bill (JOB) AMENDED",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-017-134",
           "public_law": "17-134",
           "title": "Public Law 17-134 | Amended The Uniformed Capitol Police Act of 2023",
-          "status": "current",
+          "status": "active",
           "issues": []
         }
       ]
@@ -1331,14 +1357,14 @@
           "law_id": "PL-017-135",
           "public_law": "17-135",
           "title": "Public Law 17-135 | Judicial Bias Protection Act (JBPA)",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-017-136",
           "public_law": "17-136",
           "title": "Public Law 17-136 | The Parks Act (TPA)",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
@@ -1352,49 +1378,49 @@
           "law_id": "PL-017-138",
           "public_law": "17-138",
           "title": "Public Law 17-138 | Hatch Act Amendment Act (HA)",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-018-139",
           "public_law": "18-139",
           "title": "Public Law 18-139 | The Bye Bye Background Checks Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-018-140",
           "public_law": "18-140",
           "title": "Public Law 18-140 | Federal Employment Act of 2023",
-          "status": "repealed",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-018-141",
           "public_law": "18-141",
           "title": "Public Law 18-141 | Foreign Service Act of 2023",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-018-142",
           "public_law": "18-142",
           "title": "Public Law 18-142 | Business Licensing Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-018-143",
           "public_law": "18-143",
           "title": "Public Law 18-143 | United States Capitol Police Technical Corrections Act",
-          "status": "repealed",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-019-144",
           "public_law": "19-144",
           "title": "Public Law 19-144 | Public Area Management Act (PAMA)",
-          "status": "current",
+          "status": "active",
           "issues": []
         }
       ]
@@ -1412,74 +1438,70 @@
           "law_id": "PL-019-145",
           "public_law": "19-145",
           "title": "Public Law 19-145 | Military Officer Accountability Act (MOAA)",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-019-146",
           "public_law": "19-146",
           "title": "Public Law 19-146 | Refurbishing the Military Legal System Act",
-          "status": "unresolved",
-          "issues": [
-            "unresolved conclusion"
-          ]
+          "status": "active",
+          "issues": []
         },
         {
           "law_id": "PL-019-147",
           "public_law": "19-147",
           "title": "Public Law 19-147 | Diplomatic Standards Act (DSA)",
-          "status": "repealed",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-019-148",
           "public_law": "19-148",
           "title": "Public Law 19-148 | Badges and Entrapment Act (BEA)",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-019-149",
           "public_law": "19-149",
           "title": "Public Law 19-149 | Criminal Justice Reform Act (CJRA)",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-019-150",
           "public_law": "19-150",
           "title": "Public Law 19-150 | Small Businesses Empowerment Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-019-151",
           "public_law": "19-151",
           "title": "Public Law 19-151 | Court Fees Prohibition and Protection Act (CTPPA)",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-019-152",
           "public_law": "19-152",
           "title": "Public Law 19-152 | The Commerce Legislation and Labor Aggravations Reformations (CLEAR)",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-021-123",
           "public_law": "21-123",
           "title": "Public Law 21-123 | Freedom In Removing Employees and Deregulation Act of 2024",
-          "status": "unresolved",
-          "issues": [
-            "unresolved conclusion"
-          ]
+          "status": "repealed",
+          "issues": []
         },
         {
           "law_id": "PL-022-153",
           "public_law": "22-153",
           "title": "Public Law 22-153 | Fire Department Reform and Nurturing (FDRN)",
-          "status": "current",
+          "status": "active",
           "issues": []
         }
       ]
@@ -1649,10 +1671,8 @@
     {
       "review_report": "audit/review/review-18.json",
       "manifest": "audit/review/manifest-18.json",
-      "status": "missing evidence",
-      "issues": [
-        "missing evidence"
-      ],
+      "status": "valid",
+      "issues": [],
       "law_count": 10,
       "manifest_law_count": 10,
       "missing_law_ids": [],
@@ -1661,10 +1681,8 @@
           "law_id": "PL-024-176",
           "public_law": "24-176",
           "title": "Public Law 24-176 | Comprehensive Federal Government Funding Act",
-          "status": "source_unavailable",
-          "issues": [
-            "source unavailable"
-          ]
+          "status": "active",
+          "issues": []
         },
         {
           "law_id": "PL-024-177",
@@ -1677,14 +1695,14 @@
           "law_id": "PL-024-178",
           "public_law": "24-178",
           "title": "Public Law 24-178 | Equality in Employment Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-025-179",
           "public_law": "25-179",
           "title": "Public Law 25-179 | Fiscal Year 21-2",
-          "status": "temporary-operative",
+          "status": "active",
           "issues": []
         },
         {
@@ -1705,30 +1723,28 @@
           "law_id": "PL-025-182",
           "public_law": "25-182",
           "title": "Public Law 25-182 | Pentagon Expansion and National Territory Authorization Act",
-          "status": "source_unavailable",
-          "issues": [
-            "source unavailable"
-          ]
+          "status": "active",
+          "issues": []
         },
         {
           "law_id": "PL-025-183",
           "public_law": "25-183",
           "title": "Public Law 25-183 | Commerce and Labor Advancement Act (CLAA)",
-          "status": "superseded_before_codification",
+          "status": "repealed",
           "issues": []
         },
         {
           "law_id": "PL-025-184",
           "public_law": "25-184",
           "title": "Public Law 25-184 | Legal Advisors, Representatives, and Professionals Exam Regulations (LARPER)",
-          "status": "superseded_before_codification",
+          "status": "repealed",
           "issues": []
         },
         {
           "law_id": "PL-025-185",
           "public_law": "25-185",
           "title": "Public Law 25-185 | Fiscal Year 21-3",
-          "status": "expired",
+          "status": "active",
           "issues": []
         }
       ]
@@ -1746,70 +1762,70 @@
           "law_id": "PL-026-186",
           "public_law": "26-186",
           "title": "Public Law 26-186 | Secret Service Jurisdiction Reform Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-026-187",
           "public_law": "26-187",
           "title": "Public Law 26-187 | FPS Funding Act",
-          "status": "expired",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-026-188",
           "public_law": "26-188",
           "title": "Public Law 26-188 | Departmental Reports Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-026-189",
           "public_law": "26-189",
           "title": "Public Law 26-189 | Fiscal Year 22-1",
-          "status": "expired",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-026-190",
           "public_law": "26-190",
           "title": "Public Law 26-190 | The Great Reform Initiative of the Judiciary",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-026-191",
           "public_law": "26-191",
           "title": "Public Law 26-191 | Federal Employment Reform Act of 2024 (FERA24)",
-          "status": "current",
+          "status": "repealed",
           "issues": []
         },
         {
           "law_id": "PL-027-192",
           "public_law": "27-192",
           "title": "Public Law 27-192 | Presidential Libraries and Better Public Records Management Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-027-193",
           "public_law": "27-193",
           "title": "Public Law 27-193 | Preservation of Parks and Monuments Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-027-194",
           "public_law": "27-194",
           "title": "Public Law 27-194 | Fast Food Workers Day Act of 2024",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-027-195",
           "public_law": "27-195",
           "title": "Public Law 27-195 | The Preservation of Laws Act (PLA)",
-          "status": "current",
+          "status": "active",
           "issues": []
         }
       ]
@@ -1908,21 +1924,21 @@
           "law_id": "PL-029-208",
           "public_law": "29-208",
           "title": "Public Law 29-208 | Foreign Affairs Accountability Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-029-210",
           "public_law": "29-210",
           "title": "Public Law 29-210 | Military Justice Reform Act of 2024",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-029-211",
           "public_law": "29-211",
           "title": "Public Law 29-211 | Amendment to the Presidential Succession Act of 1947",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
@@ -1936,14 +1952,14 @@
           "law_id": "PL-029-214",
           "public_law": "29-214",
           "title": "Public Law 29-214 | Safeguarding American Democracy and Maintaining Order in our Streets Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-029-215",
           "public_law": "29-215",
           "title": "Public Law 29-215 | Stability in the Presidency Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
@@ -1957,21 +1973,21 @@
           "law_id": "PL-029-217",
           "public_law": "29-217",
           "title": "Public Law 29-217 | Private Regulations and Compliance Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-029-218",
           "public_law": "29-218",
           "title": "Public Law 29-218 | Public Officials Security Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-030-220",
           "public_law": "30-220",
           "title": "Public Law 30-220 | Supreme Court Justice Allotment Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         }
       ]
@@ -1989,70 +2005,70 @@
           "law_id": "PL-030-221",
           "public_law": "30-221",
           "title": "Public Law 30-221 | Judicial Efficiency and Procedure Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-030-222",
           "public_law": "30-222",
           "title": "Public Law 30-222 | Foreign Intelligence Surveillance Court Establishment Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-030-223",
           "public_law": "30-223",
           "title": "Public Law 30-223 | Municipal Transportation Act",
-          "status": "fully-repealed",
+          "status": "repealed",
           "issues": []
         },
         {
           "law_id": "PL-030-224",
           "public_law": "30-224",
           "title": "Public Law 30-224 | Vacancies and Acting Officer Reform Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-031-225",
           "public_law": "31-225",
           "title": "Public Law 31-225 | Collaborative Officer Partnership and Safety (COPS) Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-031-226",
           "public_law": "31-226",
           "title": "Public Law 31-226 | Commerce and Labor Administrative Reform Act (CLARA)",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-031-227",
           "public_law": "31-227",
           "title": "Public Law 31-227 | Foreign Affairs Representation and Treatment Statute (FARTS)",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-031-228",
           "public_law": "31-228",
           "title": "Public Law 31-228 | Protecting Congressional Authority Act (PCAA)",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-031-229",
           "public_law": "31-229",
           "title": "Public Law 31-229 | Fiscal Year 25-1",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-032-230",
           "public_law": "32-230",
           "title": "Public Law 32-230 | Federal Executive & Senior Leadership Pay Standardization Act of 2025",
-          "status": "current",
+          "status": "active",
           "issues": []
         }
       ]
@@ -2158,63 +2174,63 @@
           "law_id": "PL-034-243",
           "public_law": "34-243",
           "title": "Public Law 34-243 | Judicial Integrity & Accountability Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-034-244",
           "public_law": "34-244",
           "title": "Public Law 34-244 | Sentencing Reform Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-034-245",
           "public_law": "34-245",
           "title": "Public Law 34-245 | Legal Compensation Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-034-246",
           "public_law": "34-246",
           "title": "Public Law 34-246 | Sentencing Commission Reform Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-034-247",
           "public_law": "34-247",
           "title": "Public Law 34-247 | Grand Jury Bypass Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-034-248",
           "public_law": "34-248",
           "title": "Public Law 34-248 | Intelligence Community Inspector General Consolidation Act of 2025",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-034-249",
           "public_law": "34-249",
           "title": "Public Law 34-249 | Washington Diplomacy Complex Bill 2025",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-034-250",
           "public_law": "34-250",
           "title": "Public Law 34-250 | Federal Prison Standards Act of 2025",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-034-251",
           "public_law": "34-251",
           "title": "Public Law 34-251 | In-Game Sentencing Guidelines Bill",
-          "status": "superseded",
+          "status": "repealed",
           "issues": []
         }
       ]
@@ -2232,70 +2248,70 @@
           "law_id": "PL-035-252",
           "public_law": "35-252",
           "title": "Public Law 35-252 | Magistrate Appointment Act of 2025",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-035-254",
           "public_law": "35-254",
           "title": "Public Law 35-254 | An Act to repeal Public Law 28-205",
-          "status": "current",
+          "status": "repealed",
           "issues": []
         },
         {
           "law_id": "PL-035-256",
           "public_law": "35-256",
           "title": "Public Law 35-256 | Workers First Act of 2025",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-036-256",
           "public_law": "36-256",
           "title": "Public Law 36-256 | Commerce Dispersal Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-036-257",
           "public_law": "36-257",
           "title": "Public Law 36-257 | Maritime Operations & Policy Overhaul Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-036-258",
           "public_law": "36-258",
           "title": "Public Law 36-258 | National Root Beer Day Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-036-260",
           "public_law": "36-260",
           "title": "Public Law 36-260 | Fixing the District of Columbia Act of 2025",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-037-261",
           "public_law": "37-261",
           "title": "Public Law 37-261 | Federal Criminal Code Act of 2025",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-038-262",
           "public_law": "38-262",
           "title": "Public Law 38-262 | Fund the Government Act of 2026",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-038-263",
           "public_law": "38-263",
           "title": "Public Law 38-263 | National Security Act of 2026",
-          "status": "current",
+          "status": "active",
           "issues": []
         }
       ]
@@ -2313,56 +2329,56 @@
           "law_id": "PL-038-264",
           "public_law": "38-264",
           "title": "Public Law 38-264 | Organized Crime and Racketeering Modernization Act of 2026",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-038-265",
           "public_law": "38-265",
           "title": "Public Law 38-265 | Employment Clarity and Federal Workforce Modernization Act of 2026",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-038-266",
           "public_law": "38-266",
           "title": "Public Law 38-266 | Speedy Trial Act of 2026",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-039-267",
           "public_law": "39-267",
           "title": "Public Law 39-267 | Reform Sentencing Act",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-040-268",
           "public_law": "40-268",
           "title": "Public Law 40-268 | Big Beautiful Budget Act",
-          "status": "temporary-operative",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-041-269",
           "public_law": "41-269",
           "title": "Public Law 41-269 | Federal Enhancement Against Foreign Intrusion Amendments Act of 2026",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-041-270",
           "public_law": "41-270",
           "title": "Public Law 41-270 | Washington Diplomacy Complex Corrections Act of 2026",
-          "status": "current",
+          "status": "active",
           "issues": []
         },
         {
           "law_id": "PL-041-271",
           "public_law": "41-271",
           "title": "Public Law 41-271 | The Great Change Act of 2026",
-          "status": "current",
+          "status": "active",
           "issues": []
         }
       ]
@@ -3338,7 +3354,7 @@
       "law_id": "PL-015-093",
       "public_law": "15-93",
       "title": "Public Law 15-93 | Checks and Balances Act of 2023",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-10.json"
     },
@@ -3346,27 +3362,23 @@
       "law_id": "PL-015-094",
       "public_law": "15-94",
       "title": "Public Law 15-94 | Whistleblower Protections Act of 2023",
-      "status": "unresolved",
-      "issues": [
-        "unresolved conclusion"
-      ],
+      "status": "active",
+      "issues": [],
       "source_report": "audit/review/review-10.json"
     },
     {
       "law_id": "PL-015-095",
       "public_law": "15-95",
       "title": "Public Law 15-95 | An Act to Repeal the White House Protection Act",
-      "status": "unresolved",
-      "issues": [
-        "unresolved conclusion"
-      ],
+      "status": "repealed",
+      "issues": [],
       "source_report": "audit/review/review-10.json"
     },
     {
       "law_id": "PL-015-096",
       "public_law": "15-96",
       "title": "Public Law 15-96 | Prisoner Bail Protection Act",
-      "status": "fully-repealed",
+      "status": "repealed",
       "issues": [],
       "source_report": "audit/review/review-10.json"
     },
@@ -3374,7 +3386,7 @@
       "law_id": "PL-015-097",
       "public_law": "15-97",
       "title": "Public Law 15-97 | Uniform Legal Practice Authority Act",
-      "status": "partially-current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-10.json"
     },
@@ -3382,7 +3394,7 @@
       "law_id": "PL-015-098",
       "public_law": "15-98",
       "title": "Public Law 15-98 | Inspector General Act (2023)",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-10.json"
     },
@@ -3390,7 +3402,7 @@
       "law_id": "PL-015-099",
       "public_law": "15-99",
       "title": "Public Law 15-99 | Second National Federal Torts Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-10.json"
     },
@@ -3398,7 +3410,7 @@
       "law_id": "PL-015-100",
       "public_law": "15-100",
       "title": "Public Law 15-100 | Employment Rights and Limitations Act",
-      "status": "current",
+      "status": "repealed",
       "issues": [],
       "source_report": "audit/review/review-10.json"
     },
@@ -3406,7 +3418,7 @@
       "law_id": "PL-015-101",
       "public_law": "15-101",
       "title": "Public Law 15-101 | Guidance to Guidances Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-10.json"
     },
@@ -3414,7 +3426,7 @@
       "law_id": "PL-015-102",
       "public_law": "15-102",
       "title": "Public Law 15-102 | New Ambassadorial Organizational and Reporting Act",
-      "status": "partially-current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-10.json"
     },
@@ -3596,7 +3608,7 @@
       "law_id": "PL-017-125",
       "public_law": "17-125",
       "title": "Public Law 17-125 | We Don't Read Minds Act of 2023",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-13.json"
     },
@@ -3604,7 +3616,7 @@
       "law_id": "PL-017-126",
       "public_law": "17-126",
       "title": "Public Law 17-126 | Special Events Act",
-      "status": "repealed",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-13.json"
     },
@@ -3612,7 +3624,7 @@
       "law_id": "PL-017-127",
       "public_law": "17-127",
       "title": "Public Law 17-127 | Border Security Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-13.json"
     },
@@ -3620,7 +3632,7 @@
       "law_id": "PL-017-128",
       "public_law": "17-128",
       "title": "Public Law 17-128 | Impeachment Procedures and Protocols Act (IPPA)",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-13.json"
     },
@@ -3628,7 +3640,7 @@
       "law_id": "PL-017-129",
       "public_law": "17-129",
       "title": "Public Law 17-129 | Department of Education Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-13.json"
     },
@@ -3636,7 +3648,7 @@
       "law_id": "PL-017-130",
       "public_law": "17-130",
       "title": "Public Law 17-130 | Oath and Offices Protection (OOP)",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-13.json"
     },
@@ -3652,7 +3664,7 @@
       "law_id": "PL-017-132",
       "public_law": "17-132",
       "title": "Public Law 17-132 | Standard Process for International Extraditions Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-13.json"
     },
@@ -3660,7 +3672,7 @@
       "law_id": "PL-017-133",
       "public_law": "17-133",
       "title": "Public Law 17-133 | Judicial Overhaul Bill (JOB) AMENDED",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-13.json"
     },
@@ -3668,7 +3680,7 @@
       "law_id": "PL-017-134",
       "public_law": "17-134",
       "title": "Public Law 17-134 | Amended The Uniformed Capitol Police Act of 2023",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-13.json"
     },
@@ -3676,7 +3688,7 @@
       "law_id": "PL-017-135",
       "public_law": "17-135",
       "title": "Public Law 17-135 | Judicial Bias Protection Act (JBPA)",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-14.json"
     },
@@ -3684,7 +3696,7 @@
       "law_id": "PL-017-136",
       "public_law": "17-136",
       "title": "Public Law 17-136 | The Parks Act (TPA)",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-14.json"
     },
@@ -3700,7 +3712,7 @@
       "law_id": "PL-017-138",
       "public_law": "17-138",
       "title": "Public Law 17-138 | Hatch Act Amendment Act (HA)",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-14.json"
     },
@@ -3708,7 +3720,7 @@
       "law_id": "PL-018-139",
       "public_law": "18-139",
       "title": "Public Law 18-139 | The Bye Bye Background Checks Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-14.json"
     },
@@ -3716,7 +3728,7 @@
       "law_id": "PL-018-140",
       "public_law": "18-140",
       "title": "Public Law 18-140 | Federal Employment Act of 2023",
-      "status": "repealed",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-14.json"
     },
@@ -3724,7 +3736,7 @@
       "law_id": "PL-018-141",
       "public_law": "18-141",
       "title": "Public Law 18-141 | Foreign Service Act of 2023",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-14.json"
     },
@@ -3732,7 +3744,7 @@
       "law_id": "PL-018-142",
       "public_law": "18-142",
       "title": "Public Law 18-142 | Business Licensing Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-14.json"
     },
@@ -3740,7 +3752,7 @@
       "law_id": "PL-018-143",
       "public_law": "18-143",
       "title": "Public Law 18-143 | United States Capitol Police Technical Corrections Act",
-      "status": "repealed",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-14.json"
     },
@@ -3748,7 +3760,7 @@
       "law_id": "PL-019-144",
       "public_law": "19-144",
       "title": "Public Law 19-144 | Public Area Management Act (PAMA)",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-14.json"
     },
@@ -3756,7 +3768,7 @@
       "law_id": "PL-019-145",
       "public_law": "19-145",
       "title": "Public Law 19-145 | Military Officer Accountability Act (MOAA)",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-15.json"
     },
@@ -3764,17 +3776,15 @@
       "law_id": "PL-019-146",
       "public_law": "19-146",
       "title": "Public Law 19-146 | Refurbishing the Military Legal System Act",
-      "status": "unresolved",
-      "issues": [
-        "unresolved conclusion"
-      ],
+      "status": "active",
+      "issues": [],
       "source_report": "audit/review/review-15.json"
     },
     {
       "law_id": "PL-019-147",
       "public_law": "19-147",
       "title": "Public Law 19-147 | Diplomatic Standards Act (DSA)",
-      "status": "repealed",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-15.json"
     },
@@ -3782,7 +3792,7 @@
       "law_id": "PL-019-148",
       "public_law": "19-148",
       "title": "Public Law 19-148 | Badges and Entrapment Act (BEA)",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-15.json"
     },
@@ -3790,7 +3800,7 @@
       "law_id": "PL-019-149",
       "public_law": "19-149",
       "title": "Public Law 19-149 | Criminal Justice Reform Act (CJRA)",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-15.json"
     },
@@ -3798,7 +3808,7 @@
       "law_id": "PL-019-150",
       "public_law": "19-150",
       "title": "Public Law 19-150 | Small Businesses Empowerment Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-15.json"
     },
@@ -3806,7 +3816,7 @@
       "law_id": "PL-019-151",
       "public_law": "19-151",
       "title": "Public Law 19-151 | Court Fees Prohibition and Protection Act (CTPPA)",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-15.json"
     },
@@ -3814,7 +3824,7 @@
       "law_id": "PL-019-152",
       "public_law": "19-152",
       "title": "Public Law 19-152 | The Commerce Legislation and Labor Aggravations Reformations (CLEAR)",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-15.json"
     },
@@ -3822,17 +3832,15 @@
       "law_id": "PL-021-123",
       "public_law": "21-123",
       "title": "Public Law 21-123 | Freedom In Removing Employees and Deregulation Act of 2024",
-      "status": "unresolved",
-      "issues": [
-        "unresolved conclusion"
-      ],
+      "status": "repealed",
+      "issues": [],
       "source_report": "audit/review/review-15.json"
     },
     {
       "law_id": "PL-022-153",
       "public_law": "22-153",
       "title": "Public Law 22-153 | Fire Department Reform and Nurturing (FDRN)",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-15.json"
     },
@@ -4000,10 +4008,8 @@
       "law_id": "PL-024-176",
       "public_law": "24-176",
       "title": "Public Law 24-176 | Comprehensive Federal Government Funding Act",
-      "status": "source_unavailable",
-      "issues": [
-        "source unavailable"
-      ],
+      "status": "active",
+      "issues": [],
       "source_report": "audit/review/review-18.json"
     },
     {
@@ -4018,7 +4024,7 @@
       "law_id": "PL-024-178",
       "public_law": "24-178",
       "title": "Public Law 24-178 | Equality in Employment Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-18.json"
     },
@@ -4026,7 +4032,7 @@
       "law_id": "PL-025-179",
       "public_law": "25-179",
       "title": "Public Law 25-179 | Fiscal Year 21-2",
-      "status": "temporary-operative",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-18.json"
     },
@@ -4050,17 +4056,15 @@
       "law_id": "PL-025-182",
       "public_law": "25-182",
       "title": "Public Law 25-182 | Pentagon Expansion and National Territory Authorization Act",
-      "status": "source_unavailable",
-      "issues": [
-        "source unavailable"
-      ],
+      "status": "active",
+      "issues": [],
       "source_report": "audit/review/review-18.json"
     },
     {
       "law_id": "PL-025-183",
       "public_law": "25-183",
       "title": "Public Law 25-183 | Commerce and Labor Advancement Act (CLAA)",
-      "status": "superseded_before_codification",
+      "status": "repealed",
       "issues": [],
       "source_report": "audit/review/review-18.json"
     },
@@ -4068,7 +4072,7 @@
       "law_id": "PL-025-184",
       "public_law": "25-184",
       "title": "Public Law 25-184 | Legal Advisors, Representatives, and Professionals Exam Regulations (LARPER)",
-      "status": "superseded_before_codification",
+      "status": "repealed",
       "issues": [],
       "source_report": "audit/review/review-18.json"
     },
@@ -4076,7 +4080,7 @@
       "law_id": "PL-025-185",
       "public_law": "25-185",
       "title": "Public Law 25-185 | Fiscal Year 21-3",
-      "status": "expired",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-18.json"
     },
@@ -4084,7 +4088,7 @@
       "law_id": "PL-026-186",
       "public_law": "26-186",
       "title": "Public Law 26-186 | Secret Service Jurisdiction Reform Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-19.json"
     },
@@ -4092,7 +4096,7 @@
       "law_id": "PL-026-187",
       "public_law": "26-187",
       "title": "Public Law 26-187 | FPS Funding Act",
-      "status": "expired",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-19.json"
     },
@@ -4100,7 +4104,7 @@
       "law_id": "PL-026-188",
       "public_law": "26-188",
       "title": "Public Law 26-188 | Departmental Reports Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-19.json"
     },
@@ -4108,7 +4112,7 @@
       "law_id": "PL-026-189",
       "public_law": "26-189",
       "title": "Public Law 26-189 | Fiscal Year 22-1",
-      "status": "expired",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-19.json"
     },
@@ -4116,7 +4120,7 @@
       "law_id": "PL-026-190",
       "public_law": "26-190",
       "title": "Public Law 26-190 | The Great Reform Initiative of the Judiciary",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-19.json"
     },
@@ -4124,7 +4128,7 @@
       "law_id": "PL-026-191",
       "public_law": "26-191",
       "title": "Public Law 26-191 | Federal Employment Reform Act of 2024 (FERA24)",
-      "status": "current",
+      "status": "repealed",
       "issues": [],
       "source_report": "audit/review/review-19.json"
     },
@@ -4132,7 +4136,7 @@
       "law_id": "PL-027-192",
       "public_law": "27-192",
       "title": "Public Law 27-192 | Presidential Libraries and Better Public Records Management Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-19.json"
     },
@@ -4140,7 +4144,7 @@
       "law_id": "PL-027-193",
       "public_law": "27-193",
       "title": "Public Law 27-193 | Preservation of Parks and Monuments Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-19.json"
     },
@@ -4148,7 +4152,7 @@
       "law_id": "PL-027-194",
       "public_law": "27-194",
       "title": "Public Law 27-194 | Fast Food Workers Day Act of 2024",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-19.json"
     },
@@ -4156,7 +4160,7 @@
       "law_id": "PL-027-195",
       "public_law": "27-195",
       "title": "Public Law 27-195 | The Preservation of Laws Act (PLA)",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-19.json"
     },
@@ -4244,7 +4248,7 @@
       "law_id": "PL-029-208",
       "public_law": "29-208",
       "title": "Public Law 29-208 | Foreign Affairs Accountability Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-21.json"
     },
@@ -4252,7 +4256,7 @@
       "law_id": "PL-029-210",
       "public_law": "29-210",
       "title": "Public Law 29-210 | Military Justice Reform Act of 2024",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-21.json"
     },
@@ -4260,7 +4264,7 @@
       "law_id": "PL-029-211",
       "public_law": "29-211",
       "title": "Public Law 29-211 | Amendment to the Presidential Succession Act of 1947",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-21.json"
     },
@@ -4276,7 +4280,7 @@
       "law_id": "PL-029-214",
       "public_law": "29-214",
       "title": "Public Law 29-214 | Safeguarding American Democracy and Maintaining Order in our Streets Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-21.json"
     },
@@ -4284,7 +4288,7 @@
       "law_id": "PL-029-215",
       "public_law": "29-215",
       "title": "Public Law 29-215 | Stability in the Presidency Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-21.json"
     },
@@ -4300,7 +4304,7 @@
       "law_id": "PL-029-217",
       "public_law": "29-217",
       "title": "Public Law 29-217 | Private Regulations and Compliance Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-21.json"
     },
@@ -4308,7 +4312,7 @@
       "law_id": "PL-029-218",
       "public_law": "29-218",
       "title": "Public Law 29-218 | Public Officials Security Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-21.json"
     },
@@ -4316,7 +4320,7 @@
       "law_id": "PL-030-220",
       "public_law": "30-220",
       "title": "Public Law 30-220 | Supreme Court Justice Allotment Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-21.json"
     },
@@ -4324,7 +4328,7 @@
       "law_id": "PL-030-221",
       "public_law": "30-221",
       "title": "Public Law 30-221 | Judicial Efficiency and Procedure Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-22.json"
     },
@@ -4332,7 +4336,7 @@
       "law_id": "PL-030-222",
       "public_law": "30-222",
       "title": "Public Law 30-222 | Foreign Intelligence Surveillance Court Establishment Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-22.json"
     },
@@ -4340,7 +4344,7 @@
       "law_id": "PL-030-223",
       "public_law": "30-223",
       "title": "Public Law 30-223 | Municipal Transportation Act",
-      "status": "fully-repealed",
+      "status": "repealed",
       "issues": [],
       "source_report": "audit/review/review-22.json"
     },
@@ -4348,7 +4352,7 @@
       "law_id": "PL-030-224",
       "public_law": "30-224",
       "title": "Public Law 30-224 | Vacancies and Acting Officer Reform Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-22.json"
     },
@@ -4356,7 +4360,7 @@
       "law_id": "PL-031-225",
       "public_law": "31-225",
       "title": "Public Law 31-225 | Collaborative Officer Partnership and Safety (COPS) Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-22.json"
     },
@@ -4364,7 +4368,7 @@
       "law_id": "PL-031-226",
       "public_law": "31-226",
       "title": "Public Law 31-226 | Commerce and Labor Administrative Reform Act (CLARA)",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-22.json"
     },
@@ -4372,7 +4376,7 @@
       "law_id": "PL-031-227",
       "public_law": "31-227",
       "title": "Public Law 31-227 | Foreign Affairs Representation and Treatment Statute (FARTS)",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-22.json"
     },
@@ -4380,7 +4384,7 @@
       "law_id": "PL-031-228",
       "public_law": "31-228",
       "title": "Public Law 31-228 | Protecting Congressional Authority Act (PCAA)",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-22.json"
     },
@@ -4388,7 +4392,7 @@
       "law_id": "PL-031-229",
       "public_law": "31-229",
       "title": "Public Law 31-229 | Fiscal Year 25-1",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-22.json"
     },
@@ -4396,7 +4400,7 @@
       "law_id": "PL-032-230",
       "public_law": "32-230",
       "title": "Public Law 32-230 | Federal Executive & Senior Leadership Pay Standardization Act of 2025",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-22.json"
     },
@@ -4492,7 +4496,7 @@
       "law_id": "PL-034-243",
       "public_law": "34-243",
       "title": "Public Law 34-243 | Judicial Integrity & Accountability Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-24.json"
     },
@@ -4500,7 +4504,7 @@
       "law_id": "PL-034-244",
       "public_law": "34-244",
       "title": "Public Law 34-244 | Sentencing Reform Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-24.json"
     },
@@ -4508,7 +4512,7 @@
       "law_id": "PL-034-245",
       "public_law": "34-245",
       "title": "Public Law 34-245 | Legal Compensation Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-24.json"
     },
@@ -4516,7 +4520,7 @@
       "law_id": "PL-034-246",
       "public_law": "34-246",
       "title": "Public Law 34-246 | Sentencing Commission Reform Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-24.json"
     },
@@ -4524,7 +4528,7 @@
       "law_id": "PL-034-247",
       "public_law": "34-247",
       "title": "Public Law 34-247 | Grand Jury Bypass Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-24.json"
     },
@@ -4532,7 +4536,7 @@
       "law_id": "PL-034-248",
       "public_law": "34-248",
       "title": "Public Law 34-248 | Intelligence Community Inspector General Consolidation Act of 2025",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-24.json"
     },
@@ -4540,7 +4544,7 @@
       "law_id": "PL-034-249",
       "public_law": "34-249",
       "title": "Public Law 34-249 | Washington Diplomacy Complex Bill 2025",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-24.json"
     },
@@ -4548,7 +4552,7 @@
       "law_id": "PL-034-250",
       "public_law": "34-250",
       "title": "Public Law 34-250 | Federal Prison Standards Act of 2025",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-24.json"
     },
@@ -4556,7 +4560,7 @@
       "law_id": "PL-034-251",
       "public_law": "34-251",
       "title": "Public Law 34-251 | In-Game Sentencing Guidelines Bill",
-      "status": "superseded",
+      "status": "repealed",
       "issues": [],
       "source_report": "audit/review/review-24.json"
     },
@@ -4564,7 +4568,7 @@
       "law_id": "PL-035-252",
       "public_law": "35-252",
       "title": "Public Law 35-252 | Magistrate Appointment Act of 2025",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-25.json"
     },
@@ -4572,7 +4576,7 @@
       "law_id": "PL-035-254",
       "public_law": "35-254",
       "title": "Public Law 35-254 | An Act to repeal Public Law 28-205",
-      "status": "current",
+      "status": "repealed",
       "issues": [],
       "source_report": "audit/review/review-25.json"
     },
@@ -4580,7 +4584,7 @@
       "law_id": "PL-035-256",
       "public_law": "35-256",
       "title": "Public Law 35-256 | Workers First Act of 2025",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-25.json"
     },
@@ -4588,7 +4592,7 @@
       "law_id": "PL-036-256",
       "public_law": "36-256",
       "title": "Public Law 36-256 | Commerce Dispersal Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-25.json"
     },
@@ -4596,7 +4600,7 @@
       "law_id": "PL-036-257",
       "public_law": "36-257",
       "title": "Public Law 36-257 | Maritime Operations & Policy Overhaul Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-25.json"
     },
@@ -4604,7 +4608,7 @@
       "law_id": "PL-036-258",
       "public_law": "36-258",
       "title": "Public Law 36-258 | National Root Beer Day Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-25.json"
     },
@@ -4612,7 +4616,7 @@
       "law_id": "PL-036-260",
       "public_law": "36-260",
       "title": "Public Law 36-260 | Fixing the District of Columbia Act of 2025",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-25.json"
     },
@@ -4620,7 +4624,7 @@
       "law_id": "PL-037-261",
       "public_law": "37-261",
       "title": "Public Law 37-261 | Federal Criminal Code Act of 2025",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-25.json"
     },
@@ -4628,7 +4632,7 @@
       "law_id": "PL-038-262",
       "public_law": "38-262",
       "title": "Public Law 38-262 | Fund the Government Act of 2026",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-25.json"
     },
@@ -4636,7 +4640,7 @@
       "law_id": "PL-038-263",
       "public_law": "38-263",
       "title": "Public Law 38-263 | National Security Act of 2026",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-25.json"
     },
@@ -4644,7 +4648,7 @@
       "law_id": "PL-038-264",
       "public_law": "38-264",
       "title": "Public Law 38-264 | Organized Crime and Racketeering Modernization Act of 2026",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-26.json"
     },
@@ -4652,7 +4656,7 @@
       "law_id": "PL-038-265",
       "public_law": "38-265",
       "title": "Public Law 38-265 | Employment Clarity and Federal Workforce Modernization Act of 2026",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-26.json"
     },
@@ -4660,7 +4664,7 @@
       "law_id": "PL-038-266",
       "public_law": "38-266",
       "title": "Public Law 38-266 | Speedy Trial Act of 2026",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-26.json"
     },
@@ -4668,7 +4672,7 @@
       "law_id": "PL-039-267",
       "public_law": "39-267",
       "title": "Public Law 39-267 | Reform Sentencing Act",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-26.json"
     },
@@ -4676,7 +4680,7 @@
       "law_id": "PL-040-268",
       "public_law": "40-268",
       "title": "Public Law 40-268 | Big Beautiful Budget Act",
-      "status": "temporary-operative",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-26.json"
     },
@@ -4684,7 +4688,7 @@
       "law_id": "PL-041-269",
       "public_law": "41-269",
       "title": "Public Law 41-269 | Federal Enhancement Against Foreign Intrusion Amendments Act of 2026",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-26.json"
     },
@@ -4692,7 +4696,7 @@
       "law_id": "PL-041-270",
       "public_law": "41-270",
       "title": "Public Law 41-270 | Washington Diplomacy Complex Corrections Act of 2026",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-26.json"
     },
@@ -4700,7 +4704,7 @@
       "law_id": "PL-041-271",
       "public_law": "41-271",
       "title": "Public Law 41-271 | The Great Change Act of 2026",
-      "status": "current",
+      "status": "active",
       "issues": [],
       "source_report": "audit/review/review-26.json"
     }

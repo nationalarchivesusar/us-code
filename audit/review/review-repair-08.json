@@ -65,7 +65,12 @@
         "audit/final-ledger.json records the review conclusion as fully-repealed, and usc/usc22.xml carries the branch history note while origin/main does not carry the same note string."
       ],
       "final_recommended_action": "Keep only a concise repeal-history note and remove the misanchored retained text.",
-      "confidence": "high"
+      "confidence": "high",
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": "/us/usc/t22/s2651a",
+        "detail": "The canonical Trello record is classified as `repealed` based on status keyword `repealed` in list or label. It is not inserted as current Code text."
+      }
     },
     {
       "law_id": "PL-012-074",
@@ -82,7 +87,12 @@
         "usc/usc05.xml carries the branch note, while origin/main does not yet show the needed positive-law Title 5 provisions."
       ],
       "final_recommended_action": "Create the new Title 5 provisions for sections 4 and 5 and keep the repeal history concise.",
-      "confidence": "medium"
+      "confidence": "medium",
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": "/us/usc/t5",
+        "detail": "The canonical Trello record is classified as `repealed` based on status keyword `repealed` in list or label. It is not inserted as current Code text."
+      }
     },
     {
       "law_id": "PL-012-075",
@@ -99,75 +109,100 @@
         "usc/usc02.xml carries the branch note, while origin/main does not show the same note string."
       ],
       "final_recommended_action": "Preserve the live FOIA amendment and keep only concise note history.",
-      "confidence": "high"
+      "confidence": "high",
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t5/s552",
+        "detail": "No express, uniquely executable Code amendment was found. The enactment appears general and permanent (permanent score 14; temporary score 0) and is therefore preserved as a statutory note at 2 U.S.C. § 190d. Anchor selection: subject classification `congress` (score 34) and closest existing section heading `Legislative review by standing committees of the Senate and the House of Representatives`."
+      }
     },
     {
       "law_id": "PL-012-076",
       "public_law": "12-76",
       "title": "Public Law 12-76 | Removing Idiocy Act",
-      "final_legal_status": "unresolved",
+      "final_legal_status": "historical-note-only",
       "chronology_conclusion": "The source packet is unrecoverable, so no executable codification can be verified from the archive.",
       "approved_code_treatment": "historical-note-only",
-      "exact_target": null,
+      "exact_target": "n/a",
       "exact_enacted_text_or_amendment_command": "Retain only a source-limited historical note and do not invent operative text.",
       "source_evidence": [
-        "codification/laws/unrecoverable.json marks PL-012-076 as unrecoverable.",
-        "audit/claude-validation.json labels the record unsupported and incorrectly implemented.",
-        "usc/usc01.xml carries the branch note, but the underlying source text is not recoverable."
+        "codification/mass_migration/latest/reports/laws/PL-012-076.md classifies the record as source-unavailable.",
+        "audit/claude-validation.json marks the record as unsupported/source-limited.",
+        "The archive does not support a verified current Code insertion."
       ],
-      "final_recommended_action": "Keep only the historical note and avoid any executable rewrite.",
-      "confidence": "low"
+      "final_recommended_action": "Keep only the historical note and do not create operative Code text.",
+      "confidence": "low",
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": "n/a",
+        "detail": "The source record is source-unavailable, so the law remains history only."
+      }
     },
     {
       "law_id": "PL-012-077",
       "public_law": "12-77",
       "title": "Public Law 12-77 | Preventing Abuse and Promoting Democracy Act",
-      "final_legal_status": "unresolved",
+      "final_legal_status": "historical-note-only",
       "chronology_conclusion": "The record remains source-limited, so the act can only be preserved as history pending source recovery.",
       "approved_code_treatment": "historical-note-only",
-      "exact_target": null,
+      "exact_target": "n/a",
       "exact_enacted_text_or_amendment_command": "Keep only a source-limited historical note and do not invent operative text.",
       "source_evidence": [
-        "codification/laws/unrecoverable.json marks PL-012-077 as unrecoverable.",
-        "audit/claude-validation.json labels the record unsupported and historical only.",
-        "usc/usc01.xml carries the branch note, but no recoverable enactment text is available."
+        "codification/mass_migration/latest/reports/laws/PL-012-077.md classifies the record as source-unavailable.",
+        "audit/claude-validation.json marks the record as unsupported/source-limited.",
+        "The archive does not support a verified current Code insertion."
       ],
-      "final_recommended_action": "Keep only the historical note and avoid an operative rewrite.",
-      "confidence": "low"
+      "final_recommended_action": "Keep only the historical note and do not create operative Code text.",
+      "confidence": "low",
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": "n/a",
+        "detail": "The source record is source-unavailable, so the law remains history only."
+      }
     },
     {
       "law_id": "PL-012-078",
       "public_law": "12-78",
       "title": "Public Law 12-78 | Balancing Executive Act",
-      "final_legal_status": "unresolved",
+      "final_legal_status": "historical-note-only",
       "chronology_conclusion": "The chronology leaves this law historical only; no executable current text is supported by the archive.",
       "approved_code_treatment": "historical-note-only",
-      "exact_target": null,
+      "exact_target": "n/a",
       "exact_enacted_text_or_amendment_command": "Retain only a concise historical note and do not invent operative text.",
       "source_evidence": [
-        "codification/laws/unrecoverable.json marks PL-012-078 as unrecoverable.",
-        "audit/claude-validation.json treats the record as unsupported and incorrectly implemented.",
-        "usc/usc01.xml carries the branch note, but the underlying source is not recoverable."
+        "codification/mass_migration/latest/reports/laws/PL-012-078.md classifies the record as source-unavailable.",
+        "audit/claude-validation.json marks the record as unsupported/source-limited.",
+        "The archive does not support a verified current Code insertion."
       ],
-      "final_recommended_action": "Keep only the historical note.",
-      "confidence": "low"
+      "final_recommended_action": "Keep only the historical note and do not create operative Code text.",
+      "confidence": "low",
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": "n/a",
+        "detail": "The source record is source-unavailable, so the law remains history only."
+      }
     },
     {
       "law_id": "PL-012-079",
       "public_law": "12-79",
       "title": "Public Law 12-79 | Anti-Terrorism Act of 2023",
-      "final_legal_status": "unresolved",
+      "final_legal_status": "historical-note-only",
       "chronology_conclusion": "The recovered file is only a permission-denied HTML stub, so the law cannot be validated as executable code text.",
       "approved_code_treatment": "historical-note-only",
-      "exact_target": null,
+      "exact_target": "n/a",
       "exact_enacted_text_or_amendment_command": "Retain only a source-limited historical note and do not invent operative text.",
       "source_evidence": [
-        "codification/laws/laws/PL-012-079/law.txt and metadata.json show the permission-denied source record.",
-        "codification/mass_migration/latest/reports/MASTER-CODIFICATION-REPORT.md classifies PL-012-079 as SOURCE_UNAVAILABLE.",
-        "audit/claude-validation.json marks the record unsupported and incorrectly implemented."
+        "codification/mass_migration/latest/reports/laws/PL-012-079.md classifies the record as source-unavailable.",
+        "audit/claude-validation.json marks the record as unsupported/source-limited.",
+        "The archive does not support a verified current Code insertion."
       ],
-      "final_recommended_action": "Leave the law unresolved until authenticated source text is recovered.",
-      "confidence": "low"
+      "final_recommended_action": "Keep only the historical note and do not create operative Code text.",
+      "confidence": "low",
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": "n/a",
+        "detail": "The source record is source-unavailable, so the law remains history only."
+      }
     },
     {
       "law_id": "PL-012-080",
@@ -184,7 +219,12 @@
         "codification/mass_migration/latest/reports/MASTER-CODIFICATION-REPORT.md and audit/claude-validation.json identify PL-031-226 as the repealer."
       ],
       "final_recommended_action": "Keep only the repeal-history note and do not codify any Title 5 labor-management chapter.",
-      "confidence": "high"
+      "confidence": "high",
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "placement": "n/a",
+        "detail": "No current Code insertion is made because PL-031-226 repeals this law. Evidence: and Labor; and (x) The term \"forgery\" means the action of altering, creating, making, or producing a copy or imitation of a document, with the intent to defraud. SEC 5. REPEALMENTS (1) Public Law 4-29 shall be repealed, in its entirety. (2) Public Law 12-80 shall be repealed, in its entirety. (3) Public Law 15-92 shall be repealed, in its entirety. (4) Public Law 17-126 shall be repealed, in its entirety. (5) Public Law 19-152 shall be repealed, in its entirety. (6) Public Law 25-183 shall be repealed, in its en"
+      }
     },
     {
       "law_id": "PL-012-081",
@@ -201,7 +241,12 @@
         "audit/claude-validation.json describes the current implementation as a misanchored note, and usc/usc22.xml carries the branch note while origin/main does not improve the placement."
       ],
       "final_recommended_action": "Keep the note-only treatment and move it to the canonical Title 2 anchor.",
-      "confidence": "medium"
+      "confidence": "medium",
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t2/s6567",
+        "detail": "No express, uniquely executable Code amendment was found. The enactment appears general and permanent (permanent score 6; temporary score 0) and is therefore preserved as a statutory note at 2 U.S.C. § 6567. Anchor selection: subject classification `congress` (score 35) and closest existing section heading `Funds for Secretary of Senate to assist in proper discharge within United States of responsibilities to foreign parliamentary groups or other foreign officials`."
+      }
     },
     {
       "law_id": "PL-012-082",
@@ -218,7 +263,12 @@
         "usc/usc10.xml contains the integrated Title 10 treatment, and origin/main already matches the integrated text according to the audit record."
       ],
       "final_recommended_action": "Keep the integrated Title 10 amendments as current law.",
-      "confidence": "high"
+      "confidence": "high",
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t10/s531; /us/usc/t10/s12203; /us/usc/t10/s12204; /us/usc/t10/s151",
+        "detail": "Project-generated U.S. Code material already contains this public law. The mass migration records and verifies the existing locations rather than duplicating it."
+      }
     }
   ]
 }

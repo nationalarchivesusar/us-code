@@ -1,0 +1,67 @@
+{
+  "manifest_id": "review-repair-03",
+  "output_path": "audit/review/review-repair-03.json",
+  "purpose": "Targeted re-review of review-03 laws using the authoritative codification source corpus.",
+  "laws": [
+    {
+      "law_id": "PL-003-022",
+      "public_law": "3-22",
+      "source_report": "audit/review/review-03.json",
+      "issue_hint": "source-limited historical note"
+    },
+    {
+      "law_id": "PL-003-023",
+      "public_law": "3-23",
+      "source_report": "audit/review/review-03.json",
+      "issue_hint": "source unavailable"
+    },
+    {
+      "law_id": "PL-003-024",
+      "public_law": "3-24",
+      "source_report": "audit/review/review-03.json",
+      "issue_hint": "repealed in the source corpus"
+    },
+    {
+      "law_id": "PL-003-025",
+      "public_law": "3-25",
+      "source_report": "audit/review/review-03.json",
+      "issue_hint": "repealed in the source corpus"
+    },
+    {
+      "law_id": "PL-004-026",
+      "public_law": "4-26",
+      "source_report": "audit/review/review-03.json",
+      "issue_hint": "non-code resolution history"
+    },
+    {
+      "law_id": "PL-004-027",
+      "public_law": "4-27",
+      "source_report": "audit/review/review-03.json",
+      "issue_hint": "repealed before codification"
+    },
+    {
+      "law_id": "PL-004-028",
+      "public_law": "4-28",
+      "source_report": "audit/review/review-03.json",
+      "issue_hint": "repealed in the source corpus"
+    },
+    {
+      "law_id": "PL-004-029",
+      "public_law": "4-29",
+      "source_report": "audit/review/review-03.json",
+      "issue_hint": "repealed before codification"
+    },
+    {
+      "law_id": "PL-004-030",
+      "public_law": "4-30",
+      "source_report": "audit/review/review-03.json",
+      "issue_hint": "repealed in the source corpus"
+    },
+    {
+      "law_id": "PL-004-031",
+      "public_law": "4-31",
+      "source_report": "audit/review/review-03.json",
+      "issue_hint": "repealed in the source corpus"
+    }
+  ]
+}

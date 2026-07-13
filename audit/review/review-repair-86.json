@@ -105,7 +105,11 @@
         "Retain only repeal-history treatment for this act.",
         "Do not recreate the employment restrictions as operative Code text."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The PDF source is readable and PL 10-68 expressly repeals Public Law 3-20 in full, so the act survives only as repeal history.",
+      "final_recommended_action": "Retain only repeal-history treatment for this act. | Do not recreate the employment restrictions as operative Code text.",
+      "exact_change": "Keep this framing material as repeal history only. | Do not convert this operative language into live Code text; retain it only as repeal history. | Preserve the exemptions only as history."
     },
     {
       "law_id": "PL-004-029",
@@ -173,7 +177,12 @@
         "Keep the law as repeal history only.",
         "Do not add live title 29 text for the repealed department framework."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "PL 31-226 later repeals Public Law 4-29 in its entirety, so the Commerce and Labor restructuring survives only as repeal history.",
+      "final_recommended_action": "Keep the law as repeal history only. | Do not add live title 29 text for the repealed department framework.",
+      "exact_target": "/us/usc/t29",
+      "exact_change": "Keep the framing clauses as history only. | Treat the definitions as repeal history only. | Do not keep the transfer framework as current Code text."
     },
     {
       "law_id": "PL-004-030",
@@ -242,7 +251,12 @@
         "Retain only repeal-history treatment for this law.",
         "Do not add the fugitive framework as current code text."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "PL 29-207 later repeals Public Law 4-30 in its entirety, so the fugitive-list and warrant-database framework survives only as history.",
+      "final_recommended_action": "Retain only repeal-history treatment for this law. | Do not add the fugitive framework as current code text.",
+      "exact_target": "/us/usc/t18 and /us/usc/t28",
+      "exact_change": "Keep only a concise historical note. | Do not keep the fugitive-list and warrant-database regime as current text. | Keep the removal and repeal provisions only as history."
     },
     {
       "law_id": "PL-004-031",
@@ -299,7 +313,12 @@
         "Keep this law as repeal history only.",
         "Do not add live title 18 text for the repealed self-defense framework."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "PL 28-202 repeals Public Law 4-31, so the self-defense framework is historical only.",
+      "final_recommended_action": "Keep this law as repeal history only. | Do not add live title 18 text for the repealed self-defense framework.",
+      "exact_target": "/us/usc/t18",
+      "exact_change": "Keep these framing clauses as history only. | Treat the stand-your-ground framework as repeal history only."
     },
     {
       "law_id": "PL-004-032",
@@ -341,7 +360,11 @@
         "Recover the authentic enacted text before any code action.",
         "Do not codify the executive-order surrogate."
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "final_legal_status": "superseded",
+      "chronology_conclusion": "The supplied file is an executive order surrogate that cites Public Law 4-32, but it does not contain the enacted statute text, so the law cannot be treated as authentic statutory source material.",
+      "final_recommended_action": "Recover the authentic enacted text before any code action. | Do not codify the executive-order surrogate.",
+      "exact_change": "Keep only a concise historical note that the supplied source is not the enacted law."
     }
   ]
 }

@@ -21,7 +21,12 @@
         "detail": "No matching PL-034-242 note was found in usc/usc28.xml."
       },
       "recommended_action": "Add the statutory note at /us/usc/t28/s362.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "General and permanent law, but the live branch does not yet contain the note at the classified anchor.",
+      "approved_code_treatment": "statutory-note",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1ZLUmZnFw55lI876jHhEB_S2G6FWbgyKy/view | 76f2272a3a16788639201ea5f078376960829a0e9f69f778d5e60fc40317cf36",
+      "exact_target": "/us/usc/t28/s362"
     },
     {
       "law_id": "PL-034-243",
@@ -36,7 +41,12 @@
         "detail": "Current XML includes the replacement chapter 16 framework and repeal markers for sections 359 and 361."
       },
       "recommended_action": "No further Code change is required.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Direct chapter-level rewrite to Title 28 chapter 16; the branch already carries the enacted replacement text.",
+      "approved_code_treatment": "amend-existing-text",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/157nu1Y1kMor84N5RWL8FSKHhnVC7pKOn/view | 892619c7e2f7886f7793b009896e61083a154238426e7ef01205e96c0b689d09",
+      "exact_target": "/us/usc/t28/ch16"
     },
     {
       "law_id": "PL-034-244",
@@ -51,7 +61,12 @@
         "detail": "Current XML includes the amended commencement and prior-custody-credit language."
       },
       "recommended_action": "No further Code change is required.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Direct amendment to 18 U.S.C. 3585, and the current branch already contains the revised text.",
+      "approved_code_treatment": "amend-existing-text",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1H-SNAYBk2_0MiPGAmQuDSX_WvoMx2eMH/view | a2a6ea53508db63fd8b7adf699a8118857d84340913b69359d00920fff2355a1",
+      "exact_target": "/us/usc/t18/s3585"
     },
     {
       "law_id": "PL-034-245",
@@ -69,7 +84,15 @@
         "detail": "Current XML contains the subsection (d) rewrite and the subchapter repeal with the accompanying legal-representation support note."
       },
       "recommended_action": "No further Code change is required.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Direct amendment to 18 U.S.C. 3006A(d) plus repeal of 42 U.S.C. chapter 34 subchapter X with note-style grant authority.",
+      "approved_code_treatment": "mixed-amendment-and-note",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1IXOxgPpDf6V252fbx2VLJVXQQqmkqaJH/view | 1cc8b0299636c6d448e4f411598f212169320ab15bc52fee83826aa7d3a1d1f7",
+      "exact_target": [
+        "/us/usc/t18/s3006A/d",
+        "/us/usc/t42/ch34/schX"
+      ]
     },
     {
       "law_id": "PL-034-246",
@@ -89,7 +112,17 @@
         "detail": "Current XML shows the revised 991(a), the repeal of 992 and 995, and the expanded 994 duties."
       },
       "recommended_action": "No further Code change is required.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Direct Title 28 amendments and repeal markings, all already reflected in the branch.",
+      "approved_code_treatment": "amend-existing-text",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1iD1TF2jshfy7pTID-pcJM96Y3HyyPyew/view | 7b301e626593b019f5b9ae84d68484fc8bc069653e4048e38581695774f7716c",
+      "exact_target": [
+        "/us/usc/t28/s991",
+        "/us/usc/t28/s992",
+        "/us/usc/t28/s994",
+        "/us/usc/t28/s995"
+      ]
     },
     {
       "law_id": "PL-034-247",
@@ -104,7 +137,12 @@
         "detail": "Current XML contains the Pub. L. 34-247 statutory note at the Title 28 anchor."
       },
       "recommended_action": "No further Code change is required.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "General and permanent enactment anchored as a statutory note, and the live branch already carries it.",
+      "approved_code_treatment": "statutory-note",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1PSi0LKdUgqFYOX1f2zI28FVcXQEjZ68J/view | c45c5893c3afadb7cf3b17528504f7c95adcec337daa73388804ab4ae48511af",
+      "exact_target": "/us/usc/t28/s2261"
     },
     {
       "law_id": "PL-034-248",
@@ -119,7 +157,11 @@
         "detail": "No Code location applies for this enactment."
       },
       "recommended_action": "Leave it out of the Code and retain it only as history.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Classified as non-Code material, so no XML insertion is expected.",
+      "approved_code_treatment": "non-code",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1JxFomW49SUaFyID6l7Z5N_zxcNbQ0eEB/view | 72d945d2eb7a212ddcd1f0b99906ed9db6bddd36a1b2c1a62bd76e297600c5c7"
     },
     {
       "law_id": "PL-034-249",
@@ -134,7 +176,12 @@
         "detail": "No matching PL-034-249 note was found in usc/usc02.xml."
       },
       "recommended_action": "Add the statutory note at /us/usc/t2/s6567.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "General and permanent enactment, but the target note is not present in the current branch.",
+      "approved_code_treatment": "statutory-note",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1rhyg8SD_yPaE2cgl-uQ2z8OQ5vPpdahu/view | 2abfaf75fe58b0c79b39aab2e8bba3c497e2ec4f18f7cf1cc47c69575874180b",
+      "exact_target": "/us/usc/t2/s6567"
     },
     {
       "law_id": "PL-034-250",
@@ -149,7 +196,12 @@
         "detail": "No matching PL-034-250 note was found in usc/usc49.xml."
       },
       "recommended_action": "Add the statutory note at /us/usc/t49/s46307.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "General and permanent enactment classified to a statutory note, but the branch does not yet carry it.",
+      "approved_code_treatment": "statutory-note",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/11WJFaSPITtRo0YO4ns1zgy2kGmkGlxF8/view?usp=drive_open | 4443e667ce4595c23c85f71eb371bdfe04b979af8d2245d487a6713f74b1ee31",
+      "exact_target": "/us/usc/t49/s46307"
     },
     {
       "law_id": "PL-034-251",
@@ -164,7 +216,11 @@
         "detail": "No current Code implementation should be carried forward."
       },
       "recommended_action": "Retain as superseded history only.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "Superseded before codification, so it should remain historical only.",
+      "approved_code_treatment": "historical-note-only",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1LKbXSG_z8sDDP2lbbiy6Fk6nL-oNE9Vx/view | c5d84cc12d54af35f548fb38a1d753138e18bf1cf978bbc8d7c2819f39113538"
     }
   ]
 }

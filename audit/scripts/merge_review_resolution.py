@@ -188,6 +188,30 @@ def review_provisions(review_law: Dict[str, Any]) -> List[Dict[str, Any]]:
     return provs if isinstance(provs, list) else []
 
 
+def provision_target_value(review_prov: Dict[str, Any]) -> str:
+    target = canonical_text(review_prov.get("target") or review_prov.get("exact_target"))
+    if target:
+        return target
+    target_resolution = review_prov.get("target_resolution")
+    if isinstance(target_resolution, dict):
+        target = canonical_text(target_resolution.get("target"))
+        if target:
+            return target
+    target_or_non_target = canonical_text(review_prov.get("target_or_non_target"))
+    if target_or_non_target.lower().startswith("target:"):
+        candidate = target_or_non_target.split(":", 1)[1].strip()
+        if candidate:
+            return candidate
+    return ""
+
+
+def provision_exact_change_value(review_prov: Dict[str, Any]) -> str:
+    return first_nonempty_text(
+        review_prov,
+        ("exact_change", "final_statutory_text", "enacted_text_or_amendment_command", "exact_action", "enacted_effect"),
+    )
+
+
 def final_provisions_by_law(provision_ledger: Dict[str, Any]) -> Dict[str, List[Dict[str, Any]]]:
     out: Dict[str, List[Dict[str, Any]]] = collections.defaultdict(list)
     for prov in provision_ledger.get("provisions", []) or []:
@@ -197,9 +221,18 @@ def final_provisions_by_law(provision_ledger: Dict[str, Any]) -> Dict[str, List[
 
 
 def merge_provision_details(final_prov: Dict[str, Any], review_prov: Dict[str, Any]) -> None:
-    final_prov["review_treatment"] = review_prov.get("treatment") or review_prov.get("approved_code_treatment") or review_prov.get("disposition")
-    final_prov["review_target"] = review_prov.get("target") or review_prov.get("exact_target")
-    final_prov["review_exact_change"] = review_prov.get("exact_change") or review_prov.get("final_statutory_text")
+    final_prov["treatment"] = (
+        review_prov.get("treatment")
+        or review_prov.get("code_treatment")
+        or review_prov.get("approved_code_treatment")
+        or review_prov.get("disposition")
+        or review_prov.get("approved_code_treatment_summary")
+    )
+    final_prov["review_treatment"] = final_prov["treatment"]
+    final_prov["target"] = provision_target_value(review_prov)
+    final_prov["review_target"] = final_prov["target"]
+    final_prov["exact_change"] = provision_exact_change_value(review_prov)
+    final_prov["review_exact_change"] = final_prov["exact_change"]
     final_prov["review_evidence"] = review_prov.get("evidence") or review_prov.get("source_evidence")
     final_prov["review_notes"] = review_prov.get("notes")
     final_prov["review_classes"] = review_prov.get("classes")
@@ -388,26 +421,35 @@ def merge_review_resolution() -> None:
     unresolved_laws: List[Dict[str, Any]] = []
     unresolved_provisions: List[Dict[str, Any]] = []
     disagreement_counts = collections.Counter()
+    controlling_invalid_reports: set[str] = set()
+    controlling_laws_with_issues = 0
+    controlling_provisions_with_issues = 0
 
     for law_id, (idx, report_path, review_law, law_validation) in latest_reviews.items():
         final_law = final_by_law.get(law_id)
         report_validation = validation_reports.get(report_path, {})
         validation_issues = set(law_validation.get("issues", []) or [])
         report_status = report_validation.get("status", "valid")
+        controlling_issues = sorted(set(validation_issues))
+        if report_status != "valid":
+            controlling_issues.append(f"report:{report_status}")
 
         if final_law is not None:
             final_law["review_report"] = report_path
             final_law["review_report_status"] = report_status
-            final_law["review_issues"] = sorted(validation_issues)
+            final_law["review_issues"] = sorted(set(controlling_issues))
             final_law["review_status"] = review_status(review_law)
             final_law["review_chronology"] = review_chronology(review_law)
             final_law["review_treatment"] = review_treatment(review_law)
             final_law["review_recommended_action"] = review_recommendation(review_law)
-            final_law["review_current_implementation"] = review_law.get("current_implementation")
+            final_law["review_current_implementation"] = review_law.get("current_implementation") or review_law.get("current_xml_comparison")
             final_law["review_source_evidence"] = review_law.get("source_evidence") or review_law.get("evidence")
             final_law["review_confidence"] = review_law.get("confidence")
             final_law["review_targets"] = review_targets(review_law)
             final_law["review_exact_change"] = first_nonempty_text(review_law, ("exact_change", "final_statutory_text", "final_amendment_command", "exact_enacted_text"))
+            if controlling_issues:
+                controlling_invalid_reports.add(report_path)
+                controlling_laws_with_issues += 1
 
         disagreements = []
         if final_law is not None:
@@ -430,6 +472,7 @@ def merge_review_resolution() -> None:
                     merge_provision_details(final_prov, review_prov)
                 prov_issues = provision_defect_issues(review_prov)
                 if prov_issues:
+                    controlling_provisions_with_issues += 1
                     unresolved_provisions.append(
                         {
                             "law_id": law_id,
@@ -448,6 +491,7 @@ def merge_review_resolution() -> None:
                     continue
                 prov_issues = provision_defect_issues(review_prov)
                 if prov_issues:
+                    controlling_provisions_with_issues += 1
                     unresolved_provisions.append(
                         {
                             "law_id": law_id,
@@ -462,39 +506,40 @@ def merge_review_resolution() -> None:
                         disagreement_counts[issue] += 1
 
         unresolved_issues = law_defect_issues(review_law, law_validation)
-        non_completed_issues = [
-            issue
-            for issue in unresolved_issues
-            if issue in NON_COMPLETED_STATUSES or issue == "missing conclusion"
-        ]
-        validation_non_completed = [
-            issue
-            for issue in validation_issues
-            if issue in NON_COMPLETED_STATUSES or issue == "missing conclusion"
-        ]
-        if report_status != "valid" and (non_completed_issues or validation_non_completed):
+        blocking_issues = sorted(set(unresolved_issues) | set(validation_issues))
+        if report_status != "valid":
+            blocking_issues = sorted(set(blocking_issues) | {f"report:{report_status}"})
+        if blocking_issues:
             unresolved_laws.append(
                 {
                     "law_id": law_id,
                     "public_law": review_law.get("public_law"),
                     "title": review_law.get("title"),
                     "review_report": report_path,
-                    "issues": non_completed_issues or validation_non_completed or [f"report:{report_status}"],
-                    "categories": build_issue_categories(non_completed_issues or validation_non_completed),
+                    "issues": blocking_issues,
+                    "categories": build_issue_categories(blocking_issues),
                 }
             )
-            for issue in non_completed_issues or validation_non_completed:
+            if final_law is not None and blocking_issues:
+                controlling_invalid_reports.add(report_path)
+            for issue in blocking_issues:
                 disagreement_counts[issue] += 1
 
     final_ledger.setdefault("summary", {})
     final_ledger["summary"]["reviewed_laws"] = canonical_validation.get("summary", {}).get("reviewed_law_count", len(latest_reviews))
-    final_ledger["summary"]["review_invalid_reports"] = sum(1 for item in full_validation.get("reports", []) if item.get("status") != "valid")
+    historical_invalid_reports = sum(1 for item in full_validation.get("reports", []) if item.get("status") != "valid")
+    final_ledger["summary"]["review_invalid_reports"] = historical_invalid_reports
+    final_ledger["summary"]["historical_invalid_reports"] = historical_invalid_reports
+    final_ledger["summary"]["controlling_invalid_reports"] = len(controlling_invalid_reports)
+    final_ledger["summary"]["controlling_laws_with_issues"] = controlling_laws_with_issues
+    final_ledger["summary"]["controlling_provisions_with_issues"] = controlling_provisions_with_issues
     final_ledger["summary"]["review_disagreements"] = len(unresolved_laws)
     final_ledger["summary"]["review_report_validation"] = str(FULL_REVIEW_VALIDATION.relative_to(ROOT)).replace("\\", "/")
     final_ledger["summary"]["review_disagreement_counts"] = dict(disagreement_counts)
 
     provision_ledger.setdefault("summary", {})
     provision_ledger["summary"]["review_disagreements"] = len(unresolved_provisions)
+    provision_ledger["summary"]["controlling_provisions_with_issues"] = controlling_provisions_with_issues
     provision_ledger["summary"]["review_disagreement_counts"] = dict(disagreement_counts)
 
     write_json(FINAL_LEDGER, final_ledger)
@@ -504,6 +549,11 @@ def merge_review_resolution() -> None:
         {
             "laws": unresolved_laws,
             "provisions": unresolved_provisions,
+            "summary": {
+                "controlling_invalid_reports": len(controlling_invalid_reports),
+                "controlling_laws_with_issues": controlling_laws_with_issues,
+                "controlling_provisions_with_issues": controlling_provisions_with_issues,
+            },
             "report_validation": full_validation,
         },
     )

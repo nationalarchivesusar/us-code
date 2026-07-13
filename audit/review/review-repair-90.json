@@ -72,7 +72,10 @@
       "source_evidence": [
         "The recovery set contains only the unrecoverable marker.",
         "The live Title 1 note records the enactment as repealed or superseded and retained solely as statutory history."
-      ]
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "Keep the statute as a historical note only. | Do not infer any operative Code text from the missing source.",
+      "exact_target": "/us/usc/t1/s2"
     },
     {
       "law_id": "PL-015-108",
@@ -212,7 +215,10 @@
       "source_evidence": [
         "The purpose clause says the act exists to fix on-going labeling issues in Both Houses of Congress.",
         "The operative sections govern bills, resolutions, concurrent resolutions, joint resolutions, amendments, committee reports, and treaty documents."
-      ]
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "Carry the act as a statutory note at the Title 2 congressional anchor. | Do not force a positive-law section rewrite for chamber labeling conventions.",
+      "exact_target": "/us/usc/t2/s1"
     },
     {
       "law_id": "PL-015-109",
@@ -262,7 +268,11 @@
       "source_evidence": [
         "The resolution says the war notice in HJR6 is formally repealed in its entirety.",
         "The live Title 2 note records the enactment as repealed or superseded and preserved as statutory history."
-      ]
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "Keep the enactment as a repeal-history note only. | Do not promote it to operative Code text.",
+      "exact_target": "/us/usc/t2/s1",
+      "exact_change": "Record the repeal as statutory history only."
     },
     {
       "law_id": "PL-015-110",
@@ -312,7 +322,10 @@
       "source_evidence": [
         "The recovery set contains only the unrecoverable marker.",
         "The live Title 22 note records the enactment as repealed or superseded and preserved solely as statutory history."
-      ]
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "Keep the law as historical-note only. | Do not invent any operative text from the missing source.",
+      "exact_target": "/us/usc/t22/s2651a"
     },
     {
       "law_id": "PL-028-205",
@@ -414,7 +427,11 @@
       "source_evidence": [
         "The short title and purpose clauses identify a live reform act, not a repealed one.",
         "The recovered text creates IG offices, a Council, reporting duties, subpoena authority, investigative authority, and whistleblower protections."
-      ]
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "Retain the act as current statutory-note material at the Title 5 inspector-general anchor. | Do not invent a more specific Code rewrite without a validated XML target.",
+      "exact_target": "/us/usc/t5/s424",
+      "exact_change": "Record the repeal of Public Law 15-98 section 3 as history only."
     }
   ]
 }

@@ -104,7 +104,13 @@
         "Preserve the act as note material if a statutory-note anchor is assigned later.",
         "Do not invent a direct Title 10 rewrite from the source text."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source is readable and the act is a standalone general-permanent military-justice measure, but it does not express a concrete current U.S.C. target. Treat the provisions as statutory-note material only.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "Preserve the act as note material if a statutory-note anchor is assigned later. | Do not invent a direct Title 10 rewrite from the source text.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1n7VO5jSF0UaMgBC4TILivenV8rWZYt1P/view | bcb17ab6ce41858c6a88220798c20481b1012da42c0d42e59c0ae75a0709e7fe",
+      "exact_change": "Preserve as note material; no direct Code rewrite is identified. | Preserve the definition as note material. | Keep the saving clause as historical note material only."
     },
     {
       "law_id": "PL-015-094",
@@ -167,7 +173,13 @@
         "Preserve the act as statutory-note material only.",
         "Do not invent a direct Title 5 or Title 18 rewrite from the source."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The scanned PDF is usable and the enactment is a standalone general-permanent whistleblower measure, but it does not express a concrete current U.S.C. target. Treat the provisions as statutory-note material only.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "final_recommended_action": "Preserve the act as statutory-note material only. | Do not invent a direct Title 5 or Title 18 rewrite from the source.",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_change": "Preserve the introductory and repeal language as note material only. | Preserve the definition as note material. | Preserve the protections and disclosure rules as note material only."
     },
     {
       "law_id": "PL-015-095",
@@ -201,7 +213,13 @@
         "Retain only as historical record.",
         "Do not infer operative text from the missing source."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source is deleted or not found, so only historical treatment is possible.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Retain only as historical record. | Do not infer operative text from the missing source.",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_change": "Keep the enactment as historical record only."
     },
     {
       "law_id": "PL-015-107",
@@ -235,7 +253,13 @@
         "Retain only as historical record.",
         "Do not infer operative text from the missing source."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source is deleted or not found, and later repeal review confirms the act is historical-only.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "final_recommended_action": "Retain only as historical record. | Do not infer operative text from the missing source.",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_change": "Keep the enactment as historical record only."
     }
   ]
 }

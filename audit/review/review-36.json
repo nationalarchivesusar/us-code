@@ -59,7 +59,12 @@
         "Do not invent operative text or a code anchor.",
         "Treat the record as source unavailable."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source is unrecoverable and the canonical record treats the enactment as repealed, so only history-only handling is supportable.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Keep only a concise historical note. | Do not invent operative text or a code anchor. | Treat the record as source unavailable.",
+      "exact_target": "/us/usc/t1/s1"
     },
     {
       "law_id": "PL-024-178",
@@ -140,7 +145,13 @@
         "Move or replace the note at the correct Title 42 anchor.",
         "Remove the full-text dump and any stale note anchoring."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source is fully recovered and the act makes a determinable amendment to 42 U.S.C. 2000e-2(a). The branch already carries the substantive text, though the note handling is mis-anchored.",
+      "approved_code_treatment": "already-incorporated",
+      "final_recommended_action": "Keep the Title 42 amendment as applied text. | Move or replace the note at the correct Title 42 anchor. | Remove the full-text dump and any stale note anchoring.",
+      "exact_target": "/us/usc/t29/s201",
+      "exact_change": "Add gender identity and sexual orientation to the protected characteristics in subsection (a)."
     },
     {
       "law_id": "PL-025-179",
@@ -197,7 +208,13 @@
         "Do not promote appropriations text to permanent Code text.",
         "Treat the COLA suspension as temporary history."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The act is an appropriations measure with a temporary COLA suspension, so it belongs as a statutory note and not permanent positive-law text.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "Keep only a concise statutory note. | Do not promote appropriations text to permanent Code text. | Treat the COLA suspension as temporary history.",
+      "exact_target": "/us/usc/t2/s4501",
+      "exact_change": "Suspend the 2 U.S.C. 4501 adjustment for fiscal year 21-2."
     },
     {
       "law_id": "PL-025-180",
@@ -238,7 +255,11 @@
         "Do not invent a code amendment.",
         "Keep the record non-operative."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The canonical record classifies the act as repealed, and no positive-law insertion is authorized.",
+      "approved_code_treatment": "nonoperative_or_repealed",
+      "final_recommended_action": "Retain as a repeal history note only. | Do not invent a code amendment. | Keep the record non-operative."
     },
     {
       "law_id": "PL-025-181",
@@ -280,7 +301,12 @@
         "Do not place the D.C. criminal code into positive-law text.",
         "Preserve the repeal classification."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source is a D.C.-specific criminal code and the canonical record classifies it as repealed, so it should stay out of permanent positive-law U.S. Code text.",
+      "approved_code_treatment": "nonoperative_or_repealed",
+      "final_recommended_action": "Keep only a historical note. | Do not place the D.C. criminal code into positive-law text. | Preserve the repeal classification.",
+      "exact_target": "/us/usc/t40/s101/4"
     },
     {
       "law_id": "PL-025-182",
@@ -322,7 +348,12 @@
         "Do not claim the act is codifiable.",
         "Re-acquire the source before any codification decision."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The attachment is deleted or otherwise unrecoverable, so no operative statutory text can be authenticated.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a source-limited historical note. | Do not claim the act is codifiable. | Re-acquire the source before any codification decision.",
+      "exact_target": "/us/usc/t10/s101/h"
     },
     {
       "law_id": "PL-025-183",
@@ -380,7 +411,13 @@
         "Do not create duplicate code text.",
         "Let PL-031-226 govern the present Code state."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The act was later repealed in full by PL-031-226, so no current code insertion should be made for it.",
+      "approved_code_treatment": "superseded-before-codification",
+      "final_recommended_action": "Keep the act as historical only. | Do not create duplicate code text. | Let PL-031-226 govern the present Code state.",
+      "exact_target": "/us/usc/t5/s101",
+      "exact_change": "Record the repeal of PL-025-183 itself as later history rather than as present code text."
     },
     {
       "law_id": "PL-025-184",
@@ -437,7 +474,12 @@
         "Do not emit positive-law text.",
         "Let the later repealer control the present state."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The act was later repealed by PL-033-238, so it should remain historical rather than positive-law text.",
+      "approved_code_treatment": "superseded-before-codification",
+      "final_recommended_action": "Keep only repeal history. | Do not emit positive-law text. | Let the later repealer control the present state.",
+      "exact_change": "Retain only repeal history for the earlier public laws and no permanent Code text."
     },
     {
       "law_id": "PL-025-185",
@@ -494,7 +536,13 @@
         "Do not promote appropriations text to permanent code.",
         "Treat the COLA suspension as temporary history."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The act is another appropriations-style temporary measure and should remain a statutory note at 2 U.S.C. 4501.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "Keep the act as a concise statutory note. | Do not promote appropriations text to permanent code. | Treat the COLA suspension as temporary history.",
+      "exact_target": "/us/usc/t2/s4501",
+      "exact_change": "Record the temporary fiscal-year rule at section 4501 rather than as permanent text."
     },
     {
       "law_id": "PL-030-221",
@@ -536,7 +584,13 @@
         "Leave the rulemaking clarification in the existing Title 28 home.",
         "Keep the record as integration history only."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source is an amendment act and the mass migration report says the project-generated U.S. Code already contains it, so no duplicate insertion is needed.",
+      "approved_code_treatment": "already-incorporated",
+      "final_recommended_action": "Do not duplicate already-incorporated text. | Leave the rulemaking clarification in the existing Title 28 home. | Keep the record as integration history only.",
+      "exact_target": "/us/usc/t28/s2074",
+      "exact_change": "Preserve the already-incorporated rulemaking and transmittal clarification without duplicating it."
     },
     {
       "law_id": "PL-030-222",
@@ -577,7 +631,11 @@
         "Do not fabricate a code amendment.",
         "Leave the law unresolved until source recovery."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "No readable authenticated enactment text was recovered, so the law cannot safely alter the Code.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a source-limited historical note. | Do not fabricate a code amendment. | Leave the law unresolved until source recovery."
     },
     {
       "law_id": "PL-030-223",
@@ -618,7 +676,11 @@
         "Do not insert code text.",
         "Preserve the repeal classification."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The canonical record classifies the act as repealed, so no current code text should be carried forward.",
+      "approved_code_treatment": "nonoperative_or_repealed",
+      "final_recommended_action": "Keep only a repeal history note. | Do not insert code text. | Preserve the repeal classification."
     },
     {
       "law_id": "PL-030-224",
@@ -661,7 +723,13 @@
         "Do not duplicate the already-incorporated amendments.",
         "Retain only the integration history."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source is recovered and the current branch already reflects the acting-officer overhaul, including the section 3345-3349e family.",
+      "approved_code_treatment": "already-incorporated",
+      "final_recommended_action": "Keep the existing acting-officer text. | Do not duplicate the already-incorporated amendments. | Retain only the integration history.",
+      "exact_target": "/us/usc/t5/s3345",
+      "exact_change": "Shorten the recess-or-adjournment period and revise the holdover, exclusion, and nomination-notice rules across sections 3345 through 3349e."
     },
     {
       "law_id": "PL-031-225",
@@ -716,7 +784,13 @@
         "Do not promote it to permanent positive-law text.",
         "Retain the dependency history only."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The act establishes a continuing statutory note at 2 U.S.C. 4532 rather than a unique positive-law insertion.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "Keep the act as a concise statutory note. | Do not promote it to permanent positive-law text. | Retain the dependency history only.",
+      "exact_target": "/us/usc/t2/s4532",
+      "exact_change": "Keep the act as a note at the House compensation anchor chosen by the report."
     },
     {
       "law_id": "PL-031-226",
@@ -774,7 +848,8 @@
       ],
       "current_xml_comparison": "Both the current branch and origin/main already contain the section 101 Commerce and Labor replacement/history note and the section 2421 Trade and Development Agency transfer note, so there is no remaining missing implementation to add.",
       "final_recommended_action": "Leave the integrated text in place and do not duplicate the Commerce/Labor restructuring or the TDA transfer note.",
-      "confidence": "high"
+      "confidence": "high",
+      "exact_change": "Preserve the already-integrated executive-department change rather than duplicating it. | Record the repeals as history and do not create duplicate positive-law text."
     },
     {
       "law_id": "PL-031-227",
@@ -829,7 +904,13 @@
         "Do not duplicate the diplomatic-privileges text.",
         "Retain the already-incorporated status."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source is recovered and the current branch already records the repeal of 8 U.S.C. 1102 plus related foreign-affairs history.",
+      "approved_code_treatment": "already-incorporated",
+      "final_recommended_action": "Keep the section 1102 repeal history. | Do not duplicate the diplomatic-privileges text. | Retain the already-incorporated status.",
+      "exact_target": "/us/usc/t8/s1102",
+      "exact_change": "Keep the foreign-affairs framework as existing code history and note text, not as duplicate positive law. | Record the repeal of section 1102 and the earlier public laws without reviving prior text."
     },
     {
       "law_id": "PL-031-228",
@@ -872,7 +953,13 @@
         "Do not invent new positive-law text.",
         "Retain the repeal of PL-16-112 only as history."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source is recovered and the branch already records the reinstatement of 2 U.S.C. 192 together with the repeal of PL-16-112.",
+      "approved_code_treatment": "already-incorporated",
+      "final_recommended_action": "Keep the section 192 reinstatement note. | Do not invent new positive-law text. | Retain the repeal of PL-16-112 only as history.",
+      "exact_target": "/us/usc/t2/s192",
+      "exact_change": "Reinstate section 192 and preserve the contempt-of-Congress procedures as existing code text."
     },
     {
       "law_id": "PL-031-229",
@@ -913,7 +1000,11 @@
         "Do not fabricate a code amendment.",
         "Leave the law unresolved until source recovery."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "No readable authenticated source was recovered, so the law cannot safely alter the Code.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a source-limited historical note. | Do not fabricate a code amendment. | Leave the law unresolved until source recovery."
     },
     {
       "law_id": "PL-032-230",
@@ -955,7 +1046,13 @@
         "Do not duplicate pay text.",
         "Treat the later repeal as separate history."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source is unavailable, but the mass migration report says the generated U.S. Code already contains the pay-standardization changes, so no duplicate insertion is needed.",
+      "approved_code_treatment": "already-incorporated",
+      "final_recommended_action": "Keep the already-incorporated General Schedule changes. | Do not duplicate pay text. | Treat the later repeal as separate history.",
+      "exact_target": "/us/usc/t5/s5332",
+      "exact_change": "Preserve the existing General Schedule text and related pay-standardization history without duplication."
     }
   ]
 }

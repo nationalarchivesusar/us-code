@@ -146,7 +146,9 @@
       "source_evidence": [
         "Section 1 names the Act and Section 2 states the magistrate-judge purpose. | Section 3 says Section 106(c)(i) of Public Law 26-190 \"shall be amended to read as follows.\""
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "exact_target": "Public Law 26-190 section 106(c)(i)",
+      "exact_change": "Update the magistrate-appointment rule in PL 26-190 to require 30 days as a bar-certified individual, with the federal-bar suspension proviso."
     },
     {
       "law_id": "PL-035-254",
@@ -193,7 +195,9 @@
       "source_evidence": [
         "The bill says it may be cited as \"An Act to repeal Public Law 28-205\" and explains the Council failure. | The source states that Public Law 28-205 \"is hereby repealed.\""
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "exact_target": "Public Law 28-205",
+      "exact_change": "Repeal Public Law 28-205 in its entirety."
     },
     {
       "law_id": "PL-035-256",
@@ -324,7 +328,9 @@
       "source_evidence": [
         "The act may be cited as the \"Commerce Dispersal Act\" and includes severability. | The source says the Department of Commerce and Labor \"shall be rendered inoperable\" and its functions \"transferred.\""
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "exact_target": "Department of Commerce and Labor and related successor offices",
+      "exact_change": "Transfer Commerce and Labor functions to State or Justice as specified in subsections (a) through (j). | Move copyright administration out of the Library of Congress and into the Department of State, with CRB jurisdiction transferred to the D.C. district court."
     },
     {
       "law_id": "PL-036-257",
@@ -410,7 +416,9 @@
       "source_evidence": [
         "The Act may be cited as the \"Maritime Operations & Policy Overhaul Act\" and includes severability. | Section 6(m) \"shall be amended\" to list the Coast Guard and subordinate units."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "exact_target": "Streamlining and Protecting American Security Act, section 6(m)",
+      "exact_change": "Add the United States Coast Guard and subordinate military intelligence leadership to the listed heads. | Add Coast Guard Commandant attendance and limited voting authority language. | Redefine Armed Services to list the Army, Marine Corps, Air Force, Space Force, and Navy."
     },
     {
       "law_id": "PL-036-258",
@@ -458,7 +466,9 @@
       "source_evidence": [
         "The bill may be cited as the \"National Root Beer Day Act\" and takes effect immediately. | The source says 5 U.S.C. 6103(a) \"is amended by inserting after 'Memorial Day, the last Monday in May.'\""
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "exact_target": "/us/usc/t5/s6103",
+      "exact_change": "Insert \"National Root Beer Day, June 17.\" after the Memorial Day clause in subsection (a)."
     },
     {
       "law_id": "PL-036-260",
@@ -566,7 +576,9 @@
       "confidence": "high",
       "source_evidence": [
         "The act may be cited as the \"Fixing the District of Columbia Act of 2025\" and includes extensive findings. | Section 4(a) says the listed laws \"shall be repealed in their entirety.\""
-      ]
+      ],
+      "exact_target": "Public Laws 16-120, 25-181, 29-213, 29-216, 30-223, and 32-231",
+      "exact_change": "Repeal each listed public law in full. | Transfer the named functions and offices exactly as described in sections 6 through 9. | Adopt the named municipal laws into federal law and apply the stated textual amendments."
     },
     {
       "law_id": "PL-037-261",
@@ -616,7 +628,9 @@
       "confidence": "medium",
       "source_evidence": [
         "The source says the bill may be cited as the \"Federal Criminal Code Act\" and becomes effective immediately upon enactment. | The source says the attached Criminal Code \"shall act as the Federal Criminal Code.\""
-      ]
+      ],
+      "exact_target": "/us/usc/t18/s1",
+      "exact_change": "Adopt the attached code as the operative Federal Criminal Code; the accessible source does not expose a section-by-section replacement text."
     },
     {
       "law_id": "PL-038-262",
@@ -719,7 +733,9 @@
       "confidence": "high",
       "source_evidence": [
         "\"Fund the Government Act of 2026\" | \"Definitions\""
-      ]
+      ],
+      "exact_target": "PL 32-230 sec. 6",
+      "exact_change": "Repeal section 6 of PL 32-230; vest schedule-defining authority in the Office of Personnel Management / human capital officer."
     },
     {
       "law_id": "PL-038-263",
@@ -844,7 +860,9 @@
       "confidence": "high",
       "source_evidence": [
         "\"National Security Act of 2026\" | \"Findings and Purposes\""
-      ]
+      ],
+      "exact_target": "Pub. L. 3-21",
+      "exact_change": "Repeal titles I-IV of the CRACK Act of 2022; preserve titles V-VI only until the effective date of this act."
     },
     {
       "law_id": "PL-038-264",
@@ -950,7 +968,9 @@
       "confidence": "medium",
       "source_evidence": [
         "\"Short Title\" | \"Titles V and VI\""
-      ]
+      ],
+      "exact_target": "Pub. L. 3-21",
+      "exact_change": "Repeal titles V and VI of the CRACK Act of 2022 and preserve only the stated savings and effective-date rules."
     },
     {
       "law_id": "PL-038-265",
@@ -1067,7 +1087,9 @@
       "confidence": "high",
       "source_evidence": [
         "\"Employment Clarity and Federal Workforce Modernization Act of 2026\" | \"is repealed in its entirety\""
-      ]
+      ],
+      "exact_target": "Pub. L. 26-191; Pub. L. 28-204; Pub. L. 21-123",
+      "exact_change": "Repeal the named prior laws to the extent stated and preserve only the non-revival / supersession rules."
     },
     {
       "law_id": "PL-038-266",
@@ -1160,7 +1182,9 @@
       "source_evidence": [
         "\"Speedy Trial Act of 2026\" | \"shall be repealed in its entirety\""
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "exact_target": "Pub. L. 22-162 / 18 U.S. Code Chapter 208 Part II",
+      "exact_change": "Repeal the named prior speedy-trial provisions in full. | Replace the arrest-warrant execution text with the five-day nonappearance / Discord-or-ROBLOX-PM language. | Replace the bench-warrant execution text with the five-day nonappearance / Discord-or-ROBLOX-PM language."
     },
     {
       "law_id": "PL-039-267",
@@ -1253,7 +1277,9 @@
       "source_evidence": [
         "\"Reform Sentencing Act\" | \"shall be repealed in its entirety\""
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "exact_target": "PL 34-251",
+      "exact_change": "Repeal PL 34-251 in full."
     },
     {
       "law_id": "PL-040-268",
@@ -1406,7 +1432,9 @@
       "source_evidence": [
         "\"Federal Enhancement Against Foreign Intrusion Amendments Act of 2026\" | \"Section III of Public Law 24-173 is amended\""
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "exact_target": "PL 24-173 Section III",
+      "exact_change": "Replace Section III of PL 24-173 with the foreign-affiliation prohibition and referral language. | Insert a new Section V requiring disclosure of foreign affiliation and routing enforcement to 22 U.S.C. 618."
     },
     {
       "law_id": "PL-041-270",
@@ -1501,7 +1529,9 @@
       "source_evidence": [
         "\"Washington Diplomacy Complex Corrections Act of 2026\" | \"Section 3 ... is amended to read as follows\""
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "exact_target": "Washington Diplomacy Complex Act 2025 Section 3",
+      "exact_change": "Replace the definitions section with the new definitions of Complex, Restricted Security Area, Department, and United Nations Secretariat. | Replace Section 4 with the expanded jurisdiction, restricted-area, and enforcement text. | Strike 'free and full access' and replace subsection (c) with the revised access-limitation text."
     },
     {
       "law_id": "PL-041-271",
@@ -1625,7 +1655,9 @@
       "source_evidence": [
         "\"General Rule of Construction\" | \"is hereby repealed in its entirety\""
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "exact_target": "WDCBA; National Commission on Judicial Activity, Efficiency and Accountability Act; OOP",
+      "exact_change": "Repeal or terminate the named prior laws and preserve only the stated savings / no-revival rules. | Amend the cited national-security statutes to eliminate automatic clearances/access and to add the new oversight and retaliation protections. | Amend the Commerce Dispersal Act sections on commerce, trade, intellectual property, enforcement, and copyright functions as enacted."
     }
   ]
 }

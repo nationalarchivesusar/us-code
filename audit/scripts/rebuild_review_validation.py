@@ -424,6 +424,7 @@ def report_validation() -> Tuple[Dict[str, Any], Dict[str, Any]]:
                 issues.append("schema-invalid")
                 continue
             detail_issues = law_issues(law)
+            issues.extend(detail_issues)
             law_status = legal_status(law)
             law_issue_rows.append(
                 {
@@ -444,10 +445,6 @@ def report_validation() -> Tuple[Dict[str, Any], Dict[str, Any]]:
                         "issue": "missing conclusion",
                     }
                 )
-                if "missing conclusion" in detail_issues:
-                    issues.append("missing conclusion")
-                else:
-                    issues.extend(sorted(set(detail_issues) & NON_COMPLETED_STATUSES))
                 if idx <= 26:
                     canon_unknown_laws.append(
                         {
@@ -456,10 +453,9 @@ def report_validation() -> Tuple[Dict[str, Any], Dict[str, Any]]:
                             "public_law": law.get("public_law"),
                             "title": law.get("title"),
                             "issue": "missing conclusion",
-                        }
-                    )
+                    }
+                )
             if "missing source evidence" in detail_issues or "source unavailable" in detail_issues or "unsupported source" in detail_issues:
-                issues.append("missing evidence")
                 all_laws_lacking_source.append(
                     {
                         "report": report_report_ref,
@@ -479,11 +475,6 @@ def report_validation() -> Tuple[Dict[str, Any], Dict[str, Any]]:
                             "issues": sorted(set(detail_issues) & {"missing source evidence", "source unavailable", "unsupported source"}),
                         }
                     )
-            if "missing target" in detail_issues:
-                issues.append("missing target")
-            if set(detail_issues) & NON_COMPLETED_STATUSES:
-                issues.extend(sorted(set(detail_issues) & NON_COMPLETED_STATUSES))
-
             if detail_issues:
                 if idx <= 26:
                     if set(detail_issues) & (NON_COMPLETED_STATUSES | {"missing conclusion"}):
@@ -504,6 +495,8 @@ def report_validation() -> Tuple[Dict[str, Any], Dict[str, Any]]:
                     latest_canon[str(law.get("law_id") or "")] = (idx, law, report_report_ref)
 
         status = report_status(issues)
+        if status == "valid" and any(row.get("issues") for row in law_issue_rows):
+            raise AssertionError(f"{report_ref} cannot be valid while law issues remain")
         entry = {
             "review_report": report_ref,
             "manifest": manifest_ref,

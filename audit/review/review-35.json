@@ -57,7 +57,12 @@
         "Do not duplicate positive-law text.",
         "Keep the act limited to historical note treatment."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The authenticated source is readable, and the report classifies the act as a statutory note at 2 U.S.C. § 6132 rather than a new positive-law section.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "Preserve the repeal-history note at 2 U.S.C. § 6132. | Do not duplicate positive-law text. | Keep the act limited to historical note treatment.",
+      "exact_target": "/us/usc/t2/s6132"
     },
     {
       "law_id": "PL-018-140",
@@ -95,7 +100,11 @@
         "Do not invent operative text or a Code anchor.",
         "Re-acquire the authentic source before any codification work."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The recovered material is only permission-denial debris, so no operative statutory text can be authenticated and no safe Code operation can be assigned.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a concise source-unavailable historical note. | Do not invent operative text or a Code anchor. | Re-acquire the authentic source before any codification work."
     },
     {
       "law_id": "PL-018-141",
@@ -133,7 +142,11 @@
         "Do not invent Foreign Service provisions.",
         "Re-extract the underlying PDF before any codification work."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "No readable statutory prose could be recovered, so the enactment cannot be tied to a lawful Code amendment or note placement.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a source-limited historical note. | Do not invent Foreign Service provisions. | Re-extract the underlying PDF before any codification work."
     },
     {
       "law_id": "PL-018-142",
@@ -171,7 +184,11 @@
         "Do not invent licensing provisions.",
         "Re-extract the underlying PDF before any codification work."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The recovered material does not yield readable statutory text, so no provision-level codification conclusion can be derived.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a source-limited historical note. | Do not invent licensing provisions. | Re-extract the underlying PDF before any codification work."
     },
     {
       "law_id": "PL-018-143",
@@ -209,7 +226,11 @@
         "Do not invent technical-corrections text.",
         "Re-acquire the authentic source before any codification work."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The accessible source is only a permission-denial page, so no operative text can be authenticated and no Code operation can be assigned.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a source-unavailable historical note. | Do not invent technical-corrections text. | Re-acquire the authentic source before any codification work."
     },
     {
       "law_id": "PL-019-146",
@@ -247,7 +268,11 @@
         "Do not invent military-justice text.",
         "Re-acquire the authentic source before any codification work."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The accessible source is only a permission-denial page, so no operative military-law text can be authenticated and no Code operation can be assigned.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a source-unavailable historical note. | Do not invent military-justice text. | Re-acquire the authentic source before any codification work."
     },
     {
       "law_id": "PL-021-123",
@@ -285,7 +310,11 @@
         "Do not add current Code text.",
         "Preserve the repeal status in the review record."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The canonical record is marked repealed, so it is not inserted as current Code text.",
+      "approved_code_treatment": "nonoperative-or-repealed",
+      "final_recommended_action": "Keep the law as historical-only. | Do not add current Code text. | Preserve the repeal status in the review record."
     },
     {
       "law_id": "PL-022-154",
@@ -323,7 +352,12 @@
         "Do not promote the act to a new positive-law section.",
         "Keep the current note treatment unchanged."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source is readable, but the report finds no express, uniquely executable Code amendment and preserves the act as a statutory note at 28 U.S.C. § 1361.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "Preserve the statutory note at 28 U.S.C. § 1361. | Do not promote the act to a new positive-law section. | Keep the current note treatment unchanged.",
+      "exact_target": "/us/usc/t28/s1361"
     },
     {
       "law_id": "PL-022-155",
@@ -361,7 +395,12 @@
         "Do not duplicate current Code text.",
         "Keep the repeal history attached to the note."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The report finds no express, uniquely executable Code amendment and preserves the act as a statutory note at 2 U.S.C. § 1438.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "Preserve the statutory note at 2 U.S.C. § 1438. | Do not duplicate current Code text. | Keep the repeal history attached to the note.",
+      "exact_target": "/us/usc/t2/s1438"
     },
     {
       "law_id": "PL-022-156",
@@ -400,7 +439,13 @@
         "Do not create a duplicate statutory note.",
         "Keep the direct amendment history attached to the affected title 2 provisions."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The report states that the project-generated U.S. Code already contains this public law, so the review should preserve the implementation rather than duplicate it.",
+      "approved_code_treatment": "already-incorporated",
+      "final_recommended_action": "Leave the incorporated Code material in place. | Do not create a duplicate statutory note. | Keep the direct amendment history attached to the affected title 2 provisions.",
+      "exact_target": "/us/usc/t2/s1",
+      "exact_change": "Integrate the direct title 2 amendments and repeal markings already present in the project-generated U.S. Code material."
     },
     {
       "law_id": "PL-022-157",
@@ -438,7 +483,12 @@
         "Do not promote the act to new positive-law text.",
         "Keep the amendment history attached to the note."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The report finds no express, uniquely executable Code amendment and preserves the act as a statutory note at 2 U.S.C. § 1438.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "Preserve the statutory note at 2 U.S.C. § 1438. | Do not promote the act to new positive-law text. | Keep the amendment history attached to the note.",
+      "exact_target": "/us/usc/t2/s1438"
     },
     {
       "law_id": "PL-022-158",
@@ -476,7 +526,12 @@
         "Do not duplicate positive-law text.",
         "Keep the current note treatment unchanged."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The report finds no express, uniquely executable Code amendment and preserves the act as a statutory note at 10 U.S.C. § 1060.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "Preserve the statutory note at 10 U.S.C. § 1060. | Do not duplicate positive-law text. | Keep the current note treatment unchanged.",
+      "exact_target": "/us/usc/t10/s1060"
     },
     {
       "law_id": "PL-022-159",
@@ -514,7 +569,11 @@
         "Do not add current Code text.",
         "Preserve the repeal status in the review record."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The canonical record is marked repealed, so the law is historical only and not current Code text.",
+      "approved_code_treatment": "nonoperative-or-repealed",
+      "final_recommended_action": "Keep the law as historical-only. | Do not add current Code text. | Preserve the repeal status in the review record."
     },
     {
       "law_id": "PL-022-160",
@@ -566,7 +625,13 @@
         "Do not create a duplicate statutory note.",
         "Keep the direct amendment history attached to 18 U.S.C. § 205."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The report says the project-generated U.S. Code already contains this law, so the task is to verify the existing implementation rather than add a duplicate operation.",
+      "approved_code_treatment": "already-incorporated",
+      "final_recommended_action": "Leave the incorporated title 18 amendments in place. | Do not create a duplicate statutory note. | Keep the direct amendment history attached to 18 U.S.C. § 205.",
+      "exact_target": "/us/usc/t18/s205",
+      "exact_change": "Replace subsection (a) of 18 U.S.C. § 205 with the enacted text. | Insert subsection (j) after subsection (i) in 18 U.S.C. § 205."
     },
     {
       "law_id": "PL-022-161",
@@ -604,7 +669,11 @@
         "Do not invent operative text or a Code anchor.",
         "Re-acquire the authentic source before any codification work."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "No readable authenticated enactment text could be recovered, so the law cannot be assigned a safe Code operation.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a source-unavailable historical note. | Do not invent operative text or a Code anchor. | Re-acquire the authentic source before any codification work."
     },
     {
       "law_id": "PL-022-162",
@@ -682,7 +751,13 @@
         "Do not create a duplicate note for the incorporated provisions.",
         "Preserve the collateral section V history as non-code amendment history."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The report says the project-generated U.S. Code already contains this law, and the canon record is marked repealed, so the proper treatment is incorporated history rather than new insertion.",
+      "approved_code_treatment": "already-incorporated",
+      "final_recommended_action": "Keep the integrated title 28 amendments in place. | Do not create a duplicate note for the incorporated provisions. | Preserve the collateral section V history as non-code amendment history.",
+      "exact_target": "/us/usc/t28/s1253",
+      "exact_change": "Replace 28 U.S.C. § 1253 with the enacted text. | Replace 28 U.S.C. § 1257 with the enacted text. | Replace 28 U.S.C. § 1291 with the enacted text."
     },
     {
       "law_id": "PL-022-163",
@@ -720,7 +795,11 @@
         "Do not invent operative text or a Code anchor.",
         "Re-acquire the authentic source before any codification work."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "No readable authenticated enactment text could be recovered, so the law cannot be assigned a safe Code operation.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a source-unavailable historical note. | Do not invent operative text or a Code anchor. | Re-acquire the authentic source before any codification work."
     },
     {
       "law_id": "PL-023-171",
@@ -758,7 +837,11 @@
         "Do not add current Code text.",
         "Record the supersession as the controlling outcome."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The canonical report says the law was superseded before codification, so no current Code insertion is appropriate.",
+      "approved_code_treatment": "superseded-before-codification",
+      "final_recommended_action": "Retain only a historical note. | Do not add current Code text. | Record the supersession as the controlling outcome."
     },
     {
       "law_id": "PL-024-175",
@@ -796,7 +879,11 @@
         "Do not invent operative text or a stronger Code anchor.",
         "Re-acquire the authentic source before any codification work."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "No readable enactment text was recovered, so only source-limited historical handling is supportable.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a source-limited historical note. | Do not invent operative text or a stronger Code anchor. | Re-acquire the authentic source before any codification work."
     },
     {
       "law_id": "PL-024-176",
@@ -835,7 +922,11 @@
         "Exclude appropriations from permanent Code text.",
         "Do not claim a stronger positive-law anchor until the source is restored."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source is unrecoverable, and the title indicates appropriations rather than permanent positive-law text, so the law should remain historical-note-only.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a source-limited historical note. | Exclude appropriations from permanent Code text. | Do not claim a stronger positive-law anchor until the source is restored."
     }
   ]
 }

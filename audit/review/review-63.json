@@ -65,7 +65,9 @@
         "codification/mass_migration/latest/reports/laws/PL-016-112.md: No current Code insertion is made because PL-031-228 repeals this law."
       ],
       "current_xml_comparison": "No matching `rp-pl016112-codification` node was found in the current branch XML searched, and no match was found in `origin/main`.",
-      "final_recommended_action": "Retain only the supersession history and the restored 2 U.S.C. 192 reference; do not infer operative text."
+      "final_recommended_action": "Retain only the supersession history and the restored 2 U.S.C. 192 reference; do not infer operative text.",
+      "exact_target": "/us/usc/t2",
+      "exact_change": "Keep only a supersession history note; do not create operative Code text."
     },
     {
       "law_id": "PL-016-113",
@@ -125,7 +127,9 @@
         "codification/mass_migration/latest/reports/laws/PL-016-113.md: No express, uniquely executable Code amendment was found."
       ],
       "current_xml_comparison": "No matching PL-016-113 node was found in the current branch XML searched, and no match was found in `origin/main`.",
-      "final_recommended_action": "Create a concise title 2 statutory note at the designated anchor. | Apply repeal-marking to PL 15-96 wherever it is codified. | Keep the immediate-effect clause as history only."
+      "final_recommended_action": "Create a concise title 2 statutory note at the designated anchor. | Apply repeal-marking to PL 15-96 wherever it is codified. | Keep the immediate-effect clause as history only.",
+      "exact_target": "/us/usc/t2/s6132",
+      "exact_change": "Short-title note only. | Mark Public Law 15-96 repealed in its entirety. | Effective-date note only."
     },
     {
       "law_id": "PL-016-114",
@@ -170,7 +174,9 @@
         "audit/primary/batch-13-03.json: Its only substantive effect is an express amendment to PL 15-102 SEC III(e)."
       ],
       "current_xml_comparison": "No matching PL-016-114 node was found in the current branch XML searched, and no match was found in `origin/main`.",
-      "final_recommended_action": "Add the title 22 note and keep only a concise amendment note. | Apply the PL 15-102 SEC III(e) substitution exactly as enacted."
+      "final_recommended_action": "Add the title 22 note and keep only a concise amendment note. | Apply the PL 15-102 SEC III(e) substitution exactly as enacted.",
+      "exact_target": "/us/usc/t22/s1438",
+      "exact_change": "Title, severability, and effective-date note only. | Strike the old prohibition and insert the new presidential authority, notice, and Senate-consent language."
     },
     {
       "law_id": "PL-016-115",
@@ -245,7 +251,9 @@
         "codification/mass_migration/latest/reports/laws/PL-016-115.md: Cross-reference only."
       ],
       "current_xml_comparison": "No matching PL-016-115 node was found in the current branch XML searched, and no match was found in `origin/main`.",
-      "final_recommended_action": "Replace boilerplate with a title 50 statutory note. | Keep the definitions in the title 50 note, not as standalone positive-law text. | Record the operative notification duty as a statutory note under title 50. | Treat 18 U.S.C. 1512 as reference-only; do not rewrite it."
+      "final_recommended_action": "Replace boilerplate with a title 50 statutory note. | Keep the definitions in the title 50 note, not as standalone positive-law text. | Record the operative notification duty as a statutory note under title 50. | Treat 18 U.S.C. 1512 as reference-only; do not rewrite it.",
+      "exact_target": "/us/usc/t50",
+      "exact_change": "Title, severability, and effective-date note only. | Definitions note. | Mandatory-notification duty and information-sharing rules."
     },
     {
       "law_id": "PL-016-116",
@@ -350,7 +358,9 @@
         "codification/mass_migration/latest/reports/laws/PL-016-116.md: Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable."
       ],
       "current_xml_comparison": "No matching PL-016-116 node was found in the current branch XML searched, and no match was found in `origin/main`.",
-      "final_recommended_action": "Add the title 2 note and keep the definitions only as note material. | Apply the repeal marking to PL 7-48 wherever it is codified. | Keep the severability clause as history only. | Record the command re-establishment as title 2 note material. | Keep the command chain rules in the note only. | Preserve the conflict clause as historical note text."
+      "final_recommended_action": "Add the title 2 note and keep the definitions only as note material. | Apply the repeal marking to PL 7-48 wherever it is codified. | Keep the severability clause as history only. | Record the command re-establishment as title 2 note material. | Keep the command chain rules in the note only. | Preserve the conflict clause as historical note text.",
+      "exact_target": "/us/usc/t2/s172",
+      "exact_change": "Title and definitions note. | Repeal-mark PL 7-48 in full. | Severability note."
     },
     {
       "law_id": "PL-016-117",
@@ -439,7 +449,9 @@
         "codification/mass_migration/latest/reports/laws/PL-016-117.md: historical-note-only."
       ],
       "current_xml_comparison": "No matching PL-016-117 node was found in the current branch XML searched, and no match was found in `origin/main`.",
-      "final_recommended_action": "Keep the short title as history only. | Retain the rationale only as a historical note. | Record the repeal of Senate Joint Resolution 2 as history only. | Record the repeal of Senate Joint Resolution 3 as history only. | Keep the effective-date clause as history only."
+      "final_recommended_action": "Keep the short title as history only. | Retain the rationale only as a historical note. | Record the repeal of Senate Joint Resolution 2 as history only. | Record the repeal of Senate Joint Resolution 3 as history only. | Keep the effective-date clause as history only.",
+      "exact_target": "/us/usc/t2",
+      "exact_change": "Short-title note only. | Historical note for the reasoning clause. | Record repeal of SJRes 2."
     },
     {
       "law_id": "PL-016-118",
@@ -514,7 +526,9 @@
         "codification/mass_migration/latest/reports/laws/PL-016-118.md: The authoritative source text is readable and operative."
       ],
       "current_xml_comparison": "No matching PL-016-118 node was found in the current branch XML searched, and no match was found in `origin/main`.",
-      "final_recommended_action": "Create the short-title note at the title 2 anchor. | Apply the repeal to H.R. 8013 Section III exactly as enacted. | Apply the substitution to H.R. 8013 Section III exactly as enacted. | Keep the immediate-effect clause as history only."
+      "final_recommended_action": "Create the short-title note at the title 2 anchor. | Apply the repeal to H.R. 8013 Section III exactly as enacted. | Apply the substitution to H.R. 8013 Section III exactly as enacted. | Keep the immediate-effect clause as history only.",
+      "exact_target": "/us/usc/t2",
+      "exact_change": "Short-title note. | Repeal Section III of H.R. 8013. | Replace Section III with the new Capitol Police Board membership and powers."
     },
     {
       "law_id": "PL-016-119",
@@ -545,7 +559,8 @@
         "codification/mass_migration/latest/reports/laws/PL-016-119.md: No readable authenticated enactment text could be recovered."
       ],
       "current_xml_comparison": "No matching PL-016-119 node was found in the current branch XML searched, and no match was found in `origin/main`.",
-      "final_recommended_action": "Retain only a source-limited historical note until a readable source is recovered."
+      "final_recommended_action": "Retain only a source-limited historical note until a readable source is recovered.",
+      "exact_change": "No verified operative language can be stated."
     },
     {
       "law_id": "PL-016-120",
@@ -575,7 +590,9 @@
         "codification/mass_migration/latest/reports/laws/PL-016-120.md: Historical note only; no readable enactment text was recovered."
       ],
       "current_xml_comparison": "No matching PL-016-120 node was found in the current branch XML searched, and no match was found in `origin/main`.",
-      "final_recommended_action": "Retain only the historical note and do not invent operative text."
+      "final_recommended_action": "Retain only the historical note and do not invent operative text.",
+      "exact_target": "/us/usc/t1",
+      "exact_change": "Keep only a historical note; do not invent operative text."
     },
     {
       "law_id": "PL-016-121",
@@ -605,7 +622,9 @@
         "codification/mass_migration/latest/reports/laws/PL-016-121.md: Historical note only; the enactment text was not recovered."
       ],
       "current_xml_comparison": "No matching PL-016-121 node was found in the current branch XML searched, and no match was found in `origin/main`.",
-      "final_recommended_action": "Retain only the historical note and do not invent operative text."
+      "final_recommended_action": "Retain only the historical note and do not invent operative text.",
+      "exact_target": "/us/usc/t1",
+      "exact_change": "Keep only a historical note; do not invent operative text."
     }
   ]
 }

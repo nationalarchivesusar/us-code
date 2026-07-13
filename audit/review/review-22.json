@@ -23,7 +23,12 @@
         "detail": "The note is present, but the 28 U.S.C. 2074(a) rewrite is not integrated."
       },
       "recommended_action": "Amend /us/usc/t28/s2074(a) and keep only a concise clarification note.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source requires a direct rewrite of 28 U.S.C. 2074(a), and the current branch still shows only note material.",
+      "approved_code_treatment": "amend-existing-text",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1o8BKPNH9NtFmRJr4dCLMUy6lhzlvHjxX/view | 4a3019a974e3e3ebc239879ad44da8cf4d69cffc6d2f7d4e4b6833bd4a82aed0",
+      "exact_target": "/us/usc/t28/s1"
     },
     {
       "law_id": "PL-030-222",
@@ -38,7 +43,12 @@
         "detail": "Concise statutory note is present with no quotedContent dump."
       },
       "recommended_action": "No further Code change.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "General and permanent FISA-court enactment; the branch already carries the note at the classified anchor.",
+      "approved_code_treatment": "statutory-note",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t50/s1"
     },
     {
       "law_id": "PL-030-223",
@@ -53,7 +63,12 @@
         "detail": "Retained only as historical note."
       },
       "recommended_action": "Leave as history only.",
-      "confidence": "medium"
+      "confidence": "medium",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "Chronology and source handling treat the act as historical only.",
+      "approved_code_treatment": "historical-note-only",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t49/s101/b/6"
     },
     {
       "law_id": "PL-030-224",
@@ -68,7 +83,12 @@
         "detail": "The branch has note material, but the actual Title 5 rewrite is not applied."
       },
       "recommended_action": "Apply the acting-officer rewrite and remove boilerplate.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source rewrites the acting-officer framework in 5 U.S.C. subchapter III and 5 U.S.C. 3345.",
+      "approved_code_treatment": "amend-existing-text",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1pm-R2YGS797MNJ_ciXxq9Vs63pQrRBhQ/view | 7c51b129361d7b9c166b5d1c07cf1ca796a5cc4c568d00a985dd42c9b7729d3d",
+      "exact_target": "/us/usc/t5/s101"
     },
     {
       "law_id": "PL-031-225",
@@ -83,7 +103,12 @@
         "detail": "The note exists, but the branch still carries a quotedContent dump and Trello boilerplate."
       },
       "recommended_action": "Trim to a concise statutory note at title 46.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "General and permanent COPS framework best fits a statutory note at title 46.",
+      "approved_code_treatment": "statutory-note",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/10QIbfCy-QLVGtWf6ekCfJXJ_uH8vLt3o/view | fd76070be02ee92b81c874d2aef1136872e44cf12e8e2242e9a84b268d98d858",
+      "exact_target": "/us/usc/t46/s101"
     },
     {
       "law_id": "PL-031-226",
@@ -98,7 +123,12 @@
         "detail": "Current XML has note material only; the operative multi-title rewrite is missing."
       },
       "recommended_action": "Apply the title-level rewrites and the 5 U.S.C. 101 repeal.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source requires broad Commerce/Labor restructuring and a direct repeal of 5 U.S.C. 101.",
+      "approved_code_treatment": "amend-existing-text",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1-4hfSY-8vTGU6_3pbogzoKOAO6JIu7-W/view | d9970403366d75f9d3951861eba928ecefc0954efc38e91852b3178a68de240a",
+      "exact_target": "/us/usc/t5/s101"
     },
     {
       "law_id": "PL-031-227",
@@ -113,7 +143,12 @@
         "detail": "The branch has a note at the title 8 anchor, but the 8 U.S.C. 1102 repeal is not applied."
       },
       "recommended_action": "Apply the repeal and keep only concise note material.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source directly repeals 8 U.S.C. 1102 and adds diplomatic mission rules.",
+      "approved_code_treatment": "amend-existing-text",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1lX56VN6n8fQG5alhZO_j5siMipxEhRiN/view | a178bdf0d937362d63c837f36f3718b83535c77f052ccf07e78c2e9e670b71c5",
+      "exact_target": "/us/usc/t8/s1101/i/2"
     },
     {
       "law_id": "PL-031-228",
@@ -128,7 +163,12 @@
         "detail": "The branch has note material, but the 2 U.S.C. 192 reinstatement is not applied."
       },
       "recommended_action": "Apply the reinstatement and trim the note.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source reinstates 2 U.S.C. 192 and adds contempt-of-Congress procedures.",
+      "approved_code_treatment": "amend-existing-text",
+      "source_evidence": "active keyword `in effect` in list or label | https://drive.google.com/file/d/1mY9XGw32WmY9WUpnfux53i3QtrTpeWtQ/view | https://drive.google.com/file/d/1mY9XGw32WmY9WUpnfux53i3QtrTpeWtQ/view | 33cfc3b71a44472d3b082e0e143d85f420b39e8021849f0ec278f46f06e2333a",
+      "exact_target": "/us/usc/t2/s1"
     },
     {
       "law_id": "PL-031-229",
@@ -143,7 +183,12 @@
         "detail": "Concise statutory note is present."
       },
       "recommended_action": "No further Code change.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Appropriations measure; the title 31 anchor is the right home for the concise note.",
+      "approved_code_treatment": "statutory-note",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t31/s101"
     },
     {
       "law_id": "PL-032-230",
@@ -158,7 +203,12 @@
         "detail": "The branch has only note material; the 5 U.S.C. 5332(a) rewrite is not integrated."
       },
       "recommended_action": "Apply the pay-table rewrite and trim the note.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source rewrites the General Schedule table in 5 U.S.C. 5332(a).",
+      "approved_code_treatment": "amend-existing-text",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t5/s101"
     }
   ]
 }

@@ -79,7 +79,9 @@
       "current_xml_comparison": "The branch XML search did not recover a matching PL-011-072 note or a live 28 U.S.C. 133 rewrite, and origin/main does not show a better placement.",
       "final_recommended_action": "Move the enactment into 28 U.S.C. 133, preserve the repeal of Public Law 10-65 as history, and remove boilerplate note material.",
       "confidence": "high",
-      "chronology_conclusion": "The chronology supports the current branch treatment and the law remains aligned with the documented codification path."
+      "chronology_conclusion": "The chronology supports the current branch treatment and the law remains aligned with the documented codification path.",
+      "approved_code_treatment": "amend-existing-text",
+      "exact_target": "/us/usc/t28/s1"
     },
     {
       "law_id": "PL-011-073",
@@ -110,7 +112,9 @@
       "current_xml_comparison": "No matching note identifier was found in the current XML search, and origin/main does not surface a better operative placement.",
       "final_recommended_action": "Keep only a concise repeal-history note and do not codify operative text.",
       "confidence": "high",
-      "chronology_conclusion": "Later enactments or repeal history control the final chronology, so the law remains historical rather than operative."
+      "chronology_conclusion": "Later enactments or repeal history control the final chronology, so the law remains historical rather than operative.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t22/s2651a"
     },
     {
       "law_id": "PL-012-074",
@@ -169,7 +173,9 @@
       "current_xml_comparison": "The current XML search did not recover the branch note or the Title 5 establishment text; origin/main likewise does not show a better placement.",
       "final_recommended_action": "Move sections 4 and 5 into Title 5 as new organic text, keep sections 1 to 3 as note or history material, and delete the boilerplate Title 50 note.",
       "confidence": "medium",
-      "chronology_conclusion": "The chronology supports the current branch treatment and the law remains aligned with the documented codification path."
+      "chronology_conclusion": "The chronology supports the current branch treatment and the law remains aligned with the documented codification path.",
+      "approved_code_treatment": "mixed-note-and-new-section",
+      "exact_target": "/us/usc/t50/s1"
     },
     {
       "law_id": "PL-012-075",
@@ -214,7 +220,9 @@
       "current_xml_comparison": "The branch XML search did not recover a matching FOIA note, and origin/main does not show a better placement.",
       "final_recommended_action": "Apply the FOIA deadline replacements in 5 U.S.C. 552 and reduce the retained material to a concise statutory note.",
       "confidence": "high",
-      "chronology_conclusion": "The chronology supports the current branch treatment and the law remains aligned with the documented codification path."
+      "chronology_conclusion": "The chronology supports the current branch treatment and the law remains aligned with the documented codification path.",
+      "approved_code_treatment": "amend-existing-text",
+      "exact_target": "/us/usc/t44/s101"
     },
     {
       "law_id": "PL-012-076",
@@ -245,7 +253,9 @@
       "current_xml_comparison": "No authenticated source text was recovered, and the current XML search did not identify a defensible operative placement; origin/main does not improve that record.",
       "final_recommended_action": "Leave the Code unchanged until a readable authenticated enactment is recovered.",
       "confidence": "low",
-      "chronology_conclusion": "The source record is unresolved or source-limited, so chronology supports only the documented history and not a stronger operative rewrite."
+      "chronology_conclusion": "The source record is unresolved or source-limited, so chronology supports only the documented history and not a stronger operative rewrite.",
+      "approved_code_treatment": "no-code-operation",
+      "exact_target": "/us/usc/t1/s1"
     },
     {
       "law_id": "PL-012-077",
@@ -276,7 +286,9 @@
       "current_xml_comparison": "The branch XML search did not recover a matching note identifier, and origin/main does not surface a better operative placement.",
       "final_recommended_action": "Keep only repeal-history treatment and do not invent operative text.",
       "confidence": "low",
-      "chronology_conclusion": "The source record is unresolved or source-limited, so chronology supports only the documented history and not a stronger operative rewrite."
+      "chronology_conclusion": "The source record is unresolved or source-limited, so chronology supports only the documented history and not a stronger operative rewrite.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t1/s1"
     },
     {
       "law_id": "PL-012-078",
@@ -307,7 +319,9 @@
       "current_xml_comparison": "The branch XML search did not recover a matching note identifier, and origin/main does not surface a better operative placement.",
       "final_recommended_action": "Keep only repeal-history treatment and do not invent operative text.",
       "confidence": "low",
-      "chronology_conclusion": "The source record is unresolved or source-limited, so chronology supports only the documented history and not a stronger operative rewrite."
+      "chronology_conclusion": "The source record is unresolved or source-limited, so chronology supports only the documented history and not a stronger operative rewrite.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t1/s1"
     },
     {
       "law_id": "PL-012-079",
@@ -339,7 +353,9 @@
       "current_xml_comparison": "The branch XML search did not recover a matching anti-terrorism note, and origin/main likewise does not supply a better placement.",
       "final_recommended_action": "Keep only a source-limited history note until authentic text is recovered; do not invent operative text.",
       "confidence": "low",
-      "chronology_conclusion": "The source record is unresolved or source-limited, so chronology supports only the documented history and not a stronger operative rewrite."
+      "chronology_conclusion": "The source record is unresolved or source-limited, so chronology supports only the documented history and not a stronger operative rewrite.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t18/s1"
     },
     {
       "law_id": "PL-012-080",
@@ -370,7 +386,9 @@
       "current_xml_comparison": "The current review record places the note at Title 29, but the branch XML search did not recover that identifier and origin/main does not improve the record.",
       "final_recommended_action": "Keep only repeal-history treatment and do not treat the act as live law.",
       "confidence": "high",
-      "chronology_conclusion": "Later enactments or repeal history control the final chronology, so the law remains historical rather than operative."
+      "chronology_conclusion": "Later enactments or repeal history control the final chronology, so the law remains historical rather than operative.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t29/s201"
     },
     {
       "law_id": "PL-012-081",
@@ -429,7 +447,9 @@
       "current_xml_comparison": "The branch XML search did not recover a matching note identifier, and origin/main does not show a better anchor; the canonical destination remains 2 U.S.C. 6567.",
       "final_recommended_action": "Move the note to 2 U.S.C. 6567 and keep the treatment as a statutory note.",
       "confidence": "medium",
-      "chronology_conclusion": "The chronology supports the current branch treatment and the law remains aligned with the documented codification path."
+      "chronology_conclusion": "The chronology supports the current branch treatment and the law remains aligned with the documented codification path.",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t22/s2651a"
     }
   ]
 }

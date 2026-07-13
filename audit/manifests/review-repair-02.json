@@ -1,0 +1,68 @@
+{
+  "manifest_id": "review-repair-02",
+  "output_path": "audit/review/review-repair-02.json",
+  "purpose": "Replacement review for audit/review/review-02.json using authoritative codification sources.",
+  "source_review_path": "audit/review/review-02.json",
+  "laws": [
+    {
+      "law_id": "PL-002-012",
+      "public_law": "2-12",
+      "source_report": "audit/primary/batch-01-02.json",
+      "issue_hint": "validator-facing fields missing"
+    },
+    {
+      "law_id": "PL-002-013",
+      "public_law": "2-13",
+      "source_report": "audit/primary/batch-01-02.json",
+      "issue_hint": "validator-facing fields missing"
+    },
+    {
+      "law_id": "PL-002-014",
+      "public_law": "2-14",
+      "source_report": "audit/primary/batch-01-02.json",
+      "issue_hint": "validator-facing fields missing"
+    },
+    {
+      "law_id": "PL-003-015",
+      "public_law": "3-15",
+      "source_report": "audit/primary/batch-01-02.json",
+      "issue_hint": "validator-facing fields missing"
+    },
+    {
+      "law_id": "PL-003-016",
+      "public_law": "3-16",
+      "source_report": "audit/primary/batch-01-02.json",
+      "issue_hint": "validator-facing fields missing"
+    },
+    {
+      "law_id": "PL-003-017",
+      "public_law": "3-17",
+      "source_report": "audit/primary/batch-01-02.json",
+      "issue_hint": "validator-facing fields missing"
+    },
+    {
+      "law_id": "PL-003-018",
+      "public_law": "3-18",
+      "source_report": "audit/primary/batch-01-02.json",
+      "issue_hint": "validator-facing fields missing"
+    },
+    {
+      "law_id": "PL-003-019",
+      "public_law": "3-19",
+      "source_report": "audit/primary/batch-01-02.json",
+      "issue_hint": "validator-facing fields missing"
+    },
+    {
+      "law_id": "PL-003-020",
+      "public_law": "3-20",
+      "source_report": "audit/primary/batch-01-02.json",
+      "issue_hint": "validator-facing fields missing"
+    },
+    {
+      "law_id": "PL-003-021",
+      "public_law": "3-21",
+      "source_report": "audit/primary/batch-01-03.json",
+      "issue_hint": "validator-facing fields missing"
+    }
+  ]
+}

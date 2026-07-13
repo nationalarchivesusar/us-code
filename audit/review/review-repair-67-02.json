@@ -45,7 +45,8 @@
           "notes": "The current branch placement is in title 18 instead of title 2."
         }
       ],
-      "exact_target": "/us/usc/t2/s1438"
+      "exact_target": "/us/usc/t2/s1438",
+      "exact_change": "Add the note to title 2 section 1438 without changing operative code text."
     },
     {
       "law_id": "PL-022-158",
@@ -81,7 +82,8 @@
           "notes": "The branch artifact is misfiled in title 50."
         }
       ],
-      "exact_target": "/us/usc/t10/s1060"
+      "exact_target": "/us/usc/t10/s1060",
+      "exact_change": "Record the enactment as a note at title 10 section 1060."
     },
     {
       "law_id": "PL-022-159",
@@ -114,7 +116,9 @@
           ],
           "notes": "The source package supports a historical classification rather than a live amendment."
         }
-      ]
+      ],
+      "exact_target": "none",
+      "exact_change": "No code change is authorized."
     },
     {
       "law_id": "PL-022-160",
@@ -167,7 +171,8 @@
           "notes": "The live XML already contains the added subsection."
         }
       ],
-      "exact_target": "/us/usc/t18/s205"
+      "exact_target": "/us/usc/t18/s205",
+      "exact_change": "No change is needed because the substitution is already integrated. | No change is needed because the insertion is already integrated."
     },
     {
       "law_id": "PL-022-161",
@@ -206,7 +211,8 @@
           "notes": "The full source is readable and the act is a generally applicable employment-and-sealing statute."
         }
       ],
-      "exact_target": "/us/usc/t50/s1"
+      "exact_target": "/us/usc/t50/s1",
+      "exact_change": "Retain the act as a concise statutory note at the closest subject-matter anchor."
     }
   ]
 }

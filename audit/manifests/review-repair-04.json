@@ -1,0 +1,67 @@
+{
+  "manifest_id": "review-repair-04",
+  "output_path": "audit/review/review-repair-04.json",
+  "purpose": "Targeted re-review of review-04 laws using the authoritative codification source corpus.",
+  "laws": [
+    {
+      "law_id": "PL-004-032",
+      "public_law": "4-32",
+      "source_report": "audit/review/review-04.json",
+      "issue_hint": "source defect / superseded"
+    },
+    {
+      "law_id": "PL-004-033",
+      "public_law": "4-33",
+      "source_report": "audit/review/review-04.json",
+      "issue_hint": "statutory note anchor"
+    },
+    {
+      "law_id": "PL-004-034",
+      "public_law": "4-34",
+      "source_report": "audit/review/review-04.json",
+      "issue_hint": "repealed in the source corpus"
+    },
+    {
+      "law_id": "PL-004-035",
+      "public_law": "4-35",
+      "source_report": "audit/review/review-04.json",
+      "issue_hint": "source unavailable"
+    },
+    {
+      "law_id": "PL-004-036",
+      "public_law": "4-36",
+      "source_report": "audit/review/review-04.json",
+      "issue_hint": "already incorporated"
+    },
+    {
+      "law_id": "PL-004-037",
+      "public_law": "4-37",
+      "source_report": "audit/review/review-04.json",
+      "issue_hint": "repealed in the source corpus"
+    },
+    {
+      "law_id": "PL-004-038",
+      "public_law": "4-38",
+      "source_report": "audit/review/review-04.json",
+      "issue_hint": "repealed in the source corpus"
+    },
+    {
+      "law_id": "PL-007-039",
+      "public_law": "7-39",
+      "source_report": "audit/review/review-04.json",
+      "issue_hint": "repealed in the source corpus"
+    },
+    {
+      "law_id": "PL-007-040",
+      "public_law": "7-40",
+      "source_report": "audit/review/review-04.json",
+      "issue_hint": "repealed in the source corpus"
+    },
+    {
+      "law_id": "PL-007-041",
+      "public_law": "7-41",
+      "source_report": "audit/review/review-04.json",
+      "issue_hint": "repealed in the source corpus"
+    }
+  ]
+}

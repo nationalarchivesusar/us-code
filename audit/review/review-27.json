@@ -49,7 +49,14 @@
         "Retain only a concise historical note at the Title 8 anchor.",
         "Do not invent or infer operative statutory language from the scanned PDF."
       ],
-      "confidence": "low"
+      "confidence": "low",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The supplied source is a scanned PDF with no extractable text, so the act can only be preserved as source-limited history at the closest subject-matter anchor.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Retain only a concise historical note at the Title 8 anchor. | Do not invent or infer operative statutory language from the scanned PDF.",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t8/s1101/i/2",
+      "exact_change": "Keep only a concise historical note; do not invent operative text."
     },
     {
       "law_id": "PL-003-022",
@@ -85,7 +92,14 @@
         "Retain only a concise historical note at the existing anchor.",
         "Do not infer substantive D.C. charter text from the viewer stub."
       ],
-      "confidence": "low"
+      "confidence": "low",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The recovered file is only Google Drive viewer debris, not enactment text, so only a source-limited history entry is supportable.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Retain only a concise historical note at the existing anchor. | Do not infer substantive D.C. charter text from the viewer stub.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1eWd9FS7jz2jrxcr8Pzud8wb389GpwVGn/view | 880a39f94b201c50b7e5d3e603feefa9af7ab970381ee671a9a5c13068947f7a",
+      "exact_target": "/us/usc/t40/s101/4",
+      "exact_change": "Keep only a source-limited historical note; do not claim operative text."
     },
     {
       "law_id": "PL-003-023",
@@ -121,7 +135,14 @@
         "Keep the entry as a source-limited historical note only.",
         "Do not infer any missing statutory language or target section."
       ],
-      "confidence": "low"
+      "confidence": "low",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source is marked unrecoverable and the recovered stub says the text was deleted or not found, so the operative provisions cannot be reconstructed lawfully.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Keep the entry as a source-limited historical note only. | Do not infer any missing statutory language or target section.",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t18/s1",
+      "exact_change": "Keep only a source-limited historical note; no operative language can be recovered."
     },
     {
       "law_id": "PL-004-032",
@@ -157,7 +178,13 @@
         "Locate the authentic PL 4-32 enactment before any codification.",
         "Until then, keep at most a concise historical note and do not codify the Executive Order as the Act."
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "final_legal_status": "superseded",
+      "chronology_conclusion": "The supplied source is an Executive Order that merely cites PL 4-32, so the enacted statute itself is not recoverable from the batch input.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Locate the authentic PL 4-32 enactment before any codification. | Until then, keep at most a concise historical note and do not codify the Executive Order as the Act.",
+      "source_evidence": "status keyword `superseded` in list or label | https://drive.google.com/file/d/1GHjlel-4ltLCxgKzJZf2stihqROafz9P/view?usp=sharing | https://drive.google.com/file/d/1GHjlel-4ltLCxgKzJZf2stihqROafz9P/view?usp=sharing | 872abcbd03fb8417e4e99d2db8db7a05a25d1332721ac9508e0abe5232fdb0a1",
+      "exact_change": "none; source text unavailable"
     },
     {
       "law_id": "PL-004-035",
@@ -193,7 +220,14 @@
         "Recover the true source text before any codification.",
         "Retain only a source-limited historical note and remove unsupported rationale."
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source is a Google Drive permission-denied page, so no statutory text is recoverable and no lawful codification conclusion can be drawn.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Recover the true source text before any codification. | Retain only a source-limited historical note and remove unsupported rationale.",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t46/s101",
+      "exact_change": "Replace unsupported rationale with a concise source-limited history note."
     },
     {
       "law_id": "PL-007-046",
@@ -229,7 +263,13 @@
         "Leave unresolved and do not invent operative text.",
         "If recovery later becomes possible, add only a source-limited historical note."
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source is Google Drive access-denied debris, so no statutory text is recoverable and no lawful codification conclusion is possible.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Leave unresolved and do not invent operative text. | If recovery later becomes possible, add only a source-limited historical note.",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_change": "none; source text unavailable"
     }
   ]
 }

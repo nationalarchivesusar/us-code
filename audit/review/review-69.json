@@ -104,7 +104,13 @@
         "Remove the Trello link if it remains attached."
       ],
       "confidence": "high",
-      "approved_code_treatment": "historical-note-only"
+      "approved_code_treatment": "historical-note-only",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source text is a repealing and substituting military-service enactment. The chronology report ties its operative targets to 10 U.S.C. 12203 and 10 U.S.C. 151, but the later validation path treats the law as historical only, so no live Code text is authorized.",
+      "final_recommended_action": "Retain the enactment only as a historical note. | Do not promote the substituted or repealed text into current Code sections. | Remove the Trello link if it remains attached.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1X6428y-k1-S7F_abDC2bJRCpurz8NGkH/view | 282479c265fbf04e588d9f8548aef0c977602c4d240ee6d3a7c0e6fe3cd3aa6f",
+      "exact_target": "title 22 statutory note",
+      "exact_change": "Keep the opening clauses as history only. | Do not elevate this substituted text into current Code text. | Preserve only the repeal history; do not treat the withdrawn wording as current law."
     },
     {
       "law_id": "PL-024-173",
@@ -180,7 +186,13 @@
         "Remove the Trello link."
       ],
       "confidence": "high",
-      "approved_code_treatment": "statutory-note"
+      "approved_code_treatment": "statutory-note",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The recovered source is a general and permanent foreign-affairs statute with no clean positive-law rewrite target. It is best treated as a statutory note anchored to the nearest subject-matter code location rather than as free-standing operative text.",
+      "final_recommended_action": "Retain a concise statutory note. | Do not invent a permanent Code section. | Remove the Trello link.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1-deWglThPuWdolaNrEEPPCs8BGkxf8Rq/view | 6d02dfa1ba07c7f6e68248ff73989c48b3d40e586810f75b596a7a9e72c7f474",
+      "exact_target": "/us/usc/t50/s1",
+      "exact_change": "Keep the framing clauses as concise note material only. | Preserve as statutory-note material only. | Preserve as statutory-note material only."
     },
     {
       "law_id": "PL-024-174",
@@ -258,7 +270,13 @@
         "Remove the Trello link and verify any superseded labeling separately."
       ],
       "confidence": "high",
-      "approved_code_treatment": "historical-note-only"
+      "approved_code_treatment": "historical-note-only",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source is a local District of Columbia carry statute with only historical significance in the current codification set. The validated disposition keeps it out of current positive-law text.",
+      "final_recommended_action": "Keep only a concise D.C. historical note. | Do not promote the local measure to permanent positive-law text. | Remove the Trello link and verify any superseded labeling separately.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1S1vyiPjZpbGv2srl378OEQrkjTK53uTQ/view | 1e6e36af14476897d3292901ec71393554d2de955d966d293f74d420113d865c",
+      "exact_target": "/us/usc/t40/s101/4",
+      "exact_change": "Keep the introductory clauses as history only. | Do not elevate the local carry rules into permanent Code text. | Keep the special rules as historical note material only."
     },
     {
       "law_id": "PL-024-175",
@@ -297,7 +315,10 @@
       "approved_code_treatment": "source-limited-historical-note",
       "final_legal_status": "source-limited-historical-note",
       "chronology_conclusion": "No readable authenticated enactment text could be recovered, so the law remains source-limited. The title points to a local or administrative measure, but no safe positive-law conclusion can be drawn.",
-      "final_recommended_action": "Retain only a source-limited historical note."
+      "final_recommended_action": "Retain only a source-limited historical note.",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t1/s1",
+      "exact_change": "No operative Code change can be stated."
     },
     {
       "law_id": "PL-024-176",
@@ -337,7 +358,10 @@
       "approved_code_treatment": "source-limited-historical-note",
       "final_legal_status": "source-limited-historical-note",
       "chronology_conclusion": "No readable authenticated enactment text could be recovered. The title is appropriations-oriented, so the law should not become permanent Code text even if the source later reappears.",
-      "final_recommended_action": "Retain only a source-limited historical note."
+      "final_recommended_action": "Retain only a source-limited historical note.",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t31/s101",
+      "exact_change": "Exclude the measure from permanent Code text."
     },
     {
       "law_id": "PL-024-177",
@@ -373,7 +397,13 @@
         "Flag the source for reacquisition."
       ],
       "confidence": "high",
-      "approved_code_treatment": "historical-note-only"
+      "approved_code_treatment": "historical-note-only",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The archival disposition marks the enactment as repealed, but the source bundle is unrecoverable. The safest treatment is historical-only with no verified codification target.",
+      "final_recommended_action": "Retain only as source-limited history. | Remove the Trello link. | Flag the source for reacquisition.",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t1/s1",
+      "exact_change": "No operative Code change can be stated."
     },
     {
       "law_id": "PL-024-178",
@@ -450,7 +480,13 @@
         "Retain the EEOC and Labor directives as concise statutory notes."
       ],
       "confidence": "high",
-      "approved_code_treatment": "statutory-note; amend-existing-text; historical-note-only"
+      "approved_code_treatment": "statutory-note; amend-existing-text; historical-note-only",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source expressly amends 42 U.S.C. 2000e-2(a) to add gender identity and sexual orientation. The enacted change is substantive and should be carried in Title 42, with the remainder retained as note material.",
+      "final_recommended_action": "Keep the Title 42 amendment as applied text. | Move or replace the note at the correct Title 42 anchor. | Remove the full-text dump and Trello link from the note. | Retain the EEOC and Labor directives as concise statutory notes.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1A6ZbQtPTfFkeQ0Elimx_DLuUE7NAo1Rs/view | 112908796b61971af11613c65b9002f301964ffaf9c6f433130ed7d4c77947f3",
+      "exact_target": "/us/usc/t29/s201",
+      "exact_change": "Keep the framing clauses as note material only. | Add gender identity and sexual orientation to the protected characteristics in subsection (a). | Keep the agency directives as concise note material only."
     },
     {
       "law_id": "PL-025-179",
@@ -514,7 +550,13 @@
         "Remove the Trello link."
       ],
       "confidence": "high",
-      "approved_code_treatment": "historical-note-only; exclude-from-code; statutory-note"
+      "approved_code_treatment": "historical-note-only; exclude-from-code; statutory-note",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The recovered enactment is a temporary appropriations law with a short fiscal window. Its permanent-treatment posture is note-only, and the temporary COLA suspension belongs at the title 2 anchor identified in the chronology report.",
+      "final_recommended_action": "Keep only a concise historical note. | Exclude appropriations from permanent Code text. | Record the temporary section 5 note at 2 U.S.C. 4501. | Remove the Trello link.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1izcvRE-WJK_n8PTf5VuX_X672-P2wSx4/view | 4964ae0064fd3f7533737fb6eff1084cddbf180b1055a41b9d74e507577672a8",
+      "exact_target": "/us/usc/t31/s101",
+      "exact_change": "Keep the introductory clauses as note material only. | Exclude appropriations from permanent Code text. | Record the temporary suspension as a note only."
     },
     {
       "law_id": "PL-025-180",
@@ -589,7 +631,13 @@
         "Remove the Trello link."
       ],
       "confidence": "high",
-      "approved_code_treatment": "statutory-note; repeal-marking"
+      "approved_code_treatment": "statutory-note; repeal-marking",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source is a repealer statute. It expressly repeals Public Law 9-55 in full and declares the Iran sanctions regime null and void, so the codification treatment must preserve repeal-marking at the original law home and keep the rest as note material.",
+      "final_recommended_action": "Record the PL 9-55 repeal as a repeal-marking at its original Code home. | Keep the sanctions-nullification language as a concise statutory note. | Remove the Trello link.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1JXIURg2DK_k3Zz-pwMmPuGspG0RiipXp/view | ea37835553666c1af415a54ac43d337a99246b053e998696f78f2622885dc9f1",
+      "exact_target": "/us/usc/t22/s2651",
+      "exact_change": "Keep the opening clauses as concise note material only. | Record repeal-marking at the original law's home. | Keep the sanctions-nullification language as a short note only."
     },
     {
       "law_id": "PL-025-181",
@@ -626,7 +674,13 @@
         "Remove the Trello link."
       ],
       "confidence": "high",
-      "approved_code_treatment": "historical-note-only"
+      "approved_code_treatment": "historical-note-only",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source is a District of Columbia local criminal code enactment, not current positive-law U.S. Code text. The validated treatment keeps it historical only.",
+      "final_recommended_action": "Keep only as a historical note. | Do not create positive-law Code text. | Remove the Trello link.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1aIO1wQ2zXnJQlBzwLt0x1LVDwxEFPpoL/view | f4c1a687ddb66a7ae633f12d8844413ccf3968d8813ae5e99f6044c29061de25",
+      "exact_target": "title 1 statutory note",
+      "exact_change": "Keep the enactment only as a historical note."
     }
   ]
 }

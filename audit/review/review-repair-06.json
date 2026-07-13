@@ -1,0 +1,472 @@
+{
+  "reviewer": "law-auditor-C",
+  "group_index": 1060,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/review-repair-06.json",
+  "output_path": "audit/review/review-repair-06.json",
+  "reviewed_against": [
+    "audit/review/review-06.json",
+    "audit/manifests/review-repair-06.json",
+    "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv",
+    "codification/mass_migration/latest/reports/SOURCE-AUDIT.csv",
+    "usc/usc03.xml"
+  ],
+  "completion_summary": "Kept the PL-009-053 amendment package current and source-grounded, while leaving the remaining PL-009-052 through PL-009-061 entries as history, exclusion, or source-limited conclusions consistent with the corpus.",
+  "changed_law_ids": [
+    "PL-009-052",
+    "PL-009-053",
+    "PL-009-054",
+    "PL-009-055",
+    "PL-009-056",
+    "PL-009-057",
+    "PL-009-058",
+    "PL-009-059",
+    "PL-009-060",
+    "PL-009-061"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-009-052",
+      "public_law": "9-52",
+      "title": "Public Law 9-52 | The Federal District Wages Act of 2022",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source is unavailable, so the measure is preserved as repeal history only.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "Retain only a source-limited historical note.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-009-052.md classifies the record as repealed / nonoperative.",
+        "codification/mass_migration/latest/reports/SOURCE-AUDIT.csv marks the source as unrecoverable or unavailable.",
+        "The archive does not support a verified current Code insertion."
+      ],
+      "current_xml_comparison": "No authenticated source or XML anchor could be matched for this law.",
+      "final_recommended_action": "Keep only the historical note and do not invent operative text.",
+      "confidence": "medium",
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": "/us/usc/t29/s201",
+        "detail": "The record is source-limited history only."
+      },
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "No readable enactment text is available in the authoritative source package.",
+          "classes": [
+            "source-unavailable",
+            "history-only"
+          ],
+          "treatment": "source-limited-historical-note",
+          "target": null,
+          "exact_change": "Do not invent operative text; keep only a source-limited history note.",
+          "evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-009-052.md",
+            "codification/mass_migration/latest/reports/SOURCE-AUDIT.csv"
+          ],
+          "notes": "The source package does not expose usable text."
+        }
+      ]
+    },
+    {
+      "law_id": "PL-009-053",
+      "public_law": "9-53",
+      "title": "Public Law 9-53 | Save Our Businesses Act of 2022",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The corpus already integrates the Title 3 amendment, so the law remains current for codification purposes even though its repeal history is preserved.",
+      "approved_code_treatment": "already-incorporated",
+      "exact_target": "/us/usc/t3/s301",
+      "exact_enacted_text_or_amendment_command": "Leave the integrated 3 U.S.C. 301 delegation rewrite in place and keep the repeal/history material only as a note.",
+      "source_evidence": [
+        "codification/laws/laws/PL-009-053/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-009-053.md",
+        "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv",
+        "usc/usc03.xml"
+      ],
+      "current_xml_comparison": "Current branch contains `rp-pl009053-codification` in `usc/usc03.xml`; `origin/main` does not show the same note id, so the branch is already ahead on the integrated Title 3 text.",
+      "final_recommended_action": "Keep the section 301 amendment in place and do not duplicate it elsewhere.",
+      "confidence": "high",
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t3/s301",
+        "detail": "The operative 3 U.S.C. 301 text is integrated, but the branch still carries extra note material."
+      },
+      "provisions": [
+        {
+          "ref": "section_5",
+          "text_summary": "Amends 3 U.S.C. 301 and leaves related repeal/history material in note form.",
+          "classes": [
+            "direct-amendment",
+            "already-incorporated"
+          ],
+          "treatment": "already-incorporated",
+          "target": "/us/usc/t3/s301",
+          "exact_change": "Leave the integrated 3 U.S.C. 301 rewrite in place.",
+          "evidence": [
+            "codification/laws/laws/PL-009-053/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-009-053.md",
+            "usc/usc03.xml"
+          ],
+          "notes": "The branch already contains the integrated note id for the Title 3 amendment."
+        }
+      ]
+    },
+    {
+      "law_id": "PL-009-054",
+      "public_law": "9-54",
+      "title": "Public Law 9-54 | The Smart Label Congress Act",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source is unavailable, so the measure is preserved as repeal history only.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "Retain only a source-limited historical note.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-009-054.md classifies the record as repealed / nonoperative.",
+        "codification/mass_migration/latest/reports/SOURCE-AUDIT.csv marks the source as unrecoverable or unavailable.",
+        "The archive does not support a verified current Code insertion."
+      ],
+      "current_xml_comparison": "No authenticated source or XML anchor could be matched for this law.",
+      "final_recommended_action": "Keep only the historical note and do not invent operative text.",
+      "confidence": "medium",
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": "/us/usc/t2/s4572",
+        "detail": "The record is source-limited history only."
+      },
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "No readable enactment text is available in the authoritative source package.",
+          "classes": [
+            "source-unavailable",
+            "history-only"
+          ],
+          "treatment": "source-limited-historical-note",
+          "target": null,
+          "exact_change": "Do not invent operative text; keep only a source-limited history note.",
+          "evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-009-054.md",
+            "codification/mass_migration/latest/reports/SOURCE-AUDIT.csv"
+          ],
+          "notes": "The source package does not expose usable text."
+        }
+      ]
+    },
+    {
+      "law_id": "PL-009-055",
+      "public_law": "9-55",
+      "title": "Public Law 9-55 | Economic Sanctions on Iran Act of 2022",
+      "final_legal_status": "fully-repealed",
+      "chronology_conclusion": "The sanctions enactment is treated as repeal history only, with no live positive-law text remaining in the corpus.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t22",
+      "exact_enacted_text_or_amendment_command": "Keep the sanctions enactment as concise history only at the Title 22 anchor.",
+      "source_evidence": [
+        "codification/laws/laws/PL-009-055/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-009-055.md",
+        "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+      ],
+      "current_xml_comparison": "No law-specific XML placement is visible in the current branch or origin/main.",
+      "final_recommended_action": "Keep only a concise historical note in Title 22.",
+      "confidence": "high",
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t22/s2651",
+        "detail": "The note should be trimmed to repeal history only."
+      },
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "Economic sanctions history only after repeal.",
+          "classes": [
+            "history-only",
+            "repeal"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t22",
+          "exact_change": "Keep as repeal history only at the Title 22 anchor.",
+          "evidence": [
+            "codification/laws/laws/PL-009-055/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-009-055.md",
+            "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+          ],
+          "notes": "No live sanctions text remains."
+        }
+      ]
+    },
+    {
+      "law_id": "PL-009-056",
+      "public_law": "9-56",
+      "title": "Public Law 9-56 | Federal Judicial Reform Act",
+      "final_legal_status": "fully-repealed",
+      "chronology_conclusion": "The judiciary-reform enactment is treated as repeal history only, so no live Title 28 insertion is warranted.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t28",
+      "exact_enacted_text_or_amendment_command": "Keep the judiciary reform as history only at the Title 28 anchor.",
+      "source_evidence": [
+        "codification/laws/laws/PL-009-056/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-009-056.md",
+        "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+      ],
+      "current_xml_comparison": "No law-specific XML placement is visible in the current branch or origin/main.",
+      "final_recommended_action": "Keep only a concise historical note in Title 28.",
+      "confidence": "high",
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The retained note sits in the wrong subject area and should remain history only."
+      },
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "Judiciary reform history only after repeal.",
+          "classes": [
+            "history-only",
+            "repeal"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t28",
+          "exact_change": "Keep as repeal history only at the Title 28 anchor.",
+          "evidence": [
+            "codification/laws/laws/PL-009-056/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-009-056.md",
+            "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+          ],
+          "notes": "No live judiciary text remains."
+        }
+      ]
+    },
+    {
+      "law_id": "PL-009-057",
+      "public_law": "9-57",
+      "title": "Public Law 9-57 | Repealing S.B.1/Pub. Law 7-39",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The repeal effect on PL-007-039 remains operative, so the law is kept as current repeal history rather than positive-law text.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "PL-007-039 repeal history (non-U.S. Code)",
+      "exact_enacted_text_or_amendment_command": "Keep the repeal of Public Law 7-39 as history only.",
+      "source_evidence": [
+        "codification/laws/laws/PL-009-057/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-009-057.md",
+        "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+      ],
+      "current_xml_comparison": "No law-specific XML placement is visible in the current branch or origin/main.",
+      "final_recommended_action": "Keep the repealer as a concise repeal-history note tied to PL-007-039.",
+      "confidence": "high",
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t54/s100101/b/2",
+        "detail": "The note is parked in the wrong title, but it remains history-only in substance."
+      },
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "Repeal of PL-007-039 recorded as history only.",
+          "classes": [
+            "repeal",
+            "history-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "PL-007-039 repeal history",
+          "exact_change": "Keep the repeal of Public Law 7-39 as history only.",
+          "evidence": [
+            "codification/laws/laws/PL-009-057/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-009-057.md",
+            "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+          ],
+          "notes": "This is repeal history, not standalone positive-law text."
+        }
+      ]
+    },
+    {
+      "law_id": "PL-009-058",
+      "public_law": "9-58",
+      "title": "Public Law 9-58 | To Bar PhillipRobecq From Public Office",
+      "final_legal_status": "fully-repealed",
+      "chronology_conclusion": "This individual barment measure is non-code history only and does not belong in permanent federal text.",
+      "approved_code_treatment": "exclude-from-code",
+      "exact_target": "n/a (individual)",
+      "exact_enacted_text_or_amendment_command": "Exclude from permanent Code and keep only a concise history note.",
+      "source_evidence": [
+        "codification/laws/laws/PL-009-058/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-009-058.md",
+        "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+      ],
+      "current_xml_comparison": "No law-specific XML placement is visible in the current branch or origin/main.",
+      "final_recommended_action": "Keep only a historical note with no operative codification.",
+      "confidence": "high",
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t46/s101",
+        "detail": "The retained note is in an unrelated title and should remain history only."
+      },
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "Person-specific barment history only.",
+          "classes": [
+            "private",
+            "history-only"
+          ],
+          "treatment": "exclude-from-code",
+          "target": "n/a (individual)",
+          "exact_change": "Keep only a concise historical note.",
+          "evidence": [
+            "codification/laws/laws/PL-009-058/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-009-058.md",
+            "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+          ],
+          "notes": "Private or person-specific measures are not permanent Code text."
+        }
+      ]
+    },
+    {
+      "law_id": "PL-009-059",
+      "public_law": "9-59",
+      "title": "Public Law 9-59 | M.P.D Act",
+      "final_legal_status": "fully-repealed",
+      "chronology_conclusion": "This D.C.-local policing measure is repeal history only and should not be promoted into federal positive law.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "n/a (D.C. local law; repeal history only)",
+      "exact_enacted_text_or_amendment_command": "Keep the measure as concise repeal history only.",
+      "source_evidence": [
+        "codification/laws/laws/PL-009-059/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-009-059.md",
+        "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+      ],
+      "current_xml_comparison": "No law-specific XML placement is visible in the current branch or origin/main.",
+      "final_recommended_action": "Keep only a local repeal-history note.",
+      "confidence": "high",
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "The note is in the right subject area, but it should be reduced to concise repeal history."
+      },
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "D.C. MPD history only after repeal.",
+          "classes": [
+            "local-district",
+            "history-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "n/a (D.C. local law)",
+          "exact_change": "Keep as concise repeal history only.",
+          "evidence": [
+            "codification/laws/laws/PL-009-059/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-009-059.md",
+            "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+          ],
+          "notes": "This remains local D.C. history rather than U.S. Code text."
+        }
+      ]
+    },
+    {
+      "law_id": "PL-009-060",
+      "public_law": "9-60",
+      "title": "Public Law 9-60 | The Federal Metro Policing Act",
+      "final_legal_status": "fully-repealed",
+      "chronology_conclusion": "The federal metro policing scheme is treated as repeal history only, with no standalone Code section remaining appropriate.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "PL-009-059 repeal history (and related MPD history)",
+      "exact_enacted_text_or_amendment_command": "Keep the repeal-history note only and do not create a standalone Code section.",
+      "source_evidence": [
+        "codification/laws/laws/PL-009-060/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-009-060.md",
+        "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+      ],
+      "current_xml_comparison": "No law-specific XML placement is visible in the current branch or origin/main.",
+      "final_recommended_action": "Keep only a concise repeal-history note tied to the MPD family of provisions.",
+      "confidence": "high",
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The retained note is in the wrong subject area and should stay history only."
+      },
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "Federal metro policing repeal history only.",
+          "classes": [
+            "repeal",
+            "history-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "PL-009-059 repeal history",
+          "exact_change": "Keep the repeal-history note only.",
+          "evidence": [
+            "codification/laws/laws/PL-009-060/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-009-060.md",
+            "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+          ],
+          "notes": "No standalone Code section remains appropriate."
+        }
+      ]
+    },
+    {
+      "law_id": "PL-009-061",
+      "public_law": "9-61",
+      "title": "Public Law 9-61 | Charter Repeal Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The repeal of the Washington, District of Columbia City Charter remains operative as current repeal history, but it does not become federal Code text.",
+      "approved_code_treatment": "exclude-from-code",
+      "exact_target": "n/a (D.C. charter repeal; local law)",
+      "exact_enacted_text_or_amendment_command": "Keep the repeal as local history only and do not create federal Code text.",
+      "source_evidence": [
+        "codification/laws/laws/PL-009-061/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-009-061.md",
+        "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+      ],
+      "current_xml_comparison": "No law-specific XML placement is visible in the current branch or origin/main.",
+      "final_recommended_action": "Keep the charter repeal as local history only.",
+      "confidence": "high",
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t40/s101",
+        "detail": "The note sits in the correct local-history area, but it should remain outside federal positive law."
+      },
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "D.C. charter repeal history only.",
+          "classes": [
+            "local-district",
+            "history-only"
+          ],
+          "treatment": "exclude-from-code",
+          "target": "n/a (D.C. local law)",
+          "exact_change": "Keep the repeal as local history only.",
+          "evidence": [
+            "codification/laws/laws/PL-009-061/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-009-061.md",
+            "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+          ],
+          "notes": "This is District of Columbia local history, not federal Code text."
+        }
+      ]
+    }
+  ]
+}

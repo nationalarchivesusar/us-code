@@ -51,7 +51,13 @@
         "detail": "The branch note asserts codification status despite an unrecoverable source and sits at a default Title 1 anchor."
       },
       "recommended_action": "Remove the Trello link and keep only a concise source-limited historical note; do not invent operative text.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The manifest and source-audit record classify the source as unrecoverable: the Trello record says the law is in Repealed Laws, the source file could not be recovered, and no statutory text is available for reconstruction.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t1/s1",
+      "exact_change": "none; source unrecoverable"
     },
     {
       "law_id": "PL-009-052",
@@ -83,7 +89,13 @@
         "detail": "The branch note is parked at a subject-guess Title 29 anchor even though the source is unavailable."
       },
       "recommended_action": "Remove the Trello link and retain only a source-limited historical note; if the record is kept at all, it should not imply a reconstructed wage rule.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source is unrecoverable Google-Drive debris, so the act cannot be validated or reconstructed from the record. The current branch also still carries an unrelated 28 U.S.C. section 135 salary reference to Public Law 9-52, but that reference cannot be expanded into operative text from the missing source.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t29/s201",
+      "exact_change": "none; source unrecoverable"
     },
     {
       "law_id": "PL-009-054",
@@ -115,7 +127,13 @@
         "detail": "The branch note is a subject guess at Title 2, but the source cannot support any operative codification conclusion."
       },
       "recommended_action": "Remove the Trello link and keep only a concise source-limited historical note; do not treat it as current Code text.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source is unrecoverable Google-Drive debris and the canonical record classifies the law as repealed. The later repeal law PL-012-087 confirms the subject was treated as a repeal target, but the underlying text still cannot be reconstructed lawfully.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t2/s1",
+      "exact_change": "none; source unrecoverable"
     },
     {
       "law_id": "PL-009-063",
@@ -147,7 +165,13 @@
         "detail": "The branch carries boilerplate note material at a Title 5 anchor, but the true issue is source unavailability."
       },
       "recommended_action": "Remove the Trello link and retain only an honest source-limited historical note.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source is unrecoverable and the canonical record classifies the law as repealed, so no operative language can be authenticated from the recovered record.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t5/s101",
+      "exact_change": "none; source unrecoverable"
     },
     {
       "law_id": "PL-012-076",
@@ -179,7 +203,13 @@
         "detail": "The XML has a boilerplate note and Trello link at Title 1, but the source is genuinely unavailable."
       },
       "recommended_action": "Remove the Trello link and replace the boilerplate with a concise source-limited historical note.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The manifest marks the source as unrecoverable because access was revoked or denied and no statutory text was extracted, so no operative text can be reconstructed.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t1/s1",
+      "exact_change": "none; source unrecoverable"
     },
     {
       "law_id": "PL-012-077",
@@ -211,7 +241,13 @@
         "detail": "The XML has a boilerplate note and Trello link at Title 1, but the source is genuinely unavailable."
       },
       "recommended_action": "Remove the Trello link and replace the boilerplate with a concise source-limited historical note.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The manifest marks the source as unrecoverable because it was deleted or not found and no statutory text was extracted, so no operative text can be reconstructed.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t1/s1",
+      "exact_change": "none; source unrecoverable"
     }
   ]
 }

@@ -31,7 +31,10 @@
         "audit/review/review-23.json"
       ],
       "recommended_action": "Leave out of the Code; retain only as repealed public-law history.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The plan classifies the enactment as repealed and nonoperative, so it stays in statutory history only.",
+      "approved_code_treatment": "NO_CODE_CHANGE"
     },
     {
       "law_id": "PL-032-232",
@@ -51,7 +54,11 @@
         "audit/review/review-23.json"
       ],
       "recommended_action": "No additional change.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "superseded",
+      "chronology_conclusion": "The source is already integrated in the current branch, and the chronology ties it to the shared 5 U.S.C. 5332 pay-table sequence.",
+      "approved_code_treatment": "ALREADY_INCORPORATED",
+      "exact_target": "/us/usc/t5/s5332"
     },
     {
       "law_id": "PL-032-233",
@@ -70,7 +77,11 @@
         "audit/review/review-23.json"
       ],
       "recommended_action": "No additional change.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "superseded",
+      "chronology_conclusion": "The source is already present in the branch as the 26 U.S.C. 1 tax text and history note.",
+      "approved_code_treatment": "ALREADY_INCORPORATED",
+      "exact_target": "/us/usc/t26/s1"
     },
     {
       "law_id": "PL-032-234",
@@ -89,7 +100,11 @@
         "audit/review/review-23.json"
       ],
       "recommended_action": "No additional change.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The current branch already carries the amended 50 U.S.C. 3041 text and the related note material.",
+      "approved_code_treatment": "ALREADY_INCORPORATED",
+      "exact_target": "/us/usc/t50/s3041"
     },
     {
       "law_id": "PL-032-235",
@@ -108,7 +123,10 @@
         "audit/review/review-23.json"
       ],
       "recommended_action": "Leave as non-Code public-law history only.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The act is classified as commemorative rather than general and permanent Code material.",
+      "approved_code_treatment": "NON_CODE"
     },
     {
       "law_id": "PL-032-236",
@@ -130,7 +148,14 @@
         "audit/review/review-23.json"
       ],
       "recommended_action": "No additional change.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The branch already contains the integrated 10 U.S.C. 153 and 154 amendments.",
+      "approved_code_treatment": "ALREADY_INCORPORATED",
+      "exact_target": [
+        "/us/usc/t10/s153",
+        "/us/usc/t10/s154"
+      ]
     },
     {
       "law_id": "PL-033-238",
@@ -149,7 +174,11 @@
         "audit/review/review-23.json"
       ],
       "recommended_action": "Add a statutory note at 28 U.S.C. 526.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The law is general and permanent, but the live branch still lacks the classified statutory-note placement.",
+      "approved_code_treatment": "STATUTORY_NOTE",
+      "exact_target": "/us/usc/t28/s526"
     },
     {
       "law_id": "PL-034-239",
@@ -168,7 +197,10 @@
         "audit/review/review-23.json"
       ],
       "recommended_action": "Leave as public-law history only.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The act is predominantly temporary or self-expiring, so it remains public-law history only.",
+      "approved_code_treatment": "NON_CODE"
     },
     {
       "law_id": "PL-034-240",
@@ -187,7 +219,11 @@
         "audit/review/review-23.json"
       ],
       "recommended_action": "Keep the statutory-history note only; do not restore any live Code text.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The law is repealed and the current branch already preserves it only as statutory history.",
+      "approved_code_treatment": "HISTORICAL_NOTE_ONLY",
+      "exact_target": "/us/usc/t26/s1"
     },
     {
       "law_id": "PL-034-241",
@@ -209,7 +245,11 @@
         "audit/review/review-23.json"
       ],
       "recommended_action": "Apply the Section 3 pay-scale amendment at 5 U.S.C. 5332; do not route it to 2 U.S.C. 29.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source text directly revises the pay-scale language established by the prior pay-standardization law, and the chronology links it to the same 5 U.S.C. 5332 target sequence as PL-032-230 and PL-032-232.",
+      "approved_code_treatment": "DIRECT_AMENDMENT",
+      "exact_target": "/us/usc/t5/s5332"
     },
     {
       "law_id": "PL-034-242",
@@ -228,7 +268,11 @@
         "audit/review/review-24.json"
       ],
       "recommended_action": "Add the statutory note at 28 U.S.C. 362.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The law is general and permanent, but the live branch does not yet contain the classified note at the target anchor.",
+      "approved_code_treatment": "STATUTORY_NOTE",
+      "exact_target": "/us/usc/t28/s362"
     },
     {
       "law_id": "PL-034-243",
@@ -247,7 +291,11 @@
         "audit/review/review-24.json"
       ],
       "recommended_action": "No further Code change is required.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "This is a direct chapter-level rewrite to Title 28 chapter 16, and the branch already carries the enacted replacement text.",
+      "approved_code_treatment": "AMEND_EXISTING_TEXT",
+      "exact_target": "/us/usc/t28/ch16"
     },
     {
       "law_id": "PL-034-244",
@@ -266,7 +314,11 @@
         "audit/review/review-24.json"
       ],
       "recommended_action": "No further Code change is required.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The act directly amends 18 U.S.C. 3585, and the current branch already contains the revised text.",
+      "approved_code_treatment": "AMEND_EXISTING_TEXT",
+      "exact_target": "/us/usc/t18/s3585"
     },
     {
       "law_id": "PL-034-245",
@@ -288,7 +340,14 @@
         "audit/review/review-24.json"
       ],
       "recommended_action": "No further Code change is required.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source combines a direct 18 U.S.C. 3006A amendment with a repeal of 42 U.S.C. chapter 34 subchapter X and note-style grant authority.",
+      "approved_code_treatment": "MIXED_AMENDMENT_AND_NOTE",
+      "exact_target": [
+        "/us/usc/t18/s3006A/d",
+        "/us/usc/t42/ch34/schX"
+      ]
     },
     {
       "law_id": "PL-034-246",
@@ -312,7 +371,16 @@
         "audit/review/review-24.json"
       ],
       "recommended_action": "No further Code change is required.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The Title 28 amendments and repeal markings are already reflected in the branch.",
+      "approved_code_treatment": "AMEND_EXISTING_TEXT",
+      "exact_target": [
+        "/us/usc/t28/s991",
+        "/us/usc/t28/s992",
+        "/us/usc/t28/s994",
+        "/us/usc/t28/s995"
+      ]
     },
     {
       "law_id": "PL-034-247",
@@ -331,7 +399,11 @@
         "audit/review/review-24.json"
       ],
       "recommended_action": "No further Code change is required.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The law is a general and permanent enactment anchored as a statutory note, and the live branch already carries it.",
+      "approved_code_treatment": "STATUTORY_NOTE",
+      "exact_target": "/us/usc/t28/s2261"
     },
     {
       "law_id": "PL-034-248",
@@ -350,7 +422,10 @@
         "audit/review/review-24.json"
       ],
       "recommended_action": "Leave it out of the Code and retain it only as history.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The enactment is classified as non-Code material, so no XML insertion is expected.",
+      "approved_code_treatment": "NON_CODE"
     },
     {
       "law_id": "PL-034-249",
@@ -369,7 +444,11 @@
         "audit/review/review-24.json"
       ],
       "recommended_action": "Add the statutory note at 2 U.S.C. 6567.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The enactment is general and permanent, but the target note is not present in the current branch.",
+      "approved_code_treatment": "STATUTORY_NOTE",
+      "exact_target": "/us/usc/t2/s6567"
     },
     {
       "law_id": "PL-034-250",
@@ -388,7 +467,11 @@
         "audit/review/review-24.json"
       ],
       "recommended_action": "Add the statutory note at 49 U.S.C. 46307.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The law is general and permanent, but the branch does not yet carry the note at the classified anchor.",
+      "approved_code_treatment": "STATUTORY_NOTE",
+      "exact_target": "/us/usc/t49/s46307"
     }
   ]
 }

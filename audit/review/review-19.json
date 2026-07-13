@@ -31,7 +31,13 @@
         "Remove any generic boilerplate if it appears in the note prose.",
         "Do not paste the full act into permanent Code text."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Source is current and operative; no later enactment in the reviewed materials repeals or displaces it.",
+      "approved_code_treatment": "note-only",
+      "final_recommended_action": "Keep the act as a concise statutory note under the Secret Service/title 18 anchor. | Remove any generic boilerplate if it appears in the note prose. | Do not paste the full act into permanent Code text.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1YZFjCDgvSG1pVewqGJ1qaovSuO10DYvF/view | fcecef2b47d28f3e9167fc1e3cfadb24e142a3eb9a44929dbf780a0c054424c4",
+      "exact_target": "/us/usc/t18/s3056"
     },
     {
       "law_id": "PL-026-187",
@@ -59,7 +65,13 @@
         "Do not treat the appropriation as active Code text.",
         "Do not create or expand permanent United States Code language from this expired measure."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Expired appropriation. It does not control current Code text.",
+      "approved_code_treatment": "note-only",
+      "final_recommended_action": "Retain only a historical note if the repository keeps the act at all. | Do not treat the appropriation as active Code text. | Do not create or expand permanent United States Code language from this expired measure.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1-wls6yel_aC3csQ8bQqam0kcAZ7QKNPK/view | 7f495eb43c7e09c4729fa01a34d1af4a9e39d8280bd3ac0ae2a64e94af8281bc",
+      "exact_target": "/us/usc/t40"
     },
     {
       "law_id": "PL-026-188",
@@ -87,7 +99,13 @@
         "Retain the reporting provisions in the existing incorporated treatment.",
         "Do not downgrade the act to a pure historical note."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Current and operative; the act is not superseded in the reviewed materials.",
+      "approved_code_treatment": "amend-existing-text",
+      "final_recommended_action": "Confirm the repeal marking at 50 U.S.C. 3371a and preserve the reserved section cleanly. | Retain the reporting provisions in the existing incorporated treatment. | Do not downgrade the act to a pure historical note.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1BLzN8r_fyB7mxSNA8VtZ0FuSF29HkvXj/view | 87cebce4a82d330e7e1972d92ddd102f39b20930a94495baa75727b78308f6ab",
+      "exact_target": "/us/usc/t50/s3371a"
     },
     {
       "law_id": "PL-026-189",
@@ -115,7 +133,13 @@
         "Do not surface the expired appropriation as current Code text.",
         "Avoid introducing any permanent statutory text from this measure."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Expired appropriation; no current Code text should be derived from it.",
+      "approved_code_treatment": "note-only",
+      "final_recommended_action": "Keep only a historical note if the act is retained at all. | Do not surface the expired appropriation as current Code text. | Avoid introducing any permanent statutory text from this measure.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1Kub3caOUJQDll1epkh1RWM16HYxKZzAn/view | d43cefb3637d03c8f2a4aa54da9ae068b49a5d9492832436b7840824c56c52a5",
+      "exact_target": "/us/usc/t1/s1"
     },
     {
       "law_id": "PL-026-190",
@@ -143,7 +167,13 @@
         "Do not add a redundant note-only treatment.",
         "Keep the chronology record but leave the incorporated amendments in place."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Current enactment; the reviewed plans say the Title 28 amendments are already incorporated in the existing sections.",
+      "approved_code_treatment": "amend-existing-text",
+      "final_recommended_action": "Preserve the existing integrated Title 28 text. | Do not add a redundant note-only treatment. | Keep the chronology record but leave the incorporated amendments in place.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/121WfrT0-f84YbNjWaDIzKd0nhT1qIpwe/view?usp=sharing | ebf9db06c06c48444dcb85fe84aca7d5f9fc52e3bbebb9f898ec799f11562014",
+      "exact_target": "/us/usc/t28"
     },
     {
       "law_id": "PL-026-191",
@@ -171,7 +201,13 @@
         "Keep the act as a freestanding reform note rather than permanent Code text.",
         "Do not infer a single positive-law section target where the source does not supply one."
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "Current enactment; the source is intact and operative.",
+      "approved_code_treatment": "note-only",
+      "final_recommended_action": "Replace any repealed-or-superseded treatment with a current note-only entry. | Keep the act as a freestanding reform note rather than permanent Code text. | Do not infer a single positive-law section target where the source does not supply one.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1-sr0uyNfV6jfp0XBDVKrnfTZ82jrQzEQ/view | b332258f1f11584dd8e60c5464d19b981cfa35c36a4e646fb1c2971797d54805",
+      "exact_target": "/us/usc/t5"
     },
     {
       "law_id": "PL-027-192",
@@ -199,7 +235,13 @@
         "Keep the related public-records material only as provenance or note material.",
         "Do not rely on a title 44 note alone for the operative Code change."
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Current enactment; the direct amendment to 18 U.S.C. 2071 remains operative.",
+      "approved_code_treatment": "amend-existing-text",
+      "final_recommended_action": "Apply the strike-and-insert amendments to 18 U.S.C. 2071(a) and (b). | Keep the related public-records material only as provenance or note material. | Do not rely on a title 44 note alone for the operative Code change.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1b5tKKJ2i03LWy-7Eg1ETHrzG-QlXqkuN/view | 3e839f4e1c2074faf8c2a3119e2acf50b67ed91af0e3c75574004494879bc9a7",
+      "exact_target": "/us/usc/t18/s2071"
     },
     {
       "law_id": "PL-027-193",
@@ -227,7 +269,13 @@
         "Do not promote the act into permanent Code text.",
         "Keep the title 54 anchoring if the repository maintains this subject matter there."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Current enactment; the source is intact and operative, and no later law in the reviewed materials displaces it.",
+      "approved_code_treatment": "note-only",
+      "final_recommended_action": "Retain the law as a concise statutory note only. | Do not promote the act into permanent Code text. | Keep the title 54 anchoring if the repository maintains this subject matter there.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/17R7437DE6JbUfKQnberxZ6n-8GNHv9pG/view | 3afcdfbd2db9dd678e7531254adc0d83e2b4c9d282e9ddd50d1f6896da2491bc",
+      "exact_target": "/us/usc/t54"
     },
     {
       "law_id": "PL-027-194",
@@ -255,7 +303,13 @@
         "Do not convert the amendment into a mere note.",
         "Preserve the existing provenance note if the repository uses one."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Current enactment; the holiday insertion remains operative.",
+      "approved_code_treatment": "amend-existing-text",
+      "final_recommended_action": "Retain the inserted holiday text in 5 U.S.C. 6103(a). | Do not convert the amendment into a mere note. | Preserve the existing provenance note if the repository uses one.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1_P0HlzjeZBmKTEaONBLCe9YMZnF_SrcG/view | 92e5c91b8336050af3d8e60a77d1c9a9388457fb52cac1761814129364efafd2",
+      "exact_target": "/us/usc/t5/s6103/a"
     },
     {
       "law_id": "PL-027-195",
@@ -283,7 +337,13 @@
         "Move or confirm the anchor at the codification-process subject matter rather than permanent text.",
         "Remove any boilerplate that obscures the preservation purpose of the act."
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Current enactment; the source is intact and operative, but it does not require a new positive-law Code section.",
+      "approved_code_treatment": "note-only",
+      "final_recommended_action": "Keep the law as a concise note-only record. | Move or confirm the anchor at the codification-process subject matter rather than permanent text. | Remove any boilerplate that obscures the preservation purpose of the act.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1dRIfgH4KvUqczWydI5nCyvtSG3uFP3B0/view | 7eee795d5b5f3a4749f74d5998b8a6110faef8f49b25ab1c4070178986dc5bec",
+      "exact_target": "/us/usc/t1/s1"
     }
   ]
 }

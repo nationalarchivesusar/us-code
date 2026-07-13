@@ -67,7 +67,14 @@
         "Keep only a concise historical note.",
         "Do not invent statutory text from the error page."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The codification source is a Google Drive download-error page, so no operative statutory text can be recovered. The enactment is therefore historical only.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Keep only a concise historical note. | Do not invent statutory text from the error page.",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t49/s101/b/6",
+      "exact_change": "Retain history only."
     },
     {
       "law_id": "PL-030-224",
@@ -118,7 +125,14 @@
         "Keep the integrated 5 U.S.C. 3345 text in place.",
         "Retain only concise note material for the timing rules."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source rewrites the acting-officer framework, and the codification plan already places the amendment at 5 U.S.C. 3345 with integrated history notes.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "Keep the integrated 5 U.S.C. 3345 text in place. | Retain only concise note material for the timing rules.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1pm-R2YGS797MNJ_ciXxq9Vs63pQrRBhQ/view | 7c51b129361d7b9c166b5d1c07cf1ca796a5cc4c568d00a985dd42c9b7729d3d",
+      "exact_target": "/us/usc/t5/s3345",
+      "exact_change": "Keep as introductory note material. | Keep the integrated acting-officer rewrite in place and preserve only concise note history."
     },
     {
       "law_id": "PL-031-225",
@@ -168,7 +182,14 @@
         "Insert the COPS statutory note at 2 U.S.C. 4532.",
         "Do not treat the existing House compensation section as the COPS implementation."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The codification plan treats this law as a statutory note at 2 U.S.C. 4532, but the COPS-specific note was not verified in the current branch XML or origin/main.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "Insert the COPS statutory note at 2 U.S.C. 4532. | Do not treat the existing House compensation section as the COPS implementation.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/10QIbfCy-QLVGtWf6ekCfJXJ_uH8vLt3o/view | fd76070be02ee92b81c874d2aef1136872e44cf12e8e2242e9a84b268d98d858",
+      "exact_target": "/us/usc/t2/s4532",
+      "exact_change": "Keep as note material only. | Preserve as statutory note material."
     },
     {
       "law_id": "PL-031-226",
@@ -220,7 +241,14 @@
         "Do not duplicate the Commerce and Labor restructuring.",
         "Retain only concise historical note material for repealed prior laws."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source body restructures Commerce and Labor, expressly repeals prior public laws, and repeals 5 U.S.C. 101. The codification plan already marks the relevant material as incorporated.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "Do not duplicate the Commerce and Labor restructuring. | Retain only concise historical note material for repealed prior laws.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1-4hfSY-8vTGU6_3pbogzoKOAO6JIu7-W/view | d9970403366d75f9d3951861eba928ecefc0954efc38e91852b3178a68de240a",
+      "exact_target": "/us/usc/t5/s101",
+      "exact_change": "Keep as introductory note material. | Keep the integrated Commerce and Labor restructuring and the section 101 repeal history in place."
     },
     {
       "law_id": "PL-031-227",
@@ -282,7 +310,14 @@
         "Keep the section 1102 repeal history in place.",
         "Leave the mission and immunity rules as concise note material."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source expressly repeals 8 U.S.C. 1102, and the codification plan already places the law as an incorporated note at 8 U.S.C. 1102.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "Keep the section 1102 repeal history in place. | Leave the mission and immunity rules as concise note material.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1lX56VN6n8fQG5alhZO_j5siMipxEhRiN/view | a178bdf0d937362d63c837f36f3718b83535c77f052ccf07e78c2e9e670b71c5",
+      "exact_target": "/us/usc/t8/s1102",
+      "exact_change": "Keep as note material only. | Keep the repeal history in place without reviving prior text. | Preserve as concise note material."
     },
     {
       "law_id": "PL-031-228",
@@ -344,7 +379,14 @@
         "Keep the section 192 reinstatement in place.",
         "Do not add separate positive-law text for the contempt procedures."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source reinstates 2 U.S.C. 192, and the codification plan already places it at 2 U.S.C. 192 as an incorporated amendment.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "Keep the section 192 reinstatement in place. | Do not add separate positive-law text for the contempt procedures.",
+      "source_evidence": "active keyword `in effect` in list or label | https://drive.google.com/file/d/1mY9XGw32WmY9WUpnfux53i3QtrTpeWtQ/view | https://drive.google.com/file/d/1mY9XGw32WmY9WUpnfux53i3QtrTpeWtQ/view | 33cfc3b71a44472d3b082e0e143d85f420b39e8021849f0ec278f46f06e2333a",
+      "exact_target": "/us/usc/t2/s192",
+      "exact_change": "Keep as introductory note material. | Keep the reinstated section 192 text and the repeal history in place. | Preserve as note material only."
     },
     {
       "law_id": "PL-031-229",
@@ -379,7 +421,14 @@
         "Retain only a source-limited historical note.",
         "Do not add a separate codification change until the source is recovered."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source is unavailable in readable form, so no distinct codification change can be verified from the supplied materials. Chronology only ties it to the 2 U.S.C. 4501 note family.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "final_recommended_action": "Retain only a source-limited historical note. | Do not add a separate codification change until the source is recovered.",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t2/s4501",
+      "exact_change": "Retain only a source-limited historical note."
     },
     {
       "law_id": "PL-032-230",
@@ -442,7 +491,14 @@
         "Keep the pay-table rewrite in place.",
         "Retain only concise support-note material."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source rewrites the General Schedule pay table in 5 U.S.C. 5332(a), and the codification plan already marks the amendment as incorporated.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "Keep the pay-table rewrite in place. | Retain only concise support-note material.",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t5/s5332",
+      "exact_change": "Keep as support-note material. | Keep the integrated pay-table rewrite in place. | Preserve as note material only."
     },
     {
       "law_id": "PL-032-231",
@@ -477,7 +533,14 @@
         "Keep only repeal history.",
         "Do not create positive-law Code text."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The chronology identifies the enactment as later repealed, so it remains historical only.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Keep only repeal history. | Do not create positive-law Code text.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1myK4b1S1qGqdfEJ100YOBFONv92Jrf2-/view | b985611164aafed13aa9effd99b3a3c6c623d2d500c8f464040019d293fd2144",
+      "exact_target": "/us/usc/t50/s1",
+      "exact_change": "Leave out of live Code text."
     },
     {
       "law_id": "PL-032-232",
@@ -527,7 +590,14 @@
         "Leave the already incorporated pay history in place.",
         "Retain the enactment only as historical chronology."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "superseded",
+      "chronology_conclusion": "The source is reviewable and the pay-table amendment is already incorporated, but the later pay-law overlap makes this enactment superseded for the review set.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Leave the already incorporated pay history in place. | Retain the enactment only as historical chronology.",
+      "source_evidence": "status keyword `superseded` in list or label | view | https://drive.google.com/file/d/10vU2BDaWet4MlP9Jaakq2ju07MSB-s_v/view | e829f1aa6731c56e1ba94842eddbda49c08bc97fb34cb2c9a7714f96c78f1954",
+      "exact_target": "/us/usc/t5/s5332",
+      "exact_change": "Keep as note material only. | Keep the already incorporated General Schedule history in place and avoid a duplicate rewrite."
     }
   ]
 }

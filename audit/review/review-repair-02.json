@@ -1,0 +1,391 @@
+{
+  "reviewer": "law-auditor-02",
+  "group_index": 102,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/review-repair-02.json",
+  "output_path": "audit/review/review-repair-02.json",
+  "reviewed_against": [
+    "audit/manifests/review-repair-02.json",
+    "audit/review/review-02.json",
+    "codification/mass_migration/latest/reports/laws/PL-002-012.md",
+    "codification/mass_migration/latest/reports/laws/PL-002-013.md",
+    "codification/mass_migration/latest/reports/laws/PL-002-014.md",
+    "codification/mass_migration/latest/reports/laws/PL-003-015.md",
+    "codification/mass_migration/latest/reports/laws/PL-003-016.md",
+    "codification/mass_migration/latest/reports/laws/PL-003-017.md",
+    "codification/mass_migration/latest/reports/laws/PL-003-018.md",
+    "codification/mass_migration/latest/reports/laws/PL-003-019.md",
+    "codification/mass_migration/latest/reports/laws/PL-003-020.md",
+    "codification/mass_migration/latest/reports/laws/PL-003-021.md",
+    "usc/usc02.xml",
+    "usc/usc22.xml",
+    "usc/usc28.xml",
+    "usc/usc29.xml",
+    "usc/usc44.xml"
+  ],
+  "completion_summary": "Kept the source-corpus repealed outcomes where they were already correct and synthesized the missing validator-facing fields for the two note-only laws in review-02, including the 2 U.S.C. 6506 and 28 U.S.C. 1658 anchors.",
+  "changed_law_ids": [
+    "PL-002-012",
+    "PL-002-013",
+    "PL-002-014",
+    "PL-003-015",
+    "PL-003-016",
+    "PL-003-017",
+    "PL-003-018",
+    "PL-003-019",
+    "PL-003-020",
+    "PL-003-021"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-002-012",
+      "public_law": "2-12",
+      "title": "Public Law 2-12 | Fee Prohibition Act",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source corpus treats the measure as repealed, so no current Code operation is authorized.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_change": "Keep only repeal history; do not insert operative text.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "final_legal_status": "repealed",
+          "code_treatment": "historical-note-only",
+          "target": null,
+          "conclusion": "History-only treatment is sufficient for the entire act.",
+          "evidence": "status keyword `repealed` in list or label"
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No current Code insertion is authorized for this repealed law."
+      },
+      "current_xml_comparison": "No lawful current XML insertion is required; the source corpus authorizes history-only treatment.",
+      "source_evidence": [
+        "status keyword `repealed` in list or label",
+        "https://drive.google.com/file/d/1EAncVaqLCxAMsEEQygGkC6FnNhNy8wm3/view?usp=sharing",
+        "view",
+        "2a8d5350d91b5eaf54d880fc30df435dc3e95a238207eda5b6c6cb86681820f9",
+        "The canonical Trello record is classified as `repealed` based on status keyword `repealed` in list or label. It is not inserted as current Code text."
+      ],
+      "final_recommended_action": "Keep only repeal history and do not create operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-013",
+      "public_law": "2-13",
+      "title": "Public Law 2-13 | The Employees Termination Notification Act of 2021",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source corpus treats the measure as repealed, so no current Code operation is authorized.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_change": "Keep only repeal history; do not insert operative text.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "final_legal_status": "repealed",
+          "code_treatment": "historical-note-only",
+          "target": null,
+          "conclusion": "History-only treatment is sufficient for the entire act.",
+          "evidence": "status keyword `repealed` in list or label"
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No current Code insertion is authorized for this repealed law."
+      },
+      "current_xml_comparison": "No lawful current XML insertion is required; the source corpus authorizes history-only treatment.",
+      "source_evidence": [
+        "status keyword `repealed` in list or label",
+        "https://drive.google.com/file/d/1F7v7OmBXBakCOJbmwBQaDcKiOhBV0_TK/view?usp=sharing",
+        "view",
+        "8f6a04ee52318ceb9cdd770448f7d569433c21ff9d490d783ca113941dc6156f",
+        "The canonical Trello record is classified as `repealed` based on status keyword `repealed` in list or label. It is not inserted as current Code text."
+      ],
+      "final_recommended_action": "Keep only repeal history and do not create operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-014",
+      "public_law": "2-14",
+      "title": "Public Law 2-14 | National Federal Torts Act",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source corpus treats the measure as repealed, so no current Code operation is authorized.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_change": "Keep only repeal history; do not insert operative text.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "final_legal_status": "repealed",
+          "code_treatment": "historical-note-only",
+          "target": null,
+          "conclusion": "History-only treatment is sufficient for the entire act.",
+          "evidence": "status keyword `repealed` in list or label"
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No current Code insertion is authorized for this repealed law."
+      },
+      "current_xml_comparison": "No lawful current XML insertion is required; the source corpus authorizes history-only treatment.",
+      "source_evidence": [
+        "status keyword `repealed` in list or label",
+        "https://drive.google.com/file/d/1h2SXbKKDK2mUNbGAYeoAJwM-xUWAvquF/view?usp=sharing",
+        "view",
+        "0ce8f01be4656d2600249fdc7ee65d9db348b0cadc11a85f5bfcbec6917c9d93",
+        "The canonical Trello record is classified as `repealed` based on status keyword `repealed` in list or label. It is not inserted as current Code text."
+      ],
+      "final_recommended_action": "Keep only repeal history and do not create operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-015",
+      "public_law": "3-15",
+      "title": "Public Law 3-15 | Admission to the United Nations Act",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source corpus treats the measure as repealed, so no current Code operation is authorized.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_change": "Keep only repeal history; do not insert operative text.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "final_legal_status": "repealed",
+          "code_treatment": "historical-note-only",
+          "target": null,
+          "conclusion": "History-only treatment is sufficient for the entire act.",
+          "evidence": "status keyword `repealed` in list or label"
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No current Code insertion is authorized for this repealed law."
+      },
+      "current_xml_comparison": "No lawful current XML insertion is required; the source corpus authorizes history-only treatment.",
+      "source_evidence": [
+        "status keyword `repealed` in list or label",
+        "https://drive.google.com/file/d/1ka8TpeRX-JsBUPIq0pz_GE6RFt7LIy7N/view?usp=sharing",
+        "view",
+        "7b00f2483bdd27d9889616f883b2f96a7d0d40de4e2f5f5a51eac5027c7ab418",
+        "The canonical Trello record is classified as `repealed` based on status keyword `repealed` in list or label. It is not inserted as current Code text."
+      ],
+      "final_recommended_action": "Keep only repeal history and do not create operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-016",
+      "public_law": "3-16",
+      "title": "Public Law 3-16 | The Capitol Police Establishment",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source corpus treats the measure as repealed, so no current Code operation is authorized.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_change": "Keep only repeal history; do not insert operative text.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "final_legal_status": "repealed",
+          "code_treatment": "historical-note-only",
+          "target": null,
+          "conclusion": "History-only treatment is sufficient for the entire act.",
+          "evidence": "status keyword `repealed` in list or label"
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No current Code insertion is authorized for this repealed law."
+      },
+      "current_xml_comparison": "No lawful current XML insertion is required; the source corpus authorizes history-only treatment.",
+      "source_evidence": [
+        "status keyword `repealed` in list or label",
+        "https://drive.google.com/file/d/1oloqDt1ycw_8MXDgn14mkvJkxnDXgJlD/view?usp=sharing",
+        "view",
+        "72e912b93ad5338a15a721348d2ca1e28fee29108556f3fc0f5b09a238c95b65",
+        "The canonical Trello record is classified as `repealed` based on status keyword `repealed` in list or label. It is not inserted as current Code text."
+      ],
+      "final_recommended_action": "Keep only repeal history and do not create operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-017",
+      "public_law": "3-17",
+      "title": "Public Law 3-17 | The Diplomatic Protections Act",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source corpus treats the measure as repealed, so no current Code operation is authorized.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_change": "Keep only repeal history; do not insert operative text.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "final_legal_status": "repealed",
+          "code_treatment": "historical-note-only",
+          "target": null,
+          "conclusion": "History-only treatment is sufficient for the entire act.",
+          "evidence": "status keyword `repealed` in list or label"
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No current Code insertion is authorized for this repealed law."
+      },
+      "current_xml_comparison": "No lawful current XML insertion is required; the source corpus authorizes history-only treatment.",
+      "source_evidence": [
+        "status keyword `repealed` in list or label",
+        "https://drive.google.com/file/d/1H28glhzEghXF7_sInwsXdrsyoQzKnvIV/view",
+        "view",
+        "9e9e17dd385725a3e0e7308c460d3fe561c2340cf64c17d71d0379334e4f143d",
+        "The canonical Trello record is classified as `repealed` based on status keyword `repealed` in list or label. It is not inserted as current Code text."
+      ],
+      "final_recommended_action": "Keep only repeal history and do not create operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-018",
+      "public_law": "3-18",
+      "title": "Public Law 3-18 | Amendment to S.12",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source corpus treats the measure as repealed, so no current Code operation is authorized.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_change": "Keep only repeal history; do not insert operative text.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "final_legal_status": "repealed",
+          "code_treatment": "historical-note-only",
+          "target": null,
+          "conclusion": "History-only treatment is sufficient for the entire act.",
+          "evidence": "status keyword `repealed` in list or label"
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No current Code insertion is authorized for this repealed law."
+      },
+      "current_xml_comparison": "No lawful current XML insertion is required; the source corpus authorizes history-only treatment.",
+      "source_evidence": [
+        "status keyword `repealed` in list or label",
+        "https://drive.google.com/file/d/1QpAMxs_9gvTp58IrXj_xnKcWVoyS6yU2/view",
+        "view",
+        "3600e22a5a8cab4bc02ddffaa9c04a21c820bfa83306b58b12e7b6d79c223102",
+        "The canonical Trello record is classified as `repealed` based on status keyword `repealed` in list or label. It is not inserted as current Code text."
+      ],
+      "final_recommended_action": "Keep only repeal history and do not create operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-019",
+      "public_law": "3-19",
+      "title": "Public Law 3-19 | The NARA Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The enactment is current history-only legislation; the codification report places it as a statutory note.",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t2/s6506",
+      "exact_enacted_change": "Preserve the Archivist-notification rule as a concise statutory note at 2 U.S.C. 6506.",
+      "provisions": [
+        {
+          "ref": "SECTION II(a)",
+          "final_legal_status": "current",
+          "code_treatment": "statutory-note",
+          "target": "/us/usc/t2/s6506",
+          "conclusion": "The Archivist-notification duty is note-only history at the 6506 anchor.",
+          "evidence": "active keyword `in effect` in list or label"
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t2/s6506",
+        "detail": "usc02.xml contains section 6506, but the current branch does not show a PL-003-019-specific note at that anchor."
+      },
+      "current_xml_comparison": "usc02.xml contains the 2 U.S.C. 6506 anchor, but the current tree does not show a PL-003-019-specific note at that location.",
+      "source_evidence": [
+        "active keyword `in effect` in list or label",
+        "https://drive.google.com/file/d/1j8M1AitGoI_-D1nr2DKOUUl72pai1_T2/view",
+        "view",
+        "300487dc850479ce71272d63db3f8b8b2b64ad3e00478e8fd747fdfeeb5aed7c",
+        "No express, uniquely executable Code amendment was found. The enactment appears general and permanent (permanent score 6; temporary score 0) and is therefore preserved as a statutory note at 2 U.S.C. § 6506. Anchor selection: subject classification `congress` (score 34) and closest existing section heading `Separate accounts for “Secretary of the Senate” and for “Sergeant at Arms and Doorkeeper of the Senate”; establishment within Senate contingent fund; inclusion of funds in existing accounts`."
+      ],
+      "final_recommended_action": "Keep the enactment as a concise statutory note at 2 U.S.C. 6506 and trim any dump-style material.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-020",
+      "public_law": "3-20",
+      "title": "Public Law 3-20 | National Immigration Employment Act of 2021",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source packet is unavailable, so no current Code operation is authorized.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_change": "Keep only repeal history; do not invent missing operative text.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "final_legal_status": "repealed",
+          "code_treatment": "historical-note-only",
+          "target": null,
+          "conclusion": "History-only treatment is sufficient for the entire act.",
+          "evidence": "status keyword `repealed` in list or label"
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No current Code insertion is authorized for this repealed law."
+      },
+      "current_xml_comparison": "No lawful current XML insertion is required; the source corpus authorizes history-only treatment.",
+      "source_evidence": [
+        "status keyword `repealed` in list or label",
+        "unavailable",
+        "unavailable",
+        "unavailable",
+        "The canonical Trello record is classified as `repealed` based on status keyword `repealed` in list or label. It is not inserted as current Code text."
+      ],
+      "final_recommended_action": "Keep only repeal history and do not invent operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-021",
+      "public_law": "3-21",
+      "title": "Public Law 3-21 | Effective Judicial Function and General Duties Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The enactment is current history-only legislation; the codification report places it as a statutory note.",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t28/s1658",
+      "exact_enacted_change": "Preserve the Chief Justice reporting and dispatch duties as a concise statutory note at 28 U.S.C. 1658.",
+      "provisions": [
+        {
+          "ref": "SEC 3-4",
+          "final_legal_status": "current",
+          "code_treatment": "statutory-note",
+          "target": "/us/usc/t28/s1658",
+          "conclusion": "The duties and reporting provisions are note-only history at the 1658 anchor.",
+          "evidence": "active keyword `in effect` in list or label"
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t28/s1658",
+        "detail": "usc28.xml contains section 1658, but the current branch does not show a PL-003-021-specific note at that anchor."
+      },
+      "current_xml_comparison": "usc28.xml contains the 28 U.S.C. 1658 anchor, but the current tree does not show a PL-003-021-specific note at that location.",
+      "source_evidence": [
+        "active keyword `in effect` in list or label",
+        "https://drive.google.com/file/d/10wa8ZJ4LpPqwdod76RWJgRaOmP9TKm66/view",
+        "view",
+        "0026be92ec551101604d70c643bedfd940abb55014afd9af400746d1fd3b9998",
+        "No express, uniquely executable Code amendment was found. The enactment appears general and permanent (permanent score 8; temporary score 0) and is therefore preserved as a statutory note at 28 U.S.C. § 1658. Anchor selection: subject classification `judiciary` (score 39) and closest existing section heading `Time limitations on the commencement of civil actions arising under Acts of Congress`."
+      ],
+      "final_recommended_action": "Keep the enactment as a concise statutory note at 28 U.S.C. 1658 and trim any dump-style material.",
+      "confidence": "high"
+    }
+  ]
+}

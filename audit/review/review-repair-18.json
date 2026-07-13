@@ -23,7 +23,9 @@
       },
       "recommended_action": "Keep only a source-limited historical note and flag the source for reacquisition.",
       "chronology_conclusion": "The source is unavailable, so chronology supports only a historical-note disposition and no verified operative-code rewrite.",
-      "confidence": "low"
+      "confidence": "low",
+      "final_legal_status": "active",
+      "approved_code_treatment": "retain only source-limited history; exclude appropriations from permanent Code text"
     },
     {
       "law_id": "PL-024-177",
@@ -43,7 +45,9 @@
       },
       "recommended_action": "Keep only a source-limited historical note and flag the source for reacquisition.",
       "chronology_conclusion": "The source is unavailable, so chronology supports only a historical-note disposition and no verified operative-code rewrite.",
-      "confidence": "low"
+      "confidence": "low",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "retain only source-limited history; no permanent Code text"
     },
     {
       "law_id": "PL-024-178",
@@ -63,7 +67,9 @@
       },
       "recommended_action": "Leave the Title 42 amendment in place and keep only a concise statutory note for the amendment history.",
       "chronology_conclusion": "The source evidence supports the stated disposition, with the current implementation reflecting the surviving code history.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "approved_code_treatment": "keep the 42 U.S.C. 2000e-2(a) amendment and a concise statutory note; do not carry a full-text dump"
     },
     {
       "law_id": "PL-025-179",
@@ -83,7 +89,9 @@
       },
       "recommended_action": "Keep only a concise historical note and preserve SEC 5 as a temporary note at 2 U.S.C. 4501.",
       "chronology_conclusion": "The source evidence supports the stated disposition, with the current implementation reflecting the surviving code history.",
-      "confidence": "medium"
+      "confidence": "medium",
+      "final_legal_status": "active",
+      "approved_code_treatment": "treat SEC 5 as a temporary note at 2 U.S.C. 4501 and exclude appropriations from permanent Code text"
     },
     {
       "law_id": "PL-025-180",
@@ -103,7 +111,9 @@
       },
       "recommended_action": "Add the repeal-marking at the PL 9-55 home and keep the sanctions-nullification as a concise statutory note.",
       "chronology_conclusion": "The source evidence supports the stated disposition, with the current implementation reflecting the surviving code history.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "record the PL 9-55 repeal at the target's home and keep SEC 3(c) as a concise note"
     },
     {
       "law_id": "PL-025-181",
@@ -123,7 +133,9 @@
       },
       "recommended_action": "Replace the repealed/superseded label with a current local statutory note at /us/usc/t40/s101/4.",
       "chronology_conclusion": "The source evidence supports the stated disposition, with the current implementation reflecting the surviving code history.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "keep only a current local statutory note at /us/usc/t40/s101/4; do not convert the local code into permanent U.S. Code text"
     },
     {
       "law_id": "PL-025-182",
@@ -143,7 +155,9 @@
       },
       "recommended_action": "Keep only a source-limited historical note and do not invent any operative language.",
       "chronology_conclusion": "The source is unavailable, so chronology supports only a historical-note disposition and no verified operative-code rewrite.",
-      "confidence": "low"
+      "confidence": "low",
+      "final_legal_status": "active",
+      "approved_code_treatment": "retain only source-limited history until the actual statutory text is recovered"
     },
     {
       "law_id": "PL-025-183",
@@ -164,7 +178,9 @@
       },
       "recommended_action": "Keep the law only as superseded history and do not insert operative Code text.",
       "chronology_conclusion": "The source evidence supports the stated disposition, with the current implementation reflecting the surviving code history.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "keep only repeal/history because PL 31-226 repeals the law in full"
     },
     {
       "law_id": "PL-025-184",
@@ -185,7 +201,9 @@
       },
       "recommended_action": "Keep the law only as superseded history and do not insert operative Code text.",
       "chronology_conclusion": "The source evidence supports the stated disposition, with the current implementation reflecting the surviving code history.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "keep only repeal/history because PL 33-238 repeals the law in full"
     },
     {
       "law_id": "PL-025-185",
@@ -205,7 +223,9 @@
       },
       "recommended_action": "Reclassify the measure as expired appropriations history and remove any implication that it is current Code text.",
       "chronology_conclusion": "The source evidence supports the stated disposition, with the current implementation reflecting the surviving code history.",
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "approved_code_treatment": "exclude from permanent Code text and retain only a concise historical note if desired"
     }
   ]
 }

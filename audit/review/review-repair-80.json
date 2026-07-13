@@ -56,7 +56,9 @@
         "codification/laws/audit.csv records the source as a valid PDF with no extractable text."
       ],
       "final_recommended_action": "Keep only repeal history and do not invent operative text.",
-      "confidence": "high"
+      "confidence": "high",
+      "chronology_conclusion": "The enactment is repealed and requires no current Code text.",
+      "approved_code_treatment": "historical-note-only"
     },
     {
       "law_id": "PL-003-022",
@@ -112,7 +114,9 @@
         "codification/mass_migration/latest/sources/text/PL-003-022.txt provides the recoverable enactment text."
       ],
       "final_recommended_action": "Keep the enactment as repeal history only and do not add Code text.",
-      "confidence": "high"
+      "confidence": "high",
+      "chronology_conclusion": "The law is repealed and should remain only as historical note material.",
+      "approved_code_treatment": "historical-note-only"
     },
     {
       "law_id": "PL-003-023",
@@ -140,7 +144,9 @@
         "codification/laws/audit.csv records the source as unrecoverable."
       ],
       "final_recommended_action": "Keep only repeal history and do not invent operative text.",
-      "confidence": "high"
+      "confidence": "high",
+      "chronology_conclusion": "The law is repealed and should remain only as historical note material.",
+      "approved_code_treatment": "historical-note-only"
     },
     {
       "law_id": "PL-004-032",
@@ -175,7 +181,9 @@
         "codification/mass_migration/latest/sources/text/PL-004-032.txt provides the recoverable enactment text."
       ],
       "final_recommended_action": "Keep only history and do not add Code text.",
-      "confidence": "high"
+      "confidence": "high",
+      "chronology_conclusion": "The enactment is superseded and remains historical only.",
+      "approved_code_treatment": "historical-note-only"
     }
   ]
 }

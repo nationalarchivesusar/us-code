@@ -154,7 +154,11 @@
       },
       "source_evidence": [
         "The source is an operative firearms policy act with repeal and replacement rules for prior laws, but it does not repeal itself or expire by its own terms."
-      ]
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "Retain a concise statutory note. | Record the repeal list in repeal history. | Remove the Trello link.",
+      "exact_target": "/us/usc/t18/s1",
+      "exact_change": "Repeal the listed public laws in full."
     },
     {
       "law_id": "PL-028-203",
@@ -282,7 +286,11 @@
       },
       "source_evidence": [
         "The source is an operative impeachment-policy statute with no express Code citation or direct Code host, so it remains statutory history rather than permanent Code text."
-      ]
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "Retain a concise statutory note. | Keep the repeal of Public Law 17-128 as history only. | Remove the Trello link.",
+      "exact_target": "/us/usc/t2/s1",
+      "exact_change": "Record the repeal of Public Law 17-128 as history only."
     },
     {
       "law_id": "PL-028-204",
@@ -383,7 +391,11 @@
       },
       "source_evidence": [
         "Later Public Law 38-265 expressly repeals Public Law 28-204. The source itself is a live amendment to Public Law 26-191, but the later repeal makes the enactment noncurrent."
-      ]
+      ],
+      "final_legal_status": "repealed",
+      "final_recommended_action": "Keep the law as historical note only. | Do not add current Code text. | Remove the Trello link.",
+      "exact_target": "/us/usc/t50/s1",
+      "exact_change": "Record the amendment to Public Law 26-191 as history only; no current Code section is directly targeted."
     },
     {
       "law_id": "PL-028-205",
@@ -433,7 +445,10 @@
       },
       "source_evidence": [
         "The only recoverable file is Google Drive viewer debris; no authenticated enactment text could be recovered. Trello marks it in effect, but the source gap prevents a lawful current-law conclusion."
-      ]
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "Retain only a source-limited historical note. | Do not infer any Code effect. | Remove the Trello link and re-acquire the source before any coding decision.",
+      "exact_target": "/us/usc/t5/s101"
     },
     {
       "law_id": "PL-028-206",
@@ -533,7 +548,10 @@
       },
       "source_evidence": [
         "Later Public Law 41-271 repeals this enactment in the corpus. The source is otherwise a general D.C. boundary and closure statute, but it is no longer current law."
-      ]
+      ],
+      "final_legal_status": "repealed",
+      "final_recommended_action": "Keep the law as historical note only. | Do not add current Code text. | Remove the Trello link.",
+      "exact_target": "/us/usc/t40/s101/4"
     },
     {
       "law_id": "PL-029-207",
@@ -652,7 +670,11 @@
       },
       "source_evidence": [
         "The approved PL-029-207 plan is applied in the branch. The current XML already carries the title 18, 28, 29, 31, and 41 changes, and the law remains operative as part of the enacted chain."
-      ]
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "Leave the applied amendments in place. | Avoid duplicating the note in a second anchor. | Remove the Trello link.",
+      "exact_target": "/us/usc/t18/s1",
+      "exact_change": "Replace sections 3281 and 3282 with the enacted 60-day and 45-day limitations rules and reserve 3283. | Replace the listed civil limitations rules and reserve any section that is only repealed in history."
     },
     {
       "law_id": "PL-029-208",
@@ -765,7 +787,11 @@
       },
       "source_evidence": [
         "The source is a live foreign-affairs reporting measure. It repeals a prior public-law section and adds reporting duties, but it does not repeal itself."
-      ]
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "Retain a concise statutory note. | Record the repeal of Public Law 15-102 Section IV in repeal history. | Remove the Trello link.",
+      "exact_target": "/us/usc/t22/s2651",
+      "exact_change": "Record the repeal of Public Law 15-102 Section IV in history."
     },
     {
       "law_id": "PL-029-209",
@@ -815,7 +841,10 @@
       },
       "source_evidence": [
         "The only recoverable file is Google Drive viewer debris; no authenticated enactment text could be recovered. Trello marks it in effect, but the source gap prevents a lawful current-law conclusion."
-      ]
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "Retain only a source-limited historical note. | Do not infer any Code effect. | Remove the Trello link and re-acquire the source before any coding decision.",
+      "exact_target": "/us/usc/t46/s101"
     },
     {
       "law_id": "PL-029-210",
@@ -945,7 +974,10 @@
       },
       "source_evidence": [
         "The source rewrites military justice rules and amends the uncodified PL 14-91 UCMJ framework, but the packet resolves no concrete U.S. Code XML target. Later Public Law 36-257 amends the Act itself without changing that code-target analysis."
-      ]
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "Keep the act as a concise statutory note. | Do not fabricate a Code section for the UCMJ article references. | Remove the Trello link.",
+      "exact_target": "/us/usc/t10/s101/h"
     },
     {
       "law_id": "PL-029-211",
@@ -1006,7 +1038,11 @@
       },
       "source_evidence": [
         "The live Title 3 text already contains the new 3 U.S.C. 19 subsections, and the XML note is concise with no quoted-content dump."
-      ]
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "Leave the integrated 3 U.S.C. 19 amendment in place. | Keep the historical note concise at /us/usc/t3/s1.",
+      "exact_target": "/us/usc/t3/s19",
+      "exact_change": "Strike the period at the end of subsection (c)(2), delete the listed phrases in subsection (d)(1), insert \"and Labor\" after Commerce, and replace the remainder of subsection (d)(2) after \"term\" with a period."
     }
   ]
 }

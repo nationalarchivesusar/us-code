@@ -24,7 +24,9 @@
         "classification": "manifest marks the source unrecoverable; final report says SOURCE_UNAVAILABLE",
         "code_register": "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
       },
-      "recommended_action": "Retain as unrecoverable history only and flag for source reacquisition."
+      "recommended_action": "Retain as unrecoverable history only and flag for source reacquisition.",
+      "final_legal_status": "active",
+      "approved_code_treatment": "no current code text; keep only source-limited history"
     },
     {
       "law_id": "PL-024-177",
@@ -45,7 +47,9 @@
         "classification": "final report classifies the Trello record as repealed and says it is not inserted as current Code text",
         "code_register": "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
       },
-      "recommended_action": "Keep only a repeal-history note and do not add operative Code text."
+      "recommended_action": "Keep only a repeal-history note and do not add operative Code text.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "no current code text"
     },
     {
       "law_id": "PL-024-178",
@@ -66,7 +70,9 @@
         "source_text": "SEC 6(a)(1)-(2) expressly amends 42 U.S.C. 2000e-2(a)",
         "xml": "usc/usc42.xml at 42 U.S.C. 2000e-2(a) shows the inserted text and amendment note"
       },
-      "recommended_action": "Leave the Title 42 amendment in place and keep only a compact statutory note for the amendment history."
+      "recommended_action": "Leave the Title 42 amendment in place and keep only a compact statutory note for the amendment history.",
+      "final_legal_status": "active",
+      "approved_code_treatment": "keep the 42 U.S.C. 2000e-2(a) amendment and a concise statutory note; no extra text beyond the direct amendment"
     },
     {
       "law_id": "PL-025-179",
@@ -87,7 +93,9 @@
         "source_text": "SEC 5 suspends adjustments under 2 U.S.C. 4501 for FY 21-2",
         "xml": "usc/usc31.xml note id rp-pl025179-codification"
       },
-      "recommended_action": "Keep only the temporary history note and do not promote the appropriations provisions to permanent text."
+      "recommended_action": "Keep only the temporary history note and do not promote the appropriations provisions to permanent text.",
+      "final_legal_status": "active",
+      "approved_code_treatment": "treat SEC 5 as a temporary note at 2 U.S.C. 4501 and keep the appropriations material out of permanent Code text"
     },
     {
       "law_id": "PL-025-180",
@@ -108,7 +116,9 @@
         "source_text": "SEC 3(b) repeals PL 9-55 and SEC 3(c) nullifies the sanctions",
         "code_register": "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
       },
-      "recommended_action": "Treat the law itself as repealed history and ensure any repeal-marking for PL-009-055 lives at the target's home, not as new permanent text here."
+      "recommended_action": "Treat the law itself as repealed history and ensure any repeal-marking for PL-009-055 lives at the target's home, not as new permanent text here.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "no current code text; if the repeal of PL-009-055 is not already reflected elsewhere, record it only at the PL-009-055 home"
     },
     {
       "law_id": "PL-025-181",
@@ -129,7 +139,9 @@
         "classification": "final report classifies the Trello record as repealed and rejects current Code insertion",
         "code_register": "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
       },
-      "recommended_action": "Keep only source-limited history and do not surface the D.C. criminal code as current U.S. Code text."
+      "recommended_action": "Keep only source-limited history and do not surface the D.C. criminal code as current U.S. Code text.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "no current code text; preserve only as D.C. history if retained at all"
     },
     {
       "law_id": "PL-025-182",
@@ -150,7 +162,9 @@
         "classification": "final report says no readable authenticated enactment text could be recovered",
         "code_register": "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
       },
-      "recommended_action": "Retain only a source-limited record until the actual enactment text is recovered."
+      "recommended_action": "Retain only a source-limited record until the actual enactment text is recovered.",
+      "final_legal_status": "active",
+      "approved_code_treatment": "no current code text; retain only source-limited history"
     },
     {
       "law_id": "PL-025-183",
@@ -171,7 +185,9 @@
         "later_law": "PL-031-226 repeals PL-025-183 in its entirety",
         "source_text": "SEC 6 establishes the Department of Commerce and Labor and related licensing/enforcement rules"
       },
-      "recommended_action": "Keep the law only as superseded history and do not insert operative Code text."
+      "recommended_action": "Keep the law only as superseded history and do not insert operative Code text.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "no current code insertion; keep only history because PL-031-226 repeals the law"
     },
     {
       "law_id": "PL-025-184",
@@ -192,7 +208,9 @@
         "later_law": "PL-033-238 repeals PL-025-184 in its entirety",
         "source_text": "SEC 6-12 create the Uniform Legal Practice Authority licensing and discipline framework"
       },
-      "recommended_action": "Keep the law only as superseded history and do not insert operative Code text."
+      "recommended_action": "Keep the law only as superseded history and do not insert operative Code text.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "no current code insertion; keep only history because PL-033-238 repeals the law"
     },
     {
       "law_id": "PL-025-185",
@@ -213,7 +231,9 @@
         "source_text": "SEC 3-14 are appropriations and reporting provisions for a short fiscal period; SEC 5 is a temporary 2 U.S.C. 4501 adjustment",
         "xml": "usc/usc31.xml note id rp-pl025185-codification"
       },
-      "recommended_action": "Reclassify the measure as expired appropriations history and remove any implication that it is current Code text."
+      "recommended_action": "Reclassify the measure as expired appropriations history and remove any implication that it is current Code text.",
+      "final_legal_status": "active",
+      "approved_code_treatment": "exclude from permanent code text; if retained, keep only a historical note"
     }
   ]
 }

@@ -33,7 +33,16 @@
         "Trim the note to a concise historical entry.",
         "Apply the repeal history to PL 3-15 explicitly."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Current repealing statute. The source text is intact, and nothing in the supplied set repeals PL 15-93 itself. The branch note must also reflect the repeal of PL 3-15 at the existing title 22 anchor.",
+      "approved_code_treatment": "note-only",
+      "final_recommended_action": "Trim the note to a concise historical entry. | Apply the repeal history to PL 3-15 explicitly.",
+      "source_evidence": [
+        "active keyword `in effect` in list or label",
+        "https://drive.google.com/file/d/1AQvmZ3p2pcXvlAkD6gSyy_lX911BmEru/view",
+        "No express, uniquely executable Code amendment was found. The enactment appears general and permanent (permanent score 2; temporary score 0) and is therefore preserved as a statutory note at 2 U.S.C. § 271. Anchor selection: subject classification `congress` (score 23) and closest existing section heading `Establishment`."
+      ]
     },
     {
       "law_id": "PL-015-094",
@@ -64,7 +73,16 @@
         "Keep only a concise source-limited historical note.",
         "Remove the Trello link and avoid false precision in the codification prose."
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Source-limited. The PDF is present but not text-extractable, so no lawful chronology beyond history-only treatment can be fixed from the supplied record.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "final_recommended_action": "Keep only a concise source-limited historical note. | Remove the Trello link and avoid false precision in the codification prose.",
+      "source_evidence": [
+        "active keyword `in effect` in list or label",
+        "unavailable",
+        "No readable authenticated enactment text could be recovered from the card, its attachments, or its description. The law is inventoried but cannot safely alter the Code."
+      ]
     },
     {
       "law_id": "PL-015-095",
@@ -95,7 +113,16 @@
         "Retain only a source-limited historical note.",
         "Do not invent operative text or a specific repeal chain."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "Source-limited. The enactment text is unrecoverable, so the review cannot lawfully reconstruct the exact repeal chain from the source itself.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "final_recommended_action": "Retain only a source-limited historical note. | Do not invent operative text or a specific repeal chain.",
+      "source_evidence": [
+        "status keyword `repealed` in list or label",
+        "unavailable",
+        "The canonical Trello record is classified as `repealed` based on status keyword `repealed` in list or label. It is not inserted as current Code text."
+      ]
     },
     {
       "law_id": "PL-015-096",
@@ -126,7 +153,16 @@
         "Keep a concise historical note that cites the later repeal by PL 16-113.",
         "Remove boilerplate and Trello noise."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "Fully repealed by PL 16-113 (The Bing Bong Act of 2023). The later repeal is determinable even though the original source text is not recoverable.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Keep a concise historical note that cites the later repeal by PL 16-113. | Remove boilerplate and Trello noise.",
+      "source_evidence": [
+        "status keyword `repealed` in list or label",
+        "unavailable",
+        "The canonical Trello record is classified as `repealed` based on status keyword `repealed` in list or label. It is not inserted as current Code text."
+      ]
     },
     {
       "law_id": "PL-015-097",
@@ -157,7 +193,16 @@
         "Replace the boilerplate note with one that records the PL 15-105 amendments.",
         "Keep the enactment as a Title 28 statutory note."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Partially current. PL 15-105 SEC 6 expressly repeals SEC 103(b)(iii) and SEC 102(f)(ii) and rewrites SEC 103(b)(v), so the branch note must track those later-law changes.",
+      "approved_code_treatment": "note-only-but-amendment-required",
+      "final_recommended_action": "Replace the boilerplate note with one that records the PL 15-105 amendments. | Keep the enactment as a Title 28 statutory note.",
+      "source_evidence": [
+        "active keyword `in effect` in list or label",
+        "https://drive.google.com/file/d/1H-L7zJqb4lT0b-496NGNyBoxsvOkX1rb/view",
+        "No express, uniquely executable Code amendment was found. The enactment appears general and permanent (permanent score 26; temporary score 0) and is therefore preserved as a statutory note at 28 U.S.C. § 598. Anchor selection: subject classification `judiciary` (score 48) and closest existing section heading `Severability`."
+      ]
     },
     {
       "law_id": "PL-015-098",
@@ -188,7 +233,16 @@
         "Remove the full-text dump and Trello link.",
         "Correct the heading to Inspector General Protection Act of 2023."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Current. Nothing in the supplied set repeals the act, and the source text is substantive and permanent rather than commemorative.",
+      "approved_code_treatment": "note-only",
+      "final_recommended_action": "Remove the full-text dump and Trello link. | Correct the heading to Inspector General Protection Act of 2023.",
+      "source_evidence": [
+        "active keyword `in effect` in list or label",
+        "https://drive.google.com/file/d/1wl6wI7ulwjBPLZgLUCL6_skM1_YkiQVJ/view",
+        "This enactment is classified as `commemorative` rather than general and permanent U.S. Code material. Evidence: commendation. It remains a public law but receives no Code insertion."
+      ]
     },
     {
       "law_id": "PL-015-099",
@@ -219,7 +273,16 @@
         "Record the repeal of PL 2-14 explicitly.",
         "Keep the act as a Title 28 statutory note."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Current. The supplied materials do not show any later repeal of PL 15-99, but the act itself must expressly repeal PL 2-14 in the recorded history.",
+      "approved_code_treatment": "note-only-but-amendment-required",
+      "final_recommended_action": "Record the repeal of PL 2-14 explicitly. | Keep the act as a Title 28 statutory note.",
+      "source_evidence": [
+        "active keyword `in effect` in list or label",
+        "https://drive.google.com/file/d/1muXgHfa-iaC7UyBjUBeWMIRaWnTNbe7I/view",
+        "No express, uniquely executable Code amendment was found. The enactment appears general and permanent (permanent score 24; temporary score 0) and is therefore preserved as a statutory note at 18 U.S.C. § 158. Anchor selection: subject classification `crime` (score 21) and closest existing section heading `Designation of United States attorneys and agents of the Federal Bureau of Investigation to address abusive reaffirmations of debt and materially fraudulent statements in bankruptcy schedules`."
+      ]
     },
     {
       "law_id": "PL-015-100",
@@ -250,7 +313,16 @@
         "Correct the status to current.",
         "Trim the note to a concise Title 5 history entry."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "Current, not repealed. The branch's repealed classification conflicts with the source text and with later amendment PL 17-131, which assumes PL 15-100 remains live.",
+      "approved_code_treatment": "note-only",
+      "final_recommended_action": "Correct the status to current. | Trim the note to a concise Title 5 history entry.",
+      "source_evidence": [
+        "status keyword `repealed` in list or label",
+        "https://drive.google.com/file/d/1IO-vJtVILl7HMzoLxYNFZy6FlNYDszcL/view",
+        "The canonical Trello record is classified as `repealed` based on status keyword `repealed` in list or label. It is not inserted as current Code text."
+      ]
     },
     {
       "law_id": "PL-015-101",
@@ -282,7 +354,16 @@
         "Re-anchor the note to Title 5.",
         "Keep the FOIA carve-out and publication mandate in a concise note."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Current. The manifest title is a mislabel, and the note belongs in Title 5 near sections 551 and 553, not in Title 50.",
+      "approved_code_treatment": "note-only",
+      "final_recommended_action": "Correct the title to Guidance to Guidances Act. | Re-anchor the note to Title 5. | Keep the FOIA carve-out and publication mandate in a concise note.",
+      "source_evidence": [
+        "active keyword `in effect` in list or label",
+        "https://drive.google.com/file/d/1Hbvm-qzSt7qUxDZ0IBdMbBjDI3LvVUH5/view",
+        "No express, uniquely executable Code amendment was found. The enactment appears general and permanent (permanent score 12; temporary score 0) and is therefore preserved as a statutory note at 5 U.S.C. § 551. Anchor selection: the Act expressly cites this existing Code section 1 time(s)."
+      ]
     },
     {
       "law_id": "PL-015-102",
@@ -313,7 +394,16 @@
         "Record both express repeals in the note history.",
         "Keep the act as a Title 22 statutory note."
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Partially current. The act itself is operative, but the branch note omits the two express repeals and therefore does not fully preserve the enacted chronology.",
+      "approved_code_treatment": "note-only-but-amendment-required",
+      "final_recommended_action": "Record both express repeals in the note history. | Keep the act as a Title 22 statutory note.",
+      "source_evidence": [
+        "active keyword `in effect` in list or label",
+        "https://drive.google.com/file/d/1-4vdhNcBc5A77wIUswo_zYApvhyIw_B6/view",
+        "No express, uniquely executable Code amendment was found. The enactment appears general and permanent (permanent score 18; temporary score 0) and is therefore preserved as a statutory note at 2 U.S.C. § 1438. Anchor selection: subject classification `congress` (score 33) and closest existing section heading `Severability`."
+      ]
     }
   ]
 }
