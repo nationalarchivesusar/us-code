@@ -49,15 +49,27 @@ NOTE_TREATMENTS = {
     "source-limited-historical-note",
 }
 
-EXECUTABLE_TREATMENTS = {
-    "operative-text-required",
-    "amend-existing-text",
-    "new-section",
-    "new-subsection",
-    "repeal-marking",
-    "transfer",
-    "redesignation",
-    "substitution",
+TREATMENT_ACTION_MAP = {
+    "new_section": "insert new section",
+    "new_subsection": "insert new subsection",
+    "amend_existing_text": "amend existing text",
+    "repeal_marking": "repeal or remove project-added text",
+    "redesignation": "redesignate",
+    "transfer": "transfer",
+    "substitution": "substitution",
+    "statutory_note": "add statutory note",
+    "statutory_note_only": "add statutory note",
+    "note_only": "add statutory note",
+    "historical_note_only": "add historical note",
+    "historical_note": "add historical note",
+    "history_only": "add historical note",
+    "source_limited_historical_note": "add historical note",
+    "amendment_note": "add amendment note",
+    "effective_date_note": "add historical note",
+    "savings_note": "add historical note",
+    "transfer_note": "add statutory note",
+    "exclude_from_code": "no Code action",
+    "already_incorporated": "no Code action",
 }
 
 
@@ -74,7 +86,7 @@ def write_json(path: Path, data: Any) -> None:
 
 
 def normalize_text(value: Any) -> str:
-    return canonical_text(value).lower().replace("-", "_")
+    return re.sub(r"[\s\-]+", "_", canonical_text(value).lower())
 
 
 def report_manifest_index(source_manifest: str, report_path: str) -> int:
@@ -242,9 +254,13 @@ def build_controlling_review_index(final_ledger: Dict[str, Any], review_files: D
     }
 
 
-def current_node_ids_by_law() -> Dict[str, List[str]]:
+def current_implementation_details_by_law() -> Dict[str, Dict[str, List[str]]]:
     data = read_json(CURRENT_IMPLEMENTATION)
-    out: Dict[str, List[str]] = collections.defaultdict(list)
+    out: Dict[str, Dict[str, List[str]]] = collections.defaultdict(lambda: {
+        "node_ids": [],
+        "xml_files": [],
+        "placement_identifiers": [],
+    })
     by_public_law = data.get("by_public_law") or {}
     if isinstance(by_public_law, dict):
         for public_law, entries in by_public_law.items():
@@ -253,9 +269,16 @@ def current_node_ids_by_law() -> Dict[str, List[str]]:
             for entry in entries:
                 if not isinstance(entry, dict):
                     continue
-                for candidate in [entry.get("note_id"), entry.get("placement_identifier"), entry.get("identifier"), entry.get("file")]:
-                    if candidate and candidate not in out[str(public_law)]:
-                        out[str(public_law)].append(str(candidate))
+                record = out[str(public_law)]
+                for candidate in [entry.get("note_id"), entry.get("identifier"), entry.get("id")]:
+                    if candidate and candidate not in record["node_ids"]:
+                        record["node_ids"].append(str(candidate))
+                xml_file = entry.get("file")
+                if xml_file and xml_file not in record["xml_files"]:
+                    record["xml_files"].append(str(xml_file))
+                placement = entry.get("placement_identifier")
+                if placement and placement not in record["placement_identifiers"]:
+                    record["placement_identifiers"].append(str(placement))
     notes_section = data.get("notes") or {}
     if isinstance(notes_section, dict):
         notes_iter = notes_section.items()
@@ -267,51 +290,115 @@ def current_node_ids_by_law() -> Dict[str, List[str]]:
         for entry in entries:
             if not isinstance(entry, dict):
                 continue
-            for candidate in [entry.get("note_id"), entry.get("placement_identifier"), entry.get("identifier")]:
-                if candidate and candidate not in out[str(law_id)]:
-                    out[str(law_id)].append(str(candidate))
+            record = out[str(law_id)]
+            for candidate in [entry.get("note_id"), entry.get("identifier"), entry.get("id")]:
+                if candidate and candidate not in record["node_ids"]:
+                    record["node_ids"].append(str(candidate))
+            xml_file = entry.get("file")
+            if xml_file and xml_file not in record["xml_files"]:
+                record["xml_files"].append(str(xml_file))
+            placement = entry.get("placement_identifier")
+            if placement and placement not in record["placement_identifiers"]:
+                record["placement_identifiers"].append(str(placement))
     return out
 
 
-def plan_action_type(law: Dict[str, Any], prov: Dict[str, Any], target_xml_file: str, exact_text: str) -> str:
+def plan_action_type(prov: Dict[str, Any]) -> str:
     treatment = normalize_text(prov.get("treatment"))
+    if treatment in TREATMENT_ACTION_MAP:
+        return TREATMENT_ACTION_MAP[treatment]
     classes = set(prov.get("classes") or [])
     summary = canonical_text(prov.get("text_summary")).lower()
-    if treatment in {"new_section", "new_subsection", "amend_existing_text"} and target_xml_file and exact_text:
-        if treatment == "new_subsection" or "definition" in summary or "definitions" in summary:
+    if "new-permanent-general" in classes:
+        if "definition" in summary or "definitions" in summary:
             return "insert new subsection"
-        if treatment == "amend_existing_text":
-            return "amend existing text"
+        if "purpose" in summary or "findings" in summary or "sense" in summary:
+            return "add statutory note"
         return "insert new section"
-    if treatment in {"repeal_marking"} and target_xml_file and exact_text:
-        return "repeal or remove project-added text"
-    if treatment in {"transfer", "transfer_note"} and target_xml_file and exact_text:
-        return "transfer"
-    if treatment in {"redesignation"} and target_xml_file and exact_text:
-        return "redesignate"
-    if treatment in {"substitution"} and target_xml_file and exact_text:
-        return "substitution"
     if "short-title" in classes or "findings-or-sense" in classes:
         return "add statutory note"
     if "effective-date" in classes:
         return "add historical note"
-    if normalize_text(law.get("review_status")) in {"current", "operative_text_required"} and "new-permanent-general" in classes and target_xml_file and exact_text:
-        if "definition" in summary:
-            return "insert new subsection"
-        return "insert new section"
-    if treatment in NOTE_TREATMENTS:
-        if "amendment" in treatment:
-            return "add amendment note"
-        if "historical" in treatment or "history" in treatment:
-            return "add historical note"
-        return "add statutory note"
     return "no Code action"
+
+
+def is_executable_action(action_type: str) -> bool:
+    return normalize_text(action_type) in {
+        "amend_existing_text",
+        "insert_new_section",
+        "insert_new_subsection",
+        "repeal_or_remove_project_added_text",
+        "redesignate",
+        "transfer",
+        "substitution",
+    }
+
+
+def note_action_for_treatment(treatment: str) -> str:
+    return TREATMENT_ACTION_MAP.get(normalize_text(treatment), "no Code action")
+
+
+def is_valid_node_identifier(value: str) -> bool:
+    if not value:
+        return False
+    if value.startswith("/") or "/us/usc/" in value:
+        return False
+    if value.lower().endswith(".xml"):
+        return False
+    return bool(re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._:-]*", value))
+
+
+def note_command(action_type: str, target_xml_file: str) -> str:
+    target_phrase = f" at {target_xml_file}" if target_xml_file else " at the current anchor"
+    if action_type == "add historical note":
+        return f"Add historical note material{target_phrase}."
+    if action_type == "add amendment note":
+        return f"Add amendment note material{target_phrase}."
+    if action_type == "add statutory note":
+        return f"Add statutory note material{target_phrase}."
+    return f"Add note material{target_phrase}."
+
+
+def executable_command(action_type: str, target_identifier: str) -> str:
+    target_phrase = f" at {target_identifier}" if target_identifier else ""
+    if action_type == "insert new section":
+        return f"Insert the enacted text as a new section{target_phrase}."
+    if action_type == "insert new subsection":
+        return f"Insert the enacted text as a new subsection{target_phrase}."
+    if action_type == "amend existing text":
+        return f"Replace the existing text{target_phrase} with the enacted amendment."
+    if action_type == "repeal or remove project-added text":
+        return f"Remove the project-added text{target_phrase}."
+    if action_type == "redesignate":
+        return f"Redesignate the affected Code text{target_phrase}."
+    if action_type == "transfer":
+        return f"Transfer the enacted text{target_phrase}."
+    if action_type == "substitution":
+        return f"Substitute the enacted text{target_phrase}."
+    return f"Apply the enacted change{target_phrase}."
+
+
+def contains_inconsistent_command_text(value: str) -> bool:
+    text = canonical_text(value).lower()
+    phrases = (
+        "no operative text",
+        "not section-level codification",
+        "retain as repeal history only",
+        "do not carry this into live code text",
+        "do not retain live text",
+        "history only",
+    )
+    return any(phrase in text for phrase in phrases)
 
 
 def build_xml_integration_plan(final_ledger: Dict[str, Any], provision_ledger: Dict[str, Any]) -> Dict[str, Any]:
     final_by_law = {str(law.get("law_id") or ""): law for law in final_ledger.get("laws", []) or []}
-    node_ids = current_node_ids_by_law()
+    implementation_details = current_implementation_details_by_law()
     rows = []
+    treatment_action_conflicts = 0
+    invalid_node_identifiers = 0
+    executable_actions_missing_targets = 0
+    executable_actions_missing_commands = 0
     for idx, prov in enumerate(provision_ledger.get("provisions", []) or [], start=1):
         if not isinstance(prov, dict):
             continue
@@ -326,17 +413,48 @@ def build_xml_integration_plan(final_ledger: Dict[str, Any], provision_ledger: D
         )
         if not exact_text:
             exact_text = canonical_text(prov.get("text_summary"))
-        target_xml = canonical_xml_file(target) or canonical_xml_file(canonical_text(law.get("exact_target")))
-        action_type = plan_action_type(law, prov, target_xml, exact_text)
-        identifiers = list(node_ids.get(str(prov.get("public_law") or ""), []))
-        if not identifiers and target:
-            identifiers.append(f"{target}::{prov.get('ref')}")
+        details = implementation_details.get(str(prov.get("public_law") or ""), {"node_ids": [], "xml_files": [], "placement_identifiers": []})
+        existing_xml_files = list(dict.fromkeys(details.get("xml_files", [])))
+        existing_placement_identifiers = list(dict.fromkeys(details.get("placement_identifiers", [])))
+        target_xml = (
+            canonical_xml_file(target)
+            or canonical_xml_file(canonical_text(law.get("exact_target")))
+            or (existing_xml_files[0] if existing_xml_files else "")
+        )
+        action_type = plan_action_type(prov)
+        expected_action = note_action_for_treatment(treatment)
+        if expected_action and action_type != expected_action:
+            treatment_action_conflicts += 1
+        if action_type in {"add historical note", "add statutory note", "add amendment note"} and (
+            "repeal history" in exact_text.lower() or "retain as repeal history only" in exact_text.lower()
+        ):
+            exact_text = note_command(action_type, target_xml)
+        identifiers = []
+        for candidate in details.get("node_ids", []):
+            if candidate not in identifiers and is_valid_node_identifier(candidate):
+                identifiers.append(candidate)
+            elif candidate and not is_valid_node_identifier(candidate):
+                invalid_node_identifiers += 1
         source_evidence = []
         for candidate in [prov.get("evidence"), prov.get("review_evidence"), law.get("review_source_evidence")]:
             if isinstance(candidate, list):
                 source_evidence.extend([canonical_text(v) for v in candidate if canonical_text(v)])
             elif candidate:
                 source_evidence.append(canonical_text(candidate))
+        source_evidence = list(dict.fromkeys(source_evidence))
+        effective_target = target or canonical_text(law.get("exact_target")) or (existing_placement_identifiers[0] if existing_placement_identifiers else "")
+        if is_executable_action(action_type):
+            if not exact_text or contains_inconsistent_command_text(exact_text):
+                exact_text = executable_command(action_type, canonical_text(effective_target))
+        if is_executable_action(action_type):
+            if not effective_target:
+                executable_actions_missing_targets += 1
+            if not exact_text:
+                executable_actions_missing_commands += 1
+        if not target_xml and existing_xml_files:
+            target_xml = existing_xml_files[0]
+        if not target:
+            target = canonical_text(effective_target)
         rows.append(
             {
                 "action_id": f"ACTION-{idx:04d}",
@@ -352,6 +470,8 @@ def build_xml_integration_plan(final_ledger: Dict[str, Any], provision_ledger: D
                 "source_evidence": source_evidence,
                 "chronology_dependencies": [canonical_text(law.get("review_chronology") or law.get("status_basis"))] if canonical_text(law.get("review_chronology") or law.get("status_basis")) else [],
                 "existing_project_node_ids_to_remove_or_replace": identifiers,
+                "existing_xml_files": existing_xml_files,
+                "existing_placement_identifiers": existing_placement_identifiers,
                 "source_credit_required": action_type in {"add statutory note", "add historical note", "add amendment note"},
                 "amendment_note_required": action_type in {"amend existing text", "insert new section", "insert new subsection", "repeal or remove project-added text", "redesignate", "transfer", "substitution"},
                 "toc_update_required": action_type in {"insert new section", "insert new subsection", "redesignate", "transfer"},
@@ -362,6 +482,10 @@ def build_xml_integration_plan(final_ledger: Dict[str, Any], provision_ledger: D
         "summary": {
             "provision_count": len(rows),
             "executable_action_count": sum(1 for row in rows if row["action_type"] not in {"no Code action", "add statutory note", "add historical note", "add amendment note"}),
+            "treatment_action_conflicts": treatment_action_conflicts,
+            "invalid_node_identifiers": invalid_node_identifiers,
+            "executable_actions_missing_targets": executable_actions_missing_targets,
+            "executable_actions_missing_commands": executable_actions_missing_commands,
         },
         "provisions": rows,
     }

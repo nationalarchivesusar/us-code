@@ -49,13 +49,35 @@ EXECUTABLE_LAW_TREATMENTS = {
 }
 
 EXECUTABLE_ACTION_TYPES = {
-    "amend existing text",
-    "insert new section",
-    "insert new subsection",
-    "repeal or remove project-added text",
+    "amend_existing_text",
+    "insert_new_section",
+    "insert_new_subsection",
+    "repeal_or_remove_project_added_text",
     "redesignate",
     "transfer",
     "substitution",
+}
+
+TREATMENT_ACTION_MAP = {
+    "new_section": "insert new section",
+    "new_subsection": "insert new subsection",
+    "amend_existing_text": "amend existing text",
+    "repeal_marking": "repeal or remove project-added text",
+    "redesignation": "redesignate",
+    "transfer": "transfer",
+    "substitution": "substitution",
+    "statutory_note": "add statutory note",
+    "statutory_note_only": "add statutory note",
+    "note_only": "add statutory note",
+    "historical_note_only": "add historical note",
+    "historical_note": "add historical note",
+    "history_only": "add historical note",
+    "source_limited_historical_note": "add historical note",
+    "amendment_note": "add amendment note",
+    "effective_date_note": "add historical note",
+    "savings_note": "add historical note",
+    "transfer_note": "add statutory note",
+    "exclude_from_code": "no Code action",
 }
 
 
@@ -85,7 +107,7 @@ def nonempty(value: Any) -> bool:
 
 
 def normalize_text(value: Any) -> str:
-    return canonical_text(value).lower().replace("-", "_")
+    return canonical_text(value).lower().replace("-", "_").replace(" ", "_")
 
 
 def plan_requires_command(action_type: str) -> bool:
@@ -99,6 +121,32 @@ def plan_requires_command(action_type: str) -> bool:
         "transfer",
         "substitution",
     }
+
+
+def plan_action_for_treatment(treatment: Any) -> str:
+    return TREATMENT_ACTION_MAP.get(normalize_text(treatment), "no Code action")
+
+
+def is_valid_node_identifier(value: Any) -> bool:
+    text = canonical_text(value)
+    if not text:
+        return False
+    if text.startswith("/") or "/us/usc/" in text or text.lower().endswith(".xml"):
+        return False
+    return True
+
+
+def contains_inconsistent_command_text(value: Any) -> bool:
+    text = canonical_text(value).lower()
+    phrases = (
+        "no operative text",
+        "not section-level codification",
+        "retain as repeal history only",
+        "do not carry this into live code text",
+        "do not retain live text",
+        "history only",
+    )
+    return any(phrase in text for phrase in phrases)
 
 
 def main() -> int:
@@ -120,6 +168,11 @@ def main() -> int:
     canonical_reports = {item.get("review_report"): item for item in canonical_validation.get("reports", []) if isinstance(item, dict)}
     controlling_rows = [row for row in controlling_index.get("laws", []) if isinstance(row, dict)]
     plan_rows = [row for row in integration_plan.get("provisions", []) if isinstance(row, dict)]
+
+    require(integration_plan.get("summary", {}).get("treatment_action_conflicts") == 0, "integration-plan treatment_action_conflicts must be zero", failures)
+    require(integration_plan.get("summary", {}).get("invalid_node_identifiers") == 0, "integration-plan invalid_node_identifiers must be zero", failures)
+    require(integration_plan.get("summary", {}).get("executable_actions_missing_targets") == 0, "integration-plan executable_actions_missing_targets must be zero", failures)
+    require(integration_plan.get("summary", {}).get("executable_actions_missing_commands") == 0, "integration-plan executable_actions_missing_commands must be zero", failures)
 
     require(len(final_laws) == 270, f"expected 270 final laws, found {len(final_laws)}", failures)
     require(final_ledger.get("summary", {}).get("total_laws") == 270, "final-ledger total_laws must be 270", failures)
@@ -205,10 +258,34 @@ def main() -> int:
         if plan_row is not None:
             require(nonempty(plan_row.get("action_id")), f"integration-plan row missing action_id for {prov.get('law_id')} / {prov.get('ref')}", failures)
             require(plan_row.get("action_type") is not None, f"integration-plan row missing action_type for {prov.get('law_id')} / {prov.get('ref')}", failures)
+            expected_action = plan_action_for_treatment(treatment)
+            require(
+                canonical_text(plan_row.get("action_type")) == expected_action,
+                f"provision {prov.get('law_id')} / {prov.get('ref')} treatment-action conflict",
+                failures,
+            )
+            require(
+                not (normalize_text(treatment) in {"historical_note_only", "historical_note", "history_only", "source_limited_historical_note"} and normalize_text(plan_row.get("action_type")) in EXECUTABLE_ACTION_TYPES),
+                f"historical-note treatment has executable action for {prov.get('law_id')} / {prov.get('ref')}",
+                failures,
+            )
+            require(
+                not (normalize_text(treatment) in {"statutory_note", "statutory_note_only", "note_only", "effective_date_note", "savings_note", "transfer_note"} and normalize_text(plan_row.get("action_type")) in EXECUTABLE_ACTION_TYPES),
+                f"statutory-note treatment has operative-text action for {prov.get('law_id')} / {prov.get('ref')}",
+                failures,
+            )
+            require(
+                not (normalize_text(treatment) == "exclude_from_code" and normalize_text(plan_row.get("action_type")) != "no_code_action"),
+                f"exclude-from-code treatment has non-no-op action for {prov.get('law_id')} / {prov.get('ref')}",
+                failures,
+            )
             if normalize_text(plan_row.get("action_type")) in EXECUTABLE_ACTION_TYPES:
                 require(nonempty(plan_row.get("target_xml_file")), f"executable integration-plan row missing target_xml_file for {prov.get('law_id')} / {prov.get('ref')}", failures)
                 require(nonempty(plan_row.get("exact_uslm_code_identifier")), f"executable integration-plan row missing exact identifier for {prov.get('law_id')} / {prov.get('ref')}", failures)
                 require(nonempty(plan_row.get("exact_textual_command_or_final_statutory_text")), f"executable integration-plan row missing exact command for {prov.get('law_id')} / {prov.get('ref')}", failures)
+                require(not contains_inconsistent_command_text(plan_row.get("exact_textual_command_or_final_statutory_text")), f"inconsistent executable command for {prov.get('law_id')} / {prov.get('ref')}", failures)
+            node_ids = plan_row.get("existing_project_node_ids_to_remove_or_replace") or []
+            require(all(is_valid_node_identifier(v) for v in node_ids), f"invalid node identifier for {prov.get('law_id')} / {prov.get('ref')}", failures)
         if normalize_text(treatment) in EXECUTABLE_LAW_TREATMENTS or (plan_row is not None and normalize_text(plan_row.get("action_type")) in EXECUTABLE_ACTION_TYPES):
             require(nonempty(target) or nonempty(law.get("exact_target")) or nonempty(plan_row.get("exact_uslm_code_identifier")), f"executable provision {prov.get('law_id')} / {prov.get('ref')} missing exact target", failures)
             require(nonempty(exact_change) or nonempty(law.get("exact_enacted_text_or_amendment_command")) or nonempty(plan_row.get("exact_textual_command_or_final_statutory_text")), f"executable provision {prov.get('law_id')} / {prov.get('ref')} missing exact change", failures)
