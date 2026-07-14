@@ -3935,7 +3935,12 @@
       "toc_change": "No TOC change; no new section inserted because the controlling review treats PL-007-045 as repealed/excluded, and current deployment law is already located at 2 U.S.C. 1978.",
       "validation_result": "Resolved as superseded by later/current Capitol Police deployment law and controlling exclude-from-code treatment; no XML insertion performed.",
       "baseline_proof": null,
-      "documented_no_op_explanation": "Although the plan row is mechanically executable, the controlling final ledger states PL-007-045 is repealed and should remain only historical note material. Inserting a new live section would revive repealed text and contradict current 2 U.S.C. 1978."
+      "documented_no_op_explanation": "Although the plan row is mechanically executable, the controlling final ledger states PL-007-045 is repealed and should remain only historical note material. Inserting a new live section would revive repealed text and contradict current 2 U.S.C. 1978.",
+      "later_action_id": "final-current-target:/us/usc/t2/s1978",
+      "superseding_law": "Later/current Capitol Police deployment law codified at 2 U.S.C. 1978; PL-007-045 is repealed under the controlling final ledger.",
+      "shared_target": "/us/usc/t2/s1978",
+      "chronology_explanation": "PL-007-045 would have inserted Capitol Police outside-jurisdiction deployment text, but the controlling review classifies it as repealed; the live Code target is the later/current 2 U.S.C. 1978 provision, so reviving PL-007-045 text would conflict with chronology.",
+      "supersession_proof": "Final XML contains identifier=\"/us/usc/t2/s1978\" in usc/usc02.xml for the current Capitol Police deployment target; ACTION-0128 therefore remains superseded rather than inserted as new live text."
     },
     {
       "action_id": "ACTION-0129",
@@ -5882,9 +5887,7 @@
       "xml_file_after": "usc28.xml",
       "final_section_or_subsection_identifier": "/us/usc/t28/s1",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id87d27482-67ea-11f0-9eeb-e997de6427b9"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 1. Number of justices; quorum The Supreme Court of the United States shall consist of a Chief Justice of the United States and four associate justices. The Supreme Court may determine the number of members required for a quorum. ( June 25, 1948, ch. 646 , 62 Stat. 869 .) Historical and Revision Notes Based on title 28, U.S.C., 1940 ed., \u00a7 321 ( Mar. 3, 1911, ch. 231, \u00a7 215 , 36 Stat. 1152 ). Appointment of \u201cjudges of the Supreme Court\u201d by the President by and with the advice and consent of the Senate is provided by U.S. Constitution art. 2, \u00a7 2, cl. 2. Statutory Notes and Related Subsidiaries Short Title of 2024 Amendment Pub. L. 118\u2013203, \u00a7 1 , Dec. 23, 2024 , 138 Stat. 2693 , provided that: \u201cThis Act [amending section 133 of this title and enacting provisions set out as a note under section 133 of this title ] may be cited as the \u2018Federal Judiciary Stabilization Act of 2024\u2019.\u201d Pub. L. 118\u201373, \u00a7 1 , July 30, 2024 , 138 Stat. 1504 , provided that: \u201cThis Act [amending sections 124 and ",
       "source_file": "codification/laws/laws/PL-011-071/law.txt",
@@ -6009,9 +6012,7 @@
       "xml_file_after": "usc28.xml",
       "final_section_or_subsection_identifier": "/us/usc/t28/s133",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id87ea42d7-67ea-11f0-9eeb-e997de6427b9"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 133. Appointment and number of district judges (a) The President shall appoint, by and with the advice and consent of the Senate may appoint up to five judges for the District of Columbia. (b) In the event that a member of the District Court does not preside over a case for over one month (or 30 days), or otherwise is declared inactive or unfit for office by the Chief Justice of the United States by writing to the President of the United States, the President may then appoint another judge in accordance with section a of this statute. ( June 25, 1948, ch. 646 , 62 Stat. 895 ; Aug. 3, 1949, ch. 387, \u00a7 2(a) , 63 Stat. 493 ; Aug. 14, 1950, ch. 708 , 64 Stat. 443 ; Aug. 29, 1950, ch. 819, \u00a7 1 , 64 Stat. 562 ; Sept. 5, 1950, ch. 848, \u00a7 1 , 64 Stat. 578 ; Feb. 10, 1954, ch. 6, \u00a7 2(a)(3) , 68 Stat. 9 ; Pub. L. 85\u2013310 , Sept. 7, 1957 , 71 Stat. 631 ; Pub. L. 85\u2013508, \u00a7 12(c) , July 7, 1958 , 72 Stat. 348 ; Pub. L. 86\u20133, \u00a7 9(b) , Mar. 18, 1959 , 73 Stat. 8 ; Pub. L. 87\u201336, \u00a7 2(d) , May 19, 196",
       "source_file": "codification/laws/laws/PL-011-072/law.txt",
@@ -7351,9 +7352,7 @@
       "xml_file_after": "usc10.xml",
       "final_section_or_subsection_identifier": "/us/usc/t10/s531",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id87e85a67-76cd-11f0-8437-f8ad163dc8c2"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 531. Original appointments of commissioned officers (a) (1) Original appointments in the grades of second lieutenant, first lieutenant, captain, major, lieutenant colonel, and colonel in the Regular Army, Regular Air Force, and Regular Marine Corps in the grades of ensign, lieutenant (junior grade), lieutenant, lieutenant commander, commander, and captain in the Regular Navy, and in the equivalent grades in the Regular Space Force shall be made by the President alone, or by other such authority or person(s) as designed in writing by the President. (b) The grade of a person receiving an appointment under this section who at the time of appointment (1) is credited with service under section 533 of this title, and (2) is not a commissioned officer of a reserve component shall be determined under regulations prescribed by the Secretary of Defense based upon the amount of service credited. The grade of a person receiving an appointment under this section who at the time of the appointment",
       "source_file": "codification/laws/laws/PL-012-082/law.txt",
@@ -7385,9 +7384,7 @@
       "xml_file_after": "usc10.xml",
       "final_section_or_subsection_identifier": "/us/usc/t10/s12204",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id8b750335-76cd-11f0-8437-f8ad163dc8c2"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 12204. [Reserved] [Reserved] ( Aug. 10, 1956, ch. 1041 , 70A Stat. 25 , \u00a7 594; Pub. L. 100\u2013456, div. A, title XII, \u00a7 1234(a)(1) , Sept. 29, 1988 , 102 Stat. 2059 ; renumbered \u00a7 12204, Pub. L. 103\u2013337, div. A, title XVI, \u00a7 1662(c)(2) , Oct. 5, 1994 , 108 Stat. 2990 ; Pub. L. 109\u2013163, div. A, title X, \u00a7 1057(a)(2) , Jan. 6, 2006 , 119 Stat. 3440 .) Historical and Revision Notes Revised section Source (U.S. Code) Source (Statutes at Large) 594(a) 50:941(c) (less 1st 21 words). July 9, 1952, ch. 608 \u00a7 217(c), 66 Stat. 487 . 594(b) 50:941(c) (1st 21 words). In subsection (a), the words \u201cunless * * * he was formerly\u201d are substituted for the words \u201chas not held an appointment as\u201d. The words \u201cor any component thereof\u201d are omitted as surplusage. Editorial Notes Amendments 2006\u2014Subsec. (b). Pub. L. 109\u2013163 struck out \u201cand Territories\u201d after \u201cStates\u201d. 1994\u2014 Pub. L. 103\u2013337 renumbered section 594 of this title as this section. 1988\u2014Subsec. (b). Pub. L. 100\u2013456 struck out \u201cthe Canal Zone,\u201d after ",
       "source_file": "codification/laws/laws/PL-012-082/law.txt",
@@ -7419,9 +7416,7 @@
       "xml_file_after": "usc10.xml",
       "final_section_or_subsection_identifier": "/us/usc/t10/s12203",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id8b750321-76cd-11f0-8437-f8ad163dc8c2"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 12203. Commissioned officers: appointment, how made; term (a) Appointments of reserve officers in commissioned grades of colonel and captain or below, except commissioned warrant officer, shall be made by the President alone. Appointments of reserve officers in commissioned grades above colonel and captain shall be made by the President, by and with the advice and consent of the Senate, except as provided in section 624, 12213, or 12214 of Title 10 of the United States Code. (b) Subject to the authority, direction, and control of the President, the Secretary of Defense may appoint as a reserve commissioned officer any regular officer transferred from the active-duty list of an armed force to the reserve active-status list of a reserve component under section 647 of this title, notwithstanding the requirements of subsection (a). (c) Appointments of Reserves in commissioned grades are for an indefinite term and are held during the pleasure of the President. ( Aug. 10, 1956, ch. 1041 , ",
       "source_file": "codification/laws/laws/PL-012-082/law.txt",
@@ -7484,9 +7479,7 @@
       "xml_file_after": "usc10.xml",
       "final_section_or_subsection_identifier": "/us/usc/t10/s151",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id87785a26-76cd-11f0-8437-f8ad163dc8c2"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 151. Joint Chiefs of Staff: composition; functions (a) Composition .\u2014 There are in the Department of Defense the Joint Chiefs of Staff, headed by the Chairman of the Joint Chiefs of Staff. The Joint Chiefs of Staff consist of the following: (1) The Chairman. (2) The Vice Chairman. (3) The Chief of Staff of the Army. (4) The Chief of Naval Operations. (5) The Chief of Staff of the Air Force. (6) The Commandant of the Marine Corps. (7) The Chief of the National Guard Bureau, or other principal authority over the National Guard as designated by the Secretary of Defense. (8) The Chief of Space Operations. (b) Function as Military Advisers .\u2014 (1) The Chairman of the Joint Chiefs of Staff is the principal military adviser to the President, the National Security Council, the Homeland Security Council, and the Secretary of Defense. (2) The other members of the Joint Chiefs of Staff are military advisers to the President, the National Security Council, the Homeland Security Council, and the S",
       "source_file": "codification/laws/laws/PL-012-082/law.txt",
@@ -12425,8 +12418,7 @@
         "rp-pl017130-t5-s3331a-a"
       ],
       "actual_node_ids_changed": [
-        "rp-pl017130-codification",
-        "id4ad84ae3-76cc-11f0-953a-e1f6f74af2f3"
+        "rp-pl017130-codification"
       ],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "Added 5 U.S.C. 3331a(a), defining public office, public official, and oath of office by reference to 5 U.S.C. 3331; replaced the stale Title 50 project note with a cross-title placement note.",
@@ -12435,7 +12427,7 @@
       "source_credit_change": "Added source credit at the new Code section for the cited public law sections.",
       "amendment_note_change": "Replaced stale Title 50 project-only note with concise cross-title placement note documenting the corrected implementation target.",
       "toc_change": "Added TOC entry for the new section in the actual target title.",
-      "validation_result": "Affected XML titles parsed after insertion; action tied to actual XML diff after baseline and source-correct cross-title placement.",
+      "validation_result": "Affected XML titles parsed after insertion; action tied to actual XML diff after baseline and source-correct cross-title placement; unchanged neighboring official GUID anchors are not claimed as changed nodes.",
       "baseline_proof": null
     },
     {
@@ -12457,8 +12449,7 @@
         "rp-pl017130-t5-s3331a-d"
       ],
       "actual_node_ids_changed": [
-        "rp-pl017130-codification",
-        "id4ad84ae3-76cc-11f0-953a-e1f6f74af2f3"
+        "rp-pl017130-codification"
       ],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "Added 5 U.S.C. 3331a(b)-(d), requiring elected officials to take the oath within 5 days, appointed officials within 48 hours, acting officials within 24 hours, providing forfeiture for failure to be sworn in, and excluding the President and Vice President.",
@@ -12467,7 +12458,7 @@
       "source_credit_change": "Added source credit at the new Code section for the cited public law sections.",
       "amendment_note_change": "Replaced stale Title 50 project-only note with concise cross-title placement note documenting the corrected implementation target.",
       "toc_change": "Added TOC entry for the new section in the actual target title.",
-      "validation_result": "Affected XML titles parsed after insertion; action tied to actual XML diff after baseline and source-correct cross-title placement.",
+      "validation_result": "Affected XML titles parsed after insertion; action tied to actual XML diff after baseline and source-correct cross-title placement; unchanged neighboring official GUID anchors are not claimed as changed nodes.",
       "baseline_proof": null
     },
     {
@@ -12549,8 +12540,7 @@
         "rp-pl017132-t18-s3182a-a"
       ],
       "actual_node_ids_changed": [
-        "rp-pl017132-codification",
-        "id0ef535bd-0975-11f0-92da-b5363bbf1875"
+        "rp-pl017132-codification"
       ],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "Added 18 U.S.C. 3182a(a), defining extradition as removal of a fugitive from a requested jurisdiction to another jurisdiction for criminal prosecution or punishment; replaced the stale Title 50 project note with a cross-title placement note.",
@@ -12559,7 +12549,7 @@
       "source_credit_change": "Added source credit at the new Code section for the cited public law sections.",
       "amendment_note_change": "Replaced stale Title 50 project-only note with concise cross-title placement note documenting the corrected implementation target.",
       "toc_change": "Added TOC entry for the new section in the actual target title.",
-      "validation_result": "Affected XML titles parsed after insertion; action tied to actual XML diff after baseline and source-correct cross-title placement.",
+      "validation_result": "Affected XML titles parsed after insertion; action tied to actual XML diff after baseline and source-correct cross-title placement; unchanged neighboring official GUID anchors are not claimed as changed nodes.",
       "baseline_proof": null
     },
     {
@@ -12582,8 +12572,7 @@
         "rp-pl017132-t18-s3182a-e"
       ],
       "actual_node_ids_changed": [
-        "rp-pl017132-codification",
-        "id0ef535bd-0975-11f0-92da-b5363bbf1875"
+        "rp-pl017132-codification"
       ],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "Added 18 U.S.C. 3182a(b)-(e), providing extradition-process demands and indictment/affidavit production, treaty/dual-criminality limits, noncitizen crimes-against-U.S.-citizens rule, and Department of State/Department of Justice request and certification requirements.",
@@ -12592,7 +12581,7 @@
       "source_credit_change": "Added source credit at the new Code section for the cited public law sections.",
       "amendment_note_change": "Replaced stale Title 50 project-only note with concise cross-title placement note documenting the corrected implementation target.",
       "toc_change": "Added TOC entry for the new section in the actual target title.",
-      "validation_result": "Affected XML titles parsed after insertion; action tied to actual XML diff after baseline and source-correct cross-title placement.",
+      "validation_result": "Affected XML titles parsed after insertion; action tied to actual XML diff after baseline and source-correct cross-title placement; unchanged neighboring official GUID anchors are not claimed as changed nodes.",
       "baseline_proof": null
     },
     {
@@ -12639,9 +12628,7 @@
       "xml_file_after": "usc28.xml",
       "final_section_or_subsection_identifier": "/us/usc/t28/s100",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id87e316ea-67ea-11f0-9eeb-e997de6427b9"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 100. [Reserved] [Reserved] ( June 25, 1948, ch. 646 , 62 Stat. 882 ; Pub. L. 91\u2013546, \u00a7 4 , Dec. 14, 1970 , 84 Stat. 1412 ; Pub. L. 100\u2013487, \u00a7 1 , Oct. 14, 1988 , 102 Stat. 2431 .) Historical and Revision Notes Based on title 28, U.S.C., 1940 ed., \u00a7 166 ( Mar. 3, 1911, ch. 231, \u00a7 86 , 36 Stat. 1114 ; Mar. 3, 1925, ch. 422 , 43 Stat. 1106 ). Provisions relating to appointment of a deputy clerk and a deputy marshal and the maintenance of offices by such deputies were omitted as covered by sections 541 [see 561], 542 [see 561], and 751 of this title. The provisions respecting court accommodations at Denton were omitted as covered by section 142 of this title . Changes in arrangement and phraseology were made. Editorial Notes Amendments 1988\u2014 Pub. L. 100\u2013702 amended section generally. Prior to amendment, section provided that Maryland constituted one judicial district and that court be held at Baltimore, Cumberland, Denton, and at a suitable site in Prince Georges County not more than fiv",
       "source_file": "codification/laws/laws/PL-017-133/law.txt",
@@ -12766,9 +12753,7 @@
       "xml_file_after": "usc28.xml",
       "final_section_or_subsection_identifier": "/us/usc/t28/s144",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id87f16e68-67ea-11f0-9eeb-e997de6427b9"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 144. Bias or prejudice of judge (a) Whenever a party to any proceeding in the District Court of the District of Columbia makes and files a timely and sufficient affidavit that the judge before whom the matter is pending has a personal bias or prejudice either against him or in favour of any adverse party, such judge shall proceed no further therein. (b) The affidavit shall state the facts and the reasons for the belief that bias or prejudice exists. It shall be accompanied by a certificate of counsel of record stating that it is made in good faith, and may contain relevant supporting evidence. (c) The affidavit shall be reviewed by the Chief Judge of the District Courts within twenty-four (24) hours upon being submitted to the court and they shall assign another judge to hear such proceeding. (d) Any judge who was recused from a case under this code shall not take or be assigned any case which involves any of the same parties within the next fifteen (15) days, and such judge shall be",
       "source_file": "codification/laws/laws/PL-017-135/law.txt",
@@ -12800,9 +12785,7 @@
       "xml_file_after": "usc28.xml",
       "final_section_or_subsection_identifier": "/us/usc/t28/s144",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id87f16e68-67ea-11f0-9eeb-e997de6427b9"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 144. Bias or prejudice of judge (a) Whenever a party to any proceeding in the District Court of the District of Columbia makes and files a timely and sufficient affidavit that the judge before whom the matter is pending has a personal bias or prejudice either against him or in favour of any adverse party, such judge shall proceed no further therein. (b) The affidavit shall state the facts and the reasons for the belief that bias or prejudice exists. It shall be accompanied by a certificate of counsel of record stating that it is made in good faith, and may contain relevant supporting evidence. (c) The affidavit shall be reviewed by the Chief Judge of the District Courts within twenty-four (24) hours upon being submitted to the court and they shall assign another judge to hear such proceeding. (d) Any judge who was recused from a case under this code shall not take or be assigned any case which involves any of the same parties within the next fifteen (15) days, and such judge shall be",
       "source_file": "codification/laws/laws/PL-017-135/law.txt",
@@ -13051,9 +13034,7 @@
       "xml_file_after": "usc05.xml",
       "final_section_or_subsection_identifier": "/us/usc/t5/s7323",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id4b88d5e3-76cc-11f0-953a-e1f6f74af2f3"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 7323. Political activity authorized; prohibitions (a) Subject to the provisions of this act, an employee may take an active part in political management or in political campaigns, except an employee may not\u2014 (I) use their official authority or influence for the purpose of interfering with or affecting the result of an election; (A) either through having a certain role which highlights their position in the federal government, their position being visible in their discord name or profile picture, or stating their position. (II) knowingly solicit or discourage the participation in any political activity of any person who\u2014 (A) has an application for any compensation, contract, ruling, licence, permit, or certificate pending before the employing office of such employee; or (B) is the subject of or a participant in an ongoing investigation, or enforcement action being carried out by the employing office of such employee. (III) contact other employees of the same employing office of such e",
       "source_file": "codification/laws/laws/PL-017-138/law.txt",
@@ -13508,9 +13489,7 @@
       "xml_file_after": "usc10.xml",
       "final_section_or_subsection_identifier": "/us/usc/t10/s1181",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id88c1553a-76cd-11f0-8437-f8ad163dc8c2"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 1181. Authority to establish procedures to consider the separation of officers for substandard performance of duty and for certain other reasons Subject to such limitations as the Secretary of Defense may prescribe, the Secretary of the military department concerned, or the Secretary of Defense, shall prescribe, by regulation, procedures for the review at any time of the record of any commissioned officer (other than a commissioned warrant officer or a retired officer) of the Army, Navy, Air Force, Marine Corps, or Space Force to determine whether such officer shall be required, because of his\u2014 (I) performance of duty has fallen below standards prescribed by the Secretary of Defense; or (II) moral or professional dereliction; or (III) retention is not clearly consistent with the interests of national security; or (IV) misconduct; or (V) violations of the Uniform Code of Military Justice; to show cause for his retention on active duty. (Added Pub. L. 96\u2013513, title I, \u00a7 110 , Dec. 12, ",
       "source_file": "codification/laws/laws/PL-019-145/law.txt",
@@ -13542,9 +13521,7 @@
       "xml_file_after": "usc10.xml",
       "final_section_or_subsection_identifier": "/us/usc/t10/s1161",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id88ba28c8-76cd-11f0-8437-f8ad163dc8c2"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 1161. Commissioned officers: limitations on dismissal (a) No commissioned officer may be dismissed from any armed force except\u2014 (I) by sentence of a general court-martial; (II) in commutation of a sentence of a general court-martial; or (III) by order of the President. (b) The President or the Secretary of Defense, or in the case of a commissioned officer of the Coast Guard, the Secretary of the department in which the Coast Guard is operating when it is not operating in the Navy, may drop from the rolls of any armed force any commissioned officer who\u2014 (I) has been absent without authority for at least two weeks; (II) may be separated under section 1167 of this title by reason of a sentence to confinement adjudged by a court-martial; or (III) is sentenced to confinement in a Federal or State penitentiary or correctional institution after having been found guilty of an offense by a court other than a court-martial or other military court, and whose sentence has become final. ( Aug. 10",
       "source_file": "codification/laws/laws/PL-019-145/law.txt",
@@ -13576,9 +13553,7 @@
       "xml_file_after": "usc10.xml",
       "final_section_or_subsection_identifier": "/us/usc/t10/s1184",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id88c1555f-76cd-11f0-8437-f8ad163dc8c2"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 1184. Removal of officer: action by Secretary upon recommendation of board of inquiry The Secretary of Defense, or the Secretary of the military department concerned may remove an officer from active duty if the removal of such officer from active duty is recommended by a board of inquiry convened under section 1182 of this title. (Added Pub. L. 96\u2013513, title I, \u00a7 110 , Dec. 12, 1980 , 94 Stat. 2874 ; amended Pub. L. 105\u2013261, div. A, title V, \u00a7 503(b)(2) , (c)(1), Oct. 17, 1998 , 112 Stat. 2003 .) Editorial Notes Amendments 1998\u2014 Pub. L. 105\u2013261 substituted \u201cinquiry\u201d for \u201creview\u201d in section catchline and \u201cboard of inquiry convened under section 1182 of this title \u201d for \u201cboard of review convened under section 1183 of this title \u201d in text. Statutory Notes and Related Subsidiaries Effective Date Section effective Sept. 15, 1981 , but the authority to prescribe regulations under this section effective on Dec. 12, 1980 , see section 701 of Pub. L. 96\u2013513 , set out as an Effective Date of ",
       "source_file": "codification/laws/laws/PL-019-145/law.txt",
@@ -13610,9 +13585,7 @@
       "xml_file_after": "usc10.xml",
       "final_section_or_subsection_identifier": "/us/usc/t10/s1161",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id88ba28c8-76cd-11f0-8437-f8ad163dc8c2"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 1161. Commissioned officers: limitations on dismissal (a) No commissioned officer may be dismissed from any armed force except\u2014 (I) by sentence of a general court-martial; (II) in commutation of a sentence of a general court-martial; or (III) by order of the President. (b) The President or the Secretary of Defense, or in the case of a commissioned officer of the Coast Guard, the Secretary of the department in which the Coast Guard is operating when it is not operating in the Navy, may drop from the rolls of any armed force any commissioned officer who\u2014 (I) has been absent without authority for at least two weeks; (II) may be separated under section 1167 of this title by reason of a sentence to confinement adjudged by a court-martial; or (III) is sentenced to confinement in a Federal or State penitentiary or correctional institution after having been found guilty of an offense by a court other than a court-martial or other military court, and whose sentence has become final. ( Aug. 10",
       "source_file": "codification/laws/laws/PL-019-145/law.txt",
@@ -13644,9 +13617,7 @@
       "xml_file_after": "usc10.xml",
       "final_section_or_subsection_identifier": "/us/usc/t10/s1161",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id88ba28c8-76cd-11f0-8437-f8ad163dc8c2"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 1161. Commissioned officers: limitations on dismissal (a) No commissioned officer may be dismissed from any armed force except\u2014 (I) by sentence of a general court-martial; (II) in commutation of a sentence of a general court-martial; or (III) by order of the President. (b) The President or the Secretary of Defense, or in the case of a commissioned officer of the Coast Guard, the Secretary of the department in which the Coast Guard is operating when it is not operating in the Navy, may drop from the rolls of any armed force any commissioned officer who\u2014 (I) has been absent without authority for at least two weeks; (II) may be separated under section 1167 of this title by reason of a sentence to confinement adjudged by a court-martial; or (III) is sentenced to confinement in a Federal or State penitentiary or correctional institution after having been found guilty of an offense by a court other than a court-martial or other military court, and whose sentence has become final. ( Aug. 10",
       "source_file": "codification/laws/laws/PL-019-145/law.txt",
@@ -13678,9 +13649,7 @@
       "xml_file_after": "usc10.xml",
       "final_section_or_subsection_identifier": "/us/usc/t10/s1161",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id88ba28c8-76cd-11f0-8437-f8ad163dc8c2"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 1161. Commissioned officers: limitations on dismissal (a) No commissioned officer may be dismissed from any armed force except\u2014 (I) by sentence of a general court-martial; (II) in commutation of a sentence of a general court-martial; or (III) by order of the President. (b) The President or the Secretary of Defense, or in the case of a commissioned officer of the Coast Guard, the Secretary of the department in which the Coast Guard is operating when it is not operating in the Navy, may drop from the rolls of any armed force any commissioned officer who\u2014 (I) has been absent without authority for at least two weeks; (II) may be separated under section 1167 of this title by reason of a sentence to confinement adjudged by a court-martial; or (III) is sentenced to confinement in a Federal or State penitentiary or correctional institution after having been found guilty of an offense by a court other than a court-martial or other military court, and whose sentence has become final. ( Aug. 10",
       "source_file": "codification/laws/laws/PL-019-145/law.txt",
@@ -13712,9 +13681,7 @@
       "xml_file_after": "usc10.xml",
       "final_section_or_subsection_identifier": "/us/usc/t10/s1161",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id88ba28c8-76cd-11f0-8437-f8ad163dc8c2"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 1161. Commissioned officers: limitations on dismissal (a) No commissioned officer may be dismissed from any armed force except\u2014 (I) by sentence of a general court-martial; (II) in commutation of a sentence of a general court-martial; or (III) by order of the President. (b) The President or the Secretary of Defense, or in the case of a commissioned officer of the Coast Guard, the Secretary of the department in which the Coast Guard is operating when it is not operating in the Navy, may drop from the rolls of any armed force any commissioned officer who\u2014 (I) has been absent without authority for at least two weeks; (II) may be separated under section 1167 of this title by reason of a sentence to confinement adjudged by a court-martial; or (III) is sentenced to confinement in a Federal or State penitentiary or correctional institution after having been found guilty of an offense by a court other than a court-martial or other military court, and whose sentence has become final. ( Aug. 10",
       "source_file": "codification/laws/laws/PL-019-145/law.txt",
@@ -14342,9 +14309,7 @@
       "xml_file_after": "usc28.xml",
       "final_section_or_subsection_identifier": "/us/usc/t28/s1911",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id887963ab-67ea-11f0-9eeb-e997de6427b9"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 1911. [Reserved] [Reserved] ( June 25, 1948, ch. 646 , 62 Stat. 954 .) Historical and Revision Notes Based on title 28, U.S.C., 1940 ed., \u00a7 330 ( Mar. 3, 1911, ch. 231, \u00a7 223 , 36 Stat. 1153 ). The second paragraph was inserted to give statutory sanction to existing practice. Changes were made in phraseology. USAR Amendments Pub. L. 19\u2013151, \u00a7 4 , \u00a7 4(1), repealed this section.",
       "source_file": "codification/laws/laws/PL-019-151/law.txt",
@@ -14376,9 +14341,7 @@
       "xml_file_after": "usc28.xml",
       "final_section_or_subsection_identifier": "/us/usc/t28/s1911",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id887963ab-67ea-11f0-9eeb-e997de6427b9"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 1911. [Reserved] [Reserved] ( June 25, 1948, ch. 646 , 62 Stat. 954 .) Historical and Revision Notes Based on title 28, U.S.C., 1940 ed., \u00a7 330 ( Mar. 3, 1911, ch. 231, \u00a7 223 , 36 Stat. 1153 ). The second paragraph was inserted to give statutory sanction to existing practice. Changes were made in phraseology. USAR Amendments Pub. L. 19\u2013151, \u00a7 4 , \u00a7 4(1), repealed this section.",
       "source_file": "codification/laws/laws/PL-019-151/law.txt",
@@ -14919,9 +14882,7 @@
       "xml_file_after": "usc28.xml",
       "final_section_or_subsection_identifier": "/us/usc/t28/s1253",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id8850cc3d-67ea-11f0-9eeb-e997de6427b9"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 1253. Supreme Court review of district court cases (a) By writ of certiorari granted upon the petition of any party to any civil or criminal case, before or after rendition of judgement or decree; (b) By certification at any time by a district court of any question of law in any civil or criminal case as to which instructions are desired, and upon such certification the Supreme Court may give binding instructions or require the entire record to be sent up for decision of the entire matter in controversy; and (c) Any other method as established by an act of Congress or rule of the Supreme Court. ( June 25, 1948, ch. 646 , 62 Stat. 928 .) Historical and Revision Notes Based on title 28, U.S.C., 1940 ed., \u00a7\u00a7 47, 47a, 380 and 380a ( Mar. 3, 1911, ch. 231 , \u00a7\u00a7 210, 266, 36 Stat. 1150 , 1162; Mar. 4, 1913, ch. 160 , 37 Stat. 1013 ; Oct. 22, 1913, ch. 32 , 38, Stat. 220; Feb. 13, 1925, ch. 229, \u00a7 1 , 43 Stat. 938 ; Aug. 24, 1937, ch. 754, \u00a7 3 , 50 Stat. 752 ). This section consolidates the ",
       "source_file": "codification/laws/laws/PL-022-162/law.txt",
@@ -14953,9 +14914,7 @@
       "xml_file_after": "usc28.xml",
       "final_section_or_subsection_identifier": "/us/usc/t28/s1257",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id8850cc51-67ea-11f0-9eeb-e997de6427b9"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 1257. Review of final judgments and orders (a) Final judgments, decrees rendered, interlocutory orders, and other matters may be reviewed by the Supreme Court as follows\u2014 (I) by appeal, where is drawn in question the validity of a treaty or statute of the United States; (II) by certified question, where submitted by the clerk of the court below; (III) by certiorari, in all other cases. (b) The Supreme Court shall grant a writ of certiorari in all cases where\u2014 (I) the petition for certiorari presents questions of sufficient importance; (II) the petition for certiorari presents questions of first impression that should be decided by the Supreme Court but have not been; (III) the decision below is in contradiction to other decisions in the lower courts; (IV) the petition for certiorari establishes a reasonable suspicion that the decision below was erroneous or otherwise merits correction or clarification; (V) in its discretion, the Court finds the case merits review. ( June 25, 1948, ch",
       "source_file": "codification/laws/laws/PL-022-162/law.txt",
@@ -14987,9 +14946,7 @@
       "xml_file_after": "usc28.xml",
       "final_section_or_subsection_identifier": "/us/usc/t28/s1291",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id8850cc79-67ea-11f0-9eeb-e997de6427b9"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 1291. Jurisdiction of appeals from district courts The Supreme Court shall have jurisdiction of appeals from all final decisions of the district courts of the United States. ( June 25, 1948, ch. 646 , 62 Stat. 929 ; Oct. 31, 1951, ch. 655, \u00a7 48 , 65 Stat. 726 ; Pub. L. 85\u2013508, \u00a7 12(e) , July 7, 1958 , 72 Stat. 348 ; Pub. L. 97\u2013164, title I, \u00a7 124 , Apr. 2, 1982 , 96 Stat. 36 .) Historical and Revision Notes Based on title 28, U.S.C., 1940 ed., \u00a7\u00a7 225(a), 933(a)(1), and section 1356 of title 48 , U.S.C., 1940 ed., Territories and Insular Possessions, and sections 61 and 62 of title 7 of the Canal Zone Code ( Mar. 3, 1911, ch. 231, \u00a7 128 , 36 Stat. 1133 ; Aug. 24, 1912, ch. 390, \u00a7 9 , 37 Stat. 566 ; Jan. 28, 1915, ch. 22, \u00a7 2 , 38 Stat. 804 ; Feb. 7, 1925, ch. 150 , 43 Stat. 813 ; Sept. 21, 1922, ch. 370, \u00a7 3 , 42 Stat. 1006 ; Feb. 13, 1925, ch. 229, \u00a7 1 , 43 Stat. 936 ; Jan. 31, 1928, ch. 14, \u00a7 1 , 45 Stat. 54 ; May 17, 1932, ch. 190 , 47 Stat. 158 ; Feb. 16, 1933, ch. 91, \u00a7 3 , 47 St",
       "source_file": "codification/laws/laws/PL-022-162/law.txt",
@@ -15300,9 +15257,7 @@
       "xml_file_after": "usc18.xml",
       "final_section_or_subsection_identifier": "/us/usc/t18/s930/g/1",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id0e4e47fd-0975-11f0-92da-b5363bbf1875"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "(1) The term \u201cFederal facility\u201d means a building or part thereof owned or leased by the Federal Government, where Federal employees are regularly present for the purpose of performing their official duties, with the exemption of all roads and sidewalks in the District of Columbia that have not been closed pursuant to law, including but not limited to Public Law 19-144 (as amended by Public Law 22-157).",
       "source_file": "codification/laws/laws/PL-023-165/law.txt",
@@ -16195,21 +16150,18 @@
       "xml_file_before": "usc42.xml",
       "xml_file_after": "usc42.xml",
       "final_section_or_subsection_identifier": "/us/usc/t42/s2000e?2/a/1 | /us/usc/t42/s2000e?2/a/2",
-      "actual_node_ids_added": [
-        "rp-ede27a57108bfb831afb"
-      ],
+      "actual_node_ids_added": [],
       "actual_node_ids_changed": [
-        "id7abea489-76ce-11f0-b9ee-f4c4e6720c71",
-        "id7abea48a-76ce-11f0-b9ee-f4c4e6720c71"
+        "rp-ede27a57108bfb831afb"
       ],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "Amended 42 U.S.C. 2000e-2(a)(1) and (a)(2) so the protected characteristics read race, color, religion, sex, gender identity, sexual orientation, or national origin.",
       "source_file": "codification/laws/laws/PL-024-178/law.txt",
       "source_quotation": "SEC. 6. PROHIBITION OF DISCRIMINATION(a) Amendments to Title VII of the Civil Rights Act of 1964: Amend Section 703(a) ... to include gender identity and sexual orientation as protected classes.",
-      "source_credit_change": "No source-credit line changed; this Title 42 section records the change through a USAR amendment note.",
-      "amendment_note_change": "Existing USAR Amendments note under 42 U.S.C. 2000e-2 records Pub. L. 24-178, sec. 6(a)(1), inserting gender identity and sexual orientation after sex in subsection (a)(1) and (a)(2).",
+      "source_credit_change": "No source-credit line changed; the final Title 42 XML records the change through the changed USAR amendment note rp-ede27a57108bfb831afb.",
+      "amendment_note_change": "Changed USAR Amendments note rp-ede27a57108bfb831afb under 42 U.S.C. 2000e-2 records Pub. L. 24-178, sec. 6(a)(1), and the baseline LFS object confirms the protected-characteristic text was already present.",
       "toc_change": "No TOC change required; existing section 2000e-2 remains the target.",
-      "validation_result": "Working usc42.xml contains the amended subsection text and the PL-024-178 amendment note; result tied to changed Title 42 XML after baseline.",
+      "validation_result": "Working usc42.xml contains the baseline-satisfied amended subsection text and a changed PL-024-178 USAR amendment note; validation resolves the Title 42 LFS baseline object before comparing node proof.",
       "baseline_proof": null
     },
     {
@@ -16982,9 +16934,7 @@
       "xml_file_after": "usc50.xml",
       "final_section_or_subsection_identifier": "/us/usc/t50/s3371a",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id98439456-7e89-11f0-a93b-d1785429c93b"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 3371a. [Reserved] [Reserved] ( Pub. L. 116\u201392, div. E, title LXV, \u00a7 6503 , Dec. 20, 2019 , 133 Stat. 2203 ; Pub. L. 117\u2013263, div. G, title LXXI, \u00a7 7143(d)(7) , Dec. 23, 2022 , 136 Stat. 3664 .) Editorial Notes Amendments 2022\u2014Subsec. (a)(3). Pub. L. 117\u2013263 substituted \u201c section 650 of title 6 \u201d for \u201c section 1501 of title 6 \u201d. Statutory Notes and Related Subsidiaries Definitions For definitions of \u201ccongressional intelligence committees\u201d and \u201cintelligence community\u201d, referred to in text, see section 5003 of div. E of Pub. L. 116\u201392 , set out as a note under section 3003 of this title . USAR Amendments Pub. L. 26\u2013188, \u00a7 3 , \u00a7 3(b), repealed this section.",
       "source_file": "codification/laws/laws/PL-026-188/law.txt",
@@ -17165,9 +17115,7 @@
       "xml_file_after": "usc28.xml",
       "final_section_or_subsection_identifier": "/us/usc/t28/s331",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id87ffc6b4-67ea-11f0-9eeb-e997de6427b9"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 331. Judicial Conference of the United States (a) The Chief Justice of the United States shall summon, as he deems necessary, two judges of the federal court, and two justices of the Supreme Court to a conference which the Chief shall preside over and at such time and place in the United States as he may designate. Special sessions of the Conference may be called by the Chief Justice at such times and places as he may designate. (b) The federal judges shall be chosen by the concurrence of a majority of all federal judges of their court, and when there is no such concurrence, then by the Chief Judge, and shall serve as a member of the Judicial Conference of the United States for a term of not less than four (4) successive months nor more than six (6) successive months, as established by majority vote of all the federal judges of their court. The justices shall be chosen by the Chief Justice and shall serve as a member of the Judicial Conference of the United States for a term of not l",
       "source_file": "codification/laws/laws/PL-026-190/law.txt",
@@ -17199,9 +17147,7 @@
       "xml_file_after": "usc28.xml",
       "final_section_or_subsection_identifier": "/us/usc/t28/s331",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id87ffc6b4-67ea-11f0-9eeb-e997de6427b9"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 331. Judicial Conference of the United States (a) The Chief Justice of the United States shall summon, as he deems necessary, two judges of the federal court, and two justices of the Supreme Court to a conference which the Chief shall preside over and at such time and place in the United States as he may designate. Special sessions of the Conference may be called by the Chief Justice at such times and places as he may designate. (b) The federal judges shall be chosen by the concurrence of a majority of all federal judges of their court, and when there is no such concurrence, then by the Chief Judge, and shall serve as a member of the Judicial Conference of the United States for a term of not less than four (4) successive months nor more than six (6) successive months, as established by majority vote of all the federal judges of their court. The justices shall be chosen by the Chief Justice and shall serve as a member of the Judicial Conference of the United States for a term of not l",
       "source_file": "codification/laws/laws/PL-026-190/law.txt",
@@ -17233,9 +17179,7 @@
       "xml_file_after": "usc28.xml",
       "final_section_or_subsection_identifier": "/us/usc/t28/s331",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id87ffc6b4-67ea-11f0-9eeb-e997de6427b9"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 331. Judicial Conference of the United States (a) The Chief Justice of the United States shall summon, as he deems necessary, two judges of the federal court, and two justices of the Supreme Court to a conference which the Chief shall preside over and at such time and place in the United States as he may designate. Special sessions of the Conference may be called by the Chief Justice at such times and places as he may designate. (b) The federal judges shall be chosen by the concurrence of a majority of all federal judges of their court, and when there is no such concurrence, then by the Chief Judge, and shall serve as a member of the Judicial Conference of the United States for a term of not less than four (4) successive months nor more than six (6) successive months, as established by majority vote of all the federal judges of their court. The justices shall be chosen by the Chief Justice and shall serve as a member of the Judicial Conference of the United States for a term of not l",
       "source_file": "codification/laws/laws/PL-026-190/law.txt",
@@ -17292,9 +17236,7 @@
       "xml_file_after": "usc28.xml",
       "final_section_or_subsection_identifier": "/us/usc/t28/s331",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id87ffc6b4-67ea-11f0-9eeb-e997de6427b9"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 331. Judicial Conference of the United States (a) The Chief Justice of the United States shall summon, as he deems necessary, two judges of the federal court, and two justices of the Supreme Court to a conference which the Chief shall preside over and at such time and place in the United States as he may designate. Special sessions of the Conference may be called by the Chief Justice at such times and places as he may designate. (b) The federal judges shall be chosen by the concurrence of a majority of all federal judges of their court, and when there is no such concurrence, then by the Chief Judge, and shall serve as a member of the Judicial Conference of the United States for a term of not less than four (4) successive months nor more than six (6) successive months, as established by majority vote of all the federal judges of their court. The justices shall be chosen by the Chief Justice and shall serve as a member of the Judicial Conference of the United States for a term of not l",
       "source_file": "codification/laws/laws/PL-026-190/law.txt",
@@ -17326,9 +17268,7 @@
       "xml_file_after": "usc28.xml",
       "final_section_or_subsection_identifier": "/us/usc/t28/s331",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id87ffc6b4-67ea-11f0-9eeb-e997de6427b9"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 331. Judicial Conference of the United States (a) The Chief Justice of the United States shall summon, as he deems necessary, two judges of the federal court, and two justices of the Supreme Court to a conference which the Chief shall preside over and at such time and place in the United States as he may designate. Special sessions of the Conference may be called by the Chief Justice at such times and places as he may designate. (b) The federal judges shall be chosen by the concurrence of a majority of all federal judges of their court, and when there is no such concurrence, then by the Chief Judge, and shall serve as a member of the Judicial Conference of the United States for a term of not less than four (4) successive months nor more than six (6) successive months, as established by majority vote of all the federal judges of their court. The justices shall be chosen by the Chief Justice and shall serve as a member of the Judicial Conference of the United States for a term of not l",
       "source_file": "codification/laws/laws/PL-026-190/law.txt",
@@ -17360,9 +17300,7 @@
       "xml_file_after": "usc28.xml",
       "final_section_or_subsection_identifier": "/us/usc/t28/s331",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id87ffc6b4-67ea-11f0-9eeb-e997de6427b9"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 331. Judicial Conference of the United States (a) The Chief Justice of the United States shall summon, as he deems necessary, two judges of the federal court, and two justices of the Supreme Court to a conference which the Chief shall preside over and at such time and place in the United States as he may designate. Special sessions of the Conference may be called by the Chief Justice at such times and places as he may designate. (b) The federal judges shall be chosen by the concurrence of a majority of all federal judges of their court, and when there is no such concurrence, then by the Chief Judge, and shall serve as a member of the Judicial Conference of the United States for a term of not less than four (4) successive months nor more than six (6) successive months, as established by majority vote of all the federal judges of their court. The justices shall be chosen by the Chief Justice and shall serve as a member of the Judicial Conference of the United States for a term of not l",
       "source_file": "codification/laws/laws/PL-026-190/law.txt",
@@ -17394,9 +17332,7 @@
       "xml_file_after": "usc28.xml",
       "final_section_or_subsection_identifier": "/us/usc/t28/s331",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id87ffc6b4-67ea-11f0-9eeb-e997de6427b9"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 331. Judicial Conference of the United States (a) The Chief Justice of the United States shall summon, as he deems necessary, two judges of the federal court, and two justices of the Supreme Court to a conference which the Chief shall preside over and at such time and place in the United States as he may designate. Special sessions of the Conference may be called by the Chief Justice at such times and places as he may designate. (b) The federal judges shall be chosen by the concurrence of a majority of all federal judges of their court, and when there is no such concurrence, then by the Chief Judge, and shall serve as a member of the Judicial Conference of the United States for a term of not less than four (4) successive months nor more than six (6) successive months, as established by majority vote of all the federal judges of their court. The justices shall be chosen by the Chief Justice and shall serve as a member of the Judicial Conference of the United States for a term of not l",
       "source_file": "codification/laws/laws/PL-026-190/law.txt",
@@ -17428,9 +17364,7 @@
       "xml_file_after": "usc28.xml",
       "final_section_or_subsection_identifier": "/us/usc/t28/s331",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id87ffc6b4-67ea-11f0-9eeb-e997de6427b9"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 331. Judicial Conference of the United States (a) The Chief Justice of the United States shall summon, as he deems necessary, two judges of the federal court, and two justices of the Supreme Court to a conference which the Chief shall preside over and at such time and place in the United States as he may designate. Special sessions of the Conference may be called by the Chief Justice at such times and places as he may designate. (b) The federal judges shall be chosen by the concurrence of a majority of all federal judges of their court, and when there is no such concurrence, then by the Chief Judge, and shall serve as a member of the Judicial Conference of the United States for a term of not less than four (4) successive months nor more than six (6) successive months, as established by majority vote of all the federal judges of their court. The justices shall be chosen by the Chief Justice and shall serve as a member of the Judicial Conference of the United States for a term of not l",
       "source_file": "codification/laws/laws/PL-026-190/law.txt",
@@ -17915,9 +17849,7 @@
       "xml_file_after": "usc05.xml",
       "final_section_or_subsection_identifier": "/us/usc/t5/s6103",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id4b69dc8f-76cc-11f0-953a-e1f6f74af2f3"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 6103. Holidays (a) The following are legal public holidays: New Year\u2019s Day, January 1. Birthday of Martin Luther King, Jr., the third Monday in January. Washington\u2019s Birthday, the third Monday in February. Memorial Day, the last Monday in May. National Fast Food Workers Day, June 7. National Root Beer Day, June 17. Juneteenth National Independence Day, June 19. Independence Day, July 4. Labor Day, the first Monday in September. Columbus Day, the second Monday in October. Veterans Day, November 11. Thanksgiving Day, the fourth Thursday in November. Christmas Day, December 25. (b) For the purpose of statutes relating to pay and leave of employees, with respect to a legal public holiday and any other day declared to be a holiday by Federal statute or Executive order, the following rules apply: (1) Instead of a holiday that occurs on a Saturday, the Friday immediately before is a legal public holiday for\u2014 (A) employees whose basic workweek is Monday through Friday; and (B) the purpose of",
       "source_file": "codification/laws/laws/PL-027-194/law.txt",
@@ -19759,9 +19691,7 @@
       "xml_file_after": "usc18.xml",
       "final_section_or_subsection_identifier": "/us/usc/t18/s3283",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id0efa1818-0975-11f0-92da-b5363bbf1875"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 3283. [Reserved] [Reserved] ( June 25, 1948, ch. 645 , 62 Stat. 828 ; Pub. L. 103\u2013322, title XXXIII, \u00a7 330018(a) , Sept. 13, 1994 , 108 Stat. 2149 ; Pub. L. 108\u201321, title II, \u00a7 202 , Apr. 30, 2003 , 117 Stat. 660 ; Pub. L. 109\u2013162, title XI, \u00a7 1182(c) , Jan. 5, 2006 , 119 Stat. 3126 .) Historical and Revision Notes Based on title 18, U.S.C., 1940 ed., \u00a7 584 (R.S. \u00a7 1046; July 5, 1884, ch. 225, \u00a7 2 , 23 Stat. 122 ). Words \u201ccustoms laws\u201d were substituted for \u201crevenue laws,\u201d since different limitations are provided for internal revenue violations by section 3748 of title 26 , U.S.C., 1940 ed., Internal Revenue Code. This section was held to apply to offenses under the customs laws. Those offenses are within the term \u201crevenue laws\u201d but not within the term \u201cinternal revenue laws\u201d. United States v. Hirsch (1879, 100 U.S. 33, 25 L. Ed. 539), United States v. Shorey (1869, Fed. Cas. No. 16,282), and United States v. Platt (1840, Fed. Cas. No. 16,054a) applied this section in customs cases. H",
       "source_file": "codification/laws/laws/PL-029-207/law.txt",
@@ -19793,9 +19723,7 @@
       "xml_file_after": "usc41.xml",
       "final_section_or_subsection_identifier": "/us/usc/t41/s7103",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id6a3461c4-f87e-11ef-932e-f3771f3e9792"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 7103. Decision by contracting officer (a) Claims Generally.\u2014 (1) Submission of contractor\u2019s claims to contracting officer .\u2014 Each claim by a contractor against the Federal Government relating to a contract shall be submitted to the contracting officer for a decision. (2) Contractor\u2019s claims in writing .\u2014 Each claim by a contractor against the Federal Government relating to a contract shall be in writing. (3) Contracting officer to decide federal government\u2019s claims .\u2014 Each claim by the Federal Government against a contractor relating to a contract shall be the subject of a written decision by the contracting officer. (4) Time for submitting claims.&#8212; [Repealed.] (5) Applicability .\u2014 The authority of this subsection and subsections (c)(1), (d), and (e) does not extend to a claim or dispute for penalties or forfeitures prescribed by statute or regulation that another Federal agency is specifically authorized to administer, settle, or determine. (b) Certification of Claims.\u2014 (1) Re",
       "source_file": "codification/laws/laws/PL-029-207/law.txt",
@@ -19827,9 +19755,7 @@
       "xml_file_after": "usc18.xml",
       "final_section_or_subsection_identifier": "/us/usc/t18/s3156/a/3",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id0ef07acc-0975-11f0-92da-b5363bbf1875"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "(3) the term \u201cfelony\u201d means an offense punishable by a maximum term of imprisonment of more than one year;",
       "source_file": "codification/laws/laws/PL-029-207/law.txt",
@@ -19861,9 +19787,7 @@
       "xml_file_after": "usc18.xml",
       "final_section_or_subsection_identifier": "/us/usc/t18/s3156/a/3",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id0ef07acc-0975-11f0-92da-b5363bbf1875"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "(3) the term \u201cfelony\u201d means an offense punishable by a maximum term of imprisonment of more than one year;",
       "source_file": "codification/laws/laws/PL-029-207/law.txt",
@@ -20391,9 +20315,7 @@
       "xml_file_after": "usc03.xml",
       "final_section_or_subsection_identifier": "/us/usc/t3/s19",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "idc5692268-fcac-11ee-92c7-c1f55dba3055"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 19. Vacancy in offices of both President and Vice President; officers eligible to act (a) (1) If, by reason of death, resignation, removal from office, inability, or failure to qualify, there is neither a President nor Vice President to discharge the powers and duties of the office of President, then the Speaker of the House of Representatives shall, upon his resignation as Speaker and as Representative in Congress, act as President. (2) The same rule shall apply in the case of the death, resignation, removal from office, or inability of an individual acting as President under this subsection. (b) If, at the time when under subsection (a) of this section a Speaker is to begin the discharge of the powers and duties of the office of President, there is no Speaker, or the Speaker fails to qualify as Acting President, then the President pro tempore of the Senate shall, upon his resignation as President pro tempore and as Senator, act as President. (c) An individual acting as President un",
       "source_file": "codification/laws/laws/PL-029-211/law.txt",
@@ -20729,9 +20651,7 @@
       "xml_file_after": "usc03.xml",
       "final_section_or_subsection_identifier": "/us/usc/t3/s19",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "idc5692268-fcac-11ee-92c7-c1f55dba3055"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 19. Vacancy in offices of both President and Vice President; officers eligible to act (a) (1) If, by reason of death, resignation, removal from office, inability, or failure to qualify, there is neither a President nor Vice President to discharge the powers and duties of the office of President, then the Speaker of the House of Representatives shall, upon his resignation as Speaker and as Representative in Congress, act as President. (2) The same rule shall apply in the case of the death, resignation, removal from office, or inability of an individual acting as President under this subsection. (b) If, at the time when under subsection (a) of this section a Speaker is to begin the discharge of the powers and duties of the office of President, there is no Speaker, or the Speaker fails to qualify as Acting President, then the President pro tempore of the Senate shall, upon his resignation as President pro tempore and as Senator, act as President. (c) An individual acting as President un",
       "source_file": "codification/laws/laws/PL-029-215/law.txt",
@@ -20763,9 +20683,7 @@
       "xml_file_after": "usc03.xml",
       "final_section_or_subsection_identifier": "/us/usc/t3/s19",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "idc5692268-fcac-11ee-92c7-c1f55dba3055"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 19. Vacancy in offices of both President and Vice President; officers eligible to act (a) (1) If, by reason of death, resignation, removal from office, inability, or failure to qualify, there is neither a President nor Vice President to discharge the powers and duties of the office of President, then the Speaker of the House of Representatives shall, upon his resignation as Speaker and as Representative in Congress, act as President. (2) The same rule shall apply in the case of the death, resignation, removal from office, or inability of an individual acting as President under this subsection. (b) If, at the time when under subsection (a) of this section a Speaker is to begin the discharge of the powers and duties of the office of President, there is no Speaker, or the Speaker fails to qualify as Acting President, then the President pro tempore of the Senate shall, upon his resignation as President pro tempore and as Senator, act as President. (c) An individual acting as President un",
       "source_file": "codification/laws/laws/PL-029-215/law.txt",
@@ -21355,9 +21273,7 @@
       "xml_file_after": "usc28.xml",
       "final_section_or_subsection_identifier": "/us/usc/t28/s2074/a",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id88808f83-67ea-11f0-9eeb-e997de6427b9"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "(a) The Supreme Court shall transmit to the Congress not later than seven days after a rule prescribed under section 2072 is to become effective a copy of the proposed rule. Such rule shall take effect no earlier than fourteen days after such rule is so transmitted unless otherwise provided by law. The Supreme Court may fix the extent such rule shall apply to proceedings then pending, except that the Supreme Court shall not require the application of such rule to further proceedings then pending to the extent that, in the opinion of the court in which such proceedings are pending, the application of such rule in such proceedings would not be feasible or would work injustice, in which event the former rule applies.",
       "source_file": "codification/laws/laws/PL-030-221/law.txt",
@@ -21544,9 +21460,7 @@
       "xml_file_after": "usc05.xml",
       "final_section_or_subsection_identifier": "/us/usc/t5/s3345",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id4adabb2e-76cc-11f0-953a-e1f6f74af2f3"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 3345. Acting officers (a) If an officer of an Executive agency (including the Executive Office of the President, and other than the Government Accountability Office) whose appointment to office is required to be made by the President, by and with the advice and consent of the Senate, dies, resigns, or is otherwise unable to perform the functions and duties of the office? (1) the first assistant to the office of such officer shall perform the functions and duties of the office temporarily in an acting capacity subject to the time limitations of section 3346; (2) notwithstanding paragraph (1), the President (and only the President) may direct an officer or employee of such Executive agency to perform the functions and duties of the vacant office temporarily in an acting capacity, subject to the time limitations of section 3346, if? (A) during the 60-day period preceding the date of death, resignation, or beginning of inability to serve of the applicable officer, the officer or employee",
       "source_file": "codification/laws/laws/PL-030-224/law.txt",
@@ -21578,9 +21492,7 @@
       "xml_file_after": "usc05.xml",
       "final_section_or_subsection_identifier": "/us/usc/t5/s3345",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id4adabb2e-76cc-11f0-953a-e1f6f74af2f3"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 3345. Acting officers (a) If an officer of an Executive agency (including the Executive Office of the President, and other than the Government Accountability Office) whose appointment to office is required to be made by the President, by and with the advice and consent of the Senate, dies, resigns, or is otherwise unable to perform the functions and duties of the office? (1) the first assistant to the office of such officer shall perform the functions and duties of the office temporarily in an acting capacity subject to the time limitations of section 3346; (2) notwithstanding paragraph (1), the President (and only the President) may direct an officer or employee of such Executive agency to perform the functions and duties of the vacant office temporarily in an acting capacity, subject to the time limitations of section 3346, if? (A) during the 60-day period preceding the date of death, resignation, or beginning of inability to serve of the applicable officer, the officer or employee",
       "source_file": "codification/laws/laws/PL-030-224/law.txt",
@@ -21798,9 +21710,7 @@
       "xml_file_after": "usc05.xml",
       "final_section_or_subsection_identifier": "/us/usc/t5/s101",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id4a3d6a0d-76cc-11f0-953a-e1f6f74af2f3"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 101. Executive departments The Executive departments are: The Department of State. The Department of the Treasury. The Department of Defense. The Department of Justice. The Department of Commerce and Labor. The Department of Homeland Security. ( Pub. L. 89\u2013554 , Sept. 6, 1966 , 80 Stat. 378 ; Pub. L. 89\u2013670, \u00a7 10(b) , Oct. 15, 1966 , 80 Stat. 948 ; Pub. L. 91\u2013375, \u00a7 6(c)(1) , Aug. 12, 1970 , 84 Stat. 775 ; Pub. L. 95\u201391, title VII, \u00a7 710(a) , Aug. 4, 1977 , 91 Stat. 609 ; Pub. L. 96\u201388, title V, \u00a7 508(b) , Oct. 17, 1979 , 93 Stat. 692 ; Pub. L. 100\u2013527, \u00a7 13(b) , Oct. 25, 1988 , 102 Stat. 2643 ; Pub. L. 109\u2013241, title IX, \u00a7 902(a)(1) , July 11, 2006 , 120 Stat. 566 .) Historical and Revision Notes Derivation U.S. Code Revised Statutes and Statutes at Large 5 U.S.C. 1 . R.S. \u00a7 158. Feb. 9, 1889, ch. 122, \u00a7 1 (38th through 54th words), 25 Stat. 659 . Feb. 14, 1903, ch. 552, \u00a7 1 (83d through 99th words), 32 Stat. 825 . Mar. 4, 1913, ch. 141, \u00a7 1 (75th through 91st words), 37 Stat. 736 .",
       "source_file": "codification/laws/laws/PL-031-226/law.txt",
@@ -21832,9 +21742,7 @@
       "xml_file_after": "usc22.xml",
       "final_section_or_subsection_identifier": "/us/usc/t22/s2421",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id1f1a8f33-76ce-11f0-9cf8-afb1edfc976c"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 2421. Trade and Development Agency (a) Purpose The Trade and Development Agency shall be an agency of the United States under the foreign policy guidance of the Secretary of State. The purpose of the Trade and Development Agency is to promote United States private sector participation in development projects in developing and middle-income countries, with special emphasis on economic sectors with significant United States export potential, such as energy, transportation, telecommunications, and environment. (b) Authority to provide assistance (1) Authority The Director of the Trade and Development Agency is authorized to work with foreign countries, including those in which the United States development programs have been concluded or those not receiving assistance under subchapter I of this chapter, to carry out the purpose of this section by providing funds for feasibility studies, architectural and engineering design, and other activities related to development projects which prov",
       "source_file": "codification/laws/laws/PL-031-226/law.txt",
@@ -21866,9 +21774,7 @@
       "xml_file_after": "usc05.xml",
       "final_section_or_subsection_identifier": "/us/usc/t5/s101",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id4a3d6a0d-76cc-11f0-953a-e1f6f74af2f3"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 101. Executive departments The Executive departments are: The Department of State. The Department of the Treasury. The Department of Defense. The Department of Justice. The Department of Commerce and Labor. The Department of Homeland Security. ( Pub. L. 89\u2013554 , Sept. 6, 1966 , 80 Stat. 378 ; Pub. L. 89\u2013670, \u00a7 10(b) , Oct. 15, 1966 , 80 Stat. 948 ; Pub. L. 91\u2013375, \u00a7 6(c)(1) , Aug. 12, 1970 , 84 Stat. 775 ; Pub. L. 95\u201391, title VII, \u00a7 710(a) , Aug. 4, 1977 , 91 Stat. 609 ; Pub. L. 96\u201388, title V, \u00a7 508(b) , Oct. 17, 1979 , 93 Stat. 692 ; Pub. L. 100\u2013527, \u00a7 13(b) , Oct. 25, 1988 , 102 Stat. 2643 ; Pub. L. 109\u2013241, title IX, \u00a7 902(a)(1) , July 11, 2006 , 120 Stat. 566 .) Historical and Revision Notes Derivation U.S. Code Revised Statutes and Statutes at Large 5 U.S.C. 1 . R.S. \u00a7 158. Feb. 9, 1889, ch. 122, \u00a7 1 (38th through 54th words), 25 Stat. 659 . Feb. 14, 1903, ch. 552, \u00a7 1 (83d through 99th words), 32 Stat. 825 . Mar. 4, 1913, ch. 141, \u00a7 1 (75th through 91st words), 37 Stat. 736 .",
       "source_file": "codification/laws/laws/PL-031-226/law.txt",
@@ -22086,9 +21992,7 @@
       "xml_file_after": "usc02.xml",
       "final_section_or_subsection_identifier": "/us/usc/t2/s192",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id1cd7c3cb-3732-11f0-8c26-abc42868c5ad"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 192. Refusal of witness to testify or produce papers Every person who having been summoned as a witness by the authority of either House of Congress to give testimony or to produce papers upon any matter under inquiry before either House, or any joint committee established by a joint or concurrent resolution of the two Houses of Congress, or any committee of either House of Congress, willfully makes default, or who, having appeared, refuses to answer any question pertinent to the question under inquiry, shall be deemed guilty of a misdemeanor, punishable by a fine of not more than $1,000 nor less than $100 and imprisonment in a common jail for not less than one month nor more than twelve months. (R.S. \u00a7 102; June 22, 1938, ch. 594 , 52 Stat. 942 .) Editorial Notes Codification R.S. \u00a7 102 derived from act Jan. 24, 1857, ch. 19, \u00a7 1 , 11 Stat. 155 . Amendments 1938\u2014Act June 22, 1938 , reenacted section without change. USAR Amendments Pub. L. 31-228, \u00a7 4, repealed Public Law 16-112 and ",
       "source_file": "codification/laws/laws/PL-031-228/law.txt",
@@ -22213,9 +22117,7 @@
       "xml_file_after": "usc05.xml",
       "final_section_or_subsection_identifier": "/us/usc/t5/s5332",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id4b2bc188-76cc-11f0-953a-e1f6f74af2f3"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 5332. The General Schedule (a) (1) The General Schedule, the symbol for which is ?GS?, is the basic pay schedule for positions to which this subchapter applies. Each employee to whom this subchapter applies is entitled to basic pay in accordance with the General Schedule. (2) The General Schedule is a schedule of single rates of basic pay, consisting of 15 grades, designated ?GS-1? through ?GS-15?, consecutively, as follows: (A) GS-1: $250. (B) GS-2: $350. (C) GS-3: $450. (D) GS-4: $600. (E) GS-5: $750. (F) GS-6: $900. (G) GS-7: $1,100. (H) GS-8: $1,150. (I) GS-9: $1,200. (J) GS-10: $1,250. (K) GS-11: $1,300. (L) GS-12: $1,350. (M) GS-13: $1,400. (N) GS-14: $1,450. (O) GS-15: $1,500. (b) When payment is made on the basis of an hourly, daily, weekly, or biweekly rate, the rate is computed from the appropriate annual rate of basic pay named by subsection (a) of this section in accordance with the rules prescribed by section 5504(b) of this title . ( Pub. L. 89\u2013554 , Sept. 6, 1966 , 80 ",
       "source_file": "codification/laws/laws/PL-032-230/law.txt",
@@ -22340,9 +22242,7 @@
       "xml_file_after": "usc05.xml",
       "final_section_or_subsection_identifier": "/us/usc/t5/s5332",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id4b2bc188-76cc-11f0-953a-e1f6f74af2f3"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 5332. The General Schedule (a) (1) The General Schedule, the symbol for which is ?GS?, is the basic pay schedule for positions to which this subchapter applies. Each employee to whom this subchapter applies is entitled to basic pay in accordance with the General Schedule. (2) The General Schedule is a schedule of single rates of basic pay, consisting of 15 grades, designated ?GS-1? through ?GS-15?, consecutively, as follows: (A) GS-1: $250. (B) GS-2: $350. (C) GS-3: $450. (D) GS-4: $600. (E) GS-5: $750. (F) GS-6: $900. (G) GS-7: $1,100. (H) GS-8: $1,150. (I) GS-9: $1,200. (J) GS-10: $1,250. (K) GS-11: $1,300. (L) GS-12: $1,350. (M) GS-13: $1,400. (N) GS-14: $1,450. (O) GS-15: $1,500. (b) When payment is made on the basis of an hourly, daily, weekly, or biweekly rate, the rate is computed from the appropriate annual rate of basic pay named by subsection (a) of this section in accordance with the rules prescribed by section 5504(b) of this title . ( Pub. L. 89\u2013554 , Sept. 6, 1966 , 80 ",
       "source_file": "codification/laws/laws/PL-032-232/law.txt",
@@ -22374,9 +22274,7 @@
       "xml_file_after": "usc05.xml",
       "final_section_or_subsection_identifier": "/us/usc/t5/s5332",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id4b2bc188-76cc-11f0-953a-e1f6f74af2f3"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 5332. The General Schedule (a) (1) The General Schedule, the symbol for which is ?GS?, is the basic pay schedule for positions to which this subchapter applies. Each employee to whom this subchapter applies is entitled to basic pay in accordance with the General Schedule. (2) The General Schedule is a schedule of single rates of basic pay, consisting of 15 grades, designated ?GS-1? through ?GS-15?, consecutively, as follows: (A) GS-1: $250. (B) GS-2: $350. (C) GS-3: $450. (D) GS-4: $600. (E) GS-5: $750. (F) GS-6: $900. (G) GS-7: $1,100. (H) GS-8: $1,150. (I) GS-9: $1,200. (J) GS-10: $1,250. (K) GS-11: $1,300. (L) GS-12: $1,350. (M) GS-13: $1,400. (N) GS-14: $1,450. (O) GS-15: $1,500. (b) When payment is made on the basis of an hourly, daily, weekly, or biweekly rate, the rate is computed from the appropriate annual rate of basic pay named by subsection (a) of this section in accordance with the rules prescribed by section 5504(b) of this title . ( Pub. L. 89\u2013554 , Sept. 6, 1966 , 80 ",
       "source_file": "codification/laws/laws/PL-032-232/law.txt",
@@ -22501,9 +22399,7 @@
       "xml_file_after": "usc26.xml",
       "final_section_or_subsection_identifier": "/us/usc/t26/s1",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id725dc220-8d81-11f0-9d33-f74b1e7a8538"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 1. Tax imposed There is hereby imposed on the taxable income of every individual a flat tax of 20%. ( Aug. 16, 1954, ch. 736 , 68A Stat. 5 ; Pub. L. 88\u2013272, title I, \u00a7 111 , Feb. 26, 1964 , 78 Stat. 19 ; Pub. L. 89\u2013809, title I, \u00a7 103(a)(2) , Nov. 13, 1966 , 80 Stat. 1550 ; Pub. L. 91\u2013172, title VIII, \u00a7 803(a) , Dec. 30, 1969 , 83 Stat. 678 ; Pub. L. 95\u201330, title I, \u00a7 101(a) , May 23, 1977 , 91 Stat. 127 ; Pub. L. 95\u2013600, title I, \u00a7 101(a) , Nov. 6, 1978 , 92 Stat. 2767 ; Pub. L. 97\u201334, title I , \u00a7\u00a7 101(a), 104(a), Aug. 13, 1981 , 95 Stat. 176 , 188; Pub. L. 97\u2013448, title I, \u00a7 101(a)(3) , Jan. 12, 1983 , 96 Stat. 2366 ; Pub. L. 99\u2013514, title I, \u00a7 101(a) , title III, \u00a7 302(a), title XIV, \u00a7 1411(a), Oct. 22, 1986 , 100 Stat. 2096 , 2218, 2714; Pub. L. 100\u2013647, title I , \u00a7\u00a7 1001(a)(3), 1014(e)(1)\u2013(3), (6), (7), title VI, \u00a7 6006(a), Nov. 10, 1988 , 102 Stat. 3349 , 3561, 3562, 3686; Pub. L. 101\u2013239, title VII , \u00a7\u00a7 7811(j)(1), 7816(b), 7831(a), Dec. 19, 1989 , 103 Stat. 2411 , 2420, 2425;",
       "source_file": "codification/laws/laws/PL-032-233/law.txt",
@@ -22566,9 +22462,7 @@
       "xml_file_after": "usc50.xml",
       "final_section_or_subsection_identifier": "/us/usc/t50/s3041",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id97fe745d-7e89-11f0-a93b-d1785429c93b"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 3041. Appointment of officials responsible for intelligence-related activities (a) Recommendation of DNI in certain appointments (1) In the event of a vacancy in a position referred to in paragraph (2), the Director of National Intelligence shall recommend to the President an individual for nomination to fill the vacancy. (2) Paragraph (1) applies to the following positions: (A) The Principal Deputy Director of National Intelligence. (B) The Director of the Central Intelligence Agency. (b) Concurrence of DNI in appointments to positions in the intelligence community (1) In the event of a vacancy in a position referred to in paragraph (2), the head of the department or agency having jurisdiction over the position shall obtain the concurrence of the Director of National Intelligence before appointing an individual to fill the vacancy or recommending to the President an individual to be nominated to fill the vacancy. If the Director does not concur in the recommendation, the head of the",
       "source_file": "codification/laws/laws/PL-032-234/law.txt",
@@ -22600,9 +22494,7 @@
       "xml_file_after": "usc50.xml",
       "final_section_or_subsection_identifier": "/us/usc/t50/s3041",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id97fe745d-7e89-11f0-a93b-d1785429c93b"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 3041. Appointment of officials responsible for intelligence-related activities (a) Recommendation of DNI in certain appointments (1) In the event of a vacancy in a position referred to in paragraph (2), the Director of National Intelligence shall recommend to the President an individual for nomination to fill the vacancy. (2) Paragraph (1) applies to the following positions: (A) The Principal Deputy Director of National Intelligence. (B) The Director of the Central Intelligence Agency. (b) Concurrence of DNI in appointments to positions in the intelligence community (1) In the event of a vacancy in a position referred to in paragraph (2), the head of the department or agency having jurisdiction over the position shall obtain the concurrence of the Director of National Intelligence before appointing an individual to fill the vacancy or recommending to the President an individual to be nominated to fill the vacancy. If the Director does not concur in the recommendation, the head of the",
       "source_file": "codification/laws/laws/PL-032-234/law.txt",
@@ -22758,9 +22650,7 @@
       "xml_file_after": "usc10.xml",
       "final_section_or_subsection_identifier": "/us/usc/t10/s153",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id87785a5d-76cd-11f0-8437-f8ad163dc8c2"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 153. Chairman: functions (a) Planning; Advice; Policy Formulation .\u2014 Subject to the authority, direction, and control of the President and the Secretary of Defense, the Chairman of the Joint Chiefs of Staff shall be responsible for the following: (1) Strategic direction .\u2014 Assisting the President and the Secretary in providing for the strategic direction of the armed forces. (2) Strategic and contingency planning .\u2014 In matters relating to strategic and contingency planning\u2014 (A) developing strategic frameworks and preparing strategic plans, as required, to guide the use and employment of military force and related activities across all geographic regions and military functions and domains, and to sustain military efforts over different durations of time, as necessary; (B) advising the Secretary on the production of the national defense strategy required by section 113(g) of this title and the national security strategy required by section 108 of the National Security Act of 1947 ( 50 ",
       "source_file": "codification/laws/laws/PL-032-236/law.txt",
@@ -22792,9 +22682,7 @@
       "xml_file_after": "usc10.xml",
       "final_section_or_subsection_identifier": "/us/usc/t10/s154",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id877aa3b2-76cd-11f0-8437-f8ad163dc8c2"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 154. Vice Chairman (a) Appointment .\u2014 (1) There is a Vice Chairman of the Joint Chiefs of Staff, appointed by the President, by and with the advice and consent of the Senate, from the officers of the regular components of the armed forces. (2) The Chairman and Vice Chairman may not be members of the same armed force. However, the President may waive the restriction in the preceding sentence for a limited period of time in order to provide for the orderly transition of officers appointed to serve in the positions of Chairman and Vice Chairman. (3) The Vice Chairman serves at the pleasure of the President for a single term of four years, beginning on October 1 of an odd-numbered year, except that the term may not begin in the same year as the term of a Chairman. In time of war, there is no limit on the number of reappointments. (4) (A) The Vice Chairman shall not be eligible for promotion to the position of Chairman or any other position in the armed forces. (B) The President may waive",
       "source_file": "codification/laws/laws/PL-032-236/law.txt",
@@ -23322,9 +23210,7 @@
       "xml_file_after": "usc28.xml",
       "final_section_or_subsection_identifier": "/us/usc/t28/ptI/ch16",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "rp-pl034243-t28-ch16"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "CHAPTER 16- COMPLAINTS AGAINST JUDGES AND JUDICIAL DISCIPLINE BY THE SUPREME COURT Sec. 351. Complaints; judge defined. 352. Review of the complaint by the Supreme Court of the United States. 353. Repealed. 354. Action by the Supreme Court. 355. Referral for impeachment consideration. 356. Subpoena power. 357. Review of orders and actions. 358. Rules. 359. Repealed. 360. Disclosure of information. 361. Repealed. 362. Other provisions and rules not affected. 363. Complaints in other courts. 364. Effect of felony conviction. Sec. 351. Complaints; judge defined (a) Filing of Complaint by Any Person .- Any person alleging that a judge has engaged in conduct prejudicial to the effective and expeditious administration of the business of the courts, or alleging that such judge is unable to discharge all the duties of office by reason of mental or physical disability, may file with the Clerk of the Supreme Court of the United States a written complaint containing a brief statement of the facts",
       "source_file": "codification/laws/laws/PL-034-243/law.txt",
@@ -23356,9 +23242,7 @@
       "xml_file_after": "usc28.xml",
       "final_section_or_subsection_identifier": "/us/usc/t28/ptI/ch16",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "rp-pl034243-t28-ch16"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "CHAPTER 16- COMPLAINTS AGAINST JUDGES AND JUDICIAL DISCIPLINE BY THE SUPREME COURT Sec. 351. Complaints; judge defined. 352. Review of the complaint by the Supreme Court of the United States. 353. Repealed. 354. Action by the Supreme Court. 355. Referral for impeachment consideration. 356. Subpoena power. 357. Review of orders and actions. 358. Rules. 359. Repealed. 360. Disclosure of information. 361. Repealed. 362. Other provisions and rules not affected. 363. Complaints in other courts. 364. Effect of felony conviction. Sec. 351. Complaints; judge defined (a) Filing of Complaint by Any Person .- Any person alleging that a judge has engaged in conduct prejudicial to the effective and expeditious administration of the business of the courts, or alleging that such judge is unable to discharge all the duties of office by reason of mental or physical disability, may file with the Clerk of the Supreme Court of the United States a written complaint containing a brief statement of the facts",
       "source_file": "codification/laws/laws/PL-034-243/law.txt",
@@ -23421,9 +23305,7 @@
       "xml_file_after": "usc18.xml",
       "final_section_or_subsection_identifier": "/us/usc/t18/s3585",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id0f0f7484-0975-11f0-92da-b5363bbf1875"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 3585. Calculation of a term of imprisonment (a) Commencement of Sentence .\u2014 A sentence to a term of imprisonment commences on the date the defendant is received in custody to commence service of sentence at the official detention facility at which the sentence is to be served. (b) Credit for Prior Custody .\u2014 A defendant shall be given credit toward the service of a term of imprisonment for 1 day for each 3 days held in detention prior to the date the sentence commences that has not been credited against another sentence: (1) as a result of the offense for which the sentence was imposed; or (2) as a result of any other charge for which the defendant was arrested after the commission of the offense for which the sentence was imposed; (Added Pub. L. 98\u2013473, title II, \u00a7 212(a)(2) , Oct. 12, 1984 , 98 Stat. 2001 ; Pub. L. 34-244, Sec. 4 .) Statutory Notes and Related Subsidiaries Effective Date Section effective Nov. 1, 1987 , and applicable only to offenses committed after the taking eff",
       "source_file": "codification/laws/laws/PL-034-244/law.txt",
@@ -23455,9 +23337,7 @@
       "xml_file_after": "usc18.xml",
       "final_section_or_subsection_identifier": "/us/usc/t18/s3585",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id0f0f7484-0975-11f0-92da-b5363bbf1875"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 3585. Calculation of a term of imprisonment (a) Commencement of Sentence .\u2014 A sentence to a term of imprisonment commences on the date the defendant is received in custody to commence service of sentence at the official detention facility at which the sentence is to be served. (b) Credit for Prior Custody .\u2014 A defendant shall be given credit toward the service of a term of imprisonment for 1 day for each 3 days held in detention prior to the date the sentence commences that has not been credited against another sentence: (1) as a result of the offense for which the sentence was imposed; or (2) as a result of any other charge for which the defendant was arrested after the commission of the offense for which the sentence was imposed; (Added Pub. L. 98\u2013473, title II, \u00a7 212(a)(2) , Oct. 12, 1984 , 98 Stat. 2001 ; Pub. L. 34-244, Sec. 4 .) Statutory Notes and Related Subsidiaries Effective Date Section effective Nov. 1, 1987 , and applicable only to offenses committed after the taking eff",
       "source_file": "codification/laws/laws/PL-034-244/law.txt",
@@ -23551,9 +23431,7 @@
       "xml_file_after": "usc18.xml",
       "final_section_or_subsection_identifier": "/us/usc/t18/s3006A",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id0edd67c1-0975-11f0-92da-b5363bbf1875"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 3006A. Adequate representation of defendants (a) Choice of Plan .\u2014 Each United States district court, with the approval of the judicial council of the circuit, shall place in operation throughout the district a plan for furnishing representation for any person financially unable to obtain adequate representation in accordance with this section. Representation under each plan shall include counsel and investigative, expert, and other services necessary for adequate representation. Each plan shall provide the following: (1) Representation shall be provided for any financially eligible person who\u2014 (A) is charged with a felony or a Class A misdemeanor; (B) is a juvenile alleged to have committed an act of juvenile delinquency as defined in section 5031 of this title ; (C) is charged with a violation of probation; (D) is under arrest, when such representation is required by law; (E) is charged with a violation of supervised release or faces modification, reduction, or enlargement of a con",
       "source_file": "codification/laws/laws/PL-034-245/law.txt",
@@ -23709,9 +23587,7 @@
       "xml_file_after": "usc28.xml",
       "final_section_or_subsection_identifier": "/us/usc/t28/s995",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id884e82ee-67ea-11f0-9eeb-e997de6427b9"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 995. Repealed. (Added Pub. L. 98\u2013473, title II, \u00a7 217(a) , Oct. 12, 1984 , 98 Stat. 2024 ; amended Pub. L. 100\u2013690, title VII , \u00a7\u00a7 7104, 7105, 7106(b), Nov. 18, 1988 , 102 Stat. 4418 ; Pub. L. 101\u2013650, title III, \u00a7 325(b)(5) , Dec. 1, 1990 , 104 Stat. 5121 ; Pub. L. 103\u2013322, title XXVIII, \u00a7 280005(c)(1) , Sept. 13, 1994 , 108 Stat. 2097 ; Pub. L. 110\u2013177, title V, \u00a7 501(a) , Jan. 7, 2008 , 121 Stat. 2541 ; Pub. L. 34-246, Sec. 3(a) .) Editorial Notes Amendments 2008\u2014Subsec. (f). Pub. L. 110\u2013177, \u00a7 501 , temporarily added subsec. (f). See Termination Date of 2008 Amendment note below. 1994\u2014Subsec. (a)(3). Pub. L. 103\u2013322 substituted \u201cChair\u201d for \u201cChairman\u201d. 1990\u2014Subsec. (a)(22). Pub. L. 101\u2013650 struck out \u201cand\u201d after semicolon at end. 1988\u2014Subsec. (a)(2). Pub. L. 100\u2013690, \u00a7 7105 , substituted \u201cLevel 6 of the Senior Executive Service Schedule ( 5 U.S.C. 5382 )\u201d for \u201cgrade 18 of the General Schedule pay rates ( 5 U.S.C. 5332 )\u201d. Subsec. (a)(23). Pub. L. 100\u2013690, \u00a7 7104 , added par. (23).",
       "source_file": "codification/laws/laws/PL-034-246/law.txt",
@@ -23743,9 +23619,7 @@
       "xml_file_after": "usc28.xml",
       "final_section_or_subsection_identifier": "/us/usc/t28/s991",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id884c1252-67ea-11f0-9eeb-e997de6427b9"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 991. United States Sentencing Commission; establishment and purposes (a) There is established, as a commission under the Judicial Conference of the United States, a United States Sentencing Commission (hereinafter \"Commission\") consisting of five voting members and one nonvoting ex officio member. (1) Appointments and Membership.- (a) Two voting members shall be appointed by the President of the United States. (b) Two voting members shall be appointed by the Chief Justice of the United States. (c) The fifth voting member, who shall serve as Chair, shall be jointly selected by agreement of the President and the Chief Justice. If no agreement is reached within 15 days of a vacancy, the Judicial Conference shall appoint a fifth member, and the Commission shall choose the Chair from among the voting members. The Commission may select a Vice Chair from among its members. (d) The Attorney General or their designee shall serve as a nonvoting ex officio member of the Commission. (2) Qualific",
       "source_file": "codification/laws/laws/PL-034-246/law.txt",
@@ -23777,9 +23651,7 @@
       "xml_file_after": "usc28.xml",
       "final_section_or_subsection_identifier": "/us/usc/t28/s994",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id884c1284-67ea-11f0-9eeb-e997de6427b9"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 994. Duties of the Commission (i) Judicial Conference Approval Required.- The Sentencing Commission shall submit all proposed sentencing guidelines, amendments, and policy statements to the Judicial Conference of the United States. No such guideline or amendment shall have legal effect unless and until it is approved by a majority vote of the Judicial Conference. (ii) Additional Responsibilities.- In addition to its duties under this section, the Sentencing Commission shall develop and recommend policies and guidelines, subject to the approval of the Judicial Conference, concerning: (1) Pretrial detention and release practices in the federal courts, including risk-based detention models, standard bail conditions, and criteria for non-financial release; (2) Recommended adjustments for civil monetary penalties, statutory damages, and other financial remedies in civil cases; (3) Alternatives to incarceration, including diversion programs, restorative justice models, probation frameworks",
       "source_file": "codification/laws/laws/PL-034-246/law.txt",
@@ -25301,9 +25173,7 @@
       "xml_file_after": "usc05.xml",
       "final_section_or_subsection_identifier": "/us/usc/t5/s6103",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "id4b69dc8f-76cc-11f0-953a-e1f6f74af2f3"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 6103. Holidays (a) The following are legal public holidays: New Year\u2019s Day, January 1. Birthday of Martin Luther King, Jr., the third Monday in January. Washington\u2019s Birthday, the third Monday in February. Memorial Day, the last Monday in May. National Fast Food Workers Day, June 7. National Root Beer Day, June 17. Juneteenth National Independence Day, June 19. Independence Day, July 4. Labor Day, the first Monday in September. Columbus Day, the second Monday in October. Veterans Day, November 11. Thanksgiving Day, the fourth Thursday in November. Christmas Day, December 25. (b) For the purpose of statutes relating to pay and leave of employees, with respect to a legal public holiday and any other day declared to be a holiday by Federal statute or Executive order, the following rules apply: (1) Instead of a holiday that occurs on a Saturday, the Friday immediately before is a legal public holiday for\u2014 (A) employees whose basic workweek is Monday through Friday; and (B) the purpose of",
       "source_file": "codification/laws/laws/PL-036-258/law.txt",
@@ -26732,9 +26602,7 @@
       "xml_file_after": "usc18.xml",
       "final_section_or_subsection_identifier": "/us/usc/t18/s3161",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "rp-18e7327270ed4cee7da9"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 3161. Time limits and exclusions (a) Trial on a day certain In any case involving a defendant charged with an offense, the appropriate judicial officer, at the earliest practicable time, shall, after consultation with the counsel for the defendant and the attorney for the Government, set the case to begin trial on a day certain, so as to assure a speedy trial. (b) Time to trial (i) In any case in which a plea of not guilty is entered, the trial of a defendant charged in an information or indictment with the commission of an offense shall commence within fifteen days from the filing date (and making public) of the information or indictment, or from the date the defendant has appeared before a judicial officer of the court in which such charge is pending, whichever date last occurs. If a defendant consents in writing to be tried before a magistrate judge on a complaint, the trial shall commence within fifteen days from the date of such consent. (ii) Unless the defendant consents in wri",
       "source_file": "codification/laws/laws/PL-038-266/law.txt",
@@ -26766,9 +26634,7 @@
       "xml_file_after": "usc18.xml",
       "final_section_or_subsection_identifier": "/us/usc/t18/s3161",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "rp-18e7327270ed4cee7da9"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 3161. Time limits and exclusions (a) Trial on a day certain In any case involving a defendant charged with an offense, the appropriate judicial officer, at the earliest practicable time, shall, after consultation with the counsel for the defendant and the attorney for the Government, set the case to begin trial on a day certain, so as to assure a speedy trial. (b) Time to trial (i) In any case in which a plea of not guilty is entered, the trial of a defendant charged in an information or indictment with the commission of an offense shall commence within fifteen days from the filing date (and making public) of the information or indictment, or from the date the defendant has appeared before a judicial officer of the court in which such charge is pending, whichever date last occurs. If a defendant consents in writing to be tried before a magistrate judge on a complaint, the trial shall commence within fifteen days from the date of such consent. (ii) Unless the defendant consents in wri",
       "source_file": "codification/laws/laws/PL-038-266/law.txt",
@@ -26800,9 +26666,7 @@
       "xml_file_after": "usc18.xml",
       "final_section_or_subsection_identifier": "/us/usc/t18/s3161",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "rp-18e7327270ed4cee7da9"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "\u00a7 3161. Time limits and exclusions (a) Trial on a day certain In any case involving a defendant charged with an offense, the appropriate judicial officer, at the earliest practicable time, shall, after consultation with the counsel for the defendant and the attorney for the Government, set the case to begin trial on a day certain, so as to assure a speedy trial. (b) Time to trial (i) In any case in which a plea of not guilty is entered, the trial of a defendant charged in an information or indictment with the commission of an offense shall commence within fifteen days from the filing date (and making public) of the information or indictment, or from the date the defendant has appeared before a judicial officer of the court in which such charge is pending, whichever date last occurs. If a defendant consents in writing to be tried before a magistrate judge on a complaint, the trial shall commence within fifteen days from the date of such consent. (ii) Unless the defendant consents in wri",
       "source_file": "codification/laws/laws/PL-038-266/law.txt",
@@ -27534,9 +27398,7 @@
       "xml_file_after": "usc18.xml",
       "final_section_or_subsection_identifier": "/us/usc/t18/s205/a",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "rp-pl041271-205-a"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "(a) (i) Whoever, being a principal officer of the United States, other than in the proper discharge of official duties- (1) acts as agent or attorney for prosecuting any claim against the United States; (2) receives any gratuity, share, or interest in any such claim in consideration of assistance in the prosecution of such claim; or (3) acts as agent or attorney for any person before any department, agency, court, court-martial, officer, civil commission, military commission, naval commission, board, or other federal authority in connection with any covered matter in which the United States is a party or has a direct and substantial interest; (4) shall be subject to the penalties set forth in section 216 of this title .",
       "source_file": "codification/laws/laws/PL-041-271/law.txt",
@@ -27568,9 +27430,7 @@
       "xml_file_after": "usc18.xml",
       "final_section_or_subsection_identifier": "/us/usc/t18/s205/a",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "rp-pl041271-205-a"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "(a) (i) Whoever, being a principal officer of the United States, other than in the proper discharge of official duties- (1) acts as agent or attorney for prosecuting any claim against the United States; (2) receives any gratuity, share, or interest in any such claim in consideration of assistance in the prosecution of such claim; or (3) acts as agent or attorney for any person before any department, agency, court, court-martial, officer, civil commission, military commission, naval commission, board, or other federal authority in connection with any covered matter in which the United States is a party or has a direct and substantial interest; (4) shall be subject to the penalties set forth in section 216 of this title .",
       "source_file": "codification/laws/laws/PL-041-271/law.txt",
@@ -27602,9 +27462,7 @@
       "xml_file_after": "usc18.xml",
       "final_section_or_subsection_identifier": "/us/usc/t18/s205/a",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "rp-pl041271-205-a"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "(a) (i) Whoever, being a principal officer of the United States, other than in the proper discharge of official duties- (1) acts as agent or attorney for prosecuting any claim against the United States; (2) receives any gratuity, share, or interest in any such claim in consideration of assistance in the prosecution of such claim; or (3) acts as agent or attorney for any person before any department, agency, court, court-martial, officer, civil commission, military commission, naval commission, board, or other federal authority in connection with any covered matter in which the United States is a party or has a direct and substantial interest; (4) shall be subject to the penalties set forth in section 216 of this title .",
       "source_file": "codification/laws/laws/PL-041-271/law.txt",
@@ -27636,9 +27494,7 @@
       "xml_file_after": "usc18.xml",
       "final_section_or_subsection_identifier": "/us/usc/t18/s205/a",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "rp-pl041271-205-a"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "(a) (i) Whoever, being a principal officer of the United States, other than in the proper discharge of official duties- (1) acts as agent or attorney for prosecuting any claim against the United States; (2) receives any gratuity, share, or interest in any such claim in consideration of assistance in the prosecution of such claim; or (3) acts as agent or attorney for any person before any department, agency, court, court-martial, officer, civil commission, military commission, naval commission, board, or other federal authority in connection with any covered matter in which the United States is a party or has a direct and substantial interest; (4) shall be subject to the penalties set forth in section 216 of this title .",
       "source_file": "codification/laws/laws/PL-041-271/law.txt",
@@ -27670,9 +27526,7 @@
       "xml_file_after": "usc18.xml",
       "final_section_or_subsection_identifier": "/us/usc/t18/s205/a",
       "actual_node_ids_added": [],
-      "actual_node_ids_changed": [
-        "rp-pl041271-205-a"
-      ],
+      "actual_node_ids_changed": [],
       "actual_node_ids_removed": [],
       "exact_enacted_text_applied": "(a) (i) Whoever, being a principal officer of the United States, other than in the proper discharge of official duties- (1) acts as agent or attorney for prosecuting any claim against the United States; (2) receives any gratuity, share, or interest in any such claim in consideration of assistance in the prosecution of such claim; or (3) acts as agent or attorney for any person before any department, agency, court, court-martial, officer, civil commission, military commission, naval commission, board, or other federal authority in connection with any covered matter in which the United States is a party or has a direct and substantial interest; (4) shall be subject to the penalties set forth in section 216 of this title .",
       "source_file": "codification/laws/laws/PL-041-271/law.txt",
@@ -27769,6 +27623,12 @@
       "usc/usc52.xml",
       "usc/usc54.xml"
     ],
-    "issue_count": 0
+    "issue_count": 0,
+    "final_identifier_failures": 0,
+    "final_text_failures": 0,
+    "action_specific_diff_failures": 0,
+    "changed_node_baseline_failures": 0,
+    "removed_node_baseline_failures": 0,
+    "supersession_metadata_failures": 0
   }
 }
