@@ -34,14 +34,26 @@ VALID_NON_EXECUTABLE_STATUSES = {
     "superseded-by-later-action",
     "blocked",
 }
+BASELINE_TEXT_CACHE: dict[str, str | None] = {}
 
 
 def git(*args: str) -> str:
     return subprocess.check_output(["git", *args], cwd=ROOT, text=True, encoding="utf-8")
 
 
+def git_maybe(*args: str) -> str | None:
+    try:
+        return git(*args)
+    except subprocess.CalledProcessError:
+        return None
+
+
 def load_json(path: str) -> dict:
     return json.loads((ROOT / path).read_text(encoding="utf-8"))
+
+
+def write_json(path: str, data: dict) -> None:
+    (ROOT / path).write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
 
 
 def changed_xml_files() -> set[str]:
@@ -60,7 +72,17 @@ def has_baseline_node(proof: object) -> bool:
         "existing_statutory_text",
         "source_text_comparison",
     ]
-    return all(proof.get(key) for key in required) and proof.get("baseline_commit") == BASELINE
+    if not all(proof.get(key) for key in required) or proof.get("baseline_commit") != BASELINE:
+        return False
+    xml_file = str(proof["xml_file"]).replace("\\", "/")
+    if xml_file not in BASELINE_TEXT_CACHE:
+        BASELINE_TEXT_CACHE[xml_file] = git_maybe("show", f"{BASELINE}:{xml_file}")
+    baseline_text = BASELINE_TEXT_CACHE[xml_file]
+    if not baseline_text:
+        return False
+    if f'id="{proof["xml_node_id"]}"' not in baseline_text:
+        return False
+    return proof["uslm_identifier"] in baseline_text and bool(str(proof.get("source_text_comparison") or "").strip())
 
 
 def is_title_root(identifier: str | None) -> bool:
@@ -89,12 +111,64 @@ def scan_xml_artifacts() -> list[str]:
     return issues
 
 
+def final_node_ids(texts: dict[str, str]) -> set[str]:
+    ids: set[str] = set()
+    for text in texts.values():
+        ids.update(re.findall(r'\bid="([^"]+)"', text))
+    return ids
+
+
+def build_note_index(texts: dict[str, str]) -> dict[str, tuple[str, str]]:
+    found: dict[str, tuple[str, str]] = {}
+    pattern = re.compile(r'<note\b(?=[^>]*\bid="(rp-pl\d{6}-codification)")[^>]*>.*?</note>', re.S)
+    for rel, text in texts.items():
+        for match in pattern.finditer(text):
+            found[match.group(1)] = (rel, match.group(0))
+    return found
+
+
+def node_exists_in_baseline(node_id: str, rel_file: str | None, baseline_cache: dict[str, str | None]) -> bool:
+    if not rel_file:
+        return False
+    rel = rel_file.replace("\\", "/")
+    if not rel.startswith("usc/"):
+        rel = f"usc/{rel}"
+    if rel not in baseline_cache:
+        baseline_cache[rel] = git_maybe("show", f"{BASELINE}:{rel}")
+    return bool(baseline_cache[rel] and f'id="{node_id}"' in baseline_cache[rel])
+
+
+def read_final_xml_texts() -> dict[str, str]:
+    return {path.relative_to(ROOT).as_posix(): path.read_text(encoding="utf-8") for path in (ROOT / "usc").glob("*.xml")}
+
+
+def is_note_action(plan_row: dict) -> bool:
+    action = plan_row.get("action_type")
+    treatment = str(plan_row.get("treatment") or "")
+    return action in {"add statutory note", "add historical note", "add amendment note"} or "note" in treatment
+
+
+def forbidden_executable_text(text: object) -> bool:
+    value = str(text or "").lower()
+    forbidden = [
+        "no operative text",
+        "not section-level codification",
+        "retain as repeal history only",
+        "no code action",
+    ]
+    return any(phrase in value for phrase in forbidden)
+
+
 def main() -> int:
     plan = load_json("audit/xml-integration-plan.json")
     results = load_json("audit/xml-integration-results.json")
     plan_rows = plan.get("provisions", [])
     result_rows = results.get("results", [])
     changed = changed_xml_files()
+    final_texts = read_final_xml_texts()
+    final_ids = final_node_ids(final_texts)
+    final_notes = build_note_index(final_texts)
+    baseline_cache: dict[str, str | None] = {}
     issues: list[str] = []
 
     if len(plan_rows) != 903:
@@ -108,6 +182,14 @@ def main() -> int:
     blocked = 0
     false_already = 0
     title_root_exec = 0
+    claimed_added_nodes_missing = 0
+    claimed_changed_nodes_unchanged = 0
+    claimed_removed_nodes_still_present = 0
+    baseline_proof_failures = 0
+    note_action_proof_failures = 0
+    source_credit_failures = 0
+    amendment_note_failures = 0
+    toc_failures = 0
 
     for result in result_rows:
         action_id = result.get("action_id")
@@ -119,6 +201,29 @@ def main() -> int:
         action_type = plan_row.get("action_type")
         status = result.get("result_status")
         executable = action_type in EXECUTABLE_ACTIONS
+        xml_after = result.get("xml_file_after") or result.get("xml_file_before")
+        xml_after_rel = f"usc/{xml_after}" if xml_after and not str(xml_after).startswith("usc/") else xml_after
+        added_nodes = [node for node in result.get("actual_node_ids_added") or [] if node]
+        changed_nodes = [node for node in result.get("actual_node_ids_changed") or [] if node]
+        removed_nodes = [node for node in result.get("actual_node_ids_removed") or [] if node]
+
+        for node_id in added_nodes:
+            if node_id not in final_ids:
+                claimed_added_nodes_missing += 1
+                issues.append(f"{action_id}: claimed added node {node_id} is absent from final XML")
+            if node_exists_in_baseline(node_id, xml_after_rel, baseline_cache):
+                issues.append(f"{action_id}: claimed added node {node_id} already existed in baseline {xml_after_rel}")
+
+        for node_id in changed_nodes:
+            if node_id not in final_ids:
+                claimed_changed_nodes_unchanged += 1
+                issues.append(f"{action_id}: claimed changed node {node_id} is absent from final XML")
+
+        for node_id in removed_nodes:
+            if node_id in final_ids:
+                claimed_removed_nodes_still_present += 1
+                issues.append(f"{action_id}: claimed removed node {node_id} remains in final XML")
+
         if executable:
             executable_count += 1
             if status not in VALID_EXECUTABLE_STATUSES:
@@ -128,6 +233,7 @@ def main() -> int:
             if status == "already-satisfied":
                 false_already += 1
             if status == "already-satisfied-with-baseline-proof" and not has_baseline_node(result.get("baseline_proof")):
+                baseline_proof_failures += 1
                 issues.append(f"{action_id}: already-satisfied-with-baseline-proof lacks required baseline node proof")
             if status == "applied":
                 files = {f"usc/{name}" if not str(name).startswith("usc/") else str(name) for name in [result.get("xml_file_after") or result.get("xml_file_before")] if name}
@@ -139,11 +245,43 @@ def main() -> int:
                 issues.append(f"{action_id}: executable insertion uses only title-root identifier {final_id!r}")
             if status in {"applied", "already-satisfied-with-baseline-proof"} and not result.get("exact_enacted_text_applied"):
                 issues.append(f"{action_id}: executable completed result lacks exact statutory text")
+            if status == "applied" and forbidden_executable_text(result.get("exact_enacted_text_applied")):
+                issues.append(f"{action_id}: executable applied result contains non-executable/no-operative wording")
+            if status in {"applied", "already-satisfied-with-baseline-proof"} and not result.get("source_credit_change"):
+                source_credit_failures += 1
+                issues.append(f"{action_id}: executable completed result lacks source-credit result")
+            if status in {"applied", "already-satisfied-with-baseline-proof"} and not result.get("amendment_note_change"):
+                amendment_note_failures += 1
+                issues.append(f"{action_id}: executable completed result lacks amendment-note result")
+            if action_type in {"insert new section", "insert new subsection"} and status in {"applied", "already-satisfied-with-baseline-proof"}:
+                toc_text = str(result.get("toc_change") or "")
+                if not toc_text or re.search(r"\bno toc change\b", toc_text, re.I):
+                    toc_failures += 1
+                    issues.append(f"{action_id}: executable insertion lacks required TOC result")
+            if status == "superseded-by-later-action":
+                proof_text = " ".join(str(result.get(key) or "") for key in ("validation_result", "documented_no_op_explanation", "toc_change"))
+                if "superseded" not in proof_text.lower() and "later" not in proof_text.lower():
+                    issues.append(f"{action_id}: superseded result lacks supersession explanation")
         else:
             if status not in VALID_NON_EXECUTABLE_STATUSES:
                 issues.append(f"{action_id}: non-executable action has invalid status {status!r}")
-            if status == "documented-no-code-action" and not result.get("documented_no_op_explanation"):
-                issues.append(f"{action_id}: documented non-executable disposition lacks explanation")
+            if status == "documented-no-code-action":
+                if action_type != "no Code action":
+                    issues.append(f"{action_id}: documented-no-code-action used for non-no-Code plan action {action_type!r}")
+                if not result.get("documented_no_op_explanation"):
+                    issues.append(f"{action_id}: documented non-executable disposition lacks explanation")
+            if is_note_action(plan_row):
+                note_id = result.get("verified_note_node_id") or (plan_row.get("existing_project_node_ids_to_remove_or_replace") or [None])[0]
+                note_file, note_xml = final_notes.get(str(note_id), (None, None)) if note_id else (None, None)
+                if status != "applied" or not note_id or not note_xml:
+                    note_action_proof_failures += 1
+                    issues.append(f"{action_id}: note action lacks applied result with physical XML note proof")
+                elif result.get("verified_note_xml_file") and str(result["verified_note_xml_file"]).replace("\\", "/") != str(note_file):
+                    note_action_proof_failures += 1
+                    issues.append(f"{action_id}: note proof file {result['verified_note_xml_file']} does not match final XML location {note_file}")
+                elif "trello.com" in note_xml.lower() or "<quotedcontent" in note_xml.lower() or "authenticated statutory text was unavailable" in note_xml.lower():
+                    note_action_proof_failures += 1
+                    issues.append(f"{action_id}: physical XML note {note_id} contains stale URL, full dump, or false source boilerplate")
 
     missing = set(plan_by_id) - seen
     if missing:
@@ -151,7 +289,8 @@ def main() -> int:
     if executable_count != 137:
         issues.append(f"executable action count is {executable_count}, expected 137")
 
-    issues.extend(scan_xml_artifacts())
+    artifact_issues = scan_xml_artifacts()
+    issues.extend(artifact_issues)
 
     summary = {
         "plan_actions": len(plan_rows),
@@ -160,9 +299,21 @@ def main() -> int:
         "blocked_actions": blocked,
         "false_already_satisfied_claims": false_already,
         "title_root_executable_targets": title_root_exec,
+        "claimed_added_nodes_missing": claimed_added_nodes_missing,
+        "claimed_changed_nodes_unchanged": claimed_changed_nodes_unchanged,
+        "claimed_removed_nodes_still_present": claimed_removed_nodes_still_present,
+        "already_satisfied_baseline_proof_failures": baseline_proof_failures,
+        "note_action_proof_failures": note_action_proof_failures,
+        "source_credit_failures": source_credit_failures,
+        "amendment_note_failures": amendment_note_failures,
+        "toc_failures": toc_failures,
+        "stale_or_inaccurate_project_notes": len(artifact_issues),
         "changed_xml_files": sorted(changed),
         "issue_count": len(issues),
     }
+    results.setdefault("summary", {}).update(summary)
+    results["status"] = "complete" if not issues else "validation-failed"
+    write_json("audit/xml-integration-results.json", results)
     print(json.dumps(summary, indent=2))
     if issues:
         print("issues:", file=sys.stderr)
