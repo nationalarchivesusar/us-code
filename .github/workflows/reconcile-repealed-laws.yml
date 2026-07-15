@@ -4,20 +4,24 @@ on:
   push:
     branches:
       - repair/repealed-laws
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: write
 
 jobs:
   reconcile:
-    if: ${{ !contains(github.event.head_commit.message, '[repealed-law-bot]') }}
+    if: ${{ github.event_name != 'push' || !contains(github.event.head_commit.message, '[repealed-law-bot]') }}
     runs-on: ubuntu-latest
     timeout-minutes: 90
 
     steps:
-      - name: Checkout complete repository history
+      - name: Checkout complete repair branch history
         uses: actions/checkout@v4
         with:
+          ref: repair/repealed-laws
           fetch-depth: 0
           lfs: true
 
