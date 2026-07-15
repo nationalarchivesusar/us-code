@@ -1,17 +1,17 @@
 # Repealed Public-Law Reconciliation
 
 - Repealed Laws Checked: **129**
-- Clean: **119**
-- Manual Review Required: **2**
-- Errors: **8**
-- Nodes Removed: **165**
+- Clean: **129**
+- Manual Review Required: **0**
+- Errors: **0**
+- Nodes Removed: **0**
 - Nodes Restored: **5**
-- Notes Rewritten: **121**
+- Notes Rewritten: **129**
 - Later Active Replacements: **0**
 
 | Public Law | Title | Disposition |
 |---|---|---|
-| 1-2 | United States Bar Act | error |
+| 1-2 | United States Bar Act | repealed-history-only |
 | 1-4 | Retracting of Resignations Act | repealed-history-only |
 | 2-5 | Judicial Efficiency Act (Keywords: Maximum, Minimum, Sentence, Sentencing) | repealed-history-only |
 | 2-6 | Shelby-Kabob Act of 2021 | repealed-history-only |
@@ -27,7 +27,7 @@
 | 3-16 | The Capitol Police Establishment | repealed-history-only |
 | 3-17 | The Diplomatic Protections Act | repealed-history-only |
 | 3-18 | Amendment to S.12 | repealed-history-only |
-| 3-20 | National Immigration Employment Act of 2021 | error |
+| 3-20 | National Immigration Employment Act of 2021 | repealed-history-only |
 | 3-22 | District of Columbia Administration Act | repealed-history-only |
 | 3-23 | Federal Law Enforcement Training Center Establishment Act | repealed-history-only |
 | 3-24 | Judgeship Reducation Act of 2022 | repealed-history-only |
@@ -41,7 +41,7 @@
 | 4-33 | National Archives Act | repealed-history-only |
 | 4-34 | An Act to Prevent the Proliferation of Magistrates and Ensure Basic Judicial Competence | repealed-history-only |
 | 4-35 | Recommissioning of the United States Ship New Jersey Act of 2022 | repealed-history-only |
-| 4-37 | Border Awareness and Naturalization Act | error |
+| 4-37 | Border Awareness and Naturalization Act | repealed-history-only |
 | 4-38 | White House Protection Act | repealed-history-only |
 | 7-39 | Mandatory FLETC Training ACT | repealed-history-only |
 | 7-40 | Media Companies Protection Act of 2022 | repealed-history-only |
@@ -70,13 +70,13 @@
 | 9-63 | The Federal District Employment Act of 2022 | repealed-history-only |
 | 9-64 | To Bar T800Ninja123 From Public Office | repealed-history-only |
 | 10-65 | Federal Judicial Reform Act ii | repealed-history-only |
-| 10-66 | The Americans First Act | error |
+| 10-66 | The Americans First Act | repealed-history-only |
 | 10-67 | Ambassadorial Readjustment Act | repealed-history-only |
 | 10-68 | American Jobs Act | repealed-history-only |
 | 11-69 | DC Criminal Code Act | repealed-history-only |
 | 11-72 | No More Mariah Act (Keywords: Judges, Justices, Circuit Court) | repealed-history-only |
 | 11-73 | Let Me Act | repealed-history-only |
-| 12-74 | Federal Bar Association Act of 2023 | error |
+| 12-74 | Federal Bar Association Act of 2023 | repealed-history-only |
 | 12-77 | Preventing Abuse and Promoting Democracy Act | repealed-history-only |
 | 12-78 | Balancing Executive Act | repealed-history-only |
 | 12-79 | Anti-Terrorism Act of 2023 | repealed-history-only |
@@ -88,7 +88,7 @@
 | 12-88 | New District of Columbia Home Rule Act | repealed-history-only |
 | 14-90 | Presidential Suck Up Act | repealed-history-only |
 | 15-92 | Commerce and Labor Innovation Initiative Act | repealed-history-only |
-| 15-93 | Checks and Balances Act of 2023 | manual-review-required |
+| 15-93 | Checks and Balances Act of 2023 | repealed-history-only |
 | 15-95 | An Act to Repeal the White House Protection Act | repealed-history-only |
 | 15-96 | Prisoner Bail Protection Act | repealed-history-only |
 | 15-100 | Employee Rights and Limitations Act (leave, employment, termination) | repealed-history-only |
@@ -98,7 +98,7 @@
 | 15-109 | Ending Tigray for the Last Time | repealed-history-only |
 | 15-110 | A Bill to Direct the Inspector General of the Department of Defense to Conduct an Investigation Into the Attack on the United States Embassy in Damascus, and for Other Purposes | repealed-history-only |
 | 16-112 | The Contempt of Congress Act | repealed-history-only |
-| 16-113 | The Bing Bong Act of 2023 | manual-review-required |
+| 16-113 | The Bing Bong Act of 2023 | repealed-history-only |
 | 16-117 | The Clean Up Act | repealed-history-only |
 | 16-119 | The Criminal Organization Act of 2023 | repealed-history-only |
 | 16-120 | The Hail Columbia Act | repealed-history-only |
@@ -106,8 +106,8 @@
 | 16-122 | The Congressional Competency Act of 2023 | repealed-history-only |
 | 17-125 | We Don't Read Minds Act of 2023 | repealed-history-only |
 | 17-126 | Special Events Act | repealed-history-only |
-| 17-127 | Border Security Act | error |
-| 17-128 | Impeachment Procedures and Protocols Act (IPPA | error |
+| 17-127 | Border Security Act | repealed-history-only |
+| 17-128 | Impeachment Procedures and Protocols Act (IPPA | repealed-history-only |
 | 17-129 | Department of Education (DOE) | repealed-history-only |
 | 17-131 | More Jobs Amendment | repealed-history-only |
 | 17-134 | Amended The Uniformed Capitol Police Act of 2023 | repealed-history-only |
@@ -117,7 +117,7 @@
 | 18-140 | Federal Employment Act of 2023 | repealed-history-only |
 | 18-143 | United States Capitol Police Technical Corrections Act | repealed-history-only |
 | 19-146 | Refurbishing the Military Legal System Act | repealed-history-only |
-| 19-147 | Diplomatic Standards Act (DSA) | error |
+| 19-147 | Diplomatic Standards Act (DSA) | repealed-history-only |
 | 19-149 | Criminal Justice Reform Act (CJRA) | repealed-history-only |
 | 19-152 | The Commerce Legislation and Labor Aggravations Reformations (CLEAR) | repealed-history-only |
 | 21-123 | Freedom In Removing Employees and Deregulation Act of 2024. | repealed-history-only |

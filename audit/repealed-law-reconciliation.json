@@ -3,35 +3,19 @@
   "baseline_commit": "00ea0e9b430e4a2eb2253a77d35e6fb125ba5f46",
   "mode": "apply",
   "changed_xml_files": [
-    "usc/usc01.xml",
-    "usc/usc02.xml",
-    "usc/usc03.xml",
-    "usc/usc05.xml",
-    "usc/usc08.xml",
-    "usc/usc10.xml",
-    "usc/usc14.xml",
-    "usc/usc18.xml",
-    "usc/usc20.xml",
-    "usc/usc22.xml",
-    "usc/usc26.xml",
     "usc/usc28.xml",
-    "usc/usc29.xml",
-    "usc/usc31.xml",
-    "usc/usc38.xml",
-    "usc/usc40.xml",
-    "usc/usc46.xml",
-    "usc/usc49.xml",
-    "usc/usc50.xml",
-    "usc/usc54.xml"
+    "usc/usc08.xml",
+    "usc/usc05.xml",
+    "usc/usc02.xml"
   ],
   "summary": {
     "repealed_laws_checked": 129,
-    "clean": 119,
-    "manual_review_required": 2,
-    "errors": 8,
-    "nodes_removed": 165,
+    "clean": 129,
+    "manual_review_required": 0,
+    "errors": 0,
+    "nodes_removed": 0,
     "nodes_restored": 5,
-    "notes_rewritten": 121,
+    "notes_rewritten": 129,
     "later_active_replacements": 0
   },
   "laws": [
@@ -41,35 +25,28 @@
       "title": "United States Bar Act",
       "actions": 5,
       "retained": {},
-      "conflicts": [
-        {
-          "file": "usc/usc28.xml",
-          "node": "rp-pl001002-codification",
-          "reason": "missing repeal-history note"
-        }
-      ],
-      "errors": [
-        "no repeal-history note found"
-      ],
-      "disposition": "error",
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
       "files": [
         "usc/usc28.xml"
       ],
-      "nodes_removed": [
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl001002-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": [
         "rp-pl001002-t28-s530E",
         "rp-pl001002-t28-s530E-a",
         "rp-pl001002-t28-s530E-b",
         "rp-pl001002-t28-s530E-c",
         "rp-pl001002-t28-s530E-effective-date",
-        "rp-pl001002-t28-s530E-notes",
         "rp-pl001002-t28-s530E-short-title",
         "rp-pl001002-t28-s530E-source",
         "rp-pl001002-t28-s530E-statutory-notes-heading"
-      ],
-      "nodes_restored": [],
-      "notes_rewritten": [],
-      "historical_removals_left_in_place": [],
-      "already_absent": []
+      ]
     },
     {
       "law_id": "PL-001-004",
@@ -83,20 +60,19 @@
       "files": [
         "usc/usc18.xml"
       ],
-      "nodes_removed": [
-        "rp-pl001004-t18-s918",
-        "rp-pl001004-t18-s918-a",
-        "rp-pl001004-t18-s918-b",
-        "rp-pl001004-t18-s918-notes",
-        "rp-pl001004-t18-s918-source",
-        "rp-pl001004-t18-s918-source-defect"
-      ],
+      "nodes_removed": [],
       "nodes_restored": [],
       "notes_rewritten": [
         "rp-pl001004-codification"
       ],
       "historical_removals_left_in_place": [],
-      "already_absent": []
+      "already_absent": [
+        "rp-pl001004-t18-s918",
+        "rp-pl001004-t18-s918-a",
+        "rp-pl001004-t18-s918-b",
+        "rp-pl001004-t18-s918-source",
+        "rp-pl001004-t18-s918-source-defect"
+      ]
     },
     {
       "law_id": "PL-002-005",
@@ -384,23 +360,17 @@
       "title": "National Immigration Employment Act of 2021",
       "actions": 1,
       "retained": {},
-      "conflicts": [
-        {
-          "file": "usc/usc08.xml",
-          "node": "rp-pl003020-codification",
-          "reason": "missing repeal-history note"
-        }
-      ],
-      "errors": [
-        "no repeal-history note found"
-      ],
-      "disposition": "error",
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
       "files": [
         "usc/usc08.xml"
       ],
       "nodes_removed": [],
       "nodes_restored": [],
-      "notes_rewritten": [],
+      "notes_rewritten": [
+        "rp-pl003020-codification"
+      ],
       "historical_removals_left_in_place": [],
       "already_absent": []
     },
@@ -670,23 +640,17 @@
       "title": "Border Awareness and Naturalization Act",
       "actions": 7,
       "retained": {},
-      "conflicts": [
-        {
-          "file": "usc/usc08.xml",
-          "node": "rp-pl004037-codification",
-          "reason": "missing repeal-history note"
-        }
-      ],
-      "errors": [
-        "no repeal-history note found"
-      ],
-      "disposition": "error",
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
       "files": [
         "usc/usc08.xml"
       ],
       "nodes_removed": [],
       "nodes_restored": [],
-      "notes_rewritten": [],
+      "notes_rewritten": [
+        "rp-pl004037-codification"
+      ],
       "historical_removals_left_in_place": [],
       "already_absent": []
     },
@@ -1256,23 +1220,17 @@
       "title": "The Americans First Act",
       "actions": 4,
       "retained": {},
-      "conflicts": [
-        {
-          "file": "usc/usc08.xml",
-          "node": "rp-pl010066-codification",
-          "reason": "missing repeal-history note"
-        }
-      ],
-      "errors": [
-        "no repeal-history note found"
-      ],
-      "disposition": "error",
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
       "files": [
         "usc/usc08.xml"
       ],
       "nodes_removed": [],
       "nodes_restored": [],
-      "notes_rewritten": [],
+      "notes_rewritten": [
+        "rp-pl010066-codification"
+      ],
       "historical_removals_left_in_place": [],
       "already_absent": []
     },
@@ -1390,47 +1348,24 @@
       "title": "Federal Bar Association Act of 2023",
       "actions": 5,
       "retained": {},
-      "conflicts": [
-        {
-          "file": "usc/usc05.xml",
-          "node": "rp-pl012074-codification",
-          "reason": "missing repeal-history note"
-        }
-      ],
-      "errors": [
-        "no repeal-history note found"
-      ],
-      "disposition": "error",
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
       "files": [
         "usc/usc05.xml"
       ],
-      "nodes_removed": [
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl012074-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": [
         "rp-pl012074-t5-s101a",
-        "rp-pl012074-t5-s101a-a",
-        "rp-pl012074-t5-s101a-a-1",
-        "rp-pl012074-t5-s101a-a-2",
-        "rp-pl012074-t5-s101a-a-3",
-        "rp-pl012074-t5-s101a-b",
-        "rp-pl012074-t5-s101a-b-1",
-        "rp-pl012074-t5-s101a-b-2",
-        "rp-pl012074-t5-s101a-b-3",
-        "rp-pl012074-t5-s101a-b-4",
-        "rp-pl012074-t5-s101a-c",
-        "rp-pl012074-t5-s101a-d",
-        "rp-pl012074-t5-s101a-e",
-        "rp-pl012074-t5-s101a-f",
         "rp-pl012074-t5-s101a-source",
         "rp-pl012074-t5-s101b",
-        "rp-pl012074-t5-s101b-a",
-        "rp-pl012074-t5-s101b-b",
-        "rp-pl012074-t5-s101b-c",
-        "rp-pl012074-t5-s101b-d",
         "rp-pl012074-t5-s101b-source"
-      ],
-      "nodes_restored": [],
-      "notes_rewritten": [],
-      "historical_removals_left_in_place": [],
-      "already_absent": []
+      ]
     },
     {
       "law_id": "PL-012-077",
@@ -1658,15 +1593,9 @@
       "title": "Checks and Balances Act of 2023",
       "actions": 3,
       "retained": {},
-      "conflicts": [
-        {
-          "file": "usc/usc22.xml",
-          "node": "rp-pl015093-codification",
-          "reason": "missing repeal-history note"
-        }
-      ],
+      "conflicts": [],
       "errors": [],
-      "disposition": "manual-review-required",
+      "disposition": "repealed-history-only",
       "files": [
         "usc/usc02.xml",
         "usc/usc22.xml"
@@ -1865,15 +1794,9 @@
       "title": "The Bing Bong Act of 2023",
       "actions": 3,
       "retained": {},
-      "conflicts": [
-        {
-          "file": "usc/usc50.xml",
-          "node": "rp-pl016113-codification",
-          "reason": "missing repeal-history note"
-        }
-      ],
+      "conflicts": [],
       "errors": [],
-      "disposition": "manual-review-required",
+      "disposition": "repealed-history-only",
       "files": [
         "usc/usc02.xml",
         "usc/usc50.xml"
@@ -1998,18 +1921,17 @@
       "files": [
         "usc/usc05.xml"
       ],
-      "nodes_removed": [
-        "rp-pl017125-t5-s101c",
-        "rp-pl017125-t5-s101c-a",
-        "rp-pl017125-t5-s101c-b",
-        "rp-pl017125-t5-s101c-source"
-      ],
+      "nodes_removed": [],
       "nodes_restored": [],
       "notes_rewritten": [
         "rp-pl017125-codification"
       ],
       "historical_removals_left_in_place": [],
-      "already_absent": []
+      "already_absent": [
+        "rp-pl017125-t5-s101c",
+        "rp-pl017125-t5-s101c-a",
+        "rp-pl017125-t5-s101c-b"
+      ]
     },
     {
       "law_id": "PL-017-126",
@@ -2037,112 +1959,30 @@
       "title": "Border Security Act",
       "actions": 5,
       "retained": {},
-      "conflicts": [
-        {
-          "file": "usc/usc08.xml",
-          "node": "rp-pl017127-codification",
-          "reason": "missing repeal-history note"
-        }
-      ],
-      "errors": [
-        "no repeal-history note found"
-      ],
-      "disposition": "error",
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
       "files": [
         "usc/usc08.xml"
       ],
-      "nodes_removed": [
-        "rp-pl017127-s1101",
-        "rp-pl017127-s1101-a",
-        "rp-pl017127-s1101-a-1",
-        "rp-pl017127-s1101-a-10",
-        "rp-pl017127-s1101-a-11",
-        "rp-pl017127-s1101-a-12",
-        "rp-pl017127-s1101-a-13",
-        "rp-pl017127-s1101-a-14",
-        "rp-pl017127-s1101-a-15",
-        "rp-pl017127-s1101-a-16",
-        "rp-pl017127-s1101-a-17",
-        "rp-pl017127-s1101-a-18",
-        "rp-pl017127-s1101-a-19",
-        "rp-pl017127-s1101-a-2",
-        "rp-pl017127-s1101-a-20",
-        "rp-pl017127-s1101-a-3",
-        "rp-pl017127-s1101-a-4",
-        "rp-pl017127-s1101-a-5",
-        "rp-pl017127-s1101-a-6",
-        "rp-pl017127-s1101-a-7",
-        "rp-pl017127-s1101-a-8",
-        "rp-pl017127-s1101-a-9",
-        "rp-pl017127-s1101-source-credit",
-        "rp-pl017127-s1103",
-        "rp-pl017127-s1103-a",
-        "rp-pl017127-s1103-b",
-        "rp-pl017127-s1103-c",
-        "rp-pl017127-s1103-d",
-        "rp-pl017127-s1103-e",
-        "rp-pl017127-s1103-f",
-        "rp-pl017127-s1103-source-credit",
-        "rp-pl017127-s1105",
-        "rp-pl017127-s1105-a",
-        "rp-pl017127-s1105-b",
-        "rp-pl017127-s1105-c",
-        "rp-pl017127-s1105-source-credit",
-        "rp-pl017127-s1182",
-        "rp-pl017127-s1182-a",
-        "rp-pl017127-s1182-b",
-        "rp-pl017127-s1182-source-credit",
-        "rp-pl017127-s1189",
-        "rp-pl017127-s1189-a",
-        "rp-pl017127-s1189-b",
-        "rp-pl017127-s1189-c",
-        "rp-pl017127-s1189-d",
-        "rp-pl017127-s1189-e",
-        "rp-pl017127-s1189-f",
-        "rp-pl017127-s1189-source-credit",
-        "rp-pl017127-s1481",
-        "rp-pl017127-s1481-a",
-        "rp-pl017127-s1481-b",
-        "rp-pl017127-s1481-source-credit",
-        "rp-pl017127-s1532",
-        "rp-pl017127-s1532-a",
-        "rp-pl017127-s1532-b",
-        "rp-pl017127-s1532-c",
-        "rp-pl017127-s1532-d",
-        "rp-pl017127-s1532-source-credit",
-        "rp-pl017127-s1533",
-        "rp-pl017127-s1533-a",
-        "rp-pl017127-s1533-b",
-        "rp-pl017127-s1533-c",
-        "rp-pl017127-s1533-d",
-        "rp-pl017127-s1533-e",
-        "rp-pl017127-s1533-f",
-        "rp-pl017127-s1533-g",
-        "rp-pl017127-s1533-source-credit",
-        "rp-pl017127-s1534",
-        "rp-pl017127-s1534-a",
-        "rp-pl017127-s1534-b",
-        "rp-pl017127-s1534-c",
-        "rp-pl017127-s1534-e",
-        "rp-pl017127-s1534-f",
-        "rp-pl017127-s1534-g",
-        "rp-pl017127-s1534-h",
-        "rp-pl017127-s1534-i",
-        "rp-pl017127-s1534-j",
-        "rp-pl017127-s1534-source-credit",
-        "rp-pl017127-s1551",
-        "rp-pl017127-s1551-a",
-        "rp-pl017127-s1551-b",
-        "rp-pl017127-s1551-c",
-        "rp-pl017127-s1551-d",
-        "rp-pl017127-s1551-e",
-        "rp-pl017127-s1551-f",
-        "rp-pl017127-s1551-source-credit"
-      ],
+      "nodes_removed": [],
       "nodes_restored": [],
-      "notes_rewritten": [],
+      "notes_rewritten": [
+        "rp-pl017127-codification"
+      ],
       "historical_removals_left_in_place": [],
-      "already_absent": []
+      "already_absent": [
+        "rp-pl017127-s1101",
+        "rp-pl017127-s1103",
+        "rp-pl017127-s1105",
+        "rp-pl017127-s1182",
+        "rp-pl017127-s1189",
+        "rp-pl017127-s1481",
+        "rp-pl017127-s1532",
+        "rp-pl017127-s1533",
+        "rp-pl017127-s1534",
+        "rp-pl017127-s1551"
+      ]
     },
     {
       "law_id": "PL-017-128",
@@ -2150,74 +1990,23 @@
       "title": "Impeachment Procedures and Protocols Act (IPPA",
       "actions": 4,
       "retained": {},
-      "conflicts": [
-        {
-          "file": "usc/usc02.xml",
-          "node": "rp-pl017128-codification",
-          "reason": "missing repeal-history note"
-        },
-        {
-          "file": "usc/usc28.xml",
-          "node": "rp-pl017128-codification",
-          "reason": "missing repeal-history note"
-        }
-      ],
-      "errors": [
-        "no repeal-history note found"
-      ],
-      "disposition": "error",
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
       "files": [
         "usc/usc02.xml",
         "usc/usc28.xml"
       ],
-      "nodes_removed": [
-        "rp-pl017128-s200",
-        "rp-pl017128-s200-a",
-        "rp-pl017128-s200-a-1",
-        "rp-pl017128-s200-a-2",
-        "rp-pl017128-s200-a-3",
-        "rp-pl017128-s200-a-4",
-        "rp-pl017128-s200-a-5",
-        "rp-pl017128-s200-a-6",
-        "rp-pl017128-s200-b",
-        "rp-pl017128-s200-b-1",
-        "rp-pl017128-s200-b-2",
-        "rp-pl017128-s200-b-3",
-        "rp-pl017128-s200-b-4",
-        "rp-pl017128-s200-b-5",
-        "rp-pl017128-s200-b-6",
-        "rp-pl017128-s200-b-7",
-        "rp-pl017128-s200-c",
-        "rp-pl017128-s200-c-1",
-        "rp-pl017128-s200-c-2",
-        "rp-pl017128-s200-c-3",
-        "rp-pl017128-s200-c-4",
-        "rp-pl017128-s200-c-5",
-        "rp-pl017128-s200-d",
-        "rp-pl017128-s200-d-1",
-        "rp-pl017128-s200-d-2",
-        "rp-pl017128-s200-d-3",
-        "rp-pl017128-s200-e",
-        "rp-pl017128-s200-e-1",
-        "rp-pl017128-s200-e-2",
-        "rp-pl017128-s200-e-3",
-        "rp-pl017128-s200-e-4",
-        "rp-pl017128-s200-source-credit",
-        "rp-pl017128-s200a",
-        "rp-pl017128-s200a-a",
-        "rp-pl017128-s200a-a-1",
-        "rp-pl017128-s200a-a-2",
-        "rp-pl017128-s200a-a-3",
-        "rp-pl017128-s200a-b",
-        "rp-pl017128-s200a-source-credit"
-      ],
+      "nodes_removed": [],
       "nodes_restored": [
         "id885a6953-67ea-11f0-9eeb-e997de6427b9",
         "id885a6954-67ea-11f0-9eeb-e997de6427b9",
         "id885a695a-67ea-11f0-9eeb-e997de6427b9",
         "id885a695d-67ea-11f0-9eeb-e997de6427b9"
       ],
-      "notes_rewritten": [],
+      "notes_rewritten": [
+        "rp-pl017128-codification"
+      ],
       "historical_removals_left_in_place": [],
       "already_absent": [
         "rp-pl017128-s1365-b",
@@ -2225,7 +2014,9 @@
         "rp-pl017128-s1365-d",
         "rp-pl017128-s1365-e",
         "rp-pl017128-s1365-effective-date",
-        "rp-pl017128-s1365-f"
+        "rp-pl017128-s1365-f",
+        "rp-pl017128-s200",
+        "rp-pl017128-s200a"
       ]
     },
     {
@@ -2414,23 +2205,17 @@
       "title": "Diplomatic Standards Act (DSA)",
       "actions": 3,
       "retained": {},
-      "conflicts": [
-        {
-          "file": "usc/usc08.xml",
-          "node": "rp-pl019147-codification",
-          "reason": "missing repeal-history note"
-        }
-      ],
-      "errors": [
-        "no repeal-history note found"
-      ],
-      "disposition": "error",
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
       "files": [
         "usc/usc08.xml"
       ],
       "nodes_removed": [],
       "nodes_restored": [],
-      "notes_rewritten": [],
+      "notes_rewritten": [
+        "rp-pl019147-codification"
+      ],
       "historical_removals_left_in_place": [],
       "already_absent": []
     },
