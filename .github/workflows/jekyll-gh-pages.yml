@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -12,7 +15,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -26,7 +29,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           lfs: true
-          fetch-depth: 0
+          fetch-depth: 1
+
+      - name: Fetch codification baseline
+        run: git fetch --no-tags --depth=1 origin 00ea0e9b430e4a2eb2253a77d35e6fb125ba5f46
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -58,8 +64,11 @@ jobs:
           rm -rf data/title-42
           python tools/build_title42_chunks.py
           python tools/build_index.py
+          python tools/build_public_laws_index.py
+          python tools/filter_public_laws_for_publication.py
           test -s data/titles.json
           test -s data/title-42/manifest.json
+          test -s data/public-laws.json
 
       - name: Run website validation
         shell: bash
@@ -70,7 +79,27 @@ jobs:
           python tools/audit_applied_material.py
           python tools/reconcile_repealed_laws.py --check
           python -m unittest discover -s tests -p "test_check_encoding.py" -v
+          node --check assets/js/public-laws.js
           node --test tests/test_usar_notes.mjs tests/test_citation_routing.mjs
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          payload = json.loads(Path('data/public-laws.json').read_text(encoding='utf-8'))
+          assert payload['counts']['total'] == 270
+          assert payload['counts']['active'] == 141
+          assert payload['counts']['repealed'] == 129
+          assert payload['counts']['actions'] == 903
+          assert len(payload['laws']) == 270
+          assert all(law['status'] in {'active', 'repealed'} for law in payload['laws'])
+          assert all(law['actions'] is not None for law in payload['laws'])
+          assert all(
+              action['result_label'] == 'Historical disposition'
+              for law in payload['laws'] if law['status'] == 'repealed'
+              for action in law['actions']
+          )
+          print('Public-law index validation passed.')
+          PY
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -82,7 +111,7 @@ jobs:
           rm -rf _site
           mkdir -p _site
 
-          cp index.html 404.html _site/
+          cp index.html 404.html public-laws.html _site/
           cp -a assets _site/assets
           cp -a data _site/data
           cp -a usc _site/usc
@@ -93,7 +122,11 @@ jobs:
 
           test -s _site/index.html
           test -s _site/404.html
+          test -s _site/public-laws.html
+          test -s _site/assets/js/public-laws.js
+          test -s _site/assets/css/public-laws.css
           test -s _site/data/titles.json
+          test -s _site/data/public-laws.json
           test -s _site/data/title-42/manifest.json
           test ! -e _site/usc/usc42.xml
           test ! -e _site/audit
@@ -123,6 +156,7 @@ jobs:
 
   deploy:
     name: Deploy GitHub Pages
+    if: ${{ github.event_name != 'pull_request' }}
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 20
