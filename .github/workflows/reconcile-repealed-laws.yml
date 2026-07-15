@@ -11,6 +11,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: repealed-law-reconciliation
+  cancel-in-progress: true
+
 jobs:
   reconcile:
     if: ${{ github.event_name != 'push' || !contains(github.event.head_commit.message, '[repealed-law-bot]') }}
@@ -18,12 +22,15 @@ jobs:
     timeout-minutes: 90
 
     steps:
-      - name: Checkout complete repair branch history
+      - name: Checkout repair branch
         uses: actions/checkout@v4
         with:
           ref: repair/repealed-laws
-          fetch-depth: 0
+          fetch-depth: 1
           lfs: true
+
+      - name: Fetch integration baseline only
+        run: git fetch --no-tags --depth=1 origin 00ea0e9b430e4a2eb2253a77d35e6fb125ba5f46
 
       - name: Set up Python
         uses: actions/setup-python@v5
