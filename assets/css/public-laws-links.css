@@ -1,0 +1,53 @@
+.law-card__intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.law-card__intro .law-card__description {
+  margin: 0;
+}
+
+.trello-link {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  min-height: 2.35rem;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid var(--link);
+  background: var(--surface);
+  color: var(--link);
+  font-size: 0.84rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.trello-link:hover,
+.trello-link:focus-visible {
+  border-color: var(--cornell-red-dark);
+  color: var(--cornell-red-dark);
+  box-shadow: var(--focus);
+}
+
+.law-action__target .law-target {
+  margin: 0.15rem 0.15rem 0.15rem 0;
+}
+
+.law-target--link {
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.law-card--active .law-target--historical {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+@media (max-width: 620px) {
+  .law-card__intro {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

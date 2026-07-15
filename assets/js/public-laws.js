@@ -27,9 +27,7 @@ const elements = {
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
 
 function resolveTheme(choice) {
-  if (choice === "system") {
-    return prefersDark.matches ? "dark" : "light";
-  }
+  if (choice === "system") return prefersDark.matches ? "dark" : "light";
   return choice === "dark" ? "dark" : "light";
 }
 
@@ -40,14 +38,9 @@ function applyTheme(choice) {
   state.theme = normalized;
   document.documentElement.dataset.theme = resolveTheme(normalized);
   elements.themeButtons.forEach((button) => {
-    button.classList.toggle(
-      "is-active",
-      button.dataset.themeChoice === normalized,
-    );
-    button.setAttribute(
-      "aria-pressed",
-      button.dataset.themeChoice === normalized ? "true" : "false",
-    );
+    const active = button.dataset.themeChoice === normalized;
+    button.classList.toggle("is-active", active);
+    button.setAttribute("aria-pressed", active ? "true" : "false");
   });
 }
 
@@ -70,6 +63,11 @@ function normalize(value) {
   return String(value || "").toLowerCase().replace(/\s+/g, " ").trim();
 }
 
+function actionTargets(action) {
+  if (Array.isArray(action.targets)) return action.targets;
+  return action.target ? [action.target] : [];
+}
+
 function matchesQuery(law, query) {
   if (!query) return true;
   const haystack = [
@@ -78,13 +76,14 @@ function matchesQuery(law, query) {
     law.title,
     law.status_label,
     law.summary,
+    law.trello_url,
     ...law.targets.map((target) => target.citation),
     ...law.actions.flatMap((action) => [
       action.provision,
       action.effect_label,
       action.result_label,
       action.description,
-      action.target?.citation,
+      ...actionTargets(action).map((target) => target.citation),
     ]),
   ]
     .filter(Boolean)
@@ -96,10 +95,7 @@ function applyFilters() {
   const query = normalize(state.query);
   state.filtered = state.laws.filter((law) => {
     if (state.status !== "all" && law.status !== state.status) return false;
-    if (
-      state.effect !== "all" &&
-      !law.effect_categories.includes(state.effect)
-    ) {
+    if (state.effect !== "all" && !law.effect_categories.includes(state.effect)) {
       return false;
     }
     return matchesQuery(law, query);
@@ -121,8 +117,19 @@ function createTarget(target) {
     : "law-target law-target--historical";
   item.textContent = target.citation;
   if (target.href) item.href = target.href;
-  if (target.historical) item.title = "Historical location; the law is repealed.";
+  if (target.historical) {
+    item.title = "Historical location; the law is repealed.";
+  } else if (!target.section) {
+    item.title = "Title-wide material; no individual section was recorded.";
+  }
   return item;
+}
+
+function appendTargets(container, targets) {
+  targets.forEach((target, index) => {
+    if (index) container.append(document.createTextNode(" "));
+    container.appendChild(createTarget(target));
+  });
 }
 
 function createAction(action, law) {
@@ -131,26 +138,23 @@ function createAction(action, law) {
 
   const header = document.createElement("div");
   header.className = "law-action__header";
-
   const provision = document.createElement("h4");
   provision.textContent = action.provision;
   header.appendChild(provision);
-
   const effect = document.createElement("span");
   effect.className = `effect-badge effect-badge--${action.effect_category}`;
   effect.textContent = action.effect_label;
   header.appendChild(effect);
-
   row.appendChild(header);
 
   const meta = document.createElement("div");
   meta.className = "law-action__meta";
-
-  if (action.target) {
+  const targets = actionTargets(action);
+  if (targets.length) {
     const targetLabel = document.createElement("span");
     targetLabel.className = "law-action__target";
-    targetLabel.append("Code location: ");
-    targetLabel.appendChild(createTarget(action.target));
+    targetLabel.append(targets.length === 1 ? "Code location: " : "Code locations: ");
+    appendTargets(targetLabel, targets);
     meta.appendChild(targetLabel);
   } else {
     const noTarget = document.createElement("span");
@@ -163,7 +167,6 @@ function createAction(action, law) {
   result.className = "law-action__result";
   result.textContent = action.result_label;
   meta.appendChild(result);
-
   row.appendChild(meta);
 
   const description = document.createElement("p");
@@ -177,7 +180,6 @@ function createAction(action, law) {
       "Historical only. This provision is not displayed as current operative law.";
     row.appendChild(historical);
   }
-
   return row;
 }
 
@@ -189,41 +191,45 @@ function createLawCard(law) {
 
   const summary = document.createElement("summary");
   summary.className = "law-card__summary";
-
   const heading = document.createElement("span");
   heading.className = "law-card__heading";
-
   const number = document.createElement("span");
   number.className = "law-card__number";
   number.textContent = `Public Law ${law.public_law}`;
   heading.appendChild(number);
-
   const title = document.createElement("span");
   title.className = "law-card__title";
   title.textContent = law.title;
   heading.appendChild(title);
-
   summary.appendChild(heading);
 
   const badges = document.createElement("span");
   badges.className = "law-card__badges";
   badges.appendChild(createStatusBadge(law));
-
   const count = document.createElement("span");
   count.className = "law-card__count";
   count.textContent = `${law.action_count} action${law.action_count === 1 ? "" : "s"}`;
   badges.appendChild(count);
-
   summary.appendChild(badges);
   card.appendChild(summary);
 
   const body = document.createElement("div");
   body.className = "law-card__body";
-
+  const intro = document.createElement("div");
+  intro.className = "law-card__intro";
   const summaryText = document.createElement("p");
   summaryText.className = "law-card__description";
   summaryText.textContent = law.summary;
-  body.appendChild(summaryText);
+  intro.appendChild(summaryText);
+
+  const trello = document.createElement("a");
+  trello.className = "trello-link";
+  trello.href = law.trello_url;
+  trello.target = "_blank";
+  trello.rel = "noreferrer";
+  trello.textContent = "View Public Law on Trello";
+  intro.appendChild(trello);
+  body.appendChild(intro);
 
   const locations = document.createElement("section");
   locations.className = "law-card__locations";
@@ -231,13 +237,12 @@ function createLawCard(law) {
   locationHeading.textContent =
     law.status === "repealed"
       ? "Former or historical Code locations"
-      : "Affected Code locations";
+      : "Affected Code sections";
   locations.appendChild(locationHeading);
-
   if (law.targets.length) {
     const targetList = document.createElement("div");
     targetList.className = "law-targets";
-    law.targets.forEach((target) => targetList.appendChild(createTarget(target)));
+    appendTargets(targetList, law.targets);
     locations.appendChild(targetList);
   } else {
     const none = document.createElement("p");
@@ -251,7 +256,6 @@ function createLawCard(law) {
   const actionHeading = document.createElement("h3");
   actionHeading.textContent = "Section-by-section disposition";
   actionSection.appendChild(actionHeading);
-
   if (law.actions.length) {
     const actionList = document.createElement("ol");
     actionList.className = "law-actions";
@@ -264,16 +268,12 @@ function createLawCard(law) {
     none.textContent = "No section-level actions were recorded.";
     actionSection.appendChild(none);
   }
-
   body.appendChild(actionSection);
   card.appendChild(body);
 
   card.addEventListener("toggle", () => {
-    if (card.open) {
-      history.replaceState(null, "", `#${card.id}`);
-    }
+    if (card.open) history.replaceState(null, "", `#${card.id}`);
   });
-
   return card;
 }
 
@@ -282,7 +282,6 @@ function render() {
   elements.empty.hidden = state.filtered.length !== 0;
   elements.resultSummary.textContent =
     `${state.filtered.length} of ${state.laws.length} public laws shown`;
-
   const fragment = document.createDocumentFragment();
   state.filtered.forEach((law) => fragment.appendChild(createLawCard(law)));
   elements.list.appendChild(fragment);
@@ -300,9 +299,7 @@ function render() {
 async function loadPublicLaws() {
   try {
     const response = await fetch("data/public-laws.json", { cache: "no-cache" });
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
-    }
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const payload = await response.json();
     state.laws = payload.laws || [];
     elements.total.textContent = payload.counts?.total ?? state.laws.length;
@@ -326,12 +323,10 @@ elements.search.addEventListener("input", (event) => {
   state.query = event.target.value;
   applyFilters();
 });
-
 elements.status.addEventListener("change", (event) => {
   state.status = event.target.value;
   applyFilters();
 });
-
 elements.effect.addEventListener("change", (event) => {
   state.effect = event.target.value;
   applyFilters();

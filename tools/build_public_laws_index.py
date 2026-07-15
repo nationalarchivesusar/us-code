@@ -15,10 +15,26 @@ FINAL_LEDGER = ROOT / "audit" / "final-ledger.json"
 INTEGRATION_RESULTS = ROOT / "audit" / "xml-integration-results.json"
 REPEALED_LAWS = ROOT / "legal-data" / "repealed-public-laws.json"
 REPEAL_RECONCILIATION = ROOT / "audit" / "repealed-law-reconciliation.json"
+TRELLO_LINKS = ROOT / "legal-data" / "public-law-trello.json"
 OUTPUT = ROOT / "data" / "public-laws.json"
 
 TARGET_RE = re.compile(
     r"^/us/usc/t(?P<title>\d+[A-Za-z]?)(?:/s(?P<section>[^/]+))?(?P<rest>/.*)?$"
+)
+TARGET_ANY_RE = re.compile(
+    r"/us/usc/t(?P<title>\d+[A-Za-z]?)/s(?P<section>[^/\s,;]+)(?P<rest>(?:/[^\s,;]+)*)"
+)
+NODE_TARGET_RE = re.compile(
+    r"(?:^|-)t(?P<title>\d+[A-Za-z]?)-s(?P<section>[0-9A-Za-z.-]+)(?:-|$)",
+    re.IGNORECASE,
+)
+NODE_SECTION_RE = re.compile(
+    r"(?:^|-)s(?P<section>\d+[A-Za-z]?(?:-\d+[A-Za-z]?)?)(?:-|$)",
+    re.IGNORECASE,
+)
+USC_CITATION_RE = re.compile(
+    r"(?P<title>\d+[A-Za-z]?)\s+U\.?S\.?C\.?\s*(?:§+|sections?|secs?\.?)*\s*(?P<section>\d+[A-Za-z]?(?:-[0-9A-Za-z]+)?)",
+    re.IGNORECASE,
 )
 
 
@@ -43,49 +59,175 @@ def law_sort_key(public_law: str) -> tuple[int, int, str]:
     return (int(match.group(1)), int(match.group(2)), public_law)
 
 
+def normalized_title(value: str | None) -> str | None:
+    if not value:
+        return None
+    stripped = value.lstrip("0")
+    return stripped or "0"
+
+
 def xml_title_number(action: dict) -> str | None:
     value = action.get("xml_file_after") or action.get("xml_file_before") or ""
     match = re.search(r"usc(\d+[A-Za-z]?)\.xml$", value.replace("\\", "/"))
-    return match.group(1) if match else None
+    return normalized_title(match.group(1)) if match else None
 
 
-def target_from_action(action: dict, repealed: bool) -> dict | None:
-    identifier = (action.get("final_section_or_subsection_identifier") or "").strip()
-    title = None
-    section = None
-    rest = ""
-
-    match = TARGET_RE.match(identifier)
-    if match:
-        title = match.group("title")
-        section = match.group("section")
-        rest = match.group("rest") or ""
-    else:
-        title = xml_title_number(action)
-
-    if not title:
-        return None
-
+def make_target(
+    title: str,
+    section: str | None,
+    rest: str = "",
+    *,
+    repealed: bool,
+    identifier: str | None = None,
+    inferred: bool = False,
+) -> dict:
+    title = normalized_title(title) or title
+    section = (section or "").strip() or None
+    rest = rest or ""
     pinpoint = "".join(f"({part})" for part in rest.strip("/").split("/") if part)
     if section:
         citation = f"{title} U.S.C. § {section}{pinpoint}"
-        href = None
-        if not repealed:
-            href = f"cite/{quote(title)}/{quote(section)}/"
-            if identifier and rest:
-                href += f"?p={quote(identifier, safe='')}"
+        href = None if repealed else f"cite/{quote(title)}/{quote(section)}/"
+        if href and identifier and rest:
+            href += f"?p={quote(identifier, safe='')}"
+        resolved_identifier = identifier or f"/us/usc/t{title}/s{section}{rest}"
     else:
-        citation = f"Title {title}, United States Code"
-        href = None if repealed else f"./?t={quote(title)}"
-
+        citation = f"Title {title}, United States Code (title-wide material)"
+        href = None
+        resolved_identifier = identifier or f"/us/usc/t{title}"
     return {
-        "identifier": identifier or f"/us/usc/t{title}",
+        "identifier": resolved_identifier,
         "title": title,
         "section": section,
         "citation": citation,
         "href": href,
         "historical": repealed,
+        "inferred": inferred,
     }
+
+
+def target_key(target: dict) -> tuple[str, str, str]:
+    return (
+        target.get("title") or "",
+        target.get("section") or "",
+        target.get("identifier") or "",
+    )
+
+
+def dedupe_targets(targets: list[dict]) -> list[dict]:
+    unique: dict[tuple[str, str, str], dict] = {}
+    for target in targets:
+        unique.setdefault(target_key(target), target)
+    return sorted(
+        unique.values(),
+        key=lambda item: (
+            int(re.sub(r"\D", "", item["title"]) or 0),
+            item.get("section") or "",
+            item["identifier"],
+        ),
+    )
+
+
+def action_text(action: dict) -> str:
+    parts: list[str] = []
+    for key in (
+        "final_section_or_subsection_identifier",
+        "planned_action",
+        "planned_treatment",
+        "exact_enacted_text_applied",
+        "source_credit_change",
+        "amendment_note_change",
+        "toc_change",
+        "validation_result",
+        "documented_no_op_explanation",
+        "verified_note_text_excerpt",
+    ):
+        value = action.get(key)
+        if isinstance(value, str):
+            parts.append(value)
+    baseline = action.get("baseline_proof")
+    if isinstance(baseline, str):
+        parts.append(baseline)
+    elif baseline is not None:
+        parts.append(json.dumps(baseline, ensure_ascii=False))
+    return " ".join(parts)
+
+
+def targets_from_action(action: dict, repealed: bool) -> list[dict]:
+    identifier = (action.get("final_section_or_subsection_identifier") or "").strip()
+    title = xml_title_number(action)
+    targets: list[dict] = []
+
+    match = TARGET_RE.match(identifier)
+    if match:
+        explicit_title = normalized_title(match.group("title")) or match.group("title")
+        explicit_section = match.group("section")
+        explicit_rest = match.group("rest") or ""
+        targets.append(
+            make_target(
+                explicit_title,
+                explicit_section,
+                explicit_rest,
+                repealed=repealed,
+                identifier=identifier,
+            )
+        )
+        title = explicit_title
+
+    for node_id in (
+        list(action.get("actual_node_ids_added") or [])
+        + list(action.get("actual_node_ids_changed") or [])
+        + list(action.get("actual_node_ids_removed") or [])
+    ):
+        match = NODE_TARGET_RE.search(str(node_id))
+        if match:
+            targets.append(
+                make_target(
+                    match.group("title"),
+                    match.group("section"),
+                    repealed=repealed,
+                    inferred=True,
+                )
+            )
+            continue
+        match = NODE_SECTION_RE.search(str(node_id))
+        if match and title:
+            targets.append(
+                make_target(
+                    title,
+                    match.group("section"),
+                    repealed=repealed,
+                    inferred=True,
+                )
+            )
+
+    text = action_text(action)
+    for match in TARGET_ANY_RE.finditer(text):
+        found_identifier = match.group(0)
+        targets.append(
+            make_target(
+                match.group("title"),
+                match.group("section"),
+                match.group("rest") or "",
+                repealed=repealed,
+                identifier=found_identifier,
+                inferred=True,
+            )
+        )
+    for match in USC_CITATION_RE.finditer(text):
+        targets.append(
+            make_target(
+                match.group("title"),
+                match.group("section"),
+                repealed=repealed,
+                inferred=True,
+            )
+        )
+
+    if not targets and title:
+        targets.append(make_target(title, None, repealed=repealed, identifier=identifier or None))
+
+    return dedupe_targets(targets)
 
 
 def friendly_result_status(value: str) -> str:
@@ -103,11 +245,9 @@ def friendly_result_status(value: str) -> str:
 def classify_action(action: dict, repealed: bool) -> tuple[str, str]:
     if repealed:
         return "repealed-history", "Repealed — historical effect"
-
     result_status = action.get("result_status") or ""
     planned_action = (action.get("planned_action") or "").lower()
     treatment = (action.get("planned_treatment") or "").lower()
-
     if result_status == "documented-no-code-action":
         return "no-code", "No Code amendment"
     if result_status == "superseded-by-later-action":
@@ -125,20 +265,14 @@ def compact_description(action: dict, repealed: bool) -> str:
             "This law is repealed. Its former Code effect is shown for historical "
             "reference; law-specific operative text has been removed."
         )
-
-    candidates = [
-        action.get("documented_no_op_explanation"),
-        action.get("exact_enacted_text_applied"),
-        action.get("validation_result"),
-    ]
-    for candidate in candidates:
-        text = " ".join((candidate or "").split())
-        if not text:
-            continue
-        if len(text) > 420:
-            text = text[:417].rstrip() + "..."
-        return text
-
+    for key in (
+        "documented_no_op_explanation",
+        "exact_enacted_text_applied",
+        "validation_result",
+    ):
+        text = " ".join((action.get(key) or "").split())
+        if text:
+            return text[:417].rstrip() + "..." if len(text) > 420 else text
     planned = " ".join((action.get("planned_action") or "").split())
     return planned or friendly_result_status(action.get("result_status") or "")
 
@@ -148,6 +282,7 @@ def build() -> dict:
     results = load_json(INTEGRATION_RESULTS)
     repealed_data = load_json(REPEALED_LAWS)
     reconciliation = load_json(REPEAL_RECONCILIATION)
+    trello_data = load_json(TRELLO_LINKS)
 
     repealed_ids = {row["law_id"] for row in repealed_data.get("laws", [])}
     reconciliation_ids = {
@@ -156,29 +291,38 @@ def build() -> dict:
         if row.get("disposition") == "repealed-history-only"
     }
     reconciliation_summary = reconciliation.get("summary", {})
-
     if reconciliation_summary.get("errors") != 0:
         raise SystemExit("Repealed-law reconciliation still reports errors.")
     if reconciliation_summary.get("manual_review_required") != 0:
         raise SystemExit("Repealed-law reconciliation still requires manual review.")
     if reconciliation_ids != repealed_ids:
-        missing = sorted(repealed_ids - reconciliation_ids)
-        extra = sorted(reconciliation_ids - repealed_ids)
-        raise SystemExit(
-            f"Repealed-law status mismatch. Missing={missing[:5]} Extra={extra[:5]}"
-        )
+        raise SystemExit("Repealed-law status mismatch.")
+
+    short_links = trello_data.get("short_links", {})
+    trello_links = {
+        law_id: f"https://trello.com/c/{short_link}"
+        for law_id, short_link in short_links.items()
+    }
+    if len(trello_links) != 270 or not all(
+        re.fullmatch(r"https://trello\.com/c/[0-9A-Za-z]{8}", url)
+        for url in trello_links.values()
+    ):
+        raise SystemExit("Expected 270 direct Trello card links.")
 
     laws: dict[str, dict] = {}
     for row in ledger.get("laws", []):
         law_id = row["law_id"]
         public_law = row["public_law"]
         repealed = law_id in repealed_ids
+        if law_id not in trello_links:
+            raise SystemExit(f"Missing Trello card link for {law_id}.")
         laws[law_id] = {
             "law_id": law_id,
             "public_law": public_law,
             "title": clean_title(row.get("title", ""), public_law),
             "status": "repealed" if repealed else "active",
             "status_label": "Repealed" if repealed else "Active",
+            "trello_url": trello_links[law_id],
             "actions": [],
         }
 
@@ -191,20 +335,22 @@ def build() -> dict:
 
     for law_id, law in laws.items():
         repealed = law["status"] == "repealed"
-        target_index: dict[str, dict] = {}
         effect_categories: set[str] = set()
+        section_targets_by_title: dict[str, list[dict]] = defaultdict(list)
+        prepared_actions: list[dict] = []
 
         for action in grouped_actions.get(law_id, []):
             category, effect_label = classify_action(action, repealed)
-            target = target_from_action(action, repealed)
-            if target:
-                target_index.setdefault(target["identifier"], target)
+            targets = targets_from_action(action, repealed)
+            for target in targets:
+                if target.get("section"):
+                    section_targets_by_title[target["title"]].append(target)
             effect_categories.add(category)
-
-            law["actions"].append(
+            prepared_actions.append(
                 {
                     "action_id": action.get("action_id"),
-                    "provision": action.get("provision_reference") or "Unspecified provision",
+                    "provision": action.get("provision_reference")
+                    or "Unspecified provision",
                     "effect_category": category,
                     "effect_label": effect_label,
                     "result_status": action.get("result_status"),
@@ -213,21 +359,32 @@ def build() -> dict:
                     ),
                     "planned_action": action.get("planned_action"),
                     "treatment": action.get("planned_treatment"),
-                    "target": target,
+                    "targets": targets,
                     "description": compact_description(action, repealed),
                 }
             )
 
-        law["targets"] = sorted(
-            target_index.values(),
-            key=lambda item: (
-                int(re.sub(r"\D", "", item["title"]) or 0),
-                item.get("section") or "",
-                item["identifier"],
-            ),
-        )
+        for title, targets in list(section_targets_by_title.items()):
+            section_targets_by_title[title] = dedupe_targets(targets)
+
+        law_targets: list[dict] = []
+        for action in prepared_actions:
+            expanded: list[dict] = []
+            for target in action["targets"]:
+                if not target.get("section") and section_targets_by_title.get(
+                    target["title"]
+                ):
+                    expanded.extend(section_targets_by_title[target["title"]])
+                else:
+                    expanded.append(target)
+            action["targets"] = dedupe_targets(expanded)
+            action["target"] = action["targets"][0] if action["targets"] else None
+            law_targets.extend(action["targets"])
+
+        law["actions"] = prepared_actions
+        law["targets"] = dedupe_targets(law_targets)
         law["effect_categories"] = sorted(effect_categories)
-        law["action_count"] = len(law["actions"])
+        law["action_count"] = len(prepared_actions)
         law["target_count"] = len(law["targets"])
 
         if repealed:
@@ -250,8 +407,9 @@ def build() -> dict:
                 f"{'' if law['action_count'] == 1 else 's'} and no direct Code location."
             )
 
-    ordered_laws = sorted(laws.values(), key=lambda item: law_sort_key(item["public_law"]))
-
+    ordered_laws = sorted(
+        laws.values(), key=lambda item: law_sort_key(item["public_law"])
+    )
     expected_total = ledger.get("summary", {}).get("total_laws", 270)
     if len(ordered_laws) != expected_total:
         raise SystemExit(
@@ -264,21 +422,35 @@ def build() -> dict:
             f"Expected 903 integration actions, found {len(results.get('results', []))}."
         )
 
+    clickable_targets = [
+        target
+        for law in ordered_laws
+        for target in law.get("targets", [])
+        if target.get("href")
+    ]
+    bad_clickable = [target for target in clickable_targets if not target.get("section")]
+    if bad_clickable:
+        raise SystemExit("Public-law page contains clickable title-only Code targets.")
+
     active_count = sum(law["status"] == "active" for law in ordered_laws)
     repealed_count = sum(law["status"] == "repealed" for law in ordered_laws)
-
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "source_note": (
-            "Statuses come from the authoritative USAR public-law archive. "
-            "Code effects come from the completed codification action ledger."
+            "Statuses and Trello card links come from the authoritative USAR "
+            "public-law archive. Code effects come from the completed codification action ledger."
         ),
+        "trello_board_url": trello_data.get("board_url"),
         "counts": {
             "total": len(ordered_laws),
             "active": active_count,
             "repealed": repealed_count,
             "actions": len(results.get("results", [])),
-            "laws_with_code_locations": sum(bool(law["targets"]) for law in ordered_laws),
+            "laws_with_code_locations": sum(
+                bool(law["targets"]) for law in ordered_laws
+            ),
+            "direct_section_links": len(clickable_targets),
+            "trello_links": len(trello_links),
         },
         "laws": ordered_laws,
     }
@@ -292,9 +464,9 @@ def main() -> None:
         encoding="utf-8",
     )
     print(
-        "Wrote "
-        f"{payload['counts']['total']} laws and "
-        f"{payload['counts']['actions']} actions to {OUTPUT.relative_to(ROOT)}"
+        f"Wrote {payload['counts']['total']} laws, {payload['counts']['actions']} actions, "
+        f"{payload['counts']['direct_section_links']} direct section links, and "
+        f"{payload['counts']['trello_links']} Trello links to {OUTPUT.relative_to(ROOT)}"
     )
 
 
