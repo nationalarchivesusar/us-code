@@ -1,0 +1,226 @@
+{
+  "reviewer": "law-auditor-E",
+  "group_index": 131,
+  "law_count": 6,
+  "source_manifest": "audit/manifests/manifest-31.json",
+  "reviewed_against": [
+    "audit/manifests/manifest-31.json",
+    "audit/primary/batch-05-02.json",
+    "audit/primary/batch-05-03.json",
+    "audit/chronology-report.json",
+    "usc/usc02.xml",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-018-139",
+      "public_law": "18-139",
+      "title": "Public Law 18-139 | The Bye Bye Background Checks Act",
+      "report_path": "audit/primary/batch-05-02.json",
+      "batch": 5,
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "The source text is recoverable and Section 2 expressly repeals Public Law 17-137; the remaining provisions are standard note material and the act does not require a new positive-law section.",
+      "provision_refs": [
+        "SEC1",
+        "SEC2",
+        "SEC3",
+        "SEC6"
+      ],
+      "targets": [
+        "/us/usc/t2/s6132"
+      ],
+      "current_implementation": {
+        "assessment": "not-implemented",
+        "placement": "/us/usc/t2/s6132",
+        "detail": "The branch XML has 2 U.S.C. 6132, but no PL-018-139 statutory note or repeal-history entry appears in the current tree, and the origin/main baseline does not add one either."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-018-139.md classifies the act as STATUTORY_NOTE at 2 U.S.C. 6132.",
+        "codification/mass_migration/latest/sources/records/PL-018-139.json identifies the PDF source and a 1212-character text extraction.",
+        "codification/laws/laws/PL-018-139/law.txt states that Public Law 17-137 shall be repealed in its entirety.",
+        "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv maps PL-018-139 to /us/usc/t2/s6132."
+      ],
+      "recommended_actions": [
+        "Add a concise statutory note at 2 U.S.C. 6132 recording the repeal of PL 17-137.",
+        "Do not add substantive Code text.",
+        "Remove any dump or Trello material if present in the working note."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source text is recoverable and Section 2 expressly repeals Public Law 17-137; the remaining provisions are standard note material and the act does not require a new positive-law section.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "Add a concise statutory note at 2 U.S.C. 6132 recording the repeal of PL 17-137. | Do not add substantive Code text. | Remove any dump or Trello material if present in the working note."
+    },
+    {
+      "law_id": "PL-018-140",
+      "public_law": "18-140",
+      "title": "Public Law 18-140 | Federal Employment Act of 2023",
+      "report_path": "audit/primary/batch-05-02.json",
+      "batch": 5,
+      "status": "unresolved",
+      "decision": "source-unavailable-historical-note",
+      "status_basis": "The recovered material is only a Drive access-denied page, so no operative statutory text can be authenticated and no safe Code operation can be assigned.",
+      "provision_refs": [
+        "(whole act)"
+      ],
+      "targets": [],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No readable enactment text was recovered, so no XML placement is safe."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-018-140.md says no readable authenticated enactment text could be recovered.",
+        "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv marks PL-018-140 as SOURCE_UNAVAILABLE with no code location.",
+        "codification/laws/laws/PL-018-140/law.txt is a Google Drive permission-denial page."
+      ],
+      "recommended_actions": [
+        "Retain only a concise source-unavailable historical note.",
+        "Do not invent operative text or a Code anchor.",
+        "Re-acquire the authentic source before any codification work."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The recovered material is only a Drive access-denied page, so no operative statutory text can be authenticated and no safe Code operation can be assigned.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a concise source-unavailable historical note. | Do not invent operative text or a Code anchor. | Re-acquire the authentic source before any codification work."
+    },
+    {
+      "law_id": "PL-018-141",
+      "public_law": "18-141",
+      "title": "Public Law 18-141 | Foreign Service Act of 2023",
+      "report_path": "audit/primary/batch-05-02.json",
+      "batch": 5,
+      "status": "unresolved",
+      "decision": "source-unavailable-historical-note",
+      "status_basis": "No readable statutory prose could be recovered from the viewer extraction, so the enactment cannot be tied to a lawful Code amendment or note placement.",
+      "provision_refs": [
+        "(whole act)"
+      ],
+      "targets": [],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "The branch contains no safe XML implementation for this law."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-018-141.md says no readable authenticated enactment text could be recovered.",
+        "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv marks PL-018-141 as SOURCE_UNAVAILABLE with no code location.",
+        "codification/laws/laws/PL-018-141/law.txt is viewer debris rather than readable enactment text."
+      ],
+      "recommended_actions": [
+        "Retain only a source-unavailable historical note.",
+        "Do not invent Foreign Service provisions.",
+        "Re-extract the underlying PDF before any codification work."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "No readable statutory prose could be recovered from the viewer extraction, so the enactment cannot be tied to a lawful Code amendment or note placement.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a source-unavailable historical note. | Do not invent Foreign Service provisions. | Re-extract the underlying PDF before any codification work."
+    },
+    {
+      "law_id": "PL-018-142",
+      "public_law": "18-142",
+      "title": "Public Law 18-142 | Business Licensing Act",
+      "report_path": "audit/primary/batch-05-03.json",
+      "batch": 5,
+      "status": "unresolved",
+      "decision": "source-unavailable-historical-note",
+      "status_basis": "The recovered material does not yield readable statutory text, so no lawful provision-level codification conclusion can be derived.",
+      "provision_refs": [
+        "(whole act)"
+      ],
+      "targets": [],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No readable enactment text was recovered, so no XML placement is safe."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-018-142.md says no readable authenticated enactment text could be recovered.",
+        "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv marks PL-018-142 as SOURCE_UNAVAILABLE with no code location.",
+        "codification/laws/laws/PL-018-142/law.txt is viewer debris rather than readable enactment text."
+      ],
+      "recommended_actions": [
+        "Retain only a source-unavailable historical note.",
+        "Do not invent licensing provisions.",
+        "Re-extract the underlying PDF before any codification work."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The recovered material does not yield readable statutory text, so no lawful provision-level codification conclusion can be derived.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a source-unavailable historical note. | Do not invent licensing provisions. | Re-extract the underlying PDF before any codification work."
+    },
+    {
+      "law_id": "PL-018-143",
+      "public_law": "18-143",
+      "title": "Public Law 18-143 | United States Capitol Police Technical Corrections Act",
+      "report_path": "audit/primary/batch-05-03.json",
+      "batch": 5,
+      "status": "unresolved",
+      "decision": "source-unavailable-historical-note",
+      "status_basis": "The accessible source is only a Drive permission-denial page, so no operative text can be authenticated and no Code operation can be assigned.",
+      "provision_refs": [
+        "(whole act)"
+      ],
+      "targets": [],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No readable enactment text was recovered, so no XML placement is safe."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-018-143.md says no readable authenticated enactment text could be recovered.",
+        "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv marks PL-018-143 as SOURCE_UNAVAILABLE with no code location.",
+        "codification/laws/laws/PL-018-143/law.txt is a Google Drive permission-denial page."
+      ],
+      "recommended_actions": [
+        "Retain only a source-unavailable historical note.",
+        "Do not invent technical-corrections text.",
+        "Re-acquire the authentic source before any codification work."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The accessible source is only a Drive permission-denial page, so no operative text can be authenticated and no Code operation can be assigned.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a source-unavailable historical note. | Do not invent technical-corrections text. | Re-acquire the authentic source before any codification work."
+    },
+    {
+      "law_id": "PL-019-146",
+      "public_law": "19-146",
+      "title": "Public Law 19-146 | Refurbishing the Military Legal System Act",
+      "report_path": "audit/primary/batch-05-03.json",
+      "batch": 5,
+      "status": "unresolved",
+      "decision": "source-unavailable-historical-note",
+      "status_basis": "The accessible source is only a Drive permission-denial page, so no operative military-law text can be authenticated and no Code operation can be assigned.",
+      "provision_refs": [
+        "(whole act)"
+      ],
+      "targets": [],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No readable enactment text was recovered, so no XML placement is safe."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-019-146.md says no readable authenticated enactment text could be recovered.",
+        "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv marks PL-019-146 as SOURCE_UNAVAILABLE with no code location.",
+        "codification/laws/laws/PL-019-146/law.txt is a Google Drive permission-denial page."
+      ],
+      "recommended_actions": [
+        "Retain only a source-unavailable historical note.",
+        "Do not invent military-justice text.",
+        "Re-acquire the authentic source before any codification work."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The accessible source is only a Drive permission-denial page, so no operative military-law text can be authenticated and no Code operation can be assigned.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a source-unavailable historical note. | Do not invent military-justice text. | Re-acquire the authentic source before any codification work."
+    }
+  ]
+}

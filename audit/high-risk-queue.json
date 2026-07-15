@@ -1,0 +1,5143 @@
+{
+  "total_laws": 270,
+  "high_risk_laws": 241,
+  "queue": [
+    {
+      "law_id": "PL-001-001",
+      "public_law": "1-1",
+      "title": "Public Law 1-1 | Enactment of the U.S. Codes Act",
+      "report_path": "audit/primary/batch-10-01.json",
+      "batch": 10,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION 2"
+      ],
+      "targets": [
+        "/us/usc/t1",
+        "/us/usc/t1/s1"
+      ]
+    },
+    {
+      "law_id": "PL-001-002",
+      "public_law": "1-2",
+      "title": "Public Law 1-2 | United States Bar Act",
+      "report_path": "audit/primary/batch-10-01.json",
+      "batch": 10,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "chronology-required",
+        "confidence:medium",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SECTION 3",
+        "SECTION 4"
+      ],
+      "targets": [
+        "/us/usc/t28"
+      ]
+    },
+    {
+      "law_id": "PL-001-003",
+      "public_law": "1-3",
+      "title": "Public Law 1-3 | Closing Cabinet Doors Act",
+      "report_path": "audit/primary/batch-10-01.json",
+      "batch": 10,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "chronology-required",
+        "confidence:medium",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SECTION 4(a)-(h)",
+        "SECTION 4(i)"
+      ],
+      "targets": [
+        "/us/usc",
+        "/us/usc/t5"
+      ]
+    },
+    {
+      "law_id": "PL-001-004",
+      "public_law": "1-4",
+      "title": "Public Law 1-4 | Retracting of Resignations Act",
+      "report_path": "audit/primary/batch-10-01.json",
+      "batch": 10,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "chronology-required",
+        "confidence:medium",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SECTION 2(a)-(b)"
+      ],
+      "targets": [
+        "/us/usc/t18",
+        "/us/usc/t18/s918"
+      ]
+    },
+    {
+      "law_id": "PL-002-005",
+      "public_law": "2-5",
+      "title": "Public Law 2-5 | Judicial Efficiency Act (Keywords: Maximum, Minimum, Sentence, Sentencing)",
+      "report_path": "audit/primary/batch-10-01.json",
+      "batch": 10,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SECTION II",
+        "SECTION III"
+      ],
+      "targets": [
+        "/us/usc/t18"
+      ]
+    },
+    {
+      "law_id": "PL-002-006",
+      "public_law": "2-6",
+      "title": "Public Law 2-6 | Shelby-Kabob Act of 2021",
+      "report_path": "audit/primary/batch-10-01.json",
+      "batch": 10,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SECTION II",
+        "SECTION III"
+      ],
+      "targets": [
+        "/us/usc/t18",
+        "/us/usc/t18/s120",
+        "/us/usc/t18/s250"
+      ]
+    },
+    {
+      "law_id": "PL-002-007",
+      "public_law": "2-7",
+      "title": "Public Law 2-7 | Court of Appeals Temporary Suspension Act of 2021",
+      "report_path": "audit/primary/batch-10-01.json",
+      "batch": 10,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SECTION II"
+      ],
+      "targets": [
+        "/us/usc/t28"
+      ]
+    },
+    {
+      "law_id": "PL-002-008",
+      "public_law": "2-8",
+      "title": "Public Law 2-8 | National Security Act of 2021",
+      "report_path": "audit/primary/batch-10-01.json",
+      "batch": 10,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SECTION II",
+        "SECTION III",
+        "SECTION IV",
+        "SECTION V",
+        "SECTION VI",
+        "SECTION VII"
+      ],
+      "targets": [
+        "/us/usc/t50"
+      ]
+    },
+    {
+      "law_id": "PL-002-009",
+      "public_law": "2-9",
+      "title": "Public Law 2-9 | District of Columbia City Charter",
+      "report_path": "audit/primary/batch-10-01.json",
+      "batch": 10,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "/us/usc/t40"
+      ]
+    },
+    {
+      "law_id": "PL-002-010",
+      "public_law": "2-10",
+      "title": "Public Law 2-10 | Amendment to the District of Columbia City Charter",
+      "report_path": "audit/primary/batch-10-01.json",
+      "batch": 10,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "chronology-required",
+        "confidence:medium",
+        "direct-action-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SECTION II(a)-(d)"
+      ],
+      "targets": [
+        "/us/usc/t40"
+      ]
+    },
+    {
+      "law_id": "PL-002-011",
+      "public_law": "2-11",
+      "title": "Public Law 2-11 | Criminal Statute of Limitations Act",
+      "report_path": "audit/primary/batch-10-02.json",
+      "batch": 10,
+      "source_status": "repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION II(a)-(c)"
+      ],
+      "targets": [
+        "/us/usc/t18"
+      ]
+    },
+    {
+      "law_id": "PL-002-012",
+      "public_law": "2-12",
+      "title": "Public Law 2-12 | Fee Prohibition Act",
+      "report_path": "audit/primary/batch-10-02.json",
+      "batch": 10,
+      "source_status": "repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION II(a)"
+      ],
+      "targets": [
+        "/us/usc/t28"
+      ]
+    },
+    {
+      "law_id": "PL-002-013",
+      "public_law": "2-13",
+      "title": "Public Law 2-13 | The Employees Termination Notification Act of 2021",
+      "report_path": "audit/primary/batch-10-02.json",
+      "batch": 10,
+      "source_status": "repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION 4(a)-(b)"
+      ],
+      "targets": [
+        "/us/usc/t29"
+      ]
+    },
+    {
+      "law_id": "PL-002-014",
+      "public_law": "2-14",
+      "title": "Public Law 2-14 | National Federal Torts Act",
+      "report_path": "audit/primary/batch-10-02.json",
+      "batch": 10,
+      "source_status": "repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION I / SECTION II"
+      ],
+      "targets": [
+        "/us/usc/t28"
+      ]
+    },
+    {
+      "law_id": "PL-003-015",
+      "public_law": "3-15",
+      "title": "Public Law 3-15 | Admission to the United Nations Act",
+      "report_path": "audit/primary/batch-10-02.json",
+      "batch": 10,
+      "source_status": "repealed",
+      "validation_status": "contradicted by source",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION II(a)"
+      ],
+      "targets": [
+        "/us/usc/t44"
+      ]
+    },
+    {
+      "law_id": "PL-003-016",
+      "public_law": "3-16",
+      "title": "Public Law 3-16 | The Capitol Police Establishment",
+      "report_path": "audit/primary/batch-10-02.json",
+      "batch": 10,
+      "source_status": "repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION II",
+        "SECTION III-V"
+      ],
+      "targets": [
+        "/us/usc/t2"
+      ]
+    },
+    {
+      "law_id": "PL-003-017",
+      "public_law": "3-17",
+      "title": "Public Law 3-17 | The Diplomatic Protections Act",
+      "report_path": "audit/primary/batch-10-02.json",
+      "batch": 10,
+      "source_status": "repealed",
+      "validation_status": "contradicted by source",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION II(a)-(e)"
+      ],
+      "targets": [
+        "/us/usc/t22"
+      ]
+    },
+    {
+      "law_id": "PL-003-018",
+      "public_law": "3-18",
+      "title": "Public Law 3-18 | Amendment to S.12",
+      "report_path": "audit/primary/batch-10-02.json",
+      "batch": 10,
+      "source_status": "repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SECTION II(a)-(b)"
+      ],
+      "targets": [
+        "/us/usc/t2"
+      ]
+    },
+    {
+      "law_id": "PL-003-019",
+      "public_law": "3-19",
+      "title": "Public Law 3-19 | The NARA Act",
+      "report_path": "audit/primary/batch-10-02.json",
+      "batch": 10,
+      "source_status": "active",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION II(a)"
+      ],
+      "targets": [
+        "/us/usc/t44/s6506"
+      ]
+    },
+    {
+      "law_id": "PL-003-021",
+      "public_law": "3-21",
+      "title": "Public Law 3-21 | Effective Judicial Function and General Duties Act",
+      "report_path": "audit/primary/batch-10-03.json",
+      "batch": 10,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 3",
+        "SEC 4"
+      ],
+      "targets": [
+        "/us/usc/t28/s1658"
+      ]
+    },
+    {
+      "law_id": "PL-003-022",
+      "public_law": "3-22",
+      "title": "Public Law 3-22 | District of Columbia Administration Act",
+      "report_path": "audit/primary/batch-10-03.json",
+      "batch": 10,
+      "source_status": "unresolved",
+      "validation_status": "missing source evidence",
+      "confidence": "high",
+      "reasons": [
+        "missing-source",
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-003-023",
+      "public_law": "3-23",
+      "title": "Public Law 3-23 | Federal Law Enforcement Training Center Establishment Act",
+      "report_path": "audit/primary/batch-10-03.json",
+      "batch": 10,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "missing-source",
+        "status:unresolved",
+        "unsupported-source"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-003-024",
+      "public_law": "3-24",
+      "title": "Public Law 3-24 | Judgeship Reducation Act of 2022",
+      "report_path": "audit/primary/batch-10-03.json",
+      "batch": 10,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC II",
+        "SEC III-VII"
+      ],
+      "targets": [
+        "/us/usc/t28"
+      ]
+    },
+    {
+      "law_id": "PL-003-025",
+      "public_law": "3-25",
+      "title": "Public Law 3-25 | CRACK Act",
+      "report_path": "audit/primary/batch-10-03.json",
+      "batch": 10,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "Titles I-IV",
+        "Titles V-VI and amendments"
+      ],
+      "targets": [
+        "/us/usc/t18",
+        "/us/usc/t50"
+      ]
+    },
+    {
+      "law_id": "PL-004-027",
+      "public_law": "4-27",
+      "title": "Public Law 4-27 | Right to Security Act of 2022",
+      "report_path": "audit/primary/batch-10-03.json",
+      "batch": 10,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SECTION II-III"
+      ],
+      "targets": [
+        "/us/usc/t18",
+        "n/a"
+      ]
+    },
+    {
+      "law_id": "PL-004-028",
+      "public_law": "4-28",
+      "title": "Public Law 4-28 | House Veterans Affairs Act",
+      "report_path": "audit/primary/batch-10-03.json",
+      "batch": 10,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "chronology-required",
+        "confidence:medium",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SECTION II",
+        "SECTION III / SUB-SECTIONS 2-5"
+      ],
+      "targets": [
+        "/us/usc/t38"
+      ]
+    },
+    {
+      "law_id": "PL-004-029",
+      "public_law": "4-29",
+      "title": "Public Law 4-29 | Department of Commerce and Labor Act of 2022",
+      "report_path": "audit/primary/batch-10-03.json",
+      "batch": 10,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SECTION III-IV"
+      ],
+      "targets": [
+        "/us/usc/t29"
+      ]
+    },
+    {
+      "law_id": "PL-004-030",
+      "public_law": "4-30",
+      "title": "Public Law 4-30 | Fugitive Justice Reform Act",
+      "report_path": "audit/primary/batch-10-03.json",
+      "batch": 10,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SECTIONS 4-7"
+      ],
+      "targets": [
+        "/us/usc/t18 and /us/usc/t28",
+        "n/a"
+      ]
+    },
+    {
+      "law_id": "PL-004-031",
+      "public_law": "4-31",
+      "title": "Public Law 4-31 | Stand Your Ground Act",
+      "report_path": "audit/primary/batch-10-03.json",
+      "batch": 10,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC. 101-105"
+      ],
+      "targets": [
+        "/us/usc/t18",
+        "n/a"
+      ]
+    },
+    {
+      "law_id": "PL-004-032",
+      "public_law": "4-32",
+      "title": "Public Law 4-32 | Warrants, Subpoenas, and Summons Act",
+      "report_path": "audit/primary/batch-11-01.json",
+      "batch": 11,
+      "source_status": "unresolved",
+      "validation_status": "missing source evidence",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "missing-source",
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-004-033",
+      "public_law": "4-33",
+      "title": "Public Law 4-33 | National Archives Act",
+      "report_path": "audit/primary/batch-11-01.json",
+      "batch": 11,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC. II",
+        "SEC. III"
+      ],
+      "targets": [
+        "/us/usc/t44",
+        "/us/usc/t44 (ch. 21, National Archives)"
+      ]
+    },
+    {
+      "law_id": "PL-004-034",
+      "public_law": "4-34",
+      "title": "Public Law 4-34 | An Act to Prevent the Proliferation of Magistrates and Ensure Basic Judicial Competence",
+      "report_path": "audit/primary/batch-11-01.json",
+      "batch": 11,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC. II",
+        "SEC. III"
+      ],
+      "targets": [
+        "/us/usc/t28",
+        "/us/usc/t28 (judiciary) - not t50 as placed"
+      ]
+    },
+    {
+      "law_id": "PL-004-035",
+      "public_law": "4-35",
+      "title": "Public Law 4-35 | Recommissioning of the United States Ship New Jersey Act of 2022",
+      "report_path": "audit/primary/batch-11-01.json",
+      "batch": 11,
+      "source_status": "unresolved",
+      "validation_status": "missing source evidence",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "missing-source",
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-004-036",
+      "public_law": "4-36",
+      "title": "Public Law 4-36 | Defense Heraldic Services Act",
+      "report_path": "audit/primary/batch-11-01.json",
+      "batch": 11,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. II",
+        "SEC. III"
+      ],
+      "targets": [
+        "/us/usc/t10",
+        "/us/usc/t10 ch. 48, subchapter II",
+        "/us/usc/t10/s7594"
+      ]
+    },
+    {
+      "law_id": "PL-004-037",
+      "public_law": "4-37",
+      "title": "Public Law 4-37 | Border Awareness and Naturalization Act",
+      "report_path": "audit/primary/batch-11-01.json",
+      "batch": 11,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC. 3-3.4",
+        "SEC. 5",
+        "SEC. 6"
+      ],
+      "targets": [
+        "/us/usc/t8",
+        "/us/usc/t8 (aliens & nationality)",
+        "n/a"
+      ]
+    },
+    {
+      "law_id": "PL-004-038",
+      "public_law": "4-38",
+      "title": "Public Law 4-38 | White House Protection Act",
+      "report_path": "audit/primary/batch-11-01.json",
+      "batch": 11,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC. 3 (Actions)"
+      ],
+      "targets": [
+        "/us/usc/t3",
+        "/us/usc/t3 (President) or t18 s3056 (Secret Service powers)",
+        "n/a"
+      ]
+    },
+    {
+      "law_id": "PL-007-039",
+      "public_law": "7-39",
+      "title": "Public Law 7-39 | Mandatory FLETC Training ACT",
+      "report_path": "audit/primary/batch-11-01.json",
+      "batch": 11,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC. 3"
+      ],
+      "targets": [
+        "n/a",
+        "n/a (repealed & revived-as-if-never-enacted)"
+      ]
+    },
+    {
+      "law_id": "PL-007-040",
+      "public_law": "7-40",
+      "title": "Public Law 7-40 | Media Companies Protection Act of 2022",
+      "report_path": "audit/primary/batch-11-01.json",
+      "batch": 11,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SECTION II",
+        "SECTION III"
+      ],
+      "targets": [
+        "/us/usc/t15 (commerce)",
+        "n/a (repealed)"
+      ]
+    },
+    {
+      "law_id": "PL-007-041",
+      "public_law": "7-41",
+      "title": "Public Law 7-41 | Common Sense Defense Act of 2022",
+      "report_path": "audit/primary/batch-11-01.json",
+      "batch": 11,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "ARTICLE I",
+        "ARTICLE II"
+      ],
+      "targets": [
+        "n/a",
+        "n/a (repealed)",
+        "n/a (repealed; game-specific)"
+      ]
+    },
+    {
+      "law_id": "PL-007-042",
+      "public_law": "7-42",
+      "title": "Public Law 7-42 | Transportation Act of 2022",
+      "report_path": "audit/primary/batch-11-02.json",
+      "batch": 11,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "PART III",
+        "PART IV",
+        "PART V",
+        "PART VI",
+        "PART VII"
+      ],
+      "targets": [
+        "/us/usc/t49",
+        "/us/usc/t49 (transportation)",
+        "n/a",
+        "prior 'S 63 Towing Companies Regulation Act' (non-USC target)"
+      ]
+    },
+    {
+      "law_id": "PL-007-043",
+      "public_law": "7-43",
+      "title": "Public Law 7-43 | District of Columbia Reorganization Initiative Act",
+      "report_path": "audit/primary/batch-11-02.json",
+      "batch": 11,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC. III",
+        "SEC. IV",
+        "SEC. V"
+      ],
+      "targets": [
+        "D.C. City Charter Art. I (not U.S. Code)",
+        "D.C. City Charter Art. II",
+        "n/a",
+        "n/a (local)"
+      ]
+    },
+    {
+      "law_id": "PL-007-044",
+      "public_law": "7-44",
+      "title": "Public Law 7-44 | The Bye Bye Terrorism Act",
+      "report_path": "audit/primary/batch-11-02.json",
+      "batch": 11,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC. II",
+        "SEC. III"
+      ],
+      "targets": [
+        "/us/usc/t18",
+        "/us/usc/t18 (firearms)",
+        "n/a",
+        "n/a (game-mechanics direction)"
+      ]
+    },
+    {
+      "law_id": "PL-007-045",
+      "public_law": "7-45",
+      "title": "Public Law 7-45 | United States Capitol Police Reorganization Act of 2022",
+      "report_path": "audit/primary/batch-11-02.json",
+      "batch": 11,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC. II",
+        "SEC. III",
+        "SEC. IV"
+      ],
+      "targets": [
+        "/us/usc/t2 (Congress) or t40",
+        "/us/usc/t2 or t40",
+        "prior 'S. 12 - The Capitol Police Establishment' (non-USC target)"
+      ]
+    },
+    {
+      "law_id": "PL-007-046",
+      "public_law": "7-46",
+      "title": "Public Law 7-46 | Whistleblower Protection Act",
+      "report_path": "audit/primary/batch-11-02.json",
+      "batch": 11,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "missing-source",
+        "status:unresolved",
+        "unsupported-source"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "n/a"
+      ]
+    },
+    {
+      "law_id": "PL-007-047",
+      "public_law": "7-47",
+      "title": "Public Law 7-47 | The Federal Bar Association Act of 2022",
+      "report_path": "audit/primary/batch-11-02.json",
+      "batch": 11,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC. 3",
+        "SEC. 4",
+        "SEC. 5 (Code of Conduct)"
+      ],
+      "targets": [
+        "/us/usc/t28",
+        "/us/usc/t28 (judiciary/legal profession)",
+        "n/a",
+        "prior 'Senate Bill 2' (non-USC target)"
+      ]
+    },
+    {
+      "law_id": "PL-007-048",
+      "public_law": "7-48",
+      "title": "Public Law 7-48 | OCJCS Reform Act of 2022",
+      "report_path": "audit/primary/batch-11-02.json",
+      "batch": 11,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC 2"
+      ],
+      "targets": [
+        "/us/usc/t10",
+        "/us/usc/t10 (armed forces / JCS)",
+        "n/a"
+      ]
+    },
+    {
+      "law_id": "PL-007-049",
+      "public_law": "7-49",
+      "title": "Public Law 7-49 | Legislative Initiative to Grow Monetary Access Act of 2022 (LIGMA Act)",
+      "report_path": "audit/primary/batch-11-02.json",
+      "batch": 11,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "/us/usc/t2 or t31",
+        "n/a"
+      ]
+    },
+    {
+      "law_id": "PL-007-050",
+      "public_law": "7-50",
+      "title": "Public Law 7-50 | Coast Guard Base Repurposing Act of 2022",
+      "report_path": "audit/primary/batch-11-02.json",
+      "batch": 11,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC 4/6"
+      ],
+      "targets": [
+        "n/a",
+        "n/a (specific installation)"
+      ]
+    },
+    {
+      "law_id": "PL-007-051",
+      "public_law": "7-51",
+      "title": "Public Law 7-51 | Federal Agent Law Training Mandate",
+      "report_path": "audit/primary/batch-11-02.json",
+      "batch": 11,
+      "source_status": "fully-repealed",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "status:fully-repealed",
+        "unsupported-source"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "title 1 statutory note"
+      ]
+    },
+    {
+      "law_id": "PL-009-052",
+      "public_law": "9-52",
+      "title": "Public Law 9-52 | The Federal District Wages Act of 2022",
+      "report_path": "audit/primary/batch-11-03.json",
+      "batch": 11,
+      "source_status": "repealed",
+      "validation_status": "missing source evidence",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "missing-source"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-009-053",
+      "public_law": "9-53",
+      "title": "Public Law 9-53 | Save Our Businesses Act of 2022",
+      "report_path": "audit/primary/batch-11-03.json",
+      "batch": 11,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "missing-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 5",
+        "SECS. 1-4, 6-10"
+      ],
+      "targets": [
+        "/us/usc/t3/s301"
+      ]
+    },
+    {
+      "law_id": "PL-009-054",
+      "public_law": "9-54",
+      "title": "Public Law 9-54 | The Smart Label Congress Act",
+      "report_path": "audit/primary/batch-11-03.json",
+      "batch": 11,
+      "source_status": "repealed",
+      "validation_status": "missing source evidence",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "missing-source"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-009-055",
+      "public_law": "9-55",
+      "title": "Public Law 9-55 | Economic Sanctions on Iran Act of 2022",
+      "report_path": "audit/primary/batch-11-03.json",
+      "batch": 11,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SECS. 1-3"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-009-056",
+      "public_law": "9-56",
+      "title": "Public Law 9-56 | Federal Judicial Reform Act",
+      "report_path": "audit/primary/batch-11-03.json",
+      "batch": 11,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SECS. 1-4",
+        "SECS. 5-8"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-009-057",
+      "public_law": "9-57",
+      "title": "Public Law 9-57 | Repealing S.B.1/Pub. Law 7-39",
+      "report_path": "audit/primary/batch-11-03.json",
+      "batch": 11,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SECS. 1-4"
+      ],
+      "targets": [
+        "PL-007-039"
+      ]
+    },
+    {
+      "law_id": "PL-009-058",
+      "public_law": "9-58",
+      "title": "Public Law 9-58 | To Bar PhillipRobecq From Public Office",
+      "report_path": "audit/primary/batch-11-03.json",
+      "batch": 11,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-009-059",
+      "public_law": "9-59",
+      "title": "Public Law 9-59 | M.P.D Act",
+      "report_path": "audit/primary/batch-11-03.json",
+      "batch": 11,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SECS. I-IV"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-009-060",
+      "public_law": "9-60",
+      "title": "Public Law 9-60 | The Federal Metro Policing Act",
+      "report_path": "audit/primary/batch-11-03.json",
+      "batch": 11,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC. V",
+        "SECS. I-IV"
+      ],
+      "targets": [
+        "PL-009-059"
+      ]
+    },
+    {
+      "law_id": "PL-009-061",
+      "public_law": "9-61",
+      "title": "Public Law 9-61 | Charter Repeal Act",
+      "report_path": "audit/primary/batch-11-03.json",
+      "batch": 11,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "missing-target",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SECS. 1-2"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-009-062",
+      "public_law": "9-62",
+      "title": "Public Law 9-62 | Repealing the District of Columbia Home Rule Act",
+      "report_path": "audit/primary/batch-12-01.json",
+      "batch": 12,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target"
+      ],
+      "provision_refs": [
+        "SECTION 2"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-009-063",
+      "public_law": "9-63",
+      "title": "Public Law 9-63 | The Federal District Employment Act of 2022",
+      "report_path": "audit/primary/batch-12-01.json",
+      "batch": 12,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "missing-source",
+        "status:unresolved",
+        "unsupported-source"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-010-065",
+      "public_law": "10-65",
+      "title": "Public Law 10-65 | Federal Judicial Reform Act ii",
+      "report_path": "audit/primary/batch-12-01.json",
+      "batch": 12,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-010-066",
+      "public_law": "10-66",
+      "title": "Public Law 10-66 | The Americans First Act",
+      "report_path": "audit/primary/batch-12-01.json",
+      "batch": 12,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target"
+      ],
+      "provision_refs": [
+        "SECTION 2(a)",
+        "SECTION 2(b)"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-010-067",
+      "public_law": "10-67",
+      "title": "Public Law 10-67 | Ambassadorial Readjustment Act",
+      "report_path": "audit/primary/batch-12-01.json",
+      "batch": 12,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "direct-action-provision",
+        "missing-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION 2(1)-(6)",
+        "SECTION 3"
+      ],
+      "targets": [
+        "/us/usc/t22/s2651a"
+      ]
+    },
+    {
+      "law_id": "PL-010-068",
+      "public_law": "10-68",
+      "title": "Public Law 10-68 | American Jobs Act",
+      "report_path": "audit/primary/batch-12-01.json",
+      "batch": 12,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target"
+      ],
+      "provision_refs": [
+        "SECTION 2"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-011-069",
+      "public_law": "11-69",
+      "title": "Public Law 11-69 | DC Criminal Code Act",
+      "report_path": "audit/primary/batch-12-01.json",
+      "batch": 12,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION 2",
+        "SECTION 3"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-011-070",
+      "public_law": "11-70",
+      "title": "Public Law 11-70 | Supreme Court Please Act",
+      "report_path": "audit/primary/batch-12-01.json",
+      "batch": 12,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "chronology-required",
+        "confidence:medium",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION 2(a)-(b)"
+      ],
+      "targets": [
+        "/us/usc/t40/s6121"
+      ]
+    },
+    {
+      "law_id": "PL-011-071",
+      "public_law": "11-71",
+      "title": "Public Law 11-71 | Supreme Court Needs Act",
+      "report_path": "audit/primary/batch-12-01.json",
+      "batch": 12,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC 2(a)-(b)"
+      ],
+      "targets": [
+        "/us/usc/t28/s1"
+      ]
+    },
+    {
+      "law_id": "PL-011-072",
+      "public_law": "11-72",
+      "title": "Public Law 11-72 | No More Mariah Act (Keywords: Judges, Justices, Circuit Court)",
+      "report_path": "audit/primary/batch-12-02.json",
+      "batch": 12,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "missing-target"
+      ],
+      "provision_refs": [
+        "SEC 2",
+        "SEC 3"
+      ],
+      "targets": [
+        "/us/usc/t28/s133"
+      ]
+    },
+    {
+      "law_id": "PL-011-073",
+      "public_law": "11-73",
+      "title": "Public Law 11-73 | Let Me Act",
+      "report_path": "audit/primary/batch-12-02.json",
+      "batch": 12,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC 2"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-012-074",
+      "public_law": "12-74",
+      "title": "Public Law 12-74 | Federal Bar Association Act of 2023",
+      "report_path": "audit/primary/batch-12-02.json",
+      "batch": 12,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "chronology-required",
+        "confidence:medium",
+        "direct-action-provision",
+        "missing-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 3",
+        "SEC 4",
+        "SEC 5"
+      ],
+      "targets": [
+        "/us/usc/t5"
+      ]
+    },
+    {
+      "law_id": "PL-012-075",
+      "public_law": "12-75",
+      "title": "Public Law 12-75 | Freedom of Information Common Sense Act",
+      "report_path": "audit/primary/batch-12-02.json",
+      "batch": 12,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC 3(a) 5 U.S.C. 552(a)(6)(A)(i)",
+        "SEC 3(a) 5 U.S.C. 552(a)(6)(A)(ii)",
+        "SEC 3(a) 5 U.S.C. 552(a)(6)(A)(ii)(I)"
+      ],
+      "targets": [
+        "/us/usc/t5/s552"
+      ]
+    },
+    {
+      "law_id": "PL-012-076",
+      "public_law": "12-76",
+      "title": "Public Law 12-76 | Removing Idiocy Act",
+      "report_path": "audit/primary/batch-12-02.json",
+      "batch": 12,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "low",
+      "reasons": [
+        "confidence:low",
+        "missing-source",
+        "status:unresolved",
+        "unsupported-source"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-012-077",
+      "public_law": "12-77",
+      "title": "Public Law 12-77 | Preventing Abuse and Promoting Democracy Act",
+      "report_path": "audit/primary/batch-12-02.json",
+      "batch": 12,
+      "source_status": "fully-repealed",
+      "validation_status": "unsupported",
+      "confidence": "low",
+      "reasons": [
+        "chronology-required",
+        "confidence:low",
+        "status:fully-repealed",
+        "unsupported-source"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "title 1 statutory note"
+      ]
+    },
+    {
+      "law_id": "PL-012-078",
+      "public_law": "12-78",
+      "title": "Public Law 12-78 | Balancing Executive Act",
+      "report_path": "audit/primary/batch-12-02.json",
+      "batch": 12,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "low",
+      "reasons": [
+        "chronology-required",
+        "confidence:low",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "title 1 statutory note"
+      ]
+    },
+    {
+      "law_id": "PL-012-079",
+      "public_law": "12-79",
+      "title": "Public Law 12-79 | Anti-Terrorism Act of 2023",
+      "report_path": "audit/primary/batch-12-02.json",
+      "batch": 12,
+      "source_status": "current",
+      "validation_status": "unsupported",
+      "confidence": "low",
+      "reasons": [
+        "confidence:low",
+        "unsupported-source"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "closest subject-matter statutory note"
+      ]
+    },
+    {
+      "law_id": "PL-012-080",
+      "public_law": "12-80",
+      "title": "Public Law 12-80 | Government Labor Management Act",
+      "report_path": "audit/primary/batch-12-02.json",
+      "batch": 12,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC 10",
+        "SEC 11",
+        "SEC 12",
+        "SEC 13",
+        "SEC 14",
+        "SEC 15",
+        "SEC 16",
+        "SEC 2",
+        "SEC 3",
+        "SEC 4 (standards of conduct)",
+        "SEC 4 (unfair labor practices)",
+        "SEC 5",
+        "SEC 6",
+        "SEC 7",
+        "SEC 8",
+        "SEC 9"
+      ],
+      "targets": [
+        "title 5 statutory note"
+      ]
+    },
+    {
+      "law_id": "PL-012-081",
+      "public_law": "12-81",
+      "title": "Public Law 12-81 | The Integrity Act",
+      "report_path": "audit/primary/batch-12-02.json",
+      "batch": 12,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "chronology-required",
+        "confidence:medium",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 3",
+        "SEC 5"
+      ],
+      "targets": [
+        "/us/usc/t2/s6567"
+      ]
+    },
+    {
+      "law_id": "PL-012-082",
+      "public_law": "12-82",
+      "title": "Public Law 12-82 | Military Officer Commissioning Reform Act 2023",
+      "report_path": "audit/primary/batch-12-03.json",
+      "batch": 12,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "multiple-laws-same-target"
+      ],
+      "provision_refs": [
+        "SEC 4",
+        "SEC 5(a)",
+        "SEC 5(b)",
+        "SEC 9(a)"
+      ],
+      "targets": [
+        "/us/usc/t10/s12203",
+        "/us/usc/t10/s12204",
+        "/us/usc/t10/s151",
+        "/us/usc/t10/s531"
+      ]
+    },
+    {
+      "law_id": "PL-012-083",
+      "public_law": "12-83",
+      "title": "Public Law 12-83 | Dannybec Went to Jail Act",
+      "report_path": "audit/primary/batch-12-03.json",
+      "batch": 12,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target"
+      ],
+      "provision_refs": [
+        "SEC 3(a)-(c)"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-012-084",
+      "public_law": "12-84",
+      "title": "Public Law 12-84 | Municipal Act of 2023",
+      "report_path": "audit/primary/batch-12-03.json",
+      "batch": 12,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target"
+      ],
+      "provision_refs": [
+        "SEC 4-7"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-012-086",
+      "public_law": "12-86",
+      "title": "Public Law 12-86 | H.R. 1302",
+      "report_path": "audit/primary/batch-12-03.json",
+      "batch": 12,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target"
+      ],
+      "provision_refs": [
+        "SEC 2"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-012-087",
+      "public_law": "12-87",
+      "title": "Public Law 12-87 | An act to repeal the Smart Label Congress Act (Public Law 9-54)",
+      "report_path": "audit/primary/batch-12-03.json",
+      "batch": 12,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target"
+      ],
+      "provision_refs": [
+        "SEC 3(a)"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-012-088",
+      "public_law": "12-88",
+      "title": "Public Law 12-88 | New District of Columbia Home Rule Act",
+      "report_path": "audit/primary/batch-12-03.json",
+      "batch": 12,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "TITLE 2",
+        "TITLE 3-4"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-012-103",
+      "public_law": "12-103",
+      "title": "Public Law 12-103 | Ceremonial 5-Star Officer Creation Act",
+      "report_path": "audit/primary/batch-12-03.json",
+      "batch": 12,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 3"
+      ],
+      "targets": [
+        "/us/usc/t10"
+      ]
+    },
+    {
+      "law_id": "PL-014-089",
+      "public_law": "14-89",
+      "title": "Public Law 14-89 | Americans Safety and Smart Act of 2023",
+      "report_path": "audit/primary/batch-12-03.json",
+      "batch": 12,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "chronology-required",
+        "confidence:medium",
+        "direct-action-provision",
+        "missing-target",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 3",
+        "SEC 4",
+        "SEC 5"
+      ],
+      "targets": [
+        "/us/usc/t18"
+      ]
+    },
+    {
+      "law_id": "PL-014-090",
+      "public_law": "14-90",
+      "title": "Public Law 14-90 | Presidential Suck Up Act",
+      "report_path": "audit/primary/batch-12-03.json",
+      "batch": 12,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 2"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-014-091",
+      "public_law": "14-91",
+      "title": "Public Law 14-91 | Military Code of Military Justice Reform Act of 2023",
+      "report_path": "audit/primary/batch-13-01.json",
+      "batch": 13,
+      "source_status": "unresolved",
+      "validation_status": "missing source evidence",
+      "confidence": "high",
+      "reasons": [
+        "missing-source",
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "/us/usc/t2/s190d"
+      ]
+    },
+    {
+      "law_id": "PL-015-092",
+      "public_law": "15-92",
+      "title": "Public Law 15-92 | Commerce and Labor Innovation Initiative Act",
+      "report_path": "audit/primary/batch-13-01.json",
+      "batch": 13,
+      "source_status": "superseded",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "standalone-permanent-provision",
+        "status:superseded"
+      ],
+      "provision_refs": [
+        "SECTION II",
+        "SECTION III"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-015-093",
+      "public_law": "15-93",
+      "title": "Public Law 15-93 | Checks and Balances Act of 2023",
+      "report_path": "audit/primary/batch-13-01.json",
+      "batch": 13,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SECTION 2"
+      ],
+      "targets": [
+        "/us/usc/t2/s271"
+      ]
+    },
+    {
+      "law_id": "PL-015-094",
+      "public_law": "15-94",
+      "title": "Public Law 15-94 | Whistleblower Protections Act of 2023",
+      "report_path": "audit/primary/batch-13-01.json",
+      "batch": 13,
+      "source_status": "unresolved",
+      "validation_status": "missing source evidence",
+      "confidence": "high",
+      "reasons": [
+        "missing-source",
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-015-095",
+      "public_law": "15-95",
+      "title": "Public Law 15-95 | An Act to Repeal the White House Protection Act",
+      "report_path": "audit/primary/batch-13-01.json",
+      "batch": 13,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-source",
+        "missing-target",
+        "status:unresolved",
+        "unsupported-source"
+      ],
+      "provision_refs": [
+        "entire enactment"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-015-096",
+      "public_law": "15-96",
+      "title": "Public Law 15-96 | Prisoner Bail Protection Act",
+      "report_path": "audit/primary/batch-13-01.json",
+      "batch": 13,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "missing-target",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "entire enactment"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-015-097",
+      "public_law": "15-97",
+      "title": "Public Law 15-97 | Uniform Legal Practice Authority Act",
+      "report_path": "audit/primary/batch-13-01.json",
+      "batch": 13,
+      "source_status": "partially-current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "TITLE I / SEC. 101-103",
+        "TITLE II / SEC. 201-205"
+      ],
+      "targets": [
+        "/us/usc/t28/s598"
+      ]
+    },
+    {
+      "law_id": "PL-015-098",
+      "public_law": "15-98",
+      "title": "Public Law 15-98 | Inspector General Act (2023)",
+      "report_path": "audit/primary/batch-13-01.json",
+      "batch": 13,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 3-4",
+        "SEC. 5-7",
+        "SEC. 8-14"
+      ],
+      "targets": [
+        "/us/usc/t5/s101"
+      ]
+    },
+    {
+      "law_id": "PL-015-099",
+      "public_law": "15-99",
+      "title": "Public Law 15-99 | Second National Federal Torts Act",
+      "report_path": "audit/primary/batch-13-01.json",
+      "batch": 13,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 1-4",
+        "SEC. 25-30",
+        "SEC. 5-24"
+      ],
+      "targets": [
+        "/us/usc/t28/s158"
+      ]
+    },
+    {
+      "law_id": "PL-015-100",
+      "public_law": "15-100",
+      "title": "Public Law 15-100 | Employee Rights and Limitations Act (leave, employment, termination)",
+      "report_path": "audit/primary/batch-13-01.json",
+      "batch": 13,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 3",
+        "SEC. 4-5",
+        "SEC. 6",
+        "SEC. 7"
+      ],
+      "targets": [
+        "/us/usc/t5/s101"
+      ]
+    },
+    {
+      "law_id": "PL-015-101",
+      "public_law": "15-101",
+      "title": "Public Law 15-101 | Ensuring Accountability in Federal Agencies Act",
+      "report_path": "audit/primary/batch-13-02.json",
+      "batch": 13,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 2",
+        "SEC. 3",
+        "SEC. 3(d)"
+      ],
+      "targets": [
+        "/us/usc/t5",
+        "/us/usc/t5/s551",
+        "/us/usc/t5/s552"
+      ]
+    },
+    {
+      "law_id": "PL-015-102",
+      "public_law": "15-102",
+      "title": "Public Law 15-102 | New Ambassadorial Organizational and Reporting Act",
+      "report_path": "audit/primary/batch-13-02.json",
+      "batch": 13,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION II(a)",
+        "SECTION II(b)",
+        "SECTION III",
+        "SECTION IV"
+      ],
+      "targets": [
+        "/us/usc/t22",
+        "Ambassadorial Readjustment Act",
+        "PL 14-90 section 2(a)(i)"
+      ]
+    },
+    {
+      "law_id": "PL-015-104",
+      "public_law": "15-104",
+      "title": "Public Law 15-104 | The Military Justice Reorganization and Reform Act",
+      "report_path": "audit/primary/batch-13-02.json",
+      "batch": 13,
+      "source_status": "repealed-or-superseded",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 1-3",
+        "SEC. 11-14",
+        "SEC. 4-6",
+        "SEC. 7-8",
+        "SEC. 9-10"
+      ],
+      "targets": [
+        "/us/usc/t10"
+      ]
+    },
+    {
+      "law_id": "PL-015-105",
+      "public_law": "15-105",
+      "title": "Public Law 15-105 | Municipal Prosecution Act of 2023",
+      "report_path": "audit/primary/batch-13-02.json",
+      "batch": 13,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 3(a)",
+        "SEC. 4",
+        "SEC. 5",
+        "SEC. 6(a-c)"
+      ],
+      "targets": [
+        "/us/usc/t28",
+        "PL 12-88 Part D",
+        "PL 12-88 Title 6 section 37",
+        "PL 15-97 section 103(b)(iii), section 102(f)(ii), and section 103(b)(v)"
+      ]
+    },
+    {
+      "law_id": "PL-015-106",
+      "public_law": "15-106",
+      "title": "Public Law 15-106 | Congress Strikes Back Repealment",
+      "report_path": "audit/primary/batch-13-02.json",
+      "batch": 13,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC. III"
+      ],
+      "targets": [
+        "/us/usc/t2",
+        "The Congress Strikes Back Act of 2022"
+      ]
+    },
+    {
+      "law_id": "PL-015-107",
+      "public_law": "15-107",
+      "title": "Public Law 15-107 | Guidance to Guidances Act",
+      "report_path": "audit/primary/batch-13-02.json",
+      "batch": 13,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "missing-source",
+        "status:unresolved",
+        "unsupported-source"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "/us/usc/t5"
+      ]
+    },
+    {
+      "law_id": "PL-015-108",
+      "public_law": "15-108",
+      "title": "Public Law 15-108 | Reclassification of Labeling Act of 2023",
+      "report_path": "audit/primary/batch-13-02.json",
+      "batch": 13,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 3-8"
+      ],
+      "targets": [
+        "/us/usc/t2"
+      ]
+    },
+    {
+      "law_id": "PL-015-109",
+      "public_law": "15-109",
+      "title": "Public Law 15-109 | Ending Tigray for the Last Time",
+      "report_path": "audit/primary/batch-13-02.json",
+      "batch": 13,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "RESOLVED"
+      ],
+      "targets": [
+        "House Joint Resolution 6"
+      ]
+    },
+    {
+      "law_id": "PL-015-110",
+      "public_law": "15-110",
+      "title": "Public Law 15-110 | A Bill to Direct the Inspector General of the Department of Defense to Conduct an Investigation Into the Attack on the United States Embassy in Damascus, and for Other Purposes",
+      "report_path": "audit/primary/batch-13-02.json",
+      "batch": 13,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "missing-source",
+        "status:unresolved",
+        "unsupported-source"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "/us/usc/t10"
+      ]
+    },
+    {
+      "law_id": "PL-015-111",
+      "public_law": "15-111",
+      "title": "Public Law 15-111 | Presidential Transition Protection Act",
+      "report_path": "audit/primary/batch-13-02.json",
+      "batch": 13,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. II(a-b)",
+        "SEC. II(c) / III(a)",
+        "SEC. III(b)",
+        "SEC. III(c)"
+      ],
+      "targets": [
+        "/us/usc/t18",
+        "/us/usc/t3"
+      ]
+    },
+    {
+      "law_id": "PL-016-112",
+      "public_law": "16-112",
+      "title": "Public Law 16-112 | The Contempt of Congress Act",
+      "report_path": "audit/primary/batch-13-03.json",
+      "batch": 13,
+      "source_status": "superseded",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "status:superseded"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "/us/usc/t2"
+      ]
+    },
+    {
+      "law_id": "PL-016-113",
+      "public_law": "16-113",
+      "title": "Public Law 16-113 | The Bing Bong Act of 2023",
+      "report_path": "audit/primary/batch-13-03.json",
+      "batch": 13,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC 2(a)"
+      ],
+      "targets": [
+        "/us/usc/t2/s6132",
+        "PL 15-96 (Prisoner Bail Protection Act)"
+      ]
+    },
+    {
+      "law_id": "PL-016-114",
+      "public_law": "16-114",
+      "title": "Public Law 16-114 | Amended Ambassadorial Organization and Reporting Act",
+      "report_path": "audit/primary/batch-13-03.json",
+      "batch": 13,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC II(a-c)"
+      ],
+      "targets": [
+        "/us/usc/t22/s1438",
+        "PL 15-102 SEC III(e)"
+      ]
+    },
+    {
+      "law_id": "PL-016-115",
+      "public_law": "16-115",
+      "title": "Public Law 16-115 | National Security Threat Mandatory Notification to Congressional Leadership Act",
+      "report_path": "audit/primary/batch-13-03.json",
+      "batch": 13,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC II(a-b)",
+        "SEC III(a-c)",
+        "SEC IV(a)"
+      ],
+      "targets": [
+        "/us/usc/t18/s1512",
+        "/us/usc/t50"
+      ]
+    },
+    {
+      "law_id": "PL-016-116",
+      "public_law": "16-116",
+      "title": "Public Law 16-116 | Combatant Command Re-establishment Act",
+      "report_path": "audit/primary/batch-13-03.json",
+      "batch": 13,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 1-2",
+        "SEC 3(a)",
+        "SEC 5(a-b)",
+        "SEC 6(a-e)"
+      ],
+      "targets": [
+        "/us/usc/t2/s172",
+        "OCJCS Reform Act of 2022 / PL 7-48"
+      ]
+    },
+    {
+      "law_id": "PL-016-117",
+      "public_law": "16-117",
+      "title": "Public Law 16-117 | The Clean Up Act",
+      "report_path": "audit/primary/batch-13-03.json",
+      "batch": 13,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC 3(a)",
+        "SEC 3(b)"
+      ],
+      "targets": [
+        "/us/usc/t2",
+        "Senate Joint Resolution 2",
+        "Senate Joint Resolution 3"
+      ]
+    },
+    {
+      "law_id": "PL-016-118",
+      "public_law": "16-118",
+      "title": "Public Law 16-118 | The Uniformed Capitol Police Act of 2023",
+      "report_path": "audit/primary/batch-13-03.json",
+      "batch": 13,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 2(a)",
+        "SEC 3(a-c)"
+      ],
+      "targets": [
+        "/us/usc/t2",
+        "H.R. 8013 Section III"
+      ]
+    },
+    {
+      "law_id": "PL-016-120",
+      "public_law": "16-120",
+      "title": "Public Law 16-120 | The Hail Columbia Act",
+      "report_path": "audit/primary/batch-13-03.json",
+      "batch": 13,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "title 1 statutory note"
+      ]
+    },
+    {
+      "law_id": "PL-016-121",
+      "public_law": "16-121",
+      "title": "Public Law 16-121 | The Bill Transparency Understanding Act",
+      "report_path": "audit/primary/batch-13-03.json",
+      "batch": 13,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "title 1 statutory note"
+      ]
+    },
+    {
+      "law_id": "PL-016-122",
+      "public_law": "16-122",
+      "title": "Public Law 16-122 | The Bill Transparency Understanding Act",
+      "report_path": "audit/primary/batch-14-01.json",
+      "batch": 14,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "missing-source",
+        "status:unresolved",
+        "unsupported-source"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-017-124",
+      "public_law": "17-124",
+      "title": "Public Law 17-124 | Law Enforcement Accountability Act (LEAA)",
+      "report_path": "audit/primary/batch-14-01.json",
+      "batch": 14,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC4",
+        "SEC5 (Canines)",
+        "SEC5 (Use of Force)",
+        "SEC7"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-017-125",
+      "public_law": "17-125",
+      "title": "Public Law 17-125 | We Don't Read Minds Act of 2023",
+      "report_path": "audit/primary/batch-14-01.json",
+      "batch": 14,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC3(1)",
+        "SEC3(2)"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-017-126",
+      "public_law": "17-126",
+      "title": "Public Law 17-126 | Special Events Act",
+      "report_path": "audit/primary/batch-14-01.json",
+      "batch": 14,
+      "source_status": "superseded",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "chronology-required",
+        "confidence:medium",
+        "standalone-permanent-provision",
+        "status:superseded"
+      ],
+      "provision_refs": [
+        "SEC5 (Definitions)"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-017-127",
+      "public_law": "17-127",
+      "title": "Public Law 17-127 | Border Security Act",
+      "report_path": "audit/primary/batch-14-01.json",
+      "batch": 14,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC11-SEC12",
+        "SEC13(1)-(4)",
+        "SEC5(1)",
+        "SEC6-SEC10"
+      ],
+      "targets": [
+        "/us/usc/t8",
+        "/us/usc/t8/s1101, s1551, s1102, s1103, s1105, s1182, s1189",
+        "/us/usc/t8/s1182, s1189",
+        "/us/usc/t8/s1532, s1533, s1534, s1481"
+      ]
+    },
+    {
+      "law_id": "PL-017-128",
+      "public_law": "17-128",
+      "title": "Public Law 17-128 | Impeachment Procedures and Protocols Act (IPPA)",
+      "report_path": "audit/primary/batch-14-01.json",
+      "batch": 14,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC10-SEC11",
+        "SEC4-SEC8",
+        "SEC9"
+      ],
+      "targets": [
+        "/us/usc/t28/s1365"
+      ]
+    },
+    {
+      "law_id": "PL-017-129",
+      "public_law": "17-129",
+      "title": "Public Law 17-129 | Department of Education Act",
+      "report_path": "audit/primary/batch-14-01.json",
+      "batch": 14,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC4-SEC6",
+        "SEC7-SEC8"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-017-130",
+      "public_law": "17-130",
+      "title": "Public Law 17-130 | Oath and Offices Protection (OOP)",
+      "report_path": "audit/primary/batch-14-01.json",
+      "batch": 14,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC4-SEC5",
+        "SEC6"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-017-132",
+      "public_law": "17-132",
+      "title": "Public Law 17-132 | Standard Process for International Extraditions Act",
+      "report_path": "audit/primary/batch-14-01.json",
+      "batch": 14,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION II",
+        "SECTION III"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-017-133",
+      "public_law": "17-133",
+      "title": "Public Law 17-133 | Judicial Overhaul Bill (JOB) AMENDED",
+      "report_path": "audit/primary/batch-14-02.json",
+      "batch": 14,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 5-10"
+      ],
+      "targets": [
+        "/us/usc/t28"
+      ]
+    },
+    {
+      "law_id": "PL-017-134",
+      "public_law": "17-134",
+      "title": "Public Law 17-134 | Amended The Uniformed Capitol Police Act of 2023",
+      "report_path": "audit/primary/batch-14-02.json",
+      "batch": 14,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION II"
+      ],
+      "targets": [
+        "/us/usc/t2/s1438"
+      ]
+    },
+    {
+      "law_id": "PL-017-135",
+      "public_law": "17-135",
+      "title": "Public Law 17-135 | Judicial Bias Protection Act (JBPA)",
+      "report_path": "audit/primary/batch-14-02.json",
+      "batch": 14,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 5",
+        "SEC. 6-7"
+      ],
+      "targets": [
+        "/us/usc/t28/s144"
+      ]
+    },
+    {
+      "law_id": "PL-017-136",
+      "public_law": "17-136",
+      "title": "Public Law 17-136 | The Parks Act (TPA)",
+      "report_path": "audit/primary/batch-14-02.json",
+      "batch": 14,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 4-5"
+      ],
+      "targets": [
+        "/us/usc/t2/s4577"
+      ]
+    },
+    {
+      "law_id": "PL-017-137",
+      "public_law": "17-137",
+      "title": "Public Law 17-137 | Federal Background Check Act",
+      "report_path": "audit/primary/batch-14-02.json",
+      "batch": 14,
+      "source_status": "repealed",
+      "validation_status": "contradicted by source",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION II",
+        "SECTION III-IV"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-017-138",
+      "public_law": "17-138",
+      "title": "Public Law 17-138 | Hatch Act Amendment Act (HA)",
+      "report_path": "audit/primary/batch-14-02.json",
+      "batch": 14,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC. 5"
+      ],
+      "targets": [
+        "/us/usc/t5/s7323"
+      ]
+    },
+    {
+      "law_id": "PL-018-139",
+      "public_law": "18-139",
+      "title": "Public Law 18-139 | The Bye Bye Background Checks Act",
+      "report_path": "audit/primary/batch-14-02.json",
+      "batch": 14,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SECTION 2"
+      ],
+      "targets": [
+        "/us/usc/t2/s6132",
+        "PL-017-137"
+      ]
+    },
+    {
+      "law_id": "PL-018-143",
+      "public_law": "18-143",
+      "title": "Public Law 18-143 | United States Capitol Police Technical Corrections Act",
+      "report_path": "audit/primary/batch-14-03.json",
+      "batch": 14,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "missing-source",
+        "status:unresolved",
+        "unsupported-source"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-019-144",
+      "public_law": "19-144",
+      "title": "Public Law 19-144 | Public Area Management Act (PAMA)",
+      "report_path": "audit/primary/batch-14-03.json",
+      "batch": 14,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 4-5",
+        "SEC 6",
+        "SEC 7-8",
+        "SEC 9"
+      ],
+      "targets": [
+        "(PL 15-95 §VI(2)-(4))"
+      ]
+    },
+    {
+      "law_id": "PL-019-145",
+      "public_law": "19-145",
+      "title": "Public Law 19-145 | Military Officer Accountability Act (MOAA)",
+      "report_path": "audit/primary/batch-14-03.json",
+      "batch": 14,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC 5(1)",
+        "SEC 5(2)",
+        "SEC 5(3)",
+        "SEC 5(4)",
+        "SEC 5(5)",
+        "SEC 5(6)",
+        "SEC 6"
+      ],
+      "targets": [
+        "/us/usc/t10/s1161",
+        "/us/usc/t10/s1181",
+        "/us/usc/t10/s1182",
+        "/us/usc/t10/s1184",
+        "/us/usc/t10/s1185",
+        "/us/usc/t10/s1186",
+        "/us/usc/t10/s1187"
+      ]
+    },
+    {
+      "law_id": "PL-019-146",
+      "public_law": "19-146",
+      "title": "Public Law 19-146 | Refurbishing the Military Legal System Act",
+      "report_path": "audit/primary/batch-14-03.json",
+      "batch": 14,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "missing-source",
+        "status:unresolved",
+        "unsupported-source"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-019-147",
+      "public_law": "19-147",
+      "title": "Public Law 19-147 | Diplomatic Standards Act (DSA)",
+      "report_path": "audit/primary/batch-14-03.json",
+      "batch": 14,
+      "source_status": "repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 17",
+        "SEC 4-16"
+      ],
+      "targets": [
+        "/us/usc/t8/s1102"
+      ]
+    },
+    {
+      "law_id": "PL-019-148",
+      "public_law": "19-148",
+      "title": "Public Law 19-148 | Badges and Entrapment Act (BEA)",
+      "report_path": "audit/primary/batch-14-03.json",
+      "batch": 14,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "chronology-required",
+        "confidence:medium",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 4",
+        "SEC 5",
+        "SEC 6"
+      ],
+      "targets": [
+        "/us/usc/t18"
+      ]
+    },
+    {
+      "law_id": "PL-019-149",
+      "public_law": "19-149",
+      "title": "Public Law 19-149 | Criminal Justice Reform Act (CJRA)",
+      "report_path": "audit/primary/batch-14-03.json",
+      "batch": 14,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 5",
+        "SEC 6",
+        "SEC 7",
+        "SEC 8"
+      ],
+      "targets": [
+        "(PL 2-5)",
+        "/us/usc/t18",
+        "/us/usc/t18/s3156"
+      ]
+    },
+    {
+      "law_id": "PL-019-150",
+      "public_law": "19-150",
+      "title": "Public Law 19-150 | Small Businesses Empowerment Act",
+      "report_path": "audit/primary/batch-14-03.json",
+      "batch": 14,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 2-3",
+        "SEC 4",
+        "SEC 5",
+        "SEC 6"
+      ],
+      "targets": [
+        "/us/usc/t15"
+      ]
+    },
+    {
+      "law_id": "PL-019-151",
+      "public_law": "19-151",
+      "title": "Public Law 19-151 | Court Fees Prohibition and Protection Act (CTPPA)",
+      "report_path": "audit/primary/batch-14-03.json",
+      "batch": 14,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 4",
+        "SEC 5"
+      ],
+      "targets": [
+        "/us/usc/t28",
+        "/us/usc/t28/s1911, /us/usc/t28/s1913, /us/usc/t28/s1914, /us/usc/t28/s1916, /us/usc/t28/s1917, /us/usc/t28/s1918, /us/usc/t28/s1920, /us/usc/t28/s1921, /us/usc/t28/s1922, /us/usc/t28/s1923, /us/usc/t28/s1924, /us/usc/t28/s1925, /us/usc/t28/s1926, /us/usc/t28/s1930, /us/usc/t28/s1931, /us/usc/t28/s1932, /us/usc/t28/s2041, /us/usc/t28/s2042, /us/usc/t28/s2043, /us/usc/t28/s2045"
+      ]
+    },
+    {
+      "law_id": "PL-019-152",
+      "public_law": "19-152",
+      "title": "Public Law 19-152 | The Commerce Legislation and Labor Aggravations Reformations (CLEAR)",
+      "report_path": "audit/primary/batch-14-03.json",
+      "batch": 14,
+      "source_status": "repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 1-4",
+        "SEC 5",
+        "SEC 6",
+        "SEC 7",
+        "SEC 8"
+      ],
+      "targets": [
+        "/us/usc/t5/s101",
+        "PL 12-80 section 13",
+        "PL 4-29"
+      ]
+    },
+    {
+      "law_id": "PL-022-153",
+      "public_law": "22-153",
+      "title": "Public Law 22-153 | Fire Department Reform and Nurturing (FDRN)",
+      "report_path": "audit/primary/batch-15-01.json",
+      "batch": 15,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "entire enactment"
+      ],
+      "targets": [
+        "/us/usc/t2/s6567"
+      ]
+    },
+    {
+      "law_id": "PL-022-154",
+      "public_law": "22-154",
+      "title": "Public Law 22-154 | Officer Bill of Rights (OBR)",
+      "report_path": "audit/primary/batch-15-01.json",
+      "batch": 15,
+      "source_status": "current",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision",
+        "unsupported-source"
+      ],
+      "provision_refs": [
+        "entire enactment"
+      ],
+      "targets": [
+        "/us/usc/t28/s1361"
+      ]
+    },
+    {
+      "law_id": "PL-022-155",
+      "public_law": "22-155",
+      "title": "Public Law 22-155 | Department of Education Repealment Act",
+      "report_path": "audit/primary/batch-15-01.json",
+      "batch": 15,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "entire enactment"
+      ],
+      "targets": [
+        "/us/usc/t2/s1438"
+      ]
+    },
+    {
+      "law_id": "PL-022-156",
+      "public_law": "22-156",
+      "title": "Public Law 22-156 | Local Law Enforcement Agencies Reform and Nurturing (LLEARN)",
+      "report_path": "audit/primary/batch-15-01.json",
+      "batch": 15,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC 5 and SEC 6"
+      ],
+      "targets": [
+        "multiple title 2 provisions"
+      ]
+    },
+    {
+      "law_id": "PL-022-157",
+      "public_law": "22-157",
+      "title": "Public Law 22-157 | Area Management Update Act (AMUA)",
+      "report_path": "audit/primary/batch-15-01.json",
+      "batch": 15,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "multiple-laws-same-target"
+      ],
+      "provision_refs": [
+        "SEC 5"
+      ],
+      "targets": [
+        "/us/usc/t2/s1438"
+      ]
+    },
+    {
+      "law_id": "PL-022-158",
+      "public_law": "22-158",
+      "title": "Public Law 22-158 | Service Members Protection Act (SMPA)",
+      "report_path": "audit/primary/batch-15-01.json",
+      "batch": 15,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "entire enactment"
+      ],
+      "targets": [
+        "/us/usc/t10/s1060"
+      ]
+    },
+    {
+      "law_id": "PL-022-160",
+      "public_law": "22-160",
+      "title": "Public Law 22-160 | To Amend the U.S. Code",
+      "report_path": "audit/primary/batch-15-01.json",
+      "batch": 15,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC IV(a)",
+        "SEC IV(b)"
+      ],
+      "targets": [
+        "/us/usc/t18/s205"
+      ]
+    },
+    {
+      "law_id": "PL-022-161",
+      "public_law": "22-161",
+      "title": "Public Law 22-161 | Second Chance Act",
+      "report_path": "audit/primary/batch-15-01.json",
+      "batch": 15,
+      "source_status": "active",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "unsupported-source"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "no code location"
+      ]
+    },
+    {
+      "law_id": "PL-022-162",
+      "public_law": "22-162",
+      "title": "Public Law 22-162 | Judicial Fairness Act",
+      "report_path": "audit/primary/batch-15-02.json",
+      "batch": 15,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "missing-target"
+      ],
+      "provision_refs": [
+        "SEC IV(1)",
+        "SEC IV(2)",
+        "SEC IV(4)",
+        "SEC V"
+      ],
+      "targets": [
+        "/us/usc/t28/s1253",
+        "/us/usc/t28/s1257",
+        "/us/usc/t28/s1291"
+      ]
+    },
+    {
+      "law_id": "PL-022-163",
+      "public_law": "22-163",
+      "title": "Public Law 22-163 | Employee's Bill of Rights",
+      "report_path": "audit/primary/batch-15-02.json",
+      "batch": 15,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 2",
+        "SEC 3",
+        "SEC 4"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-022-164",
+      "public_law": "22-164",
+      "title": "Public Law 22-164 | Streamlining and Protecting American Security Act",
+      "report_path": "audit/primary/batch-15-02.json",
+      "batch": 15,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 3"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-023-165",
+      "public_law": "23-165",
+      "title": "Public Law 23-165 | 2nd Amendment Protection Act (2APA)",
+      "report_path": "audit/primary/batch-15-02.json",
+      "batch": 15,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 4(1)",
+        "SEC 4(2)"
+      ],
+      "targets": [
+        "/us/usc/t18/s930/g/1"
+      ]
+    },
+    {
+      "law_id": "PL-023-166",
+      "public_law": "23-166",
+      "title": "Public Law 23-166 | Amended Federal Employment Act of 2023",
+      "report_path": "audit/primary/batch-15-02.json",
+      "batch": 15,
+      "source_status": "repealed",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "missing-source",
+        "unsupported-source"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-023-167",
+      "public_law": "23-167",
+      "title": "Public Law 23-167 | Uh Oh Act",
+      "report_path": "audit/primary/batch-15-02.json",
+      "batch": 15,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 4"
+      ],
+      "targets": [
+        "(PL 16-121)"
+      ]
+    },
+    {
+      "law_id": "PL-023-168",
+      "public_law": "23-168",
+      "title": "Public Law 23-168 | Affirming Innovation Act",
+      "report_path": "audit/primary/batch-15-02.json",
+      "batch": 15,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC 3(a)"
+      ],
+      "targets": [
+        "/us/usc/t29/s208"
+      ]
+    },
+    {
+      "law_id": "PL-023-169",
+      "public_law": "23-169",
+      "title": "Public Law 23-169 | Military Readiness Act",
+      "report_path": "audit/primary/batch-15-02.json",
+      "batch": 15,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 5-8"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-023-172",
+      "public_law": "23-172",
+      "title": "Public Law 23-172 | Congressional Military Service Act",
+      "report_path": "audit/primary/batch-15-03.json",
+      "batch": 15,
+      "source_status": "repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 4(1)",
+        "SEC. 5(a)-(b)",
+        "SEC. 9(a) and SEC. 5(c)/9(b-c)"
+      ],
+      "targets": [
+        "/us/usc/t10/s12203",
+        "/us/usc/t10/s151",
+        "PL 18-140 sec.304(a)"
+      ]
+    },
+    {
+      "law_id": "PL-024-173",
+      "public_law": "24-173",
+      "title": "Public Law 24-173 | Federal Enhancement Against Foreign Intrusion Act",
+      "report_path": "audit/primary/batch-15-03.json",
+      "batch": 15,
+      "source_status": "active",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION II",
+        "SECTION III",
+        "SECTION IV"
+      ],
+      "targets": [
+        "/us/usc/t2/s172"
+      ]
+    },
+    {
+      "law_id": "PL-024-174",
+      "public_law": "24-174",
+      "title": "Public Law 24-174 | Washington, D.C. Permitless Carry Act",
+      "report_path": "audit/primary/batch-15-03.json",
+      "batch": 15,
+      "source_status": "repealed",
+      "validation_status": "contradicted by source",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 4-5",
+        "SEC. 6-8"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-024-175",
+      "public_law": "24-175",
+      "title": "Public Law 24-175 | MPD Relocation Act",
+      "report_path": "audit/primary/batch-15-03.json",
+      "batch": 15,
+      "source_status": "unresolved",
+      "validation_status": "missing source evidence",
+      "confidence": "high",
+      "reasons": [
+        "missing-source",
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-024-176",
+      "public_law": "24-176",
+      "title": "Public Law 24-176 | Comprehensive Federal Government Funding Act",
+      "report_path": "audit/primary/batch-15-03.json",
+      "batch": 15,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "conditional-recommendation",
+        "missing-source",
+        "status:unresolved",
+        "unsupported-source"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-024-177",
+      "public_law": "24-177",
+      "title": "Public Law 24-177 | SS Jurisdiction Act",
+      "report_path": "audit/primary/batch-15-03.json",
+      "batch": 15,
+      "source_status": "repealed",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "unsupported-source"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-024-178",
+      "public_law": "24-178",
+      "title": "Public Law 24-178 | Equality in Employment Act",
+      "report_path": "audit/primary/batch-15-03.json",
+      "batch": 15,
+      "source_status": "active",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC. 6(a)(1)-(2)"
+      ],
+      "targets": [
+        "/us/usc/t42/s2000e-2"
+      ]
+    },
+    {
+      "law_id": "PL-025-179",
+      "public_law": "25-179",
+      "title": "Public Law 25-179 | Fiscal Year 21-2",
+      "report_path": "audit/primary/batch-15-03.json",
+      "batch": 15,
+      "source_status": "active",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC. 5"
+      ],
+      "targets": [
+        "/us/usc/t2/s4501"
+      ]
+    },
+    {
+      "law_id": "PL-025-180",
+      "public_law": "25-180",
+      "title": "Public Law 25-180 | Sanction Repealment Act",
+      "report_path": "audit/primary/batch-15-03.json",
+      "batch": 15,
+      "source_status": "repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "missing-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 3(b)",
+        "SEC. 3(c)"
+      ],
+      "targets": [
+        "PL 9-55"
+      ]
+    },
+    {
+      "law_id": "PL-026-191",
+      "public_law": "26-191",
+      "title": "Public Law 26-191 | Federal Employment Reform Act of 2024 (FERA24)",
+      "report_path": "audit/primary/batch-07-02.json",
+      "batch": 7,
+      "source_status": "repealed",
+      "validation_status": "contradicted by source",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "direct-action-provision",
+        "missing-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION 4-5",
+        "SECTION 9-10"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-027-192",
+      "public_law": "27-192",
+      "title": "Public Law 27-192 | Presidential Libraries and Better Public Records Management Act",
+      "report_path": "audit/primary/batch-07-02.json",
+      "batch": 7,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "chronology-required",
+        "confidence:medium",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION II",
+        "SECTION III(a)-(b)",
+        "SECTION IV",
+        "SECTION V"
+      ],
+      "targets": [
+        "/us/pl/3/19",
+        "/us/usc/t18/s2071"
+      ]
+    },
+    {
+      "law_id": "PL-027-193",
+      "public_law": "27-193",
+      "title": "Public Law 27-193 | Preservation of Parks and Monuments Act",
+      "report_path": "audit/primary/batch-07-02.json",
+      "batch": 7,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION 4",
+        "SECTION 5"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-027-194",
+      "public_law": "27-194",
+      "title": "Public Law 27-194 | Fast Food Workers Day Act of 2024",
+      "report_path": "audit/primary/batch-07-02.json",
+      "batch": 7,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SECTION 2(a)"
+      ],
+      "targets": [
+        "/us/usc/t5/s6103/a"
+      ]
+    },
+    {
+      "law_id": "PL-028-197",
+      "public_law": "28-197",
+      "title": "Public Law 28-197 | Amending Public Law 27-196",
+      "report_path": "audit/primary/batch-07-02.json",
+      "batch": 7,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "chronology-required",
+        "confidence:medium",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SECTION II"
+      ],
+      "targets": [
+        "/us/pl/27/196"
+      ]
+    },
+    {
+      "law_id": "PL-028-198",
+      "public_law": "28-198",
+      "title": "Public Law 28-198 | Intelligence Coordination and Jurisdiction Act",
+      "report_path": "audit/primary/batch-07-02.json",
+      "batch": 7,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 4",
+        "SEC 5"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-028-199",
+      "public_law": "28-199",
+      "title": "Public Law 28-199 | Department of Defense Grounds Protection Act",
+      "report_path": "audit/primary/batch-07-02.json",
+      "batch": 7,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 4"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-028-200",
+      "public_law": "28-200",
+      "title": "Public Law 28-200 | National Archives Organization Act",
+      "report_path": "audit/primary/batch-07-02.json",
+      "batch": 7,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 4",
+        "SEC 5",
+        "SEC 6-7"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-028-201",
+      "public_law": "28-201",
+      "title": "Public Law 28-201 | RESET Act",
+      "report_path": "audit/primary/batch-07-03.json",
+      "batch": 7,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC3(b)(i)-(xxix)"
+      ],
+      "targets": [
+        "Public Laws 3-23, 4-28, 4-33, 4-35, 4-37, 7-44, 7-50, 9-52, 9-57, 10-66, 10-68, 11-72, 12-78, 12-79, 12-83, 12-86, 14-90, 15-93, 15-106, 15-107, 15-109, 15-110, 16-113, 16-117, 16-122, 17-125, 17-127, 18-139, 25-180"
+      ]
+    },
+    {
+      "law_id": "PL-028-202",
+      "public_law": "28-202",
+      "title": "Public Law 28-202 | Comprehensive Gun Reform Act",
+      "report_path": "audit/primary/batch-07-03.json",
+      "batch": 7,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC4(a)(i)-(iv)",
+        "SEC5",
+        "SEC6",
+        "SEC7",
+        "SEC8"
+      ],
+      "targets": [
+        "Public Laws 4-31, 7-41, 23-165, 24-174"
+      ]
+    },
+    {
+      "law_id": "PL-028-203",
+      "public_law": "28-203",
+      "title": "Public Law 28-203 | Foundation for Accountability and Impeachment Reform Act",
+      "report_path": "audit/primary/batch-07-03.json",
+      "batch": 7,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC4",
+        "SEC5",
+        "SEC6",
+        "SEC7",
+        "SEC8"
+      ],
+      "targets": [
+        "Public Law 17-128"
+      ]
+    },
+    {
+      "law_id": "PL-028-204",
+      "public_law": "28-204",
+      "title": "Public Law 28-204 | Intelligence Community Employment Act",
+      "report_path": "audit/primary/batch-07-03.json",
+      "batch": 7,
+      "source_status": "repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC4"
+      ],
+      "targets": [
+        "Public Law 26-191, Section 15"
+      ]
+    },
+    {
+      "law_id": "PL-028-205",
+      "public_law": "28-205",
+      "title": "Public Law 28-205 | Inspector General Reform Act of 2024",
+      "report_path": "audit/primary/batch-07-03.json",
+      "batch": 7,
+      "source_status": "unresolved",
+      "validation_status": "missing source evidence",
+      "confidence": "high",
+      "reasons": [
+        "missing-source",
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-028-206",
+      "public_law": "28-206",
+      "title": "Public Law 28-206 | Washington Diplomacy Complex Boundary Act",
+      "report_path": "audit/primary/batch-07-03.json",
+      "batch": 7,
+      "source_status": "repealed",
+      "validation_status": "contradicted by source",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC5-7"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-029-207",
+      "public_law": "29-207",
+      "title": "Public Law 29-207 | Justice Reform Act of 2024",
+      "report_path": "audit/primary/batch-07-03.json",
+      "batch": 7,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "missing-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC1-4",
+        "SEC5(a)-(c)",
+        "SEC6(a)-(c)",
+        "SEC7(a)-(e)",
+        "SEC8(a)-(f)"
+      ],
+      "targets": [
+        "/us/usc/t18/s3281; /us/usc/t18/s3282; /us/usc/t18/s3283",
+        "/us/usc/t28/s1658; /us/usc/t29/s255; /us/usc/t31/s3731; /us/usc/t41/s7103"
+      ]
+    },
+    {
+      "law_id": "PL-029-208",
+      "public_law": "29-208",
+      "title": "Public Law 29-208 | Foreign Affairs Accountability Act",
+      "report_path": "audit/primary/batch-07-03.json",
+      "batch": 7,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC3(a)",
+        "SEC3(b)",
+        "SEC3(c)"
+      ],
+      "targets": [
+        "Public Law 15-102, Section IV"
+      ]
+    },
+    {
+      "law_id": "PL-029-209",
+      "public_law": "29-209",
+      "title": "Public Law 29-209 | Terms of Service Act",
+      "report_path": "audit/primary/batch-07-03.json",
+      "batch": 7,
+      "source_status": "unresolved",
+      "validation_status": "missing source evidence",
+      "confidence": "high",
+      "reasons": [
+        "missing-source",
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-029-210",
+      "public_law": "29-210",
+      "title": "Public Law 29-210 | Military Justice Reform Act of 2024",
+      "report_path": "audit/primary/batch-07-03.json",
+      "batch": 7,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC1-3",
+        "SEC4",
+        "SEC5",
+        "SEC6",
+        "SEC7",
+        "SEC8(a)-(v)"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-029-211",
+      "public_law": "29-211",
+      "title": "Public Law 29-211 | Amendment to the Presidential Succession Act of 1947",
+      "report_path": "audit/primary/batch-08-01.json",
+      "batch": 8,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "multiple-laws-same-target"
+      ],
+      "provision_refs": [
+        "SEC. 3(a)(i)-(iv)"
+      ],
+      "targets": [
+        "/us/usc/t3/s1",
+        "/us/usc/t3/s19"
+      ]
+    },
+    {
+      "law_id": "PL-029-213",
+      "public_law": "29-213",
+      "title": "Public Law 29-213 | D.C. Delegate Elimination Act",
+      "report_path": "audit/primary/batch-16-01.json",
+      "batch": 16,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SECTION II"
+      ],
+      "targets": [
+        "/us/usc/t2/s1",
+        "Public Law 16-120 section 4"
+      ]
+    },
+    {
+      "law_id": "PL-029-214",
+      "public_law": "29-214",
+      "title": "Public Law 29-214 | Safeguarding American Democracy and Maintaining Order in our Streets Act",
+      "report_path": "audit/primary/batch-16-01.json",
+      "batch": 16,
+      "source_status": "current",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision",
+        "unsupported-source"
+      ],
+      "provision_refs": [
+        "SECTION III"
+      ],
+      "targets": [
+        "/us/usc/t50/s1"
+      ]
+    },
+    {
+      "law_id": "PL-029-215",
+      "public_law": "29-215",
+      "title": "Public Law 29-215 | Stability in the Presidency Act",
+      "report_path": "audit/primary/batch-16-01.json",
+      "batch": 16,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "multiple-laws-same-target"
+      ],
+      "provision_refs": [
+        "SEC. 4",
+        "SEC. 4(g)-(h)"
+      ],
+      "targets": [
+        "/us/usc/t3/s1",
+        "/us/usc/t3/s19"
+      ]
+    },
+    {
+      "law_id": "PL-029-216",
+      "public_law": "29-216",
+      "title": "Public Law 29-216 | District of Columbia Home Rule Act of 2025",
+      "report_path": "audit/primary/batch-16-01.json",
+      "batch": 16,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "TITLE V / SEC. 501-506"
+      ],
+      "targets": [
+        "/us/usc/t40/s101/4"
+      ]
+    },
+    {
+      "law_id": "PL-029-217",
+      "public_law": "29-217",
+      "title": "Public Law 29-217 | Private Regulations and Compliance Act",
+      "report_path": "audit/primary/batch-16-01.json",
+      "batch": 16,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION II",
+        "SECTION IV"
+      ],
+      "targets": [
+        "/us/usc/t15/s1",
+        "Public Law 4-27"
+      ]
+    },
+    {
+      "law_id": "PL-029-218",
+      "public_law": "29-218",
+      "title": "Public Law 29-218 | Public Officials Security Act",
+      "report_path": "audit/primary/batch-16-01.json",
+      "batch": 16,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION II"
+      ],
+      "targets": [
+        "/us/usc/t50/s1"
+      ]
+    },
+    {
+      "law_id": "PL-030-220",
+      "public_law": "30-220",
+      "title": "Public Law 30-220 | Supreme Court Justice Allotment Act",
+      "report_path": "audit/primary/batch-16-01.json",
+      "batch": 16,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 3"
+      ],
+      "targets": [
+        "/us/usc/t28/s1",
+        "/us/usc/t28/s42"
+      ]
+    },
+    {
+      "law_id": "PL-030-221",
+      "public_law": "30-221",
+      "title": "Public Law 30-221 | Judicial Efficiency and Procedure Act",
+      "report_path": "audit/primary/batch-16-01.json",
+      "batch": 16,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC. 3"
+      ],
+      "targets": [
+        "/us/usc/t28/s1",
+        "/us/usc/t28/s2074"
+      ]
+    },
+    {
+      "law_id": "PL-030-222",
+      "public_law": "30-222",
+      "title": "Public Law 30-222 | Foreign Intelligence Surveillance Court Establishment Act",
+      "report_path": "audit/primary/batch-16-01.json",
+      "batch": 16,
+      "source_status": "unresolved",
+      "validation_status": "missing source evidence",
+      "confidence": "low",
+      "reasons": [
+        "confidence:low",
+        "missing-source",
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-030-223",
+      "public_law": "30-223",
+      "title": "Public Law 30-223 | Municipal Transportation Act",
+      "report_path": "audit/primary/batch-16-02.json",
+      "batch": 16,
+      "source_status": "fully-repealed",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "status:fully-repealed",
+        "unsupported-source"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "/us/usc/t49/s101/b/6"
+      ]
+    },
+    {
+      "law_id": "PL-030-224",
+      "public_law": "30-224",
+      "title": "Public Law 30-224 | Vacancies and Acting Officer Reform Act",
+      "report_path": "audit/primary/batch-16-02.json",
+      "batch": 16,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 3",
+        "SEC. 4",
+        "SEC. 5-12"
+      ],
+      "targets": [
+        "/us/usc/t5/ch31/subchIII",
+        "/us/usc/t5/s101",
+        "/us/usc/t5/s3345"
+      ]
+    },
+    {
+      "law_id": "PL-031-225",
+      "public_law": "31-225",
+      "title": "Public Law 31-225 | Collaborative Officer Partnership and Safety (COPS) Act",
+      "report_path": "audit/primary/batch-16-02.json",
+      "batch": 16,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 4-5"
+      ],
+      "targets": [
+        "/us/usc/t46/s101"
+      ]
+    },
+    {
+      "law_id": "PL-031-226",
+      "public_law": "31-226",
+      "title": "Public Law 31-226 | Commerce and Labor Administrative Reform Act (CLARA)",
+      "report_path": "audit/primary/batch-16-02.json",
+      "batch": 16,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 14",
+        "SEC 16",
+        "SEC 5",
+        "SEC 6-13"
+      ],
+      "targets": [
+        "/us/usc/t5/s101",
+        "Public Law 4-29; Public Law 12-80; Public Law 15-92; Public Law 17-126; Public Law 19-152; Public Law 25-183",
+        "multiple: /us/usc/t15; /us/usc/t19; /us/usc/t29; /us/usc/t35; /us/usc/t47; /us/usc/t51"
+      ]
+    },
+    {
+      "law_id": "PL-031-227",
+      "public_law": "31-227",
+      "title": "Public Law 31-227 | Foreign Affairs Representation and Treatment Statute (FARTS)",
+      "report_path": "audit/primary/batch-16-02.json",
+      "batch": 16,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 4-6",
+        "SEC 7(1)",
+        "SEC 8-18"
+      ],
+      "targets": [
+        "/us/usc/t8/s1101/i/2",
+        "/us/usc/t8/s1102",
+        "Public Law 19-147; Public Law 23-171; Public Law 3-17"
+      ]
+    },
+    {
+      "law_id": "PL-031-228",
+      "public_law": "31-228",
+      "title": "Public Law 31-228 | Protecting Congressional Authority Act (PCAA)",
+      "report_path": "audit/primary/batch-16-02.json",
+      "batch": 16,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 4(1)-(2)",
+        "SEC 5"
+      ],
+      "targets": [
+        "/us/usc/t2/s1",
+        "/us/usc/t2/s192"
+      ]
+    },
+    {
+      "law_id": "PL-031-229",
+      "public_law": "31-229",
+      "title": "Public Law 31-229 | Fiscal Year 25-1",
+      "report_path": "audit/primary/batch-16-02.json",
+      "batch": 16,
+      "source_status": "unresolved",
+      "validation_status": "missing source evidence",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "missing-source",
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "/us/usc/t2/s4501"
+      ]
+    },
+    {
+      "law_id": "PL-032-230",
+      "public_law": "32-230",
+      "title": "Public Law 32-230 | Federal Executive & Senior Leadership Pay Standardization Act of 2025",
+      "report_path": "audit/primary/batch-16-02.json",
+      "batch": 16,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 5(a)",
+        "SEC. 6"
+      ],
+      "targets": [
+        "/us/usc/t5/s101",
+        "/us/usc/t5/s5332"
+      ]
+    },
+    {
+      "law_id": "PL-032-231",
+      "public_law": "32-231",
+      "title": "District Improvement Act (DIA)",
+      "report_path": "audit/primary/batch-16-02.json",
+      "batch": 16,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "/us/usc/t50/s1"
+      ]
+    },
+    {
+      "law_id": "PL-032-232",
+      "public_law": "32-232",
+      "title": "The Federal Pay Standardization Act",
+      "report_path": "audit/primary/batch-16-02.json",
+      "batch": 16,
+      "source_status": "superseded",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision",
+        "status:superseded"
+      ],
+      "provision_refs": [
+        "SEC 4",
+        "SEC 5(a)"
+      ],
+      "targets": [
+        "/us/usc/t5/s5332"
+      ]
+    },
+    {
+      "law_id": "PL-032-233",
+      "public_law": "32-233",
+      "title": "Public Law 32-233 | Literally Introducing Taxes (LIT)",
+      "report_path": "audit/primary/batch-16-03.json",
+      "batch": 16,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC. 5"
+      ],
+      "targets": [
+        "/us/usc/t26/s1"
+      ]
+    },
+    {
+      "law_id": "PL-032-234",
+      "public_law": "32-234",
+      "title": "Public Law 32-234 | Intelligence Appointment Transparency and Oversight Act",
+      "report_path": "audit/primary/batch-16-03.json",
+      "batch": 16,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC. 3",
+        "SEC. 4"
+      ],
+      "targets": [
+        "/us/usc/t50/s3041"
+      ]
+    },
+    {
+      "law_id": "PL-032-235",
+      "public_law": "32-235",
+      "title": "Public Law 32-235 | Command Responsibility And Noncompliance Enforcement (CRANE) Act",
+      "report_path": "audit/primary/batch-16-03.json",
+      "batch": 16,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 4-9"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-032-236",
+      "public_law": "32-236",
+      "title": "Public Law 32-236 | Military Operational Authority Reform Act",
+      "report_path": "audit/primary/batch-16-03.json",
+      "batch": 16,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC. 4",
+        "SEC. 5"
+      ],
+      "targets": [
+        "/us/usc/t10/s153",
+        "/us/usc/t10/s154"
+      ]
+    },
+    {
+      "law_id": "PL-033-238",
+      "public_law": "33-238",
+      "title": "Public Law 33-238 | Conference Oversight of Discipline and Ethics Act",
+      "report_path": "audit/primary/batch-16-03.json",
+      "batch": 16,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 1-2",
+        "SEC. 3",
+        "SEC. 5",
+        "SEC. 6-14"
+      ],
+      "targets": [
+        "/us/usc/t28/s526"
+      ]
+    },
+    {
+      "law_id": "PL-034-239",
+      "public_law": "34-239",
+      "title": "Public Law 34-239 | Judicial Recall Act",
+      "report_path": "audit/primary/batch-16-03.json",
+      "batch": 16,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC. 3"
+      ],
+      "targets": [
+        "Public Law 26-190 ? 108C"
+      ]
+    },
+    {
+      "law_id": "PL-034-240",
+      "public_law": "34-240",
+      "title": "Public Law 34-240 | Literally Fixing Taxes",
+      "report_path": "audit/primary/batch-16-03.json",
+      "batch": 16,
+      "source_status": "repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC. 4"
+      ],
+      "targets": [
+        "/us/usc/t26/s1",
+        "H.R. 9 / Public Law 32-233"
+      ]
+    },
+    {
+      "law_id": "PL-034-241",
+      "public_law": "34-241",
+      "title": "Public Law 34-241 | Protecting Working Americans",
+      "report_path": "audit/primary/batch-16-03.json",
+      "batch": 16,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC. 3"
+      ],
+      "targets": [
+        "/us/usc/t2/s29"
+      ]
+    },
+    {
+      "law_id": "PL-034-242",
+      "public_law": "34-242",
+      "title": "Public Law 34-242 | Federal Courthouse Security & Jurisdiction Act",
+      "report_path": "audit/primary/batch-16-03.json",
+      "batch": 16,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 4-6"
+      ],
+      "targets": [
+        "/us/usc/t28/s362"
+      ]
+    },
+    {
+      "law_id": "PL-034-243",
+      "public_law": "34-243",
+      "title": "Public Law 34-243 | Judicial Integrity & Accountability Act",
+      "report_path": "audit/primary/batch-16-03.json",
+      "batch": 16,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 3(1)",
+        "SEC. 3(2) / §§ 351-364"
+      ],
+      "targets": [
+        "/us/usc/t28/ch16"
+      ]
+    },
+    {
+      "law_id": "PL-034-244",
+      "public_law": "34-244",
+      "title": "Public Law 34-244 | Sentencing Reform Act",
+      "report_path": "audit/primary/batch-09-01.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC 3(a)-(b)",
+        "SEC 4(a)"
+      ],
+      "targets": [
+        "/us/usc/t18/s3585",
+        "Pub. L. No. 29-207 § 7(b) and § 7(c)"
+      ]
+    },
+    {
+      "law_id": "PL-034-245",
+      "public_law": "34-245",
+      "title": "Public Law 34-245 | Legal Compensation Act",
+      "report_path": "audit/primary/batch-09-01.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 3",
+        "SEC 4(a)-(c)"
+      ],
+      "targets": [
+        "/us/usc/t18/s3006A/d",
+        "42 U.S.C. chapter 34 subchapter X"
+      ]
+    },
+    {
+      "law_id": "PL-034-246",
+      "public_law": "34-246",
+      "title": "Public Law 34-246 | Sentencing Commission Reform Act",
+      "report_path": "audit/primary/batch-09-01.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC 3(a)",
+        "SEC 3(b)",
+        "SEC 3(c)"
+      ],
+      "targets": [
+        "/us/usc/t28/s991/a",
+        "/us/usc/t28/s992; /us/usc/t28/s994; /us/usc/t28/s995",
+        "/us/usc/t28/s994"
+      ]
+    },
+    {
+      "law_id": "PL-034-247",
+      "public_law": "34-247",
+      "title": "Public Law 34-247 | Grand Jury Bypass Act",
+      "report_path": "audit/primary/batch-09-01.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 5",
+        "SEC 6"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-034-248",
+      "public_law": "34-248",
+      "title": "Public Law 34-248 | Intelligence Community Inspector General Consolidation Act of 2025",
+      "report_path": "audit/primary/batch-09-01.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 3-4",
+        "SEC 8-9"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-034-249",
+      "public_law": "34-249",
+      "title": "Public Law 34-249 | Washington Diplomacy Complex Bill 2025",
+      "report_path": "audit/primary/batch-09-01.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 4"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-034-250",
+      "public_law": "34-250",
+      "title": "Public Law 34-250 | Federal Prison Standards Act of 2025",
+      "report_path": "audit/primary/batch-09-01.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 11-12",
+        "SEC 4-6",
+        "SEC 7-10"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-034-251",
+      "public_law": "34-251",
+      "title": "Public Law 34-251 | In-Game Sentencing Guidelines Bill",
+      "report_path": "audit/primary/batch-09-01.json",
+      "batch": 9,
+      "source_status": "superseded",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "standalone-permanent-provision",
+        "status:superseded"
+      ],
+      "provision_refs": [
+        "SEC 4"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-035-252",
+      "public_law": "35-252",
+      "title": "Public Law 35-252 | Magistrate Appointment Act of 2025",
+      "report_path": "audit/primary/batch-09-01.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "chronology-required",
+        "confidence:medium",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC 3"
+      ],
+      "targets": [
+        "Public Law 26-190 section 106(c)(i)"
+      ]
+    },
+    {
+      "law_id": "PL-035-254",
+      "public_law": "35-254",
+      "title": "Public Law 35-254 | An Act to repeal Public Law 28-205",
+      "report_path": "audit/primary/batch-09-02.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC 3"
+      ],
+      "targets": [
+        "Public Law 28-205"
+      ]
+    },
+    {
+      "law_id": "PL-035-256",
+      "public_law": "35-256",
+      "title": "Public Law 35-256 | Workers First Act of 2025",
+      "report_path": "audit/primary/batch-09-02.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 3"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-036-256",
+      "public_law": "36-256",
+      "title": "Public Law 36-256 | Commerce Dispersal Act",
+      "report_path": "audit/primary/batch-09-02.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC 3",
+        "SEC 4"
+      ],
+      "targets": [
+        "Department of Commerce and Labor and related successor offices",
+        "Library of Congress / Copyright Office / Copyright Royalty Board"
+      ]
+    },
+    {
+      "law_id": "PL-036-257",
+      "public_law": "36-257",
+      "title": "Public Law 36-257 | Maritime Operations & Policy Overhaul Act",
+      "report_path": "audit/primary/batch-09-02.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "missing-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 4",
+        "SEC 5",
+        "SEC 6",
+        "SEC 7-12"
+      ],
+      "targets": [
+        "Military Justice Reform Act of 2024, section 4(a)",
+        "Military Officer Commissioning Reform Act, section 9(g)",
+        "Streamlining and Protecting American Security Act, section 6(m)"
+      ]
+    },
+    {
+      "law_id": "PL-036-258",
+      "public_law": "36-258",
+      "title": "Public Law 36-258 | National Root Beer Day Act",
+      "report_path": "audit/primary/batch-09-02.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC 3"
+      ],
+      "targets": [
+        "/us/usc/t5/s6103"
+      ]
+    },
+    {
+      "law_id": "PL-036-260",
+      "public_law": "36-260",
+      "title": "Public Law 36-260 | Fixing the District of Columbia Act of 2025",
+      "report_path": "audit/primary/batch-09-02.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 10",
+        "SEC 11",
+        "SEC 4(a)(i)-(vi)",
+        "SEC 6-9"
+      ],
+      "targets": [
+        "District Tort Act, DC Criminal Code, Protecting our Firefighters Act, and Fire Marshals Act",
+        "District of Columbia municipal government, MPD, DCFEMS, and Delegate office",
+        "Public Law 22-156, sections 6(1)(1), 6(2)(1), and 6(2)(2)",
+        "Public Laws 16-120, 25-181, 29-213, 29-216, 30-223, and 32-231"
+      ]
+    },
+    {
+      "law_id": "PL-037-261",
+      "public_law": "37-261",
+      "title": "Public Law 37-261 | Federal Criminal Code Act of 2025",
+      "report_path": "audit/primary/batch-09-02.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 4"
+      ],
+      "targets": [
+        "/us/usc/t18/s1"
+      ]
+    },
+    {
+      "law_id": "PL-038-262",
+      "public_law": "38-262",
+      "title": "Public Law 38-262 | Fund the Government Act of 2026",
+      "report_path": "audit/primary/batch-09-03.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "chronology-required",
+        "confidence:medium",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. V",
+        "SEC. VI"
+      ],
+      "targets": [
+        "PL 32-230 sec. 6"
+      ]
+    },
+    {
+      "law_id": "PL-038-263",
+      "public_law": "38-263",
+      "title": "Public Law 38-263 | National Security Act of 2026",
+      "report_path": "audit/primary/batch-09-03.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 5",
+        "TITLE I, SEC. 101-102",
+        "TITLE II, SEC. 201-212",
+        "TITLE III, SEC. 301-302",
+        "TITLE IV, SEC. 401-402"
+      ],
+      "targets": [
+        "Pub. L. 3-21"
+      ]
+    },
+    {
+      "law_id": "PL-038-264",
+      "public_law": "38-264",
+      "title": "Public Law 38-264 | Organized Crime and Racketeering Modernization Act of 2026",
+      "report_path": "audit/primary/batch-09-03.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "chronology-required",
+        "confidence:medium",
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 5",
+        "SEC. 6",
+        "SEC. 7",
+        "SEC. 8",
+        "SEC. 9"
+      ],
+      "targets": [
+        "Pub. L. 3-21"
+      ]
+    },
+    {
+      "law_id": "PL-038-265",
+      "public_law": "38-265",
+      "title": "Public Law 38-265 | Employment Clarity and Federal Workforce Modernization Act of 2026",
+      "report_path": "audit/primary/batch-09-03.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 4",
+        "TITLE I, SEC. 7-9",
+        "TITLE II, SEC. 10-15",
+        "TITLE III, SEC. 16-17",
+        "TITLE IV, SEC. 18-18A",
+        "TITLE V, SEC. 19-22"
+      ],
+      "targets": [
+        "Pub. L. 26-191; Pub. L. 28-204; Pub. L. 21-123"
+      ]
+    },
+    {
+      "law_id": "PL-038-266",
+      "public_law": "38-266",
+      "title": "Public Law 38-266 | Speedy Trial Act of 2026",
+      "report_path": "audit/primary/batch-09-03.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 2",
+        "SEC. 3-5",
+        "SEC. 6(a)",
+        "SEC. 6(b)"
+      ],
+      "targets": [
+        "PL 4-32 sec. B(b)(iii)",
+        "PL 4-32 sec. IV(b)(iii)",
+        "Pub. L. 22-162 / 18 U.S. Code Chapter 208 Part II"
+      ]
+    },
+    {
+      "law_id": "PL-039-267",
+      "public_law": "39-267",
+      "title": "Public Law 39-267 | Reform Sentencing Act",
+      "report_path": "audit/primary/batch-09-03.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "chronology-required",
+        "confidence:medium",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 5",
+        "SEC. 6",
+        "SEC. 7",
+        "SEC. 9"
+      ],
+      "targets": [
+        "PL 34-251"
+      ]
+    },
+    {
+      "law_id": "PL-040-268",
+      "public_law": "40-268",
+      "title": "Public Law 40-268 | Big Beautiful Budget Act",
+      "report_path": "audit/primary/batch-09-03.json",
+      "batch": 9,
+      "source_status": "temporary-operative",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "status:temporary-operative"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-041-269",
+      "public_law": "41-269",
+      "title": "Public Law 41-269 | Federal Enhancement Against Foreign Intrusion Amendments Act of 2026",
+      "report_path": "audit/primary/batch-09-03.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC. 2",
+        "SEC. 3"
+      ],
+      "targets": [
+        "PL 24-173 Section III",
+        "PL 24-173 Section IV"
+      ]
+    },
+    {
+      "law_id": "PL-041-270",
+      "public_law": "41-270",
+      "title": "Public Law 41-270 | Washington Diplomacy Complex Corrections Act of 2026",
+      "report_path": "audit/primary/batch-09-03.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC. 2",
+        "SEC. 3",
+        "SEC. 4",
+        "SEC. 5"
+      ],
+      "targets": [
+        "Washington Diplomacy Complex Act 2025 Section 3",
+        "Washington Diplomacy Complex Act 2025 Section 4",
+        "Washington Diplomacy Complex Act 2025 Section 5",
+        "Washington Diplomacy Complex Act 2025 Section 6"
+      ]
+    },
+    {
+      "law_id": "PL-041-271",
+      "public_law": "41-271",
+      "title": "Public Law 41-271 | The Great Change Act of 2026",
+      "report_path": "audit/primary/batch-09-03.json",
+      "batch": 9,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "chronology-required",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "TITLE I, SEC. 101-107",
+        "TITLE II, SEC. 201-207",
+        "TITLE III, SEC. 301-311",
+        "TITLE IV, SEC. 401-406",
+        "TITLE V, SEC. 501-504",
+        "TITLE VI, SEC. 601-607"
+      ],
+      "targets": [
+        "18 U.S.C. 205",
+        "Commerce Dispersal Act",
+        "Commissioned-officer staffing laws",
+        "SPASA; National Security Act of 2026",
+        "WDCBA; National Commission on Judicial Activity, Efficiency and Accountability Act; OOP",
+        "Whistleblower Protection Act of 2023 / H.R. 1501"
+      ]
+    }
+  ]
+}

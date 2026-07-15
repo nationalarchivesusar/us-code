@@ -1,0 +1,780 @@
+{
+  "batch": 16,
+  "auditor": "law-auditor-J",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-029-212",
+      "public_law": "29-212",
+      "title": "Public Law 29-212 | Efficient Impeachment in the House Act",
+      "status": "current",
+      "status_basis": "The classification layer marks this as a borderline note-or-rule enactment, and the current branch carries it as a statutory note rather than a freestanding Code section.",
+      "provisions": [
+        {
+          "ref": "SECTION I",
+          "text_summary": "Short title, severability, and effective-date language.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s1",
+          "exact_change": null,
+          "evidence": "\"Efficient Impeachment in the House Act\"; \"This Act shall become effective\"",
+          "notes": "Introductory material only."
+        },
+        {
+          "ref": "SECTION II / SECTION 6",
+          "text_summary": "Rewrite section 6(a) of Public Law 28-203 to restate when House impeachment inquiries may be initiated.",
+          "classes": [
+            "amendment-note"
+          ],
+          "treatment": "amendment-note",
+          "target": "Public Law 28-203 ? 6(a)",
+          "exact_change": "Section 6(a) of Public Law 28-203 shall be amended and read as the following.",
+          "evidence": "\"Section 6(a) of Public Law 28-203 shall be amended\"",
+          "notes": "Amends prior public-law text, not a positive-law Code section."
+        },
+        {
+          "ref": "SECTION III / SECTION 6(b)(iii) and 7(a)",
+          "text_summary": "Adjust the no-inquiry statement timing and the appointment of impeachment managers under Public Law 28-203.",
+          "classes": [
+            "amendment-note"
+          ],
+          "treatment": "amendment-note",
+          "target": "Public Law 28-203 ? 6(b)(iii); Public Law 28-203 ? 7(a)",
+          "exact_change": "Section 6(b)(iii) and section 7(a) of Public Law 28-203 are amended and re-read.",
+          "evidence": "\"Section 6(b)(iii) of Public Law 28-203 shall be amended\"; \"Section 7(a) shall be amended\"",
+          "notes": "Still a statutory-note class enactment."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correctly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s1",
+        "detail": "Current XML contains rp-pl029212-codification as a concise statutory note at the title 2 anchor."
+      },
+      "recommended_actions": [
+        "Retain as a concise statutory note at /us/usc/t2/s1 summarizing the Public Law 28-203 amendments."
+      ],
+      "confidence": "high",
+      "approved_code_treatment": "statutory-note; amendment-note",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The classification layer marks this as a borderline note-or-rule enactment, and the current branch carries it as a statutory note rather than a freestanding Code section.",
+      "final_recommended_action": "Retain as a concise statutory note at /us/usc/t2/s1 summarizing the Public Law 28-203 amendments.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1bCeTpqHM_XELVZq3wgArhSkb7OxBl1NX/view | 3200f4e0513c56ea5df4f95f799e25db879b8e334c3714adb62f8b81fa1a71e1",
+      "exact_target": "/us/usc/t2/s1",
+      "exact_change": "Section 6(a) of Public Law 28-203 shall be amended and read as the following. | Section 6(b)(iii) and section 7(a) of Public Law 28-203 are amended and re-read."
+    },
+    {
+      "law_id": "PL-029-213",
+      "public_law": "29-213",
+      "title": "Public Law 29-213 | D.C Delegate Elimination Act",
+      "status": "fully-repealed",
+      "status_basis": "The classification layer marks this as a repealed-record law, and the current record treats it as historical-only after later repeal.",
+      "provisions": [
+        {
+          "ref": "SECTION I",
+          "text_summary": "Short title, severability, and effective-date language.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t2/s1",
+          "exact_change": null,
+          "evidence": "\"D.C Delegate Elimination Act\"; \"This Act shall become effective\"",
+          "notes": "Keep only a concise historical note because the law is fully repealed."
+        },
+        {
+          "ref": "SECTION II",
+          "text_summary": "Repeal section 4 of Public Law 16-120 and nullify the District delegate position.",
+          "classes": [
+            "repeal",
+            "statutory-note-material"
+          ],
+          "treatment": "historical-note-only",
+          "target": "Public Law 16-120 ? 4",
+          "exact_change": "Repeal section 4 of Public Law 16-120 in its entirety.",
+          "evidence": "\"Section 4 of Public Law 16-120 shall be repealed in its entirety\"",
+          "notes": "The operative effect is historical after later repeal."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correctly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s1",
+        "detail": "Concise statutory-history note is the right posture; no duplicate note record or quotedContent dump is present in the branch record used by Claude."
+      },
+      "recommended_actions": [
+        "Retain only a concise historical note at /us/usc/t2/s1; no permanent Code text is warranted."
+      ],
+      "confidence": "high",
+      "approved_code_treatment": "historical-note-only",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The classification layer marks this as a repealed-record law, and the current record treats it as historical-only after later repeal.",
+      "final_recommended_action": "Retain only a concise historical note at /us/usc/t2/s1; no permanent Code text is warranted.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1qQ7WpA9efYNXRzvYGIHKc99JruzqQYBf/view | 66b34a3a257f9c51924444146dfaa65681331dffa852dad8883d2a472d3bf9e5",
+      "exact_target": "/us/usc/t2/s1",
+      "exact_change": "Repeal section 4 of Public Law 16-120 in its entirety."
+    },
+    {
+      "law_id": "PL-029-214",
+      "public_law": "29-214",
+      "title": "Public Law 29-214 | Safeguarding American Democracy and Maintaining Order in our Streets Act",
+      "status": "current",
+      "status_basis": "The source creates generally applicable permanent restrictions and the classification layer treats it as a title-50 statutory note rather than a direct positive-law rewrite.",
+      "provisions": [
+        {
+          "ref": "SECTION I",
+          "text_summary": "Short title, severability, effective date, and general definition heading.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date",
+            "findings-or-sense"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t50/s1",
+          "exact_change": null,
+          "evidence": "\"Safeguarding American Democracy and Maintaining Order in our Streets Act\"; \"This Act shall become effective\"",
+          "notes": "Introductory matter only."
+        },
+        {
+          "ref": "SECTION II",
+          "text_summary": "Define private paramilitary activity for the act.",
+          "classes": [
+            "definitions",
+            "local-district"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t50/s1",
+          "exact_change": null,
+          "evidence": "\"PRIVATE PARAMILITARY ACTIVITY\"; \"shall be defined as\"",
+          "notes": "No Code section is directly amended."
+        },
+        {
+          "ref": "SECTION III",
+          "text_summary": "Ban unauthorized private paramilitary activity, list the prohibited conduct, and set a criminal penalty with exemptions.",
+          "classes": [
+            "new-permanent-general",
+            "criminal-penalty"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t50/s1",
+          "exact_change": null,
+          "evidence": "\"shall be prohibited\"; \"shall be imprisoned for no more than ten (10) days\"",
+          "notes": "General law preserved as a note at the closest subject-matter anchor."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correctly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "Concise statutory note at the title 50 anchor; no quotedContent dump."
+      },
+      "recommended_actions": [
+        "Retain as a concise statutory note at /us/usc/t50/s1; do not create permanent positive-law text."
+      ],
+      "confidence": "high",
+      "approved_code_treatment": "statutory-note",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source creates generally applicable permanent restrictions and the classification layer treats it as a title-50 statutory note rather than a direct positive-law rewrite.",
+      "final_recommended_action": "Retain as a concise statutory note at /us/usc/t50/s1; do not create permanent positive-law text.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1MaGIK3JmHp7t6ItiGhmedfUpbNofQ-8d/view | 3ed2a1bab91fc78255fee9be9d55da92c32756627f136543194690551c1e5090",
+      "exact_target": "/us/usc/t50/s1"
+    },
+    {
+      "law_id": "PL-029-215",
+      "public_law": "29-215",
+      "title": "Public Law 29-215 | Stability in the Presidency Act",
+      "status": "current",
+      "status_basis": "The law directly amends 3 U.S.C. ? 19 and remains operative; the live XML already contains the inserted subsections.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-2",
+          "text_summary": "Short title, constitutional authority, and standing provisions.",
+          "classes": [
+            "short-title",
+            "findings-or-sense"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t3/s1",
+          "exact_change": null,
+          "evidence": "\"Stability in the Presidency Act\"; \"This Act is enacted pursuant\"",
+          "notes": "Noncodified introductory matter."
+        },
+        {
+          "ref": "SEC. 3",
+          "text_summary": "Congressional findings about presidential incapacity and the need for a new acting-president procedure.",
+          "classes": [
+            "findings-or-sense"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t3/s1",
+          "exact_change": null,
+          "evidence": "\"Congress makes the following findings\"; \"It is in the national interest\"",
+          "notes": "Findings only."
+        },
+        {
+          "ref": "SEC. 4",
+          "text_summary": "Insert new subsections (g) and (h) into 3 U.S.C. ? 19 to create incapacity procedures for an Acting President.",
+          "classes": [
+            "direct-amendment"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t3/s19",
+          "exact_change": "Add new subsections (g) and (h) after subsection (f) in 3 U.S.C. ? 19.",
+          "evidence": "\"3 U.S.C. ? 19 is amended by inserting the following after subsection (f)\"",
+          "notes": "Actual textual amendment required."
+        },
+        {
+          "ref": "SEC. 4(g)-(h)",
+          "text_summary": "Require a declaration of incapacity, congressional review, and limited judicial review.",
+          "classes": [
+            "direct-amendment"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t3/s19",
+          "exact_change": "Create the declaration, appeal, congressional determination, and judicial review mechanics inside the amended section.",
+          "evidence": "\"written declaration of incapacity\"; \"Congress shall convene within forty-eight hours\"",
+          "notes": "Substantive rule for the amendment."
+        },
+        {
+          "ref": "SEC. 5",
+          "text_summary": "Severability clause.",
+          "classes": [
+            "severability"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t3/s1",
+          "exact_change": null,
+          "evidence": "\"If any provision of this Act\"; \"shall not be affected\"",
+          "notes": "Standard severability language."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "already incorporated",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t3/s19",
+        "detail": "Live XML already contains rp-pl029215-3-19-g and rp-pl029215-3-19-h, so the amendment text is in place."
+      },
+      "recommended_actions": [
+        "Leave the live 3 U.S.C. ? 19 text in place.",
+        "Keep only a concise historical note for the act."
+      ],
+      "confidence": "high",
+      "approved_code_treatment": "statutory-note; historical-note-only; amend-existing-text",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The law directly amends 3 U.S.C. ? 19 and remains operative; the live XML already contains the inserted subsections.",
+      "final_recommended_action": "Leave the live 3 U.S.C. ? 19 text in place. | Keep only a concise historical note for the act.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1BRIdDvHMSNA-jVAlVVazZXrbsws3u86V/view | bbfaa8b6363a4f819eea7b1231a9a6ddb6342970d4f0e59a8c69809fde1265cf",
+      "exact_target": "/us/usc/t3/s19",
+      "exact_change": "Add new subsections (g) and (h) after subsection (f) in 3 U.S.C. ? 19. | Create the declaration, appeal, congressional determination, and judicial review mechanics inside the amended section."
+    },
+    {
+      "law_id": "PL-029-216",
+      "public_law": "29-216",
+      "title": "Public Law 29-216 | District of Columbia Home Rule Act of 2025",
+      "status": "fully-repealed",
+      "status_basis": "The classification layer marks this as a repealed-record law, and the current history record treats the enactment as municipal-only and no longer live.",
+      "provisions": [
+        {
+          "ref": "TITLE I / SEC. 101-103",
+          "text_summary": "Short title, purpose, and definitions for the District of Columbia municipal government framework.",
+          "classes": [
+            "local-district",
+            "short-title",
+            "effective-date"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t40/s101/4",
+          "exact_change": null,
+          "evidence": "\"District of Columbia Home Rule Act of 2025\"; \"For the purposes of this Act\"",
+          "notes": "Local-government framework; keep as history only after repeal."
+        },
+        {
+          "ref": "TITLE II / SEC. 201-203",
+          "text_summary": "Establish the charter preamble, legislative power, and charter-amendment procedure.",
+          "classes": [
+            "local-district"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t40/s101/4",
+          "exact_change": null,
+          "evidence": "\"shall establish the means of governance\"; \"may be amended by an act passed by the Council\"",
+          "notes": "Historical only after later repeal."
+        },
+        {
+          "ref": "TITLE III / SEC. 301-313",
+          "text_summary": "Create the Council and set membership, qualifications, powers, chairmanship, quorum, and investigations.",
+          "classes": [
+            "local-district"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t40/s101/4",
+          "exact_change": null,
+          "evidence": "\"There is established a Council\"; \"the power to investigate any matter\"",
+          "notes": "Core municipal-governance provisions, now historical."
+        },
+        {
+          "ref": "TITLE V / SEC. 501-506",
+          "text_summary": "Referendum, transfer of authority, emergency control, open meetings, construction, severability, and effective date.",
+          "classes": [
+            "local-district",
+            "transfer",
+            "savings",
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t40/s101/4",
+          "exact_change": null,
+          "evidence": "\"shall conduct a public referendum\"; \"shall be placed under the jurisdiction\"; \"shall prevail and shall be deemed to supersede\"",
+          "notes": "Later-law repeal makes the whole act historical only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "The note is in the right historical-note posture, but it embeds a full quotedContent dump that should be removed."
+      },
+      "recommended_actions": [
+        "Retain only a concise historical note at /us/usc/t40/s101/4.",
+        "Remove the quotedContent dump and Trello-style boilerplate."
+      ],
+      "confidence": "high",
+      "approved_code_treatment": "historical-note-only",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The classification layer marks this as a repealed-record law, and the current history record treats the enactment as municipal-only and no longer live.",
+      "final_recommended_action": "Retain only a concise historical note at /us/usc/t40/s101/4. | Remove the quotedContent dump and Trello-style boilerplate.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1RJ-oXnRwsW8E2Jl-RV9GyAL5WcWGSjb3/view | 07ceb01d79e38dd4ed5a7d896eb9c34e2f7a12235609b9e4fd672af9dfab6666",
+      "exact_target": "/us/usc/t40/s101/4"
+    },
+    {
+      "law_id": "PL-029-217",
+      "public_law": "29-217",
+      "title": "Public Law 29-217 | Private Regulations and Compliance Act",
+      "status": "current",
+      "status_basis": "The act repeals Public Law 4-27 and sets new restrictions on private security; the supplied sources show no later repeal or sunset.",
+      "provisions": [
+        {
+          "ref": "SECTION I",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t15/s1",
+          "exact_change": null,
+          "evidence": "\"Private Regulations and Compliance Act\"; \"This Act shall become effective\"",
+          "notes": "Introductory material only."
+        },
+        {
+          "ref": "SECTION II",
+          "text_summary": "Repeal Public Law 4-27 in its entirety.",
+          "classes": [
+            "repeal",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "Public Law 4-27",
+          "exact_change": "Repeal Public Law 4-27 in its entirety.",
+          "evidence": "\"Public Law 4-27 shall be repealed in its entirety\"",
+          "notes": "Historical repeal note only."
+        },
+        {
+          "ref": "SECTION III",
+          "text_summary": "Define private citizens and private security.",
+          "classes": [
+            "definitions"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t15/s1",
+          "exact_change": null,
+          "evidence": "\"Private citizens\"; \"Private Security\"",
+          "notes": "Definitions support the later restrictions."
+        },
+        {
+          "ref": "SECTION IV",
+          "text_summary": "Bar private security from federal property, interference with law enforcement, and blocking public roads; attach penalties.",
+          "classes": [
+            "new-permanent-general",
+            "criminal-penalty"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t15/s1",
+          "exact_change": null,
+          "evidence": "\"may not enter any property owned by the federal government\"; \"minimum fine of $10,000\"",
+          "notes": "General statutory note, not a Code amendment."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t15/s1",
+        "detail": "The XML note is in the right location, but it carries a full quotedContent dump that should be trimmed to a concise statutory note."
+      },
+      "recommended_actions": [
+        "Retain a concise statutory note at /us/usc/t15/s1.",
+        "Remove the quotedContent dump and archive-link boilerplate."
+      ],
+      "confidence": "high",
+      "approved_code_treatment": "statutory-note; historical-note-only",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The act repeals Public Law 4-27 and sets new restrictions on private security; the supplied sources show no later repeal or sunset.",
+      "final_recommended_action": "Retain a concise statutory note at /us/usc/t15/s1. | Remove the quotedContent dump and archive-link boilerplate.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1cPVNNI72NoHPaiOLfKAk8tzbXnqkmwIl/view | 825b7f3c32e359a52b5542898839d01c7c44007ec78e2e0245b34c39b7c9ffb2",
+      "exact_target": "/us/usc/t15/s1",
+      "exact_change": "Repeal Public Law 4-27 in its entirety."
+    },
+    {
+      "law_id": "PL-029-218",
+      "public_law": "29-218",
+      "title": "Public Law 29-218 | Public Officials Security Act",
+      "status": "current",
+      "status_basis": "The act sets Secret Service protection rules and contains no self-repeal or sunset; the supplied sources do not show later repeal.",
+      "provisions": [
+        {
+          "ref": "SECTION I",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t50/s1",
+          "exact_change": null,
+          "evidence": "\"Public Officials Security Act\"; \"This Act shall become effective\"",
+          "notes": "Introductory material only."
+        },
+        {
+          "ref": "SECTION II",
+          "text_summary": "Mandate Secret Service protection for the listed officials and set eligibility rules.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t50/s1",
+          "exact_change": null,
+          "evidence": "\"shall be mandated to the following public officials\"; \"on a permanent basis\"",
+          "notes": "General rule preserved as a statutory note."
+        },
+        {
+          "ref": "SECTION III",
+          "text_summary": "Describe how protection designations are relayed to the Secret Service Director.",
+          "classes": [
+            "uncodified-admin-direction"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t50/s1",
+          "exact_change": null,
+          "evidence": "\"shall be relayed to the Director\"",
+          "notes": "Administrative direction only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The XML note is in the right location, but it carries a full quotedContent dump that should be trimmed to a concise statutory note."
+      },
+      "recommended_actions": [
+        "Keep a concise statutory note at /us/usc/t50/s1.",
+        "Delete the quotedContent dump and archive-link boilerplate."
+      ],
+      "confidence": "high",
+      "approved_code_treatment": "statutory-note",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The act sets Secret Service protection rules and contains no self-repeal or sunset; the supplied sources do not show later repeal.",
+      "final_recommended_action": "Keep a concise statutory note at /us/usc/t50/s1. | Delete the quotedContent dump and archive-link boilerplate.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1WfYWvB2lUDoG-TCXb3hqa3wUsjkfazY4/view | 0700465eea71e2144358ea717e6e2376c18c4c315eaeda8d90ef523d8e5fc223",
+      "exact_target": "/us/usc/t50/s1"
+    },
+    {
+      "law_id": "PL-030-220",
+      "public_law": "30-220",
+      "title": "Public Law 30-220 | Supreme Court Justice Allotment Act",
+      "status": "current",
+      "status_basis": "The classification layer treats this as a direct title-28 amendment, and the current branch still shows the pre-amendment 28 U.S.C. ? 42 text.",
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "text_summary": "Short title.",
+          "classes": [
+            "short-title"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/s1",
+          "exact_change": null,
+          "evidence": "\"Supreme Court Justice Allotment Act\"",
+          "notes": "Introductory only."
+        },
+        {
+          "ref": "SEC. 2",
+          "text_summary": "Purpose clause explaining the recommendation to restore or amend 28 U.S. Code ? 42.",
+          "classes": [
+            "findings-or-sense"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t28/s1",
+          "exact_change": null,
+          "evidence": "\"reinstate or amend 28 U.S. Code ? 42\"",
+          "notes": "Purpose only; no Code amendment."
+        },
+        {
+          "ref": "SEC. 3",
+          "text_summary": "Authorize the Chief Justice and associate justices to be allotted as circuit justices or district judges by Supreme Court order.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/s42",
+          "exact_change": null,
+          "evidence": "\"shall from time to time be allotted\"",
+          "notes": "This requires a direct update to 28 U.S.C. ? 42."
+        },
+        {
+          "ref": "SEC. 4",
+          "text_summary": "Severability clause.",
+          "classes": [
+            "severability"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/s1",
+          "exact_change": null,
+          "evidence": "\"If any provision of this Act\"; \"shall not be affected\"",
+          "notes": "Standard severability language."
+        },
+        {
+          "ref": "SEC. 5",
+          "text_summary": "Effective date.",
+          "classes": [
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/s1",
+          "exact_change": null,
+          "evidence": "\"This Act shall become effective immediately\"",
+          "notes": "No permanent Code text change."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s42",
+        "detail": "The current XML still exposes the older section 42 text; the allotment rule from SEC. 3 has not been integrated."
+      },
+      "recommended_actions": [
+        "Amend /us/usc/t28/s42 with the allotment rule from SEC. 3.",
+        "Keep only a concise historical note at /us/usc/t28/s1."
+      ],
+      "confidence": "high",
+      "approved_code_treatment": "statutory-note; historical-note-only",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The classification layer treats this as a direct title-28 amendment, and the current branch still shows the pre-amendment 28 U.S.C. ? 42 text.",
+      "final_recommended_action": "Amend /us/usc/t28/s42 with the allotment rule from SEC. 3. | Keep only a concise historical note at /us/usc/t28/s1.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1Di3x0EcWuYCGdj-avv5tbB0B_IpS5tnF/view | 1cb72cff04cb774b204659aa9c46757d2ec281f0c66b04e988d21341d2f21781",
+      "exact_target": "/us/usc/t28/s42"
+    },
+    {
+      "law_id": "PL-030-221",
+      "public_law": "30-221",
+      "title": "Public Law 30-221 | Judicial Efficiency and Procedure Act",
+      "status": "current",
+      "status_basis": "The classification layer treats this as a direct title-28 amendment, and the current branch still shows the pre-amendment 28 U.S.C. ? 2074(a) text.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-2",
+          "text_summary": "Short title and purpose.",
+          "classes": [
+            "short-title",
+            "findings-or-sense"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/s1",
+          "exact_change": null,
+          "evidence": "\"Judicial Efficiency and Procedure Act\"; \"recommended in their final report\"",
+          "notes": "Introductory material only."
+        },
+        {
+          "ref": "SEC. 3",
+          "text_summary": "Replace 28 U.S.C. ? 2074(a) with new transmission and effective-date text.",
+          "classes": [
+            "direct-amendment"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t28/s2074",
+          "exact_change": "Rewrite 28 U.S.C. ? 2074(a) with the new seven-day transmission and fourteen-day effective-date rule.",
+          "evidence": "\"28 U.S. Code ? 2074(a) shall read as follows\"",
+          "notes": "Actual Code amendment required."
+        },
+        {
+          "ref": "SEC. 4",
+          "text_summary": "Clarify that Public Law 26-190 does not authorize the Chief Justice to alter federal law absent Congress.",
+          "classes": [
+            "amendment-note",
+            "statutory-note-material"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/s1",
+          "exact_change": null,
+          "evidence": "\"Nothing in Section 105(b) of Public Law 26-190\"; \"absent an Act of Congress\"",
+          "notes": "This is a clarification note, not a direct Code amendment."
+        },
+        {
+          "ref": "SEC. 5",
+          "text_summary": "Severability clause.",
+          "classes": [
+            "severability"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/s1",
+          "exact_change": null,
+          "evidence": "\"If any provision of this Act\"; \"shall not be affected\"",
+          "notes": "Standard severability language."
+        },
+        {
+          "ref": "SEC. 6",
+          "text_summary": "Effective date.",
+          "classes": [
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/s1",
+          "exact_change": null,
+          "evidence": "\"This Act shall become effective immediately\"",
+          "notes": "No separate Code amendment."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s2074",
+        "detail": "The current XML still exposes the original section 2074(a) text; the SEC. 3 rewrite has not been integrated."
+      },
+      "recommended_actions": [
+        "Amend /us/usc/t28/s2074(a) with the new text in SEC. 3.",
+        "Keep only a concise note for the Public Law 26-190 clarification."
+      ],
+      "confidence": "high",
+      "approved_code_treatment": "statutory-note; amend-existing-text",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The classification layer treats this as a direct title-28 amendment, and the current branch still shows the pre-amendment 28 U.S.C. ? 2074(a) text.",
+      "final_recommended_action": "Amend /us/usc/t28/s2074(a) with the new text in SEC. 3. | Keep only a concise note for the Public Law 26-190 clarification.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1o8BKPNH9NtFmRJr4dCLMUy6lhzlvHjxX/view | 4a3019a974e3e3ebc239879ad44da8cf4d69cffc6d2f7d4e4b6833bd4a82aed0",
+      "exact_target": "/us/usc/t28/s2074",
+      "exact_change": "Rewrite 28 U.S.C. ? 2074(a) with the new seven-day transmission and fourteen-day effective-date rule."
+    },
+    {
+      "law_id": "PL-030-222",
+      "public_law": "30-222",
+      "title": "Public Law 30-222 | Foreign Intelligence Surveillance Court Establishment Act",
+      "status": "current",
+      "status_basis": "The source text creates a new FISA Court and related procedures without any self-repeal or sunset, and the archive treats it as a live statutory note.",
+      "provisions": [
+        {
+          "ref": "SECTION 101",
+          "text_summary": "Short title.",
+          "classes": [
+            "short-title"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t50/s1",
+          "exact_change": null,
+          "evidence": "\"This Act may be cited as the \\\"Foreign Intelligence Surveillance Court Establishment Act\\\".\"",
+          "notes": "Introductory material only."
+        },
+        {
+          "ref": "SEC 102",
+          "text_summary": "Purpose to establish the FISA Court for surveillance oversight.",
+          "classes": [
+            "findings-or-sense",
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t50/s1",
+          "exact_change": null,
+          "evidence": "\"The purpose of this Act is to establish the Foreign Intelligence Surveillance Court\"",
+          "notes": "Policy statement, not a Code rewrite."
+        },
+        {
+          "ref": "SEC 103",
+          "text_summary": "Establishes the FISA Court and its composition.",
+          "classes": [
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t50/s1",
+          "exact_change": null,
+          "evidence": "\"There is hereby established a court to be known as the \\\"Foreign Intelligence Surveillance Court\\\"\"",
+          "notes": "The court is created as a statutory note at the closest subject-matter anchor."
+        },
+        {
+          "ref": "SEC 104-107",
+          "text_summary": "Sets surveillance-application requirements, oversight, operational framework, and scope of authority.",
+          "classes": [
+            "uncodified-admin-direction",
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t50/s1",
+          "exact_change": null,
+          "evidence": "\"The Attorney General or their designee shall submit applications\"; \"The FISA Court shall review applications\"; \"A process for appeals and reviews\"",
+          "notes": "No single positive-law section is identified."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The XML note is concise and on-topic for title 50; the remaining issue is the Trello link."
+      },
+      "recommended_actions": [
+        "Retain as a concise statutory note at /us/usc/t50/s1.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high",
+      "approved_code_treatment": "statutory-note",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source text creates a new FISA Court and related procedures without any self-repeal or sunset, and the archive treats it as a live statutory note.",
+      "final_recommended_action": "Retain as a concise statutory note at /us/usc/t50/s1. | Remove the Trello link.",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t50/s1"
+    }
+  ],
+  "reviewer": "law-auditor-J",
+  "source_manifest": "audit/primary/batch-16-01.json",
+  "output_path": "audit/review/review-73.json",
+  "reviewed_against": [
+    "audit/primary/batch-16-01.json",
+    "audit/claude-validation.json",
+    "origin/main"
+  ]
+}

@@ -1,0 +1,306 @@
+{
+  "reviewer": "codex-repair-23",
+  "group_index": 23,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/review-repair-23.json",
+  "output_path": "audit/review/review-repair-23.json",
+  "reviewed_against": [
+    "audit/manifests/review-repair-23.json",
+    "audit/primary/batch-08-02.json",
+    "audit/primary/batch-08-03.json",
+    "audit/chronology-report.json",
+    "usc XML in current branch",
+    "origin/main comparison"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-032-231",
+      "public_law": "32-231",
+      "title": "Public Law 32-231 | District Improvement Act (DIA)",
+      "report_path": "audit/primary/batch-08-02.json",
+      "batch": 8,
+      "status": "repealed",
+      "decision": "historical-note-only",
+      "status_basis": "The source record is marked fully repealed, and the act is retained only as public-law history; no live Code insertion is warranted.",
+      "provision_refs": [
+        "SEC 5",
+        "SEC 7"
+      ],
+      "targets": [
+        "/us/usc/t50/s1"
+      ],
+      "current_implementation": {
+        "assessment": "absent",
+        "placement": "/us/usc/t50/s1",
+        "detail": "No matching implementation was found in the current branch XML."
+      },
+      "recommended_action": "Leave the act out of the Code and preserve it only as repealed history.",
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source record is marked fully repealed, and the act is retained only as public-law history; no live Code insertion is warranted.",
+      "approved_code_treatment": "historical-note-only",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1myK4b1S1qGqdfEJ100YOBFONv92Jrf2-/view | b985611164aafed13aa9effd99b3a3c6c623d2d500c8f464040019d293fd2144"
+    },
+    {
+      "law_id": "PL-032-232",
+      "public_law": "32-232",
+      "title": "Public Law 32-232 | The Federal Pay Standardization Act",
+      "report_path": "audit/primary/batch-08-03.json",
+      "batch": 8,
+      "status": "current",
+      "decision": "amend-existing-text",
+      "status_basis": "Section 5(a) directly rewrites 5 U.S.C. 5332(a), and the current branch already carries the incorporated pay-table text.",
+      "provision_refs": [
+        "SEC 4",
+        "SEC 5(a)"
+      ],
+      "targets": [
+        "/us/usc/t5/s5332"
+      ],
+      "current_implementation": {
+        "assessment": "implemented",
+        "placement": "/us/usc/t5/s5332",
+        "detail": "The current branch includes the integrated General Schedule text and amendment note."
+      },
+      "recommended_action": "No additional Code change is required.",
+      "confidence": "high",
+      "final_legal_status": "superseded",
+      "chronology_conclusion": "Section 5(a) directly rewrites 5 U.S.C. 5332(a), and the current branch already carries the incorporated pay-table text.",
+      "approved_code_treatment": "amend-existing-text",
+      "source_evidence": "status keyword `superseded` in list or label | view | https://drive.google.com/file/d/10vU2BDaWet4MlP9Jaakq2ju07MSB-s_v/view | e829f1aa6731c56e1ba94842eddbda49c08bc97fb34cb2c9a7714f96c78f1954"
+    },
+    {
+      "law_id": "PL-032-233",
+      "public_law": "32-233",
+      "title": "Public Law 32-233 | Literally Introducing Taxes (LIT)",
+      "report_path": "audit/primary/batch-08-03.json",
+      "batch": 8,
+      "status": "current",
+      "decision": "amend-existing-text",
+      "status_basis": "Section 5 repeals 26 U.S.C. 1 and replaces it with the flat tax text, and the current branch already reflects that incorporation.",
+      "provision_refs": [
+        "SEC 5(1)",
+        "SEC 5(2)"
+      ],
+      "targets": [
+        "/us/usc/t26/s1"
+      ],
+      "current_implementation": {
+        "assessment": "implemented",
+        "placement": "/us/usc/t26/s1",
+        "detail": "The current branch carries the tax-section amendment history and the incorporated replacement text."
+      },
+      "recommended_action": "No additional Code change is required.",
+      "confidence": "high",
+      "final_legal_status": "superseded",
+      "chronology_conclusion": "Section 5 repeals 26 U.S.C. 1 and replaces it with the flat tax text, and the current branch already reflects that incorporation.",
+      "approved_code_treatment": "amend-existing-text",
+      "source_evidence": "status keyword `superseded` in list or label | view | https://drive.google.com/file/d/1ojj00XYNewGUdmEE-FaWK4FnJHESL6iA/view | 2743072becbaa50c0c0a35ae0c58e8c041b3db1ece8fe82070c3c66ea887d46b"
+    },
+    {
+      "law_id": "PL-032-234",
+      "public_law": "32-234",
+      "title": "Public Law 32-234 | Intelligence Appointment Transparency and Oversight Act",
+      "report_path": "audit/primary/batch-08-03.json",
+      "batch": 8,
+      "status": "current",
+      "decision": "amend-existing-text",
+      "status_basis": "Sections 3 and 4 add 50 U.S.C. 3041 subsection (d) and expand subsection (b)(2), and the current branch already contains those amendments.",
+      "provision_refs": [
+        "SEC 3(a)(i)-(iii)",
+        "SEC 4(a)"
+      ],
+      "targets": [
+        "/us/usc/t50/s3041",
+        "/us/usc/t50/s3041/b/2"
+      ],
+      "current_implementation": {
+        "assessment": "implemented",
+        "placement": [
+          "/us/usc/t50/s3041",
+          "/us/usc/t50/s3041/b/2"
+        ],
+        "detail": "The current branch includes subsection (d) and the updated concurrence list."
+      },
+      "recommended_action": "No additional Code change is required.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Sections 3 and 4 add 50 U.S.C. 3041 subsection (d) and expand subsection (b)(2), and the current branch already contains those amendments.",
+      "approved_code_treatment": "amend-existing-text",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable"
+    },
+    {
+      "law_id": "PL-032-235",
+      "public_law": "32-235",
+      "title": "Public Law 32-235 | Command Responsibility And Noncompliance Enforcement (CRANE) Act",
+      "report_path": "audit/primary/batch-08-03.json",
+      "batch": 8,
+      "status": "current",
+      "decision": "non-code",
+      "status_basis": "The act is classified as commemorative rather than permanent Code material, so it should remain outside the Code.",
+      "provision_refs": [
+        "SEC 4-5",
+        "SEC 6-7",
+        "SEC 8-10"
+      ],
+      "targets": [],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No Code insertion is expected for this enactment."
+      },
+      "recommended_action": "Leave the act as public-law history only.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The act is classified as commemorative rather than permanent Code material, so it should remain outside the Code.",
+      "approved_code_treatment": "non-code",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1h1FDoyv-8_AbfN0qnK-i6iXwNGXJJxUp/view | aed8ae97fd686916761236374e33b665ff88fa1e921eead9b3df6296a15ca785"
+    },
+    {
+      "law_id": "PL-032-236",
+      "public_law": "32-236",
+      "title": "Public Law 32-236 | Military Operational Authority Reform Act",
+      "report_path": "audit/primary/batch-08-03.json",
+      "batch": 8,
+      "status": "current",
+      "decision": "amend-existing-text",
+      "status_basis": "Sections 4 and 5 amend 10 U.S.C. 153 and 154, and the current branch already carries those changes.",
+      "provision_refs": [
+        "SEC 4(a)",
+        "SEC 5(a)-(d)"
+      ],
+      "targets": [
+        "/us/usc/t10/s153",
+        "/us/usc/t10/s154"
+      ],
+      "current_implementation": {
+        "assessment": "implemented",
+        "placement": [
+          "/us/usc/t10/s153",
+          "/us/usc/t10/s154"
+        ],
+        "detail": "The current branch includes the amended section 153 and section 154 text plus the amendment notes."
+      },
+      "recommended_action": "No additional Code change is required.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Sections 4 and 5 amend 10 U.S.C. 153 and 154, and the current branch already carries those changes.",
+      "approved_code_treatment": "amend-existing-text",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable"
+    },
+    {
+      "law_id": "PL-033-238",
+      "public_law": "33-238",
+      "title": "Public Law 33-238 | Conference Oversight of Discipline and Ethics Act",
+      "report_path": "audit/primary/batch-08-03.json",
+      "batch": 8,
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "The enactment is general and permanent but does not supply a clean positive-law rewrite target; it belongs as a statutory note at 28 U.S.C. 526.",
+      "provision_refs": [
+        "SEC 11-14",
+        "SEC 3(a)-(c)",
+        "SEC 4-6",
+        "SEC 7-10"
+      ],
+      "targets": [
+        "/us/usc/t28/s526"
+      ],
+      "current_implementation": {
+        "assessment": "absent",
+        "placement": "/us/usc/t28/s526",
+        "detail": "No matching statutory-note entry was found in the current branch XML."
+      },
+      "recommended_action": "Add a concise statutory note at 28 U.S.C. 526 if the act is to be carried into the Code.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The enactment is general and permanent but does not supply a clean positive-law rewrite target; it belongs as a statutory note at 28 U.S.C. 526.",
+      "approved_code_treatment": "statutory-note",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1fypr1xL7AfuFtvc5xxHBfuo1eXAFoXO0/view | a37a9d3f48a6d297d11d0db812ca4fe9c7e8ea9bfae7ff84ee77a8fa19989b2e"
+    },
+    {
+      "law_id": "PL-034-239",
+      "public_law": "34-239",
+      "title": "Public Law 34-239 | Judicial Recall Act",
+      "report_path": "audit/primary/batch-08-03.json",
+      "batch": 8,
+      "status": "current",
+      "decision": "non-code",
+      "status_basis": "The source is predominantly temporary or self-expiring and does not warrant permanent Code insertion.",
+      "provision_refs": [
+        "SEC 3(a)",
+        "SEC 4(a)-(b)"
+      ],
+      "targets": [
+        "Public Law 26-190 section 108(c)"
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No current Code implementation is expected for this enactment."
+      },
+      "recommended_action": "Retain the law only as public-law history.",
+      "confidence": "medium",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source is predominantly temporary or self-expiring and does not warrant permanent Code insertion.",
+      "approved_code_treatment": "non-code",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1oxixybZA4j8eQd0e-bdmkDnvGJfFxQJT/view?usp=sharing | e7351a41bb88df60f12b5050ac03a7bad126fad78ec8c42b2ee42788381ba367"
+    },
+    {
+      "law_id": "PL-034-240",
+      "public_law": "34-240",
+      "title": "Public Law 34-240 | Literally Fixing Taxes",
+      "report_path": "audit/primary/batch-08-03.json",
+      "batch": 8,
+      "status": "superseded",
+      "decision": "historical-note-only",
+      "status_basis": "The law is treated as retired in the source chain, and the current branch preserves it only as historical note material at 26 U.S.C. 1.",
+      "provision_refs": [
+        "SEC 4(a)",
+        "SEC 4(b)"
+      ],
+      "targets": [
+        "/us/usc/t26/s1"
+      ],
+      "current_implementation": {
+        "assessment": "history-note-only",
+        "placement": "/us/usc/t26/s1",
+        "detail": "The current branch already retains this law as statutory history only."
+      },
+      "recommended_action": "Keep only the historical note and do not restore live tax text.",
+      "confidence": "medium",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The law is treated as retired in the source chain, and the current branch preserves it only as historical note material at 26 U.S.C. 1.",
+      "approved_code_treatment": "historical-note-only",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1G8MTtTVPLZ8YP0QG5F5CZFYg_0y8zoYt/view?usp=sharing | ef745aa0e7d51591db386f16a31fd79b9f7a6c76a9cc285499ed25fc93a92af4"
+    },
+    {
+      "law_id": "PL-034-241",
+      "public_law": "34-241",
+      "title": "Public Law 34-241 | Protecting Working Americans",
+      "report_path": "audit/primary/batch-08-03.json",
+      "batch": 8,
+      "status": "current",
+      "decision": "amend-existing-text",
+      "status_basis": "Chronology ties the law to the Title 5 pay-table chain, where it revises the prior pay-standardization enactment; the current branch does not yet contain this later amendment.",
+      "provision_refs": [
+        "SEC 3(a)",
+        "SEC 4"
+      ],
+      "targets": [
+        "/us/usc/t5/s5332"
+      ],
+      "current_implementation": {
+        "assessment": "absent",
+        "placement": "/us/usc/t5/s5332",
+        "detail": "No PL-034-241 implementation was found in the current branch XML."
+      },
+      "recommended_action": "Apply the revised pay table to 5 U.S.C. 5332 and trim any note-only treatment.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Chronology ties the law to the Title 5 pay-table chain, where it revises the prior pay-standardization enactment; the current branch does not yet contain this later amendment.",
+      "approved_code_treatment": "amend-existing-text",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1o9A1TLTggmwbTEvl8G5ARYzWIuoOr68x/view | cdf2911d06ddfc5bd36ff00acb23f0c32bad8348545ec6909b53d9febcce08cb"
+    }
+  ]
+}

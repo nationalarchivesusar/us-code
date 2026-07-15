@@ -1,0 +1,360 @@
+{
+  "reviewer": "law-auditor-01",
+  "group_index": 101,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/review-repair-01.json",
+  "output_path": "audit/review/review-repair-01.json",
+  "reviewed_against": [
+    "audit/manifests/review-repair-01.json",
+    "audit/review/review-01.json",
+    "codification/mass_migration/latest/reports/laws/PL-001-001.md",
+    "codification/mass_migration/latest/reports/laws/PL-001-002.md",
+    "codification/mass_migration/latest/reports/laws/PL-001-003.md",
+    "codification/mass_migration/latest/reports/laws/PL-001-004.md",
+    "codification/mass_migration/latest/reports/laws/PL-002-005.md",
+    "codification/mass_migration/latest/reports/laws/PL-002-006.md",
+    "codification/mass_migration/latest/reports/laws/PL-002-007.md",
+    "codification/mass_migration/latest/reports/laws/PL-002-008.md",
+    "codification/mass_migration/latest/reports/laws/PL-002-010.md",
+    "codification/mass_migration/latest/reports/laws/PL-002-011.md",
+    "usc/usc02.xml",
+    "usc/usc28.xml"
+  ],
+  "completion_summary": "Kept the source-corpus outcomes where they already matched the recovered reports and synthesized the missing validator-facing fields for the four note-only laws and six history-only laws in review-01.",
+  "changed_law_ids": [
+    "PL-001-001",
+    "PL-001-002",
+    "PL-001-003",
+    "PL-001-004",
+    "PL-002-005",
+    "PL-002-006",
+    "PL-002-007",
+    "PL-002-008",
+    "PL-002-010",
+    "PL-002-011"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-001-001",
+      "public_law": "1-1",
+      "title": "Public Law 1-1 | Enactment of the U.S. Codes Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The enactment is current history-only legislation; the codification report places it as a statutory note.",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t2/s4103",
+      "exact_enacted_change": "Preserve the enactment as a concise statutory note at 2 U.S.C. 4103 and do not create operative text.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "final_legal_status": "current",
+          "code_treatment": "statutory-note",
+          "target": "/us/usc/t2/s4103",
+          "conclusion": "The full act is note-only history at the 2 U.S.C. 4103 anchor."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t2/s4103",
+        "detail": "usc02.xml contains the 4103 anchor, but the visible note is a different codification note and not a concise PL-001-001 history entry."
+      },
+      "current_xml_comparison": "usc02.xml already contains the 2 U.S.C. 4103 anchor, but the visible note there is not PL-001-001-specific. The branch still needs a trimmed history note at that location.",
+      "source_evidence": [
+        "audit/review/review-01.json",
+        "codification/mass_migration/latest/reports/laws/PL-001-001.md",
+        "codification/laws/laws/PL-001-001/law.txt",
+        "usc/usc02.xml"
+      ],
+      "final_recommended_action": "Keep the law as a concise statutory note at 2 U.S.C. 4103 and remove dump-style text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-001-002",
+      "public_law": "1-2",
+      "title": "Public Law 1-2 | United States Bar Act",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source corpus treats the measure as repealed, so no current Code text is authorized.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_change": "Keep only repeal history; do not insert current Code text.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "final_legal_status": "repealed",
+          "code_treatment": "historical-note-only",
+          "target": null,
+          "conclusion": "History-only treatment is sufficient for the entire act."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No current Code insertion is authorized for this repealed law."
+      },
+      "current_xml_comparison": "No current XML insertion is required; the law remains history-only.",
+      "source_evidence": [
+        "audit/review/review-01.json",
+        "codification/mass_migration/latest/reports/laws/PL-001-002.md",
+        "codification/laws/laws/PL-001-002/law.txt"
+      ],
+      "final_recommended_action": "Keep only repeal history and do not create operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-001-003",
+      "public_law": "1-3",
+      "title": "Public Law 1-3 | Closing Cabinet Doors Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The enactment is a current note-only law; the source report places it at 2 U.S.C. 658e.",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t2/s658e",
+      "exact_enacted_change": "Preserve the departments-closure and blanket-repeal language as a concise statutory note at 2 U.S.C. 658e.",
+      "provisions": [
+        {
+          "ref": "SECTION 4(a)-(i)",
+          "final_legal_status": "current",
+          "code_treatment": "statutory-note",
+          "target": "/us/usc/t2/s658e",
+          "conclusion": "The closure and repeal language is note-only history at the 658e anchor."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t2/s658e",
+        "detail": "usc02.xml has the 658e anchor, but no PL-001-003-specific note was recovered in the current branch XML."
+      },
+      "current_xml_comparison": "usc02.xml contains the 2 U.S.C. 658e anchor, but the current tree does not show a PL-001-003-specific note at that location.",
+      "source_evidence": [
+        "audit/review/review-01.json",
+        "codification/mass_migration/latest/reports/laws/PL-001-003.md",
+        "codification/laws/laws/PL-001-003/law.txt",
+        "usc/usc02.xml"
+      ],
+      "final_recommended_action": "Keep the enactment as a concise statutory note at 2 U.S.C. 658e and trim any dump-style material.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-001-004",
+      "public_law": "1-4",
+      "title": "Public Law 1-4 | Retracting of Resignations Act",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source corpus treats the measure as repealed, so the codification layer should stay history-only.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_change": "Keep only repeal history; do not insert operative text.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "final_legal_status": "repealed",
+          "code_treatment": "historical-note-only",
+          "target": null,
+          "conclusion": "History-only treatment is sufficient for the entire act."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No current Code insertion is authorized for this repealed law."
+      },
+      "current_xml_comparison": "No lawful current XML insertion is required; the source corpus authorizes history-only treatment.",
+      "source_evidence": [
+        "audit/review/review-01.json",
+        "codification/mass_migration/latest/reports/laws/PL-001-004.md",
+        "codification/laws/laws/PL-001-004/law.txt"
+      ],
+      "final_recommended_action": "Keep only repeal history and do not create operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-005",
+      "public_law": "2-5",
+      "title": "Public Law 2-5 | Judicial Efficiency Act (Keywords: Maximum, Minimum, Sentence, Sentencing)",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source corpus treats the measure as repealed, so no current Code operation is authorized.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_change": "Keep only repeal history; do not insert operative text.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "final_legal_status": "repealed",
+          "code_treatment": "historical-note-only",
+          "target": null,
+          "conclusion": "History-only treatment is sufficient for the entire act."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No current Code insertion is authorized for this repealed law."
+      },
+      "current_xml_comparison": "No lawful current XML insertion is required; the source corpus authorizes history-only treatment.",
+      "source_evidence": [
+        "audit/review/review-01.json",
+        "codification/mass_migration/latest/reports/laws/PL-002-005.md",
+        "codification/laws/laws/PL-002-005/law.txt"
+      ],
+      "final_recommended_action": "Keep only repeal history and do not create operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-006",
+      "public_law": "2-6",
+      "title": "Public Law 2-6 | Shelby-Kabob Act of 2021",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source corpus treats the measure as repealed, so no current Code operation is authorized.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_change": "Keep only repeal history; do not insert operative text.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "final_legal_status": "repealed",
+          "code_treatment": "historical-note-only",
+          "target": null,
+          "conclusion": "History-only treatment is sufficient for the entire act."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No current Code insertion is authorized for this repealed law."
+      },
+      "current_xml_comparison": "No lawful current XML insertion is required; the source corpus authorizes history-only treatment.",
+      "source_evidence": [
+        "audit/review/review-01.json",
+        "codification/mass_migration/latest/reports/laws/PL-002-006.md",
+        "codification/laws/laws/PL-002-006/law.txt"
+      ],
+      "final_recommended_action": "Keep only repeal history and do not create operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-007",
+      "public_law": "2-7",
+      "title": "Public Law 2-7 | Court of Appeals Temporary Suspension Act of 2021",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source corpus treats the measure as repealed, so no current Code operation is authorized.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_change": "Keep only repeal history; do not insert operative text.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "final_legal_status": "repealed",
+          "code_treatment": "historical-note-only",
+          "target": null,
+          "conclusion": "History-only treatment is sufficient for the entire act."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No current Code insertion is authorized for this repealed law."
+      },
+      "current_xml_comparison": "No lawful current XML insertion is required; the source corpus authorizes history-only treatment.",
+      "source_evidence": [
+        "audit/review/review-01.json",
+        "codification/mass_migration/latest/reports/laws/PL-002-007.md",
+        "codification/laws/laws/PL-002-007/law.txt"
+      ],
+      "final_recommended_action": "Keep only repeal history and do not create operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-008",
+      "public_law": "2-8",
+      "title": "Public Law 2-8 | National Security Act of 2021",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source corpus treats the measure as repealed, so no current Code operation is authorized.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_change": "Keep only repeal history; do not insert operative text.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "final_legal_status": "repealed",
+          "code_treatment": "historical-note-only",
+          "target": null,
+          "conclusion": "History-only treatment is sufficient for the entire act."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No current Code insertion is authorized for this repealed law."
+      },
+      "current_xml_comparison": "No lawful current XML insertion is required; the source corpus authorizes history-only treatment.",
+      "source_evidence": [
+        "audit/review/review-01.json",
+        "codification/mass_migration/latest/reports/laws/PL-002-008.md",
+        "codification/laws/laws/PL-002-008/law.txt"
+      ],
+      "final_recommended_action": "Keep only repeal history and do not create operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-010",
+      "public_law": "2-10",
+      "title": "Public Law 2-10 | Amendment to the District of Columbia City Charter",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source corpus treats the measure as repealed, so no current Code operation is authorized.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_change": "Keep only repeal history; do not insert operative text.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "final_legal_status": "repealed",
+          "code_treatment": "historical-note-only",
+          "target": null,
+          "conclusion": "History-only treatment is sufficient for the entire act."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No current Code insertion is authorized for this repealed law."
+      },
+      "current_xml_comparison": "No lawful current XML insertion is required; the source corpus authorizes history-only treatment.",
+      "source_evidence": [
+        "audit/review/review-01.json",
+        "codification/mass_migration/latest/reports/laws/PL-002-010.md",
+        "codification/laws/laws/PL-002-010/law.txt"
+      ],
+      "final_recommended_action": "Keep only repeal history and do not create operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-011",
+      "public_law": "2-11",
+      "title": "Public Law 2-11 | Criminal Statute of Limitations Act",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source corpus treats the measure as repealed, so no current Code operation is authorized.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_change": "Keep only repeal history; do not insert operative text.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "final_legal_status": "repealed",
+          "code_treatment": "historical-note-only",
+          "target": null,
+          "conclusion": "History-only treatment is sufficient for the entire act."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No current Code insertion is authorized for this repealed law."
+      },
+      "current_xml_comparison": "No lawful current XML insertion is required; the source corpus authorizes history-only treatment.",
+      "source_evidence": [
+        "audit/review/review-01.json",
+        "codification/mass_migration/latest/reports/laws/PL-002-011.md",
+        "codification/laws/laws/PL-002-011/law.txt"
+      ],
+      "final_recommended_action": "Keep only repeal history and do not create operative text.",
+      "confidence": "high"
+    }
+  ]
+}

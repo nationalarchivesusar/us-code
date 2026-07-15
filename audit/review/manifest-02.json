@@ -1,0 +1,209 @@
+{
+  "reviewer": "reviewer-02",
+  "group_index": 2,
+  "law_count": 10,
+  "output_path": "audit/review/review-02.json",
+  "laws": [
+    {
+      "law_id": "PL-002-012",
+      "public_law": "2-12",
+      "title": "Public Law 2-12 | Fee Prohibition Act",
+      "report_path": "audit/primary/batch-01-02.json",
+      "batch": 1,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC II(a)"
+      ],
+      "targets": [
+        "/us/usc/t28"
+      ]
+    },
+    {
+      "law_id": "PL-002-013",
+      "public_law": "2-13",
+      "title": "Public Law 2-13 | The Employees Termination Notification Act of 2021",
+      "report_path": "audit/primary/batch-01-02.json",
+      "batch": 1,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 4(a)-(b)"
+      ],
+      "targets": [
+        "/us/usc/t29"
+      ]
+    },
+    {
+      "law_id": "PL-002-014",
+      "public_law": "2-14",
+      "title": "Public Law 2-14 | National Federal Torts Act",
+      "report_path": "audit/primary/batch-01-02.json",
+      "batch": 1,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC I (Jurisdiction)",
+        "SEC II(a-o)",
+        "SEC II(p)",
+        "SEC II(q)",
+        "SEC II(r)"
+      ],
+      "targets": [
+        "/us/usc/t28"
+      ]
+    },
+    {
+      "law_id": "PL-003-015",
+      "public_law": "3-15",
+      "title": "Public Law 3-15 | Admission to the United Nations Act",
+      "report_path": "audit/primary/batch-01-02.json",
+      "batch": 1,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION II(a)"
+      ],
+      "targets": [
+        "/us/usc/t44"
+      ]
+    },
+    {
+      "law_id": "PL-003-016",
+      "public_law": "3-16",
+      "title": "Public Law 3-16 | The Capitol Police Establishment",
+      "report_path": "audit/primary/batch-01-02.json",
+      "batch": 1,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION II",
+        "SECTION III",
+        "SECTION IV",
+        "SECTION V"
+      ],
+      "targets": [
+        "/us/usc/t2"
+      ]
+    },
+    {
+      "law_id": "PL-003-017",
+      "public_law": "3-17",
+      "title": "Public Law 3-17 | The Diplomatic Protections Act",
+      "report_path": "audit/primary/batch-01-02.json",
+      "batch": 1,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION II(a)-(e)"
+      ],
+      "targets": [
+        "/us/usc/t22"
+      ]
+    },
+    {
+      "law_id": "PL-003-018",
+      "public_law": "3-18",
+      "title": "Public Law 3-18 | Amendment to S.12",
+      "report_path": "audit/primary/batch-01-02.json",
+      "batch": 1,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SECTION II(a)-(b)"
+      ],
+      "targets": [
+        "/us/usc/t2"
+      ]
+    },
+    {
+      "law_id": "PL-003-019",
+      "public_law": "3-19",
+      "title": "Public Law 3-19 | The NARA Act",
+      "report_path": "audit/primary/batch-01-02.json",
+      "batch": 1,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION II(a)"
+      ],
+      "targets": [
+        "/us/usc/t44"
+      ]
+    },
+    {
+      "law_id": "PL-003-020",
+      "public_law": "3-20",
+      "title": "Public Law 3-20 | National Immigration Employment Act of 2021",
+      "report_path": "audit/primary/batch-01-02.json",
+      "batch": 1,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "low",
+      "reasons": [
+        "confidence:low",
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "n/a"
+      ]
+    },
+    {
+      "law_id": "PL-003-021",
+      "public_law": "3-21",
+      "title": "Public Law 3-21 | Effective Judicial Function and General Duties Act",
+      "report_path": "audit/primary/batch-01-03.json",
+      "batch": 1,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 3",
+        "SEC 4"
+      ],
+      "targets": [
+        "/us/usc/t28"
+      ]
+    }
+  ]
+}

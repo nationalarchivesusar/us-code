@@ -1,0 +1,457 @@
+{
+  "batch": 14,
+  "auditor": "law-auditor-B",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-017-133",
+      "public_law": "17-133",
+      "title": "Public Law 17-133 | Judicial Overhaul Bill (JOB) AMENDED",
+      "status": "current",
+      "status_basis": "The enactment remains operative and its title 28 effects are already reflected in the current branch XML. Claude's chronology is source-grounded here, and the law is not independently repealed in the reviewed corpus.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-4",
+          "text_summary": "Short title, severability, effective date, and general applicability reference.",
+          "classes": ["short-title", "severability", "effective-date", "findings-or-sense"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28",
+          "exact_change": "Keep the opening clauses as concise note material only.",
+          "evidence": "Sections 1-4 do not supply an independent Code-text operation beyond the broad title 28 overhaul in section 5.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 5-10",
+          "text_summary": "Broad title 28 restructuring, including chapter repeals and section replacements across Parts I-VI.",
+          "classes": ["repeal", "substitution", "new-permanent-general"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t28",
+          "exact_change": "Apply the section-by-section title 28 repeal and replacement structure already reflected in the current branch XML.",
+          "evidence": "Section 5 through section 10 repeatedly state that named sections and chapters of title 28 are repealed or replaced.",
+          "notes": "The branch already carries the Pub. L. 17-133 amendment trail in title 28."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28",
+        "detail": "Current branch XML already contains the Pub. L. 17-133 amendment trail across title 28; origin/main does not reflect the same integrated state."
+      },
+      "recommended_actions": [
+        "Keep the existing title 28 amendment trail.",
+        "Do not create a duplicate note or new section for this law.",
+        "Leave the current branch integration in place."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-134",
+      "public_law": "17-134",
+      "title": "Public Law 17-134 | Amended The Uniformed Capitol Police Act of 2023",
+      "status": "current",
+      "status_basis": "The source is readable and permanent. Claude's conclusions and the local disposition file both treat the enactment as a statutory note at 2 U.S.C. 1438, and no later repeal was identified.",
+      "provisions": [
+        {
+          "ref": "SECTION I",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s1438",
+          "exact_change": "Keep the opening clauses as short note material.",
+          "evidence": "This Act may be cited as the Amended The Uniformed Capitol Police Act of 2023.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION II",
+          "text_summary": "Amends the Capitol Police Act text governing the Capitol Police Board.",
+          "classes": ["new-permanent-general", "substitution"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s1438",
+          "exact_change": "Record the amendment text as a statutory note at the title 2 anchor; do not create a new Code section.",
+          "evidence": "Upon enactment of this Act, Section III, Subsection B shall now read the following.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s1438",
+        "detail": "The current XML does not yet show a PL-17-134 statutory note at 2 U.S.C. 1438; the legal classification is note-only, not a new section."
+      },
+      "recommended_actions": [
+        "Add a statutory note at 2 U.S.C. 1438.",
+        "Do not create a new Code section.",
+        "Keep the amendment text concise and subject-matter anchored to title 2."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-135",
+      "public_law": "17-135",
+      "title": "Public Law 17-135 | Judicial Bias Protection Act (JBPA)",
+      "status": "current",
+      "status_basis": "Section 5 is a direct replacement of 28 U.S.C. 144, and the enactment remains operative. The current branch already contains the Pub. L. 17-135 history note, but the section text still needs the replacement applied.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-4",
+          "text_summary": "Short title, severability, effective date, and a definition of dereliction of duties.",
+          "classes": ["short-title", "severability", "effective-date", "findings-or-sense"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/s144",
+          "exact_change": "Keep the opening clauses as note material only.",
+          "evidence": "Section 4 defines dereliction of duties without assigning it to a separate Code section.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 5",
+          "text_summary": "Repeals and replaces 28 U.S.C. 144 with a narrower bias-recusal procedure.",
+          "classes": ["repeal", "substitution", "direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t28/s144",
+          "exact_change": "Replace 28 U.S.C. 144 with the new affidavit, review, and reassignment rules stated in section 5.",
+          "evidence": "Section 5 repeals and replaces 28 U.S.C. 144.",
+          "notes": "This is the operative amendment."
+        },
+        {
+          "ref": "SEC. 6-7",
+          "text_summary": "Hearing-notice timing rules and bench-inactivity impeachment liability.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/s144",
+          "exact_change": "Keep these rules as short note material only; they do not direct a separate Code placement.",
+          "evidence": "Sections 6 and 7 impose generally applicable policy without specifying a new section number.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s144",
+        "detail": "Current XML carries the Pub. L. 17-135 note at 28 U.S.C. 144, but the underlying section text is still the pre-amendment text from origin/main."
+      },
+      "recommended_actions": [
+        "Apply the section 5 replacement text to 28 U.S.C. 144.",
+        "Preserve the existing heading and history notes.",
+        "Remove the Trello link once the text replacement is integrated."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-136",
+      "public_law": "17-136",
+      "title": "Public Law 17-136 | The Parks Act (TPA)",
+      "status": "current",
+      "status_basis": "The law is a permanent, generally applicable enactment with no later repeal in the reviewed materials. Claude and the local source audit both place it as a statutory note at 2 U.S.C. 4577.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-3",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s4577",
+          "exact_change": "Keep the opening clauses as concise note material.",
+          "evidence": "This bill shall be referred to as The Parks Act or TPA.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 4-5",
+          "text_summary": "Secret Service authority over the President's Park area and secondary authority for other law-enforcement agencies.",
+          "classes": ["new-permanent-general", "local-district"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s4577",
+          "exact_change": "Record the Secret Service and park-closure rules as a title 2 statutory note.",
+          "evidence": "The Secret Service shall have primary authority over the entirety of the President's Park.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s4577",
+        "detail": "The current XML does not yet include a PL-17-136 statutory note at 2 U.S.C. 4577."
+      },
+      "recommended_actions": [
+        "Add a statutory note at 2 U.S.C. 4577.",
+        "Do not create a new Code section.",
+        "Keep the note concise and subject-matter anchored to title 2."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-137",
+      "public_law": "17-137",
+      "title": "Public Law 17-137 | Federal Background Check Act",
+      "status": "repealed",
+      "status_basis": "The local source report classifies this law as repealed, and the enactment text itself is treated as nonoperative history rather than current law.",
+      "provisions": [
+        {
+          "ref": "SECTION I",
+          "text_summary": "Short title, severability, effective date, and definitions.",
+          "classes": ["short-title", "severability", "effective-date", "findings-or-sense"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep as repeal-history only; do not derive an operative Code placement.",
+          "evidence": "This Act may be cited as the Federal Background Check Act.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION II",
+          "text_summary": "Definitions of background check and federal agencies.",
+          "classes": ["new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Retain only as historical material.",
+          "evidence": "Background Check shall be defined as the collection and verification of an individual's information or records.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION III-IV",
+          "text_summary": "FBI-approved background checks and federal employment requirements.",
+          "classes": ["new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Do not carry forward as current Code text.",
+          "evidence": "All Federal Agencies are to comply with each employee passing a background check approved and signed by the FBI.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION V",
+          "text_summary": "Immediate effect clause.",
+          "classes": ["effective-date"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep only as a short historical clause.",
+          "evidence": "This bill will take effect immediately after passage.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "No current Code text should be carried forward for this repealed enactment."
+      },
+      "recommended_actions": [
+        "Retain only historical repeal information.",
+        "Do not add a Code section or statutory note.",
+        "Do not infer operative text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-138",
+      "public_law": "17-138",
+      "title": "Public Law 17-138 | Hatch Act Amendment Act (HA)",
+      "status": "current",
+      "status_basis": "The law is operative and the current branch already reflects the revised 5 U.S.C. 7323 text. Claude's decision and the branch XML agree on direct amendment treatment.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-4",
+          "text_summary": "Short title, severability, effective date, and a definition of employee.",
+          "classes": ["short-title", "severability", "effective-date", "findings-or-sense"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5/s7323",
+          "exact_change": "Keep the opening clauses as note material only.",
+          "evidence": "Section 4 defines employee for purposes of this Act, but it does not direct a separate Code placement.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 5",
+          "text_summary": "Repeals and replaces 5 U.S.C. 7323 with new political-activity restrictions and exceptions.",
+          "classes": ["repeal", "substitution", "direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t5/s7323",
+          "exact_change": "Replace 5 U.S.C. 7323 with the new subsection structure stated in section 5.",
+          "evidence": "Section 5(1)-(2) repeals and replaces 5 U.S.C. 7323.",
+          "notes": "The branch already contains the revised 5 U.S.C. 7323 text."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s7323",
+        "detail": "Current XML already contains the revised 5 U.S.C. 7323 text and the Pub. L. 17-138 history note; origin/main does not."
+      },
+      "recommended_actions": [
+        "Retain the current 5 U.S.C. 7323 text and history note.",
+        "No further Code change is required for this law.",
+        "Remove any remaining Trello linkage outside XML if present."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-018-139",
+      "public_law": "18-139",
+      "title": "Public Law 18-139 | The Bye Bye Background Checks Act",
+      "status": "current",
+      "status_basis": "The enactment is a current repealer: it repeals Public Law 17-137 in its entirety and is treated as a standalone statutory note at 2 U.S.C. 6132.",
+      "provisions": [
+        {
+          "ref": "SECTION 1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s6132",
+          "exact_change": "Keep the short title as concise note material.",
+          "evidence": "This Act may be cited as the Bye Bye Background Checks Act.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 2",
+          "text_summary": "Repeals Public Law 17-137 and halts the background-check regime created by that law.",
+          "classes": ["repeal"],
+          "treatment": "amendment-note",
+          "target": "PL-017-137",
+          "exact_change": "Record the repeal of Public Law 17-137 in the history chain.",
+          "evidence": "Public Law 17-137 shall be repealed in its entirety.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 3",
+          "text_summary": "Severability and anti-supersession clause.",
+          "classes": ["severability"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s6132",
+          "exact_change": "Keep the savings clause as short note material.",
+          "evidence": "This Act shall be severable.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 6",
+          "text_summary": "Immediate effective date.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": "/us/usc/t2/s6132",
+          "exact_change": "Keep the enactment clause as a short note.",
+          "evidence": "This bill will take effect immediately after passage through both houses of Congress and a signature from the President.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s6132",
+        "detail": "The current XML does not yet show a PL-18-139 statutory note at 2 U.S.C. 6132."
+      },
+      "recommended_actions": [
+        "Add a statutory note at 2 U.S.C. 6132.",
+        "Explicitly record the repeal of PL 17-137.",
+        "Do not add substantive Code text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-018-140",
+      "public_law": "18-140",
+      "title": "Public Law 18-140 | Federal Employment Act of 2023",
+      "status": "repealed",
+      "status_basis": "The classification file marks this law as repealed_recorded, but the enactment source itself was not recoverable in readable form.",
+      "provisions": [
+        {
+          "ref": "(entire act)",
+          "text_summary": "Source unavailable; no readable operative text could be recovered.",
+          "classes": ["non-code", "source-unavailable"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep only a source-limited historical record.",
+          "evidence": "No readable authenticated enactment text could be recovered from the card, its attachments, or its description.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "No readable source was recovered, so no XML placement is safe."
+      },
+      "recommended_actions": [
+        "Re-acquire the authentic source before any codification work.",
+        "Do not invent operative text.",
+        "Keep the law as a source-unavailable historical record only."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-018-141",
+      "public_law": "18-141",
+      "title": "Public Law 18-141 | Foreign Service Act of 2023",
+      "status": "current",
+      "status_basis": "The classification file marks this law as active_or_not_wholly_repealed, but the enactment source itself was not recoverable in readable form.",
+      "provisions": [
+        {
+          "ref": "(entire act)",
+          "text_summary": "Source unavailable; no readable operative text could be recovered.",
+          "classes": ["non-code", "source-unavailable"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep only a source-limited historical record.",
+          "evidence": "No readable authenticated enactment text could be recovered from the card, its attachments, or its description.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "No readable source was recovered, so no XML placement is safe."
+      },
+      "recommended_actions": [
+        "Re-acquire the authentic source before any codification work.",
+        "Do not invent operative text.",
+        "Keep the law as a source-unavailable historical record only."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-018-142",
+      "public_law": "18-142",
+      "title": "Public Law 18-142 | Business Licensing Act",
+      "status": "current",
+      "status_basis": "The classification file marks this law as active_or_not_wholly_repealed, but the enactment source itself was not recoverable in readable form.",
+      "provisions": [
+        {
+          "ref": "(entire act)",
+          "text_summary": "Source unavailable; no readable operative text could be recovered.",
+          "classes": ["non-code", "source-unavailable"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep only a source-limited historical record.",
+          "evidence": "No readable authenticated enactment text could be recovered from the card, its attachments, or its description.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "No readable source was recovered, so no XML placement is safe."
+      },
+      "recommended_actions": [
+        "Re-acquire the authentic source before any codification work.",
+        "Do not invent operative text.",
+        "Keep the law as a source-unavailable historical record only."
+      ],
+      "confidence": "medium"
+    }
+  ]
+}

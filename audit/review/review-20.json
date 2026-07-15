@@ -1,0 +1,543 @@
+{
+  "reviewer": "law-auditor-K",
+  "group_index": 20,
+  "law_count": 10,
+  "source_manifest": "audit/review/manifest-20.json",
+  "laws": [
+    {
+      "law_id": "PL-028-197",
+      "public_law": "28-197",
+      "title": "Public Law 28-197 | Amending Public Law 27-196",
+      "final_legal_status": "current",
+      "status_basis": "The source is intact and operative. It amends Public Law 27-196 Section VI(b) and VI(b)(i) and does not repeal itself or create standalone Code text.",
+      "chronology": "No later enactment in the reviewed materials displaces this act; it remains a current amendment to a prior public law.",
+      "repeal_transfer_redesignation": "Direct amendment of Public Law 27-196 only; no transfer or redesignation chain was resolved.",
+      "required_code_treatment": "amendment-note-only",
+      "current_implementation": {
+        "assessment": "not-found-in-live-xml",
+        "location": null,
+        "detail": "No dedicated XML note matching this act was found in the current tree or in origin/main. The branch changes do not show a distinct codification entry for the Public Law 27-196 amendment."
+      },
+      "provision_disposition": [
+        {
+          "provision": "SECTION II",
+          "operative_character": "amends Public Law 27-196 Section VI(b) and VI(b)(i)",
+          "code_treatment": "amendment-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-197\\law.txt"
+        }
+      ],
+      "source_evidence": [
+        "D:\\us-code\\codification\\laws\\laws\\PL-028-197\\law.txt",
+        "D:\\us-code\\audit\\primary\\batch-07-02.json"
+      ],
+      "recommended_actions": [
+        "Record the Section VI(b) and VI(b)(i) amendment as a concise statutory note tied to Public Law 27-196.",
+        "Do not create a new U.S. Code section.",
+        "Keep the act marked current."
+      ],
+      "confidence": "medium",
+      "chronology_conclusion": "No later enactment in the reviewed materials displaces this act; it remains a current amendment to a prior public law.",
+      "approved_code_treatment": "amendment-note-only",
+      "final_recommended_action": "Record the Section VI(b) and VI(b)(i) amendment as a concise statutory note tied to Public Law 27-196. | Do not create a new U.S. Code section. | Keep the act marked current."
+    },
+    {
+      "law_id": "PL-028-198",
+      "public_law": "28-198",
+      "title": "Public Law 28-198 | Intelligence Coordination and Jurisdiction Act",
+      "final_legal_status": "current",
+      "status_basis": "The source is intact and operative. It creates coordination rules for ODNI, DOJ, and other departments, plus MOU authority, and nothing in the reviewed materials repeals it.",
+      "chronology": "No later enactment in the reviewed materials displaces this stand-alone national-security coordination statute.",
+      "repeal_transfer_redesignation": "No repeal or transfer chain was resolved; the statute functions as a stand-alone operational framework.",
+      "required_code_treatment": "statutory-note-only",
+      "current_implementation": {
+        "assessment": "not-found-in-live-xml",
+        "location": null,
+        "detail": "No dedicated XML note matching this act was found in the current tree or in origin/main. The branch changes do not include a distinct implementation entry."
+      },
+      "provision_disposition": [
+        {
+          "provision": "SEC 4",
+          "operative_character": "ODNI authority and jurisdiction rules",
+          "code_treatment": "statutory-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-198\\law.txt"
+        },
+        {
+          "provision": "SEC 5",
+          "operative_character": "DOJ authority and coordination rules",
+          "code_treatment": "statutory-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-198\\law.txt"
+        },
+        {
+          "provision": "SEC 6",
+          "operative_character": "interagency coordination",
+          "code_treatment": "statutory-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-198\\law.txt"
+        },
+        {
+          "provision": "SEC 7",
+          "operative_character": "memoranda of understanding",
+          "code_treatment": "statutory-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-198\\law.txt"
+        }
+      ],
+      "source_evidence": [
+        "D:\\us-code\\codification\\laws\\laws\\PL-028-198\\law.txt",
+        "D:\\us-code\\audit\\primary\\batch-07-02.json"
+      ],
+      "recommended_actions": [
+        "Add a concise statutory note that captures the coordination framework without creating a new Code section.",
+        "Keep the act current.",
+        "Do not paste the full text into permanent Code."
+      ],
+      "confidence": "medium",
+      "chronology_conclusion": "No later enactment in the reviewed materials displaces this stand-alone national-security coordination statute.",
+      "approved_code_treatment": "statutory-note-only",
+      "final_recommended_action": "Add a concise statutory note that captures the coordination framework without creating a new Code section. | Keep the act current. | Do not paste the full text into permanent Code."
+    },
+    {
+      "law_id": "PL-028-199",
+      "public_law": "28-199",
+      "title": "Public Law 28-199 | Department of Defense Grounds Protection Act",
+      "final_legal_status": "current",
+      "status_basis": "The source is intact and operative. It sets access and warrant rules for DoD grounds and includes ancillary effective-date and severability language.",
+      "chronology": "No later enactment in the reviewed materials displaces this statute.",
+      "repeal_transfer_redesignation": "No repeal or transfer chain was resolved; the act is a stand-alone operational statute.",
+      "required_code_treatment": "statutory-note-only",
+      "current_implementation": {
+        "assessment": "not-found-in-live-xml",
+        "location": null,
+        "detail": "No dedicated XML note matching this act was found in the current tree or in origin/main. The current branch does not show a specific codification entry."
+      },
+      "provision_disposition": [
+        {
+          "provision": "SEC 4",
+          "operative_character": "grounds-access and warrant rules",
+          "code_treatment": "statutory-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-199\\law.txt"
+        },
+        {
+          "provision": "SEC 6",
+          "operative_character": "severability and effective-date language",
+          "code_treatment": "ancillary-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-199\\law.txt"
+        }
+      ],
+      "source_evidence": [
+        "D:\\us-code\\codification\\laws\\laws\\PL-028-199\\law.txt",
+        "D:\\us-code\\audit\\primary\\batch-07-02.json"
+      ],
+      "recommended_actions": [
+        "Add a concise statutory note under the appropriate DoD subject-matter title.",
+        "Do not create a new permanent Code section.",
+        "Keep the act current."
+      ],
+      "confidence": "medium",
+      "chronology_conclusion": "No later enactment in the reviewed materials displaces this statute.",
+      "approved_code_treatment": "statutory-note-only",
+      "final_recommended_action": "Add a concise statutory note under the appropriate DoD subject-matter title. | Do not create a new permanent Code section. | Keep the act current."
+    },
+    {
+      "law_id": "PL-028-200",
+      "public_law": "28-200",
+      "title": "Public Law 28-200 | National Archives Organization Act",
+      "final_legal_status": "current",
+      "status_basis": "The source is intact and operative. It establishes internal National Archives organization rules and related administrative directions.",
+      "chronology": "No later enactment in the reviewed materials displaces this act.",
+      "repeal_transfer_redesignation": "No repeal or transfer chain was resolved; the act is a stand-alone administrative statute.",
+      "required_code_treatment": "statutory-note-only",
+      "current_implementation": {
+        "assessment": "not-found-in-live-xml",
+        "location": null,
+        "detail": "No dedicated XML note matching this act was found in the current tree or in origin/main. The branch changes do not show a separate implementation."
+      },
+      "provision_disposition": [
+        {
+          "provision": "SEC 4",
+          "operative_character": "National Archives organization system",
+          "code_treatment": "statutory-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-200\\law.txt"
+        },
+        {
+          "provision": "SEC 5",
+          "operative_character": "Supreme Court opinion handling",
+          "code_treatment": "statutory-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-200\\law.txt"
+        },
+        {
+          "provision": "SEC 6",
+          "operative_character": "executive-order handling",
+          "code_treatment": "statutory-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-200\\law.txt"
+        },
+        {
+          "provision": "SEC 7",
+          "operative_character": "assistance and implementation direction",
+          "code_treatment": "ancillary-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-200\\law.txt"
+        }
+      ],
+      "source_evidence": [
+        "D:\\us-code\\codification\\laws\\laws\\PL-028-200\\law.txt",
+        "D:\\us-code\\audit\\primary\\batch-07-02.json"
+      ],
+      "recommended_actions": [
+        "Record the act as a concise administrative statutory note.",
+        "Do not create a new Code section.",
+        "Keep the act current."
+      ],
+      "confidence": "medium",
+      "chronology_conclusion": "No later enactment in the reviewed materials displaces this act.",
+      "approved_code_treatment": "statutory-note-only",
+      "final_recommended_action": "Record the act as a concise administrative statutory note. | Do not create a new Code section. | Keep the act current."
+    },
+    {
+      "law_id": "PL-028-201",
+      "public_law": "28-201",
+      "title": "Public Law 28-201 | RESET Act",
+      "final_legal_status": "current",
+      "status_basis": "The source is intact and operative. Its principal effect is repeal history plus a savings clause, including repeal of Public Law 25-180 and related laws listed in Section 3(b).",
+      "chronology": "No later enactment in the reviewed materials displaces this repealing statute.",
+      "repeal_transfer_redesignation": "Pure repeal and savings structure; no transfer or redesignation chain was resolved.",
+      "required_code_treatment": "historical-note-only",
+      "current_implementation": {
+        "assessment": "not-found-in-live-xml",
+        "location": null,
+        "detail": "No dedicated XML note matching this act was found in the current tree or in origin/main. The branch changes do not show a distinct repeal-history entry."
+      },
+      "provision_disposition": [
+        {
+          "provision": "SEC 3(a)",
+          "operative_character": "savings clause",
+          "code_treatment": "historical-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-201\\law.txt"
+        },
+        {
+          "provision": "SEC 3(b)(i)-(xxix)",
+          "operative_character": "repeal list including Public Law 25-180",
+          "code_treatment": "historical-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-201\\law.txt"
+        }
+      ],
+      "source_evidence": [
+        "D:\\us-code\\codification\\laws\\laws\\PL-028-201\\law.txt",
+        "D:\\us-code\\audit\\primary\\batch-07-03.json"
+      ],
+      "recommended_actions": [
+        "Keep this as a repeal-history note only.",
+        "Do not create new permanent Code text.",
+        "Carry the savings clause and repeal list as concise historical metadata."
+      ],
+      "confidence": "high",
+      "chronology_conclusion": "No later enactment in the reviewed materials displaces this repealing statute.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Keep this as a repeal-history note only. | Do not create new permanent Code text. | Carry the savings clause and repeal list as concise historical metadata."
+    },
+    {
+      "law_id": "PL-028-202",
+      "public_law": "28-202",
+      "title": "Public Law 28-202 | Comprehensive Gun Reform Act",
+      "final_legal_status": "current",
+      "status_basis": "The source is intact and operative. It includes direct repeal instructions for earlier public laws plus permanent firearms, self-defense, ERPO, and open-carry rules.",
+      "chronology": "No later enactment in the reviewed materials displaces this act.",
+      "repeal_transfer_redesignation": "The act bundles direct repeals with permanent substantive rules; no separate transfer or redesignation chain was resolved.",
+      "required_code_treatment": "statutory-note-only",
+      "current_implementation": {
+        "assessment": "not-found-in-live-xml",
+        "location": null,
+        "detail": "No dedicated XML note matching this act was found in the current tree or in origin/main. The branch changes do not show a distinct implementation."
+      },
+      "provision_disposition": [
+        {
+          "provision": "SEC4(a)(i)-(iv)",
+          "operative_character": "repeals Public Laws 4-31, 7-41, 23-165, and 24-174",
+          "code_treatment": "historical-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-202\\law.txt"
+        },
+        {
+          "provision": "SEC5",
+          "operative_character": "permanent firearms-rule provisions",
+          "code_treatment": "statutory-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-202\\law.txt"
+        },
+        {
+          "provision": "SEC6",
+          "operative_character": "self-defense provisions",
+          "code_treatment": "statutory-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-202\\law.txt"
+        },
+        {
+          "provision": "SEC7",
+          "operative_character": "ERPO-related provisions",
+          "code_treatment": "statutory-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-202\\law.txt"
+        },
+        {
+          "provision": "SEC8",
+          "operative_character": "open-carry and implementation rules",
+          "code_treatment": "statutory-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-202\\law.txt"
+        }
+      ],
+      "source_evidence": [
+        "D:\\us-code\\codification\\laws\\laws\\PL-028-202\\law.txt",
+        "D:\\us-code\\audit\\primary\\batch-07-03.json"
+      ],
+      "recommended_actions": [
+        "Carry the repeal list as historical metadata.",
+        "Add a concise statutory note for the permanent provisions rather than a new Code section.",
+        "Keep the act current."
+      ],
+      "confidence": "high",
+      "chronology_conclusion": "No later enactment in the reviewed materials displaces this act.",
+      "approved_code_treatment": "statutory-note-only",
+      "final_recommended_action": "Carry the repeal list as historical metadata. | Add a concise statutory note for the permanent provisions rather than a new Code section. | Keep the act current."
+    },
+    {
+      "law_id": "PL-028-203",
+      "public_law": "28-203",
+      "title": "Public Law 28-203 | Foundation for Accountability and Impeachment Reform Act",
+      "final_legal_status": "current",
+      "status_basis": "The source is intact and operative. It contains a direct repeal of Public Law 17-128 and permanent impeachment-process rules.",
+      "chronology": "No later enactment in the reviewed materials displaces this statute.",
+      "repeal_transfer_redesignation": "The act bundles a direct repeal with a permanent process framework; no separate transfer or redesignation chain was resolved.",
+      "required_code_treatment": "statutory-note-only",
+      "current_implementation": {
+        "assessment": "not-found-in-live-xml",
+        "location": null,
+        "detail": "No dedicated XML note matching this act was found in the current tree or in origin/main. The branch changes do not show a specific implementation entry."
+      },
+      "provision_disposition": [
+        {
+          "provision": "SEC 4",
+          "operative_character": "repeals Public Law 17-128",
+          "code_treatment": "historical-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-203\\law.txt"
+        },
+        {
+          "provision": "SEC 5",
+          "operative_character": "impeachment-process rules",
+          "code_treatment": "statutory-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-203\\law.txt"
+        },
+        {
+          "provision": "SEC 6",
+          "operative_character": "additional procedural rules",
+          "code_treatment": "statutory-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-203\\law.txt"
+        },
+        {
+          "provision": "SEC 7",
+          "operative_character": "process and implementation provisions",
+          "code_treatment": "statutory-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-203\\law.txt"
+        },
+        {
+          "provision": "SEC 8",
+          "operative_character": "further process and transition rules",
+          "code_treatment": "statutory-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-203\\law.txt"
+        }
+      ],
+      "source_evidence": [
+        "D:\\us-code\\codification\\laws\\laws\\PL-028-203\\law.txt",
+        "D:\\us-code\\audit\\primary\\batch-07-03.json"
+      ],
+      "recommended_actions": [
+        "Record the repeal of Public Law 17-128 as historical metadata.",
+        "Add a concise statutory note for the impeachment-process framework.",
+        "Keep the act current."
+      ],
+      "confidence": "high",
+      "chronology_conclusion": "No later enactment in the reviewed materials displaces this statute.",
+      "approved_code_treatment": "statutory-note-only",
+      "final_recommended_action": "Record the repeal of Public Law 17-128 as historical metadata. | Add a concise statutory note for the impeachment-process framework. | Keep the act current."
+    },
+    {
+      "law_id": "PL-028-204",
+      "public_law": "28-204",
+      "title": "Public Law 28-204 | Intelligence Community Employment Act",
+      "final_legal_status": "current",
+      "status_basis": "The source is intact and operative. It amends Public Law 26-191 by adding Section 15, which is a direct amendment to prior public-law text rather than a U.S. Code amendment.",
+      "chronology": "No later enactment in the reviewed materials displaces this amendment act.",
+      "repeal_transfer_redesignation": "Direct amendment to Public Law 26-191 only; no transfer or redesignation chain was resolved.",
+      "required_code_treatment": "amendment-note-only",
+      "current_implementation": {
+        "assessment": "not-found-in-live-xml",
+        "location": null,
+        "detail": "No dedicated XML note matching this act was found in the current tree or in origin/main. The branch changes do not show an implementation entry for the amended Public Law 26-191 text."
+      },
+      "provision_disposition": [
+        {
+          "provision": "SEC 4",
+          "operative_character": "adds Section 15 to Public Law 26-191",
+          "code_treatment": "amendment-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-204\\law.txt"
+        }
+      ],
+      "source_evidence": [
+        "D:\\us-code\\codification\\laws\\laws\\PL-028-204\\law.txt",
+        "D:\\us-code\\audit\\primary\\batch-07-03.json"
+      ],
+      "recommended_actions": [
+        "Record the Section 15 addition as an amendment note to Public Law 26-191.",
+        "Do not create a new U.S. Code section.",
+        "Keep the act current."
+      ],
+      "confidence": "high",
+      "chronology_conclusion": "No later enactment in the reviewed materials displaces this amendment act.",
+      "approved_code_treatment": "amendment-note-only",
+      "final_recommended_action": "Record the Section 15 addition as an amendment note to Public Law 26-191. | Do not create a new U.S. Code section. | Keep the act current."
+    },
+    {
+      "law_id": "PL-028-205",
+      "public_law": "28-205",
+      "title": "Public Law 28-205 | Inspector General Reform Act of 2024",
+      "final_legal_status": "fully-repealed",
+      "status_basis": "The source is recoverable, but a later enactment, Public Law 35-254, expressly repeals Public Law 28-205 in full. There is no current operative text left to codify.",
+      "chronology": "The act was later repealed by Public Law 35-254; the repealer is the controlling current-law event.",
+      "repeal_transfer_redesignation": "Complete repeal by later law; no surviving transfer or redesignation chain requires Code text.",
+      "required_code_treatment": "historical-note-only",
+      "current_implementation": {
+        "assessment": "not-found-in-live-xml",
+        "location": null,
+        "detail": "No dedicated XML note matching this act was found in the current tree or in origin/main. The controlling issue is the later repeal by Public Law 35-254."
+      },
+      "provision_disposition": [
+        {
+          "provision": "SEC 3(a)",
+          "operative_character": "savings-clause language",
+          "code_treatment": "historical-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-205\\source\\rendered.html"
+        },
+        {
+          "provision": "SEC 4",
+          "operative_character": "substantive inspector-general reform rules",
+          "code_treatment": "historical-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-205\\source\\rendered.html"
+        },
+        {
+          "provision": "SEC 5",
+          "operative_character": "additional operative rules and transitions",
+          "code_treatment": "historical-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "D:\\us-code\\codification\\laws\\laws\\PL-028-205\\source\\rendered.html"
+        }
+      ],
+      "source_evidence": [
+        "D:\\us-code\\codification\\laws\\laws\\PL-028-205\\metadata.json",
+        "D:\\us-code\\codification\\laws\\laws\\PL-028-205\\source\\rendered.html",
+        "D:\\us-code\\codification\\laws\\laws\\PL-035-254\\law.txt"
+      ],
+      "recommended_actions": [
+        "Record Public Law 28-205 as fully repealed by Public Law 35-254.",
+        "Keep only a historical note if the repository wants a record of the repealed enactment.",
+        "Do not create any current Code text."
+      ],
+      "confidence": "high",
+      "chronology_conclusion": "The act was later repealed by Public Law 35-254; the repealer is the controlling current-law event.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Record Public Law 28-205 as fully repealed by Public Law 35-254. | Keep only a historical note if the repository wants a record of the repealed enactment. | Do not create any current Code text."
+    },
+    {
+      "law_id": "PL-029-207",
+      "public_law": "29-207",
+      "title": "Public Law 29-207 | Justice Reform Act of 2024",
+      "final_legal_status": "current",
+      "status_basis": "The source is intact and operative. It amends multiple U.S. Code sections and those changes are already reflected in the live XML tree.",
+      "chronology": "No later enactment in the reviewed materials displaces this act; its Code amendments are already integrated.",
+      "repeal_transfer_redesignation": "Direct amendments only; no separate transfer or redesignation chain was resolved.",
+      "required_code_treatment": "already-incorporated",
+      "current_implementation": {
+        "assessment": "already-incorporated",
+        "location": [
+          "D:\\us-code\\usc\\usc18.xml",
+          "D:\\us-code\\usc\\usc28.xml",
+          "D:\\us-code\\usc\\usc29.xml",
+          "D:\\us-code\\usc\\usc31.xml",
+          "D:\\us-code\\usc\\usc41.xml"
+        ],
+        "detail": "The live XML already contains the Public Law 29-207 amendment effects and supporting amendment notes in the affected titles and sections, including the criminal-limitations, False Claims Act, labor, procurement, and sentencing changes."
+      },
+      "provision_disposition": [
+        {
+          "provision": "SEC3(a)",
+          "operative_character": "restores the section structure after prior repeal",
+          "code_treatment": "already-incorporated",
+          "implementation": "present in live XML",
+          "source_evidence": "D:\\us-code\\usc\\usc18.xml"
+        },
+        {
+          "provision": "SEC5(a)-(c)",
+          "operative_character": "amends 18 U.S.C. 3281, 3282, and 3283",
+          "code_treatment": "already-incorporated",
+          "implementation": "present in live XML",
+          "source_evidence": "D:\\us-code\\usc\\usc18.xml"
+        },
+        {
+          "provision": "SEC6(a)-(c)",
+          "operative_character": "amends 28 U.S.C. 1658 and 29 U.S.C. 255",
+          "code_treatment": "already-incorporated",
+          "implementation": "present in live XML",
+          "source_evidence": "D:\\us-code\\usc\\usc28.xml; D:\\us-code\\usc\\usc29.xml"
+        },
+        {
+          "provision": "SEC7(a)-(e)",
+          "operative_character": "amends 31 U.S.C. 3731(b) and 41 U.S.C. 7103(a)(4)",
+          "code_treatment": "already-incorporated",
+          "implementation": "present in live XML",
+          "source_evidence": "D:\\us-code\\usc\\usc31.xml; D:\\us-code\\usc\\usc41.xml"
+        },
+        {
+          "provision": "SEC8(a)-(f)",
+          "operative_character": "sentencing and related conforming changes",
+          "code_treatment": "already-incorporated",
+          "implementation": "present in live XML",
+          "source_evidence": "D:\\us-code\\usc\\usc18.xml"
+        }
+      ],
+      "source_evidence": [
+        "D:\\us-code\\codification\\laws\\laws\\PL-029-207\\law.txt",
+        "D:\\us-code\\usc\\usc18.xml",
+        "D:\\us-code\\usc\\usc28.xml",
+        "D:\\us-code\\usc\\usc29.xml",
+        "D:\\us-code\\usc\\usc31.xml",
+        "D:\\us-code\\usc\\usc41.xml"
+      ],
+      "recommended_actions": [
+        "Leave the existing XML amendments in place.",
+        "Do not add a second duplicate codification entry.",
+        "Keep the act current."
+      ],
+      "confidence": "high",
+      "chronology_conclusion": "No later enactment in the reviewed materials displaces this act; its Code amendments are already integrated.",
+      "approved_code_treatment": "already-incorporated",
+      "final_recommended_action": "Leave the existing XML amendments in place. | Do not add a second duplicate codification entry. | Keep the act current."
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "reviewer": "reviewer-12",
+  "group_index": 12,
+  "law_count": 10,
+  "output_path": "audit/review/review-12.json",
+  "laws": [
+    {
+      "law_id": "PL-016-114",
+      "public_law": "16-114",
+      "title": "Public Law 16-114 | Amended Ambassadorial Organization and Reporting Act",
+      "report_path": "audit/primary/batch-04-03.json",
+      "batch": 4,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC II(a-c)"
+      ],
+      "targets": [
+        "/us/usc/t22",
+        "PL 15-102 SEC III(e)"
+      ]
+    },
+    {
+      "law_id": "PL-016-115",
+      "public_law": "16-115",
+      "title": "Public Law 16-115 | National Security Threat Mandatory Notification to Congressional Leadership Act",
+      "report_path": "audit/primary/batch-04-03.json",
+      "batch": 4,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC II(a-b)",
+        "SEC III(a-c)",
+        "SEC IV(a)"
+      ],
+      "targets": [
+        "/us/usc/t18/s1512",
+        "/us/usc/t50"
+      ]
+    },
+    {
+      "law_id": "PL-016-116",
+      "public_law": "16-116",
+      "title": "Public Law 16-116 | Combatant Command Re-establishment Act",
+      "report_path": "audit/primary/batch-04-03.json",
+      "batch": 4,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 1-2",
+        "SEC 3(a)",
+        "SEC 5(a-b)",
+        "SEC 6(a-e)"
+      ],
+      "targets": [
+        "/us/usc/t10",
+        "OCJCS Reform Act of 2022 / PL 7-48"
+      ]
+    },
+    {
+      "law_id": "PL-016-117",
+      "public_law": "16-117",
+      "title": "Public Law 16-117 | The Clean Up Act",
+      "report_path": "audit/primary/batch-04-03.json",
+      "batch": 4,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC 3(a)",
+        "SEC 3(b)"
+      ],
+      "targets": [
+        "/us/usc/t2",
+        "Senate Joint Resolution 2",
+        "Senate Joint Resolution 3"
+      ]
+    },
+    {
+      "law_id": "PL-016-118",
+      "public_law": "16-118",
+      "title": "Public Law 16-118 | The Uniformed Capitol Police Act of 2023",
+      "report_path": "audit/primary/batch-04-03.json",
+      "batch": 4,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 2(a)",
+        "SEC 3(a-c)"
+      ],
+      "targets": [
+        "/us/usc/t2",
+        "H.R. 8013 Section III"
+      ]
+    },
+    {
+      "law_id": "PL-016-119",
+      "public_law": "16-119",
+      "title": "Public Law 16-119 | The Criminal Organization Act of 2023",
+      "report_path": "audit/primary/batch-04-03.json",
+      "batch": 4,
+      "source_status": "unresolved",
+      "validation_status": "missing source evidence",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "/us/usc/t18"
+      ]
+    },
+    {
+      "law_id": "PL-016-120",
+      "public_law": "16-120",
+      "title": "Public Law 16-120 | The Hail Columbia Act",
+      "report_path": "audit/primary/batch-04-03.json",
+      "batch": 4,
+      "source_status": "unresolved",
+      "validation_status": "missing source evidence",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "/us/usc/t36"
+      ]
+    },
+    {
+      "law_id": "PL-016-121",
+      "public_law": "16-121",
+      "title": "Public Law 16-121 | The Bill Transparency Understanding Act",
+      "report_path": "audit/primary/batch-05-01.json",
+      "batch": 5,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-016-122",
+      "public_law": "16-122",
+      "title": "Public Law 16-122 | The Congressional Competency Act of 2023",
+      "report_path": "audit/primary/batch-05-01.json",
+      "batch": 5,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-017-124",
+      "public_law": "17-124",
+      "title": "Public Law 17-124 | Law Enforcement Accountability Act (LEAA)",
+      "report_path": "audit/primary/batch-05-01.json",
+      "batch": 5,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC4",
+        "SEC5 (Canines)",
+        "SEC5 (Use of Force)",
+        "SEC7"
+      ],
+      "targets": []
+    }
+  ]
+}

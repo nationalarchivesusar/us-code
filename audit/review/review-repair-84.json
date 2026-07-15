@@ -1,0 +1,199 @@
+{
+  "reviewer": "law-auditor-84",
+  "group_index": 84,
+  "law_count": 4,
+  "source_manifest": "audit/manifests/review-repair-84.json",
+  "output_path": "audit/review/review-repair-84.json",
+  "completion_summary": "Resolved all four assigned laws as source-unavailable historical records: the authoritative codification sources provide only Drive denial pages or unrecoverable metadata, so no provision-level Code amendment can be authenticated.",
+  "changed_law_ids": [
+    "PL-018-143",
+    "PL-019-146",
+    "PL-024-175",
+    "PL-024-176"
+  ],
+  "reviewed_against": [
+    "audit/manifests/review-repair-84.json",
+    "codification/mass_migration/latest/reports/laws/PL-018-143.md",
+    "codification/mass_migration/latest/reports/laws/PL-019-146.md",
+    "codification/mass_migration/latest/reports/laws/PL-024-175.md",
+    "codification/mass_migration/latest/reports/laws/PL-024-176.md",
+    "codification/laws/laws/PL-018-143/law.txt",
+    "codification/laws/laws/PL-019-146/law.txt",
+    "codification/laws/laws/PL-024-175/metadata.json",
+    "codification/laws/laws/PL-024-175/_UNRECOVERABLE.txt",
+    "codification/laws/laws/PL-024-176/metadata.json",
+    "codification/laws/laws/PL-024-176/_UNRECOVERABLE.txt"
+  ],
+  "manifest_law_count": 4,
+  "missing_law_ids": [],
+  "laws": [
+    {
+      "law_id": "PL-018-143",
+      "public_law": "18-143",
+      "title": "Public Law 18-143 | United States Capitol Police Technical Corrections Act",
+      "final_status": "historical-note-only",
+      "provision_disposition": "historical-note-only",
+      "required_code_treatment": "retain only source-limited history; do not infer operative text",
+      "current_implementation": {
+        "state": "not-applicable",
+        "xml": "no verified XML placement",
+        "branch_vs_origin": "no recoverable enactment text"
+      },
+      "current_xml_comparison": {
+        "assessment": "missing",
+        "placement": null,
+        "branch_vs_origin": "no verified XML placement",
+        "detail": "No lawful codification placement can be authenticated from the source-unavailable record."
+      },
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "operative_character": "No readable enactment text could be authenticated from the supplied source bundle.",
+          "code_treatment": "historical-note-only",
+          "implementation": "no verified XML placement",
+          "source_evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-018-143.md",
+            "codification/laws/laws/PL-018-143/law.txt"
+          ]
+        }
+      ],
+      "source_evidence": {
+        "law_report": "codification/mass_migration/latest/reports/laws/PL-018-143.md",
+        "law_text": "codification/laws/laws/PL-018-143/law.txt",
+        "status_basis": "The accessible source is only a Drive permission-denial page, so no operative text can be authenticated."
+      },
+      "recommended_action": "Keep only a concise source-unavailable historical note and do not invent a Code amendment.",
+      "chronology_conclusion": "The available records support only history-note treatment because the enactment text itself is unavailable.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "approved_code_treatment": "retain only source-limited history; do not infer operative text"
+    },
+    {
+      "law_id": "PL-019-146",
+      "public_law": "19-146",
+      "title": "Public Law 19-146 | Refurbishing the Military Legal System Act",
+      "final_status": "historical-note-only",
+      "provision_disposition": "historical-note-only",
+      "required_code_treatment": "retain only source-limited history; do not infer operative text",
+      "current_implementation": {
+        "state": "not-applicable",
+        "xml": "no verified XML placement",
+        "branch_vs_origin": "no recoverable enactment text"
+      },
+      "current_xml_comparison": {
+        "assessment": "missing",
+        "placement": null,
+        "branch_vs_origin": "no verified XML placement",
+        "detail": "No lawful codification placement can be authenticated from the source-unavailable record."
+      },
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "operative_character": "No readable enactment text could be authenticated from the supplied source bundle.",
+          "code_treatment": "historical-note-only",
+          "implementation": "no verified XML placement",
+          "source_evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-019-146.md",
+            "codification/laws/laws/PL-019-146/law.txt"
+          ]
+        }
+      ],
+      "source_evidence": {
+        "law_report": "codification/mass_migration/latest/reports/laws/PL-019-146.md",
+        "law_text": "codification/laws/laws/PL-019-146/law.txt",
+        "status_basis": "The accessible source is only a Drive permission-denial page, so no operative text can be authenticated."
+      },
+      "recommended_action": "Keep only a concise source-unavailable historical note and do not invent a Code amendment.",
+      "chronology_conclusion": "The available records support only history-note treatment because the enactment text itself is unavailable.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "approved_code_treatment": "retain only source-limited history; do not infer operative text"
+    },
+    {
+      "law_id": "PL-024-175",
+      "public_law": "24-175",
+      "title": "Public Law 24-175 | MPD Relocation Act",
+      "final_status": "historical-note-only",
+      "provision_disposition": "historical-note-only",
+      "required_code_treatment": "retain only source-limited history; do not infer operative text",
+      "current_implementation": {
+        "state": "not-applicable",
+        "xml": "no verified XML placement",
+        "branch_vs_origin": "no recoverable enactment text"
+      },
+      "current_xml_comparison": {
+        "assessment": "missing",
+        "placement": null,
+        "branch_vs_origin": "no verified XML placement",
+        "detail": "No lawful codification placement can be authenticated from the source-unavailable record."
+      },
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "operative_character": "The enactment text could not be recovered from the source package; only unrecoverable metadata remains.",
+          "code_treatment": "historical-note-only",
+          "implementation": "no verified XML placement",
+          "source_evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-024-175.md",
+            "codification/laws/laws/PL-024-175/metadata.json",
+            "codification/laws/laws/PL-024-175/_UNRECOVERABLE.txt"
+          ]
+        }
+      ],
+      "source_evidence": {
+        "law_report": "codification/mass_migration/latest/reports/laws/PL-024-175.md",
+        "metadata": "codification/laws/laws/PL-024-175/metadata.json",
+        "unrecoverable_note": "codification/laws/laws/PL-024-175/_UNRECOVERABLE.txt",
+        "status_basis": "The source was deleted or not found, so no operative text could be audited."
+      },
+      "recommended_action": "Keep only a concise source-unavailable historical note and do not invent a Code amendment.",
+      "chronology_conclusion": "The available records support only history-note treatment because the enactment text itself is unavailable.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "approved_code_treatment": "retain only source-limited history; do not infer operative text"
+    },
+    {
+      "law_id": "PL-024-176",
+      "public_law": "24-176",
+      "title": "Public Law 24-176 | Comprehensive Federal Government Funding Act",
+      "final_status": "historical-note-only",
+      "provision_disposition": "historical-note-only",
+      "required_code_treatment": "retain only source-limited history; do not infer operative text",
+      "current_implementation": {
+        "state": "not-applicable",
+        "xml": "no verified XML placement",
+        "branch_vs_origin": "no recoverable enactment text"
+      },
+      "current_xml_comparison": {
+        "assessment": "missing",
+        "placement": null,
+        "branch_vs_origin": "no verified XML placement",
+        "detail": "No lawful codification placement can be authenticated from the source-unavailable record."
+      },
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "operative_character": "The enactment text could not be recovered from the source package; only unrecoverable metadata remains.",
+          "code_treatment": "historical-note-only",
+          "implementation": "no verified XML placement",
+          "source_evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-024-176.md",
+            "codification/laws/laws/PL-024-176/metadata.json",
+            "codification/laws/laws/PL-024-176/_UNRECOVERABLE.txt"
+          ]
+        }
+      ],
+      "source_evidence": {
+        "law_report": "codification/mass_migration/latest/reports/laws/PL-024-176.md",
+        "metadata": "codification/laws/laws/PL-024-176/metadata.json",
+        "unrecoverable_note": "codification/laws/laws/PL-024-176/_UNRECOVERABLE.txt",
+        "status_basis": "The source was deleted or not found, so no operative text could be audited."
+      },
+      "recommended_action": "Keep only a concise source-unavailable historical note and do not invent a Code amendment.",
+      "chronology_conclusion": "The available records support only history-note treatment because the enactment text itself is unavailable.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "approved_code_treatment": "retain only source-limited history; do not infer operative text"
+    }
+  ]
+}

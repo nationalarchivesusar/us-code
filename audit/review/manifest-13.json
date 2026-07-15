@@ -1,0 +1,244 @@
+{
+  "reviewer": "reviewer-13",
+  "group_index": 13,
+  "law_count": 10,
+  "output_path": "audit/review/review-13.json",
+  "laws": [
+    {
+      "law_id": "PL-017-125",
+      "public_law": "17-125",
+      "title": "Public Law 17-125 | We Don't Read Minds Act of 2023",
+      "report_path": "audit/primary/batch-05-01.json",
+      "batch": 5,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC3(1)",
+        "SEC3(2)"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-017-126",
+      "public_law": "17-126",
+      "title": "Public Law 17-126 | Special Events Act",
+      "report_path": "audit/primary/batch-05-01.json",
+      "batch": 5,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC5 (Definitions)"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-017-127",
+      "public_law": "17-127",
+      "title": "Public Law 17-127 | Border Security Act",
+      "report_path": "audit/primary/batch-05-01.json",
+      "batch": 5,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "multiple-laws-same-target"
+      ],
+      "provision_refs": [
+        "SEC10",
+        "SEC11",
+        "SEC12",
+        "SEC13(1)",
+        "SEC13(2)",
+        "SEC13(3)",
+        "SEC13(4)",
+        "SEC5(1)",
+        "SEC6",
+        "SEC7",
+        "SEC8",
+        "SEC9"
+      ],
+      "targets": [
+        "/us/usc/t8",
+        "/us/usc/t8/s1101",
+        "/us/usc/t8/s1102",
+        "/us/usc/t8/s1103",
+        "/us/usc/t8/s1105",
+        "/us/usc/t8/s1182",
+        "/us/usc/t8/s1189",
+        "/us/usc/t8/s1481",
+        "/us/usc/t8/s1532",
+        "/us/usc/t8/s1533",
+        "/us/usc/t8/s1534",
+        "/us/usc/t8/s1551"
+      ]
+    },
+    {
+      "law_id": "PL-017-128",
+      "public_law": "17-128",
+      "title": "Public Law 17-128 | Impeachment Procedures and Protocols Act (IPPA)",
+      "report_path": "audit/primary/batch-05-01.json",
+      "batch": 5,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC10-SEC11",
+        "SEC4",
+        "SEC5-SEC8",
+        "SEC9"
+      ],
+      "targets": [
+        "/us/usc/t28/s1365"
+      ]
+    },
+    {
+      "law_id": "PL-017-129",
+      "public_law": "17-129",
+      "title": "Public Law 17-129 | Department of Education Act",
+      "report_path": "audit/primary/batch-05-01.json",
+      "batch": 5,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC4",
+        "SEC5",
+        "SEC6",
+        "SEC7",
+        "SEC8"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-017-130",
+      "public_law": "17-130",
+      "title": "Public Law 17-130 | Oath and Offices Protection (OOP)",
+      "report_path": "audit/primary/batch-05-01.json",
+      "batch": 5,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC4/SEC5",
+        "SEC6"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-017-131",
+      "public_law": "17-131",
+      "title": "Public Law 17-131 | More Jobs Amendment",
+      "report_path": "audit/primary/batch-05-01.json",
+      "batch": 5,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC2 (Sec 3 amend)",
+        "SEC2(b) (Sec 5 amend)"
+      ],
+      "targets": [
+        "(PL 15-100 section 3(B)(I))",
+        "(PL 15-100 section 5(F))"
+      ]
+    },
+    {
+      "law_id": "PL-017-132",
+      "public_law": "17-132",
+      "title": "Public Law 17-132 | Standard Process for International Extraditions Act",
+      "report_path": "audit/primary/batch-05-02.json",
+      "batch": 5,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC II",
+        "SEC III"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-017-133",
+      "public_law": "17-133",
+      "title": "Public Law 17-133 | Judicial Overhaul Bill (JOB) AMENDED",
+      "report_path": "audit/primary/batch-05-02.json",
+      "batch": 5,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC10",
+        "SEC5(repeals)",
+        "SEC5(rewrites)",
+        "SEC6",
+        "SEC7",
+        "SEC8",
+        "SEC9"
+      ],
+      "targets": [
+        "/us/usc/t28 (SEC10 repeal list)",
+        "/us/usc/t28 (SEC6 repeal list)",
+        "/us/usc/t28 (SEC7 repeal list)",
+        "/us/usc/t28 (SEC8 repeal list)",
+        "/us/usc/t28 (SEC9 repeal list)",
+        "/us/usc/t28 (multiple repeal targets in SEC5)",
+        "/us/usc/t28/s133, s134, s135, s136, s137, s294, s371, s413"
+      ]
+    },
+    {
+      "law_id": "PL-017-134",
+      "public_law": "17-134",
+      "title": "Public Law 17-134 | Amended The Uniformed Capitol Police Act of 2023",
+      "report_path": "audit/primary/batch-05-02.json",
+      "batch": 5,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC II(a)-(b)"
+      ],
+      "targets": [
+        "(PL 16-119 §III(B))"
+      ]
+    }
+  ]
+}

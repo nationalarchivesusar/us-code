@@ -1,0 +1,214 @@
+{
+  "reviewer": "reviewer-25",
+  "group_index": 25,
+  "law_count": 10,
+  "reviewed_against": [
+    "audit/review/manifest-25.json",
+    "audit/primary/batch-09-01.json",
+    "audit/primary/batch-09-02.json",
+    "audit/primary/batch-09-03.json",
+    "usc XML in current branch"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-035-252",
+      "public_law": "35-252",
+      "title": "Public Law 35-252 | Magistrate Appointment Act of 2025",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "Section 3 amends Public Law 26-190 section 106(c)(i), but it does not identify a clean positive-law U.S. Code rewrite target.",
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t28/s1",
+        "detail": "The branch note is at a plausible Title 28 anchor, but the source is a prior-public-law amendment rather than a direct U.S. Code rewrite."
+      },
+      "recommended_action": "Keep it as a statutory note at the closest Title 28 anchor and do not treat it as a direct code rewrite.",
+      "confidence": "medium",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Section 3 amends Public Law 26-190 section 106(c)(i), but it does not identify a clean positive-law U.S. Code rewrite target.",
+      "approved_code_treatment": "statutory-note",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1eXGbIPgAF9fMiwm30Zh9GtBaIPk4QqIa/view?usp=sharing | a25a2a415d883eb4574319ca6c66f91f0e91b31a374a490105c6d78a6625b6f6",
+      "exact_target": "/us/usc/t28/s1"
+    },
+    {
+      "law_id": "PL-035-254",
+      "public_law": "35-254",
+      "title": "Public Law 35-254 | An Act to repeal Public Law 28-205",
+      "status": "current",
+      "decision": "repeal-marking",
+      "status_basis": "The source is an operative repealer and expressly states that Public Law 28-205 is repealed.",
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "placement": "/us/usc/t5/s101",
+        "detail": "The current XML treats the repealer itself as historical only, but the law is the operative repeal of Public Law 28-205."
+      },
+      "recommended_action": "Retain it as the operative repealer and mark Public Law 28-205 fully repealed.",
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source is an operative repealer and expressly states that Public Law 28-205 is repealed.",
+      "approved_code_treatment": "repeal-marking",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1H27P3dO5zgCsvAyHOUUfDEZjEqlY8IXe/view?usp=sharing | 1038cf9f44e8234c71a014fe0851a80008be0f51b14bfe8df5f3549fcffbac5f",
+      "exact_target": "/us/usc/t5/s101"
+    },
+    {
+      "law_id": "PL-035-256",
+      "public_law": "35-256",
+      "title": "Public Law 35-256 | Workers First Act of 2025",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "The source reduces the income tax rate, but it does not name a determinable U.S. Code target in the accessible text.",
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t29/s201",
+        "detail": "The note is a plausible anchor, but the source does not identify a precise U.S. Code target."
+      },
+      "recommended_action": "Keep it as a statutory note unless a precise Code target is later identified.",
+      "confidence": "medium",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source reduces the income tax rate, but it does not name a determinable U.S. Code target in the accessible text.",
+      "approved_code_treatment": "statutory-note",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1vW9GO3Uo8bEQUfr2sgAEjXzoVq8jm-Hf/view?usp=sharing | 05a26b4a00bd682e0e88ce7201e1779fcacc0d50bea23a6f155794e025fcc58c",
+      "exact_target": "/us/usc/t29/s201"
+    },
+    {
+      "law_id": "PL-036-256",
+      "public_law": "36-256",
+      "title": "Public Law 36-256 | Commerce Dispersal Act",
+      "status": "current",
+      "decision": "transfer-note",
+      "status_basis": "The source dissolves the Department of Commerce and Labor, redistributes its functions, and transfers copyright administration.",
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t15/s1",
+        "detail": "The note is in the right subject area, but it still needs to be reduced to a concise transfer history."
+      },
+      "recommended_action": "Keep only a concise transfer note and remove the full-text dump.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source dissolves the Department of Commerce and Labor, redistributes its functions, and transfers copyright administration.",
+      "approved_code_treatment": "transfer-note",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/10n3NtOr_EcJP0IUYQj60PMHnGd_6X-97/view | 21f54baec9f042676779bd14992f6f2b685f6f43896e97b36afd2fb8b7e596d7",
+      "exact_target": "/us/usc/t15/s1"
+    },
+    {
+      "law_id": "PL-036-257",
+      "public_law": "36-257",
+      "title": "Public Law 36-257 | Maritime Operations & Policy Overhaul Act",
+      "status": "current",
+      "decision": "mixed-amendment-and-note",
+      "status_basis": "The source combines direct amendments to prior laws with uncodified operational and coordination directives.",
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t46/s101",
+        "detail": "The note is directionally right, but it should be trimmed to concise amendment notes and not expanded into permanent text."
+      },
+      "recommended_action": "Keep the Coast Guard amendments as concise amendment notes and do not turn the uncodified directives into permanent Code text.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source combines direct amendments to prior laws with uncodified operational and coordination directives.",
+      "approved_code_treatment": "mixed-amendment-and-note",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1nS5sQvKTxKWw-OdJHRaWBfqJP4g1lb1z/view?usp=sharing | f8943ffee77114e15b262188e496fa777ee8611638b80b43b51b603575be2e17",
+      "exact_target": "/us/usc/t46/s101"
+    },
+    {
+      "law_id": "PL-036-258",
+      "public_law": "36-258",
+      "title": "Public Law 36-258 | National Root Beer Day Act",
+      "status": "current",
+      "decision": "amend-existing-text",
+      "status_basis": "The source makes a direct insertion into 5 U.S.C. 6103(a) by adding National Root Beer Day after Memorial Day.",
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t5/s101",
+        "detail": "The XML note is parked at Title 5 section 101, but the source requires a real insertion in 5 U.S.C. 6103(a)."
+      },
+      "recommended_action": "Apply the 5 U.S.C. 6103(a) insertion and keep the short title and effective date as note material.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source makes a direct insertion into 5 U.S.C. 6103(a) by adding National Root Beer Day after Memorial Day.",
+      "approved_code_treatment": "amend-existing-text",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/14KD-2S6N2x3N2scjRSGU-31tDS_AosWT/view?usp=sharing | c1f3bbd945eac8dfc6085917a517b9a8562d2b0beea14d2bced88fb4ed46e1b9",
+      "exact_target": "/us/usc/t5/s101"
+    },
+    {
+      "law_id": "PL-036-260",
+      "public_law": "36-260",
+      "title": "Public Law 36-260 | Fixing the District of Columbia Act of 2025",
+      "status": "current",
+      "decision": "mixed-amendment-and-note",
+      "status_basis": "The source combines explicit repeals, transfers, and amendments affecting multiple District laws and offices.",
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "The current note flattens multiple repeals, transfers, and amendments into one bloated entry."
+      },
+      "recommended_action": "Record the six repeals and the listed transfer and amendment notes explicitly, and remove the bloated note.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source combines explicit repeals, transfers, and amendments affecting multiple District laws and offices.",
+      "approved_code_treatment": "mixed-amendment-and-note",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1HUEnAUITJpHXbaiqSNUImxsX9xw29f4V/view | f0092d0fbdf153cbc88001f7e1b3e609bec240e37dc5a145bba462e2ae9b19ea",
+      "exact_target": "/us/usc/t40/s101/4"
+    },
+    {
+      "law_id": "PL-037-261",
+      "public_law": "37-261",
+      "title": "Public Law 37-261 | Federal Criminal Code Act of 2025",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "The accessible source adopts an attached Federal Criminal Code, but the attachment text is not determinable from the accessible extraction.",
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t18/s1",
+        "detail": "The note is at the right general anchor, but the attached code text cannot be reproduced from the accessible source and the note still needs cleanup."
+      },
+      "recommended_action": "Keep the law as a source-limited statutory note at the existing anchor and do not invent unattested attached-code text.",
+      "confidence": "medium",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The accessible source adopts an attached Federal Criminal Code, but the attachment text is not determinable from the accessible extraction.",
+      "approved_code_treatment": "statutory-note",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t18/s1"
+    },
+    {
+      "law_id": "PL-038-262",
+      "public_law": "38-262",
+      "title": "Public Law 38-262 | Fund the Government Act of 2026",
+      "status": "current",
+      "decision": "mixed-amendment-and-note",
+      "status_basis": "The source includes temporary appropriations, a permanent repeal of prior schedule rules, and a general schedule pay-scale provision without a precise Code target.",
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "The branch note is directionally correct for the appropriations and repeal history, but it still carries the full dump and should remain concise note-level history."
+      },
+      "recommended_action": "Keep only a concise statutory note for the appropriations and repeal history; if the pay-scale table is meant to be permanent, map it to the proper Title 5 provision.",
+      "confidence": "medium",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source includes temporary appropriations, a permanent repeal of prior schedule rules, and a general schedule pay-scale provision without a precise Code target.",
+      "approved_code_treatment": "mixed-amendment-and-note",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1norFYgfu3MVEQVChRv6KDZi1_gYCx66v/view?usp=sharing | 1b1f176aa4a0b9f3da5675e3fa03c52975b82ac5fad5faa02a1b392b646c1f7c",
+      "exact_target": "/us/usc/t40/s101/4"
+    },
+    {
+      "law_id": "PL-038-263",
+      "public_law": "38-263",
+      "title": "Public Law 38-263 | National Security Act of 2026",
+      "status": "current",
+      "decision": "mixed-amendment-and-note",
+      "status_basis": "The act creates an ongoing national-security framework and also repeals prior CRACK Act titles I-IV, but it does not self-expire.",
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t50/s1",
+        "detail": "The note is at the title-50 anchor, but it still embeds the full dump and should stay note-only rather than integrated text."
+      },
+      "recommended_action": "Replace the dump with a concise title-50 note and preserve the repeal history cleanly.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The act creates an ongoing national-security framework and also repeals prior CRACK Act titles I-IV, but it does not self-expire.",
+      "approved_code_treatment": "mixed-amendment-and-note",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1qFp84RE7H-ePvuTL2RLj1h8P3sTMRODy/view | 2227f1836d1dee3b4cc854ca95f51785327462d255f0dd2bd35494ca7bf55b15",
+      "exact_target": "/us/usc/t50/s1"
+    }
+  ]
+}

@@ -1,0 +1,573 @@
+﻿{
+    "batch":  6,
+    "auditor":  "law-auditor-A",
+    "report_path":  "audit/primary/batch-06-01.json",
+    "law_count":  10,
+    "laws":  [
+                 {
+                     "law_id":  "PL-019-152",
+                     "public_law":  "19-152",
+                     "title":  "Public Law 19-152 | The Commerce Legislation and Labor Aggravations Reformations (CLEAR)",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-019-152/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  13227,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-019-152/source/H.R. 1912 - The Commerce Legislation and Labor Aggravations Reformations (CLEAR).pdf",
+                                              "format":  "pdf",
+                                              "size":  155406,
+                                              "sha256":  "ecd0866daf8a04cdd90f6b5c76943206f1b5bd8eba72fff9fff5850be569af18"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "Â§ 101shallberepealedinitsentirety",
+                                                     "Â§1015",
+                                                     "Â§101shallnowreadas",
+                                                     "Â§2421"
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "amend",
+                                                         "establish"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc05.xml",
+                                                   "note_id":  "rp-pl019152-codification",
+                                                   "public_law":  "19-152",
+                                                   "congress_from_id":  19,
+                                                   "seq_from_id":  152,
+                                                   "heading_cited_pl":  "19-152",
+                                                   "heading":  "The Commerce Legislation and Labor Aggravations Reformations (CLEAR)â€”Pub. L. 19â€“152",
+                                                   "placement_identifier":  "/us/usc/t5/s101",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/oCaN5S8Q/380-public-law-19-152-the-commerce-legislation-and-labor-aggravations-reformations-clear"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  815
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-021-123",
+                     "public_law":  "21-123",
+                     "title":  "Public Law 21â€“123 | Freedom In Removing Employees and Deregulation Act of 2024.",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "meaningful text",
+                     "law_txt_path":  "codification/laws/laws/PL-021-123/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  209,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  true,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-021-123/source/downloaded_file.html",
+                                              "format":  "html",
+                                              "size":  1789,
+                                              "sha256":  "0c61ad3949bdfdd390168c364e997851b1766577ad7ebdedf1c70c005c0c5fa5"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc05.xml",
+                                                   "note_id":  "rp-pl021123-codification",
+                                                   "public_law":  "21-123",
+                                                   "congress_from_id":  21,
+                                                   "seq_from_id":  123,
+                                                   "heading_cited_pl":  "21-123",
+                                                   "heading":  "Freedom In Removing Employees and Deregulation Act of 2024.â€”Pub. L. 21â€“123",
+                                                   "placement_identifier":  "/us/usc/t5/s101",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/q2VAZbhI/453-public-law-21-123-freedom-in-removing-employees-and-deregulation-act-of-2024"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  774
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-022-153",
+                     "public_law":  "22-153",
+                     "title":  "Public Law 22â€“153 | Fire Department Reform and Nurturing (FDRN)",
+                     "list_name":  "21st - 30th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-022-153/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  8557,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-022-153/source/H.R. 2 - Fire Department Reform and Nurturing (FDRN).pdf",
+                                              "format":  "pdf",
+                                              "size":  138587,
+                                              "sha256":  "2b1170c343b77dff8409dbc42071dac0baec4af979f64834c023588e0e46d54f"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc50.xml",
+                                                   "note_id":  "rp-pl022153-codification",
+                                                   "public_law":  "22-153",
+                                                   "congress_from_id":  22,
+                                                   "seq_from_id":  153,
+                                                   "heading_cited_pl":  "22-153",
+                                                   "heading":  "Fire Department Reform and Nurturing (FDRN)â€”Pub. L. 22â€“153",
+                                                   "placement_identifier":  "/us/usc/t50/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/vMPTyK0k/641-public-law-22-153-fire-department-reform-and-nurturing-fdrn"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  797
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-022-154",
+                     "public_law":  "22-154",
+                     "title":  "Public Law 22â€“154 | Officer Bill of Rights (OBR)",
+                     "list_name":  "21st - 30th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-022-154/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  15438,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-022-154/source/H.R.5 - Officer Bill of Rights (OBR) .pdf",
+                                              "format":  "pdf",
+                                              "size":  158058,
+                                              "sha256":  "4b4608159a6b525af5b6cfe258ec9d398e3ee79062828e916c169c46503bcc52"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc52.xml",
+                                                   "note_id":  "rp-pl022154-codification",
+                                                   "public_law":  "22-154",
+                                                   "congress_from_id":  22,
+                                                   "seq_from_id":  154,
+                                                   "heading_cited_pl":  "22-154",
+                                                   "heading":  "Officer Bill of Rights (OBR)â€”Pub. L. 22â€“154",
+                                                   "placement_identifier":  "/us/usc/t52/s10101/g",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/zvzmNoZi/642-public-law-22-154-officer-bill-of-rights-obr"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "f37f079866ce140039123d33b62b4685cf2013f503eb6d5cd606b804a7d0ce2e"
+                                                                      ],
+                                                   "note_char_length":  16164
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-022-155",
+                     "public_law":  "22-155",
+                     "title":  "Public Law 22â€“155 | Department of Education Repealment Act",
+                     "list_name":  "21st - 30th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-022-155/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  1548,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-022-155/source/H.R 2208 - Department of Education Repealment Act .pdf",
+                                              "format":  "pdf",
+                                              "size":  68268,
+                                              "sha256":  "2ec51e36fa28ef98105f0308983bd04f877956effe1709465a3bf0906f66081d"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "findings",
+                                                         "severab"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc20.xml",
+                                                   "note_id":  "rp-pl022155-codification",
+                                                   "public_law":  "22-155",
+                                                   "congress_from_id":  22,
+                                                   "seq_from_id":  155,
+                                                   "heading_cited_pl":  "22-155",
+                                                   "heading":  "Department of Education Repealment Actâ€”Pub. L. 22â€“155",
+                                                   "placement_identifier":  "/us/usc/t20/s1 /us/usc/t20/s2",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/ZAzVruAf/643-public-law-22-155-department-of-education-repealment-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  738
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-022-156",
+                     "public_law":  "22-156",
+                     "title":  "Public Law 22â€“156 | Local Law Enforcement Agencies Reform and Nurturing (LLEARN)",
+                     "list_name":  "21st - 30th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-022-156/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  23474,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-022-156/source/H.R. 10 - Local Law Enforcement Agencies Reform and Nurturing (LLEARN).pdf",
+                                              "format":  "pdf",
+                                              "size":  267081,
+                                              "sha256":  "97b99c5d89c5854123a9299ed66c6e3c88e0c99326f209d70ade3f9c16284acd"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "Title 5",
+                                                     "Â§ 1901ashallberepealedin",
+                                                     "Â§ 1907ashallberepealedinitsentirety",
+                                                     "Â§ 1907bshallberepealedinitsentirety",
+                                                     "Â§ 1907shallberepealedinitsentirety",
+                                                     "Â§ 1921shallberepealedinitsentirety",
+                                                     "Â§ 1961shallbestrickeninitsentirety",
+                                                     "Â§ 1966ashallbestrickeninitsentiretyandshallnowreadasfollows",
+                                                     "Â§ 1966shallbestrickeninitsentirety",
+                                                     "Â§ 1969shallbestrickeninitsentiretyandshallnowreadasfollows",
+                                                     "Â§ 1974shallbestrickeninitsentiretyandshallnowreadasfollows",
+                                                     "Â§1901ashallnowreadas",
+                                                     "Â§1902",
+                                                     "Â§1902shallberepealedinitsentirety",
+                                                     "Â§1903shallberepealedinitsentirety",
+                                                     "Â§1904shallberepealedinitsentirety",
+                                                     "Â§1905ashallberepealedinitsentirety",
+                                                     "Â§1905bshallberepealedinitsentirety",
+                                                     "Â§1905shallberepealedinitsentirety",
+                                                     "Â§1910shallberepealedinitsentirety",
+                                                     "Â§1921ashallberepealedinitsentirety",
+                                                     "Â§1922shallberepealedinitsentirety",
+                                                     "Â§1923shallberepealedinitsentirety",
+                                                     "Â§1926shallberepealedinitsentirety",
+                                                     "Â§1927shallberepealedinitsentirety",
+                                                     "Â§1930shallberepealedinitsentirety",
+                                                     "Â§1931shallberepealedinitsentirety",
+                                                     "Â§1932shallberepealedinitsentirety",
+                                                     "Â§1933shallberepealedinitsentirety",
+                                                     "Â§1934shallberepealedinitsentirety",
+                                                     "Â§1964shallberepealedinitsentirety",
+                                                     "Â§1965shallberepealedinitsentirety",
+                                                     "Â§1966shallberepealedinitsentirety",
+                                                     "Â§1968shallberepealedinitsentirety",
+                                                     "Â§1971shallberepealedinitsentirety",
+                                                     "Â§1972shallberepealedinitsentirety",
+                                                     "Â§1973shallberepealedinitsentirety",
+                                                     "Â§1976shallberepealedinitsentirety",
+                                                     "Â§1980shallberepealedinitsentirety",
+                                                     "Â§1981shallberepealedinitsentirety",
+                                                     "Â§Â§ 1101"
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc02.xml",
+                                                   "note_id":  "rp-pl022156-codification",
+                                                   "public_law":  "22-156",
+                                                   "congress_from_id":  22,
+                                                   "seq_from_id":  156,
+                                                   "heading_cited_pl":  "22-156",
+                                                   "heading":  "Local Law Enforcement Agencies Reform and Nurturing (LLEARN)â€”Pub. L. 22â€“156",
+                                                   "placement_identifier":  "/us/usc/t2/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/UdyoM8J1/644-public-law-22-156-local-law-enforcement-agencies-reform-and-nurturing-llearn"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  804
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-022-157",
+                     "public_law":  "22-157",
+                     "title":  "Public Law 22â€“157 | Area Management Update Act (AMUA)",
+                     "list_name":  "21st - 30th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-022-157/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  2536,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-022-157/source/H.R. 11 - Area Management Update Act (AMUA).pdf",
+                                              "format":  "pdf",
+                                              "size":  121780,
+                                              "sha256":  "37474d6e9ea94e3305ac18a66d59ea79914cf37797c1129ceb013f50d0f6e83f"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc18.xml",
+                                                   "note_id":  "rp-pl022157-codification",
+                                                   "public_law":  "22-157",
+                                                   "congress_from_id":  22,
+                                                   "seq_from_id":  157,
+                                                   "heading_cited_pl":  "22-157",
+                                                   "heading":  "Area Management Update Act (AMUA)â€”Pub. L. 22â€“157",
+                                                   "placement_identifier":  "/us/usc/t18/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/67boYJho/645-public-law-22-157-area-management-update-act-amua"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  726
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-022-158",
+                     "public_law":  "22-158",
+                     "title":  "Public Law 22â€“158 | Service Members Protection Act (SMPA)",
+                     "list_name":  "21st - 30th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-022-158/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  3541,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-022-158/source/H.R. 12 - Service Members Protection Act (SMPA).pdf",
+                                              "format":  "pdf",
+                                              "size":  125432,
+                                              "sha256":  "a41d878cfbc25f8c6540d5b1679932aa914bfb73781aaaa8bb032ef08f8b5a70"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "Â§12406"
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc50.xml",
+                                                   "note_id":  "rp-pl022158-codification",
+                                                   "public_law":  "22-158",
+                                                   "congress_from_id":  22,
+                                                   "seq_from_id":  158,
+                                                   "heading_cited_pl":  "22-158",
+                                                   "heading":  "Service Members Protection Act (SMPA)â€”Pub. L. 22â€“158",
+                                                   "placement_identifier":  "/us/usc/t50/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/caZOs71S/646-public-law-22-158-service-members-protection-act-smpa"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  734
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-022-159",
+                     "public_law":  "22-159",
+                     "title":  "Public Law 22â€“159 | D.C. Statute of Limitations Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-022-159/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  1659,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-022-159/source/H.R 2207 - D.C. Statute of Limitations Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  67589,
+                                              "sha256":  "d9b69df4cb279a82f62791b83155f5c37967eb89e8cde5fc360775a2ed523e90"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "severab"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc28.xml",
+                                                   "note_id":  "rp-pl022159-codification",
+                                                   "public_law":  "22-159",
+                                                   "congress_from_id":  22,
+                                                   "seq_from_id":  159,
+                                                   "heading_cited_pl":  "22-159",
+                                                   "heading":  "D.C. Statute of Limitations Actâ€”Pub. L. 22â€“159",
+                                                   "placement_identifier":  "/us/usc/t28/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/bjCOK1uc/647-public-law-22-159-dc-statute-of-limitations-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  717
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-022-160",
+                     "public_law":  "22-160",
+                     "title":  "Public Law 22â€“160 | To Amend the U.S. Code",
+                     "list_name":  "21st - 30th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-022-160/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  2178,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-022-160/source/H.R. 6 .pdf",
+                                              "format":  "pdf",
+                                              "size":  68992,
+                                              "sha256":  "796d9e11a980e8f78b1fe4510cadd582ac35ce01aeb986434a65071e2aab0553"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "severab"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc18.xml",
+                                                   "note_id":  "rp-pl022160-codification",
+                                                   "public_law":  "22-160",
+                                                   "congress_from_id":  22,
+                                                   "seq_from_id":  160,
+                                                   "heading_cited_pl":  "22-160",
+                                                   "heading":  "To Amend the U.S. Codeâ€”Pub. L. 22â€“160",
+                                                   "placement_identifier":  "/us/usc/t18/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/QaPY2wDc/648-public-law-22-160-to-amend-the-us-code"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  728
+                                               }
+                                           ]
+                 }
+             ]
+}

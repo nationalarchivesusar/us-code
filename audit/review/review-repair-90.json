@@ -1,0 +1,437 @@
+{
+  "reviewer": "law-auditor-90",
+  "group_index": 90,
+  "law_count": 5,
+  "source_manifest": "audit/manifests/review-repair-90.json",
+  "output_path": "audit/review/review-repair-90.json",
+  "reviewed_against": [
+    "audit/manifests/review-repair-90.json",
+    "codification/laws/laws/PL-015-107/metadata.json",
+    "codification/laws/laws/PL-015-107/_UNRECOVERABLE.txt",
+    "codification/laws/laws/PL-015-108/metadata.json",
+    "codification/laws/laws/PL-015-108/law.txt",
+    "codification/laws/laws/PL-015-109/metadata.json",
+    "codification/laws/laws/PL-015-109/law.txt",
+    "codification/laws/laws/PL-015-110/metadata.json",
+    "codification/laws/laws/PL-015-110/_UNRECOVERABLE.txt",
+    "codification/laws/laws/PL-028-205/metadata.json",
+    "codification/laws/laws/PL-028-205/law.txt",
+    "usc/usc01.xml",
+    "usc/usc02.xml",
+    "usc/usc05.xml",
+    "usc/usc05A.xml",
+    "usc/usc22.xml",
+    "usc/usc50.xml"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-015-107",
+      "public_law": "15-107",
+      "title": "Public Law 15-107 | Guidance to Guidances Act",
+      "status": "repealed",
+      "status_basis": "The source file is unrecoverable and the live Title 1 note already treats the enactment as repealed or superseded history only.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Source unavailable; no authenticated operative text could be recovered.",
+          "classes": [
+            "non-code",
+            "source-unavailable"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t1/s2",
+          "exact_change": null,
+          "evidence": "The recovery set contains only the unrecoverable marker, and the Code note says the enactment is retained solely as statutory history.",
+          "notes": "Retain only as history."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t1/s2",
+        "detail": "The XML note exists, but the underlying enactment file was unrecoverable, so the history-only treatment is the only defensible conclusion."
+      },
+      "recommended_actions": [
+        "Keep the statute as a historical note only.",
+        "Do not infer any operative Code text from the missing source."
+      ],
+      "confidence": "high",
+      "final_status": "repealed",
+      "chronology_conclusion": "The act is not recoverable from the source set, and the live Code already records it as repealed or superseded statutory history.",
+      "approved_code_treatment": "historical-note-only",
+      "current_xml_comparison": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t1/s2",
+        "detail": "The XML note exists, but the underlying enactment file was unrecoverable, so the note cannot be validated further."
+      },
+      "source_evidence": [
+        "The recovery set contains only the unrecoverable marker.",
+        "The live Title 1 note records the enactment as repealed or superseded and retained solely as statutory history."
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "Keep the statute as a historical note only. | Do not infer any operative Code text from the missing source.",
+      "exact_target": "/us/usc/t1/s2"
+    },
+    {
+      "law_id": "PL-015-108",
+      "public_law": "15-108",
+      "title": "Public Law 15-108 | Reclassification of Labeling Act of 2023",
+      "status": "current",
+      "status_basis": "The recovered text is a substantive congressional labeling-rules measure that does not repeal itself or expire by its own terms.",
+      "provisions": [
+        {
+          "ref": "SEC1",
+          "text_summary": "Short title.",
+          "classes": [
+            "short-title"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s1",
+          "exact_change": null,
+          "evidence": "This Act may be cited as the Reclassification of Labeling Act of 2023.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC2",
+          "text_summary": "Purpose to fix labeling issues in Congress.",
+          "classes": [
+            "purpose",
+            "non-code"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s1",
+          "exact_change": null,
+          "evidence": "The purpose of this act is to fix on-going labeling issues in Both Houses of Congress.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC3",
+          "text_summary": "Bills labeling rules, including bill labels and minimum bill content.",
+          "classes": [
+            "rule-setting",
+            "non-code"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s1",
+          "exact_change": null,
+          "evidence": "H.R.# and S.# shall be only used when bills are being proposed.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC4",
+          "text_summary": "Resolution labeling rules and chamber-only effect.",
+          "classes": [
+            "rule-setting",
+            "non-code"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s1",
+          "exact_change": null,
+          "evidence": "Resolutions hold no binding effect outside the originating chamber of Congress.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC5",
+          "text_summary": "Concurrent resolution labeling rules.",
+          "classes": [
+            "rule-setting",
+            "non-code"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s1",
+          "exact_change": null,
+          "evidence": "H.Con.Res# and S.Con.Res# shall only be used when Concurrent resolutions are being proposed.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC6",
+          "text_summary": "Joint resolution labeling rules.",
+          "classes": [
+            "rule-setting",
+            "non-code"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s1",
+          "exact_change": null,
+          "evidence": "H.J.Res# and S.J.Res# shall only be used when Joint Resolutions are being proposed.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC7",
+          "text_summary": "Amendment labeling rules, including cross-amendment labels.",
+          "classes": [
+            "rule-setting",
+            "non-code"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s1",
+          "exact_change": null,
+          "evidence": "H.Amdt# and S.Amdt# shall only be used when Amendments to a legislative item are submitted.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC8",
+          "text_summary": "Miscellaneous labeling rules for committee reports and treaty documents.",
+          "classes": [
+            "rule-setting",
+            "non-code"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s1",
+          "exact_change": null,
+          "evidence": "Committee Report(s) and Treaty Document(s) shall use the stated label formats.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s1",
+        "detail": "No exact live XML note was located in this pass, but the act belongs at the closest congressional statutory-note anchor rather than as positive-law text."
+      },
+      "recommended_actions": [
+        "Carry the act as a statutory note at the Title 2 congressional anchor.",
+        "Do not force a positive-law section rewrite for chamber labeling conventions."
+      ],
+      "confidence": "high",
+      "final_status": "current",
+      "chronology_conclusion": "The source is a live congressional labeling-and-formatting measure that remains operative and is best treated as note-level material.",
+      "approved_code_treatment": "statutory-note",
+      "current_xml_comparison": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s1",
+        "detail": "No exact live XML note was located in this pass, but the correct treatment remains a congressional statutory note."
+      },
+      "source_evidence": [
+        "The purpose clause says the act exists to fix on-going labeling issues in Both Houses of Congress.",
+        "The operative sections govern bills, resolutions, concurrent resolutions, joint resolutions, amendments, committee reports, and treaty documents."
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "Carry the act as a statutory note at the Title 2 congressional anchor. | Do not force a positive-law section rewrite for chamber labeling conventions.",
+      "exact_target": "/us/usc/t2/s1"
+    },
+    {
+      "law_id": "PL-015-109",
+      "public_law": "15-109",
+      "title": "Public Law 15-109 | Ending Tigray for the Last Time",
+      "status": "repealed",
+      "status_basis": "The live Title 2 note treats the enactment as repealed or superseded history only, and the recovered text is a formal repeal of the prior war notice.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Formal repeal of the war notice in HJR6 and termination of the state of war with the Republic of Tigray.",
+          "classes": [
+            "repeal",
+            "non-code"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t2/s1",
+          "exact_change": "Record the repeal as statutory history only.",
+          "evidence": "The resolution states that the war notice in HJR6 is formally repealed in its entirety.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s1",
+        "detail": "The live Code already treats this enactment as repealed or superseded statutory history."
+      },
+      "recommended_actions": [
+        "Keep the enactment as a repeal-history note only.",
+        "Do not promote it to operative Code text."
+      ],
+      "confidence": "high",
+      "final_status": "repealed",
+      "chronology_conclusion": "The recovered resolution is a repealer for the earlier Tigray war notice and has no independent positive-law Code text.",
+      "approved_code_treatment": "historical-note-only",
+      "current_xml_comparison": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s1",
+        "detail": "The live note already classifies the law as repealed or superseded and preserved as statutory history."
+      },
+      "source_evidence": [
+        "The resolution says the war notice in HJR6 is formally repealed in its entirety.",
+        "The live Title 2 note records the enactment as repealed or superseded and preserved as statutory history."
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "Keep the enactment as a repeal-history note only. | Do not promote it to operative Code text.",
+      "exact_target": "/us/usc/t2/s1",
+      "exact_change": "Record the repeal as statutory history only."
+    },
+    {
+      "law_id": "PL-015-110",
+      "public_law": "15-110",
+      "title": "Public Law 15-110 | Damascus Embassy IG Investigation Act",
+      "status": "repealed",
+      "status_basis": "The source file is unrecoverable and the live Title 22 note already marks the enactment as repealed or superseded history only.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Source unavailable; no authenticated operative text could be recovered.",
+          "classes": [
+            "non-code",
+            "source-unavailable"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t22/s2651a",
+          "exact_change": null,
+          "evidence": "The recovery set contains only the unrecoverable marker, and the Code note preserves the law as statutory history.",
+          "notes": "Retain only as history."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t22/s2651a",
+        "detail": "The XML note exists, but the underlying enactment file was unrecoverable, so the historical-note treatment cannot be promoted further."
+      },
+      "recommended_actions": [
+        "Keep the law as historical-note only.",
+        "Do not invent any operative text from the missing source."
+      ],
+      "confidence": "high",
+      "final_status": "repealed",
+      "chronology_conclusion": "The enactment is not recoverable from the source set and is already carried as repealed or superseded statutory history.",
+      "approved_code_treatment": "historical-note-only",
+      "current_xml_comparison": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t22/s2651a",
+        "detail": "The XML note exists, but the underlying enactment text was not recovered, so no further validation was possible."
+      },
+      "source_evidence": [
+        "The recovery set contains only the unrecoverable marker.",
+        "The live Title 22 note records the enactment as repealed or superseded and preserved solely as statutory history."
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "Keep the law as historical-note only. | Do not invent any operative text from the missing source.",
+      "exact_target": "/us/usc/t22/s2651a"
+    },
+    {
+      "law_id": "PL-028-205",
+      "public_law": "28-205",
+      "title": "Public Law 28-205 | Inspector General Reform Act of 2024",
+      "status": "current",
+      "status_basis": "The recovered text is a substantive inspector-general reform act that amends the prior IG framework and remains operative as enacted law.",
+      "provisions": [
+        {
+          "ref": "SEC1-2",
+          "text_summary": "Short title and purpose to amend the IG Act of 2023, enhance IG independence, and create the Council.",
+          "classes": [
+            "short-title",
+            "purpose",
+            "non-code"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5/s424",
+          "exact_change": null,
+          "evidence": "This Act may be cited as the Inspector General Reform Act of 2024, and its purpose is to amend the Inspector General Act of 2023.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC3",
+          "text_summary": "Repeal of Public Law 15-98 section 3.",
+          "classes": [
+            "repeal"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t5/s424",
+          "exact_change": "Record the repeal of Public Law 15-98 section 3 as history only.",
+          "evidence": "Public Law 15-98 Section 3 is repealed in its entirety.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC4",
+          "text_summary": "Establishment of Inspector General offices in the listed departments and components.",
+          "classes": [
+            "new-permanent-general",
+            "statutory-note-material"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5/s424",
+          "exact_change": null,
+          "evidence": "The act lists the Department of State, Defense, Homeland Security, Intelligence Community, Commerce and Labor, Justice, Transportation, and Capitol Police.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC5",
+          "text_summary": "Creation of the Council of the Inspectors General on Integrity and Efficiency and its governance structure.",
+          "classes": [
+            "new-permanent-general",
+            "statutory-note-material"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5/s424",
+          "exact_change": null,
+          "evidence": "The act establishes the Council as an independent entity and sets mission, membership, chair, and reporting duties.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC6-11",
+          "text_summary": "Reporting, administrative powers, subpoena authority, investigative authority, and whistleblower protections.",
+          "classes": [
+            "new-permanent-general",
+            "statutory-note-material"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5/s424",
+          "exact_change": null,
+          "evidence": "The act requires reports to Congress, access to records, document creation duties, subpoena power, investigative authority, and whistleblower protections.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s424",
+        "detail": "The live Title 5 framework already contains the Council of the Inspectors General on Integrity and Efficiency, but no exact XML delta for the 2024 act was isolated in this pass."
+      },
+      "recommended_actions": [
+        "Retain the act as current statutory-note material at the Title 5 inspector-general anchor.",
+        "Do not invent a more specific Code rewrite without a validated XML target."
+      ],
+      "confidence": "high",
+      "final_status": "current",
+      "chronology_conclusion": "The act is a live inspector-general reform measure that remains operative, but the exact downstream XML rewrite was not validated during this review.",
+      "approved_code_treatment": "statutory-note",
+      "current_xml_comparison": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s424",
+        "detail": "The current Title 5 Council framework is present, but this pass did not isolate an exact live XML insertion for the 2024 act."
+      },
+      "source_evidence": [
+        "The short title and purpose clauses identify a live reform act, not a repealed one.",
+        "The recovered text creates IG offices, a Council, reporting duties, subpoena authority, investigative authority, and whistleblower protections."
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "Retain the act as current statutory-note material at the Title 5 inspector-general anchor. | Do not invent a more specific Code rewrite without a validated XML target.",
+      "exact_target": "/us/usc/t5/s424",
+      "exact_change": "Record the repeal of Public Law 15-98 section 3 as history only."
+    }
+  ]
+}

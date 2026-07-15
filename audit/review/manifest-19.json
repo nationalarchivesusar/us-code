@@ -1,0 +1,227 @@
+{
+  "reviewer": "reviewer-19",
+  "group_index": 19,
+  "law_count": 10,
+  "output_path": "audit/review/review-19.json",
+  "laws": [
+    {
+      "law_id": "PL-026-186",
+      "public_law": "26-186",
+      "title": "Public Law 26-186 | Secret Service Jurisdiction Reform Act",
+      "report_path": "audit/primary/batch-07-01.json",
+      "batch": 7,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION 4",
+        "SECTION 5",
+        "SECTION 6",
+        "SECTION 7",
+        "SECTION 8",
+        "SECTION 9"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-026-187",
+      "public_law": "26-187",
+      "title": "Public Law 26-187 | FPS Funding Act",
+      "report_path": "audit/primary/batch-07-01.json",
+      "batch": 7,
+      "source_status": "expired",
+      "validation_status": "incomplete",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target",
+        "status:expired"
+      ],
+      "provision_refs": [
+        "SEC 4"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-026-188",
+      "public_law": "26-188",
+      "title": "Public Law 26-188 | Departmental Reports Act",
+      "report_path": "audit/primary/batch-07-01.json",
+      "batch": 7,
+      "source_status": "current",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 3(a)",
+        "SEC 3(b)",
+        "SEC 5",
+        "SEC 6",
+        "SEC 7",
+        "SEC 8"
+      ],
+      "targets": [
+        "/us/usc/t50/s3371a"
+      ]
+    },
+    {
+      "law_id": "PL-026-189",
+      "public_law": "26-189",
+      "title": "Public Law 26-189 | Fiscal Year 22-1",
+      "report_path": "audit/primary/batch-07-01.json",
+      "batch": 7,
+      "source_status": "expired",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "status:expired"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-026-190",
+      "public_law": "26-190",
+      "title": "Public Law 26-190 | The Great Reform Initiative of the Judiciary",
+      "report_path": "audit/primary/batch-07-01.json",
+      "batch": 7,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION 101(a)",
+        "SECTION 101(b-i)",
+        "SECTION 102(a)",
+        "SECTION 102(b-d)",
+        "SECTION 103(a-g)",
+        "SECTION 105(a-d)",
+        "SECTION 106(a)",
+        "SECTION 106(b-i)",
+        "SECTION 107(a-b)",
+        "SECTION 108(a-c)"
+      ],
+      "targets": [
+        "/us/usc/t28/ch1",
+        "/us/usc/t28/ch13",
+        "/us/usc/t28/ch15",
+        "/us/usc/t28/ch43",
+        "/us/usc/t28/ch5",
+        "/us/usc/t28/s136",
+        "/us/usc/t28/s331",
+        "/us/usc/t28/s631"
+      ]
+    },
+    {
+      "law_id": "PL-026-191",
+      "public_law": "26-191",
+      "title": "Public Law 26-191 | Federal Employment Reform Act of 2024 (FERA24)",
+      "report_path": "audit/primary/batch-07-02.json",
+      "batch": 7,
+      "source_status": "repealed",
+      "validation_status": "contradicted by source",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "direct-action-provision",
+        "missing-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION 4-5",
+        "SECTION 9-10"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-027-192",
+      "public_law": "27-192",
+      "title": "Public Law 27-192 | Presidential Libraries and Better Public Records Management Act",
+      "report_path": "audit/primary/batch-07-02.json",
+      "batch": 7,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION II",
+        "SECTION III(a)-(b)",
+        "SECTION IV",
+        "SECTION V"
+      ],
+      "targets": [
+        "/us/pl/3/19",
+        "/us/usc/t18/s2071"
+      ]
+    },
+    {
+      "law_id": "PL-027-193",
+      "public_law": "27-193",
+      "title": "Public Law 27-193 | Preservation of Parks and Monuments Act",
+      "report_path": "audit/primary/batch-07-02.json",
+      "batch": 7,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION 4",
+        "SECTION 5"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-027-194",
+      "public_law": "27-194",
+      "title": "Public Law 27-194 | Fast Food Workers Day Act of 2024",
+      "report_path": "audit/primary/batch-07-02.json",
+      "batch": 7,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SECTION 2(a)"
+      ],
+      "targets": [
+        "/us/usc/t5/s6103/a"
+      ]
+    },
+    {
+      "law_id": "PL-027-195",
+      "public_law": "27-195",
+      "title": "Public Law 27-195 | The Preservation of Laws Act (PLA)",
+      "report_path": "audit/primary/batch-07-02.json",
+      "batch": 7,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium"
+      ],
+      "provision_refs": [],
+      "targets": []
+    }
+  ]
+}

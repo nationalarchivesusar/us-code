@@ -1,0 +1,371 @@
+{
+  "reviewer": "law-auditor-H",
+  "group_index": 17,
+  "law_count": 10,
+  "source_manifest": "audit/review/manifest-17.json",
+  "output_path": "audit/review/review-17.json",
+  "laws": [
+    {
+      "law_id": "PL-022-164",
+      "public_law": "22-164",
+      "title": "Public Law 22-164 | Streamlining and Protecting American Security Act",
+      "final_legal_status": "current",
+      "status_basis": "The source report classifies the law as active and general/permanent, with no later enactment in the reviewed materials repealing it.",
+      "chronology": "No later law in the reviewed materials displaces this enactment.",
+      "repeal_transfer_redesignation": "No repeal, transfer, or redesignation chain was resolved; the act functions as a stand-alone statutory note.",
+      "required_code_treatment": "statutory-note-only",
+      "current_implementation": {
+        "assessment": "not-found-in-live-xml",
+        "location": "/us/usc/t50/s3352d",
+        "detail": "The current tree and origin/main search did not surface a dedicated Pub. L. 22-164 note in title 50."
+      },
+      "provision_disposition": [
+        {
+          "provision": "SEC 3",
+          "operative_character": "general and permanent security-clearance reform",
+          "code_treatment": "statutory-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "codification/mass_migration/latest/reports/laws/PL-022-164.md"
+        }
+      ],
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-022-164.md",
+        "codification/laws/laws/PL-022-164/law.txt",
+        "usc/usc50.xml"
+      ],
+      "recommended_actions": [
+        "Add a concise statutory note at 50 U.S.C. 3352d.",
+        "Do not create a new U.S. Code section.",
+        "Keep the act marked current."
+      ],
+      "confidence": "high",
+      "chronology_conclusion": "No later law in the reviewed materials displaces this enactment.",
+      "approved_code_treatment": "statutory-note-only",
+      "final_recommended_action": "Add a concise statutory note at 50 U.S.C. 3352d. | Do not create a new U.S. Code section. | Keep the act marked current."
+    },
+    {
+      "law_id": "PL-023-165",
+      "public_law": "23-165",
+      "title": "Public Law 23-165 | 2nd Amendment Protection Act (2APA)",
+      "final_legal_status": "repealed",
+      "status_basis": "The source report classifies the law as repealed, but also records that its operative amendment has already been incorporated into title 18.",
+      "chronology": "No later law in the reviewed materials undoes the incorporated amendment; the repeal status is historical, not a reason to remove the existing Code change.",
+      "repeal_transfer_redesignation": "The enactment amends 18 U.S.C. 930(g)(1) and includes a rule-of-construction clause; no transfer or redesignation chain was resolved.",
+      "required_code_treatment": "already-incorporated",
+      "current_implementation": {
+        "assessment": "already-incorporated",
+        "location": "/us/usc/t18/s930/g/1",
+        "detail": "The current branch contains the amended Federal facility definition in 18 U.S.C. 930(g)(1) and a USAR amendment note for Pub. L. 23-165."
+      },
+      "provision_disposition": [
+        {
+          "provision": "SEC 4(1)",
+          "operative_character": "direct amendment to 18 U.S.C. 930(g)(1)",
+          "code_treatment": "already-incorporated",
+          "implementation": "present in live XML",
+          "source_evidence": "usc/usc18.xml"
+        },
+        {
+          "provision": "SEC 4(2)",
+          "operative_character": "rule of construction for the firearms-possession prohibition",
+          "code_treatment": "no separate code insertion",
+          "implementation": "handled as interpretive history only",
+          "source_evidence": "codification/decisions/PL-023-165.md"
+        }
+      ],
+      "source_evidence": [
+        "codification/decisions/PL-023-165.md",
+        "codification/packets/PL-023-165/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-023-165.md",
+        "usc/usc18.xml"
+      ],
+      "recommended_actions": [
+        "Leave the amended 18 U.S.C. 930(g)(1) text and history note in place.",
+        "Do not add a separate insertion for SEC 4(2).",
+        "Keep the repeal status as historical metadata only."
+      ],
+      "confidence": "high",
+      "chronology_conclusion": "No later law in the reviewed materials undoes the incorporated amendment; the repeal status is historical, not a reason to remove the existing Code change.",
+      "approved_code_treatment": "already-incorporated",
+      "final_recommended_action": "Leave the amended 18 U.S.C. 930(g)(1) text and history note in place. | Do not add a separate insertion for SEC 4(2). | Keep the repeal status as historical metadata only."
+    },
+    {
+      "law_id": "PL-023-167",
+      "public_law": "23-167",
+      "title": "Public Law 23-167 | Uh Oh Act",
+      "final_legal_status": "current",
+      "status_basis": "The report classifies the law as active, but no readable authenticated enactment text could be recovered.",
+      "chronology": "No later enactment was identified in the reviewed materials, but the source remains unreadable so no codification can be confirmed.",
+      "repeal_transfer_redesignation": "No repeal, transfer, or redesignation chain was resolved because the source could not be recovered.",
+      "required_code_treatment": "source-unavailable",
+      "current_implementation": {
+        "assessment": "source-unavailable",
+        "location": null,
+        "detail": "No current XML implementation can be audited because the source text itself was not recoverable."
+      },
+      "provision_disposition": [],
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-023-167.md",
+        "codification/laws/audit.csv",
+        "codification/mass_migration/latest/reports/UNRESOLVED-REGISTER.md"
+      ],
+      "recommended_actions": [
+        "Keep the law inventoried only.",
+        "Do not add XML until a readable authenticated source is recovered.",
+        "Do not infer any operative Code text."
+      ],
+      "confidence": "high",
+      "chronology_conclusion": "No later enactment was identified in the reviewed materials, but the source remains unreadable so no codification can be confirmed.",
+      "approved_code_treatment": "source-unavailable",
+      "final_recommended_action": "Keep the law inventoried only. | Do not add XML until a readable authenticated source is recovered. | Do not infer any operative Code text."
+    },
+    {
+      "law_id": "PL-023-168",
+      "public_law": "23-168",
+      "title": "Public Law 23-168 | Affirming Innovation Act",
+      "final_legal_status": "current",
+      "status_basis": "The source report classifies the law as active and permanent, and the branch already contains the 29 U.S.C. 208 reoccupation.",
+      "chronology": "No later law in the reviewed materials touches the reoccupied section number.",
+      "repeal_transfer_redesignation": "The act reoccupies a previously repealed 29 U.S.C. 208 and preserves the repeal history as prior provisions; no transfer chain was resolved.",
+      "required_code_treatment": "already-incorporated",
+      "current_implementation": {
+        "assessment": "implemented",
+        "location": "/us/usc/t29/s208",
+        "detail": "The current branch contains a full replacement section 208, a prior-provisions note, and a USAR amendment note for Pub. L. 23-168."
+      },
+      "provision_disposition": [
+        {
+          "provision": "SEC 3(a)",
+          "operative_character": "reoccupies 29 U.S.C. 208 with new non-compete limitations and exceptions",
+          "code_treatment": "already-incorporated",
+          "implementation": "present in live XML",
+          "source_evidence": "usc/usc29.xml"
+        },
+        {
+          "provision": "SEC 3(b)",
+          "operative_character": "enforcement and penalty clause with no safe code host",
+          "code_treatment": "no separate code insertion",
+          "implementation": "intentionally left uncodified",
+          "source_evidence": "codification/decisions/PL-023-168.md"
+        }
+      ],
+      "source_evidence": [
+        "codification/decisions/PL-023-168.md",
+        "codification/packets/PL-023-168/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-023-168.md",
+        "usc/usc29.xml"
+      ],
+      "recommended_actions": [
+        "Keep the reoccupied 29 U.S.C. 208 text, prior-provisions note, and USAR amendment note in place.",
+        "Do not invent a subsection for SEC 3(b).",
+        "Keep the act marked current."
+      ],
+      "confidence": "high",
+      "chronology_conclusion": "No later law in the reviewed materials touches the reoccupied section number.",
+      "approved_code_treatment": "already-incorporated",
+      "final_recommended_action": "Keep the reoccupied 29 U.S.C. 208 text, prior-provisions note, and USAR amendment note in place. | Do not invent a subsection for SEC 3(b). | Keep the act marked current."
+    },
+    {
+      "law_id": "PL-023-169",
+      "public_law": "23-169",
+      "title": "Public Law 23-169 | Military Readiness Act",
+      "final_legal_status": "current",
+      "status_basis": "The report classifies the law as active, but no readable authenticated enactment text could be recovered.",
+      "chronology": "No later enactment was identified in the reviewed materials, but the source remains unreadable so no codification can be confirmed.",
+      "repeal_transfer_redesignation": "No repeal, transfer, or redesignation chain was resolved because the source could not be recovered.",
+      "required_code_treatment": "source-unavailable",
+      "current_implementation": {
+        "assessment": "source-unavailable",
+        "location": null,
+        "detail": "No current XML implementation can be audited because the source text itself was not recoverable."
+      },
+      "provision_disposition": [],
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-023-169.md",
+        "codification/laws/unrecoverable.csv",
+        "codification/mass_migration/latest/reports/UNRESOLVED-REGISTER.md"
+      ],
+      "recommended_actions": [
+        "Keep the law inventoried only.",
+        "Do not add XML until a readable authenticated source is recovered.",
+        "Do not infer any operative Code text."
+      ],
+      "confidence": "high",
+      "chronology_conclusion": "No later enactment was identified in the reviewed materials, but the source remains unreadable so no codification can be confirmed.",
+      "approved_code_treatment": "source-unavailable",
+      "final_recommended_action": "Keep the law inventoried only. | Do not add XML until a readable authenticated source is recovered. | Do not infer any operative Code text."
+    },
+    {
+      "law_id": "PL-023-171",
+      "public_law": "23-171",
+      "title": "Public Law 23-171 | Diplomatic Immunity Act",
+      "final_legal_status": "repealed",
+      "status_basis": "The report classifies the law as repealed or superseded before codification, and the later repealer text is reflected in the audit materials.",
+      "chronology": "Public Law 31-227 repeals this law, so there is no current operative text to codify.",
+      "repeal_transfer_redesignation": "The controlling event is repeal by later law; no surviving transfer or redesignation chain requires Code text.",
+      "required_code_treatment": "historical-note-only",
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "location": null,
+        "detail": "No current XML insertion should be carried forward for this repealed enactment."
+      },
+      "provision_disposition": [],
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-023-171.md",
+        "codification/laws/audit.csv",
+        "codification/reports/unresolved_issues_register.md"
+      ],
+      "recommended_actions": [
+        "Retain only historical repeal information.",
+        "Do not add a Code section or statutory note.",
+        "Do not infer operative text."
+      ],
+      "confidence": "high",
+      "chronology_conclusion": "Public Law 31-227 repeals this law, so there is no current operative text to codify.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Retain only historical repeal information. | Do not add a Code section or statutory note. | Do not infer operative text."
+    },
+    {
+      "law_id": "PL-023-172",
+      "public_law": "23-172",
+      "title": "Public Law 23-172 | Congressional Military Service Act",
+      "final_legal_status": "repealed",
+      "status_basis": "The source report classifies the law as repealed, and the readable source was sufficient to confirm that it does not create current Code text.",
+      "chronology": "No current Code treatment is authorized because the enactment is listed as repealed in the reviewed materials.",
+      "repeal_transfer_redesignation": "No transfer or redesignation chain was resolved; the enactment is excluded from current Code treatment.",
+      "required_code_treatment": "historical-note-only",
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "location": null,
+        "detail": "No current XML insertion should be carried forward for this repealed enactment."
+      },
+      "provision_disposition": [],
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-023-172.md",
+        "codification/laws/laws/PL-023-172/law.txt",
+        "codification/laws/audit.csv"
+      ],
+      "recommended_actions": [
+        "Retain only historical repeal information.",
+        "Do not add a Code section or statutory note.",
+        "Do not infer operative text."
+      ],
+      "confidence": "high",
+      "chronology_conclusion": "No current Code treatment is authorized because the enactment is listed as repealed in the reviewed materials.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Retain only historical repeal information. | Do not add a Code section or statutory note. | Do not infer operative text."
+    },
+    {
+      "law_id": "PL-024-173",
+      "public_law": "24-173",
+      "title": "Public Law 24-173 | Federal Enhancement Against Foreign Intrusion Act",
+      "final_legal_status": "current",
+      "status_basis": "The source report classifies the law as active and permanent, with no express Code amendment identified.",
+      "chronology": "No later law in the reviewed materials displaces this enactment.",
+      "repeal_transfer_redesignation": "No repeal, transfer, or redesignation chain was resolved; the act is a stand-alone statutory note.",
+      "required_code_treatment": "statutory-note-only",
+      "current_implementation": {
+        "assessment": "not-found-in-live-xml",
+        "location": "/us/usc/t2/s172",
+        "detail": "The current tree and origin/main search did not surface a dedicated Pub. L. 24-173 note at title 2 section 172."
+      },
+      "provision_disposition": [
+        {
+          "provision": "SECTION II",
+          "operative_character": "foreign-affiliation rules and disciplinary consequences",
+          "code_treatment": "statutory-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "codification/mass_migration/latest/reports/laws/PL-024-173.md"
+        },
+        {
+          "provision": "SECTION III",
+          "operative_character": "disclosure and enforcement rules",
+          "code_treatment": "statutory-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "codification/mass_migration/latest/reports/laws/PL-024-173.md"
+        },
+        {
+          "provision": "SECTION IV",
+          "operative_character": "severability and effective-date language",
+          "code_treatment": "ancillary-note-only",
+          "implementation": "no live XML note located",
+          "source_evidence": "codification/mass_migration/latest/reports/laws/PL-024-173.md"
+        }
+      ],
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-024-173.md",
+        "codification/laws/laws/PL-024-173/law.txt",
+        "usc/usc02.xml"
+      ],
+      "recommended_actions": [
+        "Add a concise statutory note at 2 U.S.C. 172.",
+        "Do not create a new U.S. Code section.",
+        "Keep the act marked current."
+      ],
+      "confidence": "high",
+      "chronology_conclusion": "No later law in the reviewed materials displaces this enactment.",
+      "approved_code_treatment": "statutory-note-only",
+      "final_recommended_action": "Add a concise statutory note at 2 U.S.C. 172. | Do not create a new U.S. Code section. | Keep the act marked current."
+    },
+    {
+      "law_id": "PL-024-174",
+      "public_law": "24-174",
+      "title": "Public Law 24-174 | Washington, D.C. Permitless Carry Act",
+      "final_legal_status": "repealed",
+      "status_basis": "The source report classifies the law as repealed, so no current Code treatment is authorized.",
+      "chronology": "No current Code insertion is authorized because the enactment is listed as repealed in the reviewed materials.",
+      "repeal_transfer_redesignation": "No transfer or redesignation chain was resolved; the enactment is excluded from current Code treatment.",
+      "required_code_treatment": "historical-note-only",
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "location": null,
+        "detail": "No current XML insertion should be carried forward for this repealed enactment."
+      },
+      "provision_disposition": [],
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-024-174.md",
+        "codification/laws/laws/PL-024-174/law.txt",
+        "codification/laws/audit.csv"
+      ],
+      "recommended_actions": [
+        "Retain only historical repeal information.",
+        "Do not add a Code section or statutory note.",
+        "Do not infer operative text."
+      ],
+      "confidence": "high",
+      "chronology_conclusion": "No current Code insertion is authorized because the enactment is listed as repealed in the reviewed materials.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Retain only historical repeal information. | Do not add a Code section or statutory note. | Do not infer operative text."
+    },
+    {
+      "law_id": "PL-024-175",
+      "public_law": "24-175",
+      "title": "Public Law 24-175 | MPD Relocation Act",
+      "final_legal_status": "current",
+      "status_basis": "The report classifies the law as active, but no readable authenticated enactment text could be recovered.",
+      "chronology": "No later enactment was identified in the reviewed materials, but the source remains unreadable so no codification can be confirmed.",
+      "repeal_transfer_redesignation": "No repeal, transfer, or redesignation chain was resolved because the source could not be recovered.",
+      "required_code_treatment": "source-unavailable",
+      "current_implementation": {
+        "assessment": "source-unavailable",
+        "location": null,
+        "detail": "No current XML implementation can be audited because the source text itself was not recoverable."
+      },
+      "provision_disposition": [],
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-024-175.md",
+        "codification/laws/unrecoverable.csv",
+        "codification/mass_migration/latest/reports/UNRESOLVED-REGISTER.md"
+      ],
+      "recommended_actions": [
+        "Keep the law inventoried only.",
+        "Do not add XML until a readable authenticated source is recovered.",
+        "Do not infer any operative Code text."
+      ],
+      "confidence": "high",
+      "chronology_conclusion": "No later enactment was identified in the reviewed materials, but the source remains unreadable so no codification can be confirmed.",
+      "approved_code_treatment": "source-unavailable",
+      "final_recommended_action": "Keep the law inventoried only. | Do not add XML until a readable authenticated source is recovered. | Do not infer any operative Code text."
+    }
+  ]
+}

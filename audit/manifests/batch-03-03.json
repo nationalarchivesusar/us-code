@@ -1,0 +1,585 @@
+﻿{
+    "batch":  3,
+    "auditor":  "law-auditor-C",
+    "report_path":  "audit/primary/batch-03-03.json",
+    "law_count":  10,
+    "laws":  [
+                 {
+                     "law_id":  "PL-012-081",
+                     "public_law":  "12-81",
+                     "title":  "Public Law 12-81 | The Integrity Act",
+                     "list_name":  "11th - 20th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-012-081/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  2047,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-012-081/source/The Integrity Act - S.B. 12.pdf",
+                                              "format":  "pdf",
+                                              "size":  76866,
+                                              "sha256":  "20c7ffbb923172530e37da2f73582e2689df4a79b2316d8bffb5682cc03714c9"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "findings",
+                                                         "repeal",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc28.xml",
+                                                   "note_id":  "rp-pl012081-codification",
+                                                   "public_law":  "12-81",
+                                                   "congress_from_id":  12,
+                                                   "seq_from_id":  81,
+                                                   "heading_cited_pl":  "12-81",
+                                                   "heading":  "The Integrity Actâ€”Pub. L. 12â€“81",
+                                                   "placement_identifier":  "/us/usc/t28/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/FLNx9D63/256-public-law-12-81-the-integrity-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "52087190ef85a2e2d0ff2555a533ec1ddf181636213d78433c5b526c9a226218"
+                                                                      ],
+                                                   "note_char_length":  2716
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-012-082",
+                     "public_law":  "12-82",
+                     "title":  "Public Law 12-82 | Military Officer Commissioning Reform Act 2023",
+                     "list_name":  "11th - 20th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-012-082/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  14895,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-012-082/source/S.8 - Military Officer Commissioning Reform Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  92379,
+                                              "sha256":  "07ac6e12ed031d0f2f859b7c6e0bd01a3843a6f69c610ae869967d88fe1319fd"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "Title 10",
+                                                     "Title 14",
+                                                     "Title 32"
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "amend",
+                                                         "appropriat",
+                                                         "effective",
+                                                         "establish",
+                                                         "repeal",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc10.xml",
+                                                   "note_id":  "rp-pl012082-codification",
+                                                   "public_law":  "12-82",
+                                                   "congress_from_id":  12,
+                                                   "seq_from_id":  82,
+                                                   "heading_cited_pl":  "12-82",
+                                                   "heading":  "Military Officer Commissioning Reform Act 2023â€”Pub. L. 12â€“82",
+                                                   "placement_identifier":  "/us/usc/t10/s101/h",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/MI2YJPvy/257-public-law-12-82-military-officer-commissioning-reform-act-2023"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "8210eae73a18f79aef0817c704761a65f02bcdb677cd61fac7e63f2e54e68a37"
+                                                                      ],
+                                                   "note_char_length":  15741
+                                               },
+                                               {
+                                                   "file":  "usc10.xml",
+                                                   "note_id":  "rp-pl012082-151-note",
+                                                   "public_law":  "12-82",
+                                                   "congress_from_id":  12,
+                                                   "seq_from_id":  82,
+                                                   "heading_cited_pl":  null,
+                                                   "heading":  "USAR Amendments",
+                                                   "placement_identifier":  "/us/usc/t10/s151/g/1",
+                                                   "declared_status":  "",
+                                                   "declared_codification":  "",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  441
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-012-083",
+                     "public_law":  "12-83",
+                     "title":  "Public Law 12-83 | Dannybec Went to Jail Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-012-083/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  1274,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-012-083/source/HR1207 _ Dannybec Went To Jail Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  38279,
+                                              "sha256":  "684d964e03fb871127bbc2c00832440b1da81ad761776b1790583def827b9dce"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "repeal",
+                                                         "sense",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc50.xml",
+                                                   "note_id":  "rp-pl012083-codification",
+                                                   "public_law":  "12-83",
+                                                   "congress_from_id":  12,
+                                                   "seq_from_id":  83,
+                                                   "heading_cited_pl":  "12-83",
+                                                   "heading":  "Dannybec Went to Jail Actâ€”Pub. L. 12â€“83",
+                                                   "placement_identifier":  "/us/usc/t50/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/sVJz0m3n/258-public-law-12-83-dannybec-went-to-jail-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "3220ff7dfd7b295c2aa459354cf61b57467cb4c7c0cac7dce4e919e74de58edc"
+                                                                      ],
+                                                   "note_char_length":  2004
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-012-084",
+                     "public_law":  "12-84",
+                     "title":  "Public Law 12-84 | Municipal Act of 2023",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-012-084/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  6593,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-012-084/source/HR1209 _ Municipal Act of 2023.pdf",
+                                              "format":  "pdf",
+                                              "size":  92293,
+                                              "sha256":  "31ede5ef8bcd38f50a6da1db322018340055a49a08d13a02504978486bf8bfe0"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "amend",
+                                                         "establish",
+                                                         "repeal",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc40.xml",
+                                                   "note_id":  "rp-pl012084-codification",
+                                                   "public_law":  "12-84",
+                                                   "congress_from_id":  12,
+                                                   "seq_from_id":  84,
+                                                   "heading_cited_pl":  "12-84",
+                                                   "heading":  "Municipal Act of 2023â€”Pub. L. 12â€“84",
+                                                   "placement_identifier":  "/us/usc/t40/s101/4",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/wKter7jB/272-public-law-12-84-municipal-act-of-2023"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "d07d4a3b70569cbc3807e527a6d153b85ed391b62c54e3cef5b73e6154ebc50e"
+                                                                      ],
+                                                   "note_char_length":  7338
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-012-085",
+                     "public_law":  "12-85",
+                     "title":  "Public Law 12-85 | The Congress Strikes Back Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-012-085/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  1809,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-012-085/source/HR1255 The Congress Strikes Back Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  78165,
+                                              "sha256":  "e05805877dd59daf7e1a449220c810b967f897b1e7b7cf9bc236b3270072a1c9"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc02.xml",
+                                                   "note_id":  "rp-pl012085-codification",
+                                                   "public_law":  "12-85",
+                                                   "congress_from_id":  12,
+                                                   "seq_from_id":  85,
+                                                   "heading_cited_pl":  "12-85",
+                                                   "heading":  "The Congress Strikes Back Actâ€”Pub. L. 12â€“85",
+                                                   "placement_identifier":  "/us/usc/t2/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/MxB9g55I/260-public-law-12-85-the-congress-strikes-back-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "77bde34da3c5f57bb89713015e59416e4c65c44f29c542fb1222efa8f12bdddd"
+                                                                      ],
+                                                   "note_char_length":  2548
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-012-086",
+                     "public_law":  "12-86",
+                     "title":  "Public Law 12-86 | H.R. 1302",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-012-086/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  701,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-012-086/source/H.R. 1302 Amending the New District of Columbia Home Rule Act - Edited by READING clerk.pdf",
+                                              "format":  "pdf",
+                                              "size":  68934,
+                                              "sha256":  "54e8b40c7d98254261edac29bd12c42f6502d4b7e2d3c7e2c384ba80dd81fd52"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "amend",
+                                                         "repeal",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc40.xml",
+                                                   "note_id":  "rp-pl012086-codification",
+                                                   "public_law":  "12-86",
+                                                   "congress_from_id":  12,
+                                                   "seq_from_id":  86,
+                                                   "heading_cited_pl":  "12-86",
+                                                   "heading":  "H.R. 1302â€”Pub. L. 12â€“86",
+                                                   "placement_identifier":  "/us/usc/t40/s101/4",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/pU80XnLE/264-public-law-12-86-hr-1302"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "d12abd63a405ff4746180a823975de658e90bf50b0224dd118d78645f2d101c4"
+                                                                      ],
+                                                   "note_char_length":  1404
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-012-087",
+                     "public_law":  "12-87",
+                     "title":  "Public Law 12-87 | An act to repeal the Smart Label Congress Act (Public Law 9-54)",
+                     "list_name":  "11th - 20th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-012-087/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  2398,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-012-087/source/S.9 - An act to repeal the Smart Label Congress Act (Public Law 9-54)..pdf",
+                                              "format":  "pdf",
+                                              "size":  72328,
+                                              "sha256":  "835e9e7754eb4b367972f4235d3537d75bb63e3a7c329f039b0ae2d2ce44198f"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+                                                    "Public Law 9-54"
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "repeal",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc02.xml",
+                                                   "note_id":  "rp-pl012087-codification",
+                                                   "public_law":  "12-87",
+                                                   "congress_from_id":  12,
+                                                   "seq_from_id":  87,
+                                                   "heading_cited_pl":  "12-87",
+                                                   "heading":  "An act to repeal the Smart Label Congress Act (Public Law 9-54)â€”Pub. L. 12â€“87",
+                                                   "placement_identifier":  "/us/usc/t2/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/0Crv6kPX/271-public-law-12-87-an-act-to-repeal-the-smart-label-congress-act-public-law-9-54"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "c118b9ec5d40c0c277047028c61a78d06292295524fe9ba0413e92605f79b901"
+                                                                      ],
+                                                   "note_char_length":  3160
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-012-088",
+                     "public_law":  "12-88",
+                     "title":  "Public Law 12-88 | New District of Columbia Home Rule Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-012-088/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  29817,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-012-088/source/H.R. 1256 - New District of Columbia Home Rule Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  121788,
+                                              "sha256":  "f97e961f551906ce3d81bbb9afba08517daeb99500b60e1c7ded45a04b10ccda"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "Title 4",
+                                                     "section 3056 of title 18",
+                                                     "title 18",
+                                                     "title 3"
+                                                 ],
+                     "detected_pl_references":  [
+                                                    "Public Law 93-198"
+                                                ],
+                     "detected_operative_language":  [
+                                                         "amend",
+                                                         "appropriat",
+                                                         "effective",
+                                                         "establish",
+                                                         "severab",
+                                                         "sunset"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc40.xml",
+                                                   "note_id":  "rp-pl012088-codification",
+                                                   "public_law":  "12-88",
+                                                   "congress_from_id":  12,
+                                                   "seq_from_id":  88,
+                                                   "heading_cited_pl":  "12-88",
+                                                   "heading":  "New District of Columbia Home Rule Actâ€”Pub. L. 12â€“88",
+                                                   "placement_identifier":  "/us/usc/t40/s101/4",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/Wm9gcub8/259-public-law-12-88-new-district-of-columbia-home-rule-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "1ad6408764c120ebcdeeada79643677047dce3283be5eb663b07fc38eff8437b"
+                                                                      ],
+                                                   "note_char_length":  30699
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-012-103",
+                     "public_law":  "12-103",
+                     "title":  "Public Law 12-103 | Ceremonial 5-Star Officer Creation Act",
+                     "list_name":  "11th - 20th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-012-103/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  4170,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-012-103/source/H.R. 1244 - Ceremonial 5-Star Officer Creation Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  54336,
+                                              "sha256":  "447d6b70e574226dfe84dfdfc8e0c5123afee45103d242c17734bbaff2e2f39c"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "appropriat",
+                                                         "effective",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc36.xml",
+                                                   "note_id":  "rp-pl012103-codification",
+                                                   "public_law":  "12-103",
+                                                   "congress_from_id":  12,
+                                                   "seq_from_id":  103,
+                                                   "heading_cited_pl":  "12-103",
+                                                   "heading":  "Ceremonial 5-Star Officer Creation Actâ€”Pub. L. 12â€“103",
+                                                   "placement_identifier":  "/us/usc/t36/s101/3",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/R0m6hvNO/254-public-law-12-103-ceremonial-5-star-officer-creation-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "e5ab52ff78e6d7a62e916f85d6c69785ee5285e7e04c837ec2e6496815ef3161"
+                                                                      ],
+                                                   "note_char_length":  5571
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-014-089",
+                     "public_law":  "14-89",
+                     "title":  "Public Law 14-89 | Americans Safety and Smart Act of 2023",
+                     "list_name":  "11th - 20th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-014-089/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  3094,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-014-089/source/S.14 Americans Safety and Smart Act of 2023.pdf",
+                                              "format":  "pdf",
+                                              "size":  86079,
+                                              "sha256":  "f405ca15ccbff9ab6156b31dbf51484d02b420bc55516f3c78f7c6f1412e72f0"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "Chapter 41 of Title 18",
+                                                     "Title 18"
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "establish",
+                                                         "severab"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc18.xml",
+                                                   "note_id":  "rp-pl014089-codification",
+                                                   "public_law":  "14-89",
+                                                   "congress_from_id":  14,
+                                                   "seq_from_id":  89,
+                                                   "heading_cited_pl":  "14-89",
+                                                   "heading":  "Americans Safety and Smart Act of 2023â€”Pub. L. 14â€“89",
+                                                   "placement_identifier":  "/us/usc/t18/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/rmx4ZpRe/273-public-law-14-89-americans-safety-and-smart-act-of-2023"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  736
+                                               }
+                                           ]
+                 }
+             ]
+}

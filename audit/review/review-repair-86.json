@@ -1,0 +1,370 @@
+{
+  "reviewer": "law-auditor-86",
+  "group_index": 86,
+  "law_count": 5,
+  "source_manifest": "audit/manifests/review-repair-86.json",
+  "output_path": "audit/review/review-repair-86.json",
+  "completion_summary": "Reviewed 5 assigned laws: PL-003-020 is fully repealed by PL-010-068, PL-004-029/030/031 are repeal-history laws only, and PL-004-032 is a source-defect because the supplied file is an executive order surrogate rather than the enacted act.",
+  "reviewed_against": [
+    "audit/manifests/review-repair-86.json",
+    "codification/reference/all_270_laws_classification.csv",
+    "codification/laws/laws/PL-003-020/metadata.json",
+    "codification/laws/laws/PL-003-020/source/H.R.26.pdf",
+    "codification/laws/laws/PL-010-068/law.txt",
+    "codification/laws/laws/PL-004-029/metadata.json",
+    "codification/laws/laws/PL-004-029/law.txt",
+    "codification/laws/laws/PL-031-226/law.txt",
+    "codification/laws/laws/PL-004-030/metadata.json",
+    "codification/laws/laws/PL-004-030/law.txt",
+    "codification/laws/laws/PL-029-207/law.txt",
+    "codification/laws/laws/PL-004-031/metadata.json",
+    "codification/laws/laws/PL-004-031/law.txt",
+    "codification/laws/laws/PL-028-202/law.txt",
+    "codification/laws/laws/PL-004-032/metadata.json",
+    "codification/laws/laws/PL-004-032/law.txt",
+    "codification/laws/laws/PL-004-032/source/Executive_Order_18-4.pdf"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-003-020",
+      "public_law": "3-20",
+      "title": "Public Law 3-20 | National Immigration Employment Act of 2021",
+      "status": "fully-repealed",
+      "status_basis": "The PDF source is readable and PL 10-68 expressly repeals Public Law 3-20 in full, so the act survives only as repeal history.",
+      "approved_code_treatment": "historical-note-only",
+      "source_evidence": [
+        "codification/laws/laws/PL-003-020/metadata.json",
+        "codification/laws/laws/PL-003-020/source/H.R.26.pdf",
+        "codification/laws/laws/PL-010-068/law.txt",
+        "codification/reference/all_270_laws_classification.csv"
+      ],
+      "current_implementation": {
+        "assessment": "missing-note",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "The act is identifiable from the PDF source, but I did not locate a matching codified history note in the current tree."
+      },
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "text_summary": "Short title, severability, and immediate-effective-date language.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep this framing material as repeal history only.",
+          "evidence": "The opening section only supplies the act name, severability, and effective date.",
+          "notes": "No operative code text should be created from this section."
+        },
+        {
+          "ref": "SEC. 2",
+          "text_summary": "Employment restrictions, waiting-list and background-check rules, citizenship termination procedures, and the Title VI amendment language.",
+          "classes": [
+            "direct-amendment",
+            "new-permanent-general"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Do not convert this operative language into live Code text; retain it only as repeal history.",
+          "evidence": "The section governs federal hiring and citizenship-related employment restrictions and includes a Code-amendment clause.",
+          "notes": "This is the core operative material of the act."
+        },
+        {
+          "ref": "SEC. 3",
+          "text_summary": "Exemptions for military service, private employment, presidential exemptions, and congressional overrides.",
+          "classes": [
+            "exemptions",
+            "procedural-rule"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Preserve the exemptions only as history.",
+          "evidence": "This section limits the employment restrictions through enumerated exceptions and override procedures.",
+          "notes": "No separate codification target was recovered."
+        },
+        {
+          "ref": "SEC. 4",
+          "text_summary": "Enforcement and implementation directives.",
+          "classes": [
+            "enforcement",
+            "administrative-direction"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep the enforcement instructions as historical material only.",
+          "evidence": "The section assigns implementation and enforcement responsibilities to Congress, the Judiciary, and Citizenship and Immigration Services.",
+          "notes": "These instructions do not survive as current positive law."
+        }
+      ],
+      "recommended_actions": [
+        "Retain only repeal-history treatment for this act.",
+        "Do not recreate the employment restrictions as operative Code text."
+      ],
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The PDF source is readable and PL 10-68 expressly repeals Public Law 3-20 in full, so the act survives only as repeal history.",
+      "final_recommended_action": "Retain only repeal-history treatment for this act. | Do not recreate the employment restrictions as operative Code text.",
+      "exact_change": "Keep this framing material as repeal history only. | Do not convert this operative language into live Code text; retain it only as repeal history. | Preserve the exemptions only as history."
+    },
+    {
+      "law_id": "PL-004-029",
+      "public_law": "4-29",
+      "title": "Public Law 4-29 | Department of Commerce and Labor Act of 2022",
+      "status": "repealed",
+      "status_basis": "PL 31-226 later repeals Public Law 4-29 in its entirety, so the Commerce and Labor restructuring survives only as repeal history.",
+      "approved_code_treatment": "historical-note-only",
+      "source_evidence": [
+        "codification/laws/laws/PL-004-029/metadata.json",
+        "codification/laws/laws/PL-004-029/law.txt",
+        "codification/laws/laws/PL-031-226/law.txt",
+        "codification/reference/all_270_laws_classification.csv"
+      ],
+      "current_implementation": {
+        "assessment": "missing-note",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "I did not locate a matching codified history note or operative text in the current tree."
+      },
+      "provisions": [
+        {
+          "ref": "SECTION I",
+          "text_summary": "Short title, severability, and immediate effective date.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t29",
+          "exact_change": "Keep the framing clauses as history only.",
+          "evidence": "The opening section only supplies the act name and effective-date rules.",
+          "notes": "This section creates no live code text."
+        },
+        {
+          "ref": "SECTION II",
+          "text_summary": "Definitions for Labor, Commerce, the Secretary of Commerce and Labor, and the President.",
+          "classes": [
+            "definitions"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t29",
+          "exact_change": "Treat the definitions as repeal history only.",
+          "evidence": "The source contains a standalone definitions section.",
+          "notes": "No operative title 29 rewrite should be left in place."
+        },
+        {
+          "ref": "SECTIONS III-IV",
+          "text_summary": "Department consolidation, transfers, powers, and reporting structure.",
+          "classes": [
+            "direct-amendment",
+            "new-permanent-general"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t29",
+          "exact_change": "Do not keep the transfer framework as current Code text.",
+          "evidence": "The source transfers agency assets and establishes the Department of Commerce and Labor's responsibilities.",
+          "notes": "This is the main substantive framework and should remain historical only."
+        }
+      ],
+      "recommended_actions": [
+        "Keep the law as repeal history only.",
+        "Do not add live title 29 text for the repealed department framework."
+      ],
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "PL 31-226 later repeals Public Law 4-29 in its entirety, so the Commerce and Labor restructuring survives only as repeal history.",
+      "final_recommended_action": "Keep the law as repeal history only. | Do not add live title 29 text for the repealed department framework.",
+      "exact_target": "/us/usc/t29",
+      "exact_change": "Keep the framing clauses as history only. | Treat the definitions as repeal history only. | Do not keep the transfer framework as current Code text."
+    },
+    {
+      "law_id": "PL-004-030",
+      "public_law": "4-30",
+      "title": "Public Law 4-30 | Fugitive Justice Reform Act",
+      "status": "repealed",
+      "status_basis": "PL 29-207 later repeals Public Law 4-30 in its entirety, so the fugitive-list and warrant-database framework survives only as history.",
+      "approved_code_treatment": "historical-note-only",
+      "source_evidence": [
+        "codification/laws/laws/PL-004-030/metadata.json",
+        "codification/laws/laws/PL-004-030/law.txt",
+        "codification/laws/laws/PL-029-207/law.txt",
+        "codification/reference/all_270_laws_classification.csv"
+      ],
+      "current_implementation": {
+        "assessment": "missing-note",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "The current tree does not show a matching codified history note or operative text for this repealed act."
+      },
+      "provisions": [
+        {
+          "ref": "SECTIONS 1-3",
+          "text_summary": "Short title, purpose, and enactment trigger.",
+          "classes": [
+            "short-title",
+            "purpose",
+            "effective-date"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep only a concise historical note.",
+          "evidence": "These clauses only introduce the act and state when it takes effect.",
+          "notes": "No live code text is created here."
+        },
+        {
+          "ref": "SECTIONS 4-5",
+          "text_summary": "Fugitive list regime and warrant database requirements.",
+          "classes": [
+            "new-permanent-general",
+            "administrative-program"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18 and /us/usc/t28",
+          "exact_change": "Do not keep the fugitive-list and warrant-database regime as current text.",
+          "evidence": "The source directs the Marshal Services and Department of Justice to maintain fugitive and warrant records.",
+          "notes": "This is the substantive operational framework of the act."
+        },
+        {
+          "ref": "SECTIONS 6-7",
+          "text_summary": "Removal mechanisms and repeal of H.R. 4.",
+          "classes": [
+            "repeal",
+            "procedural-rule"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18 and /us/usc/t28",
+          "exact_change": "Keep the removal and repeal provisions only as history.",
+          "evidence": "The source lists the methods for removal from the fugitive list and expressly repeals H.R. 4.",
+          "notes": "These provisions do not survive as live law."
+        }
+      ],
+      "recommended_actions": [
+        "Retain only repeal-history treatment for this law.",
+        "Do not add the fugitive framework as current code text."
+      ],
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "PL 29-207 later repeals Public Law 4-30 in its entirety, so the fugitive-list and warrant-database framework survives only as history.",
+      "final_recommended_action": "Retain only repeal-history treatment for this law. | Do not add the fugitive framework as current code text.",
+      "exact_target": "/us/usc/t18 and /us/usc/t28",
+      "exact_change": "Keep only a concise historical note. | Do not keep the fugitive-list and warrant-database regime as current text. | Keep the removal and repeal provisions only as history."
+    },
+    {
+      "law_id": "PL-004-031",
+      "public_law": "4-31",
+      "title": "Public Law 4-31 | Stand Your Ground Act",
+      "status": "repealed",
+      "status_basis": "PL 28-202 repeals Public Law 4-31, so the self-defense framework is historical only.",
+      "approved_code_treatment": "historical-note-only",
+      "source_evidence": [
+        "codification/laws/laws/PL-004-031/metadata.json",
+        "codification/laws/laws/PL-004-031/law.txt",
+        "codification/laws/laws/PL-028-202/law.txt",
+        "codification/reference/all_270_laws_classification.csv"
+      ],
+      "current_implementation": {
+        "assessment": "missing-note",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "I did not locate a matching codified history note or operative text in the current tree."
+      },
+      "provisions": [
+        {
+          "ref": "SECTION 1-3",
+          "text_summary": "Short title, purposes, and enactment language.",
+          "classes": [
+            "short-title",
+            "purpose",
+            "effective-date"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18",
+          "exact_change": "Keep these framing clauses as history only.",
+          "evidence": "The opening sections only identify the act and its immediate enactment language.",
+          "notes": "No live codification text should be built from these clauses."
+        },
+        {
+          "ref": "SEC. 101-105",
+          "text_summary": "Definitions, justified force, reasonable fear, exceptions, and criminal-entry rules.",
+          "classes": [
+            "self-defense",
+            "definitions",
+            "repeal"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18",
+          "exact_change": "Treat the stand-your-ground framework as repeal history only.",
+          "evidence": "The source establishes a self-defense regime and then sets out presumptions and exceptions.",
+          "notes": "This is the operative body of the act and should not remain current."
+        }
+      ],
+      "recommended_actions": [
+        "Keep this law as repeal history only.",
+        "Do not add live title 18 text for the repealed self-defense framework."
+      ],
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "PL 28-202 repeals Public Law 4-31, so the self-defense framework is historical only.",
+      "final_recommended_action": "Keep this law as repeal history only. | Do not add live title 18 text for the repealed self-defense framework.",
+      "exact_target": "/us/usc/t18",
+      "exact_change": "Keep these framing clauses as history only. | Treat the stand-your-ground framework as repeal history only."
+    },
+    {
+      "law_id": "PL-004-032",
+      "public_law": "4-32",
+      "title": "Public Law 4-32 | Warrants, Subpoenas, and Summons Act",
+      "status": "source-defect",
+      "status_basis": "The supplied file is an executive order surrogate that cites Public Law 4-32, but it does not contain the enacted statute text, so the law cannot be treated as authentic statutory source material.",
+      "approved_code_treatment": "source-limited-history",
+      "source_evidence": [
+        "codification/laws/laws/PL-004-032/metadata.json",
+        "codification/laws/laws/PL-004-032/law.txt",
+        "codification/laws/laws/PL-004-032/source/Executive_Order_18-4.pdf",
+        "codification/reference/all_270_laws_classification.csv"
+      ],
+      "current_implementation": {
+        "assessment": "correctly absent",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": true,
+        "placement": null,
+        "detail": "The current tree should not codify the surrogate order; the authentic enacted act must be recovered before any Code action."
+      },
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "No authentic statutory text is recoverable from the supplied source; the file is an executive order referencing Public Law 4-32.",
+          "classes": [
+            "source-defect",
+            "historical-note-only"
+          ],
+          "treatment": "source-limited-history",
+          "target": null,
+          "exact_change": "Keep only a concise historical note that the supplied source is not the enacted law.",
+          "evidence": "The PDF headings and body refer to Public Law 4-32 but present executive-order directives instead of enacted statutory text.",
+          "notes": "Do not codify the executive-order surrogate."
+        }
+      ],
+      "recommended_actions": [
+        "Recover the authentic enacted text before any code action.",
+        "Do not codify the executive-order surrogate."
+      ],
+      "confidence": "medium",
+      "final_legal_status": "superseded",
+      "chronology_conclusion": "The supplied file is an executive order surrogate that cites Public Law 4-32, but it does not contain the enacted statute text, so the law cannot be treated as authentic statutory source material.",
+      "final_recommended_action": "Recover the authentic enacted text before any code action. | Do not codify the executive-order surrogate.",
+      "exact_change": "Keep only a concise historical note that the supplied source is not the enacted law."
+    }
+  ]
+}

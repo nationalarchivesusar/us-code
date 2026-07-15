@@ -1,0 +1,633 @@
+{
+  "batch": 10,
+  "auditor": "law-auditor-J",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-001-001",
+      "public_law": "1-1",
+      "title": "Public Law 1-1 | Enactment of the U.S. Codes Act",
+      "status": "current",
+      "status_basis": "Foundational enactment establishing the U.S. Code baseline; no source text in the reviewed materials shows a wholesale repeal.",
+      "provisions": [
+        {
+          "ref": "Preamble / short title",
+          "text_summary": "Adopts the act's short title and states the Code-enactment purpose.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t1/s1",
+          "exact_change": "Keep a concise baseline note only.",
+          "evidence": "this act may be cited as the Enactment of the U.S. Codes Act",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 1",
+          "text_summary": "Explains what the United States Code is and how it is published.",
+          "classes": ["findings-or-sense"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t1/s1",
+          "exact_change": "No operative text to amend.",
+          "evidence": "The United States Code is the codification by subject matter",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 2",
+          "text_summary": "Lists the title structure of the Code as adopted by the act.",
+          "classes": ["new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t1",
+          "exact_change": "Treat the title list as historical baseline material, not section-level codification.",
+          "evidence": "TITLE 1 - GENERAL PROVISIONS ... TITLE 54 - NATIONAL PARK SERVICE AND RELATED PROGRAMS",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 3",
+          "text_summary": "Makes the enactment immediately effective.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": "/us/usc/t1/s1",
+          "exact_change": "n/a",
+          "evidence": "This Act shall take effect immediately after the passage of the Congress",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-inserted-into-permanent-text",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t1/s1",
+        "detail": "usc/usc01.xml carries rp-pl001001-codification with a quotedContent dump and a Trello link. The note itself is fine in substance, but it must be trimmed to a short baseline history entry."
+      },
+      "recommended_actions": [
+        "Retain a concise foundational statutory note at /us/usc/t1/s1.",
+        "Remove the quotedContent dump and the Trello archive link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-001-002",
+      "public_law": "1-2",
+      "title": "Public Law 1-2 | United States Bar Act",
+      "status": "fully-repealed",
+      "status_basis": "The archive classifies this enactment as repealed_recorded, so the bar-exam rule should be preserved as history rather than current law.",
+      "provisions": [
+        {
+          "ref": "SECTION 1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t28",
+          "exact_change": "Retain as repeal history only.",
+          "evidence": "This Act may be cited as the United States Bar Act",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 2",
+          "text_summary": "States the act's purpose: give the Attorney General full control over the bar exam.",
+          "classes": ["findings-or-sense"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t28",
+          "exact_change": "Retain as repeal history only.",
+          "evidence": "Give the Attorney General full control over the United States Bar Exam",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 4",
+          "text_summary": "Defines the bar examination.",
+          "classes": ["new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t28",
+          "exact_change": "Do not carry this into live Code text.",
+          "evidence": "The bar examination (exam) shall be defined as an examination to assess one's competency",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 3",
+          "text_summary": "Gives the Attorney General control over the exam content and administration.",
+          "classes": ["new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t28",
+          "exact_change": "Do not carry this into live Code text.",
+          "evidence": "The Attorney General of the United States will have full control over The United States Bar Exam",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 3 (Enactment)",
+          "text_summary": "Effective on passage and signature.",
+          "classes": ["effective-date"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t28",
+          "exact_change": "Retain as repeal history only.",
+          "evidence": "This bill shall be enacted once passed through both chambers of Congress and signed by the President",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t3/s1",
+        "detail": "usc/usc03.xml keeps rp-pl001002-codification at Title 3; the archive treats PL-001-002 as repealed_recorded, so this should be historical only."
+      },
+      "recommended_actions": [
+        "Remove the mislocated Title 3 note or convert it to a concise repeal-history entry at the proper legal-profession anchor.",
+        "Do not treat the bar-exam authority as current positive law."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-001-003",
+      "public_law": "1-3",
+      "title": "Public Law 1-3 | Closing Cabinet Doors Act",
+      "status": "current",
+      "status_basis": "The act permanently restructures executive departments and contains no self-repeal or sunset; the blanket repeal language belongs in history-note treatment, not section-level strikes.",
+      "provisions": [
+        {
+          "ref": "SECTION 1-3",
+          "text_summary": "Short title, purpose, and external definition link.",
+          "classes": ["short-title", "findings-or-sense", "non-code"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5",
+          "exact_change": "Keep only a concise history note; the external drive link is not codifiable text.",
+          "evidence": "This act may be cited as the CCD Act",
+          "notes": "The drive link is a source defect and should not be encoded as operative text."
+        },
+        {
+          "ref": "SECTION 4(a)-(h)",
+          "text_summary": "Closes named departments and transfers Veterans Affairs under Defense.",
+          "classes": ["repeal", "transfer", "uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5",
+          "exact_change": "Record the department closures and the VA transfer in a concise structural note.",
+          "evidence": "Department of Veterans Affairs shall be closed in its entirety ... relocated under the Department of Defense",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 4(i)",
+          "text_summary": "Blanket repeal of all Code provisions involving the listed departments.",
+          "classes": ["repeal"],
+          "treatment": "statutory-note",
+          "target": "/us/usc",
+          "exact_change": "Do not invent section-level strikes for the blanket repeal clause.",
+          "evidence": "All codes within the United States Code that involve all Departments ... shall be repealed in its entirety",
+          "notes": "source-defect-nondeterminable"
+        },
+        {
+          "ref": "SECTION 5",
+          "text_summary": "Immediate effective date.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": "/us/usc/t5",
+          "exact_change": "n/a",
+          "evidence": "This bill will take effect immediately after passage",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s101",
+        "detail": "usc/usc05.xml keeps the act as a long note with a quotedContent dump and Trello link. The structural history is right in principle, but the note must be shortened and the blanket repeal cannot be converted into invented section strikes."
+      },
+      "recommended_actions": [
+        "Keep only a concise structural history note at /us/usc/t5.",
+        "Preserve the blanket repeal as a note, not as fabricated section-level deletions.",
+        "Remove the quotedContent dump and the Trello link."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-001-004",
+      "public_law": "1-4",
+      "title": "Public Law 1-4 | Retracting of Resignations Act",
+      "status": "fully-repealed",
+      "status_basis": "The archive records this enactment as repealed_recorded; the section-3(a) defect affects codification only, not the fact that the law is history.",
+      "provisions": [
+        {
+          "ref": "SECTION 1(a)-(d)",
+          "text_summary": "Short title, conflicting-legislation clause, severability, and effective date.",
+          "classes": ["short-title", "savings", "severability", "effective-date"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18",
+          "exact_change": "Retain as repeal history only.",
+          "evidence": "This Act may be cited at the Retracting Resignations",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 2(a)-(b)",
+          "text_summary": "Makes immediate resignations non-retractable and future-effective resignations retractable.",
+          "classes": ["new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18/s918",
+          "exact_change": "Retain as repeal history only; do not create live section 918 text.",
+          "evidence": "Retracting resignations when the effective date is immediate shall be unlawful",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 2(c)",
+          "text_summary": "Directs codification in Title 18, Chapter 43, section 918, but cites a nonexistent section 3(a).",
+          "classes": ["uncodified-admin-direction"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18/s918",
+          "exact_change": "Preserve the source defect as history; do not invent section 3(a) or section 918 text.",
+          "evidence": "Section 3(a) of this Act shall be codified under Chapter 43 of Title 18 ... under Section 918",
+          "notes": "source-defect-nondeterminable"
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "usc/usc18.xml keeps a note at Title 18 section 1; the archive records PL-001-004 as repealed_recorded, so this should remain historical only."
+      },
+      "recommended_actions": [
+        "Retain only a concise repeal-history note.",
+        "Preserve the section 2(c) defect without inventing section 918 text.",
+        "Remove the note-only placeholder and the Trello link."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-002-005",
+      "public_law": "2-5",
+      "title": "Public Law 2-5 | Judicial Efficiency Act (Keywords: Maximum, Minimum, Sentence, Sentencing)",
+      "status": "fully-repealed",
+      "status_basis": "Public Law 19-149 expressly repealed this act in full and replaced its sentencing scheme.",
+      "provisions": [
+        {
+          "ref": "SECTION I",
+          "text_summary": "Short title, effective date, conflict clause, and severability.",
+          "classes": ["short-title", "effective-date", "savings", "severability"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18",
+          "exact_change": "Retain as history only.",
+          "evidence": "This piece of legislation shall be referred to as the Judicial Efficiency Act",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION II",
+          "text_summary": "Sets short imprisonment ceilings for listed Title 18 offenses and chapter groups.",
+          "classes": ["direct-amendment", "substitution"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18",
+          "exact_change": "Do not restore the superseded sentencing ceilings into current text.",
+          "evidence": "The maximum imprisonment time for U.S. Code 1111 Murder shall not exceed seven days",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION III",
+          "text_summary": "Caps accumulated sentences at thirty days and limits judicial sentencing.",
+          "classes": ["new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18",
+          "exact_change": "Keep as repeal history only.",
+          "evidence": "No Judge may issue a Judgement that constitute a sentence longer than thirty days",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "usc/usc18.xml keeps a repeal-history note, but it still carries a quotedContent dump and Trello link."
+      },
+      "recommended_actions": [
+        "Keep only a concise repeal-history note for PL 2-5.",
+        "Do not reintroduce the superseded sentencing caps.",
+        "Remove the quotedContent dump and the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-006",
+      "public_law": "2-6",
+      "title": "Public Law 2-6 | Shelby-Kabob Act of 2021",
+      "status": "fully-repealed",
+      "status_basis": "Public Law 14-89 later repealed this act in full and enacted replacement misconduct rules.",
+      "provisions": [
+        {
+          "ref": "SECTION I",
+          "text_summary": "Short title and general provisions.",
+          "classes": ["short-title", "effective-date", "savings", "severability"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18",
+          "exact_change": "Retain as history only.",
+          "evidence": "This piece of legislation shall be referred to as the Shelby-Kabob Act of 2021",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION II",
+          "text_summary": "Creates the unlawful discharge of a taser offense.",
+          "classes": ["new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18/s120",
+          "exact_change": "Do not revive the superseded offense.",
+          "evidence": "whoever discharges his or her taser",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION III",
+          "text_summary": "Creates the federal-agent abuse-of-power offense.",
+          "classes": ["new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18/s250",
+          "exact_change": "Keep as repeal history only.",
+          "evidence": "Whoever on duty as a federal law enforcement officer",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION IV",
+          "text_summary": "Directs codification of sections II and III in Title 18.",
+          "classes": ["uncodified-admin-direction"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18",
+          "exact_change": "Treat the codification instruction as historical only because the law was later repealed.",
+          "evidence": "Section II of this Act shall be codified under Chapter 7 of Title 18",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "The current note preserves the repeal history, but the XML still carries a quotedContent dump and Trello link."
+      },
+      "recommended_actions": [
+        "Keep only a concise repeal-history note for PL 2-6.",
+        "Do not revive the superseded Title 18 offenses.",
+        "Remove the quotedContent dump and the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-007",
+      "public_law": "2-7",
+      "title": "Public Law 2-7 | Court of Appeals Temporary Suspension Act of 2021",
+      "status": "fully-repealed",
+      "status_basis": "The act is expressly superseded and repealed in full by later law PL 3-24.",
+      "provisions": [
+        {
+          "ref": "SECTION I",
+          "text_summary": "Short title, severability, reasoning, and effective date.",
+          "classes": ["short-title", "severability", "findings-or-sense", "effective-date"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t28",
+          "exact_change": "Retain as history only.",
+          "evidence": "This Act may be cited as the Court of Appeals Temporary Suspension Act of 2021",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION II",
+          "text_summary": "Temporarily closes the Court of Appeals and transfers records to the Supreme Court.",
+          "classes": ["temporary", "transfer"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t28",
+          "exact_change": "Keep as historical context only.",
+          "evidence": "shall be temporarily closed ... all records ... shall be moved to the United States Supreme Court",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION III",
+          "text_summary": "Allows the Chief Justice to lift the suspension under stated conditions and then abolishes those powers.",
+          "classes": ["temporary", "uncodified-admin-direction"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t28",
+          "exact_change": "Keep as historical context only.",
+          "evidence": "the Chief Justice shall be empowered to lift the suspension",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s1",
+        "detail": "usc/usc28.xml keeps the repealed history in a note, but it still carries a quotedContent dump and Trello link."
+      },
+      "recommended_actions": [
+        "Keep only a concise historical note for PL 2-7.",
+        "Do not treat the temporary suspension as current law.",
+        "Remove the quotedContent dump and the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-008",
+      "public_law": "2-8",
+      "title": "Public Law 2-8 | National Security Act of 2021",
+      "status": "fully-repealed",
+      "status_basis": "Later law PL 3-25 repealed this act and replaced the national-security framework with revised provisions.",
+      "provisions": [
+        {
+          "ref": "SECTION I",
+          "text_summary": "Short title, effective date, conflict clause, and severability.",
+          "classes": ["short-title", "effective-date", "savings", "severability"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t50",
+          "exact_change": "Retain as history only.",
+          "evidence": "This piece of legislation shall be referred to as the National Federal Torts Act",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION II",
+          "text_summary": "Establishes a National Security Council under the Executive Office of the President.",
+          "classes": ["new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t50",
+          "exact_change": "Do not restore the Council framework into current text.",
+          "evidence": "There shall be a National Security Council",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION III",
+          "text_summary": "Sets Council membership categories and appointments.",
+          "classes": ["new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t50",
+          "exact_change": "Keep as repeal history only.",
+          "evidence": "The Voting Members of the Principals Committee shall be",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION IV",
+          "text_summary": "Defines the Council's responsibilities and binding policy role.",
+          "classes": ["new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t50",
+          "exact_change": "Keep as repeal history only.",
+          "evidence": "To assess and appraise the objectives, commitments, and risks to the United States",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION V",
+          "text_summary": "Details chair powers, reporting, declassification, and related controls.",
+          "classes": ["new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t50",
+          "exact_change": "Keep as repeal history only.",
+          "evidence": "The Chair of the Council shall",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION VI",
+          "text_summary": "Creates the national-security-threat designation regime.",
+          "classes": ["new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t50",
+          "exact_change": "Keep as repeal history only.",
+          "evidence": "may be declared as a National Security Threat",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION VII",
+          "text_summary": "Creates the transitional-threat regime and related presidential authority.",
+          "classes": ["new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t50",
+          "exact_change": "Keep as repeal history only.",
+          "evidence": "The Council shall additionally be tasked with coordinating and directing the activities",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "usc/usc50.xml and origin/main both carry the history-note treatment. The legal posture is fully repealed, but the note still needs trimming to remove the quotedContent dump and archive link."
+      },
+      "recommended_actions": [
+        "Keep only a concise repeal-history note with the PL 3-25 repeal/replacement cross-reference.",
+        "Do not restore the National Security Council framework as operative text.",
+        "Remove the quotedContent dump and the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-009",
+      "public_law": "2-9",
+      "title": "Public Law 2-9 | District of Columbia City Charter",
+      "status": "fully-repealed",
+      "status_basis": "Public Law 36-260 dissolves the municipal government and states that any inconsistent District law, ordinance, or regulation 'shall be repealed', which leaves this charter only as history.",
+      "provisions": [
+        {
+          "ref": "Preamble / Article I",
+          "text_summary": "Creates the municipality and sets general powers and rights.",
+          "classes": ["local-district"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t40",
+          "exact_change": "Retain as historical local-law material only.",
+          "evidence": "A political subdivision is hereby created within the United States to be known as The City of Washington, District of Columbia",
+          "notes": ""
+        },
+        {
+          "ref": "Article II",
+          "text_summary": "Defines the legislative branch and council structure.",
+          "classes": ["local-district"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t40",
+          "exact_change": "Retain as historical local-law material only.",
+          "evidence": "The City Council comprises the Legislative Branch of the city government",
+          "notes": ""
+        },
+        {
+          "ref": "Article III",
+          "text_summary": "Establishes the administrative branch and mayoral powers.",
+          "classes": ["local-district"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t40",
+          "exact_change": "Retain as historical local-law material only.",
+          "evidence": "The Administrative Branch of the City Government for Washington, District of Columbia is hereby created",
+          "notes": ""
+        },
+        {
+          "ref": "Article IV",
+          "text_summary": "Sets Metropolitan Police and Fire Department authority.",
+          "classes": ["local-district"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t40",
+          "exact_change": "Retain as historical local-law material only.",
+          "evidence": "The District of Columbia shall have a Police Department",
+          "notes": ""
+        },
+        {
+          "ref": "Article V",
+          "text_summary": "Creates the District Attorney's office and its functions.",
+          "classes": ["local-district"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t40",
+          "exact_change": "Retain as historical local-law material only.",
+          "evidence": "The District Attorney of the District of Columbia shall be the officer in full charge and control",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "usc/usc40.xml and origin/main keep the charter as a live local-law note, but PL 36-260 dissolved the municipal government and repealed inconsistent District law."
+      },
+      "recommended_actions": [
+        "Convert the charter to historical-note-only treatment or omit it from permanent Code text.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-010",
+      "public_law": "2-10",
+      "title": "Public Law 2-10 | Amendment to the District of Columbia City Charter",
+      "status": "fully-repealed",
+      "status_basis": "Public Law 36-260 dissolves the municipal government and states that any inconsistent District law, ordinance, or regulation 'shall be repealed', so this charter amendment is historical only.",
+      "provisions": [
+        {
+          "ref": "SECTION I",
+          "text_summary": "Short title, effective date, conflict clause, and severability.",
+          "classes": ["short-title", "effective-date", "savings", "severability"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t40",
+          "exact_change": "Retain as historical local-law material only.",
+          "evidence": "This piece of legislation shall be referred to as the Amendment to the District of Columbia City Charter",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION II(a)-(d)",
+          "text_summary": "Changes the mayoral and council terms and partially repeals/amends the charter articles.",
+          "classes": ["direct-amendment", "substitution", "repeal"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t40",
+          "exact_change": "Retain as historical local-law material only; do not treat the 90-day and 45-day terms as live charter text.",
+          "evidence": "The Mayoral Term shall last a total of ninety (90) Days",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "usc/usc40.xml and origin/main keep the charter amendment as a note only, but PL 36-260 repeals inconsistent District law and leaves this enactment historical only."
+      },
+      "recommended_actions": [
+        "Convert the amendment to historical-note-only treatment or omit it from permanent Code text.",
+        "Remove the Trello link and the note-only placeholder."
+      ],
+      "confidence": "medium"
+    }
+  ]
+}

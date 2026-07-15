@@ -1,0 +1,999 @@
+{
+  "reviewer": "codex-review-71",
+  "group_index": 71,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/manifest-71.json",
+  "output_path": "audit/review/review-71.json",
+  "reviewed_against": [
+    "audit/manifests/manifest-71.json",
+    "usc/usc02.xml",
+    "usc/usc03.xml",
+    "usc/usc05.xml",
+    "usc/usc08.xml",
+    "usc/usc10.xml",
+    "usc/usc18.xml",
+    "usc/usc22.xml",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-027-192",
+      "public_law": "27-192",
+      "title": "Public Law 27-192 | Presidential Libraries and Better Public Records Management Act",
+      "status": "current",
+      "status_basis": "Full source recovered. The act contains a direct amendment to 18 U.S.C. 2071 and uncodified NARA/public-records directives. The current XML only preserves a note at Title 44 and does not apply the Title 18 amendment.",
+      "provisions": [
+        {
+          "ref": "SECTION I",
+          "text_summary": "Short title, severability, effective date, and definitions.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date",
+            "definitions"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt SECTION I defines the act and supplies severability/effective-date language.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION II",
+          "text_summary": "Amends Public Law 3-19 to add public-records duties and Trello-board ownership rules.",
+          "classes": [
+            "direct-amendment",
+            "uncodified-admin-direction"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/pl/3/19",
+          "exact_change": "Rewrite Sections II-IV of Public Law 3-19 to require timely NARA notice, Congressional and judicial record upkeep, and NARA ownership of the relevant Trello boards.",
+          "evidence": "law.txt SECTION II expressly says Public Law 3-19 shall be amended and read with new Section II-IV text.",
+          "notes": "This is an amendment to a prior public-law note, not to a Code section."
+        },
+        {
+          "ref": "SECTION III(a)-(b)",
+          "text_summary": "Amends 18 U.S.C. 2071(a) and (b) to replace the penalty and operative language.",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t18/s2071",
+          "exact_change": "Replace subsections (a) and (b) of 18 U.S.C. 2071 with the enacted ten-day and $10,000 language in SEC. III.",
+          "evidence": "law.txt SECTION III expressly amends 18 U.S.C. 2071(a) and (b); current Title 18 text in usc18.xml still shows the unamended three-year penalty.",
+          "notes": "This is the missing Code treatment."
+        },
+        {
+          "ref": "SECTION IV",
+          "text_summary": "Requires executive-branch records to be created and maintained in public Trello boards.",
+          "classes": [
+            "uncodified-admin-direction",
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt SECTION IV imposes executive-records management duties without a numbered Code citation.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION V",
+          "text_summary": "Creates presidential-library setup and record-access obligations.",
+          "classes": [
+            "uncodified-admin-direction",
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt SECTION V directs NARA to help each President establish a Presidential Library and make records public via Trello.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t44/s101",
+        "detail": "Current XML keeps only the Title 44 note; the enforceable 18 U.S.C. 2071 amendment is absent in both current XML and origin/main."
+      },
+      "recommended_actions": [
+        "apply the 18 U.S.C. 2071(a) and (b) amendment at Title 18",
+        "keep the Public Law 3-19 rewrite as a concise statutory-note amendment record",
+        "retain the executive-records and presidential-library directives as notes",
+        "remove the Trello link"
+      ],
+      "confidence": "medium",
+      "final_status": "current",
+      "chronology_conclusion": "Full source recovered. The act contains a direct amendment to 18 U.S.C. 2071 and uncodified NARA/public-records directives. The current XML only preserves a note at Title 44 and does not apply the Title 18 amendment.",
+      "approved_code_treatment": "amend-existing-text",
+      "current_xml_comparison": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t44/s101",
+        "detail": "Current XML keeps only the Title 44 note; the enforceable 18 U.S.C. 2071 amendment is absent in both current XML and origin/main."
+      },
+      "source_evidence": [
+        "Full source recovered. The act contains a direct amendment to 18 U.S.C. 2071 and uncodified NARA/public-records directives. The current XML only preserves a note at Title 44 and does not apply the Title 18 amendment."
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "apply the 18 U.S.C. 2071(a) and (b) amendment at Title 18 | keep the Public Law 3-19 rewrite as a concise statutory-note amendment record | retain the executive-records and presidential-library directives as notes | remove the Trello link",
+      "exact_target": "/us/usc/t44/s101",
+      "exact_change": "Rewrite Sections II-IV of Public Law 3-19 to require timely NARA notice, Congressional and judicial record upkeep, and NARA ownership of the relevant Trello boards. | Replace subsections (a) and (b) of 18 U.S.C. 2071 with the enacted ten-day and $10,000 language in SEC. III."
+    },
+    {
+      "law_id": "PL-027-193",
+      "public_law": "27-193",
+      "title": "Public Law 27-193 | Preservation of Parks and Monuments Act",
+      "status": "current",
+      "status_basis": "Full source recovered. This is a free-standing generally applicable parks and monuments statute with no express positive-law Code amendment, so it belongs as statutory history rather than permanent section text.",
+      "provisions": [
+        {
+          "ref": "SECTION 1-3",
+          "text_summary": "Short title, severability, and immediate effective date.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt sections 1-3 supply the title and general rule-of-construction provisions.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 4",
+          "text_summary": "Transfers park-system duties from the Interior Department and NPS to the Secretary of Homeland Security.",
+          "classes": [
+            "new-permanent-general",
+            "transfer-of-authority"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt section 4 shifts authority over the parks system and DC park preservation functions.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 5",
+          "text_summary": "Authorizes regulations for parks and associated areas and concurrent jurisdiction around DC areas.",
+          "classes": [
+            "new-permanent-general",
+            "administrative-rulemaking"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt section 5 authorizes rules and regulations for park protection and public order.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 6",
+          "text_summary": "Transfers Park Police and Park Rangers responsibilities to the Federal Protective Service; source also contains a duplicate effective-date label.",
+          "classes": [
+            "transfer-of-authority",
+            "applicability"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt section 6 moves Park Police and Park Ranger powers to FPS and repeats effective-date language.",
+          "notes": "The drafting repeats section numbering."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t54/s100101/b/2",
+        "detail": "Current XML preserves the act as a statutory note at a Title 54 parks anchor."
+      },
+      "recommended_actions": [
+        "keep a concise statutory note",
+        "do not promote the act to permanent positive-law text",
+        "remove the Trello link"
+      ],
+      "confidence": "medium",
+      "final_status": "current",
+      "chronology_conclusion": "Full source recovered. This is a free-standing generally applicable parks and monuments statute with no express positive-law Code amendment, so it belongs as statutory history rather than permanent section text.",
+      "approved_code_treatment": "statutory-note",
+      "current_xml_comparison": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t54/s100101/b/2",
+        "detail": "Current XML preserves the act as a statutory note at a Title 54 parks anchor."
+      },
+      "source_evidence": [
+        "Full source recovered. This is a free-standing generally applicable parks and monuments statute with no express positive-law Code amendment, so it belongs as statutory history rather than permanent section text."
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "keep a concise statutory note | do not promote the act to permanent positive-law text | remove the Trello link",
+      "exact_target": "/us/usc/t54/s100101/b/2"
+    },
+    {
+      "law_id": "PL-027-194",
+      "public_law": "27-194",
+      "title": "Public Law 27-194 | Fast Food Workers Day Act of 2024",
+      "status": "current",
+      "status_basis": "Full source recovered. The act makes a direct, determinable amendment to 5 U.S.C. 6103(a) by adding National Fast Food Workers Day. The current XML already contains the inserted holiday text.",
+      "provisions": [
+        {
+          "ref": "SECTION 1",
+          "text_summary": "Short title.",
+          "classes": [
+            "short-title"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt SECTION 1 identifies the act as the Fast Food Workers Day Act of 2024.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 2(a)",
+          "text_summary": "Amends 5 U.S.C. 6103(a) to add National Fast Food Workers Day, June 7, after Memorial Day.",
+          "classes": [
+            "direct-amendment",
+            "insertion"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t5/s6103/a",
+          "exact_change": "Insert National Fast Food Workers Day, June 7, after the Memorial Day item in 5 U.S.C. 6103(a).",
+          "evidence": "law.txt SECTION 2(a) directs the insertion; current usc05.xml already shows the new holiday text and amendment note rp-c8d95f71e8fe691d220e.",
+          "notes": "Already integrated in current XML and origin/main."
+        },
+        {
+          "ref": "SECTION 3",
+          "text_summary": "Severability.",
+          "classes": [
+            "severability"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt SECTION 3 contains the severability clause.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s101",
+        "detail": "The 5 U.S.C. 6103(a) holiday text is already present in current XML; the note is history only."
+      },
+      "recommended_actions": [
+        "keep the inserted holiday text in Title 5",
+        "retain only a concise amendment-history note",
+        "remove the Trello link"
+      ],
+      "confidence": "high",
+      "final_status": "current",
+      "chronology_conclusion": "Full source recovered. The act makes a direct, determinable amendment to 5 U.S.C. 6103(a) by adding National Fast Food Workers Day. The current XML already contains the inserted holiday text.",
+      "approved_code_treatment": "amend-existing-text",
+      "current_xml_comparison": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s101",
+        "detail": "The 5 U.S.C. 6103(a) holiday text is already present in current XML; the note is history only."
+      },
+      "source_evidence": [
+        "Full source recovered. The act makes a direct, determinable amendment to 5 U.S.C. 6103(a) by adding National Fast Food Workers Day. The current XML already contains the inserted holiday text."
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "keep the inserted holiday text in Title 5 | retain only a concise amendment-history note | remove the Trello link",
+      "exact_target": "/us/usc/t5/s101",
+      "exact_change": "Insert National Fast Food Workers Day, June 7, after the Memorial Day item in 5 U.S.C. 6103(a)."
+    },
+    {
+      "law_id": "PL-027-195",
+      "public_law": "27-195",
+      "title": "Public Law 27-195 | The Preservation of Laws Act (PLA)",
+      "status": "current",
+      "status_basis": "Full source recovered. The act is a free-standing NARA/codification-process statute with no express numbered Code amendment, so it should remain a statutory note rather than permanent Code text.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, severability, and immediate effective date.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt sections 1-3 supply the act name and basic construction rules.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Defines NARA, Archivist, and laws of the United States.",
+          "classes": [
+            "definitions"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt section 4 defines the key terms used throughout the act.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "Directs NARA to update laws and keep records of alterations.",
+          "classes": [
+            "uncodified-admin-direction",
+            "recordkeeping"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt section 5 assigns NARA responsibility for reflecting amendments and preserving change records.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 6",
+          "text_summary": "Creates a repository for original law documents.",
+          "classes": [
+            "uncodified-admin-direction"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt section 6 requires a private repository for the originating documents of laws.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 7",
+          "text_summary": "Sets violations and sentencing rules for failures to provide originating documents.",
+          "classes": [
+            "enforcement",
+            "uncodified-admin-direction"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt section 7 sets criminal-penalty language but does not direct a specific positive-law code amendment.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t1/s1",
+        "detail": "Current XML preserves the act as a statutory note at Title 1."
+      },
+      "recommended_actions": [
+        "keep a concise statutory note",
+        "do not convert the act into permanent Code text",
+        "remove the Trello link"
+      ],
+      "confidence": "medium",
+      "final_status": "current",
+      "chronology_conclusion": "Full source recovered. The act is a free-standing NARA/codification-process statute with no express numbered Code amendment, so it should remain a statutory note rather than permanent Code text.",
+      "approved_code_treatment": "statutory-note",
+      "current_xml_comparison": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t1/s1",
+        "detail": "Current XML preserves the act as a statutory note at Title 1."
+      },
+      "source_evidence": [
+        "Full source recovered. The act is a free-standing NARA/codification-process statute with no express numbered Code amendment, so it should remain a statutory note rather than permanent Code text."
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "keep a concise statutory note | do not convert the act into permanent Code text | remove the Trello link",
+      "exact_target": "/us/usc/t1/s1"
+    },
+    {
+      "law_id": "PL-027-196",
+      "public_law": "27-196",
+      "title": "Public Law 27-196 | National Commission on Judicial Activity, Efficiency and Accountability Act",
+      "status": "repealed",
+      "status_basis": "Full source recovered. This is a temporary commission with fixed reporting deadlines and a self-termination clause; by the current date the commission has expired by its own terms, and the current XML treats it as history only.",
+      "provisions": [
+        {
+          "ref": "SECTION I",
+          "text_summary": "Short title, severability, effective date, and definitions.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date",
+            "definitions"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt SECTION I provides the act name and basic governing clauses.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION II",
+          "text_summary": "States the commission's purposes.",
+          "classes": [
+            "purpose"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt SECTION II defines the commission's mission and scope.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION III",
+          "text_summary": "Sets the commission's functions and investigation duties.",
+          "classes": [
+            "new-temporary-body",
+            "administrative-direction"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt SECTION III authorizes investigations and recommendations about the judiciary and the Public Defender's Office.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION IV",
+          "text_summary": "Defines membership, qualifications, appointments, meeting rules, quorum, and vacancies.",
+          "classes": [
+            "composition",
+            "appointment",
+            "quorum"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt SECTION IV sets the commission's structure and membership rules.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION V",
+          "text_summary": "Gives the commission powers, including hearings and evidence gathering.",
+          "classes": [
+            "powers",
+            "subpoena-like"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt SECTION V confers hearings and evidence powers on the commission.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION VI-VII",
+          "text_summary": "Requires interim and final reports, then terminates the commission and transfers records to NARA.",
+          "classes": [
+            "reporting",
+            "termination",
+            "archival"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt SECTION VI sets report deadlines and SECTION VII terminates the commission after the final report period.",
+          "notes": "The source is self-terminating."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "Current XML keeps the act as a history note; the commission self-terminated by its own terms."
+      },
+      "recommended_actions": [
+        "keep the act as history only",
+        "do not add permanent Code text",
+        "remove the Trello link"
+      ],
+      "confidence": "high",
+      "final_status": "repealed",
+      "chronology_conclusion": "Full source recovered. This is a temporary commission with fixed reporting deadlines and a self-termination clause; by the current date the commission has expired by its own terms, and the current XML treats it as history only.",
+      "approved_code_treatment": "historical-note-only",
+      "current_xml_comparison": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "Current XML keeps the act as a history note; the commission self-terminated by its own terms."
+      },
+      "source_evidence": [
+        "Full source recovered. This is a temporary commission with fixed reporting deadlines and a self-termination clause; by the current date the commission has expired by its own terms, and the current XML treats it as history only."
+      ],
+      "final_legal_status": "repealed",
+      "final_recommended_action": "keep the act as history only | do not add permanent Code text | remove the Trello link",
+      "exact_target": "/us/usc/t50/s1"
+    },
+    {
+      "law_id": "PL-028-197",
+      "public_law": "28-197",
+      "title": "Public Law 28-197 | Amending Public Law 27-196",
+      "status": "current",
+      "status_basis": "Full source recovered. This act amends the reporting deadline in temporary Public Law 27-196, but it does not target a numbered U.S. Code section and remains a current enactment in the archive.",
+      "provisions": [
+        {
+          "ref": "SECTION I",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt SECTION I supplies the act name and general rule-of-construction language.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION II",
+          "text_summary": "Amends Public Law 27-196 Section VI(b) to move the final report deadline and extend the report window.",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/pl/27/196",
+          "exact_change": "Change the final-report deadline in PL 27-196 Section VI(b) to January 21, 2025 and permit extension to February 1, 2025.",
+          "evidence": "law.txt SECTION II expressly amends Section VI(b) of Public Law 27-196.",
+          "notes": "This is an amendment to a temporary public law, not to the U.S. Code."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "Current XML preserves the act as a statutory note; the amendment operates on PL 27-196 rather than on Code text."
+      },
+      "recommended_actions": [
+        "keep the amendment as a concise historical note",
+        "do not promote it to permanent Code text",
+        "remove the Trello link"
+      ],
+      "confidence": "medium",
+      "final_status": "current",
+      "chronology_conclusion": "Full source recovered. This act amends the reporting deadline in temporary Public Law 27-196, but it does not target a numbered U.S. Code section and remains a current enactment in the archive.",
+      "approved_code_treatment": "amend-existing-text",
+      "current_xml_comparison": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "Current XML preserves the act as a statutory note; the amendment operates on PL 27-196 rather than on Code text."
+      },
+      "source_evidence": [
+        "Full source recovered. This act amends the reporting deadline in temporary Public Law 27-196, but it does not target a numbered U.S. Code section and remains a current enactment in the archive."
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "keep the amendment as a concise historical note | do not promote it to permanent Code text | remove the Trello link",
+      "exact_target": "/us/usc/t50/s1",
+      "exact_change": "Change the final-report deadline in PL 27-196 Section VI(b) to January 21, 2025 and permit extension to February 1, 2025."
+    },
+    {
+      "law_id": "PL-028-198",
+      "public_law": "28-198",
+      "title": "Public Law 28-198 | Intelligence Coordination and Jurisdiction Act",
+      "status": "current",
+      "status_basis": "Full source recovered. This is a free-standing national-security coordination statute with no express numbered Code amendment, so it remains statutory history rather than permanent section text.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, purpose, and definitions.",
+          "classes": [
+            "short-title",
+            "purpose",
+            "definitions"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt sections 1-3 define the act and the covered intelligence terminology.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Sets ODNI authority and limits.",
+          "classes": [
+            "new-permanent-general",
+            "jurisdiction"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt section 4 defines ODNI oversight, coordination, and anti-interference rules.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "Sets Attorney General and DOJ authority and limits.",
+          "classes": [
+            "new-permanent-general",
+            "jurisdiction"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt section 5 allocates DOJ authority and bars interference with ODNI matters.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 6-7",
+          "text_summary": "Requires coordination by other departments and interagency MOUs.",
+          "classes": [
+            "uncodified-admin-direction",
+            "coordination"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt sections 6-7 require cross-agency coordination and memoranda of understanding.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 8-9",
+          "text_summary": "Severability and effective date.",
+          "classes": [
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt sections 8-9 supply the closing clauses.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "Current XML preserves the act as a statutory note at Title 50."
+      },
+      "recommended_actions": [
+        "keep a concise statutory note",
+        "do not fabricate permanent Code text",
+        "remove the Trello link"
+      ],
+      "confidence": "medium",
+      "final_status": "current",
+      "chronology_conclusion": "Full source recovered. This is a free-standing national-security coordination statute with no express numbered Code amendment, so it remains statutory history rather than permanent section text.",
+      "approved_code_treatment": "statutory-note",
+      "current_xml_comparison": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "Current XML preserves the act as a statutory note at Title 50."
+      },
+      "source_evidence": [
+        "Full source recovered. This is a free-standing national-security coordination statute with no express numbered Code amendment, so it remains statutory history rather than permanent section text."
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "keep a concise statutory note | do not fabricate permanent Code text | remove the Trello link",
+      "exact_target": "/us/usc/t50/s1"
+    },
+    {
+      "law_id": "PL-028-199",
+      "public_law": "28-199",
+      "title": "Public Law 28-199 | Department of Defense Grounds Protection Act",
+      "status": "current",
+      "status_basis": "Full source recovered. This is a free-standing DoD grounds-protection statute with no express numbered Code amendment, so it should remain statutory history rather than permanent Code text.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, purpose, and definitions.",
+          "classes": [
+            "short-title",
+            "purpose",
+            "definitions"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt sections 1-3 define the act and the term Military Installation.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Restricts law-enforcement entry to DoD grounds and military installations without written approval, addresses warrants, and mentions trespass consequences.",
+          "classes": [
+            "new-permanent-general",
+            "law-enforcement"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt section 4 contains the operative access and warrant rules.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 6",
+          "text_summary": "Severability and effective date, with duplicate section numbering in the source.",
+          "classes": [
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt section 6 contains both severability and effective-date language.",
+          "notes": "The drafting duplicates section 6."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "Current XML preserves the act as a statutory note at a Title 40 anchor."
+      },
+      "recommended_actions": [
+        "keep a concise statutory note",
+        "do not promote the act to permanent Code text",
+        "remove the Trello link"
+      ],
+      "confidence": "medium",
+      "final_status": "current",
+      "chronology_conclusion": "Full source recovered. This is a free-standing DoD grounds-protection statute with no express numbered Code amendment, so it should remain statutory history rather than permanent Code text.",
+      "approved_code_treatment": "statutory-note",
+      "current_xml_comparison": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "Current XML preserves the act as a statutory note at a Title 40 anchor."
+      },
+      "source_evidence": [
+        "Full source recovered. This is a free-standing DoD grounds-protection statute with no express numbered Code amendment, so it should remain statutory history rather than permanent Code text."
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "keep a concise statutory note | do not promote the act to permanent Code text | remove the Trello link",
+      "exact_target": "/us/usc/t40/s101/4"
+    },
+    {
+      "law_id": "PL-028-200",
+      "public_law": "28-200",
+      "title": "Public Law 28-200 | National Archives Organization Act",
+      "status": "current",
+      "status_basis": "Full source recovered. This is a free-standing National Archives organization statute with no express numbered Code amendment, so it remains statutory history rather than permanent section text.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, purpose, and definitions.",
+          "classes": [
+            "short-title",
+            "purpose",
+            "definitions"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt sections 1-3 define the act and the Public Law Database concept.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Sets up public-law organization and future categorization rules.",
+          "classes": [
+            "new-permanent-general",
+            "administrative-direction"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt section 4 directs NARA and LOC to organize public laws by category and tag.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "Sets up Supreme Court opinion organization.",
+          "classes": [
+            "new-permanent-general",
+            "administrative-direction"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt section 5 directs NARA and LOC to organize Supreme Court opinions.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 6-7",
+          "text_summary": "Sets up executive-order organization and assistance.",
+          "classes": [
+            "new-permanent-general",
+            "administrative-direction"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt sections 6-7 extend the organization scheme to executive orders and allow hiring assistants.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 8-9",
+          "text_summary": "Severability and effective date.",
+          "classes": [
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "law.txt sections 8-9 close the act.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t44/s101",
+        "detail": "Current XML preserves the act as a statutory note at Title 44."
+      },
+      "recommended_actions": [
+        "keep a concise statutory note",
+        "do not convert the act into permanent Code text",
+        "remove the Trello link"
+      ],
+      "confidence": "medium",
+      "final_status": "current",
+      "chronology_conclusion": "Full source recovered. This is a free-standing National Archives organization statute with no express numbered Code amendment, so it remains statutory history rather than permanent section text.",
+      "approved_code_treatment": "statutory-note",
+      "current_xml_comparison": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t44/s101",
+        "detail": "Current XML preserves the act as a statutory note at Title 44."
+      },
+      "source_evidence": [
+        "Full source recovered. This is a free-standing National Archives organization statute with no express numbered Code amendment, so it remains statutory history rather than permanent section text."
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "keep a concise statutory note | do not convert the act into permanent Code text | remove the Trello link",
+      "exact_target": "/us/usc/t44/s101"
+    },
+    {
+      "law_id": "PL-028-201",
+      "public_law": "28-201",
+      "title": "Public Law 28-201 | RESET Act",
+      "status": "current",
+      "status_basis": "The act is a live repealer with a savings clause and no self-repeal or sunset. It remains current law as statutory history at the closest subject-matter anchor.",
+      "provisions": [
+        {
+          "ref": "SEC1",
+          "text_summary": "Short title.",
+          "classes": [
+            "short-title"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act may be cited as the Removing Excess Statutes and Extraneous Texts Act, or RESET Act.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC2",
+          "text_summary": "Purpose to clean up the public-law database.",
+          "classes": [
+            "findings-or-sense",
+            "non-code"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "To cleanup the Public Law Database and simplify our Public Law Database.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC3(a)",
+          "text_summary": "Savings clause preserving prior repeals.",
+          "classes": [
+            "savings"
+          ],
+          "treatment": "savings-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Any Public Law that is repealed by one of the laws being repealed in subsection (b) shall remain repealed.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC3(b)(i)-(xxix)",
+          "text_summary": "Repeals the listed public laws in full.",
+          "classes": [
+            "repeal"
+          ],
+          "treatment": "repeal-marking",
+          "target": "Public Laws 3-23, 4-28, 4-33, 4-35, 4-37, 7-44, 7-50, 9-52, 9-57, 10-66, 10-68, 11-72, 12-78, 12-79, 12-83, 12-86, 14-90, 15-93, 15-106, 15-107, 15-109, 15-110, 16-113, 16-117, 16-122, 17-125, 17-127, 18-139, 25-180",
+          "exact_change": "Repeal each listed public law and leave any already-repealed law in its repealed state.",
+          "evidence": "The following laws shall be repealed.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC4",
+          "text_summary": "Severability.",
+          "classes": [
+            "severability"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "If any provision of this Act is held invalid, the remainder of the Act shall not be affected.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC6",
+          "text_summary": "Immediate effective date.",
+          "classes": [
+            "effective-date"
+          ],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act shall become effective upon enactment.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s1",
+        "detail": "The current XML keeps a concise historical note at the Title 2 anchor; no permanent Code text is required."
+      },
+      "recommended_actions": [
+        "Retain a concise statutory history note.",
+        "Record the listed repeals at the affected laws where they are not already tracked.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high",
+      "final_status": "current",
+      "chronology_conclusion": "The act is a live repealer with a savings clause and no self-repeal or sunset. It remains current law as statutory history at the closest subject-matter anchor.",
+      "approved_code_treatment": "repeal-marking",
+      "current_xml_comparison": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s1",
+        "detail": "The current XML keeps a concise historical note at the Title 2 anchor; no permanent Code text is required."
+      },
+      "source_evidence": [
+        "The act is a live repealer with a savings clause and no self-repeal or sunset. It remains current law as statutory history at the closest subject-matter anchor."
+      ],
+      "final_legal_status": "active",
+      "final_recommended_action": "Retain a concise statutory history note. | Record the listed repeals at the affected laws where they are not already tracked. | Remove the Trello link.",
+      "exact_target": "/us/usc/t2/s1",
+      "exact_change": "Repeal each listed public law and leave any already-repealed law in its repealed state."
+    }
+  ]
+}

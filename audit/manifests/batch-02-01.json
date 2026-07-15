@@ -1,0 +1,543 @@
+﻿{
+    "batch":  2,
+    "auditor":  "law-auditor-A",
+    "report_path":  "audit/primary/batch-02-01.json",
+    "law_count":  10,
+    "laws":  [
+                 {
+                     "law_id":  "PL-004-031",
+                     "public_law":  "4-31",
+                     "title":  "Public Law 4-31 | Stand Your Ground Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-004-031/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  4340,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-004-031/source/S.31 Stand Your Ground Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  355748,
+                                              "sha256":  "7af6390cf4774311e89fe56836decb7cd0b96ac9ac5bce7720655dacd7d9881f"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc50.xml",
+                                                   "note_id":  "rp-pl004031-codification",
+                                                   "public_law":  "4-31",
+                                                   "congress_from_id":  4,
+                                                   "seq_from_id":  31,
+                                                   "heading_cited_pl":  "4-31",
+                                                   "heading":  "Stand Your Ground Actâ€”Pub. L. 4â€“31",
+                                                   "placement_identifier":  "/us/usc/t50/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/dlakGW1t/41-public-law-4-31-stand-your-ground-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "b58bd544830fcf0cd7c926bf12be492c77735b3450be1f635f4188b55807f22e"
+                                                                      ],
+                                                   "note_char_length":  5031
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-004-032",
+                     "public_law":  "4-32",
+                     "title":  "Public Law 4-32 | Warrants, Subpoenas, and Summons Act",
+                     "list_name":  "1st - 10th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-004-032/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  3176,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-004-032/source/Executive_Order_18-4.pdf",
+                                              "format":  "pdf",
+                                              "size":  299077,
+                                              "sha256":  "2d5e2731a832fe2a0b7b4def32c8550d73c7cee08a39124e4ce56d7fd4f3901c"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc28.xml",
+                                                   "note_id":  "rp-pl004032-codification",
+                                                   "public_law":  "4-32",
+                                                   "congress_from_id":  4,
+                                                   "seq_from_id":  32,
+                                                   "heading_cited_pl":  "4-32",
+                                                   "heading":  "Warrants, Subpoenas, and Summons Actâ€”Pub. L. 4â€“32",
+                                                   "placement_identifier":  "/us/usc/t28/s1",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/wSfwmGz9/42-public-law-4-32-warrants-subpoenas-and-summons-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  727
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-004-033",
+                     "public_law":  "4-33",
+                     "title":  "Public Law 4-33 | National Archives Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-004-033/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  2503,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-004-033/source/H.R. 4011 _ National Archives Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  602193,
+                                              "sha256":  "52d4d2227d38d1593275e390b231ea5563300beab6a4e6656ec72697430fc2b2"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "amend",
+                                                         "establish",
+                                                         "severab"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc44.xml",
+                                                   "note_id":  "rp-pl004033-codification",
+                                                   "public_law":  "4-33",
+                                                   "congress_from_id":  4,
+                                                   "seq_from_id":  33,
+                                                   "heading_cited_pl":  "4-33",
+                                                   "heading":  "National Archives Actâ€”Pub. L. 4â€“33",
+                                                   "placement_identifier":  "/us/usc/t44/s101",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/07sRMhyd/44-public-law-4-33-national-archives-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "bdc3e2be7604b400200fef56dffd0aa27502af145f7453a8940b787c0405dde8"
+                                                                      ],
+                                                   "note_char_length":  3171
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-004-034",
+                     "public_law":  "4-34",
+                     "title":  "Public Law 4-34 | An Act to Prevent the Proliferation of Magistrates and Ensure Basic Judicial Competence",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-004-034/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  2171,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-004-034/source/H.R. 4015.pdf",
+                                              "format":  "pdf",
+                                              "size":  544512,
+                                              "sha256":  "d74d35b1be7035420c52ce87075927ef082062b34b8eee84ec37b7e1f8181730"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc50.xml",
+                                                   "note_id":  "rp-pl004034-codification",
+                                                   "public_law":  "4-34",
+                                                   "congress_from_id":  4,
+                                                   "seq_from_id":  34,
+                                                   "heading_cited_pl":  "4-34",
+                                                   "heading":  "An Act to Prevent the Proliferation of Magistrates and Ensure Basic Judicial Competenceâ€”Pub. L. 4â€“34",
+                                                   "placement_identifier":  "/us/usc/t50/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/03s9yS9A/45-public-law-4-34-an-act-to-prevent-the-proliferation-of-magistrates-and-ensure-basic-judicial-competence"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "4c369c688eb95064e12b6fc4bb8f329bf20f0513b3b4a28df75d72b22cbb287e"
+                                                                      ],
+                                                   "note_char_length":  2985
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-004-035",
+                     "public_law":  "4-35",
+                     "title":  "Public Law 4-35 | Recommissioning of the United States Ship New Jersey Act of 2022",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "meaningful text",
+                     "law_txt_path":  "codification/laws/laws/PL-004-035/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  209,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  true,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-004-035/source/downloaded_file.html",
+                                              "format":  "html",
+                                              "size":  1789,
+                                              "sha256":  "50af80f530a38646e82f6f8e00e595d099579ae90baa3dee3e3828b9b43ce765"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc46.xml",
+                                                   "note_id":  "rp-pl004035-codification",
+                                                   "public_law":  "4-35",
+                                                   "congress_from_id":  4,
+                                                   "seq_from_id":  35,
+                                                   "heading_cited_pl":  "4-35",
+                                                   "heading":  "Recommissioning of the United States Ship New Jersey Act of 2022â€”Pub. L. 4â€“35",
+                                                   "placement_identifier":  "/us/usc/t46/s101",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/byKIDaQ9/46-public-law-4-35-recommissioning-of-the-united-states-ship-new-jersey-act-of-2022"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  831
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-004-036",
+                     "public_law":  "4-36",
+                     "title":  "Public Law 4-36 | Defense Heraldic Services Act",
+                     "list_name":  "1st - 10th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "substantive HTML text",
+                     "law_txt_path":  "codification/laws/laws/PL-004-036/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  3506,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  true,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-004-036/source/rendered.html",
+                                              "format":  "html",
+                                              "size":  256563,
+                                              "sha256":  "9c32853aa7b74bde8756ed48d942338e8dccd9f510baa186b59542e96d431ab7"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "Chapter 48 of Title 10",
+                                                     "Chapter 767 of Title 10",
+                                                     "Title 10"
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "amend",
+                                                         "effective",
+                                                         "insert",
+                                                         "repeal",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc10.xml",
+                                                   "note_id":  "rp-pl004036-codification",
+                                                   "public_law":  "4-36",
+                                                   "congress_from_id":  4,
+                                                   "seq_from_id":  36,
+                                                   "heading_cited_pl":  "4-36",
+                                                   "heading":  "Defense Heraldic Services Actâ€”Pub. L. 4â€“36",
+                                                   "placement_identifier":  "/us/usc/t10/s101/h",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/t7ShMXjX/47-public-law-4-36-defense-heraldic-services-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  739
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-004-037",
+                     "public_law":  "4-37",
+                     "title":  "Public Law 4-37 | Border Awareness and Naturalization Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-004-037/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  7234,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-004-037/source/S.37- Border Awareness and Naturalization Bill.pdf",
+                                              "format":  "pdf",
+                                              "size":  337146,
+                                              "sha256":  "1a74639496733d49fe98bb8e875870878703f4e587ad28fcada903a3fd72713b"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "establish",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc08.xml",
+                                                   "note_id":  "rp-pl004037-codification",
+                                                   "public_law":  "4-37",
+                                                   "congress_from_id":  4,
+                                                   "seq_from_id":  37,
+                                                   "heading_cited_pl":  "4-37",
+                                                   "heading":  "Border Awareness and Naturalization Actâ€”Pub. L. 4â€“37",
+                                                   "placement_identifier":  "/us/usc/t8/s1101/i/2",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/jnpo6WP9/48-public-law-4-37-border-awareness-and-naturalization-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "a1b329af5084acd57cce6c56c39ccd97555db4f7766a98971389495610828cb9"
+                                                                      ],
+                                                   "note_char_length":  8018
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-004-038",
+                     "public_law":  "4-38",
+                     "title":  "Public Law 4-38 | White House Protection Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-004-038/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  1457,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-004-038/source/S. 36 - White House Protection Act (1).pdf",
+                                              "format":  "pdf",
+                                              "size":  323502,
+                                              "sha256":  "07d9be39ed1b6cce158e4dd9aa7b73e62556fa59756bfc3c81e2e7761a453635"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc03.xml",
+                                                   "note_id":  "rp-pl004038-codification",
+                                                   "public_law":  "4-38",
+                                                   "congress_from_id":  4,
+                                                   "seq_from_id":  38,
+                                                   "heading_cited_pl":  "4-38",
+                                                   "heading":  "White House Protection Actâ€”Pub. L. 4â€“38",
+                                                   "placement_identifier":  "/us/usc/t3/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/hG40CoUb/49-public-law-4-38-white-house-protection-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "1d8e0d186044b7eb72b67aecb8bcce3ca3c01a334b368df16d3c80075ed60e42"
+                                                                      ],
+                                                   "note_char_length":  2140
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-007-039",
+                     "public_law":  "7-39",
+                     "title":  "Public Law 7-39 | Mandatory FLETC Training ACT",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-007-039/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  2999,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-007-039/source/S.B.1 Mandatory FLETC training.pdf",
+                                              "format":  "pdf",
+                                              "size":  1190247,
+                                              "sha256":  "c060ac9c53f41d8ff995c73d63be8184a2d5979ac708c298182616a7e747d67a"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc50.xml",
+                                                   "note_id":  "rp-pl007039-codification",
+                                                   "public_law":  "7-39",
+                                                   "congress_from_id":  7,
+                                                   "seq_from_id":  39,
+                                                   "heading_cited_pl":  "7-39",
+                                                   "heading":  "Mandatory FLETC Training ACTâ€”Pub. L. 7â€“39",
+                                                   "placement_identifier":  "/us/usc/t50/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/YmOo0Lio/148-public-law-7-39-mandatory-fletc-training-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "8f52c249a33511517269f55d5941bf6ab8e0d43682767e2dfe4f44c5d273372b"
+                                                                      ],
+                                                   "note_char_length":  3713
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-007-040",
+                     "public_law":  "7-40",
+                     "title":  "Public Law 7-40 | Media Companies Protection Act of 2022",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-007-040/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  3128,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-007-040/source/S. 8 - Media Companies Protection Act of 2022.pdf",
+                                              "format":  "pdf",
+                                              "size":  77346,
+                                              "sha256":  "8243e445c7a5019b1603de4a933efce57ee742e0e8b09a491e1a57b57ffbb2c9"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc50.xml",
+                                                   "note_id":  "rp-pl007040-codification",
+                                                   "public_law":  "7-40",
+                                                   "congress_from_id":  7,
+                                                   "seq_from_id":  40,
+                                                   "heading_cited_pl":  "7-40",
+                                                   "heading":  "Media Companies Protection Act of 2022â€”Pub. L. 7â€“40",
+                                                   "placement_identifier":  "/us/usc/t50/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/FIAcdKLR/159-public-law-7-40-media-companies-protection-act-of-2022"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "04134e713e67e4ba5a37f2e7fa1c97e46b4cfbc71579b03e74eaa707fa86a8e8"
+                                                                      ],
+                                                   "note_char_length":  3830
+                                               }
+                                           ]
+                 }
+             ]
+}

@@ -1,0 +1,387 @@
+{
+  "reviewer": "law-auditor-E",
+  "group_index": 109,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/review-repair-09.json",
+  "output_path": "audit/review/review-repair-09.json",
+  "reviewed_against": [
+    "audit/review/review-09.json",
+    "audit/review/manifest-09.json",
+    "codification/mass_migration/latest/reports/laws/PL-012-083.md",
+    "codification/mass_migration/latest/reports/laws/PL-012-084.md",
+    "codification/mass_migration/latest/reports/laws/PL-012-086.md",
+    "codification/mass_migration/latest/reports/laws/PL-012-087.md",
+    "codification/mass_migration/latest/reports/laws/PL-012-088.md",
+    "codification/mass_migration/latest/reports/laws/PL-012-103.md",
+    "codification/mass_migration/latest/reports/laws/PL-014-089.md",
+    "codification/mass_migration/latest/reports/laws/PL-014-090.md",
+    "codification/mass_migration/latest/reports/laws/PL-014-091.md",
+    "codification/mass_migration/latest/reports/laws/PL-015-092.md",
+    "origin/main"
+  ],
+  "completion_summary": "Rebased the group-9 review to the authoritative migration reports while preserving order. The note-only laws remain note-only, the repealed laws remain history-only, PL-014-089 remains already incorporated, and PL-015-092 is superseded before codification.",
+  "changed_law_ids": [
+    "PL-012-083",
+    "PL-012-084",
+    "PL-012-086",
+    "PL-012-087",
+    "PL-012-088",
+    "PL-012-103",
+    "PL-014-089",
+    "PL-014-090",
+    "PL-014-091",
+    "PL-015-092"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-012-083",
+      "public_law": "12-83",
+      "title": "Public Law 12-83 | Dannybec Went to Jail Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The authoritative plan and report keep the act as an active statutory note at /us/usc/t2/s142j.",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t2/s142j",
+      "justified_non_target_disposition": null,
+      "exact_enacted_change": "Add a statutory note at /us/usc/t2/s142j.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-012-083.md classifies the law as STATUTORY_NOTE at /us/usc/t2/s142j.",
+        "codification/mass_migration/latest/plans/PL-012-083.json sets target /us/usc/t2/s142j and confidence high."
+      ],
+      "current_xml_comparison": {
+        "assessment": "planned",
+        "placement": "/us/usc/t2/s142j",
+        "branch_vs_origin": "The branch should carry a note-only placement at /us/usc/t2/s142j; no competing positive-law rewrite is identified in the source corpus.",
+        "detail": "The law is preserved as a statutory note rather than new operative text."
+      },
+      "final_recommended_action": "Keep the note at /us/usc/t2/s142j and remove any dump or Trello baggage.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "whole act",
+          "conclusion": "The whole act is note-only and does not justify a positive-law rewrite.",
+          "target_or_non_target": "target: /us/usc/t2/s142j",
+          "exact_enacted_change": "Preserve the act as a statutory note at /us/usc/t2/s142j.",
+          "source_evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-012-083.md classifies the law as STATUTORY_NOTE.",
+            "codification/mass_migration/latest/plans/PL-012-083.json records the note target at /us/usc/t2/s142j."
+          ]
+        }
+      ]
+    },
+    {
+      "law_id": "PL-012-084",
+      "public_law": "12-84",
+      "title": "Public Law 12-84 | Municipal Act of 2023",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The authoritative report classifies the act as repealed, so it belongs in repeal history only.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "justified_non_target_disposition": "Repealed local enactment; no live Code text survives.",
+      "exact_enacted_change": "No Code insertion; retain repeal history only.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-012-084.md classifies the law as repealed and authorizes no Code operation.",
+        "codification/mass_migration/latest/plans/PL-012-084.json records disposition NONOPERATIVE_OR_REPEALED."
+      ],
+      "current_xml_comparison": {
+        "assessment": "history-only",
+        "placement": null,
+        "branch_vs_origin": "No live XML placement is warranted because the law is repealed.",
+        "detail": "The proper treatment is historical only."
+      },
+      "final_recommended_action": "Keep repeal history only.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "whole act",
+          "conclusion": "The whole act is repealed and should not be codified as live text.",
+          "target_or_non_target": "non-target: repeal-history only.",
+          "exact_enacted_change": "No Code insertion; keep only the historical repeal record.",
+          "source_evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-012-084.md says no Code operation was authorized.",
+            "codification/mass_migration/latest/plans/PL-012-084.json records the law as NONOPERATIVE_OR_REPEALED."
+          ]
+        }
+      ]
+    },
+    {
+      "law_id": "PL-012-086",
+      "public_law": "12-86",
+      "title": "Public Law 12-86 | H.R. 1302",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The authoritative plan places the act as a statutory note at /us/usc/t2/s25a.",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t2/s25a",
+      "justified_non_target_disposition": null,
+      "exact_enacted_change": "Add a statutory note at /us/usc/t2/s25a.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-012-086.md classifies the law as STATUTORY_NOTE at /us/usc/t2/s25a.",
+        "codification/mass_migration/latest/plans/PL-012-086.json sets target /us/usc/t2/s25a and confidence high."
+      ],
+      "current_xml_comparison": {
+        "assessment": "planned",
+        "placement": "/us/usc/t2/s25a",
+        "branch_vs_origin": "The branch should carry a note-only placement at /us/usc/t2/s25a; no competing positive-law rewrite is identified in the source corpus.",
+        "detail": "The law is preserved as a statutory note rather than new operative text."
+      },
+      "final_recommended_action": "Keep the note at /us/usc/t2/s25a.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "whole act",
+          "conclusion": "The act is note-only and does not justify a positive-law rewrite.",
+          "target_or_non_target": "target: /us/usc/t2/s25a",
+          "exact_enacted_change": "Preserve the act as a statutory note at /us/usc/t2/s25a.",
+          "source_evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-012-086.md classifies the law as STATUTORY_NOTE.",
+            "codification/mass_migration/latest/plans/PL-012-086.json records the note target at /us/usc/t2/s25a."
+          ]
+        }
+      ]
+    },
+    {
+      "law_id": "PL-012-087",
+      "public_law": "12-87",
+      "title": "Public Law 12-87 | An act to repeal the Smart Label Congress Act (Public Law 9-54)",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The authoritative report places the repeal measure as a statutory note at /us/usc/t2/s4572.",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t2/s4572",
+      "justified_non_target_disposition": null,
+      "exact_enacted_change": "Add a statutory note at /us/usc/t2/s4572.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-012-087.md classifies the law as STATUTORY_NOTE at /us/usc/t2/s4572.",
+        "codification/mass_migration/latest/plans/PL-012-087.json sets target /us/usc/t2/s4572 and confidence high."
+      ],
+      "current_xml_comparison": {
+        "assessment": "planned",
+        "placement": "/us/usc/t2/s4572",
+        "branch_vs_origin": "The branch should carry a note-only placement at /us/usc/t2/s4572; no competing positive-law rewrite is identified in the source corpus.",
+        "detail": "The law is preserved as a statutory note rather than new operative text."
+      },
+      "final_recommended_action": "Keep the note at /us/usc/t2/s4572.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "whole act",
+          "conclusion": "The repeal measure is note-only and does not justify a positive-law rewrite.",
+          "target_or_non_target": "target: /us/usc/t2/s4572",
+          "exact_enacted_change": "Preserve the repeal history as a statutory note at /us/usc/t2/s4572.",
+          "source_evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-012-087.md classifies the law as STATUTORY_NOTE.",
+            "codification/mass_migration/latest/plans/PL-012-087.json records the note target at /us/usc/t2/s4572."
+          ]
+        }
+      ]
+    },
+    {
+      "law_id": "PL-012-088",
+      "public_law": "12-88",
+      "title": "Public Law 12-88 | New District of Columbia Home Rule Act",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The authoritative report classifies the act as repealed, so it belongs in repeal history only.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "justified_non_target_disposition": "Repealed District home-rule enactment; no live Code text survives.",
+      "exact_enacted_change": "No Code insertion; retain repeal history only.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-012-088.md classifies the law as repealed and authorizes no Code operation.",
+        "codification/mass_migration/latest/plans/PL-012-088.json records disposition NONOPERATIVE_OR_REPEALED."
+      ],
+      "current_xml_comparison": {
+        "assessment": "history-only",
+        "placement": null,
+        "branch_vs_origin": "No live XML placement is warranted because the law is repealed.",
+        "detail": "The proper treatment is historical only."
+      },
+      "final_recommended_action": "Keep repeal history only.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "whole act",
+          "conclusion": "The whole act is repealed and should not be codified as live text.",
+          "target_or_non_target": "non-target: repeal-history only.",
+          "exact_enacted_change": "No Code insertion; keep only the historical repeal record.",
+          "source_evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-012-088.md says no Code operation was authorized.",
+            "codification/mass_migration/latest/plans/PL-012-088.json records the law as NONOPERATIVE_OR_REPEALED."
+          ]
+        }
+      ]
+    },
+    {
+      "law_id": "PL-012-103",
+      "public_law": "12-103",
+      "title": "Public Law 12-103 | Ceremonial 5-Star Officer Creation Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The authoritative plan places the act as a statutory note at /us/usc/t2/s4576.",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t2/s4576",
+      "justified_non_target_disposition": null,
+      "exact_enacted_change": "Add a statutory note at /us/usc/t2/s4576.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-012-103.md classifies the law as STATUTORY_NOTE at /us/usc/t2/s4576.",
+        "codification/mass_migration/latest/plans/PL-012-103.json sets target /us/usc/t2/s4576 and confidence high."
+      ],
+      "current_xml_comparison": {
+        "assessment": "planned",
+        "placement": "/us/usc/t2/s4576",
+        "branch_vs_origin": "The branch should carry a note-only placement at /us/usc/t2/s4576; no competing positive-law rewrite is identified in the source corpus.",
+        "detail": "The law is preserved as a statutory note rather than new operative text."
+      },
+      "final_recommended_action": "Keep the note at /us/usc/t2/s4576.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "whole act",
+          "conclusion": "The ceremonial grade act is note-only and does not justify a positive-law rewrite.",
+          "target_or_non_target": "target: /us/usc/t2/s4576",
+          "exact_enacted_change": "Preserve the act as a statutory note at /us/usc/t2/s4576.",
+          "source_evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-012-103.md classifies the law as STATUTORY_NOTE.",
+            "codification/mass_migration/latest/plans/PL-012-103.json records the note target at /us/usc/t2/s4576."
+          ]
+        }
+      ]
+    },
+    {
+      "law_id": "PL-014-089",
+      "public_law": "14-89",
+      "title": "Public Law 14-89 | Americans Safety and Smart Act of 2023",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The authoritative plan treats the law as already incorporated at /us/usc/t18/s242.",
+      "approved_code_treatment": "already-incorporated",
+      "exact_target": "/us/usc/t18/s242",
+      "justified_non_target_disposition": null,
+      "exact_enacted_change": "Do not duplicate the already incorporated Title 18 material at /us/usc/t18/s242.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-014-089.md says the project-generated Code already contains this law.",
+        "codification/mass_migration/latest/plans/PL-014-089.json lists /us/usc/t18/s242 in already_incorporated_locations."
+      ],
+      "current_xml_comparison": {
+        "assessment": "already-incorporated",
+        "placement": "/us/usc/t18/s242",
+        "branch_vs_origin": "The verified Title 18 placement is already present and should be preserved without duplication.",
+        "detail": "The law is already incorporated in the current branch record."
+      },
+      "final_recommended_action": "Leave the verified Title 18 insertion alone and do not duplicate it.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "SEC 3-5",
+          "conclusion": "The operative enforcement package is already incorporated in Title 18.",
+          "target_or_non_target": "target: /us/usc/t18/s242",
+          "exact_enacted_change": "Preserve the existing /us/usc/t18/s242 placement and avoid a duplicate insertion.",
+          "source_evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-014-089.md reports an already incorporated location.",
+            "codification/mass_migration/latest/plans/PL-014-089.json lists /us/usc/t18/s242 as already incorporated."
+          ]
+        }
+      ]
+    },
+    {
+      "law_id": "PL-014-090",
+      "public_law": "14-90",
+      "title": "Public Law 14-90 | Presidential Suck Up Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The authoritative report treats the act as a statutory note at /us/usc/t2/s4509.",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t2/s4509",
+      "justified_non_target_disposition": null,
+      "exact_enacted_change": "Add a statutory note at /us/usc/t2/s4509.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-014-090.md classifies the law as STATUTORY_NOTE at /us/usc/t2/s4509.",
+        "codification/mass_migration/latest/plans/PL-014-090.json sets target /us/usc/t2/s4509 and confidence high."
+      ],
+      "current_xml_comparison": {
+        "assessment": "planned",
+        "placement": "/us/usc/t2/s4509",
+        "branch_vs_origin": "The branch should carry a note-only placement at /us/usc/t2/s4509; no competing positive-law rewrite is identified in the source corpus.",
+        "detail": "The law is preserved as a statutory note rather than new operative text."
+      },
+      "final_recommended_action": "Keep the note at /us/usc/t2/s4509.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "SEC 2(a)-(b)",
+          "conclusion": "The acting-service rule is note-only and does not justify a positive-law rewrite.",
+          "target_or_non_target": "target: /us/usc/t2/s4509",
+          "exact_enacted_change": "Preserve the acting-service rule as a statutory note at /us/usc/t2/s4509.",
+          "source_evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-014-090.md classifies the law as STATUTORY_NOTE.",
+            "codification/mass_migration/latest/plans/PL-014-090.json records the note target at /us/usc/t2/s4509."
+          ]
+        }
+      ]
+    },
+    {
+      "law_id": "PL-014-091",
+      "public_law": "14-91",
+      "title": "Public Law 14-91 | Military Code of Military Justice Reform Act of 2023",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The authoritative report treats the act as a statutory note at /us/usc/t2/s190d.",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t2/s190d",
+      "justified_non_target_disposition": null,
+      "exact_enacted_change": "Add a statutory note at /us/usc/t2/s190d.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-014-091.md classifies the law as STATUTORY_NOTE at /us/usc/t2/s190d.",
+        "codification/mass_migration/latest/plans/PL-014-091.json sets target /us/usc/t2/s190d and confidence high."
+      ],
+      "current_xml_comparison": {
+        "assessment": "planned",
+        "placement": "/us/usc/t2/s190d",
+        "branch_vs_origin": "The branch should carry a note-only placement at /us/usc/t2/s190d; no competing positive-law rewrite is identified in the source corpus.",
+        "detail": "The law is preserved as a statutory note rather than new operative text."
+      },
+      "final_recommended_action": "Keep the note at /us/usc/t2/s190d.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "whole act",
+          "conclusion": "The reform act is note-only and does not justify a positive-law rewrite.",
+          "target_or_non_target": "target: /us/usc/t2/s190d",
+          "exact_enacted_change": "Preserve the reform act as a statutory note at /us/usc/t2/s190d.",
+          "source_evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-014-091.md classifies the law as STATUTORY_NOTE.",
+            "codification/mass_migration/latest/plans/PL-014-091.json records the note target at /us/usc/t2/s190d."
+          ]
+        }
+      ]
+    },
+    {
+      "law_id": "PL-015-092",
+      "public_law": "15-92",
+      "title": "Public Law 15-92 | Commerce and Labor Innovation Initiative Act",
+      "final_legal_status": "superseded_before_codification",
+      "chronology_conclusion": "The authoritative report says no current Code insertion is made because PL-031-226 repeals this law.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "justified_non_target_disposition": "Historical repeal note only; later PL-031-226 repeals the law before codification.",
+      "exact_enacted_change": "Retain only the repeal-history note and do not insert live Code text.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-015-092.md says no current Code insertion is made because PL-031-226 repeals the law.",
+        "codification/mass_migration/latest/plans/PL-015-092.json records disposition SUPERSEDED_BEFORE_CODIFICATION."
+      ],
+      "current_xml_comparison": {
+        "assessment": "history-only",
+        "placement": null,
+        "branch_vs_origin": "The law is superseded before codification, so the current tree should carry only historical repeal treatment.",
+        "detail": "No live positive-law text should be inserted for PL-015-092."
+      },
+      "final_recommended_action": "Keep only the repeal-history note and do not insert live Code text.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "whole act",
+          "conclusion": "The whole act is superseded before codification and should remain history only.",
+          "target_or_non_target": "non-target: historical repeal note only.",
+          "exact_enacted_change": "Keep only the repeal-history note and omit live Code text.",
+          "source_evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-015-092.md says no current Code insertion is made.",
+            "codification/mass_migration/latest/plans/PL-015-092.json records disposition SUPERSEDED_BEFORE_CODIFICATION."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,387 @@
+{
+  "reviewer": "law-auditor-E",
+  "group_index": 110,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/review-repair-10.json",
+  "output_path": "audit/review/review-repair-10.json",
+  "reviewed_against": [
+    "audit/review/review-10.json",
+    "audit/review/manifest-10.json",
+    "codification/mass_migration/latest/reports/laws/PL-015-093.md",
+    "codification/mass_migration/latest/reports/laws/PL-015-094.md",
+    "codification/mass_migration/latest/reports/laws/PL-015-095.md",
+    "codification/mass_migration/latest/reports/laws/PL-015-096.md",
+    "codification/mass_migration/latest/reports/laws/PL-015-097.md",
+    "codification/mass_migration/latest/reports/laws/PL-015-098.md",
+    "codification/mass_migration/latest/reports/laws/PL-015-099.md",
+    "codification/mass_migration/latest/reports/laws/PL-015-100.md",
+    "codification/mass_migration/latest/reports/laws/PL-015-101.md",
+    "codification/mass_migration/latest/reports/laws/PL-015-102.md",
+    "origin/main"
+  ],
+  "completion_summary": "Rebased the group-10 review to the authoritative migration reports while preserving order. PL-015-093, PL-015-097, PL-015-099, PL-015-101, and PL-015-102 remain statutory-note enactments, PL-015-094 is source unavailable, PL-015-095, PL-015-096, and PL-015-100 remain repeal history, and PL-015-098 is non-code.",
+  "changed_law_ids": [
+    "PL-015-093",
+    "PL-015-094",
+    "PL-015-095",
+    "PL-015-096",
+    "PL-015-097",
+    "PL-015-098",
+    "PL-015-099",
+    "PL-015-100",
+    "PL-015-101",
+    "PL-015-102"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-015-093",
+      "public_law": "15-93",
+      "title": "Public Law 15-93 | Checks and Balances Act of 2023",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The authoritative report places the law as a statutory note at /us/usc/t2/s271.",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t2/s271",
+      "justified_non_target_disposition": null,
+      "exact_enacted_change": "Add a statutory note at /us/usc/t2/s271.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-015-093.md classifies the law as STATUTORY_NOTE at /us/usc/t2/s271.",
+        "codification/mass_migration/latest/plans/PL-015-093.json sets target /us/usc/t2/s271 and confidence high."
+      ],
+      "current_xml_comparison": {
+        "assessment": "planned",
+        "placement": "/us/usc/t2/s271",
+        "branch_vs_origin": "The branch should carry a note-only placement at /us/usc/t2/s271; no competing positive-law rewrite is identified in the source corpus.",
+        "detail": "The law is preserved as a statutory note rather than new operative text."
+      },
+      "final_recommended_action": "Keep the note at /us/usc/t2/s271.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "SEC 2(a)",
+          "conclusion": "The repeal of PL 3-15 is note-only history and does not justify a positive-law rewrite.",
+          "target_or_non_target": "target: /us/usc/t2/s271",
+          "exact_enacted_change": "Preserve the repeal history as a statutory note at /us/usc/t2/s271.",
+          "source_evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-015-093.md classifies the law as STATUTORY_NOTE.",
+            "codification/mass_migration/latest/plans/PL-015-093.json records the note target at /us/usc/t2/s271."
+          ]
+        }
+      ]
+    },
+    {
+      "law_id": "PL-015-094",
+      "public_law": "15-94",
+      "title": "Public Law 15-94 | Whistleblower Protections Act of 2023",
+      "final_legal_status": "source_unavailable",
+      "chronology_conclusion": "The source report says no readable authenticated enactment text could be recovered, so only source-limited history is safe.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "justified_non_target_disposition": "Source unavailable; no lawful Code placement can be authenticated.",
+      "exact_enacted_change": "No exact enactment change can be authenticated from the recovered source bundle.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-015-094.md says no readable authenticated enactment text could be recovered.",
+        "codification/mass_migration/latest/plans/PL-015-094.json records disposition SOURCE_UNAVAILABLE."
+      ],
+      "current_xml_comparison": {
+        "assessment": "missing",
+        "placement": null,
+        "branch_vs_origin": "No readable source text is available, so no lawful XML placement can be verified.",
+        "detail": "The law can only be preserved as source-limited history."
+      },
+      "final_recommended_action": "Keep only source-limited history until readable text is recovered.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "whole act",
+          "conclusion": "The whole act is source unavailable and cannot be turned into operative Code text.",
+          "target_or_non_target": "non-target: source-limited historical note only.",
+          "exact_enacted_change": "Retain only source-limited history and do not invent operative text.",
+          "source_evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-015-094.md says the text could not be recovered.",
+            "codification/mass_migration/latest/plans/PL-015-094.json records SOURCE_UNAVAILABLE."
+          ]
+        }
+      ]
+    },
+    {
+      "law_id": "PL-015-095",
+      "public_law": "15-95",
+      "title": "Public Law 15-95 | An Act to Repeal the White House Protection Act",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The authoritative report classifies the act as repealed, so it belongs in repeal history only.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "justified_non_target_disposition": "Repealed enactment; no live Code text survives.",
+      "exact_enacted_change": "No Code insertion; retain repeal history only.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-015-095.md classifies the law as repealed and authorizes no Code operation.",
+        "codification/mass_migration/latest/plans/PL-015-095.json records disposition NONOPERATIVE_OR_REPEALED."
+      ],
+      "current_xml_comparison": {
+        "assessment": "history-only",
+        "placement": null,
+        "branch_vs_origin": "No live XML placement is warranted because the law is repealed.",
+        "detail": "The proper treatment is historical only."
+      },
+      "final_recommended_action": "Keep repeal history only.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "whole act",
+          "conclusion": "The whole act is repealed and should not be codified as live text.",
+          "target_or_non_target": "non-target: repeal-history only.",
+          "exact_enacted_change": "No Code insertion; keep only the historical repeal record.",
+          "source_evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-015-095.md says no Code operation was authorized.",
+            "codification/mass_migration/latest/plans/PL-015-095.json records the law as NONOPERATIVE_OR_REPEALED."
+          ]
+        }
+      ]
+    },
+    {
+      "law_id": "PL-015-096",
+      "public_law": "15-96",
+      "title": "Public Law 15-96 | Prisoner Bail Protection Act",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The authoritative report classifies the act as repealed, so it belongs in repeal history only.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "justified_non_target_disposition": "Repealed enactment; no live Code text survives.",
+      "exact_enacted_change": "No Code insertion; retain repeal history only.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-015-096.md classifies the law as repealed and authorizes no Code operation.",
+        "codification/mass_migration/latest/plans/PL-015-096.json records disposition NONOPERATIVE_OR_REPEALED."
+      ],
+      "current_xml_comparison": {
+        "assessment": "history-only",
+        "placement": null,
+        "branch_vs_origin": "No live XML placement is warranted because the law is repealed.",
+        "detail": "The proper treatment is historical only."
+      },
+      "final_recommended_action": "Keep repeal history only.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "whole act",
+          "conclusion": "The whole act is repealed and should not be codified as live text.",
+          "target_or_non_target": "non-target: repeal-history only.",
+          "exact_enacted_change": "No Code insertion; keep only the historical repeal record.",
+          "source_evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-015-096.md says no Code operation was authorized.",
+            "codification/mass_migration/latest/plans/PL-015-096.json records the law as NONOPERATIVE_OR_REPEALED."
+          ]
+        }
+      ]
+    },
+    {
+      "law_id": "PL-015-097",
+      "public_law": "15-97",
+      "title": "Public Law 15-97 | Uniform Legal Practice Authority Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The authoritative report places the law as a statutory note at /us/usc/t28/s598.",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t28/s598",
+      "justified_non_target_disposition": null,
+      "exact_enacted_change": "Add a statutory note at /us/usc/t28/s598.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-015-097.md classifies the law as STATUTORY_NOTE at /us/usc/t28/s598.",
+        "codification/mass_migration/latest/plans/PL-015-097.json sets target /us/usc/t28/s598 and confidence high."
+      ],
+      "current_xml_comparison": {
+        "assessment": "planned",
+        "placement": "/us/usc/t28/s598",
+        "branch_vs_origin": "The branch should carry a note-only placement at /us/usc/t28/s598; no competing positive-law rewrite is identified in the source corpus.",
+        "detail": "The law is preserved as a statutory note rather than new operative text."
+      },
+      "final_recommended_action": "Keep the note at /us/usc/t28/s598.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "whole act",
+          "conclusion": "The whole act is note-only and does not justify a positive-law rewrite.",
+          "target_or_non_target": "target: /us/usc/t28/s598",
+          "exact_enacted_change": "Preserve the act as a statutory note at /us/usc/t28/s598.",
+          "source_evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-015-097.md classifies the law as STATUTORY_NOTE.",
+            "codification/mass_migration/latest/plans/PL-015-097.json records the note target at /us/usc/t28/s598."
+          ]
+        }
+      ]
+    },
+    {
+      "law_id": "PL-015-098",
+      "public_law": "15-98",
+      "title": "Public Law 15-98 | Inspector General Act (2023)",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The authoritative report classifies the enactment as non-code commemorative material, so it receives no Code insertion.",
+      "approved_code_treatment": "non-code",
+      "exact_target": null,
+      "justified_non_target_disposition": "Non-code commemorative/public-law history; no U.S. Code target.",
+      "exact_enacted_change": "No Code insertion; keep the enactment only as public-law history.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-015-098.md classifies the enactment as NON_CODE.",
+        "codification/mass_migration/latest/plans/PL-015-098.json records disposition NON_CODE and no operation."
+      ],
+      "current_xml_comparison": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "branch_vs_origin": "No Code insertion is authorized for this commemorative enactment.",
+        "detail": "Treat the law as public-law history only."
+      },
+      "final_recommended_action": "Keep non-code history only.",
+      "confidence": "medium",
+      "provisions": [
+        {
+          "ref": "whole act",
+          "conclusion": "The whole act is commemorative and should not be converted into Code text.",
+          "target_or_non_target": "non-target: non-code history only.",
+          "exact_enacted_change": "No Code insertion; preserve the enactment only as public-law history.",
+          "source_evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-015-098.md classifies the enactment as NON_CODE.",
+            "codification/mass_migration/latest/plans/PL-015-098.json records disposition NON_CODE."
+          ]
+        }
+      ]
+    },
+    {
+      "law_id": "PL-015-099",
+      "public_law": "15-99",
+      "title": "Public Law 15-99 | Second National Federal Torts Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The authoritative report places the law as a statutory note at /us/usc/t18/s158.",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t18/s158",
+      "justified_non_target_disposition": null,
+      "exact_enacted_change": "Add a statutory note at /us/usc/t18/s158.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-015-099.md classifies the law as STATUTORY_NOTE at /us/usc/t18/s158.",
+        "codification/mass_migration/latest/plans/PL-015-099.json sets target /us/usc/t18/s158 and confidence high."
+      ],
+      "current_xml_comparison": {
+        "assessment": "planned",
+        "placement": "/us/usc/t18/s158",
+        "branch_vs_origin": "The branch should carry a note-only placement at /us/usc/t18/s158; no competing positive-law rewrite is identified in the source corpus.",
+        "detail": "The law is preserved as a statutory note rather than new operative text."
+      },
+      "final_recommended_action": "Keep the note at /us/usc/t18/s158.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "whole act",
+          "conclusion": "The whole act is note-only and does not justify a positive-law rewrite.",
+          "target_or_non_target": "target: /us/usc/t18/s158",
+          "exact_enacted_change": "Preserve the act as a statutory note at /us/usc/t18/s158.",
+          "source_evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-015-099.md classifies the law as STATUTORY_NOTE.",
+            "codification/mass_migration/latest/plans/PL-015-099.json records the note target at /us/usc/t18/s158."
+          ]
+        }
+      ]
+    },
+    {
+      "law_id": "PL-015-100",
+      "public_law": "15-100",
+      "title": "Public Law 15-100 | Employee Rights and Limitations Act (leave, employment, termination)",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The authoritative report classifies the act as repealed, so it belongs in repeal history only.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "justified_non_target_disposition": "Repealed enactment; no live Code text survives.",
+      "exact_enacted_change": "No Code insertion; retain repeal history only.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-015-100.md classifies the law as repealed and authorizes no Code operation.",
+        "codification/mass_migration/latest/plans/PL-015-100.json records disposition NONOPERATIVE_OR_REPEALED."
+      ],
+      "current_xml_comparison": {
+        "assessment": "history-only",
+        "placement": null,
+        "branch_vs_origin": "No live XML placement is warranted because the law is repealed.",
+        "detail": "The proper treatment is historical only."
+      },
+      "final_recommended_action": "Keep repeal history only.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "whole act",
+          "conclusion": "The whole act is repealed and should not be codified as live text.",
+          "target_or_non_target": "non-target: repeal-history only.",
+          "exact_enacted_change": "No Code insertion; keep only the historical repeal record.",
+          "source_evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-015-100.md says no Code operation was authorized.",
+            "codification/mass_migration/latest/plans/PL-015-100.json records the law as NONOPERATIVE_OR_REPEALED."
+          ]
+        }
+      ]
+    },
+    {
+      "law_id": "PL-015-101",
+      "public_law": "15-101",
+      "title": "Public Law 15-101 | Ensuring Accountability in Federal Agencies Act (public records, information, freedom of information)",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The authoritative report places the law as a statutory note at /us/usc/t5/s551.",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t5/s551",
+      "justified_non_target_disposition": null,
+      "exact_enacted_change": "Add a statutory note at /us/usc/t5/s551.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-015-101.md classifies the law as STATUTORY_NOTE at /us/usc/t5/s551.",
+        "codification/mass_migration/latest/plans/PL-015-101.json sets target /us/usc/t5/s551 and confidence high."
+      ],
+      "current_xml_comparison": {
+        "assessment": "planned",
+        "placement": "/us/usc/t5/s551",
+        "branch_vs_origin": "The branch should carry a note-only placement at /us/usc/t5/s551; no competing positive-law rewrite is identified in the source corpus.",
+        "detail": "The law is preserved as a statutory note rather than new operative text."
+      },
+      "final_recommended_action": "Keep the note at /us/usc/t5/s551.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "SEC 2-3",
+          "conclusion": "The public-records and FOIA language is note-only and does not justify a positive-law rewrite.",
+          "target_or_non_target": "target: /us/usc/t5/s551",
+          "exact_enacted_change": "Preserve the act as a statutory note at /us/usc/t5/s551.",
+          "source_evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-015-101.md classifies the law as STATUTORY_NOTE.",
+            "codification/mass_migration/latest/plans/PL-015-101.json records the note target at /us/usc/t5/s551."
+          ]
+        }
+      ]
+    },
+    {
+      "law_id": "PL-015-102",
+      "public_law": "15-102",
+      "title": "Public Law 15-102 | New Ambassadorial Organization and Reporting Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "The authoritative report places the law as a statutory note at /us/usc/t2/s1438.",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t2/s1438",
+      "justified_non_target_disposition": null,
+      "exact_enacted_change": "Add a statutory note at /us/usc/t2/s1438.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-015-102.md classifies the law as STATUTORY_NOTE at /us/usc/t2/s1438.",
+        "codification/mass_migration/latest/plans/PL-015-102.json sets target /us/usc/t2/s1438 and confidence high."
+      ],
+      "current_xml_comparison": {
+        "assessment": "planned",
+        "placement": "/us/usc/t2/s1438",
+        "branch_vs_origin": "The branch should carry a note-only placement at /us/usc/t2/s1438; no competing positive-law rewrite is identified in the source corpus.",
+        "detail": "The law is preserved as a statutory note rather than new operative text."
+      },
+      "final_recommended_action": "Keep the note at /us/usc/t2/s1438.",
+      "confidence": "high",
+      "provisions": [
+        {
+          "ref": "SECTION II-IV",
+          "conclusion": "The ambassadorial reorganization package is note-only and does not justify a positive-law rewrite.",
+          "target_or_non_target": "target: /us/usc/t2/s1438",
+          "exact_enacted_change": "Preserve the package as a statutory note at /us/usc/t2/s1438.",
+          "source_evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-015-102.md classifies the law as STATUTORY_NOTE.",
+            "codification/mass_migration/latest/plans/PL-015-102.json records the note target at /us/usc/t2/s1438."
+          ]
+        }
+      ]
+    }
+  ]
+}

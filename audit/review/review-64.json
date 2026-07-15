@@ -1,0 +1,755 @@
+{
+  "reviewer": "law-auditor-64",
+  "group_index": 164,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/review-repair-64.json",
+  "source_review": "audit/review/review-64.json",
+  "reviewed_against": [
+    "audit/manifests/review-repair-64.json",
+    "audit/review/review-64.json",
+    "audit/chronology-report.json",
+    "audit/primary/batch-05-01.json",
+    "audit/primary/batch-05-02.json",
+    "audit/primary/batch-14-01.json",
+    "codification/laws/laws/PL-016-122/law.txt",
+    "codification/laws/laws/PL-017-124/law.txt",
+    "codification/laws/laws/PL-017-125/law.txt",
+    "codification/laws/laws/PL-017-126/law.txt",
+    "codification/laws/laws/PL-017-127/law.txt",
+    "codification/laws/laws/PL-017-128/law.txt",
+    "codification/laws/laws/PL-017-129/law.txt",
+    "codification/laws/laws/PL-017-130/law.txt",
+    "codification/laws/laws/PL-017-131/law.txt",
+    "codification/laws/laws/PL-017-132/law.txt",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-016-122",
+      "public_law": "16-122",
+      "title": "Public Law 16-122 | The Congressional Competency Act of 2023",
+      "final_legal_status": "source-limited-historical-note",
+      "chronology_conclusion": "No recoverable operative chronology can be fixed because the source text is unavailable. The act should stay source-limited until the authentic enactment is recovered.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "target": null,
+      "target_justification": "No validated operative text was recoverable, so there is no safe codification target.",
+      "provisions": [
+        {
+          "ref": "whole act",
+          "final_legal_status": "unresolved",
+          "code_treatment": "historical-note-only",
+          "target": null,
+          "enacted_text_or_amendment_command": "Keep only a source-limited historical note; do not assert repeal, supersession, or a permanent Code placement.",
+          "source_evidence": [
+            "Primary report marks the source unavailable.",
+            "The available source is a permission-denial page, not operative text."
+          ]
+        }
+      ],
+      "source_evidence": [
+        "Source text is not recoverable.",
+        "Primary report treats the law as source-unavailable."
+      ],
+      "current_xml_comparison": {
+        "assessment": "source-limited-note-with-unsupported-repeal-label",
+        "placement": "/us/usc/t2/s1",
+        "branch_vs_origin": "No corrected codification was confirmed on the reviewed branch or in origin/main.",
+        "detail": "The current XML contains only a short note at Title 2 section 1 and adds a repeal or supersession label that the source cannot support."
+      },
+      "final_recommended_action": [
+        "Retain only a historical note.",
+        "Remove the unsupported repeal or supersession label.",
+        "Re-acquire the authentic source before any substantive codification."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-124",
+      "public_law": "17-124",
+      "title": "Public Law 17-124 | Law Enforcement Accountability Act (LEAA)",
+      "final_legal_status": "current",
+      "chronology_conclusion": "Operative general law-enforcement enactment; no later repeal was identified in the reviewed materials.",
+      "approved_code_treatment": "new-section",
+      "target": null,
+      "target_justification": "The source creates standalone law-enforcement standards and does not map cleanly to a single existing Code section.",
+      "provisions": [
+        {
+          "ref": "SEC1",
+          "final_legal_status": "current",
+          "code_treatment": "statutory-note",
+          "target": null,
+          "enacted_text_or_amendment_command": "Keep the short title as note material only.",
+          "source_evidence": [
+            "The act cites the Law Enforcement Accountability Act or LEAA."
+          ]
+        },
+        {
+          "ref": "SEC2",
+          "final_legal_status": "current",
+          "code_treatment": "statutory-note",
+          "target": null,
+          "enacted_text_or_amendment_command": "Keep the severability and anti-supersession language as savings note content.",
+          "source_evidence": [
+            "The act says it shall not be superseded unless a later law says so."
+          ]
+        },
+        {
+          "ref": "SEC3",
+          "final_legal_status": "current",
+          "code_treatment": "effective-date-note",
+          "target": null,
+          "enacted_text_or_amendment_command": "Keep the immediate-effective-date clause as a short note.",
+          "source_evidence": [
+            "The act becomes effective upon passage and signature."
+          ]
+        },
+        {
+          "ref": "SEC4",
+          "final_legal_status": "current",
+          "code_treatment": "new-section",
+          "target": null,
+          "enacted_text_or_amendment_command": "Create a new permanent definitions section for apprehension, bite, canine handler, force levels, and related terms.",
+          "source_evidence": [
+            "Section 4 is a definitions block.",
+            "It defines apprehension, bite, canine handler, and objective reasonableness."
+          ]
+        },
+        {
+          "ref": "SEC5 (canines)",
+          "final_legal_status": "current",
+          "code_treatment": "new-section",
+          "target": null,
+          "enacted_text_or_amendment_command": "Create a new permanent canine-operations section covering tactical and non-tactical deployment, call-off duties, and handler responsibilities.",
+          "source_evidence": [
+            "The act authorizes canine deployments for tactical and non-tactical assignments.",
+            "It requires call-off, medical care, and training rules."
+          ]
+        },
+        {
+          "ref": "SEC5 (use of force)",
+          "final_legal_status": "current",
+          "code_treatment": "new-section",
+          "target": null,
+          "enacted_text_or_amendment_command": "Create a new permanent use-of-force section with objective reasonableness, de-escalation, proportionality, and deadly-force limits.",
+          "source_evidence": [
+            "The text says law enforcement shall only use force that is objectively reasonable.",
+            "It also requires de-escalation whenever feasible."
+          ]
+        },
+        {
+          "ref": "SEC7",
+          "final_legal_status": "current",
+          "code_treatment": "new-section",
+          "target": null,
+          "enacted_text_or_amendment_command": "Create a new enforcement section or a tightly trimmed note attached to the new law-enforcement material.",
+          "source_evidence": [
+            "The Attorney General and other agency leadership shall enact policies and procedures."
+          ]
+        }
+      ],
+      "source_evidence": [
+        "The source is readable and operative.",
+        "It creates definitions, canine rules, use-of-force rules, and enforcement duties."
+      ],
+      "current_xml_comparison": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t18/s1",
+        "branch_vs_origin": "The reviewed branch keeps only a note; origin/main did not reveal the required operative sections either.",
+        "detail": "The current XML is just a short note at Title 18 section 1 and does not carry the substantive canine or use-of-force rules as real Code text."
+      },
+      "final_recommended_action": [
+        "Codify the substantive rules as real permanent sections.",
+        "Keep only the short-title, severability, and effective-date material as note content.",
+        "Remove the Trello link from the current note."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-125",
+      "public_law": "17-125",
+      "title": "Public Law 17-125 | We Don't Read Minds Act of 2023",
+      "final_legal_status": "current",
+      "chronology_conclusion": "Live reporting-duty statute; no repeal was identified in the reviewed materials.",
+      "approved_code_treatment": "new-section",
+      "target": null,
+      "target_justification": "The act imposes a reporting duty and penalty mechanism, but the reviewed sources did not identify a precise existing section to amend.",
+      "provisions": [
+        {
+          "ref": "SECTION 1",
+          "final_legal_status": "current",
+          "code_treatment": "statutory-note",
+          "target": null,
+          "enacted_text_or_amendment_command": "Keep the short title as note material only.",
+          "source_evidence": [
+            "The act may be cited as the We Don't Read Minds Act."
+          ]
+        },
+        {
+          "ref": "SECTION 2",
+          "final_legal_status": "current",
+          "code_treatment": "statutory-note",
+          "target": null,
+          "enacted_text_or_amendment_command": "Keep the purposes language as explanatory note content.",
+          "source_evidence": [
+            "The purpose is to mandate monthly updates to Congress."
+          ]
+        },
+        {
+          "ref": "SECTION 3(1)",
+          "final_legal_status": "current",
+          "code_treatment": "new-section",
+          "target": null,
+          "enacted_text_or_amendment_command": "Create a permanent Title 5 reporting-duty section requiring each executive department Inspector General to submit monthly reports to Congress.",
+          "source_evidence": [
+            "The Inspector General from each executive department must submit monthly reports."
+          ]
+        },
+        {
+          "ref": "SECTION 3(2)",
+          "final_legal_status": "current",
+          "code_treatment": "new-section",
+          "target": null,
+          "enacted_text_or_amendment_command": "Create a penalty and enforcement subsection for failure to report, including the House inquiry mechanism and the $10,000 fine language.",
+          "source_evidence": [
+            "The OIG may be fined up to $10,000."
+          ]
+        },
+        {
+          "ref": "SECTION 6",
+          "final_legal_status": "current",
+          "code_treatment": "effective-date-note",
+          "target": null,
+          "enacted_text_or_amendment_command": "Keep the immediate-effective-date clause as a short note.",
+          "source_evidence": [
+            "The bill takes effect immediately after passage and presidential signature."
+          ]
+        }
+      ],
+      "source_evidence": [
+        "The act requires monthly reports from each executive department IG.",
+        "It includes a penalty for non-reporting."
+      ],
+      "current_xml_comparison": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t5/s101",
+        "branch_vs_origin": "The reviewed branch still shows the same note-only problem; origin/main did not show a corrected live reporting statute.",
+        "detail": "The current XML note is anchored in Title 5 section 101 and incorrectly labels the law repealed or superseded."
+      },
+      "final_recommended_action": [
+        "Keep the act as a live Title 5 reporting statute.",
+        "Replace the repeal label with current-status treatment.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-126",
+      "public_law": "17-126",
+      "title": "Public Law 17-126 | Special Events Act",
+      "final_legal_status": "superseded",
+      "chronology_conclusion": "The special-events framework is later superseded by PL 031-226, so it should remain historical only and not be carried forward as permanent Code text.",
+      "approved_code_treatment": "historical-note-only",
+      "target": null,
+      "target_justification": "The source is a District of Columbia special-events enactment that was later superseded, so there is no permanent federal Code target.",
+      "provisions": [
+        {
+          "ref": "SEC1",
+          "final_legal_status": "superseded",
+          "code_treatment": "statutory-note",
+          "target": null,
+          "enacted_text_or_amendment_command": "Keep the short title as a historical note only.",
+          "source_evidence": [
+            "The act is called the Special Events Act or SEA."
+          ]
+        },
+        {
+          "ref": "SEC2",
+          "final_legal_status": "superseded",
+          "code_treatment": "statutory-note",
+          "target": null,
+          "enacted_text_or_amendment_command": "Keep the severability and anti-supersession language only as historical context.",
+          "source_evidence": [
+            "The act says it shall not be superseded unless a later law expressly says so."
+          ]
+        },
+        {
+          "ref": "SEC5",
+          "final_legal_status": "superseded",
+          "code_treatment": "exclude-from-code",
+          "target": null,
+          "enacted_text_or_amendment_command": "Do not move the local permit rules into permanent Code text; keep only a concise local-history note if one is retained.",
+          "source_evidence": [
+            "The permits are for special events within the District of Columbia.",
+            "The enforcement rules are local and administrative."
+          ]
+        }
+      ],
+      "source_evidence": [
+        "The source is a special-events permitting law for the District of Columbia.",
+        "A later enactment supersedes it."
+      ],
+      "current_xml_comparison": {
+        "assessment": "misanchored-history-note",
+        "placement": "/us/usc/t50/s1",
+        "branch_vs_origin": "The reviewed branch still places the law in Title 50; origin/main did not show a corrected local-history placement.",
+        "detail": "The current XML note is parked in Title 50 and labels the law repealed or superseded, but the source is a District of Columbia special-events statute."
+      },
+      "final_recommended_action": [
+        "Do not treat this as Title 50 material.",
+        "Keep only a concise local-history note if one is retained.",
+        "Remove the unsupported repeal label."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-127",
+      "public_law": "17-127",
+      "title": "Public Law 17-127 | Border Security Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "Operative repeal-and-rewrite enactment. Later sequencing must account for the later repeal of 8 U.S.C. 1102 by PL 19-147, but the PL 17-127 rewrite chain itself remains current.",
+      "approved_code_treatment": "repeal-marking and amend-existing-text",
+      "target": [
+        "/us/usc/t8",
+        "/us/usc/t8/s1101",
+        "/us/usc/t8/s1551",
+        "/us/usc/t8/s1102",
+        "/us/usc/t8/s1103",
+        "/us/usc/t8/s1105",
+        "/us/usc/t8/s1182",
+        "/us/usc/t8/s1189",
+        "/us/usc/t8/s1532",
+        "/us/usc/t8/s1533",
+        "/us/usc/t8/s1534",
+        "/us/usc/t8/s1481"
+      ],
+      "target_justification": null,
+      "provisions": [
+        {
+          "ref": "SEC4",
+          "final_legal_status": "current",
+          "code_treatment": "statutory-note",
+          "target": null,
+          "enacted_text_or_amendment_command": "Keep the Public Law 1-1 applicability statement as a short explanatory note.",
+          "source_evidence": [
+            "The act invokes Public Law 1-1 for section applicability conventions."
+          ]
+        },
+        {
+          "ref": "SEC5(1)",
+          "final_legal_status": "current",
+          "code_treatment": "repeal-marking",
+          "target": "/us/usc/t8",
+          "enacted_text_or_amendment_command": "Mark Title 8 as repealed in sequence, then carry forward the later reenactments and rewrites in this act.",
+          "source_evidence": [
+            "U.S. Code: Title 8 is repealed in its entirety."
+          ]
+        },
+        {
+          "ref": "SEC6-SEC10",
+          "final_legal_status": "current",
+          "code_treatment": "amend-existing-text",
+          "target": [
+            "/us/usc/t8/s1101",
+            "/us/usc/t8/s1551",
+            "/us/usc/t8/s1102",
+            "/us/usc/t8/s1103",
+            "/us/usc/t8/s1105"
+          ],
+          "enacted_text_or_amendment_command": "Replace the named sections with the supplied 1101, 1551, 1102, 1103, and 1105 text.",
+          "source_evidence": [
+            "8 U.S. Code 1101 shall now read as.",
+            "8 U.S. Code 1551 shall now read as."
+          ]
+        },
+        {
+          "ref": "SEC11-SEC12",
+          "final_legal_status": "current",
+          "code_treatment": "amend-existing-text",
+          "target": [
+            "/us/usc/t8/s1182",
+            "/us/usc/t8/s1189"
+          ],
+          "enacted_text_or_amendment_command": "Replace 8 U.S. Code 1182 and 1189 with the supplied inadmissibility and designation text.",
+          "source_evidence": [
+            "8 U.S. Code 1182 shall read as.",
+            "8 U.S. Code 1189 shall now read as."
+          ]
+        },
+        {
+          "ref": "SEC13(1)-(4)",
+          "final_legal_status": "current",
+          "code_treatment": "amend-existing-text",
+          "target": [
+            "/us/usc/t8/s1532",
+            "/us/usc/t8/s1533",
+            "/us/usc/t8/s1534",
+            "/us/usc/t8/s1481"
+          ],
+          "enacted_text_or_amendment_command": "Replace sections 1532, 1533, 1534, and 1481 with the supplied removal and nationality text.",
+          "source_evidence": [
+            "8 U.S. Code 1532 shall now read as.",
+            "8 U.S. Code 1481 shall now read as."
+          ]
+        }
+      ],
+      "source_evidence": [
+        "The act repeals Title 8 and rewrites multiple listed sections.",
+        "It contains direct replacement text for the immigration and removal chain."
+      ],
+      "current_xml_comparison": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t8/s1101/i/2",
+        "branch_vs_origin": "The reviewed branch only exposes a buried note; origin/main did not show the full repeal-and-rewrite sequence as operative text.",
+        "detail": "The live XML contains only a note buried inside section 1101 and misses the required repeal-marking and the full set of textual rewrites."
+      },
+      "final_recommended_action": [
+        "Apply the express section rewrites to Title 8 sections 1101, 1551, 1102, 1103, 1105, 1182, 1189, 1532, 1533, 1534, and 1481.",
+        "Mark the Title 8 repeal in sequence with the reenactments.",
+        "Account for the later repeal of section 1102 by PL 19-147.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-128",
+      "public_law": "17-128",
+      "title": "Public Law 17-128 | Impeachment Procedures and Protocols Act (IPPA)",
+      "final_legal_status": "current",
+      "chronology_conclusion": "Operative congressional-procedure enactment with a direct 28 U.S.C. 1365 amendment; no later repeal was identified in the reviewed materials.",
+      "approved_code_treatment": "amend-existing-text",
+      "target": [
+        "/us/usc/t28/s1365"
+      ],
+      "target_justification": null,
+      "provisions": [
+        {
+          "ref": "SEC1-SEC3",
+          "final_legal_status": "current",
+          "code_treatment": "statutory-note",
+          "target": null,
+          "enacted_text_or_amendment_command": "Keep the short title, severability, and effective date as note material only.",
+          "source_evidence": [
+            "The act is called the Impeachment Procedures and Protocols Act or IPPA."
+          ]
+        },
+        {
+          "ref": "SEC4-SEC8",
+          "final_legal_status": "current",
+          "code_treatment": "new-section",
+          "target": null,
+          "enacted_text_or_amendment_command": "Preserve the impeachment-procedure material as Title 2 or other congressional-procedure text, not as a bare note.",
+          "source_evidence": [
+            "The committee may issue subpoenas.",
+            "The Senate is directed to start the impeachment trial."
+          ]
+        },
+        {
+          "ref": "SEC9",
+          "final_legal_status": "current",
+          "code_treatment": "amend-existing-text",
+          "target": "/us/usc/t28/s1365",
+          "enacted_text_or_amendment_command": "Replace 28 U.S.C. 1365 with the supplied congressional subpoena enforcement text.",
+          "source_evidence": [
+            "28 U.S. Code 1365 shall now read as.",
+            "The section is titled Congressional actions."
+          ]
+        },
+        {
+          "ref": "SEC10-SEC11",
+          "final_legal_status": "current",
+          "code_treatment": "new-section",
+          "target": null,
+          "enacted_text_or_amendment_command": "Keep the compliance and rule-of-construction material as congressional-procedure text or a note chain.",
+          "source_evidence": [
+            "Nothing in this Act may be interpreted to limit Congress's inherent authority."
+          ]
+        }
+      ],
+      "source_evidence": [
+        "The source includes a direct rewrite of 28 U.S.C. 1365.",
+        "It also contains congressional impeachment procedures and subpoena rules."
+      ],
+      "current_xml_comparison": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t2/s1",
+        "branch_vs_origin": "The reviewed branch still keeps only a history note; origin/main did not show a corrected 28 U.S.C. 1365 amendment chain.",
+        "detail": "The live XML note is just a Title 2 history note and does not perform the required 28 U.S.C. 1365 amendment."
+      },
+      "final_recommended_action": [
+        "Amend 28 U.S.C. 1365 with the SEC9 replacement text.",
+        "Preserve the impeachment-procedure material as Title 2 note or new sections.",
+        "Remove the unsupported repeal or supersession label.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-129",
+      "public_law": "17-129",
+      "title": "Public Law 17-129 | Department of Education Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "Operative organic-act style enactment that creates permanent Department of Education text; no later repealer was identified in the reviewed materials.",
+      "approved_code_treatment": "new-section",
+      "target": null,
+      "target_justification": "The source is permanent Title 20 organic-act material and should be created as new sections rather than forced into an existing note stub.",
+      "provisions": [
+        {
+          "ref": "SEC1-SEC3",
+          "final_legal_status": "current",
+          "code_treatment": "statutory-note",
+          "target": null,
+          "enacted_text_or_amendment_command": "Keep the short title, findings, and purposes as note material.",
+          "source_evidence": [
+            "The act may be cited as the Department of Education Act."
+          ]
+        },
+        {
+          "ref": "SEC4-SEC6",
+          "final_legal_status": "current",
+          "code_treatment": "new-section",
+          "target": null,
+          "enacted_text_or_amendment_command": "Codify the definitions, department establishment, principal officers, and Office of Career and Technical Education as new permanent Title 20 sections.",
+          "source_evidence": [
+            "There is established an executive department to be known as the Department of Education."
+          ]
+        },
+        {
+          "ref": "SEC7-SEC8",
+          "final_legal_status": "current",
+          "code_treatment": "new-section",
+          "target": null,
+          "enacted_text_or_amendment_command": "Codify the transfer and administrative material as operative Title 20 text or a tightly trimmed transfer note chain.",
+          "source_evidence": [
+            "Functions are transferred to the Secretary of Education.",
+            "The Secretary is given administrative authority."
+          ]
+        },
+        {
+          "ref": "SEC9-SEC10",
+          "final_legal_status": "current",
+          "code_treatment": "statutory-note",
+          "target": null,
+          "enacted_text_or_amendment_command": "Keep the construction, severability, and reference language as savings text attached to the Title 20 enactment.",
+          "source_evidence": [
+            "The act includes severability and reference language."
+          ]
+        },
+        {
+          "ref": "SEC11",
+          "final_legal_status": "current",
+          "code_treatment": "effective-date-note",
+          "target": null,
+          "enacted_text_or_amendment_command": "Keep the effective-date and interim-appointments language as note material.",
+          "source_evidence": [
+            "The bill takes effect immediately after passage and signature."
+          ]
+        }
+      ],
+      "source_evidence": [
+        "The source creates a Department of Education.",
+        "It includes permanent officers, transfers, and administrative provisions."
+      ],
+      "current_xml_comparison": {
+        "assessment": "improperly-inserted-into-permanent-text",
+        "placement": "/us/usc/t20/s1 /us/usc/t20/s2",
+        "branch_vs_origin": "The reviewed branch still carries a quoted-content dump; origin/main did not show the organic act properly converted into permanent sections.",
+        "detail": "The current XML note contains a full quoted-content dump and still labels the law repealed or superseded."
+      },
+      "final_recommended_action": [
+        "Codify the organic-act text as real Title 20 sections.",
+        "Remove the quoted-content dump and Trello link.",
+        "Drop the unsupported repeal or supersession label."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-130",
+      "public_law": "17-130",
+      "title": "Public Law 17-130 | Oath and Offices Protection (OOP)",
+      "final_legal_status": "current",
+      "chronology_conclusion": "Live Title 5 oath-timing statute tied to 5 U.S.C. 3331; it should not be treated as Title 50 material.",
+      "approved_code_treatment": "new-section",
+      "target": null,
+      "target_justification": "The source belongs near Title 5 section 3331, but the review did not identify a single exact existing section to amend.",
+      "provisions": [
+        {
+          "ref": "SEC1-SEC3",
+          "final_legal_status": "current",
+          "code_treatment": "statutory-note",
+          "target": null,
+          "enacted_text_or_amendment_command": "Keep the short title, severability, and effective date as note material only.",
+          "source_evidence": [
+            "The act is called Oath and Offices Protection or OOP."
+          ]
+        },
+        {
+          "ref": "SEC4-SEC5",
+          "final_legal_status": "current",
+          "code_treatment": "new-section",
+          "target": null,
+          "enacted_text_or_amendment_command": "Create a new Title 5 cross-reference section near 5 U.S.C. 3331 that defines oath of office by reference.",
+          "source_evidence": [
+            "The term oath of office refers to the oath established in 5 U.S. Code 3331."
+          ]
+        },
+        {
+          "ref": "SEC6",
+          "final_legal_status": "current",
+          "code_treatment": "new-section",
+          "target": null,
+          "enacted_text_or_amendment_command": "Codify the oath timing and forfeiture rule as a new permanent Title 5 section.",
+          "source_evidence": [
+            "Failure to be sworn in within the allotted timeframe results in forfeiture of the position or office."
+          ]
+        }
+      ],
+      "source_evidence": [
+        "The source ties the oath requirement to 5 U.S.C. 3331.",
+        "It imposes time limits for elected, appointed, and acting officers."
+      ],
+      "current_xml_comparison": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t50/s1",
+        "branch_vs_origin": "The reviewed branch still misanchors the law in Title 50; origin/main did not show a corrected Title 5 placement.",
+        "detail": "The live XML note is misanchored in Title 50 and falsely marked repealed."
+      },
+      "final_recommended_action": [
+        "Move the substantive treatment to Title 5 near section 3331.",
+        "Drop the unsupported repeal label.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-131",
+      "public_law": "17-131",
+      "title": "Public Law 17-131 | More Jobs Amendment",
+      "final_legal_status": "current",
+      "chronology_conclusion": "Operative amendment to PL 15-100; the underlying act remains live and this enactment does not self-repeal.",
+      "approved_code_treatment": "amend-existing-text",
+      "target": [
+        "(PL 15-100 section 3(B)(I))",
+        "(PL 15-100 section 5(F))"
+      ],
+      "target_justification": null,
+      "provisions": [
+        {
+          "ref": "SEC1",
+          "final_legal_status": "current",
+          "code_treatment": "statutory-note",
+          "target": null,
+          "enacted_text_or_amendment_command": "Keep the short title as note material only.",
+          "source_evidence": [
+            "The act may be cited as the More Jobs Amendment."
+          ]
+        },
+        {
+          "ref": "SEC2(a)",
+          "final_legal_status": "current",
+          "code_treatment": "amend-existing-text",
+          "target": "(PL 15-100 section 3(B)(I))",
+          "enacted_text_or_amendment_command": "Replace section 3(B)(I) so it reads that there are two primary positions and three secondary positions, or four secondary positions.",
+          "source_evidence": [
+            "Section 3 of the Employment Rights and Limitations Act, Subsection B I, Public Law 15-100 shall be henceforth read."
+          ]
+        },
+        {
+          "ref": "SEC2(b)",
+          "final_legal_status": "current",
+          "code_treatment": "amend-existing-text",
+          "target": "(PL 15-100 section 5(F))",
+          "enacted_text_or_amendment_command": "Replace section 5(F) with the no-three-or-more-concurrent-agencies language and the related limitation clause.",
+          "source_evidence": [
+            "Section 5, Subsection F, Public Law 15-100 shall be henceforth read."
+          ]
+        },
+        {
+          "ref": "SEC3-SEC4",
+          "final_legal_status": "current",
+          "code_treatment": "statutory-note",
+          "target": null,
+          "enacted_text_or_amendment_command": "Keep the severability and immediate-effective-date language as note material.",
+          "source_evidence": [
+            "The act says it is severable.",
+            "The bill takes effect immediately after passage."
+          ]
+        }
+      ],
+      "source_evidence": [
+        "The source is a direct amendment to PL 15-100.",
+        "It gives exact replacement language for sections 3(B)(I) and 5(F)."
+      ],
+      "current_xml_comparison": {
+        "assessment": "improperly-inserted-into-permanent-text",
+        "placement": "/us/usc/t29/s201",
+        "branch_vs_origin": "The reviewed branch still shows a quoted-content dump; origin/main did not show the PL 15-100 amendment chain properly applied.",
+        "detail": "The current XML note at Title 29 section 201 contains a quoted-content dump and labels the law repealed, but the act is actually an amendment to PL 15-100."
+      },
+      "final_recommended_action": [
+        "Apply the amendments to the PL 15-100 text chain.",
+        "Remove the quoted-content dump and Trello link.",
+        "Drop the unsupported repeal label."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-132",
+      "public_law": "17-132",
+      "title": "Public Law 17-132 | Standard Process for International Extraditions Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "Operative extradition-process statute tied to 18 U.S.C. 3182, but it does not itself amend 3182.",
+      "approved_code_treatment": "new-section",
+      "target": null,
+      "target_justification": "The act should sit near the Title 18 extradition provisions, but it does not provide a direct amendment target for 18 U.S.C. 3182.",
+      "provisions": [
+        {
+          "ref": "SECTION I",
+          "final_legal_status": "current",
+          "code_treatment": "statutory-note",
+          "target": null,
+          "enacted_text_or_amendment_command": "Keep the short title, severability, effective date, and introductory material as note content only.",
+          "source_evidence": [
+            "The act is called the Standard Process for International Extraditions Act."
+          ]
+        },
+        {
+          "ref": "SECTION II",
+          "final_legal_status": "current",
+          "code_treatment": "new-section",
+          "target": null,
+          "enacted_text_or_amendment_command": "Create a new definition section describing extradition.",
+          "source_evidence": [
+            "Extradition is defined as the removal of a person for criminal prosecution or punishment."
+          ]
+        },
+        {
+          "ref": "SECTION III",
+          "final_legal_status": "current",
+          "code_treatment": "new-section",
+          "target": null,
+          "enacted_text_or_amendment_command": "Preserve the treaty limits, dual-criminality rules, DOJ/State certification, and custody rules as permanent extradition-process text or a closely related note chain.",
+          "source_evidence": [
+            "The act is keyed to 18 U.S. Code 3182.",
+            "It sets the extradition process requirements."
+          ]
+        }
+      ],
+      "source_evidence": [
+        "The source creates a substantive extradition process.",
+        "It references 18 U.S.C. 3182 without rewriting it."
+      ],
+      "current_xml_comparison": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t50/s1",
+        "branch_vs_origin": "The reviewed branch misanchors the act in Title 50; origin/main did not show a corrected Title 18-adjacent placement.",
+        "detail": "The current XML note is misanchored in Title 50, but the source is an extradition statute tied to Title 18."
+      },
+      "final_recommended_action": [
+        "Move the enactment away from Title 50 and into a Title 18-appropriate placement or close statutory note anchor.",
+        "Preserve the treaty and certification rules as permanent operative history.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    }
+  ]
+}

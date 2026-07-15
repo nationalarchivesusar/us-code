@@ -1,0 +1,198 @@
+{
+  "reviewer": "reviewer-17",
+  "group_index": 17,
+  "law_count": 10,
+  "output_path": "audit/review/review-17.json",
+  "laws": [
+    {
+      "law_id": "PL-022-164",
+      "public_law": "22-164",
+      "title": "Public Law 22-164 | Streamlining and Protecting American Security Act",
+      "report_path": "audit/primary/batch-06-02.json",
+      "batch": 6,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 3"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-023-165",
+      "public_law": "23-165",
+      "title": "Public Law 23-165 | 2nd Amendment Protection Act (2APA)",
+      "report_path": "audit/primary/batch-06-02.json",
+      "batch": 6,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 4(1)",
+        "SEC 4(2)"
+      ],
+      "targets": [
+        "/us/usc/t18/s930/g/1"
+      ]
+    },
+    {
+      "law_id": "PL-023-167",
+      "public_law": "23-167",
+      "title": "Public Law 23-167 | Uh Oh Act",
+      "report_path": "audit/primary/batch-06-02.json",
+      "batch": 6,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 4"
+      ],
+      "targets": [
+        "(PL 16-121)"
+      ]
+    },
+    {
+      "law_id": "PL-023-168",
+      "public_law": "23-168",
+      "title": "Public Law 23-168 | Affirming Innovation Act",
+      "report_path": "audit/primary/batch-06-02.json",
+      "batch": 6,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC 3(a)"
+      ],
+      "targets": [
+        "/us/usc/t29/s208"
+      ]
+    },
+    {
+      "law_id": "PL-023-169",
+      "public_law": "23-169",
+      "title": "Public Law 23-169 | Military Readiness Act",
+      "report_path": "audit/primary/batch-06-02.json",
+      "batch": 6,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 5-8"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-023-171",
+      "public_law": "23-171",
+      "title": "Public Law 23-171 | Diplomatic Immunity Act",
+      "report_path": "audit/primary/batch-06-03.json",
+      "batch": 6,
+      "source_status": "unresolved",
+      "validation_status": "missing source evidence",
+      "confidence": "high",
+      "reasons": [
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-023-172",
+      "public_law": "23-172",
+      "title": "Public Law 23-172 | Congressional Military Service Act",
+      "report_path": "audit/primary/batch-06-03.json",
+      "batch": 6,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "multiple-laws-same-target"
+      ],
+      "provision_refs": [
+        "SEC4(1)",
+        "SEC5(a)",
+        "SEC5(b)",
+        "SEC9(a)"
+      ],
+      "targets": [
+        "/us/usc/t10/s12203",
+        "/us/usc/t10/s12204",
+        "/us/usc/t10/s151",
+        "PL 18-140 sec.304(a) (wherever codified)"
+      ]
+    },
+    {
+      "law_id": "PL-024-173",
+      "public_law": "24-173",
+      "title": "Public Law 24-173 | Federal Enhancement Against Foreign Intrusion Act",
+      "report_path": "audit/primary/batch-06-03.json",
+      "batch": 6,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION II",
+        "SECTION III",
+        "SECTION IV"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-024-174",
+      "public_law": "24-174",
+      "title": "Public Law 24-174 | Washington, D.C. Permitless Carry Act",
+      "report_path": "audit/primary/batch-06-03.json",
+      "batch": 6,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC4-5",
+        "SEC6-8"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-024-175",
+      "public_law": "24-175",
+      "title": "Public Law 24-175 | MPD Relocation Act",
+      "report_path": "audit/primary/batch-06-03.json",
+      "batch": 6,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    }
+  ]
+}

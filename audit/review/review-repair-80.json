@@ -1,0 +1,189 @@
+{
+  "reviewer": "law-auditor-80",
+  "group_index": 180,
+  "law_count": 4,
+  "source_manifest": "audit/manifests/review-repair-80.json",
+  "output_path": "audit/review/review-repair-80.json",
+  "reviewed_against": [
+    "audit/manifests/review-repair-80.json",
+    "codification/laws/audit.csv",
+    "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv",
+    "codification/mass_migration/latest/reports/MASTER-CODIFICATION-REPORT.md",
+    "codification/mass_migration/latest/reports/laws/PL-003-020.md",
+    "codification/mass_migration/latest/reports/laws/PL-003-022.md",
+    "codification/mass_migration/latest/reports/laws/PL-003-023.md",
+    "codification/mass_migration/latest/reports/laws/PL-004-032.md",
+    "codification/mass_migration/latest/plans/PL-003-022.json",
+    "codification/mass_migration/latest/plans/PL-004-032.json",
+    "codification/mass_migration/latest/sources/text/PL-003-022.txt",
+    "codification/mass_migration/latest/sources/text/PL-004-032.txt",
+    "codification/laws/laws/PL-003-020/metadata.json",
+    "codification/laws/laws/PL-003-022/metadata.json",
+    "codification/laws/laws/PL-003-023/metadata.json",
+    "codification/laws/laws/PL-004-032/metadata.json"
+  ],
+  "completion_summary": "Resolved all four assigned laws as history-only: PL-003-020, PL-003-022, and PL-003-023 are repealed/nonoperative with no Code operation authorized, and PL-004-032 is superseded and likewise requires no Code insertion.",
+  "changed_law_ids": [
+    "PL-003-020",
+    "PL-003-022",
+    "PL-003-023",
+    "PL-004-032"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-003-020",
+      "public_law": "3-20",
+      "title": "Public Law 3-20 | National Immigration Employment Act of 2021",
+      "final_legal_status": "repealed",
+      "required_code_treatment": "historical-note-only",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "disposition": "historical-note-only",
+          "target": null,
+          "evidence": "The canonical record is classified as repealed, the source PDF has no extractable text, and no Code operation was authorized.",
+          "notes": "Keep only repeal history."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No current Code insertion is authorized for this repealed law."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-003-020.md says the status is repealed and no Code operation was authorized.",
+        "codification/mass_migration/latest/reports/MASTER-CODIFICATION-REPORT.md lists PL-003-020 as NONOPERATIVE_OR_REPEALED.",
+        "codification/laws/audit.csv records the source as a valid PDF with no extractable text."
+      ],
+      "final_recommended_action": "Keep only repeal history and do not invent operative text.",
+      "confidence": "high",
+      "chronology_conclusion": "The enactment is repealed and requires no current Code text.",
+      "approved_code_treatment": "historical-note-only"
+    },
+    {
+      "law_id": "PL-003-022",
+      "public_law": "3-22",
+      "title": "Public Law 3-22 | District of Columbia Administration Act",
+      "final_legal_status": "repealed",
+      "required_code_treatment": "historical-note-only",
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "disposition": "historical-note-only",
+          "target": null,
+          "evidence": "Short-title / reference language only; the law is repealed and not inserted as current Code text.",
+          "notes": "History only."
+        },
+        {
+          "ref": "SEC. 2",
+          "disposition": "historical-note-only",
+          "target": null,
+          "evidence": "Severability and anti-supersession language do not create a Code rewrite.",
+          "notes": "History only."
+        },
+        {
+          "ref": "SEC. 3",
+          "disposition": "historical-note-only",
+          "target": null,
+          "evidence": "Repeal-of-laws language is preserved as repeal history only.",
+          "notes": "History only."
+        },
+        {
+          "ref": "SEC. 4",
+          "disposition": "historical-note-only",
+          "target": null,
+          "evidence": "Municipal-authority language is nonoperative for U.S. Code purposes because the Trello record is marked repealed.",
+          "notes": "History only."
+        },
+        {
+          "ref": "SEC. 5",
+          "disposition": "historical-note-only",
+          "target": null,
+          "evidence": "Effective-date language is part of the repealed enactment history only.",
+          "notes": "History only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No current Code insertion is authorized for this repealed law."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-003-022.md says the status is repealed and no Code operation was authorized.",
+        "codification/mass_migration/latest/reports/MASTER-CODIFICATION-REPORT.md lists PL-003-022 as NONOPERATIVE_OR_REPEALED.",
+        "codification/mass_migration/latest/sources/text/PL-003-022.txt provides the recoverable enactment text."
+      ],
+      "final_recommended_action": "Keep the enactment as repeal history only and do not add Code text.",
+      "confidence": "high",
+      "chronology_conclusion": "The law is repealed and should remain only as historical note material.",
+      "approved_code_treatment": "historical-note-only"
+    },
+    {
+      "law_id": "PL-003-023",
+      "public_law": "3-23",
+      "title": "Public Law 3-23 | Federal Law Enforcement Training Center Establishment Act",
+      "final_legal_status": "repealed",
+      "required_code_treatment": "historical-note-only",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "disposition": "historical-note-only",
+          "target": null,
+          "evidence": "The record is repealed, the source is unavailable, and no Code operation was authorized.",
+          "notes": "Keep only a concise historical note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No current Code insertion is authorized for this repealed law."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-003-023.md says the status is repealed and no Code operation was authorized.",
+        "codification/mass_migration/latest/reports/MASTER-CODIFICATION-REPORT.md lists PL-003-023 as NONOPERATIVE_OR_REPEALED.",
+        "codification/laws/audit.csv records the source as unrecoverable."
+      ],
+      "final_recommended_action": "Keep only repeal history and do not invent operative text.",
+      "confidence": "high",
+      "chronology_conclusion": "The law is repealed and should remain only as historical note material.",
+      "approved_code_treatment": "historical-note-only"
+    },
+    {
+      "law_id": "PL-004-032",
+      "public_law": "4-32",
+      "title": "Public Law 4-32 | Warrants, Subpoenas, and Summons Act",
+      "final_legal_status": "superseded",
+      "required_code_treatment": "historical-note-only",
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "disposition": "historical-note-only",
+          "target": null,
+          "evidence": "Findings and purpose material is nonoperative history only; no express Code citation was detected.",
+          "notes": "History only."
+        },
+        {
+          "ref": "SEC. 2",
+          "disposition": "historical-note-only",
+          "target": null,
+          "evidence": "The warrant and subpoena procedures reference Public Law 4-32 but the codification reports authorize no Code operation.",
+          "notes": "History only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No current Code insertion is authorized for this superseded law."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-004-032.md says the status is superseded and no Code operation was authorized.",
+        "codification/mass_migration/latest/reports/MASTER-CODIFICATION-REPORT.md lists PL-004-032 as NONOPERATIVE_OR_REPEALED.",
+        "codification/mass_migration/latest/sources/text/PL-004-032.txt provides the recoverable enactment text."
+      ],
+      "final_recommended_action": "Keep only history and do not add Code text.",
+      "confidence": "high",
+      "chronology_conclusion": "The enactment is superseded and remains historical only.",
+      "approved_code_treatment": "historical-note-only"
+    }
+  ]
+}

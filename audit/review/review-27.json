@@ -1,0 +1,275 @@
+{
+  "reviewer": "law-auditor-A",
+  "group_index": 27,
+  "law_count": 6,
+  "source_manifest": "audit/manifests/manifest-27.json",
+  "output_path": "audit/review/review-27.json",
+  "reviewed_against": [
+    "audit/manifests/manifest-27.json",
+    "audit/primary/batch-01-02.json",
+    "audit/primary/batch-01-03.json",
+    "audit/primary/batch-02-01.json",
+    "audit/primary/batch-02-02.json",
+    "audit/chronology-report.json",
+    "usc XML in current branch",
+    "origin/main USC XML"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-003-020",
+      "public_law": "3-20",
+      "title": "Public Law 3-20 | National Immigration Employment Act of 2021",
+      "status": "unresolved",
+      "status_basis": "The supplied source is a scanned PDF with no extractable text, so the act can only be preserved as source-limited history at the closest subject-matter anchor.",
+      "decision": "historical-note-only",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "The record contains no extractable statutory text.",
+          "classes": [
+            "source-limited",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t8/s1101/i/2",
+          "exact_change": "Keep only a concise historical note; do not invent operative text.",
+          "evidence": "\"text_extracted\": false; \"image_only_or_scanned\": true",
+          "notes": "No lawful codification can be reconstructed from the supplied source."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correctly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t8/s1101/i/2",
+        "detail": "The branch note is concise and source-limited, and it does not invent operative text."
+      },
+      "recommended_actions": [
+        "Retain only a concise historical note at the Title 8 anchor.",
+        "Do not invent or infer operative statutory language from the scanned PDF."
+      ],
+      "confidence": "low",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The supplied source is a scanned PDF with no extractable text, so the act can only be preserved as source-limited history at the closest subject-matter anchor.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Retain only a concise historical note at the Title 8 anchor. | Do not invent or infer operative statutory language from the scanned PDF.",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t8/s1101/i/2",
+      "exact_change": "Keep only a concise historical note; do not invent operative text."
+    },
+    {
+      "law_id": "PL-003-022",
+      "public_law": "3-22",
+      "title": "Public Law 3-22 | District of Columbia Administration Act",
+      "status": "unresolved",
+      "status_basis": "The recovered file is only Google Drive viewer debris, not enactment text, so only a source-limited history entry is supportable.",
+      "decision": "historical-note-only",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "No statutory text recoverable; only Drive page debris is available.",
+          "classes": [
+            "source-limited",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t40/s101/4",
+          "exact_change": "Keep only a source-limited historical note; do not claim operative text.",
+          "evidence": "Copy of District of Columbia City Charter (ammended) - Google Drive",
+          "notes": "The enactment text itself is not recoverable from the supplied source."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correctly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "The branch note is history-only and source-limited, and it stays within the recoverable record."
+      },
+      "recommended_actions": [
+        "Retain only a concise historical note at the existing anchor.",
+        "Do not infer substantive D.C. charter text from the viewer stub."
+      ],
+      "confidence": "low",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The recovered file is only Google Drive viewer debris, not enactment text, so only a source-limited history entry is supportable.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Retain only a concise historical note at the existing anchor. | Do not infer substantive D.C. charter text from the viewer stub.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1eWd9FS7jz2jrxcr8Pzud8wb389GpwVGn/view | 880a39f94b201c50b7e5d3e603feefa9af7ab970381ee671a9a5c13068947f7a",
+      "exact_target": "/us/usc/t40/s101/4",
+      "exact_change": "Keep only a source-limited historical note; do not claim operative text."
+    },
+    {
+      "law_id": "PL-003-023",
+      "public_law": "3-23",
+      "title": "Public Law 3-23 | Federal Law Enforcement Training Center Establishment Act",
+      "status": "unresolved",
+      "status_basis": "The source is marked unrecoverable and the recovered stub says the text was deleted or not found, so the operative provisions cannot be reconstructed lawfully.",
+      "decision": "historical-note-only",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "No operative statutory text is available.",
+          "classes": [
+            "source-limited",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18/s1",
+          "exact_change": "Keep only a source-limited historical note; no operative language can be recovered.",
+          "evidence": "Source deleted or not found",
+          "notes": "The supplied record does not contain recoverable enactment text."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correctly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t18/s1",
+        "detail": "The branch note remains historical only and does not invent operative text."
+      },
+      "recommended_actions": [
+        "Keep the entry as a source-limited historical note only.",
+        "Do not infer any missing statutory language or target section."
+      ],
+      "confidence": "low",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source is marked unrecoverable and the recovered stub says the text was deleted or not found, so the operative provisions cannot be reconstructed lawfully.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Keep the entry as a source-limited historical note only. | Do not infer any missing statutory language or target section.",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t18/s1",
+      "exact_change": "Keep only a source-limited historical note; no operative language can be recovered."
+    },
+    {
+      "law_id": "PL-004-032",
+      "public_law": "4-32",
+      "title": "Public Law 4-32 | Warrants, Subpoenas, and Summons Act",
+      "status": "unresolved",
+      "status_basis": "The supplied source is an Executive Order that merely cites PL 4-32, so the enacted statute itself is not recoverable from the batch input.",
+      "decision": "historical-note-only",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "No authentic statutory text is recoverable from the supplied source.",
+          "classes": [
+            "non-code",
+            "source-limited"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "none; source text unavailable",
+          "evidence": "EXECUTIVE ORDER ... under Public Law 4-32",
+          "notes": "The source file is an executive order, not the act itself."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "missing",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "No branch XML note was found for PL-004-032, so the current tree does not preserve even a history note."
+      },
+      "recommended_actions": [
+        "Locate the authentic PL 4-32 enactment before any codification.",
+        "Until then, keep at most a concise historical note and do not codify the Executive Order as the Act."
+      ],
+      "confidence": "medium",
+      "final_legal_status": "superseded",
+      "chronology_conclusion": "The supplied source is an Executive Order that merely cites PL 4-32, so the enacted statute itself is not recoverable from the batch input.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Locate the authentic PL 4-32 enactment before any codification. | Until then, keep at most a concise historical note and do not codify the Executive Order as the Act.",
+      "source_evidence": "status keyword `superseded` in list or label | https://drive.google.com/file/d/1GHjlel-4ltLCxgKzJZf2stihqROafz9P/view?usp=sharing | https://drive.google.com/file/d/1GHjlel-4ltLCxgKzJZf2stihqROafz9P/view?usp=sharing | 872abcbd03fb8417e4e99d2db8db7a05a25d1332721ac9508e0abe5232fdb0a1",
+      "exact_change": "none; source text unavailable"
+    },
+    {
+      "law_id": "PL-004-035",
+      "public_law": "4-35",
+      "title": "Public Law 4-35 | Recommissioning of the United States Ship New Jersey Act of 2022",
+      "status": "unresolved",
+      "status_basis": "The source is a Google Drive permission-denied page, so no statutory text is recoverable and no lawful codification conclusion can be drawn.",
+      "decision": "historical-note-only",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "Text unavailable; the source is an access-denied page.",
+          "classes": [
+            "non-code",
+            "source-limited"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t46/s101",
+          "exact_change": "Replace unsupported rationale with a concise source-limited history note.",
+          "evidence": "Sorry, the owner hasn't given you permission to download this file.",
+          "notes": "The recovered material cannot support operative conclusions."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t46/s101",
+        "detail": "The branch note asserts a codification rationale, but the recovered source is only access-denied debris and cannot support that conclusion."
+      },
+      "recommended_actions": [
+        "Recover the true source text before any codification.",
+        "Retain only a source-limited historical note and remove unsupported rationale."
+      ],
+      "confidence": "medium",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source is a Google Drive permission-denied page, so no statutory text is recoverable and no lawful codification conclusion can be drawn.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Recover the true source text before any codification. | Retain only a source-limited historical note and remove unsupported rationale.",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t46/s101",
+      "exact_change": "Replace unsupported rationale with a concise source-limited history note."
+    },
+    {
+      "law_id": "PL-007-046",
+      "public_law": "7-46",
+      "title": "Public Law 7-46 | Whistleblower Protection Act",
+      "status": "unresolved",
+      "status_basis": "The source is Google Drive access-denied debris, so no statutory text is recoverable and no lawful codification conclusion is possible.",
+      "decision": "historical-note-only",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "Text unavailable; the source is a Google Drive 'can't download' page.",
+          "classes": [
+            "non-code",
+            "source-limited"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "none; source text unavailable",
+          "evidence": "Google Drive - Can't download file",
+          "notes": "The enacted text cannot be reconstructed from the supplied record."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "missing",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "No branch XML note was found for PL-007-046, so the current tree lacks any lawful source-limited preservation."
+      },
+      "recommended_actions": [
+        "Leave unresolved and do not invent operative text.",
+        "If recovery later becomes possible, add only a source-limited historical note."
+      ],
+      "confidence": "medium",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source is Google Drive access-denied debris, so no statutory text is recoverable and no lawful codification conclusion is possible.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "Leave unresolved and do not invent operative text. | If recovery later becomes possible, add only a source-limited historical note.",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_change": "none; source text unavailable"
+    }
+  ]
+}

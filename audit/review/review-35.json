@@ -1,0 +1,932 @@
+{
+  "batch": 35,
+  "reviewer": "law-auditor-I",
+  "group_index": 135,
+  "law_count": 20,
+  "source_manifest": "audit/manifests/manifest-35.json",
+  "reviewed_against": [
+    "audit/manifests/manifest-35.json",
+    "audit/primary/review-31.json",
+    "audit/primary/review-32.json",
+    "audit/primary/review-16.json",
+    "audit/chronology-report.json",
+    "audit/current-implementation.json",
+    "usc/usc02.xml",
+    "usc/usc10.xml",
+    "usc/usc18.xml",
+    "usc/usc20.xml",
+    "usc/usc22.xml",
+    "usc/usc28.xml",
+    "usc/usc52.xml",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-018-139",
+      "public_law": "18-139",
+      "title": "Public Law 18-139 | The Bye Bye Background Checks Act",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "The authenticated source is readable, and the report classifies the act as a statutory note at 2 U.S.C. § 6132 rather than a new positive-law section.",
+      "provisions": [
+        {
+          "ref": "SEC 2",
+          "text_summary": "Repeals Public Law 17-137 and ends the background-check operations it governs.",
+          "classes": [
+            "statutory-note"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t2/s6132",
+          "exact_change": null,
+          "evidence": "codification/laws/laws/PL-018-139/law.txt states that Public Law 17-137 shall be repealed in its entirety; audit/primary/review-31.json classifies the act as STATUTORY_NOTE at 2 U.S.C. § 6132.",
+          "notes": "Keep as a concise statutory note; do not add substantive Code text."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "report-preserved",
+        "placement": "/us/usc/t2/s6132",
+        "detail": "The migration report places the note at 2 U.S.C. § 6132; current-tree verification was not separately re-grounded in this pass."
+      },
+      "source_evidence": [
+        "audit/primary/review-31.json classifies PL-018-139 as STATUTORY_NOTE at 2 U.S.C. § 6132.",
+        "codification/laws/laws/PL-018-139/law.txt includes the repeal of Public Law 17-137.",
+        "codification/mass_migration/latest/reports/laws/PL-018-139.md states that no express, uniquely executable Code amendment was found."
+      ],
+      "recommended_actions": [
+        "Preserve the repeal-history note at 2 U.S.C. § 6132.",
+        "Do not duplicate positive-law text.",
+        "Keep the act limited to historical note treatment."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The authenticated source is readable, and the report classifies the act as a statutory note at 2 U.S.C. § 6132 rather than a new positive-law section.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "Preserve the repeal-history note at 2 U.S.C. § 6132. | Do not duplicate positive-law text. | Keep the act limited to historical note treatment.",
+      "exact_target": "/us/usc/t2/s6132"
+    },
+    {
+      "law_id": "PL-018-140",
+      "public_law": "18-140",
+      "title": "Public Law 18-140 | Federal Employment Act of 2023",
+      "status": "unresolved",
+      "decision": "source-unavailable-historical-note",
+      "status_basis": "The recovered material is only permission-denial debris, so no operative statutory text can be authenticated and no safe Code operation can be assigned.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Source text unavailable.",
+          "classes": [
+            "non-code"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "audit/primary/review-31.json and codification/mass_migration/latest/reports/laws/PL-018-140.md both classify the act as SOURCE_UNAVAILABLE; codification/laws/laws/PL-018-140/law.txt is a Google Drive permission-denial page.",
+          "notes": "Retain only a source-limited historical note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No readable enactment text was recovered, so no XML placement is safe."
+      },
+      "source_evidence": [
+        "audit/primary/review-31.json classifies the law as source-unavailable.",
+        "codification/laws/laws/PL-018-140/law.txt is only a Google Drive access-denied page.",
+        "codification/mass_migration/latest/reports/laws/PL-018-140.md records no readable authenticated enactment text."
+      ],
+      "recommended_actions": [
+        "Retain only a concise source-unavailable historical note.",
+        "Do not invent operative text or a Code anchor.",
+        "Re-acquire the authentic source before any codification work."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The recovered material is only permission-denial debris, so no operative statutory text can be authenticated and no safe Code operation can be assigned.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a concise source-unavailable historical note. | Do not invent operative text or a Code anchor. | Re-acquire the authentic source before any codification work."
+    },
+    {
+      "law_id": "PL-018-141",
+      "public_law": "18-141",
+      "title": "Public Law 18-141 | Foreign Service Act of 2023",
+      "status": "unresolved",
+      "decision": "source-unavailable-historical-note",
+      "status_basis": "No readable statutory prose could be recovered, so the enactment cannot be tied to a lawful Code amendment or note placement.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Source text unavailable.",
+          "classes": [
+            "non-code"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "audit/primary/review-31.json and codification/mass_migration/latest/reports/laws/PL-018-141.md classify the act as SOURCE_UNAVAILABLE; codification/laws/laws/PL-018-141/law.txt is viewer debris rather than readable enactment text.",
+          "notes": "Retain only a source-unavailable historical note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No safe XML placement can be verified without readable source text."
+      },
+      "source_evidence": [
+        "audit/primary/review-31.json marks PL-018-141 as source-unavailable.",
+        "codification/laws/laws/PL-018-141/law.txt is viewer debris rather than operative text.",
+        "codification/mass_migration/latest/reports/laws/PL-018-141.md records no readable authenticated enactment."
+      ],
+      "recommended_actions": [
+        "Retain only a source-limited historical note.",
+        "Do not invent Foreign Service provisions.",
+        "Re-extract the underlying PDF before any codification work."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "No readable statutory prose could be recovered, so the enactment cannot be tied to a lawful Code amendment or note placement.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a source-limited historical note. | Do not invent Foreign Service provisions. | Re-extract the underlying PDF before any codification work."
+    },
+    {
+      "law_id": "PL-018-142",
+      "public_law": "18-142",
+      "title": "Public Law 18-142 | Business Licensing Act",
+      "status": "unresolved",
+      "decision": "source-unavailable-historical-note",
+      "status_basis": "The recovered material does not yield readable statutory text, so no provision-level codification conclusion can be derived.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Source text unavailable.",
+          "classes": [
+            "non-code"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "audit/primary/review-31.json and codification/mass_migration/latest/reports/laws/PL-018-142.md classify the act as SOURCE_UNAVAILABLE; codification/laws/laws/PL-018-142/law.txt is viewer debris rather than readable enactment text.",
+          "notes": "Retain only a source-unavailable historical note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No readable enactment text was recovered, so no XML placement is safe."
+      },
+      "source_evidence": [
+        "audit/primary/review-31.json marks PL-018-142 as source-unavailable.",
+        "codification/laws/laws/PL-018-142/law.txt is viewer debris rather than operative text.",
+        "codification/mass_migration/latest/reports/laws/PL-018-142.md records no readable authenticated enactment."
+      ],
+      "recommended_actions": [
+        "Retain only a source-limited historical note.",
+        "Do not invent licensing provisions.",
+        "Re-extract the underlying PDF before any codification work."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The recovered material does not yield readable statutory text, so no provision-level codification conclusion can be derived.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a source-limited historical note. | Do not invent licensing provisions. | Re-extract the underlying PDF before any codification work."
+    },
+    {
+      "law_id": "PL-018-143",
+      "public_law": "18-143",
+      "title": "Public Law 18-143 | United States Capitol Police Technical Corrections Act",
+      "status": "unresolved",
+      "decision": "source-unavailable-historical-note",
+      "status_basis": "The accessible source is only a permission-denial page, so no operative text can be authenticated and no Code operation can be assigned.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Source text unavailable.",
+          "classes": [
+            "non-code"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "audit/primary/review-31.json and codification/mass_migration/latest/reports/laws/PL-018-143.md classify the act as SOURCE_UNAVAILABLE; codification/laws/laws/PL-018-143/law.txt is a Google Drive permission-denial page.",
+          "notes": "Retain only a source-limited historical note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No readable enactment text was recovered, so no XML placement is safe."
+      },
+      "source_evidence": [
+        "audit/primary/review-31.json marks PL-018-143 as source-unavailable.",
+        "codification/laws/laws/PL-018-143/law.txt is a Google Drive permission-denial page.",
+        "codification/mass_migration/latest/reports/laws/PL-018-143.md records no readable authenticated enactment."
+      ],
+      "recommended_actions": [
+        "Retain only a source-unavailable historical note.",
+        "Do not invent technical-corrections text.",
+        "Re-acquire the authentic source before any codification work."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The accessible source is only a permission-denial page, so no operative text can be authenticated and no Code operation can be assigned.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a source-unavailable historical note. | Do not invent technical-corrections text. | Re-acquire the authentic source before any codification work."
+    },
+    {
+      "law_id": "PL-019-146",
+      "public_law": "19-146",
+      "title": "Public Law 19-146 | Refurbishing the Military Legal System Act",
+      "status": "unresolved",
+      "decision": "source-unavailable-historical-note",
+      "status_basis": "The accessible source is only a permission-denial page, so no operative military-law text can be authenticated and no Code operation can be assigned.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Source text unavailable.",
+          "classes": [
+            "non-code"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "audit/primary/review-31.json and codification/mass_migration/latest/reports/laws/PL-019-146.md classify the act as SOURCE_UNAVAILABLE; codification/laws/laws/PL-019-146/law.txt is a Google Drive permission-denial page.",
+          "notes": "Retain only a source-limited historical note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No readable enactment text was recovered, so no XML placement is safe."
+      },
+      "source_evidence": [
+        "audit/primary/review-31.json marks PL-019-146 as source-unavailable.",
+        "codification/laws/laws/PL-019-146/law.txt is a Google Drive permission-denial page.",
+        "codification/mass_migration/latest/reports/laws/PL-019-146.md records no readable authenticated enactment."
+      ],
+      "recommended_actions": [
+        "Retain only a source-unavailable historical note.",
+        "Do not invent military-justice text.",
+        "Re-acquire the authentic source before any codification work."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The accessible source is only a permission-denial page, so no operative military-law text can be authenticated and no Code operation can be assigned.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a source-unavailable historical note. | Do not invent military-justice text. | Re-acquire the authentic source before any codification work."
+    },
+    {
+      "law_id": "PL-021-123",
+      "public_law": "21-123",
+      "title": "Public Law 21-123 | Freedom In Removing Employees and Deregulation Act of 2024",
+      "status": "repealed",
+      "decision": "nonoperative-or-repealed",
+      "status_basis": "The canonical record is marked repealed, so it is not inserted as current Code text.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Repealed history only.",
+          "classes": [
+            "non-code"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "audit/primary/review-32.json classifies the law as repealed; codification/mass_migration/latest/reports/laws/PL-021-123.md gives the final disposition as NONOPERATIVE_OR_REPEALED.",
+          "notes": "Keep as historical record only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "historical-only",
+        "placement": null,
+        "detail": "The law is repealed, so no current positive-law codification is appropriate."
+      },
+      "source_evidence": [
+        "audit/primary/review-32.json classifies PL-021-123 as repealed.",
+        "codification/mass_migration/latest/reports/laws/PL-021-123.md gives the disposition as NONOPERATIVE_OR_REPEALED.",
+        "No operative text was recovered in the source set."
+      ],
+      "recommended_actions": [
+        "Keep the law as historical-only.",
+        "Do not add current Code text.",
+        "Preserve the repeal status in the review record."
+      ],
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The canonical record is marked repealed, so it is not inserted as current Code text.",
+      "approved_code_treatment": "nonoperative-or-repealed",
+      "final_recommended_action": "Keep the law as historical-only. | Do not add current Code text. | Preserve the repeal status in the review record."
+    },
+    {
+      "law_id": "PL-022-154",
+      "public_law": "22-154",
+      "title": "Public Law 22-154 | Officer Bill of Rights (OBR)",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "The source is readable, but the report finds no express, uniquely executable Code amendment and preserves the act as a statutory note at 28 U.S.C. § 1361.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "General and permanent enactment preserved as a statutory note.",
+          "classes": [
+            "statutory-note"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t28/s1361",
+          "exact_change": null,
+          "evidence": "audit/primary/review-16.json classifies the act as STATUTORY_NOTE at 28 U.S.C. § 1361; codification/mass_migration/latest/reports/laws/PL-022-154.md gives the same anchor.",
+          "notes": "Keep the note at the judiciary anchor; do not synthesize positive-law text."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "report-preserved",
+        "placement": "/us/usc/t28/s1361",
+        "detail": "The migration report places the act at 28 U.S.C. § 1361 as a statutory note."
+      },
+      "source_evidence": [
+        "audit/primary/review-16.json classifies PL-022-154 as STATUTORY_NOTE at 28 U.S.C. § 1361.",
+        "codification/mass_migration/latest/reports/laws/PL-022-154.md gives the same statutory-note anchor.",
+        "codification/laws/laws/PL-022-154/law.txt is a readable enactment text."
+      ],
+      "recommended_actions": [
+        "Preserve the statutory note at 28 U.S.C. § 1361.",
+        "Do not promote the act to a new positive-law section.",
+        "Keep the current note treatment unchanged."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source is readable, but the report finds no express, uniquely executable Code amendment and preserves the act as a statutory note at 28 U.S.C. § 1361.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "Preserve the statutory note at 28 U.S.C. § 1361. | Do not promote the act to a new positive-law section. | Keep the current note treatment unchanged.",
+      "exact_target": "/us/usc/t28/s1361"
+    },
+    {
+      "law_id": "PL-022-155",
+      "public_law": "22-155",
+      "title": "Public Law 22-155 | Department of Education Repealment Act",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "The report finds no express, uniquely executable Code amendment and preserves the act as a statutory note at 2 U.S.C. § 1438.",
+      "provisions": [
+        {
+          "ref": "SEC V(a)-(b)",
+          "text_summary": "Repeals Public Law 17-129 and abolishes the Department of Education.",
+          "classes": [
+            "statutory-note"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t2/s1438",
+          "exact_change": null,
+          "evidence": "codification/laws/laws/PL-022-155/law.txt states that Public Law 17-129 shall be repealed in its entirety and that the United States Department of Education shall cease to exist; audit/primary/review-16.json preserves the act at 2 U.S.C. § 1438.",
+          "notes": "Keep as a statutory note only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "report-preserved",
+        "placement": "/us/usc/t2/s1438",
+        "detail": "The migration report places the note at 2 U.S.C. § 1438."
+      },
+      "source_evidence": [
+        "audit/primary/review-16.json classifies PL-022-155 as STATUTORY_NOTE at 2 U.S.C. § 1438.",
+        "codification/laws/laws/PL-022-155/law.txt includes the repeal of Public Law 17-129 and abolition of the Department of Education.",
+        "codification/mass_migration/latest/reports/laws/PL-022-155.md gives the same anchor."
+      ],
+      "recommended_actions": [
+        "Preserve the statutory note at 2 U.S.C. § 1438.",
+        "Do not duplicate current Code text.",
+        "Keep the repeal history attached to the note."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The report finds no express, uniquely executable Code amendment and preserves the act as a statutory note at 2 U.S.C. § 1438.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "Preserve the statutory note at 2 U.S.C. § 1438. | Do not duplicate current Code text. | Keep the repeal history attached to the note.",
+      "exact_target": "/us/usc/t2/s1438"
+    },
+    {
+      "law_id": "PL-022-156",
+      "public_law": "22-156",
+      "title": "Public Law 22-156 | Local Law Enforcement Agencies Reform and Nurturing (LLEARN)",
+      "status": "current",
+      "decision": "already-incorporated",
+      "status_basis": "The report states that the project-generated U.S. Code already contains this public law, so the review should preserve the implementation rather than duplicate it.",
+      "provisions": [
+        {
+          "ref": "SECs 4-7",
+          "text_summary": "General provision, definitions, and Capitol Police rewrite with repeal markings are already incorporated into the Code material.",
+          "classes": [
+            "direct-amendment",
+            "repeal"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t2/s1",
+          "exact_change": "Integrate the direct title 2 amendments and repeal markings already present in the project-generated U.S. Code material.",
+          "evidence": "codification/laws/laws/PL-022-156/law.txt contains direct title 2 amendments and repeal markings; audit/primary/review-16.json classifies the law as ALREADY_INCORPORATED.",
+          "notes": "No new code operation should be added."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "report-verified",
+        "placement": "/us/usc/t2/s1",
+        "detail": "The migration report says the Code already contains this law, and the working tree includes the corresponding note material."
+      },
+      "source_evidence": [
+        "audit/primary/review-16.json classifies PL-022-156 as ALREADY_INCORPORATED.",
+        "codification/laws/laws/PL-022-156/law.txt includes direct title 2 amendments and repeal markings.",
+        "codification/mass_migration/latest/reports/laws/PL-022-156.md says the project-generated U.S. Code already contains this public law."
+      ],
+      "recommended_actions": [
+        "Leave the incorporated Code material in place.",
+        "Do not create a duplicate statutory note.",
+        "Keep the direct amendment history attached to the affected title 2 provisions."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The report states that the project-generated U.S. Code already contains this public law, so the review should preserve the implementation rather than duplicate it.",
+      "approved_code_treatment": "already-incorporated",
+      "final_recommended_action": "Leave the incorporated Code material in place. | Do not create a duplicate statutory note. | Keep the direct amendment history attached to the affected title 2 provisions.",
+      "exact_target": "/us/usc/t2/s1",
+      "exact_change": "Integrate the direct title 2 amendments and repeal markings already present in the project-generated U.S. Code material."
+    },
+    {
+      "law_id": "PL-022-157",
+      "public_law": "22-157",
+      "title": "Public Law 22-157 | Area Management Update Act (AMUA)",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "The report finds no express, uniquely executable Code amendment and preserves the act as a statutory note at 2 U.S.C. § 1438.",
+      "provisions": [
+        {
+          "ref": "SEC 5",
+          "text_summary": "Amends Public Law 19-144 sections 6 and 8 to adjust closure and checkpoint authority for area management.",
+          "classes": [
+            "statutory-note"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t2/s1438",
+          "exact_change": null,
+          "evidence": "codification/laws/laws/PL-022-157/law.txt amends sections 6 and 8 of Public Law 19-144; audit/primary/review-16.json preserves the act as a statutory note at 2 U.S.C. § 1438.",
+          "notes": "Keep as a statutory note only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "report-preserved",
+        "placement": "/us/usc/t2/s1438",
+        "detail": "The migration report places the note at 2 U.S.C. § 1438."
+      },
+      "source_evidence": [
+        "audit/primary/review-16.json classifies PL-022-157 as STATUTORY_NOTE at 2 U.S.C. § 1438.",
+        "codification/laws/laws/PL-022-157/law.txt amends Public Law 19-144 sections 6 and 8.",
+        "codification/mass_migration/latest/reports/laws/PL-022-157.md gives the same statutory-note disposition."
+      ],
+      "recommended_actions": [
+        "Preserve the statutory note at 2 U.S.C. § 1438.",
+        "Do not promote the act to new positive-law text.",
+        "Keep the amendment history attached to the note."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The report finds no express, uniquely executable Code amendment and preserves the act as a statutory note at 2 U.S.C. § 1438.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "Preserve the statutory note at 2 U.S.C. § 1438. | Do not promote the act to new positive-law text. | Keep the amendment history attached to the note.",
+      "exact_target": "/us/usc/t2/s1438"
+    },
+    {
+      "law_id": "PL-022-158",
+      "public_law": "22-158",
+      "title": "Public Law 22-158 | Service Members Protection Act (SMPA)",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "The report finds no express, uniquely executable Code amendment and preserves the act as a statutory note at 10 U.S.C. § 1060.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "General and permanent enactment preserved as a statutory note.",
+          "classes": [
+            "statutory-note"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t10/s1060",
+          "exact_change": null,
+          "evidence": "audit/primary/review-16.json classifies the act as STATUTORY_NOTE at 10 U.S.C. § 1060; codification/mass_migration/latest/reports/laws/PL-022-158.md gives the same anchor.",
+          "notes": "Keep the note at the title 10 anchor; do not synthesize positive-law text."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "report-preserved",
+        "placement": "/us/usc/t10/s1060",
+        "detail": "The migration report places the note at 10 U.S.C. § 1060."
+      },
+      "source_evidence": [
+        "audit/primary/review-16.json classifies PL-022-158 as STATUTORY_NOTE at 10 U.S.C. § 1060.",
+        "codification/mass_migration/latest/reports/laws/PL-022-158.md gives the same statutory-note anchor.",
+        "codification/laws/laws/PL-022-158/law.txt is a readable enactment text."
+      ],
+      "recommended_actions": [
+        "Preserve the statutory note at 10 U.S.C. § 1060.",
+        "Do not duplicate positive-law text.",
+        "Keep the current note treatment unchanged."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The report finds no express, uniquely executable Code amendment and preserves the act as a statutory note at 10 U.S.C. § 1060.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "Preserve the statutory note at 10 U.S.C. § 1060. | Do not duplicate positive-law text. | Keep the current note treatment unchanged.",
+      "exact_target": "/us/usc/t10/s1060"
+    },
+    {
+      "law_id": "PL-022-159",
+      "public_law": "22-159",
+      "title": "Public Law 22-159 | D.C. Statute of Limitations Act",
+      "status": "repealed",
+      "decision": "nonoperative-or-repealed",
+      "status_basis": "The canonical record is marked repealed, so the law is historical only and not current Code text.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Repealed history only.",
+          "classes": [
+            "non-code"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "audit/primary/review-16.json classifies the law as repealed; codification/mass_migration/latest/reports/laws/PL-022-159.md gives the disposition as NONOPERATIVE_OR_REPEALED.",
+          "notes": "Keep as historical record only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "historical-only",
+        "placement": null,
+        "detail": "The law is repealed, so no current positive-law codification is appropriate."
+      },
+      "source_evidence": [
+        "audit/primary/review-16.json classifies PL-022-159 as repealed.",
+        "codification/mass_migration/latest/reports/laws/PL-022-159.md gives the disposition as NONOPERATIVE_OR_REPEALED.",
+        "No operative Code insertion is warranted."
+      ],
+      "recommended_actions": [
+        "Keep the law as historical-only.",
+        "Do not add current Code text.",
+        "Preserve the repeal status in the review record."
+      ],
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The canonical record is marked repealed, so the law is historical only and not current Code text.",
+      "approved_code_treatment": "nonoperative-or-repealed",
+      "final_recommended_action": "Keep the law as historical-only. | Do not add current Code text. | Preserve the repeal status in the review record."
+    },
+    {
+      "law_id": "PL-022-160",
+      "public_law": "22-160",
+      "title": "Public Law 22-160 | To Amend the U.S. Code",
+      "status": "current",
+      "decision": "already-incorporated",
+      "status_basis": "The report says the project-generated U.S. Code already contains this law, so the task is to verify the existing implementation rather than add a duplicate operation.",
+      "provisions": [
+        {
+          "ref": "SEC IV(a)",
+          "text_summary": "Rewrites 18 U.S.C. § 205(a) to restate the principal-officer restrictions.",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t18/s205",
+          "exact_change": "Replace subsection (a) of 18 U.S.C. § 205 with the enacted text.",
+          "evidence": "codification/laws/laws/PL-022-160/law.txt contains the title 18 amendment; audit/primary/review-16.json classifies the law as ALREADY_INCORPORATED.",
+          "notes": "This is an operative amendment already represented in the project-generated Code."
+        },
+        {
+          "ref": "SEC IV(b)",
+          "text_summary": "Adds new subsection 18 U.S.C. § 205(j) for employee restrictions.",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t18/s205",
+          "exact_change": "Insert subsection (j) after subsection (i) in 18 U.S.C. § 205.",
+          "evidence": "codification/laws/laws/PL-022-160/law.txt inserts a new subsection after subsection (i); audit/primary/review-16.json marks the law already incorporated.",
+          "notes": "No additional codification operation should be added."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "report-verified",
+        "placement": "/us/usc/t18/s205",
+        "detail": "The migration report says the title 18 amendments are already incorporated in the working U.S. Code material."
+      },
+      "source_evidence": [
+        "audit/primary/review-16.json classifies PL-022-160 as ALREADY_INCORPORATED.",
+        "codification/laws/laws/PL-022-160/law.txt amends 18 U.S.C. § 205 in subsections (a) and (j).",
+        "codification/mass_migration/latest/reports/laws/PL-022-160.md says the project-generated U.S. Code already contains this public law."
+      ],
+      "recommended_actions": [
+        "Leave the incorporated title 18 amendments in place.",
+        "Do not create a duplicate statutory note.",
+        "Keep the direct amendment history attached to 18 U.S.C. § 205."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The report says the project-generated U.S. Code already contains this law, so the task is to verify the existing implementation rather than add a duplicate operation.",
+      "approved_code_treatment": "already-incorporated",
+      "final_recommended_action": "Leave the incorporated title 18 amendments in place. | Do not create a duplicate statutory note. | Keep the direct amendment history attached to 18 U.S.C. § 205.",
+      "exact_target": "/us/usc/t18/s205",
+      "exact_change": "Replace subsection (a) of 18 U.S.C. § 205 with the enacted text. | Insert subsection (j) after subsection (i) in 18 U.S.C. § 205."
+    },
+    {
+      "law_id": "PL-022-161",
+      "public_law": "22-161",
+      "title": "Public Law 22-161 | Second Chance Act",
+      "status": "unresolved",
+      "decision": "source-unavailable-historical-note",
+      "status_basis": "No readable authenticated enactment text could be recovered, so the law cannot be assigned a safe Code operation.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Source text unavailable.",
+          "classes": [
+            "non-code"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "audit/primary/review-16.json and codification/mass_migration/latest/reports/laws/PL-022-161.md classify the act as SOURCE_UNAVAILABLE.",
+          "notes": "Retain only a source-limited historical note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No readable enactment text was recovered, so no XML placement is safe."
+      },
+      "source_evidence": [
+        "audit/primary/review-16.json marks PL-022-161 as source-unavailable.",
+        "codification/mass_migration/latest/reports/laws/PL-022-161.md records no readable authenticated enactment text.",
+        "codification/laws/laws/PL-022-161/law.txt is viewer debris rather than operative text."
+      ],
+      "recommended_actions": [
+        "Retain only a source-unavailable historical note.",
+        "Do not invent operative text or a Code anchor.",
+        "Re-acquire the authentic source before any codification work."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "No readable authenticated enactment text could be recovered, so the law cannot be assigned a safe Code operation.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a source-unavailable historical note. | Do not invent operative text or a Code anchor. | Re-acquire the authentic source before any codification work."
+    },
+    {
+      "law_id": "PL-022-162",
+      "public_law": "22-162",
+      "title": "Public Law 22-162 | Judicial Fairness Act",
+      "status": "repealed",
+      "decision": "already-incorporated",
+      "status_basis": "The report says the project-generated U.S. Code already contains this law, and the canon record is marked repealed, so the proper treatment is incorporated history rather than new insertion.",
+      "provisions": [
+        {
+          "ref": "SEC IV.1",
+          "text_summary": "Rewrites 28 U.S.C. § 1253 to expand Supreme Court review methods.",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t28/s1253",
+          "exact_change": "Replace 28 U.S.C. § 1253 with the enacted text.",
+          "evidence": "codification/laws/laws/PL-022-162/law.txt amends 28 U.S.C. § 1253; audit/primary/review-16.json classifies the law as ALREADY_INCORPORATED.",
+          "notes": "This provision is already represented in the project-generated Code."
+        },
+        {
+          "ref": "SEC IV.2",
+          "text_summary": "Rewrites 28 U.S.C. § 1257 to revise Supreme Court review pathways and certiorari standards.",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t28/s1257",
+          "exact_change": "Replace 28 U.S.C. § 1257 with the enacted text.",
+          "evidence": "codification/laws/laws/PL-022-162/law.txt amends 28 U.S.C. § 1257.",
+          "notes": "Keep the integrated text in the affected title 28 section."
+        },
+        {
+          "ref": "SEC IV.4",
+          "text_summary": "Rewrites 28 U.S.C. § 1291 to move appellate jurisdiction to the Supreme Court.",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t28/s1291",
+          "exact_change": "Replace 28 U.S.C. § 1291 with the enacted text.",
+          "evidence": "codification/laws/laws/PL-022-162/law.txt amends 28 U.S.C. § 1291.",
+          "notes": "The title 28 amendment is already incorporated."
+        },
+        {
+          "ref": "SEC V.1-3",
+          "text_summary": "Amends PL 17-135 and PL 4-32 deadlines and ROBLOX service rules; these are collateral provisions outside permanent Code text.",
+          "classes": [
+            "non-code",
+            "amendment-note"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "codification/laws/laws/PL-022-162/law.txt includes collateral amendments to Public Law 17-135 and Public Law 4-32; those provisions are not direct positive-law Code text.",
+          "notes": "Record only as amendment history."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "report-verified",
+        "placement": "/us/usc/t28/s1253",
+        "detail": "The migration report says the title 28 amendments are already incorporated; collateral section V changes remain history-only."
+      },
+      "source_evidence": [
+        "audit/primary/review-16.json classifies PL-022-162 as ALREADY_INCORPORATED despite the repeal label in the canonical record.",
+        "codification/laws/laws/PL-022-162/law.txt amends 28 U.S.C. §§ 1253, 1257, and 1291 and also collateral laws.",
+        "codification/mass_migration/latest/reports/laws/PL-022-162.md says the project-generated U.S. Code already contains this public law."
+      ],
+      "recommended_actions": [
+        "Keep the integrated title 28 amendments in place.",
+        "Do not create a duplicate note for the incorporated provisions.",
+        "Preserve the collateral section V history as non-code amendment history."
+      ],
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The report says the project-generated U.S. Code already contains this law, and the canon record is marked repealed, so the proper treatment is incorporated history rather than new insertion.",
+      "approved_code_treatment": "already-incorporated",
+      "final_recommended_action": "Keep the integrated title 28 amendments in place. | Do not create a duplicate note for the incorporated provisions. | Preserve the collateral section V history as non-code amendment history.",
+      "exact_target": "/us/usc/t28/s1253",
+      "exact_change": "Replace 28 U.S.C. § 1253 with the enacted text. | Replace 28 U.S.C. § 1257 with the enacted text. | Replace 28 U.S.C. § 1291 with the enacted text."
+    },
+    {
+      "law_id": "PL-022-163",
+      "public_law": "22-163",
+      "title": "Public Law 22-163 | Employee's Bill of Rights",
+      "status": "unresolved",
+      "decision": "source-unavailable-historical-note",
+      "status_basis": "No readable authenticated enactment text could be recovered, so the law cannot be assigned a safe Code operation.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Source text unavailable.",
+          "classes": [
+            "non-code"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "audit/primary/review-16.json and codification/mass_migration/latest/reports/laws/PL-022-163.md classify the act as SOURCE_UNAVAILABLE.",
+          "notes": "Retain only a source-limited historical note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "No readable enactment text was recovered, so no XML placement is safe."
+      },
+      "source_evidence": [
+        "audit/primary/review-16.json marks PL-022-163 as source-unavailable.",
+        "codification/mass_migration/latest/reports/laws/PL-022-163.md records no readable authenticated enactment text.",
+        "codification/laws/laws/PL-022-163/law.txt is viewer debris rather than operative text."
+      ],
+      "recommended_actions": [
+        "Retain only a source-unavailable historical note.",
+        "Do not invent operative text or a Code anchor.",
+        "Re-acquire the authentic source before any codification work."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "No readable authenticated enactment text could be recovered, so the law cannot be assigned a safe Code operation.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a source-unavailable historical note. | Do not invent operative text or a Code anchor. | Re-acquire the authentic source before any codification work."
+    },
+    {
+      "law_id": "PL-023-171",
+      "public_law": "23-171",
+      "title": "Public Law 23-171 | Diplomatic Immunity Act",
+      "status": "repealed",
+      "decision": "superseded-before-codification",
+      "status_basis": "The canonical report says the law was superseded before codification, so no current Code insertion is appropriate.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Historical only; later law repeals the act before codification.",
+          "classes": [
+            "non-code"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "audit/primary/review-32.json classifies PL-023-171 as SUPERSEDED_BEFORE_CODIFICATION; codification/mass_migration/latest/reports/laws/PL-023-171.md gives the same disposition.",
+          "notes": "Keep as a source-limited historical note only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "historical-only",
+        "placement": null,
+        "detail": "The law is superseded before codification, so no current positive-law insertion is appropriate."
+      },
+      "source_evidence": [
+        "audit/primary/review-32.json classifies PL-023-171 as SUPERSEDED_BEFORE_CODIFICATION.",
+        "codification/mass_migration/latest/reports/laws/PL-023-171.md gives the same disposition.",
+        "The report cites later repeal by PL-031-227."
+      ],
+      "recommended_actions": [
+        "Retain only a historical note.",
+        "Do not add current Code text.",
+        "Record the supersession as the controlling outcome."
+      ],
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The canonical report says the law was superseded before codification, so no current Code insertion is appropriate.",
+      "approved_code_treatment": "superseded-before-codification",
+      "final_recommended_action": "Retain only a historical note. | Do not add current Code text. | Record the supersession as the controlling outcome."
+    },
+    {
+      "law_id": "PL-024-175",
+      "public_law": "24-175",
+      "title": "Public Law 24-175 | MPD Relocation Act",
+      "status": "unresolved",
+      "decision": "source-unavailable-historical-note",
+      "status_basis": "No readable enactment text was recovered, so only source-limited historical handling is supportable.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Source text unavailable.",
+          "classes": [
+            "non-code"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "audit/primary/review-32.json and codification/mass_migration/latest/reports/laws/PL-024-175.md classify the act as SOURCE_UNAVAILABLE; codification/laws/laws/PL-024-175/_UNRECOVERABLE.txt states that the source was deleted or not found.",
+          "notes": "Retain only a source-limited historical note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "The source is missing, so no substantive placement can be verified."
+      },
+      "source_evidence": [
+        "codification/laws/laws/PL-024-175/_UNRECOVERABLE.txt says the source was deleted or not found.",
+        "audit/primary/review-32.json marks the act unresolved because no text was available to audit.",
+        "codification/mass_migration/latest/reports/laws/PL-024-175.md records SOURCE_UNAVAILABLE."
+      ],
+      "recommended_actions": [
+        "Retain only a source-limited historical note.",
+        "Do not invent operative text or a stronger Code anchor.",
+        "Re-acquire the authentic source before any codification work."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "No readable enactment text was recovered, so only source-limited historical handling is supportable.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a source-limited historical note. | Do not invent operative text or a stronger Code anchor. | Re-acquire the authentic source before any codification work."
+    },
+    {
+      "law_id": "PL-024-176",
+      "public_law": "24-176",
+      "title": "Public Law 24-176 | Comprehensive Federal Government Funding Act",
+      "status": "unresolved",
+      "decision": "source-unavailable-historical-note",
+      "status_basis": "The source is unrecoverable, and the title indicates appropriations rather than permanent positive-law text, so the law should remain historical-note-only.",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "text_summary": "Source text unavailable; title indicates appropriations.",
+          "classes": [
+            "appropriation",
+            "non-code"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "audit/primary/review-32.json and codification/mass_migration/latest/reports/laws/PL-024-176.md classify the act as SOURCE_UNAVAILABLE; codification/laws/laws/PL-024-176/_UNRECOVERABLE.txt states that the source was deleted or not found.",
+          "notes": "Exclude appropriations from permanent Code text and keep only a source-limited history note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "The source is missing, so no substantive placement can be verified."
+      },
+      "source_evidence": [
+        "codification/laws/laws/PL-024-176/_UNRECOVERABLE.txt says the source was deleted or not found.",
+        "audit/primary/review-32.json classifies the act as unresolved and notes its appropriations character.",
+        "codification/mass_migration/latest/reports/laws/PL-024-176.md records SOURCE_UNAVAILABLE."
+      ],
+      "recommended_actions": [
+        "Retain only a source-limited historical note.",
+        "Exclude appropriations from permanent Code text.",
+        "Do not claim a stronger positive-law anchor until the source is restored."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source is unrecoverable, and the title indicates appropriations rather than permanent positive-law text, so the law should remain historical-note-only.",
+      "approved_code_treatment": "source-unavailable-historical-note",
+      "final_recommended_action": "Retain only a source-limited historical note. | Exclude appropriations from permanent Code text. | Do not claim a stronger positive-law anchor until the source is restored."
+    }
+  ]
+}

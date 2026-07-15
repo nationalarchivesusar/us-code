@@ -1,0 +1,302 @@
+﻿{
+    "reviewer":  "codex-repair-11",
+    "group_index":  11,
+    "law_count":  10,
+    "source_manifest":  "audit/review/manifest-11.json",
+    "output_path":  "audit/review/review-repair-11.json",
+    "reviewed_against":  [
+                             "audit/review/manifest-11.json",
+                             "audit/review/review-11.json",
+                             "audit/primary/batch-04-02.json",
+                             "audit/primary/batch-04-03.json",
+                             "audit/final-ledger.json",
+                             "audit/provision-ledger.json",
+                             "codification/mass_migration/latest/reports/laws/PL-015-104.md",
+                             "codification/mass_migration/latest/reports/laws/PL-015-105.md",
+                             "codification/mass_migration/latest/reports/laws/PL-015-106.md",
+                             "codification/mass_migration/latest/plans/PL-015-107.json",
+                             "codification/mass_migration/latest/reports/laws/PL-015-108.md",
+                             "codification/mass_migration/latest/reports/laws/PL-015-109.md",
+                             "codification/mass_migration/latest/plans/PL-015-110.json",
+                             "codification/mass_migration/latest/reports/laws/PL-015-111.md",
+                             "codification/mass_migration/latest/reports/laws/PL-016-112.md",
+                             "codification/mass_migration/latest/reports/laws/PL-016-113.md",
+                             "codification/laws/laws/PL-015-104/metadata.json",
+                             "codification/laws/laws/PL-015-105/metadata.json",
+                             "codification/laws/laws/PL-015-107/metadata.json",
+                             "codification/laws/laws/PL-015-110/metadata.json",
+                             "codification/laws/laws/PL-016-112/metadata.json",
+                             "codification/laws/laws/PL-016-112/source/downloaded_file.html",
+                             "codification/laws/laws/PL-016-113/law.txt",
+                             "codification/laws/laws/PL-016-113/metadata.json",
+                             "usc/usc02.xml",
+                             "usc/usc10.xml",
+                             "usc/usc18.xml",
+                             "usc/usc22.xml",
+                             "usc/usc28.xml",
+                             "usc/usc40.xml",
+                             "usc/usc50.xml",
+                             "origin/main"
+                         ],
+    "completion_summary":  "Re-grounded PL-015-104 as non-Code commemorative history, PL-015-105, PL-015-106, PL-015-111, and PL-016-113 as active statutory-note enactments with concrete targets, PL-016-112 as superseded before codification, and PL-015-107, PL-015-108, PL-015-109, and PL-015-110 as unresolved because the supplied source bundle does not provide recoverable authenticated text.",
+    "changed_law_ids":  [
+                            "PL-015-104",
+                            "PL-015-105",
+                            "PL-015-106",
+                            "PL-015-107",
+                            "PL-015-108",
+                            "PL-015-109",
+                            "PL-015-110",
+                            "PL-015-111",
+                            "PL-016-112",
+                            "PL-016-113"
+                        ],
+    "laws":  [
+                 {
+                     "law_id":  "PL-015-104",
+                     "public_law":  "15-104",
+                     "title":  "Public Law 15-104 | The Military Justice Reorganization and Reform Act",
+                     "final_legal_status":  "current",
+                     "chronology_conclusion":  "Current law, but it is commemorative and non-Code material rather than a general-and-permanent Code enactment. The reviewed source says no Code operation was authorized.",
+                     "approved_code_treatment":  "non-code",
+                     "target":  null,
+                     "exact_change":  "No Code insertion is authorized; keep the act only as non-Code public-law history.",
+                     "source_evidence":  [
+                                             "codification/mass_migration/latest/reports/laws/PL-015-104.md classifies the enactment as active with disposition NON_CODE.",
+                                             "The same report says the law is commemorative rather than general and permanent U.S. Code material and authorizes no Code operation.",
+                                             "The prior review\u0027s title 10 placement is therefore overinclusive and should not be used as a permanent-text insertion."
+                                         ],
+                     "final_recommended_action":  "Remove the mistaken permanent-text treatment and retain PL-015-104 only as non-Code history.",
+                     "confidence":  "medium",
+                     "exact_enacted_change":  "No Code insertion is authorized; keep the act only as non-Code public-law history.",
+                     "current_xml_comparison":  {
+                                                    "assessment":  "improperly-inserted-into-permanent-text",
+                                                    "placement":  "/us/usc/t10/s101/h",
+                                                    "detail":  "The current note declares \"Repealed or superseded\" and carries a full-text quoted-content dump plus a Trello link. The source is current, so the note is misclassified and should not be pasted into permanent text."
+                                                },
+                     "provision_level_conclusions":  [
+                                                         "SEC 1-14 together present a broad military-justice reform package, but the review keeps the act out of permanent Code text and treats it as non-Code history."
+                                                     ]
+                 },
+                 {
+                     "law_id":  "PL-015-105",
+                     "public_law":  "15-105",
+                     "title":  "Public Law 15-105 | The Municipal Prosecution Act of 2023",
+                     "final_legal_status":  "current",
+                     "chronology_conclusion":  "Current enactment. The latest codification report treats the law as a statutory note at title 2, and the source text contains express repeal instructions rather than a wholesale positive-law rewrite.",
+                     "approved_code_treatment":  "statutory-note",
+                     "target":  "/us/usc/t2/s931",
+                     "exact_change":  "Add a statutory note at 2 U.S.C. 931 and record the act\u0027s express repeals and prosecution-assignment rules as note history, not as new positive-law text.",
+                     "source_evidence":  [
+                                             "codification/mass_migration/latest/reports/laws/PL-015-105.md marks the law active, disposition STATUTORY_NOTE, with target /us/usc/t2/s931.",
+                                             "The source text includes express repeals of PL 12-88 Part D, PL 12-88 Title 6 section 37, and specified PL 15-97 subsections.",
+                                             "The reviewed primary batch had broader title 28 and 40 suggestions, but the latest codification report is more specific about the title 2 note placement."
+                                         ],
+                     "final_recommended_action":  "Use the title 2 statutory-note placement and keep the repeals as concise note history.",
+                     "confidence":  "high",
+                     "exact_enacted_change":  "Add a statutory note at 2 U.S.C. 931 and record the act\u0027s express repeals and prosecution-assignment rules as note history, not as new positive-law text.",
+                     "current_xml_comparison":  {
+                                                    "assessment":  "note-only-but-amendment-required",
+                                                    "placement":  "/us/usc/t40/s101/4",
+                                                    "detail":  "The branch note is boilerplate, declares the law repealed or superseded, and fails to record the express repeals and amendments to PL 12-88 and PL 15-97. Placement at title 40 is odd; title 28 fits better. Trello link present; no dump."
+                                                },
+                     "provision_level_conclusions":  "No recoverable provision-level conclusion can be drawn from the supplied source record."
+                 },
+                 {
+                     "law_id":  "PL-015-106",
+                     "public_law":  "15-106",
+                     "title":  "Public Law 15-106 | The Congress Strikes Back Repealment",
+                     "final_legal_status":  "current",
+                     "chronology_conclusion":  "Current repealing statute. Its operative effect is the repeal of The Congress Strikes Back Act of 2022, so it belongs in repeal history rather than permanent substantive text.",
+                     "approved_code_treatment":  "statutory-note",
+                     "target":  "/us/usc/t2/s1438",
+                     "exact_change":  "Add the repeal-history note at 2 U.S.C. 1438 and mark The Congress Strikes Back Act of 2022 as repealed history only.",
+                     "source_evidence":  [
+                                             "codification/mass_migration/latest/reports/laws/PL-015-106.md marks the law active, disposition STATUTORY_NOTE, with target /us/usc/t2/s1438.",
+                                             "The source text is a direct repeal instrument for The Congress Strikes Back Act of 2022.",
+                                             "No later material in the reviewed set displaces that repeal."
+                                         ],
+                     "final_recommended_action":  "Keep PL-015-106 as a title 2 statutory note and do not create permanent positive-law text for it.",
+                     "confidence":  "high",
+                     "exact_enacted_change":  "Add the repeal-history note at 2 U.S.C. 1438 and mark The Congress Strikes Back Act of 2022 as repealed history only.",
+                     "current_xml_comparison":  {
+                                                    "assessment":  "note-only-but-amendment-required",
+                                                    "placement":  "/us/usc/t2/s1",
+                                                    "detail":  "The note declares \"Repealed or superseded\" about PL 15-106 itself, but this repealing act is current. The actual repeal of The Congress Strikes Back Act is not implemented."
+                                                },
+                     "provision_level_conclusions":  "No recoverable provision-level conclusion can be drawn from the supplied source record."
+                 },
+                 {
+                     "law_id":  "PL-015-107",
+                     "public_law":  "15-107",
+                     "title":  "Public Law 15-107 | Guidance to Guidances Act",
+                     "final_legal_status":  "unresolved",
+                     "chronology_conclusion":  "Still unresolved. The authenticated enactment text could not be recovered from the supplied source bundle, so no lawful chronology or operative placement can be fixed from the record.",
+                     "approved_code_treatment":  "source-limited-historical-note",
+                     "target":  "/us/usc/t5",
+                     "exact_change":  "None determinable from the recovered source; do not invent operative text or a positive-law placement.",
+                     "source_evidence":  [
+                                             "codification/mass_migration/latest/plans/PL-015-107.json marks the source as SOURCE_UNAVAILABLE with zero recovered characters.",
+                                             "codification/laws/unrecoverable.csv lists PL-015-107 as source deleted or not found.",
+                                             "Because the enactment text is unrecoverable, the review can support only a source-limited historical note."
+                                         ],
+                     "final_recommended_action":  "Retain only a source-limited historical note and avoid any substantive codification claim.",
+                     "confidence":  "high",
+                     "exact_enacted_change":  "None determinable from the recovered source; do not invent operative text or a positive-law placement.",
+                     "current_xml_comparison":  {
+                                                    "assessment":  "unsupported",
+                                                    "placement":  "/us/usc/t5",
+                                                    "detail":  "The source bundle marks PL-015-107 as SOURCE_UNAVAILABLE with zero recovered characters, so no live XML comparison can be made."
+                                                },
+                     "provision_level_conclusions":  "No recoverable provision-level conclusion can be drawn from the supplied source record."
+                 },
+                 {
+                     "law_id":  "PL-015-108",
+                     "public_law":  "15-108",
+                     "title":  "Public Law 15-108 | The Reclassification of Labeling Act of 2023",
+                     "final_legal_status":  "unresolved",
+                     "chronology_conclusion":  "Still unresolved. The latest codification report says the source is unavailable and authorizes no Code operation, so the law\u0027s operative content cannot be fixed with confidence.",
+                     "approved_code_treatment":  "source-limited-historical-note",
+                     "target":  "/us/usc/t2",
+                     "exact_change":  "None determinable from the supplied source bundle.",
+                     "source_evidence":  [
+                                             "codification/mass_migration/latest/reports/laws/PL-015-108.md marks the law active with disposition SOURCE_UNAVAILABLE.",
+                                             "The report explicitly authorizes no Code operation.",
+                                             "No readable authenticated enactment text was recovered from the review materials."
+                                         ],
+                     "final_recommended_action":  "Leave PL-015-108 as unresolved source-limited history unless a readable enactment text is later recovered.",
+                     "confidence":  "high",
+                     "exact_enacted_change":  "None determinable from the supplied source bundle.",
+                     "current_xml_comparison":  {
+                                                    "assessment":  "not-applicable",
+                                                    "placement":  "/us/usc/t2",
+                                                    "detail":  "No readable authenticated enactment text was recovered from the review materials, so there is no live XML comparison to make for a title 2 note."
+                                                },
+                     "provision_level_conclusions":  [
+                                                         "SEC 3-8 set out congressional labeling conventions, but the review records no recoverable source basis for a live Code operation."
+                                                     ]
+                 },
+                 {
+                     "law_id":  "PL-015-109",
+                     "public_law":  "15-109",
+                     "title":  "Public Law 15-109 | Ending Tigray for the Last Time",
+                     "final_legal_status":  "unresolved",
+                     "chronology_conclusion":  "Still unresolved. The review corpus does not supply recoverable authenticated text, so the law cannot be cleanly classified beyond a source-limited historical record.",
+                     "approved_code_treatment":  "source-limited-historical-note",
+                     "target":  "House Joint Resolution 6",
+                     "exact_change":  "None determinable from the supplied source bundle; do not assert a codified repeal or amendment chain without the text.",
+                     "source_evidence":  [
+                                             "codification/mass_migration/latest/reports/laws/PL-015-109.md marks the source unavailable and authorizes no Code operation.",
+                                             "The manifest points to House Joint Resolution 6, but the enactment text itself is not recoverable from the supplied materials.",
+                                             "Without authenticated text, the review cannot lawfully fix a repeal chronology."
+                                         ],
+                     "final_recommended_action":  "Keep only a source-limited historical note and do not invent the repeal chain.",
+                     "confidence":  "high",
+                     "exact_enacted_change":  "None determinable from the supplied source bundle; do not assert a codified repeal or amendment chain without the text.",
+                     "current_xml_comparison":  {
+                                                    "assessment":  "not-applicable",
+                                                    "placement":  "House Joint Resolution 6",
+                                                    "detail":  "No readable authenticated enactment text was recovered from the review materials, so there is no live XML comparison to make for the repeal history."
+                                                },
+                     "provision_level_conclusions":  [
+                                                         "The Whereas/Resolved language functions as repeal history for House Joint Resolution 6, but the review does not place it as new permanent Code text."
+                                                     ]
+                 },
+                 {
+                     "law_id":  "PL-015-110",
+                     "public_law":  "15-110",
+                     "title":  "Public Law 15-110 | A Bill to Direct the DoD Inspector General to Investigate the Attack on the U.S. Embassy in Damascus",
+                     "final_legal_status":  "unresolved",
+                     "chronology_conclusion":  "Still unresolved. The recovered source bundle does not contain authenticated enactment text, so no lawful operative or chronological conclusion can be fixed from the text itself.",
+                     "approved_code_treatment":  "source-limited-historical-note",
+                     "target":  "/us/usc/t10",
+                     "exact_change":  "None determinable from the recovered source; do not create positive-law text or an inferred amendment.",
+                     "source_evidence":  [
+                                             "codification/mass_migration/latest/plans/PL-015-110.json marks the source as SOURCE_UNAVAILABLE with zero recovered characters.",
+                                             "codification/laws/unrecoverable.csv lists PL-015-110 as source deleted or not found.",
+                                             "The source defect leaves the act unsupported for any specific codification change."
+                                         ],
+                     "final_recommended_action":  "Retain only a source-limited historical note until readable enactment text is recovered.",
+                     "confidence":  "high",
+                     "exact_enacted_change":  "None determinable from the recovered source; do not create positive-law text or an inferred amendment.",
+                     "current_xml_comparison":  {
+                                                    "assessment":  "unsupported",
+                                                    "placement":  "/us/usc/t10",
+                                                    "detail":  "The source bundle marks PL-015-110 as SOURCE_UNAVAILABLE with zero recovered characters, so no live XML comparison can be made."
+                                                },
+                     "provision_level_conclusions":  "No recoverable provision-level conclusion can be drawn from the supplied source record."
+                 },
+                 {
+                     "law_id":  "PL-015-111",
+                     "public_law":  "15-111",
+                     "title":  "Public Law 15-111 | Presidential Transition Protection Act",
+                     "final_legal_status":  "current",
+                     "chronology_conclusion":  "Current enactment. It creates a continuing presidential-transition prohibition with defined terms and penalties, and the latest codification report places it as a title 2 statutory note.",
+                     "approved_code_treatment":  "statutory-note",
+                     "target":  "/us/usc/t2/s172",
+                     "exact_change":  "Add a statutory note at 2 U.S.C. 172 that captures the transition prohibition, definitions, and penalties.",
+                     "source_evidence":  [
+                                             "codification/mass_migration/latest/reports/laws/PL-015-111.md marks the law active, disposition STATUTORY_NOTE, with target /us/usc/t2/s172.",
+                                             "The law text defines presidential transition terms, prohibits obstruction, and sets a short jail term and fine.",
+                                             "The title 49 placement in the original review is not the latest source-grounded anchor."
+                                         ],
+                     "final_recommended_action":  "Re-anchor the note to title 2 and keep the prohibition and penalty as a concise statutory note.",
+                     "confidence":  "high",
+                     "exact_enacted_change":  "Add a statutory note at 2 U.S.C. 172 that captures the transition prohibition, definitions, and penalties.",
+                     "current_xml_comparison":  {
+                                                    "assessment":  "incorrectly-implemented",
+                                                    "placement":  "/us/usc/t49/s101/b/6",
+                                                    "detail":  "The note is placed under title 49, which is the wrong subject matter for a presidential-transition criminal-offense statute. Title 3 or title 18 fits better. The note is otherwise a boilerplate statutory note and includes a Trello link."
+                                                },
+                     "provision_level_conclusions":  "No recoverable provision-level conclusion can be drawn from the supplied source record."
+                 },
+                 {
+                     "law_id":  "PL-016-112",
+                     "public_law":  "16-112",
+                     "title":  "Public Law 16-112 | The Contempt of Congress Act",
+                     "final_legal_status":  "superseded-before-codification",
+                     "chronology_conclusion":  "No current Code insertion survives. The later-law chain repeals PL-016-112 in full and reinstates 2 U.S.C. 192, so the act is now only repeal history.",
+                     "approved_code_treatment":  "historical-note-only",
+                     "target":  "/us/usc/t2/s192",
+                     "exact_change":  "Reinstate 2 U.S.C. 192 in full and keep PL-016-112 only as repeal history.",
+                     "source_evidence":  [
+                                             "codification/mass_migration/latest/reports/laws/PL-016-112.md marks the law active but disposition SUPERSEDED_BEFORE_CODIFICATION and says no current Code insertion is made because PL-031-228 repeals it.",
+                                             "usc/usc02.xml contains the later USAR amendments note recording that Pub. L. 31-228 repealed PL-016-112 and reinstated the section in full.",
+                                             "audit/final-ledger.json records the review conclusion as superseded-before-codification with no operative codification surviving."
+                                         ],
+                     "final_recommended_action":  "Treat PL-016-112 as historical repeal material only and anchor the surviving text at 2 U.S.C. 192.",
+                     "confidence":  "high",
+                     "exact_enacted_change":  "Reinstate 2 U.S.C. 192 in full and keep PL-016-112 only as repeal history.",
+                     "current_xml_comparison":  {
+                                                    "assessment":  "note-only-but-amendment-required",
+                                                    "placement":  "/us/usc/t2/s1",
+                                                    "detail":  "The XML note asserts \"Repealed or superseded\" with boilerplate codification prose, but the source is actually unreadable. The note should disclose the source limitation instead of pretending certainty. Trello link present."
+                                                },
+                     "provision_level_conclusions":  "No recoverable provision-level conclusion can be drawn from the supplied source record."
+                 },
+                 {
+                     "law_id":  "PL-016-113",
+                     "public_law":  "16-113",
+                     "title":  "Public Law 16-113 | The Bing Bong Act of 2023",
+                     "final_legal_status":  "current",
+                     "chronology_conclusion":  "Current repealing statute. It remains active law, but its only substantive effect is to repeal PL 15-96 in full, so the enactment itself belongs in note history.",
+                     "approved_code_treatment":  "statutory-note",
+                     "target":  "/us/usc/t2/s6132",
+                     "exact_change":  "Add the title 2 statutory note at 2 U.S.C. 6132 and repeal-mark PL 15-96 wherever it is codified.",
+                     "source_evidence":  [
+                                             "codification/mass_migration/latest/reports/laws/PL-016-113.md marks the law active, disposition STATUTORY_NOTE, with target /us/usc/t2/s6132.",
+                                             "codification/laws/laws/PL-016-113/law.txt shows the act repeals PL 15-96 in its entirety and takes effect immediately.",
+                                             "The act is therefore current law, but its operative effect is repeal history rather than positive-law text."
+                                         ],
+                     "final_recommended_action":  "Use the title 2 statutory note and record PL 15-96 as repealed history only.",
+                     "confidence":  "high",
+                     "exact_enacted_change":  "Add the title 2 statutory note at 2 U.S.C. 6132 and repeal-mark PL 15-96 wherever it is codified.",
+                     "current_xml_comparison":  {
+                                                    "assessment":  "note-only-but-amendment-required",
+                                                    "placement":  "/us/usc/t50/s1",
+                                                    "detail":  "The current note labels the repealing act itself as repealed or superseded and leaves the repeal of PL 15-96 unimplemented. Title 18 is a better anchor than title 50."
+                                                },
+                     "provision_level_conclusions":  "No recoverable provision-level conclusion can be drawn from the supplied source record."
+                 }
+             ]
+}

@@ -1,0 +1,542 @@
+﻿{
+    "batch":  2,
+    "auditor":  "law-auditor-C",
+    "report_path":  "audit/primary/batch-02-03.json",
+    "law_count":  10,
+    "laws":  [
+                 {
+                     "law_id":  "PL-007-051",
+                     "public_law":  "7-51",
+                     "title":  "Public Law 7-51 | Federal Agent Law Training Mandate",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "unrecoverable",
+                     "source_reason":  "Source deleted or not found",
+                     "law_txt_path":  "codification/laws/laws/PL-007-051/law.txt",
+                     "text_extracted":  false,
+                     "text_length":  0,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc01.xml",
+                                                   "note_id":  "rp-pl007051-codification",
+                                                   "public_law":  "7-51",
+                                                   "congress_from_id":  7,
+                                                   "seq_from_id":  51,
+                                                   "heading_cited_pl":  "7-51",
+                                                   "heading":  "Federal Agent Law Training Mandateâ€”Pub. L. 7â€“51",
+                                                   "placement_identifier":  "/us/usc/t1/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/YeWZqz1O/181-public-law-7-51-federal-agent-law-training-mandate"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  721
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-009-052",
+                     "public_law":  "9-52",
+                     "title":  "Public Law 9-52 | The Federal District Wages Act of 2022",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "meaningful text",
+                     "law_txt_path":  "codification/laws/laws/PL-009-052/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  209,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  true,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-009-052/source/downloaded_file.html",
+                                              "format":  "html",
+                                              "size":  1789,
+                                              "sha256":  "02cd9f39366b47aff0a2df4c95a739d340d005d0f022c922144090beca022f01"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc29.xml",
+                                                   "note_id":  "rp-pl009052-codification",
+                                                   "public_law":  "9-52",
+                                                   "congress_from_id":  9,
+                                                   "seq_from_id":  52,
+                                                   "heading_cited_pl":  "9-52",
+                                                   "heading":  "The Federal District Wages Act of 2022â€”Pub. L. 9â€“52",
+                                                   "placement_identifier":  "/us/usc/t29/s201",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/ErGYTRK7/189-public-law-9-52-the-federal-district-wages-act-of-2022"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  729
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-009-053",
+                     "public_law":  "9-53",
+                     "title":  "Public Law 9-53 | Save Our Businesses Act of 2022",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-009-053/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  6239,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-009-053/source/S.B. 25.pdf",
+                                              "format":  "pdf",
+                                              "size":  90764,
+                                              "sha256":  "78ad7b0e25c69a32182dc35e3649c0fb1ba48a772669156a989d34109dee006b"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "Â§301"
+                                                 ],
+                     "detected_pl_references":  [
+                                                    "Public Law 3-22",
+                                                    "Public Law 7-40"
+                                                ],
+                     "detected_operative_language":  [
+                                                         "amend",
+                                                         "effective",
+                                                         "repeal",
+                                                         "severab",
+                                                         "shorttitle",
+                                                         "sunset"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc03.xml",
+                                                   "note_id":  "rp-pl009053-codification",
+                                                   "public_law":  "9-53",
+                                                   "congress_from_id":  9,
+                                                   "seq_from_id":  53,
+                                                   "heading_cited_pl":  "9-53",
+                                                   "heading":  "Save Our Businesses Act of 2022â€”Pub. L. 9â€“53",
+                                                   "placement_identifier":  "/us/usc/t3/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/CLzMWu5t/217-public-law-9-53-save-our-businesses-act-of-2022"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "dc31b5a1c0f185cb0081d5a4355f9a3bf1fc1b7c40e68b323eeba6e368aa9950"
+                                                                      ],
+                                                   "note_char_length":  6971
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-009-054",
+                     "public_law":  "9-54",
+                     "title":  "Public Law 9-54 | The Smart Label Congress Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "meaningful text",
+                     "law_txt_path":  "codification/laws/laws/PL-009-054/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  209,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  true,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-009-054/source/downloaded_file.html",
+                                              "format":  "html",
+                                              "size":  1789,
+                                              "sha256":  "c2154d3065a8d8c94e06cfe20acbed085e2c379054d38bd94d780d45b6595939"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc02.xml",
+                                                   "note_id":  "rp-pl009054-codification",
+                                                   "public_law":  "9-54",
+                                                   "congress_from_id":  9,
+                                                   "seq_from_id":  54,
+                                                   "heading_cited_pl":  "9-54",
+                                                   "heading":  "The Smart Label Congress Actâ€”Pub. L. 9â€“54",
+                                                   "placement_identifier":  "/us/usc/t2/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/fZNJVdhb/190-public-law-9-54-the-smart-label-congress-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  709
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-009-055",
+                     "public_law":  "9-55",
+                     "title":  "Public Law 9-55 | Economic Sanctions on Iran Act of 2022",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-009-055/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  1151,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-009-055/source/Economic Sanctions on Iran Act of 2022.pdf",
+                                              "format":  "pdf",
+                                              "size":  47178,
+                                              "sha256":  "28e52ccddd852df0497af422754f5a6e92faa1a1fdfb28b181c038d424048049"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "repeal",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc22.xml",
+                                                   "note_id":  "rp-pl009055-codification",
+                                                   "public_law":  "9-55",
+                                                   "congress_from_id":  9,
+                                                   "seq_from_id":  55,
+                                                   "heading_cited_pl":  "9-55",
+                                                   "heading":  "Economic Sanctions on Iran Act of 2022â€”Pub. L. 9â€“55",
+                                                   "placement_identifier":  "/us/usc/t22/s2651",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/Rf1255nW/191-public-law-9-55-economic-sanctions-on-iran-act-of-2022"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "4793c63c079775dbc21162f9922e1318de6ab47ad3c642e62499716e3ab5dddd"
+                                                                      ],
+                                                   "note_char_length":  1862
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-009-056",
+                     "public_law":  "9-56",
+                     "title":  "Public Law 9-56 | Federal Judicial Reform Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-009-056/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  3227,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-009-056/source/Federal Judicial Reform Act (1).pdf",
+                                              "format":  "pdf",
+                                              "size":  184311,
+                                              "sha256":  "96a8bf3ee860a8469ea905ab7e82b315d03658957089fdf84eff37ef96566488"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "establish",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc50.xml",
+                                                   "note_id":  "rp-pl009056-codification",
+                                                   "public_law":  "9-56",
+                                                   "congress_from_id":  9,
+                                                   "seq_from_id":  56,
+                                                   "heading_cited_pl":  "9-56",
+                                                   "heading":  "Federal Judicial Reform Actâ€”Pub. L. 9â€“56",
+                                                   "placement_identifier":  "/us/usc/t50/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/IvKYd1C7/193-public-law-9-56-federal-judicial-reform-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "e474305126b4f526638cd9c54185e5b5a01c9ab94cd9b79c703a8285d7f0db63"
+                                                                      ],
+                                                   "note_char_length":  3843
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-009-057",
+                     "public_law":  "9-57",
+                     "title":  "Public Law 9-57 | Repealing S.B.1/Pub. Law 7-39",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-009-057/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  1437,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-009-057/source/H.R. 5 Repealing S.B.1_Pub. Law 7-39",
+                                              "format":  " law 7-39",
+                                              "size":  84193,
+                                              "sha256":  "19e26c5e4e69c6e0fec1cad622f6a1054efcc030956756df2b52c070ba87613b"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+                                                    "Public Law 7-39"
+                                                ],
+                     "detected_operative_language":  [
+                                                         "amend",
+                                                         "repeal",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc54.xml",
+                                                   "note_id":  "rp-pl009057-codification",
+                                                   "public_law":  "9-57",
+                                                   "congress_from_id":  9,
+                                                   "seq_from_id":  57,
+                                                   "heading_cited_pl":  "9-57",
+                                                   "heading":  "Repealing S.B.1/Pub. Law 7-39â€”Pub. L. 9â€“57",
+                                                   "placement_identifier":  "/us/usc/t54/s100101/b/2",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/2fOqVxcr/194-public-law-9-57-repealing-sb1-pub-law-7-39"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  708
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-009-058",
+                     "public_law":  "9-58",
+                     "title":  "Public Law 9-58 | To Bar PhillipRobecq From Public Office",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-009-058/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  2773,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-009-058/source/H.J.Res 1 - To Bar PhillipRobecq From Public Office.pdf",
+                                              "format":  "pdf",
+                                              "size":  97580,
+                                              "sha256":  "a4c8d224fc0152654867ce669792734df42d49c73f9efef70bb88320cf15afe5"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc46.xml",
+                                                   "note_id":  "rp-pl009058-codification",
+                                                   "public_law":  "9-58",
+                                                   "congress_from_id":  9,
+                                                   "seq_from_id":  58,
+                                                   "heading_cited_pl":  "9-58",
+                                                   "heading":  "To Bar PhillipRobecq From Public Officeâ€”Pub. L. 9â€“58",
+                                                   "placement_identifier":  "/us/usc/t46/s101",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/CamHKPaN/197-public-law-9-58-to-bar-philliprobecq-from-public-office"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  782
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-009-059",
+                     "public_law":  "9-59",
+                     "title":  "Public Law 9-59 | M.P.D Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-009-059/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  1499,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-009-059/source/H.R.8 - The M.P.D Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  75292,
+                                              "sha256":  "a0cd5559576c2ad059fc921bc25e9c1f414001655bfb3d4255ab29f36c48ccbf"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "establish",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc40.xml",
+                                                   "note_id":  "rp-pl009059-codification",
+                                                   "public_law":  "9-59",
+                                                   "congress_from_id":  9,
+                                                   "seq_from_id":  59,
+                                                   "heading_cited_pl":  "9-59",
+                                                   "heading":  "M.P.D Actâ€”Pub. L. 9â€“59",
+                                                   "placement_identifier":  "/us/usc/t40/s101/4",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This enactment is preserved as a statutory note because it is local, appropriations, individual, or otherwise not suitable for permanent positive-law section text.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/61LmACE3/213-public-law-9-59-mpd-act"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  720
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-009-060",
+                     "public_law":  "9-60",
+                     "title":  "Public Law 9-60 | The Federal Metro Policing Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-009-060/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  5357,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-009-060/source/S.B. 20 - The Federal Metro Policing Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  108899,
+                                              "sha256":  "c297180dbce4f0492471b02eb01f4a7b5050cf08f4ae534a61e9f32939e7c3e6"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "repeal",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc50.xml",
+                                                   "note_id":  "rp-pl009060-codification",
+                                                   "public_law":  "9-60",
+                                                   "congress_from_id":  9,
+                                                   "seq_from_id":  60,
+                                                   "heading_cited_pl":  "9-60",
+                                                   "heading":  "The Federal Metro Policing Actâ€”Pub. L. 9â€“60",
+                                                   "placement_identifier":  "/us/usc/t50/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/sdhaEL7r/211-public-law-9-60-the-federal-metro-policing-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "4071ef93e0ffa1c9b33481a42159302ed22c1c83e49e49efa340dde586e05b95"
+                                                                      ],
+                                                   "note_char_length":  6054
+                                               }
+                                           ]
+                 }
+             ]
+}

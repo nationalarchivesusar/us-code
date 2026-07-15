@@ -1,0 +1,1045 @@
+{
+  "batch": 34,
+  "auditor": "law-auditor-H",
+  "law_count": 20,
+  "laws": [
+    {
+      "law_id": "PL-007-049",
+      "public_law": "Pub. L. 7-49",
+      "title": "Legislative Initiative to Grow Monetary Access Act of 2022 (LIGMA Act)",
+      "status": "fully-repealed",
+      "status_basis": "Primary report marks the law repealed; the current branch keeps the authenticated enactment as a historical statutory note, and origin/main did not surface a matching note id in the inspected file.",
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "text_summary": "Short title.",
+          "classes": [
+            "short-title",
+            "history"
+          ],
+          "treatment": "preserve as historical note",
+          "target": "title 31 statutory note",
+          "exact_change": "No operative positive-law amendment is left in force.",
+          "evidence": "audit/primary/review-05.json; current `usc/usc31.xml` note `rp-pl007049-codification` contains authenticated quoted text.",
+          "notes": "Repealed enactment preserved only for history."
+        },
+        {
+          "ref": "SEC. 2",
+          "text_summary": "Severability clause.",
+          "classes": [
+            "severability",
+            "history"
+          ],
+          "treatment": "preserve as historical note",
+          "target": "title 31 statutory note",
+          "exact_change": "No current codified text is produced from the severability clause.",
+          "evidence": "audit/primary/review-05.json; quotedContent in current XML includes the severability section.",
+          "notes": "Background-only provision."
+        },
+        {
+          "ref": "SEC. 3",
+          "text_summary": "Synopsis grants in-game compensation to legislative officials.",
+          "classes": [
+            "purpose",
+            "compensation",
+            "history"
+          ],
+          "treatment": "historical preservation",
+          "target": "title 31 statutory note",
+          "exact_change": "No executable compensation rule is inserted into the Code.",
+          "evidence": "audit/primary/review-05.json; source text in current XML describes compensation for House and Senate teams.",
+          "notes": "Substantive content is game-specific and historical."
+        },
+        {
+          "ref": "SEC. 4",
+          "text_summary": "Effective date tied to the next House election.",
+          "classes": [
+            "effective-date",
+            "history"
+          ],
+          "treatment": "historical preservation",
+          "target": "title 31 statutory note",
+          "exact_change": "No present-day operative date rule remains to codify.",
+          "evidence": "audit/primary/review-05.json; current XML quotedContent carries the delayed effectiveness rule.",
+          "notes": "Delays operation rather than amending Code text."
+        },
+        {
+          "ref": "SEC. 5",
+          "text_summary": "Sets $450 paychecks every 900 seconds and extends the rule to successor games.",
+          "classes": [
+            "compensation",
+            "duration",
+            "history"
+          ],
+          "treatment": "historical preservation",
+          "target": "title 31 statutory note",
+          "exact_change": "No continuing payment mandate is shown as positive-law Code text.",
+          "evidence": "audit/primary/review-05.json; current XML quotedContent includes the payment cadence and successor-game extension.",
+          "notes": "This is the law's only substantive operative rule."
+        },
+        {
+          "ref": "SEC. 6",
+          "text_summary": "Purpose explains the compensation gap the bill was meant to fix.",
+          "classes": [
+            "purpose",
+            "history"
+          ],
+          "treatment": "historical preservation",
+          "target": "title 31 statutory note",
+          "exact_change": "No code amendment is derived from the stated purpose section.",
+          "evidence": "audit/primary/review-05.json; current XML quotedContent includes the rationale for the compensation change.",
+          "notes": "Purpose clause only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correctly preserved as a historical statutory note",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "title 31 statutory note",
+        "detail": "The current branch keeps the authenticated enactment text in a note; no live positive-law section text is expected for a repealed, compensation-specific enactment."
+      },
+      "recommended_actions": [
+        "retain the historical note",
+        "no codification change"
+      ],
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "Primary report marks the law repealed; the current branch keeps the authenticated enactment as a historical statutory note, and origin/main did not surface a matching note id in the inspected file.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "retain the historical note | no codification change",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1PXVzz0zUEumAxXvDEblW2Nt0vtnUU7vF/view | 14d1e2d577cfa0acf798e5df6a74478f2f036f46e6f97247e79aa6c53b57450b",
+      "exact_target": "title 31 statutory note",
+      "exact_change": "No operative positive-law amendment is left in force. | No current codified text is produced from the severability clause. | No executable compensation rule is inserted into the Code."
+    },
+    {
+      "law_id": "PL-007-050",
+      "public_law": "Pub. L. 7-50",
+      "title": "Coast Guard Base Repurposing Act of 2022",
+      "status": "fully-repealed",
+      "status_basis": "Primary report marks the law repealed; the current branch preserves the authenticated text as a historical note in title 14.",
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "text_summary": "Short title.",
+          "classes": [
+            "short-title",
+            "history"
+          ],
+          "treatment": "historical preservation",
+          "target": "title 14 statutory note",
+          "exact_change": "No current operative section text remains in force.",
+          "evidence": "audit/primary/review-05.json; current `usc/usc14.xml` note `rp-pl007050-codification` includes authenticated quotedContent.",
+          "notes": "Historical record only."
+        },
+        {
+          "ref": "SEC. 2",
+          "text_summary": "Severability and anti-supersession language.",
+          "classes": [
+            "severability",
+            "history"
+          ],
+          "treatment": "historical preservation",
+          "target": "title 14 statutory note",
+          "exact_change": "No live amendment is produced from the severability clause.",
+          "evidence": "audit/primary/review-05.json; current XML quotedContent includes the severability language.",
+          "notes": "Nonoperative clause."
+        },
+        {
+          "ref": "SEC. 3",
+          "text_summary": "Definitions for the Coast Guard base and the game setting.",
+          "classes": [
+            "definitions",
+            "history"
+          ],
+          "treatment": "historical preservation",
+          "target": "title 14 statutory note",
+          "exact_change": "No codified definition survives as current positive law.",
+          "evidence": "audit/primary/review-05.json; the source defines the base and the remastered Washington, D.C. setting.",
+          "notes": "Game-specific definitions only."
+        },
+        {
+          "ref": "SEC. 4",
+          "text_summary": "Synopsis repurposes the Coast Guard base for the Navy.",
+          "classes": [
+            "property",
+            "jurisdiction",
+            "history"
+          ],
+          "treatment": "historical preservation",
+          "target": "title 14 statutory note",
+          "exact_change": "No active property transfer rule is codified.",
+          "evidence": "audit/primary/review-05.json; current XML quotedContent states the repurposing to the United States Navy.",
+          "notes": "Local, mission-specific enactment."
+        },
+        {
+          "ref": "SEC. 5-6",
+          "text_summary": "Effective date plus base repurposing, jurisdiction change, and signage replacement.",
+          "classes": [
+            "effective-date",
+            "jurisdiction",
+            "property",
+            "history"
+          ],
+          "treatment": "historical preservation",
+          "target": "title 14 statutory note",
+          "exact_change": "No continuing operational command over the base is left as positive-law text.",
+          "evidence": "audit/primary/review-05.json; current XML quotedContent includes the jurisdiction transfer and signage replacement language.",
+          "notes": "The substantive operative provision is fully historical."
+        },
+        {
+          "ref": "SEC. 7",
+          "text_summary": "Purpose explains the then-current Coast Guard staffing and leadership context.",
+          "classes": [
+            "purpose",
+            "history"
+          ],
+          "treatment": "historical preservation",
+          "target": "title 14 statutory note",
+          "exact_change": "No codified purpose text is needed.",
+          "evidence": "audit/primary/review-05.json; current XML quotedContent carries the rationale section.",
+          "notes": "Explanatory only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correctly preserved as a historical statutory note",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "title 14 statutory note",
+        "detail": "The current branch preserves the authenticated enactment text in the title 14 note; no positive-law insertion is warranted for this repealed, local enactment."
+      },
+      "recommended_actions": [
+        "retain the historical note",
+        "no codification change"
+      ],
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "Primary report marks the law repealed; the current branch preserves the authenticated text as a historical note in title 14.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "retain the historical note | no codification change",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1nM0rHpIhvjBVoppXegQYiqIAKMjCVumB/view | 75bf3e7ef1a16c390badf40dfacae36838f45100a8371fdfb0c99d946b5d1b0b",
+      "exact_target": "title 14 statutory note",
+      "exact_change": "No current operative section text remains in force. | No live amendment is produced from the severability clause. | No codified definition survives as current positive law."
+    },
+    {
+      "law_id": "PL-007-051",
+      "public_law": "Pub. L. 7-51",
+      "title": "Federal Agent Law Training Mandate",
+      "status": "fully-repealed",
+      "status_basis": "Primary report marks the law repealed and unrecoverable; current XML preserves only a source-limited statutory note.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Authenticated source text was not recovered.",
+          "classes": [
+            "source-unavailable",
+            "history"
+          ],
+          "treatment": "preserve as statutory note only",
+          "target": "title 1 statutory note",
+          "exact_change": "No operative language can be verified or codified.",
+          "evidence": "audit/primary/review-05.json; current XML note `rp-pl007051-codification` contains a source limitation only.",
+          "notes": "No provision-level reconstruction is safe."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "source-limited historical note",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "title 1 statutory note",
+        "detail": "The branch records the law as history only; no authenticated enactment text was available to support a substantive codification."
+      },
+      "recommended_actions": [
+        "retain the historical note",
+        "do not invent operative text"
+      ],
+      "confidence": "medium",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "Primary report marks the law repealed and unrecoverable; current XML preserves only a source-limited statutory note.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "retain the historical note | do not invent operative text",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "title 1 statutory note",
+      "exact_change": "No operative language can be verified or codified."
+    },
+    {
+      "law_id": "PL-009-052",
+      "public_law": "Pub. L. 9-52",
+      "title": "Federal District Wages Act of 2022",
+      "status": "fully-repealed",
+      "status_basis": "Primary report marks the law repealed and source-unavailable; current XML keeps a source-limited note in title 29.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Authenticated source text was not recovered.",
+          "classes": [
+            "source-unavailable",
+            "history"
+          ],
+          "treatment": "preserve as statutory note only",
+          "target": "title 29 statutory note",
+          "exact_change": "No verified wage rule or amendment can be stated.",
+          "evidence": "audit/primary/review-28.json; current `usc/usc29.xml` note `rp-pl009052-codification` is source-limited.",
+          "notes": "History only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "source-limited historical note",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "title 29 statutory note",
+        "detail": "The current repository preserves the law as a note without recovered enactment text."
+      },
+      "recommended_actions": [
+        "retain the historical note",
+        "do not invent operative text"
+      ],
+      "confidence": "medium",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "Primary report marks the law repealed and source-unavailable; current XML keeps a source-limited note in title 29.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "retain the historical note | do not invent operative text",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "title 29 statutory note",
+      "exact_change": "No verified wage rule or amendment can be stated."
+    },
+    {
+      "law_id": "PL-009-054",
+      "public_law": "Pub. L. 9-54",
+      "title": "Smart Label Congress Act",
+      "status": "fully-repealed",
+      "status_basis": "Primary report marks the law repealed; the current XML preserves it only as a historical note in title 2.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Authenticated source text was not recovered.",
+          "classes": [
+            "source-unavailable",
+            "history"
+          ],
+          "treatment": "preserve as statutory note only",
+          "target": "title 2 statutory note",
+          "exact_change": "No verified label-reassignment rule can be codified.",
+          "evidence": "audit/primary/review-28.json; current `usc/usc02.xml` note `rp-pl009054-codification` is source-limited.",
+          "notes": "Replaced only by historical preservation."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "source-limited historical note",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "title 2 statutory note",
+        "detail": "The branch keeps the law as a historical note; no authenticated enactment text is available."
+      },
+      "recommended_actions": [
+        "retain the historical note",
+        "do not invent operative text"
+      ],
+      "confidence": "medium",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "Primary report marks the law repealed; the current XML preserves it only as a historical note in title 2.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "retain the historical note | do not invent operative text",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "title 2 statutory note",
+      "exact_change": "No verified label-reassignment rule can be codified."
+    },
+    {
+      "law_id": "PL-009-063",
+      "public_law": "Pub. L. 9-63",
+      "title": "Federal District Employment Act of 2022",
+      "status": "fully-repealed",
+      "status_basis": "Primary report marks the law repealed and source-unavailable; the current XML preserves only a note in title 29.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Authenticated source text was not recovered.",
+          "classes": [
+            "source-unavailable",
+            "history"
+          ],
+          "treatment": "preserve as statutory note only",
+          "target": "title 29 statutory note",
+          "exact_change": "No verified employment rule or amendment can be stated.",
+          "evidence": "audit/primary/review-28.json; current XML note `rp-pl009063-codification` is source-limited.",
+          "notes": "Historical preservation only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "source-limited historical note",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "title 29 statutory note",
+        "detail": "The note is present, but no authenticated enactment text was recovered."
+      },
+      "recommended_actions": [
+        "retain the historical note",
+        "do not invent operative text"
+      ],
+      "confidence": "medium",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "Primary report marks the law repealed and source-unavailable; the current XML preserves only a note in title 29.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "retain the historical note | do not invent operative text",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "title 29 statutory note",
+      "exact_change": "No verified employment rule or amendment can be stated."
+    },
+    {
+      "law_id": "PL-012-076",
+      "public_law": "Pub. L. 12-76",
+      "title": "Removing Idiocy Act",
+      "status": "current",
+      "status_basis": "Primary report marks the law active but source-unavailable; the current XML keeps a source-limited note in title 1.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Authenticated source text was not recovered.",
+          "classes": [
+            "source-unavailable",
+            "current",
+            "history"
+          ],
+          "treatment": "preserve as current statutory note",
+          "target": "title 1 statutory note",
+          "exact_change": "No verified operative language can be extracted.",
+          "evidence": "audit/primary/review-28.json; current `usc/usc01.xml` note `rp-pl012076-codification` marks the law current but source-limited.",
+          "notes": "Active archive record with no recoverable text."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "current but source-limited",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "title 1 statutory note",
+        "detail": "The current branch keeps the law as an active note, but the enactment text remains unrecovered."
+      },
+      "recommended_actions": [
+        "retain the current note",
+        "do not synthesize text"
+      ],
+      "confidence": "medium",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Primary report marks the law active but source-unavailable; the current XML keeps a source-limited note in title 1.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "final_recommended_action": "retain the current note | do not synthesize text",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "title 1 statutory note",
+      "exact_change": "No verified operative language can be extracted."
+    },
+    {
+      "law_id": "PL-012-077",
+      "public_law": "Pub. L. 12-77",
+      "title": "Preventing Abuse and Promoting Democracy Act",
+      "status": "fully-repealed",
+      "status_basis": "Primary report and current XML both treat the law as repealed or superseded; no authenticated text was recovered.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Authenticated source text was not recovered.",
+          "classes": [
+            "source-unavailable",
+            "history"
+          ],
+          "treatment": "preserve as historical statutory note",
+          "target": "title 1 statutory note",
+          "exact_change": "No operative language can be verified.",
+          "evidence": "audit/primary/review-28.json; current `usc/usc01.xml` note `rp-pl012077-codification` is historical only.",
+          "notes": "No live codification."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "historical note with source limitation",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "title 1 statutory note",
+        "detail": "The branch stores the law as historical note material; no source text is available to test any operative language."
+      },
+      "recommended_actions": [
+        "retain the historical note",
+        "do not invent operative text"
+      ],
+      "confidence": "medium",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Primary report and current XML both treat the law as repealed or superseded; no authenticated text was recovered.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "final_recommended_action": "retain the historical note | do not invent operative text",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "title 1 statutory note",
+      "exact_change": "No operative language can be verified."
+    },
+    {
+      "law_id": "PL-012-078",
+      "public_law": "Pub. L. 12-78",
+      "title": "Balancing Executive Act",
+      "status": "fully-repealed",
+      "status_basis": "Primary report and current XML both treat the law as repealed or superseded; the record is source-limited.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Authenticated source text was not recovered.",
+          "classes": [
+            "source-unavailable",
+            "history"
+          ],
+          "treatment": "preserve as historical statutory note",
+          "target": "title 1 statutory note",
+          "exact_change": "No verified executive-balance rule can be stated.",
+          "evidence": "audit/primary/review-28.json; current `usc/usc01.xml` note `rp-pl012078-codification` is historical only.",
+          "notes": "Historical record only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "historical note with source limitation",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "title 1 statutory note",
+        "detail": "The current branch preserves the law only as a note, with no authenticated enactment text."
+      },
+      "recommended_actions": [
+        "retain the historical note",
+        "do not invent operative text"
+      ],
+      "confidence": "medium",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Primary report and current XML both treat the law as repealed or superseded; the record is source-limited.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "final_recommended_action": "retain the historical note | do not invent operative text",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "title 1 statutory note",
+      "exact_change": "No verified executive-balance rule can be stated."
+    },
+    {
+      "law_id": "PL-012-079",
+      "public_law": "Pub. L. 12-79",
+      "title": "Anti-Terrorism Act of 2023",
+      "status": "current",
+      "status_basis": "Primary report marks the law active but source-unavailable; the current branch keeps only a note, so the substance cannot be verified.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "The readable enactment text was not recovered in the source report.",
+          "classes": [
+            "source-unavailable",
+            "current",
+            "history"
+          ],
+          "treatment": "preserve as current statutory note",
+          "target": "closest subject-matter note",
+          "exact_change": "No provision-level codification can be verified.",
+          "evidence": "audit/primary/review-28.json; current branch note exists but the source report states the attachment was unavailable.",
+          "notes": "Title and operative substance are not reconstructable from the available record."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "current but source-limited",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "closest subject-matter statutory note",
+        "detail": "The archive treats the law as active, but the underlying enactment text was not recoverable."
+      },
+      "recommended_actions": [
+        "retain the current note",
+        "do not invent operative text"
+      ],
+      "confidence": "low",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Primary report marks the law active but source-unavailable; the current branch keeps only a note, so the substance cannot be verified.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "final_recommended_action": "retain the current note | do not invent operative text",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "closest subject-matter statutory note",
+      "exact_change": "No provision-level codification can be verified."
+    },
+    {
+      "law_id": "PL-014-091",
+      "public_law": "Pub. L. 14-91",
+      "title": "Uniform Code of Military Justice Reform Act of 2023",
+      "status": "current",
+      "status_basis": "Primary report classifies the law as a statutory note at the title-2 anchor; current XML preserves a full quoted enactment, but no executable positive-law section text is created.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-3",
+          "text_summary": "Short title, definitions for the proposed UCMJ, and severability.",
+          "classes": [
+            "short-title",
+            "definitions",
+            "severability",
+            "note-material"
+          ],
+          "treatment": "preserve as statutory note",
+          "target": "2 U.S.C. § 190d note",
+          "exact_change": "No positive-law amendment; the enactment reads as note material only.",
+          "evidence": "audit/primary/review-29.json; current `usc/usc10.xml` note `rp-pl014091-codification` carries authenticated quotedContent.",
+          "notes": "The source describes a proposed UCMJ, not code-ready replacement text."
+        },
+        {
+          "ref": "SEC. 4",
+          "text_summary": "Findings and immediate application of the proposed UCMJ to all branches.",
+          "classes": [
+            "findings",
+            "directive",
+            "military",
+            "note-material"
+          ],
+          "treatment": "preserve as statutory note",
+          "target": "2 U.S.C. § 190d note",
+          "exact_change": "No executable military-code rewrite is supplied.",
+          "evidence": "audit/primary/review-29.json; current XML quotedContent states the UCMJ should be applied to all branches of the U.S. Armed Forces.",
+          "notes": "Administrative direction only."
+        },
+        {
+          "ref": "SEC. 5",
+          "text_summary": "Enactment and effective-date language.",
+          "classes": [
+            "effective-date",
+            "note-material"
+          ],
+          "treatment": "preserve as statutory note",
+          "target": "2 U.S.C. § 190d note",
+          "exact_change": "No current positive-law section text is created.",
+          "evidence": "audit/primary/review-29.json; current XML quotedContent includes the enactment clause.",
+          "notes": "No direct codification target appears in the source."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correctly preserved as a statutory note",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "2 U.S.C. § 190d note",
+        "detail": "The current branch keeps the enactment as note material rather than positive-law text, which matches the source report."
+      },
+      "recommended_actions": [
+        "retain the statutory note placement",
+        "do not promote the proposal text into positive law"
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Primary report classifies the law as a statutory note at the title-2 anchor; current XML preserves a full quoted enactment, but no executable positive-law section text is created.",
+      "approved_code_treatment": "statutory-note",
+      "final_recommended_action": "retain the statutory note placement | do not promote the proposal text into positive law",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1n7VO5jSF0UaMgBC4TILivenV8rWZYt1P/view | bcb17ab6ce41858c6a88220798c20481b1012da42c0d42e59c0ae75a0709e7fe",
+      "exact_target": "2 U.S.C. § 190d note",
+      "exact_change": "No positive-law amendment; the enactment reads as note material only. | No executable military-code rewrite is supplied. | No current positive-law section text is created."
+    },
+    {
+      "law_id": "PL-015-094",
+      "public_law": "Pub. L. 15-94",
+      "title": "Whistleblower Protections Act of 2023",
+      "status": "current",
+      "status_basis": "Primary report marks the law active but source-unavailable; current branch preserves only a source-limited note.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Authenticated source text was not recovered.",
+          "classes": [
+            "source-unavailable",
+            "current",
+            "history"
+          ],
+          "treatment": "preserve as current statutory note",
+          "target": "closest subject-matter note",
+          "exact_change": "No verified whistleblower amendment can be stated.",
+          "evidence": "audit/primary/review-29.json; the source report says the attachment was image-only or unreadable.",
+          "notes": "No provision-level reconstruction is safe."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "current but source-limited",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "closest subject-matter statutory note",
+        "detail": "The law is treated as active in the archive, but no readable enactment text was recovered."
+      },
+      "recommended_actions": [
+        "retain the current note",
+        "do not invent operative text"
+      ],
+      "confidence": "medium",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Primary report marks the law active but source-unavailable; current branch preserves only a source-limited note.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "final_recommended_action": "retain the current note | do not invent operative text",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "closest subject-matter statutory note",
+      "exact_change": "No verified whistleblower amendment can be stated."
+    },
+    {
+      "law_id": "PL-015-095",
+      "public_law": "Pub. L. 15-95",
+      "title": "An Act to Repeal the White House Protection Act",
+      "status": "fully-repealed",
+      "status_basis": "Primary report marks the law repealed and source-unavailable; the current branch preserves it as a historical note.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Authenticated source text was not recovered.",
+          "classes": [
+            "source-unavailable",
+            "history"
+          ],
+          "treatment": "preserve as historical statutory note",
+          "target": "title 3 statutory note",
+          "exact_change": "No verified repeal text can be stated.",
+          "evidence": "audit/primary/review-29.json; current `usc/usc03.xml` note `rp-pl015095-codification` is source-limited.",
+          "notes": "Historical preservation only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "historical note with source limitation",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "title 3 statutory note",
+        "detail": "The current branch stores the repeal act as history only; the underlying enactment text was not recovered."
+      },
+      "recommended_actions": [
+        "retain the historical note",
+        "do not invent operative text"
+      ],
+      "confidence": "medium",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "Primary report marks the law repealed and source-unavailable; the current branch preserves it as a historical note.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "retain the historical note | do not invent operative text",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "title 3 statutory note",
+      "exact_change": "No verified repeal text can be stated."
+    },
+    {
+      "law_id": "PL-015-107",
+      "public_law": "Pub. L. 15-107",
+      "title": "Guidance to Guidances Act",
+      "status": "fully-repealed",
+      "status_basis": "Primary report and current XML both treat the law as repealed or superseded; the note is source-limited.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Authenticated source text was not recovered.",
+          "classes": [
+            "source-unavailable",
+            "history"
+          ],
+          "treatment": "preserve as historical statutory note",
+          "target": "title 1 statutory note",
+          "exact_change": "No verified guidance-rule amendment can be stated.",
+          "evidence": "audit/primary/review-29.json; current `usc/usc01.xml` note `rp-pl015107-codification` is historical only.",
+          "notes": "History-only record."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "historical note with source limitation",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "title 1 statutory note",
+        "detail": "The branch records the law as history only; no authenticated source text is available."
+      },
+      "recommended_actions": [
+        "retain the historical note",
+        "do not invent operative text"
+      ],
+      "confidence": "medium",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Primary report and current XML both treat the law as repealed or superseded; the note is source-limited.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "final_recommended_action": "retain the historical note | do not invent operative text",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "title 1 statutory note",
+      "exact_change": "No verified guidance-rule amendment can be stated."
+    },
+    {
+      "law_id": "PL-015-110",
+      "public_law": "Pub. L. 15-110",
+      "title": "A Bill to Direct the DoD IG to Investigate Damascus embassy attack",
+      "status": "fully-repealed",
+      "status_basis": "Current XML marks the law repealed or superseded and the source report says no readable enactment text was recovered.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Authenticated source text was not recovered.",
+          "classes": [
+            "source-unavailable",
+            "history"
+          ],
+          "treatment": "preserve as historical statutory note",
+          "target": "title 18 statutory note",
+          "exact_change": "No verified investigation directive can be stated.",
+          "evidence": "audit/primary/review-30.json; current `usc/usc18.xml` note `rp-pl015110-codification` is source-limited and historical.",
+          "notes": "Repealed or superseded record."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "historical note with source limitation",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "title 18 statutory note",
+        "detail": "The current branch preserves the note as history only; no readable source text was recovered."
+      },
+      "recommended_actions": [
+        "retain the historical note",
+        "do not invent operative text"
+      ],
+      "confidence": "medium",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Current XML marks the law repealed or superseded and the source report says no readable enactment text was recovered.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "final_recommended_action": "retain the historical note | do not invent operative text",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "title 18 statutory note",
+      "exact_change": "No verified investigation directive can be stated."
+    },
+    {
+      "law_id": "PL-016-112",
+      "public_law": "Pub. L. 16-112",
+      "title": "Contempt of Congress Act",
+      "status": "superseded",
+      "status_basis": "The chronology and migration reports show the law was later displaced; current XML keeps a title-2 historical note and the source excerpt preserves the repeal-and-reinstate mechanism.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-3",
+          "text_summary": "Short-title style material, definitions of contempt, and contempt-proceeding framework.",
+          "classes": [
+            "definitions",
+            "procedure",
+            "history"
+          ],
+          "treatment": "historical preservation",
+          "target": "title 2 statutory note",
+          "exact_change": "No current positive-law section text is created from the note-only record.",
+          "evidence": "audit/primary/review-30.json; source excerpt in the migration report describes the contempt definition and proceedings.",
+          "notes": "The report text supports a historical reconstruction, not a codified rewrite."
+        },
+        {
+          "ref": "SEC. 4",
+          "text_summary": "Repeals Pub. L. 16-112 and reinstates 2 U.S.C. § 192.",
+          "classes": [
+            "repeal",
+            "reinstatement",
+            "supersession"
+          ],
+          "treatment": "superseded-history only",
+          "target": "title 2 statutory note / 2 U.S.C. § 192 history",
+          "exact_change": "This law's own text is no longer the operative rule because later law superseded it.",
+          "evidence": "audit/primary/review-30.json; the source excerpt explicitly says Public Law 16-112 is repealed in its entirety and 2 U.S. Code § 192 is reinstated.",
+          "notes": "This is the controlling legal consequence."
+        },
+        {
+          "ref": "SEC. 5",
+          "text_summary": "Each chamber may hold contempt via resolution and refer the matter to DOJ.",
+          "classes": [
+            "contempt-power",
+            "referral",
+            "oversight"
+          ],
+          "treatment": "historical preservation",
+          "target": "title 2 statutory note",
+          "exact_change": "No independent modern command is left to codify beyond the later-law history.",
+          "evidence": "audit/primary/review-30.json; the source excerpt describes chamber contempt resolution and DOJ referral/recusal.",
+          "notes": "Implemented only as history."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "superseded historical note",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "title 2 statutory note",
+        "detail": "The current XML note and the migration report both treat the enactment as superseded, with the later contempt rule occupying the operative history."
+      },
+      "recommended_actions": [
+        "retain the supersession history",
+        "ensure the later-law citation to 2 U.S.C. § 192 remains the operative reference"
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The chronology and migration reports show the law was later displaced; current XML keeps a title-2 historical note and the source excerpt preserves the repeal-and-reinstate mechanism.",
+      "approved_code_treatment": "historical-note-only",
+      "final_recommended_action": "retain the supersession history | ensure the later-law citation to 2 U.S.C. § 192 remains the operative reference",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "title 2 statutory note",
+      "exact_change": "No current positive-law section text is created from the note-only record. | This law's own text is no longer the operative rule because later law superseded it. | No independent modern command is left to codify beyond the later-law history."
+    },
+    {
+      "law_id": "PL-016-119",
+      "public_law": "Pub. L. 16-119",
+      "title": "Criminal Organization Act of 2023",
+      "status": "current",
+      "status_basis": "Primary report marks the law active but source-unavailable; the current branch keeps only a source-limited note.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Authenticated source text was not recovered.",
+          "classes": [
+            "source-unavailable",
+            "current",
+            "history"
+          ],
+          "treatment": "preserve as current statutory note",
+          "target": "closest subject-matter note",
+          "exact_change": "No verified criminal-organization rule can be stated.",
+          "evidence": "audit/primary/review-30.json; current branch preserves only a note and the report marks the source unavailable.",
+          "notes": "No provision-level reconstruction is safe."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "current but source-limited",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "closest subject-matter statutory note",
+        "detail": "The archive treats the law as active, but the enactment text was not recoverable."
+      },
+      "recommended_actions": [
+        "retain the current note",
+        "do not invent operative text"
+      ],
+      "confidence": "medium",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Primary report marks the law active but source-unavailable; the current branch keeps only a source-limited note.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "final_recommended_action": "retain the current note | do not invent operative text",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "closest subject-matter statutory note",
+      "exact_change": "No verified criminal-organization rule can be stated."
+    },
+    {
+      "law_id": "PL-016-120",
+      "public_law": "Pub. L. 16-120",
+      "title": "Hail Columbia Act",
+      "status": "fully-repealed",
+      "status_basis": "Current XML marks the law repealed or superseded; the source report says no readable enactment text was recovered.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Authenticated source text was not recovered.",
+          "classes": [
+            "source-unavailable",
+            "history"
+          ],
+          "treatment": "preserve as historical statutory note",
+          "target": "title 1 statutory note",
+          "exact_change": "No verified local-enactment rule can be stated.",
+          "evidence": "audit/primary/review-30.json; current `usc/usc01.xml` note `rp-pl016120-codification` is historical only.",
+          "notes": "History-only record."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "historical note with source limitation",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "title 1 statutory note",
+        "detail": "The note is present but the enactment text was not recovered."
+      },
+      "recommended_actions": [
+        "retain the historical note",
+        "do not invent operative text"
+      ],
+      "confidence": "medium",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Current XML marks the law repealed or superseded; the source report says no readable enactment text was recovered.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "final_recommended_action": "retain the historical note | do not invent operative text",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "title 1 statutory note",
+      "exact_change": "No verified local-enactment rule can be stated."
+    },
+    {
+      "law_id": "PL-016-121",
+      "public_law": "Pub. L. 16-121",
+      "title": "Bill Transparency Understanding Act",
+      "status": "fully-repealed",
+      "status_basis": "Current XML marks the law repealed or superseded; the report describes it as source-unavailable.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Authenticated source text was not recovered.",
+          "classes": [
+            "source-unavailable",
+            "history"
+          ],
+          "treatment": "preserve as historical statutory note",
+          "target": "title 1 statutory note",
+          "exact_change": "No verified transparency rule can be stated.",
+          "evidence": "audit/primary/review-30.json; current `usc/usc01.xml` note `rp-pl016121-codification` is historical only.",
+          "notes": "Historical preservation only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "historical note with source limitation",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "title 1 statutory note",
+        "detail": "The current branch stores the law as a historical note without recoverable text."
+      },
+      "recommended_actions": [
+        "retain the historical note",
+        "do not invent operative text"
+      ],
+      "confidence": "medium",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Current XML marks the law repealed or superseded; the report describes it as source-unavailable.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "final_recommended_action": "retain the historical note | do not invent operative text",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "title 1 statutory note",
+      "exact_change": "No verified transparency rule can be stated."
+    },
+    {
+      "law_id": "PL-016-122",
+      "public_law": "Pub. L. 16-122",
+      "title": "Congressional Competency Act of 2023",
+      "status": "fully-repealed",
+      "status_basis": "Primary report and current XML both treat the law as repealed or superseded; no readable enactment text was recovered.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Authenticated source text was not recovered.",
+          "classes": [
+            "source-unavailable",
+            "history"
+          ],
+          "treatment": "preserve as historical statutory note",
+          "target": "title 2 statutory note",
+          "exact_change": "No verified competency rule can be stated.",
+          "evidence": "audit/primary/review-30.json; current `usc/usc02.xml` note `rp-pl016122-codification` is historical only.",
+          "notes": "No live codification."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "historical note with source limitation",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "title 2 statutory note",
+        "detail": "The current branch preserves the law only as historical note material; no source text was recovered."
+      },
+      "recommended_actions": [
+        "retain the historical note",
+        "do not invent operative text"
+      ],
+      "confidence": "medium",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Primary report and current XML both treat the law as repealed or superseded; no readable enactment text was recovered.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "final_recommended_action": "retain the historical note | do not invent operative text",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "title 2 statutory note",
+      "exact_change": "No verified competency rule can be stated."
+    }
+  ]
+}

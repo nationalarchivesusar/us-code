@@ -1,0 +1,551 @@
+﻿{
+    "batch":  1,
+    "auditor":  "law-auditor-B",
+    "report_path":  "audit/primary/batch-01-02.json",
+    "law_count":  10,
+    "laws":  [
+                 {
+                     "law_id":  "PL-002-011",
+                     "public_law":  "2-11",
+                     "title":  "Public Law 2-11 | Criminal Statute of Limitations Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-002-011/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  1806,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-002-011/source/H.R.3 - Criminal Statute of Limitations Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  107208,
+                                              "sha256":  "b183c7b824c8b02e362d71d8f18c8c83f030c211771701feb19df34c91a43119"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+                                                     "Title 18"
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "establish",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc18.xml",
+                                                   "note_id":  "rp-pl002011-codification",
+                                                   "public_law":  "2-11",
+                                                   "congress_from_id":  2,
+                                                   "seq_from_id":  11,
+                                                   "heading_cited_pl":  "2-11",
+                                                   "heading":  "Criminal Statute of Limitations Actâ€”Pub. L. 2â€“11",
+                                                   "placement_identifier":  "/us/usc/t18/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "Operative amendments are integrated into their affected Code provisions where the enacted target and later-law result were determinable. No additional direct substitution was made where the enactment used only a blanket clause, contained a source defect, or was displaced by later legislation.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/r4jAeMaK/9-public-law-2-11-criminal-statute-of-limitations-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "9bfe50f73303341cde85dc71014f0482be1174811c67a89d1073c325c1903ac5"
+                                                                      ],
+                                                   "note_char_length":  2691
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-002-012",
+                     "public_law":  "2-12",
+                     "title":  "Public Law 2-12 | Fee Prohibition Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-002-012/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  1293,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-002-012/source/H.R.4 - Fee Prohibition Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  102338,
+                                              "sha256":  "07fba5d40ea73a9b41acf5161ef959207950718d52e719843f3dac52a879c427"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc50.xml",
+                                                   "note_id":  "rp-pl002012-codification",
+                                                   "public_law":  "2-12",
+                                                   "congress_from_id":  2,
+                                                   "seq_from_id":  12,
+                                                   "heading_cited_pl":  "2-12",
+                                                   "heading":  "Fee Prohibition Actâ€”Pub. L. 2â€“12",
+                                                   "placement_identifier":  "/us/usc/t50/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/it0Qymtw/10-public-law-2-12-fee-prohibition-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "2a8d5350d91b5eaf54d880fc30df435dc3e95a238207eda5b6c6cb86681820f9"
+                                                                      ],
+                                                   "note_char_length":  1963
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-002-013",
+                     "public_law":  "2-13",
+                     "title":  "Public Law 2-13 | The Employees Termination Notification Act of 2021",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-002-013/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  1503,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-002-013/source/S. 6 - The Employees Termination Notification Act of 2021.pdf",
+                                              "format":  "pdf",
+                                              "size":  76550,
+                                              "sha256":  "6ab3fa2108fcee38580f3a205c6e2511407ba67da1d9cb319e991d508728ca60"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "severab",
+                                                         "shorttitle",
+                                                         "sunset"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc05.xml",
+                                                   "note_id":  "rp-pl002013-codification",
+                                                   "public_law":  "2-13",
+                                                   "congress_from_id":  2,
+                                                   "seq_from_id":  13,
+                                                   "heading_cited_pl":  "2-13",
+                                                   "heading":  "The Employees Termination Notification Act of 2021â€”Pub. L. 2â€“13",
+                                                   "placement_identifier":  "/us/usc/t5/s101",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/kdbWnHKu/12-public-law-2-13-the-employees-termination-notification-act-of-2021"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "8f6a04ee52318ceb9cdd770448f7d569433c21ff9d490d783ca113941dc6156f"
+                                                                      ],
+                                                   "note_char_length":  2228
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-002-014",
+                     "public_law":  "2-14",
+                     "title":  "Public Law 2-14 | National Federal Torts Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-002-014/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  8103,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-002-014/source/H.R.5 - National Federal Torts Act .pdf",
+                                              "format":  "pdf",
+                                              "size":  123990,
+                                              "sha256":  "4cbc806d254bb01b04728b054c40b0207343de1d64ea09eed23555973c978484"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc28.xml",
+                                                   "note_id":  "rp-pl002014-codification",
+                                                   "public_law":  "2-14",
+                                                   "congress_from_id":  2,
+                                                   "seq_from_id":  14,
+                                                   "heading_cited_pl":  "2-14",
+                                                   "heading":  "National Federal Torts Actâ€”Pub. L. 2â€“14",
+                                                   "placement_identifier":  "/us/usc/t28/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/nbRqRlny/13-public-law-2-14-national-federal-torts-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "0ce8f01be4656d2600249fdc7ee65d9db348b0cadc11a85f5bfcbec6917c9d93"
+                                                                      ],
+                                                   "note_char_length":  8805
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-003-015",
+                     "public_law":  "3-15",
+                     "title":  "Public Law 3-15 | Admission to the United Nations Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-003-015/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  1491,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-003-015/source/H.R.10 - Admission to United Nations Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  103938,
+                                              "sha256":  "9df2a00ff87c83574c354ff6fc72d55d21f701c8c9921047e1798a7469b5e59a"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc22.xml",
+                                                   "note_id":  "rp-pl003015-codification",
+                                                   "public_law":  "3-15",
+                                                   "congress_from_id":  3,
+                                                   "seq_from_id":  15,
+                                                   "heading_cited_pl":  "3-15",
+                                                   "heading":  "Admission to the United Nations Actâ€”Pub. L. 3â€“15",
+                                                   "placement_identifier":  "/us/usc/t22/s2651",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/umn0eWYY/14-public-law-3-15-admission-to-the-united-nations-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "7b00f2483bdd27d9889616f883b2f96a7d0d40de4e2f5f5a51eac5027c7ab418"
+                                                                      ],
+                                                   "note_char_length":  2191
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-003-016",
+                     "public_law":  "3-16",
+                     "title":  "Public Law 3-16 | The Capitol Police Establishment",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-003-016/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  5525,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-003-016/source/S. 12 - The Capitol Police Establishment.pdf",
+                                              "format":  "pdf",
+                                              "size":  80225,
+                                              "sha256":  "e81231019a7ca5bc9b567e8bb6034cdb228a5d2134ecf02c1ca434637085ed33"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "establish",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc18.xml",
+                                                   "note_id":  "rp-pl003016-codification",
+                                                   "public_law":  "3-16",
+                                                   "congress_from_id":  3,
+                                                   "seq_from_id":  16,
+                                                   "heading_cited_pl":  "3-16",
+                                                   "heading":  "The Capitol Police Establishmentâ€”Pub. L. 3â€“16",
+                                                   "placement_identifier":  "/us/usc/t18/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/8VIcVFsO/16-public-law-3-16-the-capitol-police-establishment"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "72e912b93ad5338a15a721348d2ca1e28fee29108556f3fc0f5b09a238c95b65"
+                                                                      ],
+                                                   "note_char_length":  6219
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-003-017",
+                     "public_law":  "3-17",
+                     "title":  "Public Law 3-17 | The Diplomatic Protections Act",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-003-017/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  2040,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-003-017/source/H.R.16 - The Diplomatic Protections Act .pdf",
+                                              "format":  "pdf",
+                                              "size":  107797,
+                                              "sha256":  "6b278b928a12d0727c9d4da57d908b6f50fa79fe7ed1221e97be61c9b552665b"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc22.xml",
+                                                   "note_id":  "rp-pl003017-codification",
+                                                   "public_law":  "3-17",
+                                                   "congress_from_id":  3,
+                                                   "seq_from_id":  17,
+                                                   "heading_cited_pl":  "3-17",
+                                                   "heading":  "The Diplomatic Protections Actâ€”Pub. L. 3â€“17",
+                                                   "placement_identifier":  "/us/usc/t22/s2651",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/l8FcQqnQ/17-public-law-3-17-the-diplomatic-protections-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "9e9e17dd385725a3e0e7308c460d3fe561c2340cf64c17d71d0379334e4f143d"
+                                                                      ],
+                                                   "note_char_length":  2735
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-003-018",
+                     "public_law":  "3-18",
+                     "title":  "Public Law 3-18 | Amendment to S.12",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-003-018/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  1812,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-003-018/source/H.R.22 - Amendment to S.12.pdf",
+                                              "format":  "pdf",
+                                              "size":  73787,
+                                              "sha256":  "9d2e84562f77eba7c866922ce4bc30a7e7d70549e47a7bea3610074ba4744276"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "amend",
+                                                         "establish",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc50.xml",
+                                                   "note_id":  "rp-pl003018-codification",
+                                                   "public_law":  "3-18",
+                                                   "congress_from_id":  3,
+                                                   "seq_from_id":  18,
+                                                   "heading_cited_pl":  "3-18",
+                                                   "heading":  "Amendment to S.12â€”Pub. L. 3â€“18",
+                                                   "placement_identifier":  "/us/usc/t50/s1",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/py50u068/18-public-law-3-18-amendment-to-s12"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  685
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-003-019",
+                     "public_law":  "3-19",
+                     "title":  "Public Law 3-19 | The NARA Act",
+                     "list_name":  "1st - 10th U.S. Congress",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF",
+                     "law_txt_path":  "codification/laws/laws/PL-003-019/law.txt",
+                     "text_extracted":  true,
+                     "text_length":  1502,
+                     "image_only_or_scanned":  false,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-003-019/source/S. 10 - The NARA Act.pdf",
+                                              "format":  "pdf",
+                                              "size":  70972,
+                                              "sha256":  "d416bc316297edc48e249fcfeeafcc665c9d3ee54a8823b6a5d03b534d6d284a"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+                                                         "effective",
+                                                         "establish",
+                                                         "severab",
+                                                         "shorttitle"
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc44.xml",
+                                                   "note_id":  "rp-pl003019-codification",
+                                                   "public_law":  "3-19",
+                                                   "congress_from_id":  3,
+                                                   "seq_from_id":  19,
+                                                   "heading_cited_pl":  "3-19",
+                                                   "heading":  "The NARA Actâ€”Pub. L. 3â€“19",
+                                                   "placement_identifier":  "/us/usc/t44/s101",
+                                                   "declared_status":  "Current or not wholly repealed in the supplied public-law archive.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  true,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/vEaLDqx8/19-public-law-3-19-the-nara-act"
+                                                                    ],
+                                                   "sha_references":  [
+                                                                          "300487dc850479ce71272d63db3f8b8b2b64ad3e00478e8fd747fdfeeb5aed7c"
+                                                                      ],
+                                                   "note_char_length":  2156
+                                               }
+                                           ]
+                 },
+                 {
+                     "law_id":  "PL-003-020",
+                     "public_law":  "3-20",
+                     "title":  "Public Law 3-20 | National Immigration Employment Act of 2021",
+                     "list_name":  "Repealed Laws",
+                     "source_status":  "usable",
+                     "source_reason":  "valid PDF; no extractable text (possibly scanned)",
+                     "law_txt_path":  "codification/laws/laws/PL-003-020/law.txt",
+                     "text_extracted":  false,
+                     "text_length":  0,
+                     "image_only_or_scanned":  true,
+                     "html_or_viewer_debris":  false,
+                     "source_files":  [
+                                          {
+                                              "file":  "codification/laws/laws/PL-003-020/source/H.R.26.pdf",
+                                              "format":  "pdf",
+                                              "size":  1818146,
+                                              "sha256":  "7183746844c47159f37ee633b1b5c980f027b6e6df17583d76f38dbfb57da469"
+                                          }
+                                      ],
+                     "detected_code_citations":  [
+
+                                                 ],
+                     "detected_pl_references":  [
+
+                                                ],
+                     "detected_operative_language":  [
+
+                                                     ],
+                     "current_xml_notes":  [
+                                               {
+                                                   "file":  "usc08.xml",
+                                                   "note_id":  "rp-pl003020-codification",
+                                                   "public_law":  "3-20",
+                                                   "congress_from_id":  3,
+                                                   "seq_from_id":  20,
+                                                   "heading_cited_pl":  "3-20",
+                                                   "heading":  "National Immigration Employment Act of 2021â€”Pub. L. 3â€“20",
+                                                   "placement_identifier":  "/us/usc/t8/s1101/i/2",
+                                                   "declared_status":  "Repealed or superseded; retained solely as statutory history.",
+                                                   "declared_codification":  "This generally applicable enactment is classified as a statutory note at the closest subject-matter Code anchor.",
+                                                   "has_quoted_content_dump":  false,
+                                                   "trello_links":  [
+                                                                        "https://trello.com/c/V41MbNqJ/20-public-law-3-20-national-immigration-employment-act-of-2021"
+                                                                    ],
+                                                   "sha_references":  [
+
+                                                                      ],
+                                                   "note_char_length":  738
+                                               }
+                                           ]
+                 }
+             ]
+}

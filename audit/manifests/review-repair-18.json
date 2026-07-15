@@ -1,0 +1,208 @@
+{
+  "reviewer": "codex-repair-18",
+  "group_index": 18,
+  "law_count": 10,
+  "output_path": "audit/review/review-repair-18.json",
+  "laws": [
+    {
+      "law_id": "PL-024-176",
+      "public_law": "24-176",
+      "title": "Public Law 24-176 | Comprehensive Federal Government Funding Act",
+      "report_path": "audit/primary/batch-06-03.json",
+      "batch": 6,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-024-177",
+      "public_law": "24-177",
+      "title": "Public Law 24-177 | SS Jurisdiction Act",
+      "report_path": "audit/primary/batch-06-03.json",
+      "batch": 6,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-024-178",
+      "public_law": "24-178",
+      "title": "Public Law 24-178 | Equality in Employment Act",
+      "report_path": "audit/primary/batch-06-03.json",
+      "batch": 6,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC6(a)(1)-(2)"
+      ],
+      "targets": [
+        "/us/usc/t42/s2000e-2"
+      ]
+    },
+    {
+      "law_id": "PL-025-179",
+      "public_law": "25-179",
+      "title": "Public Law 25-179 | Fiscal Year 21-2",
+      "report_path": "audit/primary/batch-06-03.json",
+      "batch": 6,
+      "source_status": "temporary-operative",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "status:temporary-operative"
+      ],
+      "provision_refs": [
+        "SEC5"
+      ],
+      "targets": [
+        "/us/usc/t2/s4501"
+      ]
+    },
+    {
+      "law_id": "PL-025-180",
+      "public_law": "25-180",
+      "title": "Public Law 25-180 | Sanction Repealment Act",
+      "report_path": "audit/primary/batch-06-03.json",
+      "batch": 6,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "direct-action-provision",
+        "missing-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC3(b)",
+        "SEC3(c)"
+      ],
+      "targets": [
+        "PL 9-55 (wherever codified)"
+      ]
+    },
+    {
+      "law_id": "PL-025-181",
+      "public_law": "25-181",
+      "title": "Public Law 25-181 | Federal District of Columbia Criminal Code",
+      "report_path": "audit/primary/batch-07-01.json",
+      "batch": 7,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 101-103",
+        "SEC 202-214",
+        "SEC 302-314",
+        "SEC 4",
+        "SEC 402-409",
+        "SEC 502-509",
+        "SEC 602-606",
+        "SEC 702-706"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-025-182",
+      "public_law": "25-182",
+      "title": "Public Law 25-182 | Pentagon Expansion and National Territory Authorization Act",
+      "report_path": "audit/primary/batch-07-01.json",
+      "batch": 7,
+      "source_status": "unresolved",
+      "validation_status": "missing source evidence",
+      "confidence": "low",
+      "reasons": [
+        "confidence:low",
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-025-183",
+      "public_law": "25-183",
+      "title": "Public Law 25-183 | Commerce and Labor Advancement Act (CLAA)",
+      "report_path": "audit/primary/batch-07-01.json",
+      "batch": 7,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 10",
+        "SEC 11",
+        "SEC 12",
+        "SEC 4",
+        "SEC 5",
+        "SEC 6",
+        "SEC 7",
+        "SEC 8",
+        "SEC 9"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-025-184",
+      "public_law": "25-184",
+      "title": "Public Law 25-184 | Legal Advisors, Representatives, and Professionals Exam Regulations (LARPER)",
+      "report_path": "audit/primary/batch-07-01.json",
+      "batch": 7,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 10",
+        "SEC 11",
+        "SEC 12",
+        "SEC 4",
+        "SEC 5",
+        "SEC 6",
+        "SEC 7",
+        "SEC 8",
+        "SEC 9"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-025-185",
+      "public_law": "25-185",
+      "title": "Public Law 25-185 | Fiscal Year 21-3",
+      "report_path": "audit/primary/batch-07-01.json",
+      "batch": 7,
+      "source_status": "expired",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "status:expired"
+      ],
+      "provision_refs": [],
+      "targets": []
+    }
+  ]
+}

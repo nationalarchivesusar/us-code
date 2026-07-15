@@ -1,0 +1,211 @@
+{
+  "reviewer": "law-auditor-U",
+  "group_index": 147,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/manifest-47.json",
+  "output_path": "audit/review/review-47.json",
+  "reviewed_against": [
+    "audit/manifests/manifest-47.json",
+    "audit/primary/batch-02.json",
+    "audit/chronology-report.json",
+    "codification/reference/all_270_laws_classification.csv",
+    "codification/plans/applied/PL-004-036.json",
+    "codification/decisions/PL-004-036.md",
+    "usc/usc03.xml",
+    "usc/usc08.xml",
+    "usc/usc10.xml",
+    "usc/usc28.xml",
+    "usc/usc44.xml",
+    "usc/usc46.xml",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-004-032",
+      "public_law": "4-32",
+      "title": "Public Law 4-32 | Warrants, Subpoenas, and Summons Act",
+      "chronology_conclusion": "The supplied law file is an Executive Order that cites Public Law 4-32, so the enacted statute itself was not recovered from the reviewed materials.",
+      "final_legal_status": "source-defect",
+      "approved_code_treatment": "source-limited-history",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": null,
+      "source_evidence": [
+        "audit/primary/batch-02.json flags the item as unresolved because the supplied file is an Executive Order referencing the public law, not the act text.",
+        "codification/reference/all_270_laws_classification.csv classifies PL-004-032 as standalone_general_permanent but source-reviewable in a source-defect posture.",
+        "No matching codification note or operative text appears in usc/usc28.xml, usc/usc50.xml, or origin/main."
+      ],
+      "current_xml_comparison": "No matching note or operative text appears in the current branch XML or in origin/main.",
+      "final_recommended_action": "Recover the authentic enacted text before any Code action; do not add operative text from the EO surrogate.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-004-033",
+      "public_law": "4-33",
+      "title": "Public Law 4-33 | National Archives Act",
+      "chronology_conclusion": "The enactment is current in the source record and is treated as note-only rather than a live positive-law rewrite.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t44",
+      "exact_enacted_text_or_amendment_command": "Retain the enactment as a statutory note at the Title 44 archive anchor; no standalone positive-law rewrite is required.",
+      "source_evidence": [
+        "codification/laws/laws/PL-004-033/law.txt contains the readable National Archives Act text.",
+        "audit/primary/batch-02.json classifies PL-004-033 as a standalone general permanent law.",
+        "usc/usc44.xml already carries the statutory-note treatment, and origin/main matches that placement."
+      ],
+      "current_xml_comparison": "Current branch already has the statutory note in usc/usc44.xml, and origin/main contains the same note treatment.",
+      "final_recommended_action": "Leave the historical statutory note in place and do not add operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-034",
+      "public_law": "4-34",
+      "title": "Public Law 4-34 | An Act to Prevent the Proliferation of Magistrates and Ensure Basic Judicial Competence",
+      "chronology_conclusion": "The source record shows the enactment was fully repealed, so only history treatment remains appropriate.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t28",
+      "exact_enacted_text_or_amendment_command": null,
+      "source_evidence": [
+        "codification/laws/laws/PL-004-034/law.txt contains the judiciary-related enactment text.",
+        "audit/primary/batch-02.json classifies PL-004-034 as a standalone general permanent law.",
+        "Neither usc/usc28.xml nor origin/main contains a matching codification note for this public law."
+      ],
+      "current_xml_comparison": "No matching note or operative text appears in the current branch XML or origin/main.",
+      "final_recommended_action": "Leave this law out of operative Code text and preserve only a historical note if needed.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-035",
+      "public_law": "4-35",
+      "title": "Public Law 4-35 | Recommissioning of the United States Ship New Jersey Act of 2022",
+      "chronology_conclusion": "The source packet is unreadable debris, so the act can only be treated as source-limited history and not reconstructed into operative text.",
+      "final_legal_status": "source-unavailable",
+      "approved_code_treatment": "source-limited-history",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": null,
+      "source_evidence": [
+        "codification/laws/laws/PL-004-035/law.txt is Google Drive permission-denied viewer material rather than an authentic statute file.",
+        "codification/reference/all_270_laws_classification.csv marks PL-004-035 as no_code_text with source_reviewable set to false.",
+        "usc/usc46.xml contains a historical note, but origin/main has no matching note."
+      ],
+      "current_xml_comparison": "Current branch has a historical note in usc/usc46.xml, while origin/main does not show a matching note.",
+      "final_recommended_action": "Keep only a source-limited historical note and do not invent operative text.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-004-036",
+      "public_law": "4-36",
+      "title": "Public Law 4-36 | Defense Heraldic Services Act",
+      "chronology_conclusion": "This is a current direct amendment package that reserves section 7594 and inserts new section 206, with a corresponding TOC update.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "mixed-amendment-and-repeal-marking",
+      "exact_target": [
+        "/us/usc/t10/s7594",
+        "/us/usc/t10/s205"
+      ],
+      "exact_enacted_text_or_amendment_command": [
+        "Reserve 10 U.S.C. 7594 and mark it [Reserved].",
+        "Insert new 10 U.S.C. 206 after /us/usc/t10/s205.",
+        "Insert the title 10 TOC item for 206 after /us/usc/t10/s205."
+      ],
+      "source_evidence": [
+        "codification/plans/applied/PL-004-036.json approves reserving 7594 and inserting section 206 with a TOC item.",
+        "codification/decisions/PL-004-036.md explains that section II repeals 10 U.S.C. 7594 and section III creates 10 U.S.C. 206.",
+        "audit/primary/batch-02.json classifies PL-004-036 as a direct code amendment at Title 10."
+      ],
+      "current_xml_comparison": "The current branch is inconsistent: 10 U.S.C. 206 is present, but 10 U.S.C. 7594 is still operative; origin/main already reflects the reserved-7594 plus section-206 pattern.",
+      "final_recommended_action": "Align the branch with the approved plan by reserving 7594 and keeping the 206 insertion and TOC update.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-037",
+      "public_law": "4-37",
+      "title": "Public Law 4-37 | Border Awareness and Naturalization Act",
+      "chronology_conclusion": "The enactment is fully repealed, so the proper treatment is history only.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t8",
+      "exact_enacted_text_or_amendment_command": null,
+      "source_evidence": [
+        "audit/primary/batch-02.json classifies PL-004-037 as a standalone general permanent law.",
+        "codification/reference/all_270_laws_classification.csv supports historical treatment for this repealed enactment.",
+        "usc/usc08.xml contains the historical note, and origin/main matches it."
+      ],
+      "current_xml_comparison": "Current branch already has the historical note in usc/usc08.xml, and origin/main also contains the same note treatment.",
+      "final_recommended_action": "Leave the law as a historical note only.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-038",
+      "public_law": "4-38",
+      "title": "Public Law 4-38 | White House Protection Act",
+      "chronology_conclusion": "The enactment is repealed and belongs in history-only treatment, not in operative Code text.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t18/s3056",
+      "exact_enacted_text_or_amendment_command": null,
+      "source_evidence": [
+        "audit/review/review-04.json previously resolved the subject anchor to 18 U.S.C. 3056.",
+        "codification/reference/all_270_laws_classification.csv classifies PL-004-038 as a standalone general permanent law.",
+        "usc/usc03.xml contains the historical note, while origin/main does not."
+      ],
+      "current_xml_comparison": "Current branch has the historical note in usc/usc03.xml, but origin/main has no matching note for this public law.",
+      "final_recommended_action": "Keep only the historical note and do not add operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-007-039",
+      "public_law": "7-39",
+      "title": "Public Law 7-39 | Mandatory FLETC Training ACT",
+      "chronology_conclusion": "The enactment is fully repealed, so no operative Code text remains.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": null,
+      "source_evidence": [
+        "codification/reference/all_270_laws_classification.csv classifies PL-007-039 as a standalone general permanent law.",
+        "audit/primary/batch-02.json preserves the law as history-only.",
+        "No matching note or operative text appears in the current branch XML or origin/main."
+      ],
+      "current_xml_comparison": "No matching note or operative text appears in the current branch XML or origin/main.",
+      "final_recommended_action": "Leave the law out of operative Code text and preserve only a historical note if needed.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-007-040",
+      "public_law": "7-40",
+      "title": "Public Law 7-40 | Media Companies Protection Act of 2022",
+      "chronology_conclusion": "The enactment is fully repealed, so only a historical treatment is appropriate.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t15",
+      "exact_enacted_text_or_amendment_command": null,
+      "source_evidence": [
+        "codification/reference/all_270_laws_classification.csv classifies PL-007-040 as a standalone general permanent law.",
+        "audit/review/review-04.json treats the law as history-only with a Title 15 anchor.",
+        "No matching note or operative text appears in the current branch XML or origin/main."
+      ],
+      "current_xml_comparison": "No matching note or operative text appears in the current branch XML or origin/main.",
+      "final_recommended_action": "Leave the law out of operative Code text and retain only a historical note if needed.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-007-041",
+      "public_law": "7-41",
+      "title": "Public Law 7-41 | Common Sense Defense Act of 2022",
+      "chronology_conclusion": "The enactment is repealed or superseded and belongs in historical-note treatment only.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t10",
+      "exact_enacted_text_or_amendment_command": null,
+      "source_evidence": [
+        "codification/reference/all_270_laws_classification.csv classifies PL-007-041 as a standalone general permanent law.",
+        "audit/primary/batch-02.json keeps the law in a historical-only posture.",
+        "usc/usc10.xml contains the historical note, while origin/main does not show a matching note."
+      ],
+      "current_xml_comparison": "Current branch has the historical note in usc/usc10.xml, but origin/main has no matching note for this public law.",
+      "final_recommended_action": "Keep only the historical note and do not add operative text.",
+      "confidence": "high"
+    }
+  ]
+}

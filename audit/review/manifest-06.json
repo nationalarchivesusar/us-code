@@ -1,0 +1,229 @@
+{
+  "reviewer": "reviewer-06",
+  "group_index": 6,
+  "law_count": 10,
+  "output_path": "audit/review/review-06.json",
+  "laws": [
+    {
+      "law_id": "PL-009-052",
+      "public_law": "9-52",
+      "title": "Public Law 9-52 | The Federal District Wages Act of 2022",
+      "report_path": "audit/primary/batch-02-03.json",
+      "batch": 2,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "n/a"
+      ]
+    },
+    {
+      "law_id": "PL-009-053",
+      "public_law": "9-53",
+      "title": "Public Law 9-53 | Save Our Businesses Act of 2022",
+      "report_path": "audit/primary/batch-02-03.json",
+      "batch": 2,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC. 2",
+        "SEC. 3",
+        "SEC. 4",
+        "SEC. 5",
+        "SEC. 6",
+        "SEC. 7",
+        "SEC. 8 (Definitions)",
+        "SEC. 8 (Status)"
+      ],
+      "targets": [
+        "/us/usc/t15",
+        "/us/usc/t15 (commerce)",
+        "/us/usc/t3/s301",
+        "/us/usc/t4 or DC-related",
+        "PL 7-40 (in this batch) and PL 3-22",
+        "PL 9-60 (in this batch), SEC. V(c)-(d)",
+        "n/a",
+        "prior 'Employees Termination Notification Act of 2021' (non-USC-numbered target)"
+      ]
+    },
+    {
+      "law_id": "PL-009-054",
+      "public_law": "9-54",
+      "title": "Public Law 9-54 | The Smart Label Congress Act",
+      "report_path": "audit/primary/batch-02-03.json",
+      "batch": 2,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "n/a"
+      ]
+    },
+    {
+      "law_id": "PL-009-055",
+      "public_law": "9-55",
+      "title": "Public Law 9-55 | Economic Sanctions on Iran Act of 2022",
+      "report_path": "audit/primary/batch-02-03.json",
+      "batch": 2,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC. 3"
+      ],
+      "targets": [
+        "/us/usc/t22 (foreign relations)",
+        "/us/usc/t22 (sanctions)",
+        "n/a"
+      ]
+    },
+    {
+      "law_id": "PL-009-056",
+      "public_law": "9-56",
+      "title": "Public Law 9-56 | Federal Judicial Reform Act",
+      "report_path": "audit/primary/batch-02-03.json",
+      "batch": 2,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "multiple-laws-same-target",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC. 3",
+        "SEC. 4",
+        "SEC. 5",
+        "SEC. 6"
+      ],
+      "targets": [
+        "/us/usc/t28",
+        "n/a"
+      ]
+    },
+    {
+      "law_id": "PL-009-057",
+      "public_law": "9-57",
+      "title": "Public Law 9-57 | Repealing S.B.1/Pub. Law 7-39",
+      "report_path": "audit/primary/batch-02-03.json",
+      "batch": 2,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC. 3 (Definitions)",
+        "SEC. 4"
+      ],
+      "targets": [
+        "PL 7-39 (in this batch)",
+        "n/a"
+      ]
+    },
+    {
+      "law_id": "PL-009-058",
+      "public_law": "9-58",
+      "title": "Public Law 9-58 | To Bar PhillipRobecq From Public Office",
+      "report_path": "audit/primary/batch-02-03.json",
+      "batch": 2,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "status:fully-repealed"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "n/a",
+        "n/a (individual)"
+      ]
+    },
+    {
+      "law_id": "PL-009-059",
+      "public_law": "9-59",
+      "title": "Public Law 9-59 | M.P.D Act",
+      "report_path": "audit/primary/batch-02-03.json",
+      "batch": 2,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC. IV"
+      ],
+      "targets": [
+        "n/a",
+        "n/a (repealed by PL 9-60)"
+      ]
+    },
+    {
+      "law_id": "PL-009-060",
+      "public_law": "9-60",
+      "title": "Public Law 9-60 | The Federal Metro Policing Act",
+      "report_path": "audit/primary/batch-02-03.json",
+      "batch": 2,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC. IV",
+        "SEC. V"
+      ],
+      "targets": [
+        "PL 9-59 (in this batch)",
+        "n/a",
+        "n/a (repealed; local MPD org)"
+      ]
+    },
+    {
+      "law_id": "PL-009-061",
+      "public_law": "9-61",
+      "title": "Public Law 9-61 | Charter Repeal Act",
+      "report_path": "audit/primary/batch-03-01.json",
+      "batch": 3,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target"
+      ],
+      "provision_refs": [
+        "SECTION 2"
+      ],
+      "targets": []
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "batch": 58,
+  "reviewer": "review-repair-58",
+  "group_index": 158,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/review-repair-58.json",
+  "output_path": "audit/review/review-repair-58.json",
+  "reviewed_against": [
+    "audit/manifests/manifest-58.json",
+    "audit/claude-validation.json",
+    "codification/laws/audit.json",
+    "codification/mass_migration/latest/reports/laws/PL-009-062.md",
+    "codification/mass_migration/latest/reports/laws/PL-009-063.md",
+    "codification/mass_migration/latest/reports/laws/PL-009-064.md",
+    "codification/mass_migration/latest/reports/laws/PL-010-065.md",
+    "codification/mass_migration/latest/reports/laws/PL-010-066.md",
+    "codification/mass_migration/latest/reports/laws/PL-010-067.md",
+    "codification/mass_migration/latest/reports/laws/PL-010-068.md",
+    "codification/mass_migration/latest/reports/laws/PL-011-069.md",
+    "codification/mass_migration/latest/reports/laws/PL-011-070.md",
+    "codification/mass_migration/latest/reports/laws/PL-011-071.md",
+    "codification/laws/laws/PL-009-062/law.txt",
+    "codification/laws/laws/PL-009-063/law.txt",
+    "codification/laws/laws/PL-009-064/law.txt",
+    "codification/laws/laws/PL-010-065/law.txt",
+    "codification/laws/laws/PL-010-066/law.txt",
+    "codification/laws/laws/PL-010-067/law.txt",
+    "codification/laws/laws/PL-010-068/law.txt",
+    "codification/laws/laws/PL-011-069/law.txt",
+    "codification/laws/laws/PL-011-070/law.txt",
+    "codification/laws/laws/PL-011-071/law.txt",
+    "usc/usc18.xml",
+    "usc/usc22.xml",
+    "usc/usc28.xml",
+    "usc/usc42.xml",
+    "usc/usc46.xml",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-009-062",
+      "public_law": "9-62",
+      "title": "Public Law 9-62 | Repealing the District of Columbia Home Rule Act",
+      "chronology_conclusion": "The enacted text is a live repealer of the District of Columbia Home Rule Act. It is current enactment text, but the archive does not authorize a positive-law Code rewrite.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "Retain only a concise historical note for the repeal of the District of Columbia Home Rule Act; do not invent a new positive-law section.",
+      "source_evidence": [
+        "codification/laws/laws/PL-009-062/law.txt contains the repeal text.",
+        "audit/claude-validation.json classifies PL-009-062 as source_status current with partially-implemented treatment.",
+        "codification/mass_migration/latest/reports/laws/PL-009-062.md says no Code operation was authorized.",
+        "usc/usc42.xml still references the District of Columbia Home Rule Act in existing notes, but origin/main does not supply a cleaner repeal anchor."
+      ],
+      "current_xml_comparison": "No dedicated PL-009-062 XML note was recovered; the only related XML material is a Title 42 references note, and origin/main does not provide a better placement.",
+      "final_recommended_action": "Keep the repeal as history-only text and do not create new operative Code prose.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-009-063",
+      "public_law": "9-63",
+      "title": "Public Law 9-63 | The Federal District Employment Act of 2022",
+      "chronology_conclusion": "The recovered materials support only a source-limited historical note, not a current operative codification.",
+      "final_legal_status": "source-limited-historical-note",
+      "approved_code_treatment": "source-limited-historical-note",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "Keep only a source-limited historical note if preservation is required; do not invent missing operative text.",
+      "source_evidence": [
+        "codification/laws/laws/PL-009-063/law.txt and law.html are only Google Drive viewer debris and do not recover the enactment.",
+        "audit/claude-validation.json marks PL-009-063 unsupported and unresolved.",
+        "codification/mass_migration/latest/reports/laws/PL-009-063.md says no Code operation was authorized.",
+        "No matching XML or origin/main codification anchor was recovered in the reviewed materials."
+      ],
+      "current_xml_comparison": "No usable XML placement was identified, and origin/main does not improve the record; preserve only the historical note until a recoverable source appears.",
+      "final_recommended_action": "Keep the record as a source-limited historical note and do not treat it as current Code text.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-009-064",
+      "public_law": "9-64",
+      "title": "Public Law 9-64 | To Bar T800Ninja123 From Public Office",
+      "chronology_conclusion": "The barment resolution is operative on its own terms and is not a positive-law rewrite candidate.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "Preserve the barment as a concise statutory note only; do not insert it as permanent positive-law text.",
+      "source_evidence": [
+        "codification/laws/laws/PL-009-064/law.txt contains the operative barment resolution.",
+        "audit/claude-validation.json classifies PL-009-064 as source_status current with an improperly-inserted-into-permanent-text implementation.",
+        "codification/mass_migration/latest/reports/laws/PL-009-064.md says no Code operation was authorized.",
+        "usc/usc46.xml retains a branch-local statutory note for PL-009-064 via rp-pl009064-codification; origin/main does not carry the same note."
+      ],
+      "current_xml_comparison": "The current branch keeps the measure as a note in usc/usc46.xml, which is the right general treatment, but the note still needs cleanup and the origin/main comparison does not show the same branch note.",
+      "final_recommended_action": "Keep the measure as note-only history and trim the branch note to a concise form.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-010-065",
+      "public_law": "10-65",
+      "title": "Public Law 10-65 | Federal Judicial Reform Act ii",
+      "chronology_conclusion": "The source is a court opinion, not enacted statutory text, so it remains history only.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "Do not codify the court opinion as positive law; preserve only a short historical cross-reference if retention is needed.",
+      "source_evidence": [
+        "codification/laws/laws/PL-010-065/law.txt identifies the source as a court opinion rather than enacted statutory text.",
+        "audit/claude-validation.json marks PL-010-065 as source_status fully-repealed with missing chronology analysis.",
+        "codification/mass_migration/latest/reports/laws/PL-010-065.md says no Code operation was authorized.",
+        "No better statutory anchor was recovered in origin/main or the reviewed XML."
+      ],
+      "current_xml_comparison": "The current branch does not expose a lawful positive-law codification path for this record; origin/main does not improve it.",
+      "final_recommended_action": "Keep only a brief historical cross-reference and avoid any statutory rewrite.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-010-066",
+      "public_law": "10-66",
+      "title": "Public Law 10-66 | The Americans First Act",
+      "chronology_conclusion": "The enactment is a live repealer of prior law, but it does not itself create a positive-law Code rewrite target.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "Preserve the repeal as concise history only and do not invent a Code rewrite target.",
+      "source_evidence": [
+        "codification/laws/laws/PL-010-066/law.txt contains the operative repeal text.",
+        "audit/claude-validation.json classifies PL-010-066 as source_status current with partially-implemented treatment.",
+        "codification/mass_migration/latest/reports/laws/PL-010-066.md says no express Code citation was detected and no Code operation was authorized.",
+        "No matching XML anchor or cleaner origin/main placement was recovered."
+      ],
+      "current_xml_comparison": "The reviewed XML does not show a cleaner positive-law anchor for this repealer, and origin/main does not supply one.",
+      "final_recommended_action": "Leave the repeal as history-only text and avoid a fabricated Code insertion.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-010-067",
+      "public_law": "10-67",
+      "title": "Public Law 10-67 | Ambassadorial Readjustment Act",
+      "chronology_conclusion": "The ambassadorial reorganization is operative law, but the reviewed archive supports note treatment rather than a positive-law rewrite.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "Keep the ambassadorial rules and blanket repeal language as a statutory note at the closest subject-matter anchor.",
+      "source_evidence": [
+        "codification/laws/laws/PL-010-067/law.txt contains the ambassadorial reorganization and repeal language.",
+        "audit/claude-validation.json classifies PL-010-067 as source_status current with note-only-but-amendment-required implementation.",
+        "codification/mass_migration/latest/reports/laws/PL-010-067.md says no express Code citation was detected and no Code operation was authorized.",
+        "No matching XML anchor was recovered in the reviewed Code files, and origin/main does not improve the placement."
+      ],
+      "current_xml_comparison": "The branch lacks a clean positive-law anchor for this enactment, so the note treatment remains the least-wrong approach.",
+      "final_recommended_action": "Keep it as a statutory note and do not force a permanent-text rewrite.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-010-068",
+      "public_law": "10-68",
+      "title": "Public Law 10-68 | American Jobs Act",
+      "chronology_conclusion": "This is another live repealer of PL 3-20 and does not itself supply a positive-law rewrite target.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "Preserve the repeal as concise history only and do not invent operative Code text.",
+      "source_evidence": [
+        "codification/laws/laws/PL-010-068/law.txt contains the operative repeal text.",
+        "audit/claude-validation.json classifies PL-010-068 as source_status current with partially-implemented treatment.",
+        "codification/mass_migration/latest/reports/laws/PL-010-068.md says no express Code citation was detected and no Code operation was authorized.",
+        "No matching XML anchor or cleaner origin/main placement was recovered."
+      ],
+      "current_xml_comparison": "The reviewed XML does not show a positive-law anchor for this repealer, and origin/main does not supply one.",
+      "final_recommended_action": "Keep only a concise repeal-history note.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-011-069",
+      "public_law": "11-69",
+      "title": "Public Law 11-69 | DC Criminal Code Act",
+      "chronology_conclusion": "The DC criminal code remains current law, but the canonical disposition is a statutory note anchored to Title 18 rather than a fresh permanent-text rewrite.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t18/s2427",
+      "exact_enacted_text_or_amendment_command": "Keep the DC criminal-code material as a statutory note at 18 U.S.C. 2427 and avoid collapsing it into permanent positive-law text.",
+      "source_evidence": [
+        "codification/laws/laws/PL-011-069/law.txt contains the criminal-code enactment text.",
+        "audit/claude-validation.json marks PL-011-069 as source_status current with an improperly-inserted-into-permanent-text implementation.",
+        "codification/mass_migration/latest/reports/laws/PL-011-069.md classifies the law as STATUTORY_NOTE with target /us/usc/t18/s2427.",
+        "usc/usc18.xml and the reviewed origin/main comparison do not show a better positive-law rewrite path."
+      ],
+      "current_xml_comparison": "The branch treatment should remain a note at 18 U.S.C. 2427; origin/main does not provide a better codification path.",
+      "final_recommended_action": "Keep the statutory-note treatment at 18 U.S.C. 2427.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-011-070",
+      "public_law": "11-70",
+      "title": "Public Law 11-70 | Supreme Court Please Act",
+      "chronology_conclusion": "The transfer of Supreme Court Police duties remains current and belongs at the 40 U.S.C. transfer anchor rather than in a Title 28 wrapper.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "transfer-note",
+      "exact_target": "/us/usc/t40/s6121",
+      "exact_enacted_text_or_amendment_command": "Move the transfer instruction to 40 U.S.C. 6121, keep the short title and effective date as notes, and remove the dump-style wrapper.",
+      "source_evidence": [
+        "codification/laws/laws/PL-011-070/law.txt contains the short-title, transfer, and effective-date provisions.",
+        "audit/claude-validation.json classifies PL-011-070 as source_status current with note-only-but-amendment-required implementation.",
+        "codification/mass_migration/latest/reports/laws/PL-011-070.md classifies the operation as STATUTORY_NOTE at /us/usc/t28/s561 and points to the 40 U.S.C. 6121 transfer anchor.",
+        "usc/usc28.xml currently has a note that Pub. L. 11–70, § 2 transferred or replaced this section; origin/main does not show the same branch note."
+      ],
+      "current_xml_comparison": "The branch still parks the law in a Title 28 note, but the substantive transfer belongs at 40 U.S.C. 6121; origin/main does not show a better placement.",
+      "final_recommended_action": "Move the note to 40 U.S.C. 6121 and keep the remainder as concise note history.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-011-071",
+      "public_law": "11-71",
+      "title": "Public Law 11-71 | Supreme Court Needs Act",
+      "chronology_conclusion": "The law remains current and is already incorporated into 28 U.S.C. 1; the remaining work is only note hygiene.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "amend-existing-text",
+      "exact_target": "/us/usc/t28/s1",
+      "exact_enacted_text_or_amendment_command": "Preserve the integrated 28 U.S.C. 1 rewrite and keep the section-2 note concise; do not reinsert a note-only substitute.",
+      "source_evidence": [
+        "codification/laws/laws/PL-011-071/law.txt contains the Supreme Court membership amendment text.",
+        "audit/claude-validation.json flags PL-011-071 as current but notes that the amendment had to be carried into operative text.",
+        "codification/mass_migration/latest/reports/laws/PL-011-071.md classifies the law as ALREADY_INCORPORATED.",
+        "usc/usc28.xml contains the enacted 28 U.S.C. 1 text and the note that Pub. L. 11–71, § 2 replaced this section; origin/main does not alter that integrated text."
+      ],
+      "current_xml_comparison": "The current XML contains the actual 28 U.S.C. 1 text and a note that Pub. L. 11–71, § 2 replaced the section; origin/main does not change that integrated text.",
+      "final_recommended_action": "Keep the integrated text and only trim the note wrapper if cleanup is needed.",
+      "confidence": "high"
+    }
+  ]
+}

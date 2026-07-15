@@ -1,0 +1,347 @@
+{
+  "batch": 15,
+  "auditor": "law-auditor-M",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-021-123",
+      "public_law": "21-123",
+      "title": "Public Law 21-123 | Freedom In Removing Employees and Deregulation Act of 2024",
+      "status": "repealed",
+      "status_basis": "Claude's repeal classification matches the Trello status, and the source bundle is only a Google Drive denial page; no operative text is recoverable.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Historical record only; no authenticated enactment text was recovered.",
+          "classes": ["history", "source-unavailable", "repealed"],
+          "treatment": "historical-note-only",
+          "target": "no code location",
+          "exact_change": "Preserve only the repeal/history record; do not create Code text.",
+          "evidence": "codification/laws/laws/PL-021-123/law.txt contains only a Google Drive download-denial message; audit/primary/review-32.json and the mass-migration report classify the law as NONOPERATIVE_OR_REPEALED.",
+          "notes": "Source-limited historical record."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "no live XML note located",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "none",
+        "detail": "Current repo XML search did not surface a PL-021-123 statutory note; the law is reflected only in the audit and review records plus the denial-page debris."
+      },
+      "recommended_actions": [
+        "Retain the historical record only.",
+        "Do not invent operative Code text.",
+        "Remove boilerplate if any future note is created."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-022-153",
+      "public_law": "22-153",
+      "title": "Public Law 22-153 | Fire Department Reform and Nurturing (FDRN)",
+      "status": "current",
+      "status_basis": "The source is readable and operative, but it contains no express Code amendment; the mass-migration report preserves it as a statutory note at 2 U.S.C. § 6567.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "General and permanent enactment preserved as a statutory note.",
+          "classes": ["new-permanent-general", "statutory-note"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s6567",
+          "exact_change": "Record the act as a statutory note at the title 2 anchor; no textual amendment is supplied.",
+          "evidence": "codification/laws/laws/PL-022-153/law.txt is a readable enactment; codification/mass_migration/latest/reports/laws/PL-022-153.md classifies it as STATUTORY_NOTE at 2 U.S.C. § 6567.",
+          "notes": "No express U.S. Code citation detected."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not yet applied",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s6567",
+        "detail": "The current branch does not surface a matching live XML note; the correct treatment is a title 2 statutory note at section 6567."
+      },
+      "recommended_actions": [
+        "Add a statutory note at 2 U.S.C. § 6567.",
+        "Keep the note concise and source-grounded.",
+        "Remove boilerplate and Trello-link prose."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-022-154",
+      "public_law": "22-154",
+      "title": "Public Law 22-154 | Officer Bill of Rights (OBR)",
+      "status": "current",
+      "status_basis": "The source is readable and operative, but it contains no express Code amendment; the mass-migration report preserves it as a statutory note at 28 U.S.C. § 1361.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "General and permanent enactment preserved as a statutory note.",
+          "classes": ["new-permanent-general", "statutory-note"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/s1361",
+          "exact_change": "Record the act as a statutory note at the title 28 anchor; no textual amendment is supplied.",
+          "evidence": "codification/laws/laws/PL-022-154/law.txt is a readable enactment; codification/mass_migration/latest/reports/laws/PL-022-154.md classifies it as STATUTORY_NOTE at 28 U.S.C. § 1361.",
+          "notes": "The source report contains a stray OCR artifact for one citation, but no reliable Code amendment."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not yet applied",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s1361",
+        "detail": "The current branch does not surface a matching live XML note; the correct treatment is a title 28 statutory note at section 1361."
+      },
+      "recommended_actions": [
+        "Add a statutory note at 28 U.S.C. § 1361.",
+        "Keep the note source-grounded and concise.",
+        "Remove boilerplate prose."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-022-155",
+      "public_law": "22-155",
+      "title": "Public Law 22-155 | Department of Education Repealment Act",
+      "status": "current",
+      "status_basis": "The source is readable and operative, but it contains no express Code amendment; the mass-migration report preserves it as a statutory note at 2 U.S.C. § 1438.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "General and permanent enactment preserved as a statutory note.",
+          "classes": ["new-permanent-general", "statutory-note"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s1438",
+          "exact_change": "Record the act as a statutory note at the title 2 anchor; no textual amendment is supplied.",
+          "evidence": "codification/laws/laws/PL-022-155/law.txt is a readable enactment; codification/mass_migration/latest/reports/laws/PL-022-155.md classifies it as STATUTORY_NOTE at 2 U.S.C. § 1438.",
+          "notes": "No express U.S. Code citation detected."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not yet applied",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s1438",
+        "detail": "The current branch does not surface a matching live XML note; the correct treatment is a title 2 statutory note at section 1438."
+      },
+      "recommended_actions": [
+        "Add a statutory note at 2 U.S.C. § 1438.",
+        "Keep the note concise and source-grounded.",
+        "Do not invent operative Code text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-022-156",
+      "public_law": "22-156",
+      "title": "Public Law 22-156 | Local Law Enforcement Agencies Reform and Nurturing (LLEARN)",
+      "status": "current",
+      "status_basis": "The source is readable and operative. Claude's conclusion and the mass-migration record agree that the operative title 2 amendments and repeal markings are already incorporated into the live Code.",
+      "provisions": [
+        {
+          "ref": "SEC 5 and SEC 6",
+          "text_summary": "Thirty repeals and six replacements across title 2, including sections 1901a, 1961, 1966, 1966a, 1969, and 1974.",
+          "classes": ["direct-amendment", "repeal", "substitution"],
+          "treatment": "already-incorporated",
+          "target": "multiple title 2 provisions",
+          "exact_change": "Keep the existing integrated repeals and replacements in title 2; do not duplicate them.",
+          "evidence": "codification/laws/laws/PL-022-156/law.txt contains direct title 2 amendments and repeal markings; audit/primary/review-16.json and codification/mass_migration/latest/reports/laws/PL-022-156.md both identify the law as already incorporated.",
+          "notes": "The later-law result for section 1966 was resolved by the source record."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "already incorporated",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2",
+        "detail": "Live XML already contains the integrated title 2 amendments and repeal markings; review-16 cites usc02.xml:26951, 27640, 27801, 27809, 27869, and 27989."
+      },
+      "recommended_actions": [
+        "Leave the live title 2 text in place.",
+        "Do not duplicate the already incorporated amendments.",
+        "Preserve the existing note history."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-022-157",
+      "public_law": "22-157",
+      "title": "Public Law 22-157 | Area Management Update Act (AMUA)",
+      "status": "current",
+      "status_basis": "The source is readable and operative, but it contains no express Code amendment; the mass-migration report preserves it as a statutory note at 2 U.S.C. § 1438.",
+      "provisions": [
+        {
+          "ref": "SEC 5",
+          "text_summary": "Amends sections 6 and 8 of Public Law 19-144.",
+          "classes": ["direct-amendment", "substitution"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s1438",
+          "exact_change": "Record the amendment to Public Law 19-144 as a statutory note; no unique positive-law placement is supplied.",
+          "evidence": "codification/laws/laws/PL-022-157/law.txt amends sections 6 and 8 of Public Law 19-144; codification/mass_migration/latest/reports/laws/PL-022-157.md preserves the act as a statutory note at 2 U.S.C. § 1438.",
+          "notes": "No express U.S. Code citation detected."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not yet applied",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s1438",
+        "detail": "The current branch does not surface a matching live XML note; the correct treatment is a title 2 statutory note at section 1438."
+      },
+      "recommended_actions": [
+        "Add a statutory note at 2 U.S.C. § 1438.",
+        "Keep the note anchored to the Public Law 19-144 amendment.",
+        "Remove boilerplate."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-022-158",
+      "public_law": "22-158",
+      "title": "Public Law 22-158 | Service Members Protection Act (SMPA)",
+      "status": "current",
+      "status_basis": "The source is readable and operative, but it contains no express Code amendment; the mass-migration report preserves it as a statutory note at 10 U.S.C. § 1060.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "General and permanent enactment preserved as a statutory note.",
+          "classes": ["new-permanent-general", "statutory-note"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t10/s1060",
+          "exact_change": "Record the act as a statutory note at the title 10 anchor; no textual amendment is supplied.",
+          "evidence": "codification/laws/laws/PL-022-158/law.txt is a readable enactment; codification/mass_migration/latest/reports/laws/PL-022-158.md classifies it as STATUTORY_NOTE at 10 U.S.C. § 1060.",
+          "notes": "No express U.S. Code citation detected."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not yet applied",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t10/s1060",
+        "detail": "The current branch does not surface a matching live XML note; the correct treatment is a title 10 statutory note at section 1060."
+      },
+      "recommended_actions": [
+        "Add a statutory note at 10 U.S.C. § 1060.",
+        "Keep the note concise and source-grounded.",
+        "Do not invent operative Code text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-022-159",
+      "public_law": "22-159",
+      "title": "Public Law 22-159 | D.C. Statute of Limitations Act",
+      "status": "repealed",
+      "status_basis": "Claude's repeal classification matches the Trello status, and the source bundle is a repealed-law record with no Code location.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Historical record only; no Code location was identified.",
+          "classes": ["history", "source-unavailable", "repealed"],
+          "treatment": "historical-note-only",
+          "target": "no code location",
+          "exact_change": "Preserve only the repeal/history record; do not create Code text.",
+          "evidence": "codification/laws/laws/PL-022-159/law.txt is associated with a repealed Trello record; codification/mass_migration/latest/reports/laws/PL-022-159.md classifies the law as NONOPERATIVE_OR_REPEALED.",
+          "notes": "No operative statutory placement is appropriate."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "no live XML note located",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "none",
+        "detail": "No matching live XML note surfaced in the current branch, and the law should remain a historical record only."
+      },
+      "recommended_actions": [
+        "Retain the historical record only.",
+        "Do not invent operative Code text.",
+        "Exclude the law from permanent Code placement."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-022-160",
+      "public_law": "22-160",
+      "title": "Public Law 22-160 | To Amend the U.S. Code",
+      "status": "current",
+      "status_basis": "The source is readable and operative, and Claude's conclusion that the law is already incorporated matches the live title 18 text and the mass-migration record.",
+      "provisions": [
+        {
+          "ref": "SEC IV(a)",
+          "text_summary": "Replace 18 U.S.C. § 205(a) with the amended text supplied in the enactment.",
+          "classes": ["direct-amendment", "substitution"],
+          "treatment": "already-incorporated",
+          "target": "/us/usc/t18/s205",
+          "exact_change": "Replace the existing subsection (a) text with the new principal-officer rule and exceptions.",
+          "evidence": "codification/laws/laws/PL-022-160/law.txt contains the title 18 amendment; audit/primary/review-16.json and codification/mass_migration/latest/reports/laws/PL-022-160.md classify the law as already incorporated; review-16 cites usc18.xml:4052 and 4131.",
+          "notes": "Section (a) rewrite."
+        },
+        {
+          "ref": "SEC IV(b)",
+          "text_summary": "Insert new subsection (j) after subsection (i) in 18 U.S.C. § 205.",
+          "classes": ["direct-amendment", "insertion"],
+          "treatment": "already-incorporated",
+          "target": "/us/usc/t18/s205",
+          "exact_change": "Insert the employee-only prohibition as new subsection (j) after subsection (i).",
+          "evidence": "codification/laws/laws/PL-022-160/law.txt supplies the new subsection (j); review-16 cites usc18.xml:4103 and 4131.",
+          "notes": "New subsection inserted after (i)."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "already incorporated",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s205",
+        "detail": "Live XML already contains the 18 U.S.C. § 205 changes; no further XML change is required."
+      },
+      "recommended_actions": [
+        "Leave the live 18 U.S.C. § 205 text in place.",
+        "Do not duplicate the subsection (a) rewrite or the new subsection (j).",
+        "Preserve the existing note history."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-022-161",
+      "public_law": "22-161",
+      "title": "Public Law 22-161 | Second Chance Act",
+      "status": "active",
+      "status_basis": "Claude's source-unavailable conclusion matches the Trello and repair-tool records: no readable authenticated enactment text could be recovered.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "No readable authenticated enactment text was recovered.",
+          "classes": ["source-unavailable"],
+          "treatment": "source-unavailable",
+          "target": "no code location",
+          "exact_change": "Do not alter the Code; preserve only the inventory record.",
+          "evidence": "codification/laws/laws/PL-022-161/law.txt is unrecoverable viewer debris; codification/mass_migration/latest/reports/PL-022-161.md and audit/primary/review-16.json classify the law as SOURCE_UNAVAILABLE.",
+          "notes": "No operative language may be inferred."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "no live XML note located",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "none",
+        "detail": "No readable source exists in the current branch, so there is no safe Code placement for this law."
+      },
+      "recommended_actions": [
+        "Keep the law as an inventory-only record.",
+        "Do not invent operative text.",
+        "Re-acquire an authenticated source before any codification attempt."
+      ],
+      "confidence": "high"
+    }
+  ]
+}

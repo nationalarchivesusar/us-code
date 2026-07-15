@@ -1,0 +1,43 @@
+{
+  "batch": 51,
+  "reviewer": "review-repair-51",
+  "group_index": 151,
+  "law_count": 1,
+  "source_manifest": "audit/manifests/manifest-51.json",
+  "output_path": "audit/review/review-51.json",
+  "reviewed_against": [
+    "audit/manifests/manifest-51.json",
+    "audit/review/review-36.json",
+    "audit/review/review-49.json",
+    "codification/mass_migration/latest/reports/laws/PL-031-226.md",
+    "codification/packets/PL-031-226/law.txt",
+    "codification/packets/PL-031-226/law_metadata.json",
+    "codification/packets/PL-031-226/targets.json",
+    "codification/packets/PL-031-226/later_direct_laws.csv",
+    "codification/plans/approved/PL-031-226.json",
+    "usc/usc05.xml",
+    "usc/usc22.xml",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-031-226",
+      "public_law": "31-226",
+      "title": "Public Law 31-226 | Commerce and Labor Administrative Reform Act (CLARA)",
+      "chronology_conclusion": "The source is complete and the codification record already integrates the act, including the Department of Commerce and Labor restructuring, the 22 U.S.C. 2421 transfer note, and the 5 U.S.C. 101 replacement/history treatment.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "amend-existing-text",
+      "exact_target": "multiple: /us/usc/t22/s2421; /us/usc/t5/s101",
+      "exact_enacted_text_or_amendment_command": "Preserve the already-integrated Commerce and Labor restructuring, keep the U.S. Trade and Development Agency transfer note at 22 U.S.C. 2421, and retain the 5 U.S.C. 101 replacement/history note without duplicating the text.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-031-226.md marks the law ALREADY_INCORPORATED and says the project-generated U.S. Code already contains the operative changes.",
+        "audit/chronology-report.json groups PL-031-226 with /us/usc/t5/s101.",
+        "usc/usc05.xml contains the Pub. L. 31-226 amendment note on section 101 in both the current branch and origin/main.",
+        "usc/usc22.xml contains the Pub. L. 31-226 USAR transfer note for 22 U.S.C. 2421 in both the current branch and origin/main."
+      ],
+      "current_xml_comparison": "Both the current branch and origin/main already contain the section 101 Commerce and Labor replacement/history note and the section 2421 Trade and Development Agency transfer note, so there is no remaining missing implementation to add.",
+      "final_recommended_action": "Leave the integrated text in place and do not duplicate the Commerce/Labor restructuring or the TDA transfer note.",
+      "confidence": "high"
+    }
+  ]
+}

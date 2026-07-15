@@ -1,0 +1,609 @@
+{
+  "batch": 12,
+  "auditor": "law-auditor-L",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-012-082",
+      "public_law": "12-82",
+      "title": "Public Law 12-82 | Military Officer Commissioning Reform Act 2023",
+      "status": "current",
+      "status_basis": "The source text directly amends Title 10 sections 531, 12203, 12204, and 151 and does not self-repeal or sunset.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, severability, definitions, and effective-date scaffolding.",
+          "classes": ["short-title", "severability", "effective-date", "statutory-note-material"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This bill may be cited as the \"Military Officer Commissioning Reform Act,\" ... This Act shall be severable ... This Act shall take effect immediately.",
+          "notes": "Keep only concise note material."
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Rewrites 10 U.S.C. 531.",
+          "classes": ["direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t10/s531",
+          "exact_change": "Replace section 531 with the amended original-commissioning text supplied in SEC 4(a).",
+          "evidence": "Title 10 Section 531 of the United States Code shall, upon enactment of this bill, be amended from its real-life writing to the following:",
+          "notes": "Must be textual amendment, not a note."
+        },
+        {
+          "ref": "SEC 5(a)",
+          "text_summary": "Repeals 10 U.S.C. 12204.",
+          "classes": ["repeal"],
+          "treatment": "repeal-marking",
+          "target": "/us/usc/t10/s12204",
+          "exact_change": "Mark section 12204 repealed in full.",
+          "evidence": "Title 10 Section 12204 of the United States Code shall be repealed and declared null immediately after the ratification of this bill.",
+          "notes": "Direct repeal marking required."
+        },
+        {
+          "ref": "SEC 5(b)",
+          "text_summary": "Rewrites 10 U.S.C. 12203.",
+          "classes": ["direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t10/s12203",
+          "exact_change": "Replace section 12203 with the amended reserve-commissioning text supplied in SEC 5(b).",
+          "evidence": "Title 10 Section 12203 of the United States Code shall, upon enactment of this bill, be amended from its real-life writing to the following:",
+          "notes": "Must be textual amendment, not a note."
+        },
+        {
+          "ref": "SEC 6-8",
+          "text_summary": "Promotion-discretion rules and blanket conflict language.",
+          "classes": ["uncodified-admin-direction", "savings"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Any law or legislation that shall conflict with this section shall be declared null and void ... Any legislation enacted after this bill shall go into effect shall supersede the provisions established in this bill.",
+          "notes": "No single deterministic Code target for the blanket clauses."
+        },
+        {
+          "ref": "SEC 9(a)",
+          "text_summary": "Rewrites 10 U.S.C. 151.",
+          "classes": ["direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t10/s151",
+          "exact_change": "Replace section 151 with the amended Joint Chiefs composition and functions text, including the new subsection (g).",
+          "evidence": "Title 10 Section 151 of the United States Code shall, upon enactment of this bill, be amended from its real-life writing to the following:",
+          "notes": "Textual amendment required."
+        },
+        {
+          "ref": "SEC 9(b)-10",
+          "text_summary": "Remaining qualification, applicability, and effective-date language.",
+          "classes": ["effective-date", "applicability", "savings"],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "shall be enforceable solely at the discretion of the President ... This Act shall take effect immediately after its ratification",
+          "notes": "No separate Code section required."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t10/s151",
+        "detail": "The live tree contains the amended section 151 text, but the note layer still carries a full-text dump and Trello link. The other Title 10 amendments should remain as real text, not notes."
+      },
+      "recommended_actions": [
+        "Remove the full-text dump and Trello link from rp-pl012082-codification.",
+        "Keep the real Title 10 textual amendments for sections 531, 12203, 12204, and 151.",
+        "Delete any duplicate note that repeats the incorporated amendment."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-012-083",
+      "public_law": "12-83",
+      "title": "Public Law 12-83 | Dannybec Went to Jail Act",
+      "status": "current",
+      "status_basis": "The source expressly repeals Public Law 7-42 and directs DOT shutdown, but it does not repeal itself or sunset.",
+      "provisions": [
+        {
+          "ref": "SEC 1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This act shall be referred to as the \"Dannybec Went To Jail Act\"",
+          "notes": "Keep only a short-title note."
+        },
+        {
+          "ref": "SEC 2",
+          "text_summary": "Sense of Congress.",
+          "classes": ["findings-or-sense"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "It is the sense of Congress that:",
+          "notes": "Sense language only."
+        },
+        {
+          "ref": "SEC 3(a)-(c)",
+          "text_summary": "Repeals PL 7-42, ends DOT duties, and shuts down the department.",
+          "classes": ["repeal", "uncodified-admin-direction"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Add a repeal cross-reference for Public Law 7-42; do not create permanent Code text for the DOT shutdown.",
+          "evidence": "Public Law 7-42, the Transportation Act of 2022 is repealed, effective immediately ... The Department of Transportation is to cease operations, effective immediately.",
+          "notes": "The repeal is the codification-relevant part."
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Immediate enactment.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This act shall immediately take effect upon passage of both houses of congress and signed by the president",
+          "notes": "No Code section required."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s142j",
+        "detail": "The live record is present as a statutory note, but it still includes a dump and Trello link instead of a concise repeal/history note."
+      },
+      "recommended_actions": [
+        "Remove the full-text dump and Trello link from rp-pl012083-codification.",
+        "Replace the boilerplate with a concise historical note and a repeal cross-reference for Public Law 7-42."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-012-084",
+      "public_law": "12-84",
+      "title": "Public Law 12-84 | Municipal Act of 2023",
+      "status": "current",
+      "status_basis": "This is a local/District governance enactment. It does not self-repeal; it is operational local law, not permanent federal Code text.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, purposes, and definitions.",
+          "classes": ["short-title", "findings-or-sense", "local-district"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": "Local/District governance material only.",
+          "evidence": "This bill shall be referred to as \"H.R. 1209 - Municipal Act of 2023.\"",
+          "notes": "Exclude from permanent U.S. Code text."
+        },
+        {
+          "ref": "SEC 4-7",
+          "text_summary": "Municipal structure, repeal/reinstatement, and charter amendments.",
+          "classes": ["local-district", "repeal", "direct-amendment"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": "Treat as local charter material; do not convert to permanent U.S. Code sections.",
+          "evidence": "The District of Columbia City Charter is once again reinstated in its entirety.",
+          "notes": "Local law only."
+        },
+        {
+          "ref": "SEC 8-9",
+          "text_summary": "Severability and immediate effect.",
+          "classes": ["severability", "effective-date"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This act shall be severable ... will be in effect immediately upon full passage.",
+          "notes": "Not Code text."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-inserted-into-permanent-text",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "A full-text note is sitting in Title 40, but the source is local/District governance and should not be inserted into permanent Code text."
+      },
+      "recommended_actions": [
+        "Remove the full-text dump and Trello link from rp-pl012084-codification.",
+        "Exclude the act from permanent U.S. Code text and keep only a short local-history note."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-012-085",
+      "public_law": "12-85",
+      "title": "Public Law 12-85 | The Congress Strikes Back Act",
+      "status": "current",
+      "status_basis": "The source is an individual-specific barment enactment. It is operative law, but it is not suitable for permanent positive-law codification.",
+      "provisions": [
+        {
+          "ref": "SEC I-III",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This act shall be referred to as the \"The Congress Strikes Back Act.\"",
+          "notes": "Introductory and timing provisions only."
+        },
+        {
+          "ref": "SEC IV",
+          "text_summary": "Declares a named person an enemy of the United States and disqualifies that person from office.",
+          "classes": ["private-relief", "findings-or-sense"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": "Do not codify this individual-specific disqualification in permanent U.S. Code text.",
+          "evidence": "hudson88888 will be declared an enemy of the United States ... disqualified to hold and enjoy any office of honor, trust, or profit under the United States.",
+          "notes": "Private/individual measure only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-inserted-into-permanent-text",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s1",
+        "detail": "The current note is parked in Title 2 with a full-text dump and Trello link, but the source is an individual-specific barment measure that should not live in permanent Code text."
+      },
+      "recommended_actions": [
+        "Remove the full-text dump and Trello link from rp-pl012085-codification.",
+        "Exclude the act from permanent Code and keep at most a one-line historical note."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-012-086",
+      "public_law": "12-86",
+      "title": "Public Law 12-86 | H.R. 1302",
+      "status": "current",
+      "status_basis": "The source repeals a section of the New District of Columbia Home Rule Act. It is operative local repeal legislation and does not self-repeal.",
+      "provisions": [
+        {
+          "ref": "SEC 1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act may be cited as \"H.R.1302\".",
+          "notes": "Short-title note only."
+        },
+        {
+          "ref": "SEC 2",
+          "text_summary": "Repeals Title II, section 7 of the New District of Columbia Home Rule Act.",
+          "classes": ["repeal", "local-district"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Record the repeal only as local/District history; do not insert U.S. Code text.",
+          "evidence": "TITLE II, SEC. 007. of the \"New District of Columbia Home Rule Act.\" (H.R. 1256) shall be repealed and it’s actions nullified.",
+          "notes": "Local repeal cross-reference only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correctly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s25a",
+        "detail": "The live record is a statutory note at the expected 2 U.S.C. anchor and does not require permanent Code text."
+      },
+      "recommended_actions": [
+        "Retain only a concise historical note.",
+        "Do not promote the local District repeal into permanent U.S. Code text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-012-087",
+      "public_law": "12-87",
+      "title": "Public Law 12-87 | An act to repeal the Smart Label Congress Act (Public Law 9-54)",
+      "status": "current",
+      "status_basis": "The source expressly nullifies Public Law 9-54 and sets chamber administration rules, but it does not repeal itself.",
+      "provisions": [
+        {
+          "ref": "SEC 1",
+          "text_summary": "Title / short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This bill may be cited by its long title as \"An act to repeal the Smart Label Congress Act (Public Law 9-54)\"",
+          "notes": "Short-title note only."
+        },
+        {
+          "ref": "SEC 2",
+          "text_summary": "Severability and anti-supersession language.",
+          "classes": ["severability", "savings"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act shall be severable ... This Act shall not be superseded by any newer law unless ...",
+          "notes": "Note material only."
+        },
+        {
+          "ref": "SEC 3(a)",
+          "text_summary": "Repeals Public Law 9-54.",
+          "classes": ["repeal"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Add a repeal cross-reference for Public Law 9-54.",
+          "evidence": "the Smart Label Congress Act (Public Law 9-54) shall immediately be null and void, and shall lose its effect as law.",
+          "notes": "Cross-reference only."
+        },
+        {
+          "ref": "SEC 3(b)-(c)",
+          "text_summary": "Congressional labeling and archival duties.",
+          "classes": ["uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "it shall be the duty of each respective chamber ... to determine their labelling system ... and file to the National Archivist",
+          "notes": "Internal congressional administration."
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Immediate effect.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act shall take effect immediately after its ratification",
+          "notes": "No Code section required."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s4572",
+        "detail": "The live record exists as a statutory note, but it still carries a full-text dump and needs a concise repeal cross-reference for Public Law 9-54."
+      },
+      "recommended_actions": [
+        "Remove the full-text dump and Trello link from rp-pl012087-codification.",
+        "Add the repeal cross-reference for Public Law 9-54 and keep the chamber-labeling rule as a concise note."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-012-088",
+      "public_law": "12-88",
+      "title": "Public Law 12-88 | New District of Columbia Home Rule Act",
+      "status": "current",
+      "status_basis": "This is a comprehensive local/District home-rule enactment. It remains operative as local law and does not self-repeal.",
+      "provisions": [
+        {
+          "ref": "TITLE 1",
+          "text_summary": "Short title, severability, purposes, definitions, and miscellaneous provisions.",
+          "classes": ["short-title", "severability", "local-district", "findings-or-sense"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": "Local/District governance only.",
+          "evidence": "This Act may be referred to as the \"New District of Columbia Home Rule Act.\"",
+          "notes": "Exclude from permanent U.S. Code text."
+        },
+        {
+          "ref": "TITLE 2",
+          "text_summary": "Current officers and oath requirements; later-repealed section 7.",
+          "classes": ["local-district", "repeal"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": "Treat as local charter material; note the later repeal of section 7 by Pub. L. 12-86.",
+          "evidence": "All current officers, elected and appointed, shall restate the oath under this Act within 5 days",
+          "notes": "Local/District only."
+        },
+        {
+          "ref": "TITLE 3-4",
+          "text_summary": "Charter structure: Council, Mayor, Judiciary venue, Attorney General, and related powers.",
+          "classes": ["local-district", "new-permanent-general"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": "Local D.C. charter framework; do not codify in permanent U.S. Code sections.",
+          "evidence": "the Chief of the Metropolitan Police shall assist the Secret Service ... under section 302 to title 3 and section 3056 of title 18",
+          "notes": "References to titles 3 and 18 are only citations."
+        },
+        {
+          "ref": "TITLE 5-6",
+          "text_summary": "Reservation of congressional authority, militia carve-out, initiatives, recalls, agreements, and oath.",
+          "classes": ["local-district", "savings"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": null,
+          "evidence": "the Congress of the United States reserves the right ... to exercise its constitutional authority as legislature for the District",
+          "notes": "No permanent Code placement."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-inserted-into-permanent-text",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "A very large note with a full-text dump and Trello link sits in Title 40, but the act is local/District home-rule legislation and should not be treated as permanent U.S. Code text."
+      },
+      "recommended_actions": [
+        "Remove the full-text dump and Trello link from rp-pl012088-codification.",
+        "Exclude the act from permanent U.S. Code text and keep only a short historical note."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-012-103",
+      "public_law": "12-103",
+      "title": "Public Law 12-103 | Ceremonial 5-Star Officer Creation Act",
+      "status": "current",
+      "status_basis": "The source creates a permanent O-11 military-grade rule and does not self-repeal.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and purpose.",
+          "classes": ["short-title", "findings-or-sense"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This act shall be referred to as the \"Ceremonial 5-Star Officer Creation Act\"",
+          "notes": "Note material only."
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Creates the O-11 / five-star officer rule and related appointment, service, and retirement provisions.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t10",
+          "exact_change": "Add a new Title 10 provision creating the O-11 grade and its service rules.",
+          "evidence": "The equivalent ranks of General of the Army, General of the Air Force, and Fleet Admiral ... shall be a commissioned officer with the grade of O-11.",
+          "notes": "Belongs in Title 10, not Title 36."
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Immediate effect, severability, and conflict language.",
+          "classes": ["effective-date", "severability", "savings"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This act shall immediately take effect upon passage ... Any part of any act ... that conflicts with this Act shall be considered null and void.",
+          "notes": "Note material only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t36/s101/3",
+        "detail": "The current note sits in Title 36 and includes a dump and Trello link, but the substantive O-11 military-grade rule is missing from the live Code text."
+      },
+      "recommended_actions": [
+        "Remove the full-text dump and Trello link from rp-pl012103-codification.",
+        "Move the substantive O-11 provision into Title 10 as real Code text."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-014-089",
+      "public_law": "14-89",
+      "title": "Public Law 14-89 | Americans Safety and Smart Act of 2023",
+      "status": "current",
+      "status_basis": "The source repeals Public Law 2-6 and creates new criminal offenses, but it does not self-repeal.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and severability.",
+          "classes": ["short-title", "severability"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act may be cited as the \"Americans Safety and Smart Act of 2023.\"",
+          "notes": "Note material only."
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Repeals Public Law 2-6.",
+          "classes": ["repeal"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Add a repeal cross-reference for Public Law 2-6.",
+          "evidence": "Public Law 2-6 | Shelby-Kabob Act of 2021 shall be repealed entirely.",
+          "notes": "Historical cross-reference only."
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Creates color-of-law misconduct offenses for law-enforcement officers.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t18",
+          "exact_change": "Add a new Title 18 offense covering fraudulent detention/arrest, warrantless seizure, and excessive-force conduct by officers acting under color of law.",
+          "evidence": "It shall be unlawful for any law enforcement officer acting under the color of law to fraudulently detain or arrest any individual ...",
+          "notes": "This is substantive Title 18 text."
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "Creates public-way barricade and interference offenses.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t18",
+          "exact_change": "Add a new Title 18 offense for barricading public ways to obstruct peaceful protest and for interfering with law enforcement.",
+          "evidence": "It shall be unlawful for any person to attempt to barricade, block, or attempt to suspend the use of any sidewalk or public roadway accessible to the public ...",
+          "notes": "Also belongs in Title 18."
+        },
+        {
+          "ref": "SEC 6",
+          "text_summary": "Immediate effect and source-placement direction.",
+          "classes": ["effective-date", "applicability", "savings"],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This act shall immediately take effect upon passage and signature.",
+          "notes": "The source's Title 1 placement is editorially anomalous."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "The live record is only a note layer; the substantive criminal provisions were not actually created in the Code text."
+      },
+      "recommended_actions": [
+        "Remove the Trello link from rp-pl014089-codification.",
+        "Codify SEC 4 and SEC 5 as real Title 18 offense sections.",
+        "Add a repeal cross-reference for Public Law 2-6."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-014-090",
+      "public_law": "14-90",
+      "title": "Public Law 14-90 | Presidential Suck Up Act",
+      "status": "current",
+      "status_basis": "The source creates a general acting-authority waiver for nominated officials and does not self-repeal.",
+      "provisions": [
+        {
+          "ref": "SEC 1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This act shall be referred to as the \"Presidential Suck Up Act\"",
+          "notes": "Short-title note only."
+        },
+        {
+          "ref": "SEC 2",
+          "text_summary": "Acting-waiver rule for nominated officials.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Individuals nominated to the following offices will be allowed to act in their capacity whilst waiting confirmation from the United States Senate:",
+          "notes": "Preserve as note material rather than permanent positive-law text."
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Immediate effect.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This bill will take effect immediately after passage through both houses of Congress and a signature from the President",
+          "notes": "No separate Code section required."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correctly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s4509",
+        "detail": "The live record is a statutory note at the expected 2 U.S.C. anchor and does not call for additional Code text."
+      },
+      "recommended_actions": [
+        "Retain the statutory note and remove any surplus boilerplate if present.",
+        "Do not convert the acting-waiver rule into a new permanent section."
+      ],
+      "confidence": "high"
+    }
+  ]
+}

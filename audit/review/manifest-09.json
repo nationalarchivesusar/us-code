@@ -1,0 +1,203 @@
+{
+  "reviewer": "reviewer-09",
+  "group_index": 9,
+  "law_count": 10,
+  "output_path": "audit/review/review-09.json",
+  "laws": [
+    {
+      "law_id": "PL-012-083",
+      "public_law": "12-83",
+      "title": "Public Law 12-83 | Dannybec Went to Jail Act",
+      "report_path": "audit/primary/batch-03-03.json",
+      "batch": 3,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target"
+      ],
+      "provision_refs": [
+        "SEC 3"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-012-084",
+      "public_law": "12-84",
+      "title": "Public Law 12-84 | Municipal Act of 2023",
+      "report_path": "audit/primary/batch-03-03.json",
+      "batch": 3,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target"
+      ],
+      "provision_refs": [
+        "SEC 4-7"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-012-086",
+      "public_law": "12-86",
+      "title": "Public Law 12-86 | H.R. 1302",
+      "report_path": "audit/primary/batch-03-03.json",
+      "batch": 3,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target"
+      ],
+      "provision_refs": [
+        "SEC 2"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-012-087",
+      "public_law": "12-87",
+      "title": "Public Law 12-87 | An act to repeal the Smart Label Congress Act (Public Law 9-54)",
+      "report_path": "audit/primary/batch-03-03.json",
+      "batch": 3,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target"
+      ],
+      "provision_refs": [
+        "SEC 3(a)"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-012-088",
+      "public_law": "12-88",
+      "title": "Public Law 12-88 | New District of Columbia Home Rule Act",
+      "report_path": "audit/primary/batch-03-03.json",
+      "batch": 3,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "TITLE 2",
+        "TITLE 3-4"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-012-103",
+      "public_law": "12-103",
+      "title": "Public Law 12-103 | Ceremonial 5-Star Officer Creation Act",
+      "report_path": "audit/primary/batch-03-03.json",
+      "batch": 3,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 3"
+      ],
+      "targets": [
+        "/us/usc/t10"
+      ]
+    },
+    {
+      "law_id": "PL-014-089",
+      "public_law": "14-89",
+      "title": "Public Law 14-89 | Americans Safety and Smart Act of 2023",
+      "report_path": "audit/primary/batch-03-03.json",
+      "batch": 3,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "direct-action-provision",
+        "missing-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 3",
+        "SEC 4",
+        "SEC 5"
+      ],
+      "targets": [
+        "/us/usc/t18"
+      ]
+    },
+    {
+      "law_id": "PL-014-090",
+      "public_law": "14-90",
+      "title": "Public Law 14-90 | Presidential Suck Up Act",
+      "report_path": "audit/primary/batch-04-01.json",
+      "batch": 4,
+      "source_status": "partially-current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 2(a)",
+        "SEC 2(b)"
+      ],
+      "targets": [
+        "/us/usc/t3",
+        "/us/usc/t3/s1"
+      ]
+    },
+    {
+      "law_id": "PL-014-091",
+      "public_law": "14-91",
+      "title": "Public Law 14-91 | Uniform Code of Military Justice Reform Act of 2023",
+      "report_path": "audit/primary/batch-04-01.json",
+      "batch": 4,
+      "source_status": "unresolved",
+      "validation_status": "missing source evidence",
+      "confidence": "high",
+      "reasons": [
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": [
+        "/us/usc/t10"
+      ]
+    },
+    {
+      "law_id": "PL-015-092",
+      "public_law": "15-92",
+      "title": "Public Law 15-92 | Commerce and Labor Innovation Initiative Act",
+      "report_path": "audit/primary/batch-04-01.json",
+      "batch": 4,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC II",
+        "SEC III"
+      ],
+      "targets": [
+        "/us/usc/t15"
+      ]
+    }
+  ]
+}

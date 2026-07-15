@@ -1,0 +1,771 @@
+{
+  "source_seed": "audit/chronology-seed.json",
+  "cross_reference_edges": 93,
+  "self_sunset_laws": [],
+  "strong_edge_count": 64,
+  "target_overlap_count": 13,
+  "target_overlaps": [
+    {
+      "target": "/us/usc/t10/s12203",
+      "law_ids": [
+        "PL-012-082",
+        "PL-023-172"
+      ],
+      "entries": [
+        {
+          "law_id": "PL-012-082",
+          "public_law": "12-82",
+          "title": "Public Law 12-82 | Military Officer Commissioning Reform Act 2023",
+          "report_path": "audit/primary/batch-03-03.json",
+          "ref": "SEC 5(b)",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment"
+          ]
+        },
+        {
+          "law_id": "PL-023-172",
+          "public_law": "23-172",
+          "title": "Public Law 23-172 | Congressional Military Service Act",
+          "report_path": "audit/primary/batch-06-03.json",
+          "ref": "SEC5(b)",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ]
+        },
+        {
+          "law_id": "PL-012-082",
+          "public_law": "12-82",
+          "title": "Public Law 12-82 | Military Officer Commissioning Reform Act 2023",
+          "report_path": "audit/primary/batch-12-03.json",
+          "ref": "SEC 5(b)",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment"
+          ]
+        },
+        {
+          "law_id": "PL-023-172",
+          "public_law": "23-172",
+          "title": "Public Law 23-172 | Congressional Military Service Act",
+          "report_path": "audit/primary/batch-15-03.json",
+          "ref": "SEC. 5(a)-(b)",
+          "treatment": "historical-note-only",
+          "classes": [
+            "direct-amendment",
+            "repeal",
+            "substitution"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "/us/usc/t10/s12204",
+      "law_ids": [
+        "PL-012-082",
+        "PL-023-172"
+      ],
+      "entries": [
+        {
+          "law_id": "PL-012-082",
+          "public_law": "12-82",
+          "title": "Public Law 12-82 | Military Officer Commissioning Reform Act 2023",
+          "report_path": "audit/primary/batch-03-03.json",
+          "ref": "SEC 5(a)",
+          "treatment": "repeal-marking",
+          "classes": [
+            "repeal"
+          ]
+        },
+        {
+          "law_id": "PL-023-172",
+          "public_law": "23-172",
+          "title": "Public Law 23-172 | Congressional Military Service Act",
+          "report_path": "audit/primary/batch-06-03.json",
+          "ref": "SEC5(a)",
+          "treatment": "repeal-marking",
+          "classes": [
+            "repeal"
+          ]
+        },
+        {
+          "law_id": "PL-012-082",
+          "public_law": "12-82",
+          "title": "Public Law 12-82 | Military Officer Commissioning Reform Act 2023",
+          "report_path": "audit/primary/batch-12-03.json",
+          "ref": "SEC 5(a)",
+          "treatment": "repeal-marking",
+          "classes": [
+            "repeal"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "/us/usc/t10/s151",
+      "law_ids": [
+        "PL-012-082",
+        "PL-023-172"
+      ],
+      "entries": [
+        {
+          "law_id": "PL-012-082",
+          "public_law": "12-82",
+          "title": "Public Law 12-82 | Military Officer Commissioning Reform Act 2023",
+          "report_path": "audit/primary/batch-03-03.json",
+          "ref": "SEC 9(a)",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment"
+          ]
+        },
+        {
+          "law_id": "PL-023-172",
+          "public_law": "23-172",
+          "title": "Public Law 23-172 | Congressional Military Service Act",
+          "report_path": "audit/primary/batch-06-03.json",
+          "ref": "SEC9(a)",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ]
+        },
+        {
+          "law_id": "PL-012-082",
+          "public_law": "12-82",
+          "title": "Public Law 12-82 | Military Officer Commissioning Reform Act 2023",
+          "report_path": "audit/primary/batch-12-03.json",
+          "ref": "SEC 9(a)",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment"
+          ]
+        },
+        {
+          "law_id": "PL-023-172",
+          "public_law": "23-172",
+          "title": "Public Law 23-172 | Congressional Military Service Act",
+          "report_path": "audit/primary/batch-15-03.json",
+          "ref": "SEC. 9(a) and SEC. 5(c)/9(b-c)",
+          "treatment": "historical-note-only",
+          "classes": [
+            "direct-amendment",
+            "new-permanent-general",
+            "uncodified-admin-direction"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "/us/usc/t18",
+      "law_ids": [
+        "PL-002-005",
+        "PL-003-025",
+        "PL-019-149"
+      ],
+      "entries": [
+        {
+          "law_id": "PL-002-005",
+          "public_law": "2-5",
+          "title": "Public Law 2-5 | Judicial Efficiency Act (Keywords: Maximum, Minimum, Sentence, Sentencing)",
+          "report_path": "audit/primary/batch-01-01.json",
+          "ref": "SECTION II",
+          "treatment": "historical-note-only",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ]
+        },
+        {
+          "law_id": "PL-002-005",
+          "public_law": "2-5",
+          "title": "Public Law 2-5 | Judicial Efficiency Act (Keywords: Maximum, Minimum, Sentence, Sentencing)",
+          "report_path": "audit/primary/batch-10-01.json",
+          "ref": "SECTION II",
+          "treatment": "historical-note-only",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ]
+        },
+        {
+          "law_id": "PL-003-025",
+          "public_law": "3-25",
+          "title": "Public Law 3-25 | CRACK Act",
+          "report_path": "audit/primary/batch-10-03.json",
+          "ref": "Titles V-VI and amendments",
+          "treatment": "historical-note-only",
+          "classes": [
+            "historical-note-only",
+            "repeal"
+          ]
+        },
+        {
+          "law_id": "PL-019-149",
+          "public_law": "19-149",
+          "title": "Public Law 19-149 | Criminal Justice Reform Act (CJRA)",
+          "report_path": "audit/primary/batch-14-03.json",
+          "ref": "SEC 7",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "/us/usc/t2/s1438",
+      "law_ids": [
+        "PL-017-134",
+        "PL-022-157"
+      ],
+      "entries": [
+        {
+          "law_id": "PL-017-134",
+          "public_law": "17-134",
+          "title": "Public Law 17-134 | Amended The Uniformed Capitol Police Act of 2023",
+          "report_path": "audit/primary/batch-14-02.json",
+          "ref": "SECTION II",
+          "treatment": "statutory-note",
+          "classes": [
+            "new-permanent-general",
+            "substitution"
+          ]
+        },
+        {
+          "law_id": "PL-022-157",
+          "public_law": "22-157",
+          "title": "Public Law 22-157 | Area Management Update Act (AMUA)",
+          "report_path": "audit/primary/batch-15-01.json",
+          "ref": "SEC 5",
+          "treatment": "statutory-note",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "/us/usc/t2/s4501",
+      "law_ids": [
+        "PL-025-179",
+        "PL-031-229"
+      ],
+      "entries": [
+        {
+          "law_id": "PL-025-179",
+          "public_law": "25-179",
+          "title": "Public Law 25-179 | Fiscal Year 21-2",
+          "report_path": "audit/primary/batch-06-03.json",
+          "ref": "SEC5",
+          "treatment": "statutory-note",
+          "classes": [
+            "direct-amendment",
+            "temporary"
+          ]
+        },
+        {
+          "law_id": "PL-031-229",
+          "public_law": "31-229",
+          "title": "Public Law 31-229 | Fiscal Year 25-1",
+          "report_path": "audit/primary/batch-08-02.json",
+          "ref": "SEC. 5",
+          "treatment": "statutory-note",
+          "classes": [
+            "appropriation",
+            "direct-amendment"
+          ]
+        },
+        {
+          "law_id": "PL-025-179",
+          "public_law": "25-179",
+          "title": "Public Law 25-179 | Fiscal Year 21-2",
+          "report_path": "audit/primary/batch-15-03.json",
+          "ref": "SEC. 5",
+          "treatment": "statutory-note",
+          "classes": [
+            "direct-amendment",
+            "temporary"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "/us/usc/t28",
+      "law_ids": [
+        "PL-002-007",
+        "PL-003-024",
+        "PL-015-097",
+        "PL-017-133"
+      ],
+      "entries": [
+        {
+          "law_id": "PL-002-007",
+          "public_law": "2-7",
+          "title": "Public Law 2-7 | Court of Appeals Temporary Suspension Act of 2021",
+          "report_path": "audit/primary/batch-01-01.json",
+          "ref": "SECTION II",
+          "treatment": "historical-note-only",
+          "classes": [
+            "temporary",
+            "transfer"
+          ]
+        },
+        {
+          "law_id": "PL-003-024",
+          "public_law": "3-24",
+          "title": "Public Law 3-24 | Judgeship Reducation Act of 2022",
+          "report_path": "audit/primary/batch-01-03.json",
+          "ref": "SEC III",
+          "treatment": "repeal-marking",
+          "classes": [
+            "new-permanent-general",
+            "repeal"
+          ]
+        },
+        {
+          "law_id": "PL-015-097",
+          "public_law": "15-97",
+          "title": "Public Law 15-97 | Uniform Legal Practice Authority Act",
+          "report_path": "audit/primary/batch-04-01.json",
+          "ref": "SEC 101",
+          "treatment": "statutory-note",
+          "classes": [
+            "new-permanent-general",
+            "repeal"
+          ]
+        },
+        {
+          "law_id": "PL-002-007",
+          "public_law": "2-7",
+          "title": "Public Law 2-7 | Court of Appeals Temporary Suspension Act of 2021",
+          "report_path": "audit/primary/batch-10-01.json",
+          "ref": "SECTION II",
+          "treatment": "historical-note-only",
+          "classes": [
+            "temporary",
+            "transfer"
+          ]
+        },
+        {
+          "law_id": "PL-003-024",
+          "public_law": "3-24",
+          "title": "Public Law 3-24 | Judgeship Reducation Act of 2022",
+          "report_path": "audit/primary/batch-10-03.json",
+          "ref": "SEC III-VII",
+          "treatment": "historical-note-only",
+          "classes": [
+            "new-permanent-general",
+            "repeal"
+          ]
+        },
+        {
+          "law_id": "PL-017-133",
+          "public_law": "17-133",
+          "title": "Public Law 17-133 | Judicial Overhaul Bill (JOB) AMENDED",
+          "report_path": "audit/primary/batch-14-02.json",
+          "ref": "SEC. 5-10",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "new-permanent-general",
+            "repeal",
+            "substitution"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "/us/usc/t3/s19",
+      "law_ids": [
+        "PL-029-211",
+        "PL-029-215"
+      ],
+      "entries": [
+        {
+          "law_id": "PL-029-211",
+          "public_law": "29-211",
+          "title": "Public Law 29-211 | Amendment to the Presidential Succession Act of 1947",
+          "report_path": "audit/primary/batch-08-01.json",
+          "ref": "SEC. 3(a)(i)-(iv)",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment"
+          ]
+        },
+        {
+          "law_id": "PL-029-215",
+          "public_law": "29-215",
+          "title": "Public Law 29-215 | Stability in the Presidency Act",
+          "report_path": "audit/primary/batch-08-01.json",
+          "ref": "SEC. 4",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment"
+          ]
+        },
+        {
+          "law_id": "PL-029-215",
+          "public_law": "29-215",
+          "title": "Public Law 29-215 | Stability in the Presidency Act",
+          "report_path": "audit/primary/batch-08-01.json",
+          "ref": "SEC. 4(g)-(h)",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment"
+          ]
+        },
+        {
+          "law_id": "PL-029-215",
+          "public_law": "29-215",
+          "title": "Public Law 29-215 | Stability in the Presidency Act",
+          "report_path": "audit/primary/batch-16-01.json",
+          "ref": "SEC. 4",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment"
+          ]
+        },
+        {
+          "law_id": "PL-029-215",
+          "public_law": "29-215",
+          "title": "Public Law 29-215 | Stability in the Presidency Act",
+          "report_path": "audit/primary/batch-16-01.json",
+          "ref": "SEC. 4(g)-(h)",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "/us/usc/t5/s101",
+      "law_ids": [
+        "PL-019-152",
+        "PL-031-226"
+      ],
+      "entries": [
+        {
+          "law_id": "PL-019-152",
+          "public_law": "19-152",
+          "title": "Public Law 19-152 | The Commerce Legislation and Labor Aggravations Reformations (CLEAR)",
+          "report_path": "audit/primary/batch-06-01.json",
+          "ref": "SEC8",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment",
+            "repeal",
+            "substitution"
+          ]
+        },
+        {
+          "law_id": "PL-031-226",
+          "public_law": "31-226",
+          "title": "Public Law 31-226 | Commerce and Labor Administrative Reform Act (CLARA)",
+          "report_path": "audit/primary/batch-08-02.json",
+          "ref": "SEC 14",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "repeal",
+            "repeal-marking"
+          ]
+        },
+        {
+          "law_id": "PL-019-152",
+          "public_law": "19-152",
+          "title": "Public Law 19-152 | The Commerce Legislation and Labor Aggravations Reformations (CLEAR)",
+          "report_path": "audit/primary/batch-14-03.json",
+          "ref": "SEC 8",
+          "treatment": "replace_section_text",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ]
+        },
+        {
+          "law_id": "PL-031-226",
+          "public_law": "31-226",
+          "title": "Public Law 31-226 | Commerce and Labor Administrative Reform Act (CLARA)",
+          "report_path": "audit/primary/batch-16-02.json",
+          "ref": "SEC 14",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "repeal",
+            "repeal-marking"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "/us/usc/t5/s5332",
+      "law_ids": [
+        "PL-032-230",
+        "PL-032-232",
+        "PL-034-241"
+      ],
+      "entries": [
+        {
+          "law_id": "PL-032-230",
+          "public_law": "32-230",
+          "title": "Public Law 32-230 | Federal Executive & Senior Leadership Pay Standardization Act of 2025",
+          "report_path": "audit/primary/batch-08-02.json",
+          "ref": "SEC. 5(a)",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ]
+        },
+        {
+          "law_id": "PL-032-232",
+          "public_law": "32-232",
+          "title": "Public Law 32-232 | The Federal Pay Standardization Act",
+          "report_path": "audit/primary/batch-08-03.json",
+          "ref": "SEC 5(a)",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ]
+        },
+        {
+          "law_id": "PL-034-241",
+          "public_law": "34-241",
+          "title": "Public Law 34-241 | Protecting Working Americans",
+          "report_path": "audit/primary/batch-08-03.json",
+          "ref": "SEC 3(a)",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ]
+        },
+        {
+          "law_id": "PL-032-230",
+          "public_law": "32-230",
+          "title": "Public Law 32-230 | Federal Executive & Senior Leadership Pay Standardization Act of 2025",
+          "report_path": "audit/primary/batch-16-02.json",
+          "ref": "SEC. 5(a)",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ]
+        },
+        {
+          "law_id": "PL-032-232",
+          "public_law": "32-232",
+          "title": "The Federal Pay Standardization Act",
+          "report_path": "audit/primary/batch-16-02.json",
+          "ref": "SEC 5(a)",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "/us/usc/t5/s552",
+      "law_ids": [
+        "PL-003-025",
+        "PL-012-075"
+      ],
+      "entries": [
+        {
+          "law_id": "PL-003-025",
+          "public_law": "3-25",
+          "title": "Public Law 3-25 | CRACK Act",
+          "report_path": "audit/primary/batch-01-03.json",
+          "ref": "SECs 230-232",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment",
+            "new-section"
+          ]
+        },
+        {
+          "law_id": "PL-012-075",
+          "public_law": "12-75",
+          "title": "Public Law 12-75 | Freedom of Information Common Sense Act",
+          "report_path": "audit/primary/batch-03-02.json",
+          "ref": "SEC 3(a) section 552(a)(6)(A)(i)",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ]
+        },
+        {
+          "law_id": "PL-012-075",
+          "public_law": "12-75",
+          "title": "Public Law 12-75 | Freedom of Information Common Sense Act",
+          "report_path": "audit/primary/batch-03-02.json",
+          "ref": "SEC 3(a) section 552(a)(6)(A)(ii)",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ]
+        },
+        {
+          "law_id": "PL-012-075",
+          "public_law": "12-75",
+          "title": "Public Law 12-75 | Freedom of Information Common Sense Act",
+          "report_path": "audit/primary/batch-03-02.json",
+          "ref": "SEC 3(a) section 552(a)(6)(A)(ii)(I)",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ]
+        },
+        {
+          "law_id": "PL-012-075",
+          "public_law": "12-75",
+          "title": "Public Law 12-75 | Freedom of Information Common Sense Act",
+          "report_path": "audit/primary/batch-12-02.json",
+          "ref": "SEC 3(a) 5 U.S.C. 552(a)(6)(A)(i)",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ]
+        },
+        {
+          "law_id": "PL-012-075",
+          "public_law": "12-75",
+          "title": "Public Law 12-75 | Freedom of Information Common Sense Act",
+          "report_path": "audit/primary/batch-12-02.json",
+          "ref": "SEC 3(a) 5 U.S.C. 552(a)(6)(A)(ii)",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ]
+        },
+        {
+          "law_id": "PL-012-075",
+          "public_law": "12-75",
+          "title": "Public Law 12-75 | Freedom of Information Common Sense Act",
+          "report_path": "audit/primary/batch-12-02.json",
+          "ref": "SEC 3(a) 5 U.S.C. 552(a)(6)(A)(ii)(I)",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "/us/usc/t8/s1102",
+      "law_ids": [
+        "PL-017-127",
+        "PL-019-147",
+        "PL-031-227"
+      ],
+      "entries": [
+        {
+          "law_id": "PL-017-127",
+          "public_law": "17-127",
+          "title": "Public Law 17-127 | Border Security Act",
+          "report_path": "audit/primary/batch-05-01.json",
+          "ref": "SEC8",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ]
+        },
+        {
+          "law_id": "PL-019-147",
+          "public_law": "19-147",
+          "title": "Public Law 19-147 | Diplomatic Standards Act (DSA)",
+          "report_path": "audit/primary/batch-05-03.json",
+          "ref": "SEC17",
+          "treatment": "repeal-marking",
+          "classes": [
+            "repeal"
+          ]
+        },
+        {
+          "law_id": "PL-031-227",
+          "public_law": "31-227",
+          "title": "Public Law 31-227 | Foreign Affairs Representation and Treatment Statute (FARTS)",
+          "report_path": "audit/primary/batch-08-02.json",
+          "ref": "SEC 7(1)",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "repeal",
+            "repeal-marking"
+          ]
+        },
+        {
+          "law_id": "PL-019-147",
+          "public_law": "19-147",
+          "title": "Public Law 19-147 | Diplomatic Standards Act (DSA)",
+          "report_path": "audit/primary/batch-14-03.json",
+          "ref": "SEC 17",
+          "treatment": "repeal-marking",
+          "classes": [
+            "repeal"
+          ]
+        },
+        {
+          "law_id": "PL-031-227",
+          "public_law": "31-227",
+          "title": "Public Law 31-227 | Foreign Affairs Representation and Treatment Statute (FARTS)",
+          "report_path": "audit/primary/batch-16-02.json",
+          "ref": "SEC 7(1)",
+          "treatment": "amend-existing-text",
+          "classes": [
+            "repeal",
+            "repeal-marking"
+          ]
+        }
+      ]
+    },
+    {
+      "target": "Pub. L. 3-21",
+      "law_ids": [
+        "PL-038-263",
+        "PL-038-264"
+      ],
+      "entries": [
+        {
+          "law_id": "PL-038-263",
+          "public_law": "38-263",
+          "title": "Public Law 38-263 | National Security Act of 2026",
+          "report_path": "audit/primary/batch-09-03.json",
+          "ref": "SEC. 5",
+          "treatment": "amendment-note",
+          "classes": [
+            "effective-date",
+            "repeal",
+            "savings"
+          ]
+        },
+        {
+          "law_id": "PL-038-264",
+          "public_law": "38-264",
+          "title": "Public Law 38-264 | Organized Crime and Racketeering Modernization Act of 2026",
+          "report_path": "audit/primary/batch-09-03.json",
+          "ref": "SEC. 5",
+          "treatment": "amendment-note",
+          "classes": [
+            "effective-date",
+            "repeal",
+            "savings"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "reviewer": "reviewer-15",
+  "group_index": 15,
+  "law_count": 10,
+  "output_path": "audit/review/review-15.json",
+  "laws": [
+    {
+      "law_id": "PL-019-145",
+      "public_law": "19-145",
+      "title": "Public Law 19-145 | Military Officer Accountability Act (MOAA)",
+      "report_path": "audit/primary/batch-05-03.json",
+      "batch": 5,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC5(1)",
+        "SEC5(2)",
+        "SEC5(3)",
+        "SEC5(4)",
+        "SEC5(5)",
+        "SEC5(6)",
+        "SEC6"
+      ],
+      "targets": [
+        "/us/usc/t10/s1161",
+        "/us/usc/t10/s1181",
+        "/us/usc/t10/s1182",
+        "/us/usc/t10/s1184",
+        "/us/usc/t10/s1185",
+        "/us/usc/t10/s1186",
+        "/us/usc/t10/s1187"
+      ]
+    },
+    {
+      "law_id": "PL-019-146",
+      "public_law": "19-146",
+      "title": "Public Law 19-146 | Refurbishing the Military Legal System Act",
+      "report_path": "audit/primary/batch-05-03.json",
+      "batch": 5,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-019-147",
+      "public_law": "19-147",
+      "title": "Public Law 19-147 | Diplomatic Standards Act (DSA)",
+      "report_path": "audit/primary/batch-05-03.json",
+      "batch": 5,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC17",
+        "SEC4-SEC5",
+        "SEC6-SEC16"
+      ],
+      "targets": [
+        "/us/usc/t8/s1102"
+      ]
+    },
+    {
+      "law_id": "PL-019-148",
+      "public_law": "19-148",
+      "title": "Public Law 19-148 | Badges and Entrapment Act (BEA)",
+      "report_path": "audit/primary/batch-05-03.json",
+      "batch": 5,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC4",
+        "SEC5",
+        "SEC6"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-019-149",
+      "public_law": "19-149",
+      "title": "Public Law 19-149 | Criminal Justice Reform Act (CJRA)",
+      "report_path": "audit/primary/batch-05-03.json",
+      "batch": 5,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC5",
+        "SEC6",
+        "SEC7",
+        "SEC8"
+      ],
+      "targets": [
+        "(PL 2-5)",
+        "/us/usc/t18/s1111, s1113, s1114, s1116, s1117, s1118, s1119, s1120, s911, s913, s914, s915, s916, s917, s912, s2113 (and enumerated chapters)",
+        "/us/usc/t18/s3156"
+      ]
+    },
+    {
+      "law_id": "PL-019-150",
+      "public_law": "19-150",
+      "title": "Public Law 19-150 | Small Businesses Empowerment Act",
+      "report_path": "audit/primary/batch-05-03.json",
+      "batch": 5,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC2-SEC3",
+        "SEC4",
+        "SEC5",
+        "SEC6"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-019-151",
+      "public_law": "19-151",
+      "title": "Public Law 19-151 | Court Fees Prohibition and Protection Act (CTPPA)",
+      "report_path": "audit/primary/batch-05-03.json",
+      "batch": 5,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC4",
+        "SEC5"
+      ],
+      "targets": [
+        "/us/usc/t28/s1911, s1913, s1914, s1916, s1917, s1918, s1920, s1921, s1922, s1923, s1924, s1925, s1926, s1930, s1931, s1932, s2041, s2042, s2043, s2045"
+      ]
+    },
+    {
+      "law_id": "PL-019-152",
+      "public_law": "19-152",
+      "title": "Public Law 19-152 | The Commerce Legislation and Labor Aggravations Reformations (CLEAR)",
+      "report_path": "audit/primary/batch-06-01.json",
+      "batch": 6,
+      "source_status": "partially-current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "direct-action-provision",
+        "missing-target",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC5",
+        "SEC5(1)",
+        "SEC6(1)",
+        "SEC6(2)",
+        "SEC7",
+        "SEC8"
+      ],
+      "targets": [
+        "/us/usc/t5/s101",
+        "PL 12-80 sec. 13",
+        "PL 4-29"
+      ]
+    },
+    {
+      "law_id": "PL-021-123",
+      "public_law": "21-123",
+      "title": "Public Law 21-123 | Freedom In Removing Employees and Deregulation Act of 2024",
+      "report_path": "audit/primary/batch-06-01.json",
+      "batch": 6,
+      "source_status": "unresolved",
+      "validation_status": "missing source evidence",
+      "confidence": "high",
+      "reasons": [
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-022-153",
+      "public_law": "22-153",
+      "title": "Public Law 22-153 | Fire Department Reform and Nurturing (FDRN)",
+      "report_path": "audit/primary/batch-06-01.json",
+      "batch": 6,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC5",
+        "SEC6"
+      ],
+      "targets": []
+    }
+  ]
+}

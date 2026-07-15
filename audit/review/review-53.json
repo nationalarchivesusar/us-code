@@ -1,0 +1,219 @@
+{
+  "batch": 53,
+  "reviewer": "review-repair-53",
+  "group_index": 153,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/manifest-77.json",
+  "output_path": "audit/review/review-53.json",
+  "reviewed_against": [
+    "audit/manifests/manifest-77.json",
+    "audit/primary/batch-10-02.json",
+    "audit/primary/batch-10-03.json",
+    "audit/chronology-report.json",
+    "codification/mass_migration/latest/reports/MASTER-CODIFICATION-REPORT.md",
+    "codification/mass_migration/latest/reports/laws/PL-002-013.md",
+    "codification/mass_migration/latest/reports/laws/PL-002-014.md",
+    "codification/mass_migration/latest/reports/laws/PL-003-016.md",
+    "codification/mass_migration/latest/reports/laws/PL-003-018.md",
+    "codification/mass_migration/latest/reports/laws/PL-003-021.md",
+    "codification/mass_migration/latest/reports/laws/PL-003-022.md",
+    "codification/mass_migration/latest/reports/laws/PL-003-023.md",
+    "codification/mass_migration/latest/reports/laws/PL-003-024.md",
+    "codification/mass_migration/latest/reports/laws/PL-003-025.md",
+    "codification/mass_migration/latest/reports/laws/PL-004-027.md",
+    "codification/reports/PL-003-025-final-survival-audit.json",
+    "codification/decisions/PL-003-024.md",
+    "codification/decisions/PL-003-025.md",
+    "usc/usc02.xml",
+    "usc/usc18.xml",
+    "usc/usc28.xml",
+    "usc/usc29.xml",
+    "usc/usc40.xml",
+    "usc/usc50.xml",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-002-013",
+      "public_law": "2-13",
+      "title": "Public Law 2-13 | The Employees Termination Notification Act of 2021",
+      "chronology_conclusion": "The enacted source is recoverable, but the codification record classifies the law as repealed history only. No current Code insertion is authorized for the notice rule.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t29",
+      "exact_enacted_text_or_amendment_command": "Retain only a historical note; do not codify the 48-hour employee termination notice rule as current text.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-002-013.md classifies the law as repealed / NONOPERATIVE_OR_REPEALED and says it is not inserted as current Code text.",
+        "audit/primary/batch-10-02.json marks the termination-notice provision as historical-note-only at /us/usc/t29.",
+        "audit/chronology-report.json does not show a live target overlap for this law, which is consistent with historical-only treatment."
+      ],
+      "current_xml_comparison": "The current branch and origin/main do not show an operative Title 29 insertion for this law; the branch posture remains historical only.",
+      "final_recommended_action": "Keep the law as repeal history only and do not attempt an operative codification.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-014",
+      "public_law": "2-14",
+      "title": "Public Law 2-14 | National Federal Torts Act",
+      "chronology_conclusion": "The source is complete, but the project treats the law as repealed history and does not authorize a current tort-code insertion.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t28",
+      "exact_enacted_text_or_amendment_command": "Retain only a historical note; do not codify the federal-tort framework as operative Title 28 text.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-002-014.md classifies the law as repealed / NONOPERATIVE_OR_REPEALED.",
+        "audit/primary/batch-10-02.json marks both provisions as historical-note-only with target /us/usc/t28.",
+        "usc/usc28.xml and origin/main do not contain a law-specific operative insertion for PL-002-014."
+      ],
+      "current_xml_comparison": "Both trees remain aligned and contain no operative Title 28 codification for this law.",
+      "final_recommended_action": "Keep only a concise repeal-history note.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-016",
+      "public_law": "3-16",
+      "title": "Public Law 3-16 | The Capitol Police Establishment",
+      "chronology_conclusion": "The law is repealed history only. The project classifies the Capitol Police framework as nonoperative, so the title-2 framework should not be enacted as current text.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t2",
+      "exact_enacted_text_or_amendment_command": "Preserve the Capitol Police framework only as history; do not codify it as current Title 2 text.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-003-016.md classifies the law as repealed / NONOPERATIVE_OR_REPEALED.",
+        "audit/primary/batch-10-02.json treats the substantive provisions as historical-note-only and points them to /us/usc/t2.",
+        "usc/usc02.xml and origin/main do not show a law-specific operative Capitol Police insertion from this act."
+      ],
+      "current_xml_comparison": "The branch and origin/main remain aligned on Title 2 and do not contain current PL-003-016 operative text.",
+      "final_recommended_action": "Keep only historical-note treatment.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-018",
+      "public_law": "3-18",
+      "title": "Public Law 3-18 | Amendment to S.12",
+      "chronology_conclusion": "The act is repealed history only. Its amendment to the Capitol Police framework is not a live Code change and should remain nonoperative.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t2",
+      "exact_enacted_text_or_amendment_command": "Keep only a history note for the amendment to S.12; do not apply it as current Code text.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-003-018.md classifies the law as repealed / NONOPERATIVE_OR_REPEALED.",
+        "audit/primary/batch-10-02.json marks the disband-and-replace provision as historical-note-only.",
+        "usc/usc18.xml and origin/main do not show a live codification insertion for this law."
+      ],
+      "current_xml_comparison": "The branch and origin/main remain unchanged for any current Title 2/18 insertion from PL-003-018.",
+      "final_recommended_action": "Retain only repeal history and do not restore the amendment as operative law.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-021",
+      "public_law": "3-21",
+      "title": "Public Law 3-21 | Effective Judicial Function and General Duties Act",
+      "chronology_conclusion": "The law is active and should be preserved as a statutory note at the title-28 anchor, but the branch and origin/main still show only the underlying 28 U.S.C. 1658 section text rather than a law-specific note insertion.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t28/s1658",
+      "exact_enacted_text_or_amendment_command": "Add a statutory note at 28 U.S.C. 1658 preserving the Chief Justice duties and reporting rule; do not alter the operative section text.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-003-021.md classifies the act as active / STATUTORY_NOTE at /us/usc/t28/s1658.",
+        "audit/primary/batch-10-03.json identifies the Chief Justice duties and reporting provisions as new-section material and the remainder as note material.",
+        "usc/usc28.xml and origin/main both contain the preexisting 28 U.S.C. 1658 section text and its historical notes, but no separate PL-003-021 insertion."
+      ],
+      "current_xml_comparison": "Both branch and origin/main still show the same 28 U.S.C. 1658 section and do not yet contain the separate PL-003-021 note insertion.",
+      "final_recommended_action": "Apply the statutory note at /us/usc/t28/s1658 and leave the operative section text unchanged.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-022",
+      "public_law": "3-22",
+      "title": "Public Law 3-22 | District of Columbia Administration Act",
+      "chronology_conclusion": "The record is source-limited and the law is treated as repealed history only. No lawful substantive reconstruction is available from the project sources.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "Retain only a concise source-limited historical note; do not codify any positive-law text.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-003-022.md classifies the law as repealed / NONOPERATIVE_OR_REPEALED and notes that the source is viewer debris only.",
+        "audit/primary/batch-10-03.json marks the law as unresolved because the source material does not recover the enactment text.",
+        "usc/usc40.xml and origin/main do not provide a lawful substantive codification target for this District of Columbia law."
+      ],
+      "current_xml_comparison": "The branch and origin/main remain aligned on a source-limited historical posture and do not contain operative PL-003-022 text.",
+      "final_recommended_action": "Do not invent operative language; keep only a source-limited history record if needed.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-023",
+      "public_law": "3-23",
+      "title": "Public Law 3-23 | Federal Law Enforcement Training Center Establishment Act",
+      "chronology_conclusion": "The source is unrecoverable, so the law can only remain a historical record. No executable codification can be supported from the available materials.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "Keep only a source-limited historical note; do not infer missing statutory text or target sections.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-003-023.md classifies the law as repealed / NONOPERATIVE_OR_REPEALED and records the source as unavailable.",
+        "audit/primary/batch-10-03.json marks the law as unresolved because the source is deleted or not found.",
+        "codification/laws/unrecoverable.json and codification/laws/unrecoverable.csv list PL-003-023 as unrecoverable."
+      ],
+      "current_xml_comparison": "Neither branch nor origin/main contains operable PL-003-023 codification text.",
+      "final_recommended_action": "Preserve only a historical note and stop there unless the authentic source is recovered.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-024",
+      "public_law": "3-24",
+      "title": "Public Law 3-24 | Judgeship Reducation Act of 2022",
+      "chronology_conclusion": "The law is repealed history only in the codification record. The project documents it as a broad Title 28 restructuring with no safe present XML operation and no approved catch-up plan.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t28",
+      "exact_enacted_text_or_amendment_command": "Keep only a historical note; do not attempt a wholesale Title 28 rewrite from this enactment.",
+      "source_evidence": [
+        "codification/decisions/PL-003-024.md says there is no present XML operation and that the packet provides no resolved XML target.",
+        "codification/plans/draft/PL-003-024.json is a draft/no-operation plan, not an approved executable amendment.",
+        "codification/reports/direct_amendment_plan_register.md says the law was not applied because the broad judicial restructuring lacks a complete XML target.",
+        "codification/mass_migration/latest/reports/laws/PL-003-024.md classifies the law as repealed / NONOPERATIVE_OR_REPEALED."
+      ],
+      "current_xml_comparison": "The branch and origin/main keep the ordinary Title 28 structure and do not contain an approved PL-003-024 insertion.",
+      "final_recommended_action": "Preserve the law as history only and leave the Title 28 code tree untouched.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-025",
+      "public_law": "3-25",
+      "title": "Public Law 3-25 | CRACK Act",
+      "chronology_conclusion": "The remaining CRACK Act framework is displaced by later replacement laws. PL 38-263 and PL 38-264 govern the current national-security and racketeering space, so no catch-up insertion for PL-003-025 is warranted.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t18; /us/usc/t50",
+      "exact_enacted_text_or_amendment_command": "Retain only repeal history; do not insert the CRACK Act framework as operative text.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-003-025.md classifies the law as repealed / NONOPERATIVE_OR_REPEALED.",
+        "codification/reports/PL-003-025-final-survival-audit.json states that no catch-up insertion should be made because PL 38-263 and PL 38-264 supersede and repeal the remaining frameworks.",
+        "codification/mass_migration/latest/reports/laws/PL-038-263.md and PL-038-264.md show the replacement laws as active and already incorporated."
+      ],
+      "current_xml_comparison": "The branch and origin/main remain aligned to the later replacement posture and do not contain live CRACK Act text.",
+      "final_recommended_action": "Keep only a concise repeal-history note and do not revive the old framework.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-027",
+      "public_law": "4-27",
+      "title": "Public Law 4-27 | Right to Security Act of 2022",
+      "chronology_conclusion": "The law was superseded before codification. Later law PL-029-217 expressly repeals PL-004-027 in its entirety, so this act survives only as history.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t18",
+      "exact_enacted_text_or_amendment_command": "Keep only repeal history; do not leave the private-security framework as current text.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-004-027.md classifies the law as repealed / SUPERSEDED_BEFORE_CODIFICATION.",
+        "codification/mass_migration/latest/reports/laws/PL-029-217.md states that PL-004-027 is repealed in its entirety.",
+        "audit/primary/batch-10-03.json marks the provisions as historical-note-only because the law is already superseded.",
+        "usc/usc18.xml and origin/main do not contain a live PL-004-027 insertion."
+      ],
+      "current_xml_comparison": "Both branch and origin/main remain unchanged for PL-004-027 and show no current operative insertion.",
+      "final_recommended_action": "Remove any live treatment and keep only a brief repeal-history note.",
+      "confidence": "high"
+    }
+  ]
+}

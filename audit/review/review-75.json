@@ -1,0 +1,664 @@
+{
+  "batch": 16,
+  "auditor": "law-auditor-M",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-032-233",
+      "public_law": "32-233",
+      "title": "Public Law 32-233 | Literally Introducing Taxes (LIT)",
+      "status": "current",
+      "status_basis": "The migration record marks this law as superseded but already incorporated, and the live XML contains the revised 26 U.S.C. 1 text imposing the flat 20 percent tax.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-3",
+          "text_summary": "Short title, severability, and immediate-effective-date language.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t26/s1",
+          "exact_change": null,
+          "evidence": "\"Literally Introducing Taxes\"; \"This bill shall be effective immediately\"",
+          "notes": "Introductory matter only."
+        },
+        {
+          "ref": "SEC. 5",
+          "text_summary": "Repeal 26 U.S.C. 1 and replace it with a flat 20 percent tax on individual taxable income.",
+          "classes": [
+            "direct-amendment"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t26/s1",
+          "exact_change": "Replace 26 U.S.C. 1 with the flat 20 percent individual income tax text.",
+          "evidence": "\"26 U.S. Code § 1 shall be repealed in its entirety\"; \"There is hereby imposed on the taxable income of every individual a flat tax of 20%.\"",
+          "notes": "The live branch already reflects the replacement text."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t26/s1",
+        "detail": "The 26 U.S.C. 1 text is already updated, but the historical note still carries a quotedContent dump that should be trimmed."
+      },
+      "recommended_actions": [
+        "Retain the updated 26 U.S.C. 1 text at /us/usc/t26/s1.",
+        "Trim the historical note to a concise statutory-history entry."
+      ],
+      "confidence": "high",
+      "approved_code_treatment": "statutory-note; amend-existing-text",
+      "final_legal_status": "superseded",
+      "chronology_conclusion": "The migration record marks this law as superseded but already incorporated, and the live XML contains the revised 26 U.S.C. 1 text imposing the flat 20 percent tax.",
+      "final_recommended_action": "Retain the updated 26 U.S.C. 1 text at /us/usc/t26/s1. | Trim the historical note to a concise statutory-history entry.",
+      "source_evidence": "status keyword `superseded` in list or label | view | https://drive.google.com/file/d/1ojj00XYNewGUdmEE-FaWK4FnJHESL6iA/view | 2743072becbaa50c0c0a35ae0c58e8c041b3db1ece8fe82070c3c66ea887d46b",
+      "exact_target": "/us/usc/t26/s1",
+      "exact_change": "Replace 26 U.S.C. 1 with the flat 20 percent individual income tax text."
+    },
+    {
+      "law_id": "PL-032-234",
+      "public_law": "32-234",
+      "title": "Public Law 32-234 | Intelligence Appointment Transparency and Oversight Act",
+      "status": "current",
+      "status_basis": "The law directly amends 50 U.S.C. 3041, and the live XML already contains the added notification, certification, and documentation provisions.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-2",
+          "text_summary": "Short title and definitions for DNI, the intelligence community, and related appointment terminology.",
+          "classes": [
+            "short-title",
+            "definitions"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t50/s3041",
+          "exact_change": null,
+          "evidence": "\"Intelligence Appointment Transparency and Oversight Act\"; \"Consultation\"; \"Concurrence\"",
+          "notes": "Introductory and definitional material."
+        },
+        {
+          "ref": "SEC. 3",
+          "text_summary": "Add subsection (d) to 50 U.S.C. 3041 requiring notification, certification, and reporting about DNI appointments.",
+          "classes": [
+            "direct-amendment"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t50/s3041",
+          "exact_change": "Add subsection (d) covering notifications, certifications, and documentation of DNI appointment actions.",
+          "evidence": "\"Notification of DNI Non-Concurrence or Alternate Recommendation\"; \"Certification of the Consultation\"; \"Documentation of the Reports by the Director of National Intelligence\"",
+          "notes": "Integrated into the live text as subsection (d)."
+        },
+        {
+          "ref": "SEC. 4",
+          "text_summary": "Expand 50 U.S.C. 3041(b)(2) to add additional positions requiring DNI concurrence.",
+          "classes": [
+            "direct-amendment"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t50/s3041",
+          "exact_change": "Add the listed defense and intelligence positions to the concurrence requirement in subsection (b)(2).",
+          "evidence": "\"Section 3041(b)(2) of the current law is amended\"; \"Under Secretary of Defense for Intelligence and Security\"; \"Director of the Defense Intelligence Agency\"",
+          "notes": "Live XML reflects the expanded concurrence rule."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "already incorporated",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s3041",
+        "detail": "The live section 3041 text already contains subsection (d) and the amended concurrence language from sections 3 and 4."
+      },
+      "recommended_actions": [
+        "Leave the integrated 50 U.S.C. 3041 amendments in place.",
+        "Retain only a concise historical note."
+      ],
+      "confidence": "high",
+      "approved_code_treatment": "statutory-note; amend-existing-text",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The law directly amends 50 U.S.C. 3041, and the live XML already contains the added notification, certification, and documentation provisions.",
+      "final_recommended_action": "Leave the integrated 50 U.S.C. 3041 amendments in place. | Retain only a concise historical note.",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t50/s3041",
+      "exact_change": "Add subsection (d) covering notifications, certifications, and documentation of DNI appointment actions. | Add the listed defense and intelligence positions to the concurrence requirement in subsection (b)(2)."
+    },
+    {
+      "law_id": "PL-032-235",
+      "public_law": "32-235",
+      "title": "Public Law 32-235 | Command Responsibility And Noncompliance Enforcement (CRANE) Act",
+      "status": "current",
+      "status_basis": "The enactment is classified as commemorative/non-Code material, so it remains a public law but does not warrant a U.S. Code insertion.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-3",
+          "text_summary": "Short title, purpose, and definitions for commanding officer accountability and misconduct reporting.",
+          "classes": [
+            "short-title",
+            "purpose",
+            "definitions"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Command Responsibility And Noncompliance Enforcement Act\"; \"Commanding Officer (CO)\"; \"Misconduct\"",
+          "notes": "Background material only; no Code anchor is warranted."
+        },
+        {
+          "ref": "SEC. 4-9",
+          "text_summary": "Set accountability consequences, monthly reporting, mandatory training, oversight, whistleblower protection, and annual reporting to Congress.",
+          "classes": [
+            "new-permanent-general",
+            "uncodified-admin-direction"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"monthly report\"; \"mandatory training\"; \"Protection for Whistleblowers\"; \"Annual Report to Congress\"",
+          "notes": "Commemorative and administrative in nature rather than codifiable."
+        },
+        {
+          "ref": "SEC. 10",
+          "text_summary": "Severability clause.",
+          "classes": [
+            "severability"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"If any part of this Act is found to be invalid, the rest of the Act will remain in effect.\"",
+          "notes": "Standard saving clause only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correctly-absent",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "No Code insertion is warranted because the migration record classifies the act as non-Code commemorative material."
+      },
+      "recommended_actions": [
+        "Do not create any U.S. Code text for this act.",
+        "Retain only archival history if a record entry is needed."
+      ],
+      "confidence": "high",
+      "approved_code_treatment": "historical-note-only",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The enactment is classified as commemorative/non-Code material, so it remains a public law but does not warrant a U.S. Code insertion.",
+      "final_recommended_action": "Do not create any U.S. Code text for this act. | Retain only archival history if a record entry is needed.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1h1FDoyv-8_AbfN0qnK-i6iXwNGXJJxUp/view | aed8ae97fd686916761236374e33b665ff88fa1e921eead9b3df6296a15ca785"
+    },
+    {
+      "law_id": "PL-032-236",
+      "public_law": "32-236",
+      "title": "Public Law 32-236 | Military Operational Authority Reform Act",
+      "status": "current",
+      "status_basis": "The law directly amends 10 U.S.C. 153 and 154, and the live XML already carries the new operational-authority language.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-2",
+          "text_summary": "Short title and definitions for Chairman, Vice Chairman, Secretary of Defense, and President.",
+          "classes": [
+            "short-title",
+            "definitions"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t10/s153",
+          "exact_change": null,
+          "evidence": "\"Military Operational Authority Reform Act\"; \"Chairman\"; \"Vice Chairman\"",
+          "notes": "Introductory matter only."
+        },
+        {
+          "ref": "SEC. 4",
+          "text_summary": "Amend 10 U.S.C. 153 to add Chairman operational authority and command power in prescribed circumstances.",
+          "classes": [
+            "direct-amendment"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t10/s153",
+          "exact_change": "Add subsection (e) and the associated operational-authority language to 10 U.S.C. 153.",
+          "evidence": "\"The Chairman ... may exercise military command and operational authority\"; \"shall forward to Congress\"",
+          "notes": "Live XML already reflects the amendment note for subsection (e)."
+        },
+        {
+          "ref": "SEC. 5",
+          "text_summary": "Amend 10 U.S.C. 154 to authorize Vice Chairman operational authority and add Annex E.",
+          "classes": [
+            "direct-amendment"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t10/s154",
+          "exact_change": "Revise 10 U.S.C. 154 so the Vice Chairman may exercise operational authority when approved, and add the new Annex E functions.",
+          "evidence": "\"The Vice Chairman may exercise military command and operational authority\"; \"create Annex E\"",
+          "notes": "Integrated into the live section 154 text."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "already incorporated",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t10/s153",
+        "detail": "The live title 10 text already reflects the Chairman and Vice Chairman authority changes in sections 153 and 154."
+      },
+      "recommended_actions": [
+        "Leave the integrated 10 U.S.C. 153 and 154 amendments in place.",
+        "Keep the historical note concise."
+      ],
+      "confidence": "high",
+      "approved_code_treatment": "statutory-note; amend-existing-text",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The law directly amends 10 U.S.C. 153 and 154, and the live XML already carries the new operational-authority language.",
+      "final_recommended_action": "Leave the integrated 10 U.S.C. 153 and 154 amendments in place. | Keep the historical note concise.",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t10/s153",
+      "exact_change": "Add subsection (e) and the associated operational-authority language to 10 U.S.C. 153. | Revise 10 U.S.C. 154 so the Vice Chairman may exercise operational authority when approved, and add the new Annex E functions."
+    },
+    {
+      "law_id": "PL-033-238",
+      "public_law": "33-238",
+      "title": "Public Law 33-238 | Conference Oversight of Discipline and Ethics Act",
+      "status": "current",
+      "status_basis": "The act is general and permanent but the migration record classifies it as a statutory note at 28 U.S.C. 526; the live XML does not yet show that note.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-2",
+          "text_summary": "Short title and purpose to transfer ULPA oversight to the Judicial Conference.",
+          "classes": [
+            "short-title",
+            "purpose",
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/s526",
+          "exact_change": null,
+          "evidence": "\"Conference Oversight of Discipline and Ethics Act\"; \"transfering the Uniform Legal Practice Authority (ULPA) to the jurisdiction of the Judicial Conference\"",
+          "notes": "General policy direction only."
+        },
+        {
+          "ref": "SEC. 3",
+          "text_summary": "Repeal Public Law 25-184 and preserve the repeal of Title I of Public Law 15-97.",
+          "classes": [
+            "repeal",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Repeal Public Law 25-184 in its entirety and preserve the prior repeal of Title I of Public Law 15-97.",
+          "evidence": "\"Public Law 25-184 shall be repealed in its entirety\"; \"Title I of Public Law 15-97 shall remain repealed in its entirety\"",
+          "notes": "Historical repeal material."
+        },
+        {
+          "ref": "SEC. 5",
+          "text_summary": "Establish the Uniform Legal Practice Authority within the Judicial Branch and define its governance, licensing, ethics, and discipline framework.",
+          "classes": [
+            "new-permanent-general",
+            "uncodified-admin-direction"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/s526",
+          "exact_change": null,
+          "evidence": "\"There shall be a Uniform Legal Practice Authority\"; \"The Judicial Conference shall maintain oversight\"; \"Board of Ethics\"",
+          "notes": "This is the operative statutory-note material."
+        },
+        {
+          "ref": "SEC. 6-14",
+          "text_summary": "Licensure, ethics, education, scope of practice, enforcement, abeyance, miscellaneous powers, severability, and effective date.",
+          "classes": [
+            "new-permanent-general",
+            "criminal-penalty",
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/s526",
+          "exact_change": null,
+          "evidence": "\"exclusive authority over bar examinations\"; \"No person may be licensed as both a paralegal and as an attorney\"; \"This Act shall become effective upon enactment\"",
+          "notes": "All operative content is retained as a statutory note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "missing-note",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s526",
+        "detail": "The live XML search did not find a matching PL-033-238 note marker or title text at the 28 U.S.C. 526 anchor."
+      },
+      "recommended_actions": [
+        "Add a concise statutory note at /us/usc/t28/s526.",
+        "Do not attempt a positive-law rewrite."
+      ],
+      "confidence": "high",
+      "approved_code_treatment": "statutory-note; historical-note-only",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The act is general and permanent but the migration record classifies it as a statutory note at 28 U.S.C. 526; the live XML does not yet show that note.",
+      "final_recommended_action": "Add a concise statutory note at /us/usc/t28/s526. | Do not attempt a positive-law rewrite.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1fypr1xL7AfuFtvc5xxHBfuo1eXAFoXO0/view | a37a9d3f48a6d297d11d0db812ca4fe9c7e8ea9bfae7ff84ee77a8fa19989b2e",
+      "exact_target": "/us/usc/t28/s526",
+      "exact_change": "Repeal Public Law 25-184 in its entirety and preserve the prior repeal of Title I of Public Law 15-97."
+    },
+    {
+      "law_id": "PL-034-239",
+      "public_law": "34-239",
+      "title": "Public Law 34-239 | Judicial Recall Act",
+      "status": "current",
+      "status_basis": "The act is temporary and self-repealing in effect, so it is treated as historical-only and not inserted into the Code.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-2",
+          "text_summary": "Short title and purpose to revise section 108C of Public Law 26-190.",
+          "classes": [
+            "short-title",
+            "purpose"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Judicial Recall Act\"; \"amends section 108, subsection C of Public Law 26-190\"",
+          "notes": "Non-Code background only."
+        },
+        {
+          "ref": "SEC. 3",
+          "text_summary": "Repeal section 108C of Public Law 26-190 in its entirety.",
+          "classes": [
+            "repeal",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "Public Law 26-190 ? 108C",
+          "exact_change": "Repeal section 108, subsection C of Public Law 26-190 in its entirety.",
+          "evidence": "\"Section 108, subsection C of Public Law 26-190 is repealed in its entirety\"",
+          "notes": "Historical repeal only."
+        },
+        {
+          "ref": "SEC. 4-5",
+          "text_summary": "Create a temporary-assignment procedure and make the act effective upon enactment.",
+          "classes": [
+            "uncodified-admin-direction",
+            "effective-date"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"temporary assignment\"; \"The Judicial Conference shall set all terms of the temporary assignment\"; \"effective upon enactment\"",
+          "notes": "Temporary governance directive only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correctly-absent",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "No Code insertion is warranted because the enactment is temporary and historical-only."
+      },
+      "recommended_actions": [
+        "Keep this law as historical-only.",
+        "Do not create permanent Code text."
+      ],
+      "confidence": "high",
+      "approved_code_treatment": "historical-note-only",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The act is temporary and self-repealing in effect, so it is treated as historical-only and not inserted into the Code.",
+      "final_recommended_action": "Keep this law as historical-only. | Do not create permanent Code text.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1oxixybZA4j8eQd0e-bdmkDnvGJfFxQJT/view?usp=sharing | e7351a41bb88df60f12b5050ac03a7bad126fad78ec8c42b2ee42788381ba367",
+      "exact_target": "Public Law 26-190 ? 108C",
+      "exact_change": "Repeal section 108, subsection C of Public Law 26-190 in its entirety."
+    },
+    {
+      "law_id": "PL-034-240",
+      "public_law": "34-240",
+      "title": "Public Law 34-240 | Literally Fixing Taxes",
+      "status": "repealed",
+      "status_basis": "The canonical record is tagged repealed, so the enactment is not inserted as current Code text.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-3",
+          "text_summary": "Short title, severability, and immediate-effective-date language.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t26/s1",
+          "exact_change": null,
+          "evidence": "\"Literally Fixing Taxes\"; \"This bill shall take effect immediately\"",
+          "notes": "Introductory matter only."
+        },
+        {
+          "ref": "SEC. 4",
+          "text_summary": "Amend the flat tax rate in the Literally Introducing Taxes Act to 28 percent and repeal inconsistent language.",
+          "classes": [
+            "direct-amendment",
+            "repeal"
+          ],
+          "treatment": "historical-note-only",
+          "target": "H.R. 9 / Public Law 32-233",
+          "exact_change": "Replace the 20 percent flat tax language with a 28 percent flat tax and repeal inconsistent provisions.",
+          "evidence": "\"There is hereby imposed on the taxable income of every individual a flat tax of 28%.\"; \"All language in H.R. 9 or any other Act establishing a tax rate inconsistent with this amendment is hereby repealed\"",
+          "notes": "The law is marked repealed/superseded and is retained only as history."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t26/s1",
+        "detail": "The branch contains a statutory-note entry at the title 26 anchor, but the note still carries a quotedContent dump and should be trimmed."
+      },
+      "recommended_actions": [
+        "Retain only a concise historical note at /us/usc/t26/s1.",
+        "Remove the quotedContent dump and boilerplate from the note."
+      ],
+      "confidence": "high",
+      "approved_code_treatment": "historical-note-only",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The canonical record is tagged repealed, so the enactment is not inserted as current Code text.",
+      "final_recommended_action": "Retain only a concise historical note at /us/usc/t26/s1. | Remove the quotedContent dump and boilerplate from the note.",
+      "source_evidence": "status keyword `repealed` in list or label | view | https://drive.google.com/file/d/1G8MTtTVPLZ8YP0QG5F5CZFYg_0y8zoYt/view?usp=sharing | ef745aa0e7d51591db386f16a31fd79b9f7a6c76a9cc285499ed25fc93a92af4",
+      "exact_target": "/us/usc/t26/s1",
+      "exact_change": "Replace the 20 percent flat tax language with a 28 percent flat tax and repeal inconsistent provisions."
+    },
+    {
+      "law_id": "PL-034-241",
+      "public_law": "34-241",
+      "title": "Public Law 34-241 | Protecting Working Americans",
+      "status": "current",
+      "status_basis": "The enactment is general and permanent but has no express, uniquely executable Code rewrite; it should be preserved as a statutory note at 2 U.S.C. 29.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-2",
+          "text_summary": "Short title and severability language.",
+          "classes": [
+            "short-title",
+            "severability"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s29",
+          "exact_change": null,
+          "evidence": "\"Protecting Working Americans Act\"; \"This Act shall be severable\"",
+          "notes": "Introductory matter only."
+        },
+        {
+          "ref": "SEC. 3",
+          "text_summary": "Revise the pay scales established under the Federal Executive and Senior Leadership Pay Standardization Act of 2025.",
+          "classes": [
+            "direct-amendment"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s29",
+          "exact_change": null,
+          "evidence": "\"Section 5(a) ... shall be amended to read\"; \"Grade GS-15\"; \"$700.00\"",
+          "notes": "The source text does not identify a unique positive-law insertion."
+        },
+        {
+          "ref": "SEC. 4",
+          "text_summary": "Immediate effective-date clause.",
+          "classes": [
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s29",
+          "exact_change": null,
+          "evidence": "\"This bill shall take effect immediately upon its passage\"",
+          "notes": "No separate Code amendment is identified."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "missing-note",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s29",
+        "detail": "The live XML search did not find a matching PL-034-241 note marker at the title 2 anchor."
+      },
+      "recommended_actions": [
+        "Add a concise statutory note at /us/usc/t2/s29.",
+        "Do not create a positive-law rewrite."
+      ],
+      "confidence": "high",
+      "approved_code_treatment": "statutory-note",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The enactment is general and permanent but has no express, uniquely executable Code rewrite; it should be preserved as a statutory note at 2 U.S.C. 29.",
+      "final_recommended_action": "Add a concise statutory note at /us/usc/t2/s29. | Do not create a positive-law rewrite.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1o9A1TLTggmwbTEvl8G5ARYzWIuoOr68x/view | cdf2911d06ddfc5bd36ff00acb23f0c32bad8348545ec6909b53d9febcce08cb",
+      "exact_target": "/us/usc/t2/s29"
+    },
+    {
+      "law_id": "PL-034-242",
+      "public_law": "34-242",
+      "title": "Public Law 34-242 | Federal Courthouse Security & Jurisdiction Act",
+      "status": "current",
+      "status_basis": "The enactment is general and permanent but has no express Code rewrite; it should be preserved as a statutory note at 28 U.S.C. 362.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-3",
+          "text_summary": "Short title, severability, and immediate-effective-date language.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/s362",
+          "exact_change": null,
+          "evidence": "\"Federal Courthouse Security & Jurisdiction Act\"; \"This bill shall take effect immediately\"",
+          "notes": "Introductory matter only."
+        },
+        {
+          "ref": "SEC. 4-6",
+          "text_summary": "Define DOJ headquarters property lines and grant the Marshal Service jurisdiction, entry-control, detention, and perimeter-control authority.",
+          "classes": [
+            "new-permanent-general",
+            "uncodified-admin-direction"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/s362",
+          "exact_change": null,
+          "evidence": "\"property lines of the United States Department of Justice headquarters\"; \"The United States Marshal Service shall have full authority and jurisdiction\"; \"Deny or restrict entry\"",
+          "notes": "The act is preserved as a statutory note at the closest title 28 anchor."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "missing-note",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s362",
+        "detail": "The live XML search did not find a matching PL-034-242 note marker at the title 28 anchor."
+      },
+      "recommended_actions": [
+        "Add a concise statutory note at /us/usc/t28/s362.",
+        "Do not synthesize a positive-law amendment."
+      ],
+      "confidence": "high",
+      "approved_code_treatment": "statutory-note",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The enactment is general and permanent but has no express Code rewrite; it should be preserved as a statutory note at 28 U.S.C. 362.",
+      "final_recommended_action": "Add a concise statutory note at /us/usc/t28/s362. | Do not synthesize a positive-law amendment.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1ZLUmZnFw55lI876jHhEB_S2G6FWbgyKy/view | 76f2272a3a16788639201ea5f078376960829a0e9f69f778d5e60fc40317cf36",
+      "exact_target": "/us/usc/t28/s362"
+    },
+    {
+      "law_id": "PL-034-243",
+      "public_law": "34-243",
+      "title": "Public Law 34-243 | Judicial Integrity & Accountability Act",
+      "status": "current",
+      "status_basis": "The law replaces chapter 16 in title 28, and the live XML already contains the replacement chapter and editorial note treatment.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-2",
+          "text_summary": "Short title and purpose to transfer judicial misconduct complaint authority to the Supreme Court.",
+          "classes": [
+            "short-title",
+            "purpose"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/ch16",
+          "exact_change": null,
+          "evidence": "\"Judicial Integrity and Accountability Act of 2025\"; \"To transfer all judicial misconduct complaint authority to the Supreme Court\"",
+          "notes": "Introductory material only."
+        },
+        {
+          "ref": "SEC. 3(1)",
+          "text_summary": "Repeal 28 U.S.C. 353, 359, and 361, then replace chapter 16 with new complaint, review, subpoena, disclosure, and effect-of-conviction provisions.",
+          "classes": [
+            "direct-amendment",
+            "repeal"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t28/ch16",
+          "exact_change": "Replace chapter 16 with sections 351-364 as enacted.",
+          "evidence": "\"28 U.S. Code Chapter 16 Part I section 353, 359, and 361 shall be repealed\"; \"CHAPTER 16 -- COMPLAINTS AGAINST JUDGES AND JUDICIAL DISCIPLINE BY THE SUPREME COURT\"",
+          "notes": "The live XML reflects the replacement chapter."
+        },
+        {
+          "ref": "SEC. 3(2) / §§ 351-364",
+          "text_summary": "New chapter 16 provisions governing complaints, review by the Supreme Court, impeachment referral, subpoena power, review limitations, rules, disclosure, and felony-conviction consequences.",
+          "classes": [
+            "direct-amendment",
+            "new-permanent-general"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t28/ch16",
+          "exact_change": "Install the new chapter 16 sections 351, 352, 354-360, 362-364 with the enacted text.",
+          "evidence": "\"Complaints; judge defined\"; \"Review of the complaint by the Supreme Court of the United States\"; \"Referral for Impeachment Consideration\"; \"Effect of felony conviction\"",
+          "notes": "The replacement chapter is already integrated in the branch."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "already incorporated",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/ch16",
+        "detail": "The live title 28 XML already contains the replacement chapter 16 text and the associated editorial note that Pub. L. 34-243 replaced the chapter."
+      },
+      "recommended_actions": [
+        "Leave the replacement chapter 16 text in place.",
+        "Do not duplicate the replaced provisions elsewhere in title 28."
+      ],
+      "confidence": "high",
+      "approved_code_treatment": "statutory-note; amend-existing-text",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The law replaces chapter 16 in title 28, and the live XML already contains the replacement chapter and editorial note treatment.",
+      "final_recommended_action": "Leave the replacement chapter 16 text in place. | Do not duplicate the replaced provisions elsewhere in title 28.",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/157nu1Y1kMor84N5RWL8FSKHhnVC7pKOn/view | 892619c7e2f7886f7793b009896e61083a154238426e7ef01205e96c0b689d09",
+      "exact_target": "/us/usc/t28/ch16",
+      "exact_change": "Replace chapter 16 with sections 351-364 as enacted. | Install the new chapter 16 sections 351, 352, 354-360, 362-364 with the enacted text."
+    }
+  ],
+  "reviewer": "law-auditor-N",
+  "source_manifest": "audit/primary/batch-16-03.json",
+  "output_path": "audit/review/review-75.json",
+  "reviewed_against": [
+    "audit/primary/batch-16-03.json",
+    "audit/claude-validation.json",
+    "origin/main"
+  ]
+}

@@ -1,0 +1,340 @@
+{
+  "reviewer": "codex-repair-62",
+  "batch": 62,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/review-repair-62.json",
+  "output_path": "audit/review/review-repair-62.json",
+  "reviewed_against": [
+    "audit/manifests/review-repair-62.json",
+    "audit/review/review-repair-62.json",
+    "audit/chronology-report.json",
+    "codification/laws/laws/PL-015-101/law.txt",
+    "codification/laws/laws/PL-015-102/law.txt",
+    "codification/laws/laws/PL-015-104/law.txt",
+    "codification/laws/laws/PL-015-105/law.txt",
+    "codification/laws/laws/PL-015-106/law.txt",
+    "codification/laws/laws/PL-015-107/metadata.json",
+    "codification/laws/laws/PL-015-108/law.txt",
+    "codification/laws/laws/PL-015-109/law.txt",
+    "codification/laws/laws/PL-015-110/metadata.json",
+    "codification/laws/laws/PL-015-111/law.txt",
+    "usc/usc02.xml",
+    "usc/usc05.xml",
+    "usc/usc10.xml",
+    "usc/usc18.xml",
+    "usc/usc22.xml",
+    "usc/usc28.xml",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-015-101",
+      "public_law": "15-101",
+      "title": "Public Law 15-101 | Guidance to Guidances Act",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "The source text is readable and general-and-permanent. It governs agency guidance publication, FOIA handling, and related definitions keyed to 5 U.S.C. 551 and 553, but it does not present a clean positive-law rewrite target.",
+      "provision_refs": [
+        "SEC 1",
+        "SEC 2",
+        "SEC 3",
+        "SEC 4",
+        "SEC 5",
+        "SEC 6"
+      ],
+      "targets": [
+        "/us/usc/t5",
+        "/us/usc/t5/s551",
+        "/us/usc/t5/s553"
+      ],
+      "current_implementation": {
+        "assessment": "absent",
+        "placement": "/us/usc/t5",
+        "detail": "No law-specific insertion or note id was found in usc/usc05.xml, and no PL-015-101 delta was identifiable in the origin/main comparison."
+      },
+      "source_evidence": {
+        "law_report": "codification/laws/laws/PL-015-101/law.txt",
+        "status_basis": "The extracted enactment text contains a short title, definitions, publication duties, FOIA carve-out, severability, and effective date."
+      },
+      "recommended_action": "If this enactment is to be carried into the Code, add a concise title 5 statutory note rather than a pasted amendment block.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source text is readable and general-and-permanent. It governs agency guidance publication, FOIA handling, and related definitions keyed to 5 U.S.C. 551 and 553, but it does not present a clean positive-law rewrite target.",
+      "approved_code_treatment": "statutory-note"
+    },
+    {
+      "law_id": "PL-015-102",
+      "public_law": "15-102",
+      "title": "Public Law 15-102 | New Ambassadorial Organizational and Reporting Act",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "The source creates regional ambassadorships and weekly reporting duties and expressly repeals the Ambassadorial Readjustment Act and PL 14-90 section 2(a)(i). It remains an active enactment, but it reads as note material rather than a direct Code rewrite.",
+      "provision_refs": [
+        "SECTION I",
+        "SECTION II",
+        "SECTION III",
+        "SECTION IV"
+      ],
+      "targets": [
+        "/us/usc/t22"
+      ],
+      "current_implementation": {
+        "assessment": "absent",
+        "placement": "/us/usc/t22",
+        "detail": "No PL-015-102 statutory-note or repeal marker was found in usc/usc22.xml, and the branch-vs-origin comparison did not surface a law-specific insertion."
+      },
+      "source_evidence": {
+        "law_report": "codification/laws/laws/PL-015-102/law.txt",
+        "status_basis": "The PDF text includes a short title, severability, effective date, express repeal language, regional ambassadorship creation, and weekly reporting duties."
+      },
+      "recommended_action": "Add a concise title 22 statutory note and place repeal markers at the affected earlier-law homes.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source creates regional ambassadorships and weekly reporting duties and expressly repeals the Ambassadorial Readjustment Act and PL 14-90 section 2(a)(i). It remains an active enactment, but it reads as note material rather than a direct Code rewrite.",
+      "approved_code_treatment": "statutory-note"
+    },
+    {
+      "law_id": "PL-015-104",
+      "public_law": "15-104",
+      "title": "Public Law 15-104 | The Military Justice Reform Act of 2023",
+      "status": "current",
+      "decision": "non-code",
+      "status_basis": "The source is a broad military-justice reorganization with CJAG, JAG, DJAG, courts, ethics, and paralegal provisions. It does not supply a clean positive-law insertion target and is better preserved as historical or note material.",
+      "provision_refs": [
+        "SEC 1-3",
+        "SEC 4-8",
+        "SEC 9",
+        "SEC 10",
+        "SEC 11-14"
+      ],
+      "targets": [
+        "/us/usc/t10"
+      ],
+      "current_implementation": {
+        "assessment": "absent",
+        "placement": "/us/usc/t10",
+        "detail": "No PL-015-104 insertion was found in usc/usc10.xml, and no matching branch-only change was identified against origin/main."
+      },
+      "source_evidence": {
+        "law_report": "codification/laws/laws/PL-015-104/law.txt",
+        "status_basis": "The extracted text establishes military-justice offices and duties but does not map cleanly to a stable title 10 amendment."
+      },
+      "recommended_action": "Retain the enactment as non-code history rather than inserting the bill text into permanent title 10 sections.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source is a broad military-justice reorganization with CJAG, JAG, DJAG, courts, ethics, and paralegal provisions. It does not supply a clean positive-law insertion target and is better preserved as historical or note material.",
+      "approved_code_treatment": "non-code"
+    },
+    {
+      "law_id": "PL-015-105",
+      "public_law": "15-105",
+      "title": "Public Law 15-105 | Municipal Prosecution Act of 2023",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "The source shifts District of Columbia prosecution and recall-petition duties and expressly repeals Part D of PL 12-88, Title 6 section 37 of PL 12-88, and later provisions tied to PL 15-97. It is operative, but the work is note-and-repeal markup rather than a full code rewrite.",
+      "provision_refs": [
+        "SEC 3",
+        "SEC 5",
+        "SEC 6"
+      ],
+      "targets": [
+        "/us/usc/t28",
+        "PL 12-88 Part D",
+        "PL 12-88 Title 6, Section 37",
+        "PL 15-97"
+      ],
+      "current_implementation": {
+        "assessment": "absent",
+        "placement": "/us/usc/t28",
+        "detail": "No PL-015-105 note or repeal marker was located in usc/usc28.xml, and the current branch did not show a law-specific insertion relative to origin/main."
+      },
+      "source_evidence": {
+        "law_report": "codification/laws/laws/PL-015-105/law.txt",
+        "status_basis": "The enactment text contains a repealment section, a District of Columbia prosecution section, a recall-process section, and a later repeal/substitution clause."
+      },
+      "recommended_action": "Place a concise statutory note at the title 28 anchor and add repeal markers at the earlier-law homes that the text expressly repeals.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source shifts District of Columbia prosecution and recall-petition duties and expressly repeals Part D of PL 12-88, Title 6 section 37 of PL 12-88, and later provisions tied to PL 15-97. It is operative, but the work is note-and-repeal markup rather than a full code rewrite.",
+      "approved_code_treatment": "statutory-note"
+    },
+    {
+      "law_id": "PL-015-106",
+      "public_law": "15-106",
+      "title": "Public Law 15-106 | The Congress Strikes Back Repealment",
+      "status": "current",
+      "decision": "historical-note-only",
+      "status_basis": "The source is a repealer statute whose only substantive effect is to repeal The Congress Strikes Back Act of 2022. It remains current as a repealing enactment, but its Code treatment is historical-note material tied to the repealed act.",
+      "provision_refs": [
+        "SEC I-II",
+        "SEC III"
+      ],
+      "targets": [
+        "/us/usc/t2",
+        "The Congress Strikes Back Act of 2022"
+      ],
+      "current_implementation": {
+        "assessment": "absent",
+        "placement": "/us/usc/t2",
+        "detail": "No PL-015-106 note was found in usc/usc02.xml, and the branch-vs-origin comparison did not identify a law-specific insertion."
+      },
+      "source_evidence": {
+        "law_report": "codification/laws/laws/PL-015-106/law.txt",
+        "status_basis": "The text contains a short title, severability, effective date, and an express repeal of The Congress Strikes Back Act."
+      },
+      "recommended_action": "Record the repeal at the target law's home and keep this enactment only as repealing history.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source is a repealer statute whose only substantive effect is to repeal The Congress Strikes Back Act of 2022. It remains current as a repealing enactment, but its Code treatment is historical-note material tied to the repealed act.",
+      "approved_code_treatment": "historical-note-only"
+    },
+    {
+      "law_id": "PL-015-107",
+      "public_law": "15-107",
+      "title": "Public Law 15-107 | Guidance to Guidances Act",
+      "status": "unrecoverable",
+      "decision": "historical-note-only",
+      "status_basis": "No readable authenticated enactment text was recovered from the supplied source set, so no provision-level codification conclusion can be asserted safely.",
+      "provision_refs": [
+        "whole act"
+      ],
+      "targets": [
+        "/us/usc/t5"
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "The source is unrecoverable, so no verified XML placement can be audited."
+      },
+      "source_evidence": {
+        "law_report": "codification/laws/laws/PL-015-107/metadata.json",
+        "status_basis": "The repaired source metadata marks the law unrecoverable and provides no usable source files."
+      },
+      "recommended_action": "Retain only a source-limited historical note until the actual enactment text is recovered.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "No readable authenticated enactment text was recovered from the supplied source set, so no provision-level codification conclusion can be asserted safely.",
+      "approved_code_treatment": "historical-note-only"
+    },
+    {
+      "law_id": "PL-015-108",
+      "public_law": "15-108",
+      "title": "Public Law 15-108 | The Reclassification of Labeling Act of 2023",
+      "status": "current",
+      "decision": "non-code",
+      "status_basis": "The source is an internal congressional labeling statute. It prescribes bill, resolution, amendment, committee-report, and treaty labels, but it does not enact positive-law Code text.",
+      "provision_refs": [
+        "SEC 1-2",
+        "SEC 3",
+        "SEC 4",
+        "SEC 5",
+        "SEC 6",
+        "SEC 7",
+        "SEC 8"
+      ],
+      "targets": [
+        "/us/usc/t2"
+      ],
+      "current_implementation": {
+        "assessment": "absent",
+        "placement": "/us/usc/t2",
+        "detail": "No PL-015-108 insertion or note id was found in usc/usc02.xml, and no law-specific branch delta appeared in the origin/main comparison."
+      },
+      "source_evidence": {
+        "law_report": "codification/laws/laws/PL-015-108/law.txt",
+        "status_basis": "The extracted HTML text is a labeling and organization statute with no express Code amendment."
+      },
+      "recommended_action": "Keep the law as non-code history rather than converting it into permanent Code text.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source is an internal congressional labeling statute. It prescribes bill, resolution, amendment, committee-report, and treaty labels, but it does not enact positive-law Code text.",
+      "approved_code_treatment": "non-code"
+    },
+    {
+      "law_id": "PL-015-109",
+      "public_law": "15-109",
+      "title": "Public Law 15-109 | Ending Tigray for the Last Time",
+      "status": "current",
+      "decision": "historical-note-only",
+      "status_basis": "The resolution is current, but its sole operative effect is to repeal House Joint Resolution 6 in full. That makes it a historical repealer, not positive-law Code text.",
+      "provision_refs": [
+        "resolved clause"
+      ],
+      "targets": [
+        "House Joint Resolution 6"
+      ],
+      "current_implementation": {
+        "assessment": "absent",
+        "placement": "House Joint Resolution 6",
+        "detail": "No PL-015-109 note or repeal marker was found in the branch XML, and no law-specific insertion was visible in the origin/main comparison."
+      },
+      "source_evidence": {
+        "law_report": "codification/laws/laws/PL-015-109/law.txt",
+        "status_basis": "The text states that the formal notice of war in House Joint Resolution 6 is repealed in its entirety."
+      },
+      "recommended_action": "Preserve the resolution only as repealing history and attach the repeal to the repealed instrument's home.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The resolution is current, but its sole operative effect is to repeal House Joint Resolution 6 in full. That makes it a historical repealer, not positive-law Code text.",
+      "approved_code_treatment": "historical-note-only"
+    },
+    {
+      "law_id": "PL-015-110",
+      "public_law": "15-110",
+      "title": "Public Law 15-110 | A Bill to Direct the Inspector General of the Department of Defense to Conduct an Investigation Into the Attack on the United States Embassy in Damascus, and for Other Purposes",
+      "status": "unrecoverable",
+      "decision": "historical-note-only",
+      "status_basis": "No readable authenticated enactment text was recovered from the supplied source set, so no provision-level codification conclusion can be asserted safely.",
+      "provision_refs": [
+        "whole act"
+      ],
+      "targets": [
+        "/us/usc/t10"
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "placement": null,
+        "detail": "The source is unrecoverable, so no verified XML placement can be audited."
+      },
+      "source_evidence": {
+        "law_report": "codification/laws/laws/PL-015-110/metadata.json",
+        "status_basis": "The repaired source metadata marks the law unrecoverable and provides no usable source files."
+      },
+      "recommended_action": "Retain only a source-limited historical note until the actual enactment text is recovered.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "No readable authenticated enactment text was recovered from the supplied source set, so no provision-level codification conclusion can be asserted safely.",
+      "approved_code_treatment": "historical-note-only"
+    },
+    {
+      "law_id": "PL-015-111",
+      "public_law": "15-111",
+      "title": "Public Law 15-111 | Presidential Transition Protection Act",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "The source is readable and operative. It defines presidential-transition obstruction, sets a criminal prohibition, and supplies a short jail/fine framework. It belongs as note material at title 18 rather than as stray generic text.",
+      "provision_refs": [
+        "SECTION I-III",
+        "SECTION III(b-c)"
+      ],
+      "targets": [
+        "/us/usc/t18"
+      ],
+      "current_implementation": {
+        "assessment": "absent",
+        "placement": "/us/usc/t18",
+        "detail": "No PL-015-111 insertion or note id was found in usc/usc18.xml, and no law-specific branch delta was visible relative to origin/main."
+      },
+      "source_evidence": {
+        "law_report": "codification/laws/laws/PL-015-111/law.txt",
+        "status_basis": "The enactment text contains a short title, definitions, an obstruction prohibition, penalties, and an immediate-effective-date clause."
+      },
+      "recommended_action": "Preserve the enactment as a concise title 18 statutory note, not as a free-floating generic anchor.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source is readable and operative. It defines presidential-transition obstruction, sets a criminal prohibition, and supplies a short jail/fine framework. It belongs as note material at title 18 rather than as stray generic text.",
+      "approved_code_treatment": "statutory-note"
+    }
+  ],
+  "group_index": 62
+}

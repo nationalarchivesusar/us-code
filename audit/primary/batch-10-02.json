@@ -1,0 +1,357 @@
+{
+  "batch": 10,
+  "auditor": "law-auditor-K",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-002-011",
+      "public_law": "2-11",
+      "title": "Public Law 2-11 | Criminal Statute of Limitations Act",
+      "status": "repealed",
+      "status_basis": "The authoritative disposition report classifies this law as repealed / NONOPERATIVE_OR_REPEALED with high confidence, so the law is not current despite the substantive limitations rule in the source text.",
+      "provisions": [
+        {
+          "ref": "SECTION II(a)-(c)",
+          "text_summary": "Sets a 75-day limitations period for most Title 18 crimes, a 150-day period for listed chapters, and measures accrual from the time of the offense.",
+          "classes": ["new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18",
+          "exact_change": "No operative code change; preserve as repealed history only.",
+          "evidence": "\"75 days\"; \"150 days\"; \"commence at the time the offense takes place\"",
+          "notes": "The source text itself is real, but the final legal status is repealed."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "repealed-note-only",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "The working tree carries a statutory-note stub with the source dump and archive link, but the law is not current and should remain history only."
+      },
+      "recommended_actions": [
+        "Keep only a historical statutory note.",
+        "Do not enact the statute-of-limitations language as operative Code text.",
+        "Mark the law repealed/nonoperative in the audit record."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-012",
+      "public_law": "2-12",
+      "title": "Public Law 2-12 | Fee Prohibition Act",
+      "status": "repealed",
+      "status_basis": "The authoritative disposition report classifies this law as repealed / NONOPERATIVE_OR_REPEALED with high confidence.",
+      "provisions": [
+        {
+          "ref": "SECTION II(a)",
+          "text_summary": "Bars courts in the United States, including the Supreme Court, from imposing or collecting fees unless the charge is punishment for a criminal offense.",
+          "classes": ["new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t28",
+          "exact_change": "No operative code change; preserve as repealed history only.",
+          "evidence": "\"No Court in the United States, including the Supreme Court, shall impose, collect, or otherwise require fees\"",
+          "notes": "Substantive fee-ban language, but not current law."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "repealed-note-only",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The live XML keeps the law as a note stub in Title 50, but the final legal status is repealed so it should stay historical."
+      },
+      "recommended_actions": [
+        "Retain as historical note only.",
+        "Do not move the fee ban into operative Title 28 text.",
+        "Mark the law repealed/nonoperative in the audit record."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-013",
+      "public_law": "2-13",
+      "title": "Public Law 2-13 | The Employees Termination Notification Act of 2021",
+      "status": "repealed",
+      "status_basis": "The authoritative disposition report classifies this law as repealed / NONOPERATIVE_OR_REPEALED with high confidence.",
+      "provisions": [
+        {
+          "ref": "SECTION 4(a)-(b)",
+          "text_summary": "Requires a terminating federal-agency or private-business employer to tell the employee the reason for termination within 48 hours.",
+          "classes": ["new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t29",
+          "exact_change": "No operative code change; preserve as repealed history only.",
+          "evidence": "\"notify an employee of his/her termination with the reason\"; \"forty-eight hours (48 hours)\"",
+          "notes": "The source text creates a real notice rule, but it is not current law."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "repealed-note-only",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s101",
+        "detail": "The working tree parks the law as a note in Title 5, but the disposition is repealed so no operative labor-text change is warranted."
+      },
+      "recommended_actions": [
+        "Keep only a historical note.",
+        "Do not codify the 48-hour notice rule as current text.",
+        "Mark the law repealed/nonoperative in the audit record."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-014",
+      "public_law": "2-14",
+      "title": "Public Law 2-14 | National Federal Torts Act",
+      "status": "repealed",
+      "status_basis": "The authoritative disposition report classifies this law as repealed / NONOPERATIVE_OR_REPEALED with high confidence.",
+      "provisions": [
+        {
+          "ref": "SECTION I",
+          "text_summary": "Contains the short title, effective date, conflict clause, and severability language.",
+          "classes": ["short-title", "effective-date", "non-code", "severability"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t28",
+          "exact_change": "No operative code change; preserve as repealed history only.",
+          "evidence": "\"National Federal Torts Act\"; \"immediately upon passage\"; \"shall be severable\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION I / SECTION II",
+          "text_summary": "Creates federal-court jurisdiction, enumerates tort causes of action, and supplies government-liability and false-arrest remedies.",
+          "classes": ["new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t28",
+          "exact_change": "No operative code change; preserve as repealed history only.",
+          "evidence": "\"civil lawsuit in the United States District Court\"; \"TRESPASSING\"; \"FALSE ARREST\"; \"systematic rights violation\"",
+          "notes": "The source text is broad, but the final legal status is repealed."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "repealed-note-only",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s1",
+        "detail": "The working tree note is a placeholder history stub in Title 28 territory; the law remains repealed and should not be treated as active tort code."
+      },
+      "recommended_actions": [
+        "Retain as historical note only.",
+        "Do not codify the tort/jurisdiction framework as operative Title 28 text.",
+        "Mark the law repealed/nonoperative in the audit record."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-015",
+      "public_law": "3-15",
+      "title": "Public Law 3-15 | Admission to the United Nations Act",
+      "status": "repealed",
+      "status_basis": "The authoritative disposition report classifies this law as repealed / NONOPERATIVE_OR_REPEALED with high confidence.",
+      "provisions": [
+        {
+          "ref": "SECTION II(a)",
+          "text_summary": "Requires the President to notify the Archivist of the United States of all bills signed.",
+          "classes": ["new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t44",
+          "exact_change": "No operative code change; preserve as repealed history only.",
+          "evidence": "\"notify the Archivist of the United States of all Bills he so signs\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "repealed-note-only",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t22/s2651",
+        "detail": "The live XML keeps a note stub in Title 22 territory, but the law is repealed so it should remain historical only."
+      },
+      "recommended_actions": [
+        "Keep only a historical note.",
+        "Do not codify the Archivist-notification duty as current text.",
+        "Mark the law repealed/nonoperative in the audit record."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-016",
+      "public_law": "3-16",
+      "title": "Public Law 3-16 | The Capitol Police Establishment",
+      "status": "repealed",
+      "status_basis": "The authoritative disposition report classifies this law as repealed / NONOPERATIVE_OR_REPEALED with high confidence.",
+      "provisions": [
+        {
+          "ref": "SECTION II",
+          "text_summary": "Creates the Capitol Police Board and vests it with appointment, removal, and security-regulation authority.",
+          "classes": ["new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t2",
+          "exact_change": "No operative code change; preserve as repealed history only.",
+          "evidence": "\"The following shall be members of the Capitol Police Board\"; \"Appoint a Capitol Police Chief\"; \"regulate the security of the Capitol Buildings\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION III-V",
+          "text_summary": "Authorizes protection, warrantless arrests in protective duties, Capitol-complex policing, and outside-jurisdiction deployment limits.",
+          "classes": ["new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t2",
+          "exact_change": "No operative code change; preserve as repealed history only.",
+          "evidence": "\"make arrests without warrant\"; \"police the United States Capitol Buildings and Grounds\"; \"may not deploy any officer outside\"",
+          "notes": "The law is structurally substantive, but it is not current."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "repealed-note-only",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "The working tree keeps the law as a note stub in Title 18 territory, but the final legal status is repealed so no current Capitol Police code is authorized from this law."
+      },
+      "recommended_actions": [
+        "Retain only a historical note.",
+        "Do not codify the Capitol Police framework as operative Title 2 text.",
+        "Mark the law repealed/nonoperative in the audit record."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-017",
+      "public_law": "3-17",
+      "title": "Public Law 3-17 | The Diplomatic Protections Act",
+      "status": "repealed",
+      "status_basis": "The authoritative disposition report classifies this law as repealed / NONOPERATIVE_OR_REPEALED with high confidence.",
+      "provisions": [
+        {
+          "ref": "SECTION II(a)-(e)",
+          "text_summary": "Defines foreign diplomats, requires protection, authorizes removal and deportation, grants immunity when authorized, and sets a 24-hour departure timetable.",
+          "classes": ["new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t22",
+          "exact_change": "No operative code change; preserve as repealed history only.",
+          "evidence": "\"Foreign Diplomat\"; \"provide adequate protection\"; \"Diplomatic Immunity\"; \"24hr timetable to leave the United States\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "repealed-note-only",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t22/s2651",
+        "detail": "The live XML note is in Title 22 territory, but the law is repealed and should remain history only."
+      },
+      "recommended_actions": [
+        "Keep only a historical note.",
+        "Do not codify the diplomatic-protection rules as current text.",
+        "Mark the law repealed/nonoperative in the audit record."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-018",
+      "public_law": "3-18",
+      "title": "Public Law 3-18 | Amendment to S.12",
+      "status": "repealed",
+      "status_basis": "The authoritative disposition report classifies this law as repealed / NONOPERATIVE_OR_REPEALED with high confidence.",
+      "provisions": [
+        {
+          "ref": "SECTION II(a)-(b)",
+          "text_summary": "Disbands Section V of the Capitol Police Establishment and replaces it with a new 'Capitol Police Outside Prescribed Jurisdiction' framework.",
+          "classes": ["direct-amendment"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t2",
+          "exact_change": "No operative code change; preserve as repealed history only.",
+          "evidence": "\"Section V and its entirely shall be disbanded\"; \"Capitol Police Outside Prescribed Jurisdiction\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "repealed-note-only",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The working tree note sits in Title 50 territory, but the amendment law is repealed so it should not be treated as active text."
+      },
+      "recommended_actions": [
+        "Keep only a historical note.",
+        "Do not apply the amendment as current Capitol Police text.",
+        "Mark the law repealed/nonoperative in the audit record."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-019",
+      "public_law": "3-19",
+      "title": "Public Law 3-19 | The NARA Act",
+      "status": "active",
+      "status_basis": "The authoritative disposition report classifies this law as active / STATUTORY_NOTE with high confidence, and the live XML note aligns with that disposition.",
+      "provisions": [
+        {
+          "ref": "SECTION II(a)",
+          "text_summary": "Requires the President to notify the Archivist of the United States of all bills signed.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t44/s6506",
+          "exact_change": "Keep the statutory note at 2 U.S.C. section 6506; no substantive redraft is required.",
+          "evidence": "\"notify the Archivist of the United States of all Bills he so signs\"",
+          "notes": "This is the one law in the batch that remains active."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "statutory-note-correct",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t44/s6506",
+        "detail": "The live XML note is in the proper records-management title and matches the current statutory-note disposition."
+      },
+      "recommended_actions": [
+        "Keep the statutory note at 2 U.S.C. section 6506.",
+        "Do not add extra operative text beyond the note placement.",
+        "Leave the law marked active / statutory-note."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-020",
+      "public_law": "3-20",
+      "title": "Public Law 3-20 | National Immigration Employment Act of 2021",
+      "status": "repealed",
+      "status_basis": "The authoritative disposition report classifies this source-limited law as repealed / NONOPERATIVE_OR_REPEALED with high confidence, but the text body itself is unavailable because the PDF is scanned.",
+      "provisions": [
+        {
+          "ref": "SOURCE UNAVAILABLE",
+          "text_summary": "The source PDF has no extractable text, so the operative provisions cannot be reconstructed from the batch materials.",
+          "classes": ["non-code"],
+          "treatment": "historical-note-only",
+          "target": "n/a",
+          "exact_change": "No operative code change; preserve as source-limited history only.",
+          "evidence": "\"text_length\": 0; \"valid PDF; no extractable text (possibly scanned)\"",
+          "notes": "The disposition is still repealed, but provision-level auditing is source-limited."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "source-limited-note",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t8/s1101/i/2",
+        "detail": "The XML keeps a history note in Title 8 territory, but the source text was not recoverable from the scanned PDF."
+      },
+      "recommended_actions": [
+        "Retain only a source-limited historical note.",
+        "Do not invent operative immigration-employment text from the scanned PDF.",
+        "Re-audit only if an extractable text version becomes available."
+      ],
+      "confidence": "low"
+    }
+  ]
+}

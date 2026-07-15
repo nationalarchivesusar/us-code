@@ -1,0 +1,605 @@
+{
+  "batch": 5,
+  "auditor": "law-auditor-B",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-017-132",
+      "public_law": "17-132",
+      "title": "Public Law 17-132 | Standard Process for International Extraditions Act",
+      "status": "current",
+      "status_basis": "Full source present. Free-standing extradition statute that operates 'in accordance to 18 U.S. Code §3182' but does not itself amend or replace §3182. No self-repeal or sunset.",
+      "provisions": [
+        {
+          "ref": "SEC I(a)",
+          "text_summary": "Short title 'Standard Process for International Extraditions Act'.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"This Act may be cited as the 'Standard Process for International Extraditions Act'.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC I(b)",
+          "text_summary": "Severability plus anti-supersession clause.",
+          "classes": ["severability"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"This Act shall be severable... This Act shall not be superseded by any newer law...\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC I(c)",
+          "text_summary": "Effective on passage and signature.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"This Act shall become effective following a majority approval...\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC II",
+          "text_summary": "Defines 'extradition'.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": null,
+          "exact_change": "Create a new section defining extradition as the removal of a person from one jurisdiction to another for criminal prosecution or punishment.",
+          "evidence": "\"Extradition shall be defined as the removal of a person...\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC III",
+          "text_summary": "Sets extradition requirements, treaty limitations, non-citizen exception, and State/Justice certification.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": null,
+          "exact_change": "Create a new section setting the extradition process, including treaty-based limits and DOS/DOJ certification.",
+          "evidence": "\"In accordance to 18 U.S. Code §3182, the extradition process shall require the following:\"",
+          "notes": "References §3182 as the governing anchor; no replacement text for §3182 is supplied."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "Draft placed a boilerplate note at Title 50 section 1, but this is an extradition statute tied to Title 18. The source supports a real permanent provision, not a bare note."
+      },
+      "recommended_actions": [
+        "Codify SEC II-III as a new Title 18 section or a statutory note at 18 U.S.C. §3182, not Title 50.",
+        "Remove the Trello link from the current note."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-017-133",
+      "public_law": "17-133",
+      "title": "Public Law 17-133 | Judicial Overhaul Bill (JOB) AMENDED",
+      "status": "current",
+      "status_basis": "Full source present. Massive Title 28 amendatory act with determinable repeals and rewrites across multiple chapters and sections. No self-repeal or sunset.",
+      "provisions": [
+        {
+          "ref": "SEC1-SEC3",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"referred to as 'Judicial Overhaul Bill' or 'JOB'.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC4",
+          "text_summary": "General PL 1-1 applicability instruction.",
+          "classes": ["uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Pursuant to Public Law 1-1, codes listed in this act shall be applicable section(s) 5,6,7,8,9,10.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC5(repeals)",
+          "text_summary": "Repeals Chapter 3; §§81-87; §§89-131; §141; Chapters 7, 11, 13 (except §294), and 23; §363; Chapter 17 (except §371); §§411-412; §456; §§460-463.",
+          "classes": ["repeal"],
+          "treatment": "repeal-marking",
+          "target": "/us/usc/t28 (multiple repeal targets in SEC5)",
+          "exact_change": "Mark each enumerated chapter/section as repealed.",
+          "evidence": "\"28 U.S.Code Chapter 3 shall be repealed, in its entirety.\"",
+          "notes": "Determinable repeal list; duplicate or overlapping targets should be de-duplicated in application."
+        },
+        {
+          "ref": "SEC5(rewrites)",
+          "text_summary": "Rewrites §§133, 134, 135, 136, 137(a), 294, 371, and 413 with replacement text.",
+          "classes": ["substitution", "direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t28/s133, s134, s135, s136, s137, s294, s371, s413",
+          "exact_change": "Replace each named section with the SEC5 replacement text; resolve §133 against PL 11-72 and §135 against PL 9-52 where referenced.",
+          "evidence": "\"28 U.S.Code § 134 ... shall now read as;\"",
+          "notes": "§137 is only amended as subsection (a)."
+        },
+        {
+          "ref": "SEC6",
+          "text_summary": "Repeals §§520, 529, 530A, 530C; Chapters 39 and 40A.",
+          "classes": ["repeal"],
+          "treatment": "repeal-marking",
+          "target": "/us/usc/t28 (SEC6 repeal list)",
+          "exact_change": "Mark each enumerated section/chapter as repealed.",
+          "evidence": "\"28 U.S.Code §520 shall be repealed.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC7",
+          "text_summary": "Repeals Chapters 41, 42, 47, 51, 55, and 58; §676; §754; and §§958-961.",
+          "classes": ["repeal"],
+          "treatment": "repeal-marking",
+          "target": "/us/usc/t28 (SEC7 repeal list)",
+          "exact_change": "Mark each enumerated section/chapter as repealed.",
+          "evidence": "\"28 U.S.Code Chapter 41 shall be repealed, in its entirety.\"",
+          "notes": "Chapter 51 is listed twice in the source; apply once."
+        },
+        {
+          "ref": "SEC8",
+          "text_summary": "Repeals Chapter 81 except §1251; §§1334, 1336, 1339, 1348, 1352; Chapter 83; §§1394, 1396, 1404-1406, 1412, 1413; Chapters 89, 91, and 95.",
+          "classes": ["repeal"],
+          "treatment": "repeal-marking",
+          "target": "/us/usc/t28 (SEC8 repeal list)",
+          "exact_change": "Mark each enumerated section/chapter as repealed, preserving §1251.",
+          "evidence": "\"28 U.S.Code Chapter 81 shall be repealed, except 28 U.S.Code §1251.\"",
+          "notes": "Chapter 81 / §1251 is duplicated in the source."
+        },
+        {
+          "ref": "SEC9",
+          "text_summary": "Repeals §§1656, 1658, 1743, 1913, 1920-1922, 1926, and 1930.",
+          "classes": ["repeal"],
+          "treatment": "repeal-marking",
+          "target": "/us/usc/t28 (SEC9 repeal list)",
+          "exact_change": "Mark each enumerated section as repealed.",
+          "evidence": "\"28 U.S.Code §1656 shall be repealed.\"",
+          "notes": "Overlaps with later repeal activity in other laws."
+        },
+        {
+          "ref": "SEC10",
+          "text_summary": "Repeals Chapters 155, 157, 165, and 176.",
+          "classes": ["repeal"],
+          "treatment": "repeal-marking",
+          "target": "/us/usc/t28 (SEC10 repeal list)",
+          "exact_change": "Mark each enumerated chapter as repealed.",
+          "evidence": "\"28 U.S.Code Chapter 155 shall be repealed, in its entirety.\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s1",
+        "detail": "The current XML has only a boilerplate note at Title 28 section 1. The Act requires many real repeal-markings and textual substitutions; the note cannot substitute for those edits."
+      },
+      "recommended_actions": [
+        "Apply repeal-marking to every enumerated Title 28 chapter and section in SEC5-10.",
+        "Apply amend-existing-text to §§133, 134, 135, 136, 137(a), 294, 371, and 413 using the supplied replacement language.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-134",
+      "public_law": "17-134",
+      "title": "Public Law 17-134 | Amended The Uniformed Capitol Police Act of 2023",
+      "status": "current",
+      "status_basis": "Full source present. Operative amendment to PL 16-119, Section III(B), specifying Capitol Police Board membership. It is not a numbered U.S. Code amendment and it is not self-repealing.",
+      "provisions": [
+        {
+          "ref": "SEC I",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"This Act may be cited as the 'Amended The Uniformed Capitol Police Act of 2023'.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC II(a)-(b)",
+          "text_summary": "Amends PL 16-119 Section III(B) to set the Capitol Police Board membership list.",
+          "classes": ["direct-amendment", "substitution"],
+          "treatment": "amend-existing-text",
+          "target": "(PL 16-119 §III(B))",
+          "exact_change": "Set PL 16-119 §III(B) to the quoted membership list in the act.",
+          "evidence": "\"Section III, Subsection B shall now read the following:\"",
+          "notes": "Apply the amendment wherever PL 16-119 is carried in the code or statutory history."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "The XML note sits at Title 18 section 1 and labels the law 'Repealed', but the source is an operative amendment to PL 16-119. The amendment must be carried into PL 16-119's text."
+      },
+      "recommended_actions": [
+        "Apply the SEC II amendment to PL 16-119 Section III(B) wherever it is carried.",
+        "Remove the unsupported 'repealed' classification.",
+        "Remove the Trello link."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-017-135",
+      "public_law": "17-135",
+      "title": "Public Law 17-135 | Judicial Bias Protection Act (JBPA)",
+      "status": "current",
+      "status_basis": "Full source present. Section 5 determinably rewrites 28 U.S. Code §144, and Sections 6-7 create new permanent judicial-procedure rules. No self-repeal or sunset.",
+      "provisions": [
+        {
+          "ref": "SEC1-SEC3",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"referred to as 'Judicial Bias Protection Act' or 'JBPA'.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC4",
+          "text_summary": "Defines 'dereliction of duties'.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": null,
+          "exact_change": "Create a new definition section for 'dereliction of duties'.",
+          "evidence": "\"'dereliction of duties' means a judge's failure to perform their obligations...\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC5",
+          "text_summary": "Rewrites 28 U.S. Code §144 (bias/prejudice recusal, affidavit review, reassignment, and 15-day bar).",
+          "classes": ["substitution", "direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t28/s144",
+          "exact_change": "Replace §144 with the SEC5 text.",
+          "evidence": "\"28 U.S.Code §144 shall now read as-\"",
+          "notes": "The heading is OCR-noisy, but the section target is clear."
+        },
+        {
+          "ref": "SEC6",
+          "text_summary": "Hearing-notice and scheduling rules for federal judges.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": null,
+          "exact_change": "Create a new procedural section governing notice, pre-trial timing, waiver, and remedies.",
+          "evidence": "\"Any federal judge presiding over a case must allow each party up to at least twenty-four (24) hours...\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC7",
+          "text_summary": "Bench-inactivity protection; impeachment liability for judges who take no cases within 20 days without notice.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": null,
+          "exact_change": "Create a new section imposing the bench-inactivity rule and impeachment consequence.",
+          "evidence": "\"shall be liable for impeachment for dereliction of duty if they shall not have taken any cases within the last twenty (20) days...\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s1",
+        "detail": "The XML note is only a boilerplate note at Title 28 section 1. The required §144 textual amendment and the new procedural sections were not actually enacted in the XML."
+      },
+      "recommended_actions": [
+        "Amend 28 U.S.C. §144 with the SEC5 replacement text.",
+        "Codify SEC6-7 as new Title 28 procedural sections.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-136",
+      "public_law": "17-136",
+      "title": "Public Law 17-136 | The Parks Act (TPA)",
+      "status": "current",
+      "status_basis": "Full source present. Grants Secret Service primary authority over the President's Park and sets closure/enforcement rules. No self-repeal or sunset; the source supports operative law, not a repeal.",
+      "provisions": [
+        {
+          "ref": "SEC1-SEC3",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"referred to as 'The Parks Act' or 'TPA'.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC4(1)",
+          "text_summary": "Secret Service primary authority over President's Park and White House grounds list.",
+          "classes": ["new-permanent-general", "local-district"],
+          "treatment": "new-section",
+          "target": null,
+          "exact_change": "Create a new protective-authority section listing the White House grounds and the Secret Service's primary authority.",
+          "evidence": "\"The Secret Service shall have primary authority over the entirety of the President's Park...\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC4(2)-(5)",
+          "text_summary": "Permanent closure rules, emergency closures, public notice, and 48-hour limit.",
+          "classes": ["new-permanent-general", "local-district"],
+          "treatment": "new-section",
+          "target": null,
+          "exact_change": "Create a new section governing closures, notices, and duration limits for the listed areas.",
+          "evidence": "\"E-Street Closed, State Place, Hamilton Place, EisenHower Executive Office Building, Treasury Department, The White House shall be permanently closed...\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC5(1)-(2)",
+          "text_summary": "Other law-enforcement secondary authority and entry/closure enforcement rules.",
+          "classes": ["new-permanent-general", "local-district"],
+          "treatment": "new-section",
+          "target": null,
+          "exact_change": "Create a new section describing secondary law-enforcement authority and Secret Service entry permission rules.",
+          "evidence": "\"Law enforcement agencies, except the Secret Service, shall have secondary authority over the President's Park.\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t54/s100101/b/2",
+        "detail": "The draft note is anchored in Title 54 section 100101(b)(2) and falsely labels the law repealed. The source supports an operative protective-authority law, so the note is misanchored and misclassified."
+      },
+      "recommended_actions": [
+        "Remove the unsupported repeal claim.",
+        "Codify the Secret Service authority and closure rules in a more apt protective-authority location rather than a bare Title 54 note.",
+        "Remove the Trello link."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-017-137",
+      "public_law": "17-137",
+      "title": "Public Law 17-137 | Federal Background Check Act",
+      "status": "current",
+      "status_basis": "Full source present. Free-standing federal-employment background-check regime with no numbered-Code amendment and no self-repeal.",
+      "provisions": [
+        {
+          "ref": "SEC I",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"This Act may be cited as the 'Federal Background Check Act'.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC II",
+          "text_summary": "Definitions of background check and federal agencies.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": null,
+          "exact_change": "Create a new definitions section for background check and federal agencies.",
+          "evidence": "\"Background Check shall be defined as the collection and verification of an individual's information...\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC III",
+          "text_summary": "All federal agencies, including the military, must use FBI-approved background checks; FBI conducts and maintains them.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": null,
+          "exact_change": "Create a new section imposing the agency-wide FBI background-check requirement.",
+          "evidence": "\"All Federal Agencies are to comply with each employee passing a background check approved and signed by the FBI.\"",
+          "notes": "Candidate for Title 5 codification."
+        },
+        {
+          "ref": "SEC IV",
+          "text_summary": "Future federal employment requires a background check; leadership is not exempt; AG waiver and timing rules apply.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": null,
+          "exact_change": "Create a new section making background checks mandatory for future federal employment.",
+          "evidence": "\"the Federal Background Check shall be a requirement in order to acquire employment inside any federal agency...\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC V",
+          "text_summary": "Immediate effective date.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"This bill will take effect immediately after passage...\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The XML note is at Title 50 section 1 and declares the law repealed. The source shows no repeal; the background-check mandate belongs in Title 5, not Title 50."
+      },
+      "recommended_actions": [
+        "Codify SEC III-IV as a new Title 5 employment-requirement section.",
+        "Remove the unsupported repealed status.",
+        "Remove the Trello link."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-017-138",
+      "public_law": "17-138",
+      "title": "Public Law 17-138 | Hatch Act Amendment Act (HA)",
+      "status": "current",
+      "status_basis": "Full source present. Section 5 repeals 5 U.S. Code §7323 and immediately re-enacts it with determinable replacement text. No self-repeal or sunset.",
+      "provisions": [
+        {
+          "ref": "SEC1-SEC3",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"referred to as the 'Hatch Act Amendment Act' or 'HA'.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC4",
+          "text_summary": "Defines 'employee' for the §7323 rewrite.",
+          "classes": ["statutory-note-material"],
+          "treatment": "amendment-note",
+          "target": "/us/usc/t5/s7323",
+          "exact_change": null,
+          "evidence": "\"the term 'employee' means any individual who is currently employed by the federal government...\"",
+          "notes": "Definition applies to the §7323 rewrite."
+        },
+        {
+          "ref": "SEC5(1)",
+          "text_summary": "Repeals 5 U.S. Code §7323 in its entirety.",
+          "classes": ["repeal"],
+          "treatment": "repeal-marking",
+          "target": "/us/usc/t5/s7323",
+          "exact_change": "Repeal §7323, then apply the SEC5(2) replacement text.",
+          "evidence": "\"5 U.S.Code §7323 shall be repealed in its entirety.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC5(2)",
+          "text_summary": "Re-enacts 5 U.S. Code §7323 with political-activity restrictions and exceptions.",
+          "classes": ["substitution", "direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t5/s7323",
+          "exact_change": "Replace §7323 with the SEC5(2) text.",
+          "evidence": "\"5 U.S.Code §7323 shall now read as-\"",
+          "notes": "Full replacement text supplied."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s101",
+        "detail": "The current XML note sits at Title 5 section 101 and does not perform the required repeal-and-replace of §7323."
+      },
+      "recommended_actions": [
+        "Amend 5 U.S.C. §7323 with the SEC5(2) replacement text after repeal-marking.",
+        "Move the note anchor to §7323 and remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-018-139",
+      "public_law": "18-139",
+      "title": "Public Law 18-139 | The Bye Bye Background Checks Act",
+      "status": "unresolved",
+      "status_basis": "Source unrecoverable. law.txt is a Google Drive access-denied page, so no operative repeal text can be authenticated. The title suggests a repeal of the background-check regime, but that cannot be confirmed from the supplied source.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "No statutory text recoverable; only a Drive access-denied page was captured.",
+          "classes": ["non-code"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Sorry, the owner hasn't given you permission to download this file.\"",
+          "notes": "Source-limited; the manifest's dump reference is to unrecoverable content."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "The XML note includes an improper quoted-content dump and a Trello link while declaring the law repealed. The true issue is source unavailability, not a confirmed repeal."
+      },
+      "recommended_actions": [
+        "Retain only a source-limited historical note pending authentic source recovery.",
+        "Remove the quoted-content dump and Trello link.",
+        "If authentic text is recovered and it repeals PL 17-137, apply repeal-marking to that regime."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-018-140",
+      "public_law": "18-140",
+      "title": "Public Law 18-140 | Federal Employment Act of 2023",
+      "status": "unresolved",
+      "status_basis": "Source unrecoverable. law.txt is the Google Drive permission-denial page, so no operative employment text is available.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "No statutory text recoverable; only a Drive access-denied page was captured.",
+          "classes": ["non-code"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Only the owner and editors can download this file.\"",
+          "notes": "Source-limited; no recoverable enactment text."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s101",
+        "detail": "The XML note asserts a repeal classification without any recoverable statutory text. The source is unavailable, so the law should remain a source-limited historical note only."
+      },
+      "recommended_actions": [
+        "Retain as a source-limited historical note pending source recovery.",
+        "Remove the Trello link.",
+        "Re-acquire the authentic source before any substantive codification."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-018-141",
+      "public_law": "18-141",
+      "title": "Public Law 18-141 | Foreign Service Act of 2023",
+      "status": "unresolved",
+      "status_basis": "Source effectively unrecoverable. The extracted law.txt is Google Drive viewer chrome/JavaScript with no statutory prose extractable, so no lawful provision-by-provision conclusion can be derived.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "Foreign Service Act PDF whose body text is not present in the extraction; the viewer blocked extraction.",
+          "classes": ["non-code"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Printing is disabled for this file\"",
+          "notes": "Viewer debris only; likely Title 22 material if recovered."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t22/s2651",
+        "detail": "The XML note says 'Current' at Title 22 section 2651, but the source text is unrecoverable viewer debris. The note overstates what the source supports."
+      },
+      "recommended_actions": [
+        "Retain a source-limited historical note only until the PDF text is recovered.",
+        "Re-extract from the underlying PDF; do not invent Foreign Service provisions.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    }
+  ]
+}

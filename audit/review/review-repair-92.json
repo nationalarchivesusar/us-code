@@ -1,0 +1,163 @@
+{
+  "reviewer": "law-auditor-92",
+  "group_index": 92,
+  "law_count": 3,
+  "source_manifest": "audit/manifests/review-repair-92.json",
+  "output_path": "audit/review/review-repair-92.json",
+  "reviewed_against": [
+    "audit/manifests/review-repair-92.json",
+    "audit/primary/batch-09-02.json",
+    "codification/laws/laws/PL-035-253/law.txt",
+    "codification/laws/laws/PL-035-253/metadata.json",
+    "codification/laws/laws/PL-035-255/law.txt",
+    "codification/laws/laws/PL-035-255/metadata.json",
+    "codification/laws/laws/PL-036-259/law.txt",
+    "codification/laws/laws/PL-036-259/metadata.json",
+    "codification/mass_migration/latest/reports/laws/PL-035-253.md",
+    "codification/mass_migration/latest/reports/laws/PL-035-255.md",
+    "codification/mass_migration/latest/reports/laws/PL-036-259.md",
+    "codification/mass_migration/latest/reports/TRELLO-COMMENTS.json"
+  ],
+  "completion_summary": "Resolved the three unreviewed laws as source-grounded non-code/statutory-note entries with complete law-level metadata.",
+  "changed_law_ids": [
+    "PL-035-253",
+    "PL-035-255",
+    "PL-036-259"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-035-253",
+      "public_law": "35-253",
+      "title": "Public Law 35-253 | Nobody Likes Plex (Fiscal Year 25-4) Bill 2025",
+      "final_status": "current",
+      "status_basis": "The enactment is a fiscal-measure/public-law record that the source packet classifies as non-code rather than permanent U.S. Code text.",
+      "provision_disposition": "non-code",
+      "required_code_treatment": "Keep only a non-code historical record; do not insert U.S. Code text.",
+      "current_implementation": {
+        "state": "not-applicable",
+        "xml": "no verified XML placement",
+        "branch_vs_origin": "no current U.S. Code insertion is authorized"
+      },
+      "current_xml_comparison": "No verified XML placement exists because the enactment is classified as non-code material rather than a codifiable title amendment.",
+      "recommended_action": "Retain the enactment as a non-code public-law record and do not synthesize a Code entry.",
+      "chronology_conclusion": "The source packet classifies the act as an appropriation/fiscal measure, so history-only treatment is sufficient.",
+      "confidence": "high",
+      "source_evidence": [
+        "codification/laws/laws/PL-035-253/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-035-253.md",
+        "codification/mass_migration/latest/reports/TRELLO-COMMENTS.json"
+      ],
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "Fiscal-measure enactment classified as non-code material.",
+          "classes": [
+            "non-code"
+          ],
+          "treatment": "non-code",
+          "target": null,
+          "exact_change": "No U.S. Code insertion is authorized.",
+          "evidence": [
+            "codification/laws/laws/PL-035-253/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-035-253.md",
+            "codification/mass_migration/latest/reports/TRELLO-COMMENTS.json"
+          ],
+          "notes": "Retain only as public-law history."
+        }
+      ],
+      "final_legal_status": "active",
+      "approved_code_treatment": "Keep only a non-code historical record; do not insert U.S. Code text.",
+      "exact_change": "No U.S. Code insertion is authorized."
+    },
+    {
+      "law_id": "PL-035-255",
+      "public_law": "35-255",
+      "title": "Public Law 35-255 | Print More Money Act of 2025",
+      "final_status": "current",
+      "status_basis": "The source packet classifies the enactment as a statutory note, not a freestanding positive-law insertion.",
+      "provision_disposition": "statutory-note",
+      "required_code_treatment": "Preserve as a statutory note at 2 U.S.C. § 142e.",
+      "current_implementation": {
+        "state": "note-only",
+        "xml": "no verified XML placement",
+        "branch_vs_origin": "preserve as history-note material"
+      },
+      "current_xml_comparison": "No verified XML placement is shown in the audit materials; the correct treatment is a concise statutory note at 2 U.S.C. § 142e.",
+      "recommended_action": "Keep the enactment as a concise statutory note and do not invent operative positive-law text.",
+      "chronology_conclusion": "The law is current and permanent enough for statutory-note treatment, but the source does not identify a uniquely executable Code amendment.",
+      "confidence": "high",
+      "exact_target": "/us/usc/t2/s142e",
+      "source_evidence": [
+        "codification/laws/laws/PL-035-255/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-035-255.md",
+        "codification/mass_migration/latest/reports/TRELLO-COMMENTS.json"
+      ],
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "Substantive but note-only enactment; no express Code amendment is identified.",
+          "classes": [
+            "statutory-note"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s142e",
+          "exact_change": "Preserve the measure as a statutory note at 2 U.S.C. § 142e.",
+          "evidence": [
+            "codification/laws/laws/PL-035-255/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-035-255.md",
+            "codification/mass_migration/latest/reports/TRELLO-COMMENTS.json"
+          ],
+          "notes": "No unique positive-law placement was identified."
+        }
+      ],
+      "final_legal_status": "active",
+      "approved_code_treatment": "Preserve as a statutory note at 2 U.S.C. § 142e.",
+      "exact_change": "Preserve the measure as a statutory note at 2 U.S.C. § 142e."
+    },
+    {
+      "law_id": "PL-036-259",
+      "public_law": "36-259",
+      "title": "Public Law 36-259 | Run Me My Money Act of 2025",
+      "final_status": "current",
+      "status_basis": "The source packet classifies the enactment as a statutory note, not a freestanding positive-law insertion.",
+      "provision_disposition": "statutory-note",
+      "required_code_treatment": "Preserve as a statutory note at 2 U.S.C. § 142e.",
+      "current_implementation": {
+        "state": "note-only",
+        "xml": "no verified XML placement",
+        "branch_vs_origin": "preserve as history-note material"
+      },
+      "current_xml_comparison": "No verified XML placement is shown in the audit materials; the correct treatment is a concise statutory note at 2 U.S.C. § 142e.",
+      "recommended_action": "Keep the enactment as a concise statutory note and do not invent operative positive-law text.",
+      "chronology_conclusion": "The law is current and permanent enough for statutory-note treatment, but the source does not identify a uniquely executable Code amendment.",
+      "confidence": "high",
+      "exact_target": "/us/usc/t2/s142e",
+      "source_evidence": [
+        "codification/laws/laws/PL-036-259/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-036-259.md",
+        "codification/mass_migration/latest/reports/TRELLO-COMMENTS.json"
+      ],
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "Substantive but note-only enactment; no express Code amendment is identified.",
+          "classes": [
+            "statutory-note"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s142e",
+          "exact_change": "Preserve the measure as a statutory note at 2 U.S.C. § 142e.",
+          "evidence": [
+            "codification/laws/laws/PL-036-259/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-036-259.md",
+            "codification/mass_migration/latest/reports/TRELLO-COMMENTS.json"
+          ],
+          "notes": "No unique positive-law placement was identified."
+        }
+      ],
+      "final_legal_status": "active",
+      "approved_code_treatment": "Preserve as a statutory note at 2 U.S.C. § 142e.",
+      "exact_change": "Preserve the measure as a statutory note at 2 U.S.C. § 142e."
+    }
+  ]
+}

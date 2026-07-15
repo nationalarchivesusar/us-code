@@ -1,0 +1,537 @@
+{
+  "batch": 13,
+  "auditor": "law-auditor-M",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-014-091",
+      "public_law": "14-91",
+      "title": "Public Law 14-91 | Military Code of Military Justice Reform Act of 2023",
+      "status": "unresolved",
+      "status_basis": "The source is a shell/proposed-UCMJ text; it does not supply the substantive military-code rewrite needed to fix a lawful Code disposition.",
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s190d",
+          "exact_change": "Keep only a short historical note; do not infer any UCMJ rewrite.",
+          "evidence": "This act may be referred to as \"Uniform Code of Military Justice Reform Act of 2023\".",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 2",
+          "text_summary": "Defines the act by reference to a proposed UCMJ text that is not supplied.",
+          "classes": ["non-code"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "No executable Code text can be derived from the source.",
+          "evidence": "shall refer to the \"Proposed Uniform Code of Military Justice\"",
+          "notes": "Source-limited shell text."
+        },
+        {
+          "ref": "SEC. 3",
+          "text_summary": "Severability and anti-supersession clause.",
+          "classes": ["severability"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Retain only as historical savings language.",
+          "evidence": "This Act shall be severable",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 4",
+          "text_summary": "Directs immediate application of the proposed UCMJ to all branches.",
+          "classes": ["uncodified-admin-direction", "non-code"],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": "Exclude from Code text; it is an uncodified directive to apply an unspecified proposed UCMJ.",
+          "evidence": "shall be immediately applied to all branches of the U.S. Armed Forces",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 5 (findings)",
+          "text_summary": "Findings on military-justice review and modernization.",
+          "classes": ["findings-or-sense"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep as findings/history only.",
+          "evidence": "It is found that the Uniform Code of Military Justice is an essential component",
+          "notes": "Duplicate SEC 5 numbering in source."
+        },
+        {
+          "ref": "SEC. 5 (enactment)",
+          "text_summary": "Immediate enactment language.",
+          "classes": ["effective-date"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s190d",
+          "exact_change": "If retained, add only a short enactment/effective-date note.",
+          "evidence": "This act shall immediately take effect upon passage",
+          "notes": "Duplicate SEC 5 numbering in source."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-inserted-into-permanent-text",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t10/s1",
+        "detail": "The branch treats the shell as a permanent-note entry instead of flagging that the substantive UCMJ text is absent."
+      },
+      "recommended_actions": [
+        "Keep only a concise historical/source-limited note.",
+        "Do not invent any proposed UCMJ text or positive-law placement."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-092",
+      "public_law": "15-92",
+      "title": "Public Law 15-92 | Commerce and Labor Innovation Initiative Act",
+      "status": "superseded",
+      "status_basis": "PL 31-226 repeals this law in its entirety before codification, so no current Code insertion survives.",
+      "provisions": [
+        {
+          "ref": "SECTION I",
+          "text_summary": "Short title, severability, and effective-date language.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "No current Code insertion; preserve only history.",
+          "evidence": "This Act may be cited as the \"Commerce and Labor Innovation Initiative Act\".",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION II",
+          "text_summary": "General media-license suspension and revocation standards.",
+          "classes": ["new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Superseded before codification; do not insert as current Code text.",
+          "evidence": "The general guidelines for suspension or revocation of media licenses shall be the following",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION III",
+          "text_summary": "Business-license suspension/revocation procedure.",
+          "classes": ["new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Superseded before codification; keep only a historical record.",
+          "evidence": "The procedure for the suspension or revocation of business licenses shall be the following",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "missing",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": "no matching note found in current branch XML or origin/main",
+        "detail": "The law was superseded before codification, and no current XML note or amendment survives."
+      },
+      "recommended_actions": [
+        "Do not insert into the Code.",
+        "Leave only superseded-history treatment."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-093",
+      "public_law": "15-93",
+      "title": "Public Law 15-93 | Checks and Balances Act of 2023",
+      "status": "current",
+      "status_basis": "The act is an operative repealer; nothing in the supplied materials repeals PL 15-93 itself, so it remains current as repeal-history legislation.",
+      "provisions": [
+        {
+          "ref": "SECTION 1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s271",
+          "exact_change": "Keep a concise note only.",
+          "evidence": "This act shall be referred to as the \"Checks and Balances Act of 2023\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 2",
+          "text_summary": "Express repeal of H.R. 10 / Public Law 3-15.",
+          "classes": ["repeal"],
+          "treatment": "repeal-marking",
+          "target": "/us/usc/t2/s271",
+          "exact_change": "Mark PL 3-15 as repealed in the history chain; do not create positive-law text.",
+          "evidence": "H.R. 10 - Admission to United Nations Act or known as Public Law 3-15 shall be repealed in its entirety.",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION 3",
+          "text_summary": "Immediate-effect language.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": "/us/usc/t2/s271",
+          "exact_change": "Keep as a short effective-date note.",
+          "evidence": "This bill will take effect immediately after passage",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t22/s2651",
+        "detail": "The current note is parked in the wrong title and still carries a full quoted-content dump; it should be moved to 2 U.S.C. 271 and explicitly record the repeal of PL 3-15."
+      },
+      "recommended_actions": [
+        "Trim the note to a concise historical entry at 2 U.S.C. 271.",
+        "Apply the repeal history to PL 3-15 explicitly."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-094",
+      "public_law": "15-94",
+      "title": "Public Law 15-94 | Whistleblower Protections Act of 2023",
+      "status": "unresolved",
+      "status_basis": "The PDF is image-only/scanned and no recoverable enactment text is available, so the operative statutory content cannot be verified.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Source-limited historical note only; no readable enactment text was recovered.",
+          "classes": ["non-code", "source-unavailable"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "No verified operative language can be stated.",
+          "evidence": "valid PDF; no extractable text (possibly scanned)",
+          "notes": "No lawful chronology can be fixed from the supplied record."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "A default Title 18 anchor was chosen even though the law is source-limited and no readable enactment text was recovered."
+      },
+      "recommended_actions": [
+        "Keep only a concise source-limited historical note.",
+        "Remove the Trello link and avoid false precision in the codification prose."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-095",
+      "public_law": "15-95",
+      "title": "Public Law 15-95 | An Act to Repeal the White House Protection Act",
+      "status": "unresolved",
+      "status_basis": "The source is unrecoverable, so the repeal target and scope cannot be authenticated.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Historical note only; no operative positive-law amendment can be verified.",
+          "classes": ["history", "repeal"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "No operative positive-law amendment can be stated.",
+          "evidence": "Source deleted or not found",
+          "notes": "The repeal chain cannot be reconstructed from the missing text."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t3/s1",
+        "detail": "The branch note presents a generic repeal-history entry without transparently flagging that the source itself is missing."
+      },
+      "recommended_actions": [
+        "Retain only a source-limited historical note.",
+        "Do not invent operative text or a specific repeal chain."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-096",
+      "public_law": "15-96",
+      "title": "Public Law 15-96 | Prisoner Bail Protection Act",
+      "status": "fully-repealed",
+      "status_basis": "PL 16-113 expressly repeals PL 15-96 in full, so the law belongs in history only.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Historical note only; the later repealer removes any surviving operative effect.",
+          "classes": ["history", "repeal"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep only a concise historical note citing the later repeal.",
+          "evidence": "Public Law 15-96 shall be repealed in its entirety.",
+          "notes": "Later repeal appears in PL 16-113."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "The note is directionally correct, but it should explicitly cite PL 16-113 as the repealer and acknowledge that the original source is missing."
+      },
+      "recommended_actions": [
+        "Keep a concise historical note that cites the later repeal by PL 16-113.",
+        "Remove boilerplate and Trello noise."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-097",
+      "public_law": "15-97",
+      "title": "Public Law 15-97 | Uniform Legal Practice Authority Act",
+      "status": "partially-current",
+      "status_basis": "Title I was later repealed in full, while Title II remains operative and PL 15-105 also partially amended Title I before that repeal.",
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "text_summary": "General provisions: short title, ratification/effective date, and severability.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/s598",
+          "exact_change": "Keep as a statutory note and reflect later-law chronology.",
+          "evidence": "This Act may be cited as the \"Uniform Legal Practice Authority Act of 2023\"",
+          "notes": ""
+        },
+        {
+          "ref": "TITLE I / SEC. 101-103",
+          "text_summary": "Federal Bar Association abolition, apprenticeship/licensing framework, and ULPA establishment.",
+          "classes": ["repeal", "new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "History only; Title I is later repealed and specific subsections were partially amended before repeal.",
+          "evidence": "Title I - LEGAL EXAMINATION AND CERTIFICATION",
+          "notes": "Later law PL 25-184 repeals Title I in full."
+        },
+        {
+          "ref": "TITLE II / SEC. 201-205",
+          "text_summary": "District-court magistracy, limitations, jurisdiction, chief-judge duties, and barred-individual enforcement.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/s598",
+          "exact_change": "Preserve as a current statutory note; Title II remains operative.",
+          "evidence": "TITLE II - UNITED STATES DISTRICT COURT",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t28/s1",
+        "detail": "The current note is boilerplate and does not track the later-law amendments and repeals affecting Title I."
+      },
+      "recommended_actions": [
+        "Replace the boilerplate note with one that records the later amendments and the Title I repeal history.",
+        "Keep the enactment as a Title 28 statutory note."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-098",
+      "public_law": "15-98",
+      "title": "Public Law 15-98 | Inspector General Act (2023)",
+      "status": "current",
+      "status_basis": "The enactment is classified as commemorative/non-Code material, so it remains a public law but does not warrant a U.S. Code insertion.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-2",
+          "text_summary": "Short title and purpose.",
+          "classes": ["short-title", "findings-or-sense"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5/s101",
+          "exact_change": "Keep as statutory-note material.",
+          "evidence": "Inspector General Protection Act of 2023",
+          "notes": "Manifest title is slightly off."
+        },
+        {
+          "ref": "SEC. 3-4",
+          "text_summary": "Establishment of Inspector General offices and appointment/removal rules.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5/s101",
+          "exact_change": "Preserve as a current statutory note; do not convert to positive-law text.",
+          "evidence": "There shall be a head of each Office of Inspector General",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 5-7",
+          "text_summary": "Whistleblower protection, reporting duties, and special circumstances.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5/s101",
+          "exact_change": "Preserve as statutory-note material.",
+          "evidence": "required to give a report to Congress twice a month",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 8-14",
+          "text_summary": "Administrative access, documents, subpoena and investigative powers, audits, complaints, and committee reports.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5/s101",
+          "exact_change": "Keep as a statutory note covering the OIG powers and procedures.",
+          "evidence": "The OIG shall have the authority to issue subpoenas",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 12 (enactment)",
+          "text_summary": "Duplicate enactment clause at the end of the source.",
+          "classes": ["effective-date"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5/s101",
+          "exact_change": "Keep only a short enactment note if needed.",
+          "evidence": "Will be declared law once passed",
+          "notes": "Duplicate SEC numbering in source."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-inserted-into-permanent-text",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s101",
+        "detail": "The note is in the right subject area but still carries a full quoted-content dump, a Trello link, and a misnamed heading."
+      },
+      "recommended_actions": [
+        "Remove the full-text dump and Trello link.",
+        "Keep it as statutory-note material and correct the heading to Inspector General Protection Act of 2023."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-099",
+      "public_law": "15-99",
+      "title": "Public Law 15-99 | Second National Federal Torts Act",
+      "status": "current",
+      "status_basis": "The act is a general and permanent tort statute, and nothing in the supplied materials repeals it; it belongs in the Title 28 note chain.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-4",
+          "text_summary": "Short title, repeal of PL 2-14, severability, and immediate effectiveness.",
+          "classes": ["short-title", "repeal", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/s158",
+          "exact_change": "Preserve as Title 28 note material and explicitly record the repeal of PL 2-14.",
+          "evidence": "Public Law 2-14, the (first) National Federal Torts Act is null and void.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 5-24",
+          "text_summary": "Civil-suit initiation, federal jurisdiction, and the enumerated personal tort causes of action.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/s158",
+          "exact_change": "Keep as statutory-note material covering the civil tort framework.",
+          "evidence": "Any person who is a Citizen of the United States of America shall have the ability to launch a civil lawsuit",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 25-30",
+          "text_summary": "Government-tort rules, defenses, intervention, and individual-capacity liability.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28/s158",
+          "exact_change": "Keep as statutory-note material covering government-tort procedure and defenses.",
+          "evidence": "The Attorney General shall defend all cases against the United States.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s1",
+        "detail": "The Title 28 anchor is sensible, but the branch still needs to repeal-mark PL 2-14 in the prior note chain."
+      },
+      "recommended_actions": [
+        "Record the repeal of PL 2-14 explicitly.",
+        "Keep the act as a Title 28 statutory note."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-100",
+      "public_law": "15-100",
+      "title": "Public Law 15-100 | Employee Rights and Limitations Act (leave, employment, termination)",
+      "status": "current",
+      "status_basis": "The source text is substantive and permanent, and later amendment PL 17-131 confirms that it remains live rather than repealed.",
+      "provisions": [
+        {
+          "ref": "SEC. 1-2",
+          "text_summary": "Short title and definitions.",
+          "classes": ["short-title", "findings-or-sense"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5/s101",
+          "exact_change": "Keep as a Title 5 statutory note.",
+          "evidence": "This Act may be cited as the Employment Rights and Limitations Act.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 3",
+          "text_summary": "Employment limitations and citizenship-based eligibility rules.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5/s101",
+          "exact_change": "Preserve as statutory-note material.",
+          "evidence": "Only persons who are Citizens of the United States are permitted to be employed",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 4-5",
+          "text_summary": "Position classifications and clarifying provisions.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5/s101",
+          "exact_change": "Preserve as statutory-note material.",
+          "evidence": "The following positions are considered \"primary\" positions",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 6",
+          "text_summary": "Employment rights: leave, holidays, hours, commitments, termination notice, anti-discrimination, and civil action.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5/s101",
+          "exact_change": "Preserve as statutory-note material.",
+          "evidence": "Every employee of an agency under the provisions of this Act is entitled to leave",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 7",
+          "text_summary": "Enforcement, penalties, and supervisor misconduct.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5/s101",
+          "exact_change": "Preserve as statutory-note material.",
+          "evidence": "The Attorney General shall detect and investigate all offenses against this Act",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s101",
+        "detail": "The branch incorrectly labels the act as repealed or superseded even though the source and later amendment PL 17-131 show it is operative."
+      },
+      "recommended_actions": [
+        "Correct the status to current.",
+        "Trim the note to a concise Title 5 history entry."
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,645 @@
+{
+  "batch": 14,
+  "auditor": "law-auditor-C",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-018-143",
+      "public_law": "18-143",
+      "title": "Public Law 18-143 | United States Capitol Police Technical Corrections Act",
+      "status": "unresolved",
+      "status_basis": "Source unrecoverable. The extracted law.txt is the Google Drive permission-denial page, so no operative text can be authenticated or safely codified.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "No statutory text recoverable; Drive access-denied page only.",
+          "classes": ["non-code", "source-unavailable"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "No verified operative language can be stated.",
+          "evidence": "\"Sorry, the owner hasn't given you permission to download this file.\"",
+          "notes": "Retain as a source-limited historical note only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "Boilerplate note declares 'Repealed or superseded' without evidence; the true status is source-unrecoverable. Trello link present."
+      },
+      "recommended_actions": [
+        "Retain as a source-limited historical note at /us/usc/t18/s1 pending authentic source recovery.",
+        "Remove the Trello link.",
+        "Re-acquire source; if it corrects the Capitol Police Act chain, sequence accordingly."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-019-144",
+      "public_law": "19-144",
+      "title": "Public Law 19-144 | Public Area Management Act (PAMA)",
+      "status": "current",
+      "status_basis": "Full source present. This is a free-standing statute regulating road and sidewalk closures in the District of Columbia by various agencies, and section 9 repeals specified subsections of Public Law 15-95. No self-repeal or sunset appears in the source.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Short-title, severability, and effective-date note only.",
+          "evidence": "\"referred to as 'Public Area Management Act' or 'PAMA'.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4-5",
+          "text_summary": "Purpose and definitions for district closures, roads, sidewalks, armed forces, and the National Guard.",
+          "classes": ["findings-or-sense", "new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Purpose and definitions note only.",
+          "evidence": "\"The purpose of this act is to prevent abuse by law enforcement in closing roads and sidewalks...\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 6",
+          "text_summary": "Closure authority for armed forces and specified agencies; bar on closing roads around the gun store.",
+          "classes": ["new-permanent-general", "local-district"],
+          "treatment": "new-section",
+          "target": null,
+          "exact_change": "Codify the closure-authority rules as actual text, not a note.",
+          "evidence": "\"When deployed in the district by the President of the United States, the armed forces shall have the authority to close any public roads...\"",
+          "notes": "References PL 17-136 (Parks Act) and PL 17-126 (Special Events Act) as in force."
+        },
+        {
+          "ref": "SEC 7-8",
+          "text_summary": "Permitted reasons for closures, 24-hour limit, and citizen re-entry rules.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": null,
+          "exact_change": "Codify the closure-limit rules as actual text, not a note.",
+          "evidence": "\"Any road closure must be made in the interest of public health, safety, national security...\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 9",
+          "text_summary": "Repeals Public Law 15-95 section VI(2), (3), and (4) in their entirety.",
+          "classes": ["repeal"],
+          "treatment": "repeal-marking",
+          "target": "(PL 15-95 §VI(2)-(4))",
+          "exact_change": "Repeal-mark PL 15-95 §VI(2), (3), and (4).",
+          "evidence": "\"Public Law 15-95, Section VI(2)(3) and (4) shall be repealed in their entirety.\"",
+          "notes": "Apply wherever PL 15-95 is carried."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t54/s100101/b/2",
+        "detail": "Draft inserted only a boilerplate note at the Title 54 anchor and did not make the repeal-marking or permanent textual edits required by the source."
+      },
+      "recommended_actions": [
+        "Apply repeal-marking to PL 15-95 §VI(2)-(4).",
+        "Codify the closure-authority and limitation rules as actual text rather than a note.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-019-145",
+      "public_law": "19-145",
+      "title": "Public Law 19-145 | Military Officer Accountability Act (MOAA)",
+      "status": "current",
+      "status_basis": "Full source present. The Act repeals and replaces multiple Title 10 Chapter 60 officer-separation provisions with determinable replacement text, and nothing in the source repeals the Act itself.",
+      "provisions": [
+        {
+          "ref": "SEC 1-4",
+          "text_summary": "Short title, severability, effective date, and general provision.",
+          "classes": ["short-title", "severability", "effective-date", "uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Short-title and general note only.",
+          "evidence": "\"referred to as the 'Military Officer Accountability Act' or 'MOAA'.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 5(1)",
+          "text_summary": "10 U.S.C. 1181 repealed and replaced.",
+          "classes": ["repeal", "substitution", "direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t10/s1181",
+          "exact_change": "Replace section 1181 with the enacted review-and-show-cause text.",
+          "evidence": "\"10 U.S. Code 1181 shall be repealed in its entirety. 10 U.S. Code 1181 shall now state;\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 5(2)",
+          "text_summary": "10 U.S.C. 1182(a) repealed and replaced.",
+          "classes": ["repeal", "substitution", "direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t10/s1182",
+          "exact_change": "Replace subsection (a) with the enacted board-of-inquiry text.",
+          "evidence": "\"10 U.S. Code 1182(a) shall be repealed in its entirety. 10 U.S. Code 1182(a) shall now state;\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 5(3)",
+          "text_summary": "10 U.S.C. 1184 repealed and replaced.",
+          "classes": ["repeal", "substitution", "direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t10/s1184",
+          "exact_change": "Replace section 1184 with the enacted removal-authority text.",
+          "evidence": "\"10 U.S. Code 1184 shall be repealed in its entirety. 10 U.S. Code 1184 shall now state;\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 5(4)",
+          "text_summary": "10 U.S.C. 1185(a)(1) repealed and replaced.",
+          "classes": ["repeal", "substitution", "direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t10/s1185",
+          "exact_change": "Replace subsection (a)(1) with the enacted notice text.",
+          "evidence": "\"10 U.S. Code 1185(a)(1) shall be repealed in its entirety. 10 U.S. Code 1185(a)(1) shall now state;\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 5(5)",
+          "text_summary": "10 U.S.C. 1186(a) repealed and replaced.",
+          "classes": ["repeal", "substitution", "direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t10/s1186",
+          "exact_change": "Replace subsection (a) with the enacted voluntary-retirement/discharge text.",
+          "evidence": "\"10 U.S. Code 1186(a) shall be repealed in its entirety. 10 U.S. Code 1186(a)(1) shall now state;\"",
+          "notes": "The source labels the replacement '(a)(1)' though the repeal cites '(a)'."
+        },
+        {
+          "ref": "SEC 5(6)",
+          "text_summary": "10 U.S.C. 1187(b) repealed and replaced.",
+          "classes": ["repeal", "substitution", "direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t10/s1187",
+          "exact_change": "Replace subsection (b) with the enacted retired-officer board-composition text.",
+          "evidence": "\"10 U.S. Code 1187(b) shall be repealed in its entirety. 10 U.S. Code 1187(b) shall now read as;\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 6",
+          "text_summary": "10 U.S.C. 1161 repealed and replaced.",
+          "classes": ["repeal", "substitution", "direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t10/s1161",
+          "exact_change": "Replace section 1161 with the enacted dismissal-and-drop-from-rolls text.",
+          "evidence": "\"10 U.S. Code 1161 shall be repealed in its entirety. 10 U.S. Code 1161 shall now read as;\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t10/s101/h",
+        "detail": "Draft placed a boilerplate note at t10/s101/h and did not apply the required textual amendments to 10 U.S.C. 1161, 1181, 1182, 1184, 1185, 1186, or 1187."
+      },
+      "recommended_actions": [
+        "Apply amend-existing-text to 10 U.S.C. 1161, 1181, 1182(a), 1184, 1185(a)(1), 1186(a), and 1187(b).",
+        "Remove the Trello link and re-anchor the notes to the affected sections."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-019-146",
+      "public_law": "19-146",
+      "title": "Public Law 19-146 | Refurbishing the Military Legal System Act",
+      "status": "unresolved",
+      "status_basis": "Source unrecoverable. law.txt is the Google Drive permission-denial page, so no operative text is available for a lawful codification conclusion.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "No statutory text recoverable; Drive access-denied page only.",
+          "classes": ["non-code", "source-unavailable"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "No verified operative language can be stated.",
+          "evidence": "\"Sorry, the owner hasn't given you permission to download this file.\"",
+          "notes": "Retain as a source-limited historical note only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t10/s101/h",
+        "detail": "Boilerplate note declares 'Repealed' without evidence; the true status is source-unrecoverable. Trello link present."
+      },
+      "recommended_actions": [
+        "Retain as a source-limited historical note at /us/usc/t10/s101/h pending authentic source recovery.",
+        "Remove the Trello link.",
+        "Re-acquire source before any Title 10 amendment."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-019-147",
+      "public_law": "19-147",
+      "title": "Public Law 19-147 | Diplomatic Standards Act (DSA)",
+      "status": "repealed",
+      "status_basis": "Full source present, but later PL 31-227 expressly repeals both 8 U.S.C. 1102 and PL 19-147 in its entirety. The act now survives only as history.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Short-title and general note only.",
+          "evidence": "\"referred to as 'Diplomatic Standards Act' or 'DSA'.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4-16",
+          "text_summary": "Purpose, definitions, mission functions, credentials, privileges, immunities, and waiver rules.",
+          "classes": ["findings-or-sense", "new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Codify the diplomatic-relations framework as new sections or a consolidated statutory note.",
+          "evidence": "\"to amend existing US law and adapt the provisions of the Vienna convention on diplomatic relations, 1969...\"",
+          "notes": "Substantial permanent general law with no single supplied Code host."
+        },
+        {
+          "ref": "SEC 17",
+          "text_summary": "Repeals 8 U.S.C. 1102 in its entirety.",
+          "classes": ["repeal"],
+          "treatment": "repeal-marking",
+          "target": "/us/usc/t8/s1102",
+          "exact_change": "Repeal-mark section 1102 in full and preserve the reserved-state chronology.",
+          "evidence": "\"8 U.S. Code 1102 shall be repealed in its entirety.\"",
+          "notes": "Sequence after the valid PL 19-147 reservation of section 1102."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t8/s1101/i/2",
+        "detail": "Draft placed a boilerplate note at t8/s1101/i/2. The act is later repealed by PL 31-227, so the note should remain historical only and must not be treated as active text."
+      },
+      "recommended_actions": [
+        "Retain only as a historical note at /us/usc/t8/s1101/i/2.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-019-148",
+      "public_law": "19-148",
+      "title": "Public Law 19-148 | Badges and Entrapment Act (BEA)",
+      "status": "current",
+      "status_basis": "Full source present. The Act requires badge display and creates an entrapment defense, while only using 18 U.S.C. 1515(a)(4) as a definitional cross-reference and amending no numbered Code section directly.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Short-title and general note only.",
+          "evidence": "\"referred to as the 'Badges and Entrapment Act' or 'BEA'.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Definitions for badge, entrapment, officer, and government official.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t18",
+          "exact_change": "Codify the definitional framework as new Title 18 text rather than a note.",
+          "evidence": "\"The term 'officer' means any member of a law enforcement, or, persons defined in 18 U.S. Code 1515(a)(4).\"",
+          "notes": "18 U.S.C. 1515(a)(4) is a cross-reference only."
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "Badge-display requirement for officers, subject to safety and undercover exceptions.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t18",
+          "exact_change": "Codify the badge-display rule as new Title 18 text.",
+          "evidence": "\"All officers must display a badge when in performance of their official duties...\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 6",
+          "text_summary": "Entrapment defense and penalties for officers who entrap or proceed knowingly.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t18",
+          "exact_change": "Codify the entrapment-defense framework as new Title 18 text.",
+          "evidence": "\"Entrapment shall be an official defence in criminal trials. It shall have two elements to it;\"",
+          "notes": "Candidate for a new Title 18 section."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "Draft placed a boilerplate note at t50/s1 and did not codify the substantive criminal-procedure rules into Title 18."
+      },
+      "recommended_actions": [
+        "Codify sections 4-6 as new Title 18 sections rather than a Title 50 note.",
+        "Remove the Trello link.",
+        "Correct the placement to Title 18."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-019-149",
+      "public_law": "19-149",
+      "title": "Public Law 19-149 | Criminal Justice Reform Act (CJRA)",
+      "status": "current",
+      "status_basis": "Full source present. Section 5 rewrites 18 U.S.C. 3156(a)(3), section 6 repeals Public Law 2-5, and section 7 resets maximum sentences for numerous Title 18 offenses and chapters. Nothing in the source self-repeals the Act itself.",
+      "provisions": [
+        {
+          "ref": "SEC 1-4",
+          "text_summary": "Short title, severability, effective date, and general provision.",
+          "classes": ["short-title", "severability", "effective-date", "uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Short-title and general note only.",
+          "evidence": "\"referred to as the 'Criminal Justice Reform Act' or 'CJRA'.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "18 U.S.C. 3156(a)(3) rewritten so felony means an offense punishable by more than eight days imprisonment.",
+          "classes": ["substitution", "direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t18/s3156",
+          "exact_change": "Replace subsection (a)(3) with the enacted felony-definition text.",
+          "evidence": "\"18 U.S. Code 3156(a)(3) shall now read as-\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 6",
+          "text_summary": "Repeals Public Law 2-5 in its entirety.",
+          "classes": ["repeal"],
+          "treatment": "repeal-marking",
+          "target": "(PL 2-5)",
+          "exact_change": "Repeal-mark PL 2-5 wherever carried.",
+          "evidence": "\"Public Law 2-5 shall be repealed in its entirety.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 7",
+          "text_summary": "Resets maximum imprisonment for many Title 18 provisions and chapters.",
+          "classes": ["substitution", "direct-amendment"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t18",
+          "exact_change": "Apply the specified day-limit changes to each enumerated section and chapter-wide limit.",
+          "evidence": "\"The maximum imprisonment time for U.S. Code 1111, Murder, shall not exceed nine days.\"",
+          "notes": "The chapter-wide and catch-all limits need note-level handling where the source is non-section-specific."
+        },
+        {
+          "ref": "SEC 8",
+          "text_summary": "Forty-day accumulated-sentence cap and judicial enforcement rule.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t18",
+          "exact_change": "Codify the sentence-cap framework as new Title 18 text.",
+          "evidence": "\"No Judge may issue a Judgement that constitutes a sentence longer than forty days...\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "Draft placed a boilerplate note at t18/s1 and did not apply the section 5 rewrite, section 6 repeal-marking, or the section 7 penalty changes."
+      },
+      "recommended_actions": [
+        "Apply amend-existing-text to 18 U.S.C. 3156(a)(3) and the section 7 penalty targets.",
+        "Apply repeal-marking to Public Law 2-5.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-019-150",
+      "public_law": "19-150",
+      "title": "Public Law 19-150 | Small Businesses Empowerment Act",
+      "status": "current",
+      "status_basis": "Full source present. The Act is a free-standing administrative statute directing the Department of Commerce and Labor to establish small-business recognition, employment, and support programs, and it does not self-repeal.",
+      "provisions": [
+        {
+          "ref": "SEC 1",
+          "text_summary": "Short title, which the body text gives as 'Small Business Empowerment and Support Act.'",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Short-title note only.",
+          "evidence": "\"This Act may be cited as the 'Small Business Empowerment and Support Act.'\"",
+          "notes": "The manifest title differs from the body short title."
+        },
+        {
+          "ref": "SEC 2-3",
+          "text_summary": "Purpose and definitions for small-business recognition, employment initiatives, and support services.",
+          "classes": ["findings-or-sense", "new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Purpose and definitions note only.",
+          "evidence": "\"Small businesses are crucial for community economic prosperity...\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Department of Commerce and Labor must establish a Small Business Recognition Program.",
+          "classes": ["new-permanent-general", "uncodified-admin-direction"],
+          "treatment": "new-section",
+          "target": "/us/usc/t15",
+          "exact_change": "Codify the programmatic directive as Title 15 text or a concise statutory note.",
+          "evidence": "\"The Department shall establish a Small Business Recognition Program...\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "Department of Commerce and Labor must initiate a Small Business Employment Initiative.",
+          "classes": ["new-permanent-general", "uncodified-admin-direction"],
+          "treatment": "new-section",
+          "target": "/us/usc/t15",
+          "exact_change": "Codify the employment initiative as Title 15 text or a concise statutory note.",
+          "evidence": "\"The Department shall initiate a Small Business Employment Initiative...\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 6",
+          "text_summary": "Department of Commerce and Labor must establish a Small Business Support Center.",
+          "classes": ["new-permanent-general", "uncodified-admin-direction"],
+          "treatment": "new-section",
+          "target": "/us/usc/t15",
+          "exact_change": "Codify the support-center directive as Title 15 text or a concise statutory note.",
+          "evidence": "\"The Department shall establish a Small Business Support Center within the Department of Commerce and Labor.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 7",
+          "text_summary": "Immediate effective-date clause.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": "Effective-date note only.",
+          "evidence": "\"This Act shall take effect immediately upon passage through both houses of Congress and upon the signature of the President.\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t15/s1",
+        "detail": "Draft placed a boilerplate note at t15/s1 and did not implement the programmatic Department of Commerce and Labor directives as text."
+      },
+      "recommended_actions": [
+        "Codify the small-business programs as Title 15 text or a concise statutory note.",
+        "Reconcile the short-title discrepancy between the body text and the manifest title in editorial notes.",
+        "Remove the Trello link."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-019-151",
+      "public_law": "19-151",
+      "title": "Public Law 19-151 | Court Fees Prohibition and Protection Act (CTPPA)",
+      "status": "current",
+      "status_basis": "Full source present. Section 4 repeals a set of Title 28 fee sections in whole and section 5 imposes a free-standing prohibition on court fees. No self-repeal or sunset appears in the source.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Short-title and general note only.",
+          "evidence": "\"referred to as 'Court Fees Prohibition and Protection Act' or 'CTPPA'\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Repeals the enumerated 28 U.S.C. fee and court-deposit sections in whole, including subsection 1918(b) only.",
+          "classes": ["repeal"],
+          "treatment": "repeal-marking",
+          "target": "/us/usc/t28/s1911, /us/usc/t28/s1913, /us/usc/t28/s1914, /us/usc/t28/s1916, /us/usc/t28/s1917, /us/usc/t28/s1918, /us/usc/t28/s1920, /us/usc/t28/s1921, /us/usc/t28/s1922, /us/usc/t28/s1923, /us/usc/t28/s1924, /us/usc/t28/s1925, /us/usc/t28/s1926, /us/usc/t28/s1930, /us/usc/t28/s1931, /us/usc/t28/s1932, /us/usc/t28/s2041, /us/usc/t28/s2042, /us/usc/t28/s2043, /us/usc/t28/s2045",
+          "exact_change": "Repeal-mark each listed section, with 1918 limited to subsection (b) only and 1932 de-duplicated.",
+          "evidence": "\"28 U.S. Code 1911 shall be repealed in its entirety.\"",
+          "notes": "Reconcile overlapping repeals already reserved by PL 17-133."
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "No court may impose or collect fees except as punishment for a criminal offense or contempt of court; Congress sets any fees.",
+          "classes": ["new-permanent-general"],
+          "treatment": "new-section",
+          "target": "/us/usc/t28",
+          "exact_change": "Codify the fee-prohibition rule as a new Title 28 section.",
+          "evidence": "\"No Court in the United States, including the Supreme Court, shall impose, collect, or otherwise require fees in any of its proceedings unless imposed as a punishment for a criminal offence or contempt of court.\"",
+          "notes": "Candidate for a new Title 28 section."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s1",
+        "detail": "Draft placed a boilerplate note at t28/s1 and did not make the required repeal-markings or codify the section 5 prohibition."
+      },
+      "recommended_actions": [
+        "Apply repeal-marking to each section listed in SEC 4, de-duplicating 1932 and reconciling the PL 17-133 overlap.",
+        "Codify SEC 5 as a new Title 28 section.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-019-152",
+      "public_law": "19-152",
+      "title": "Public Law 19-152 | The Commerce Legislation and Labor Aggravations Reformations (CLEAR)",
+      "status": "repealed",
+      "status_basis": "The source is operative and contains a real replacement of 5 U.S.C. 101, plus repeal and transfer provisions aimed at earlier public laws, but later PL 31-226 expressly repeals PL 19-152 in its entirety. The act now survives only as history.",
+      "provisions": [
+        {
+          "ref": "SEC 1-4",
+          "text_summary": "Short title, purpose, definitions, and general executive-branch framework.",
+          "classes": ["short-title", "findings-or-sense", "new-permanent-general", "uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "General note only for the freestanding department-creation framework.",
+          "evidence": "\"SEC 6. THE DEPARTMENT OF COMMERCE AND LABOR SUBSECTION 6-1. ESTABLISHMENT...\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "Repeals Public Law 4-29 in its entirety.",
+          "classes": ["repeal"],
+          "treatment": "historical-note-only",
+          "target": "PL 4-29",
+          "exact_change": "Record the repeal of Public Law 4-29 as a non-Code historical note.",
+          "evidence": "\"Public Law 4-29 shall be repealed, in its entirety.\"",
+          "notes": "This is uncodified Public Law repeal language, not a direct XML host."
+        },
+        {
+          "ref": "SEC 6",
+          "text_summary": "Repeals and replaces section 13 of Public Law 12-80.",
+          "classes": ["repeal", "substitution"],
+          "treatment": "historical-note-only",
+          "target": "PL 12-80 section 13",
+          "exact_change": "Record the repeal-and-replacement of Public Law 12-80 section 13 as a non-Code historical note.",
+          "evidence": "\"Public Law 12-80 shall be repealed, in its entirety.\"",
+          "notes": "The source operates on an uncodified Public Law section, not a U.S. Code provision."
+        },
+        {
+          "ref": "SEC 7",
+          "text_summary": "Departmental powers, licensing, and enforcement rules.",
+          "classes": ["new-permanent-general", "uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Preserve as a freestanding statutory note unless a later title-specific placement is identified.",
+          "evidence": "\"The Department of Commerce and Labor shall have the authority to regulate and issue permits...\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 8",
+          "text_summary": "Replaces 5 U.S.C. 101 with a six-department list including the Department of Commerce and Labor.",
+          "classes": ["substitution", "direct-amendment"],
+          "treatment": "replace_section_text",
+          "target": "/us/usc/t5/s101",
+          "exact_change": "Replace the executive-departments list with the enacted six-department list.",
+          "evidence": "\"5 U.S. Code 101 shall now state;\"",
+          "notes": "This replacement is later superseded by PL 31-226 in the chronology."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s101",
+        "detail": "The live note remains boilerplate, but later PL 31-226 repeals PL 19-152 in its entirety. The note should remain historical only rather than active executive-departments text."
+      },
+      "recommended_actions": [
+        "Retain only as a historical note at /us/usc/t5/s101.",
+        "Remove the Trello link.",
+        "Do not treat the 5 U.S.C. 101 replacement as current text."
+      ],
+      "confidence": "high"
+    }
+  ]
+}

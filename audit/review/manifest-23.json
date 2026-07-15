@@ -1,0 +1,223 @@
+{
+  "reviewer": "reviewer-23",
+  "group_index": 23,
+  "law_count": 10,
+  "output_path": "audit/review/review-23.json",
+  "laws": [
+    {
+      "law_id": "PL-032-231",
+      "public_law": "32-231",
+      "title": "Public Law 32-231 | District Improvement Act (DIA)",
+      "report_path": "audit/primary/batch-08-02.json",
+      "batch": 8,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC 5",
+        "SEC 7"
+      ],
+      "targets": [
+        "/us/usc/t50/s1",
+        "Public Law 25-181; Public Law 15-105; Public Law 29-216 section 402(iv)",
+        "Public Law 28-205 section 5(b)(i)"
+      ]
+    },
+    {
+      "law_id": "PL-032-232",
+      "public_law": "32-232",
+      "title": "Public Law 32-232 | The Federal Pay Standardization Act",
+      "report_path": "audit/primary/batch-08-03.json",
+      "batch": 8,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 4",
+        "SEC 5(a)"
+      ],
+      "targets": [
+        "/us/usc/t5/s5332"
+      ]
+    },
+    {
+      "law_id": "PL-032-233",
+      "public_law": "32-233",
+      "title": "Public Law 32-233 | Literally Introducing Taxes (LIT)",
+      "report_path": "audit/primary/batch-08-03.json",
+      "batch": 8,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC 5(1)",
+        "SEC 5(2)"
+      ],
+      "targets": [
+        "/us/usc/t26/s1"
+      ]
+    },
+    {
+      "law_id": "PL-032-234",
+      "public_law": "32-234",
+      "title": "Public Law 32-234 | Intelligence Appointment Transparency and Oversight Act",
+      "report_path": "audit/primary/batch-08-03.json",
+      "batch": 8,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC 3(a)(i)-(iii)",
+        "SEC 4(a)"
+      ],
+      "targets": [
+        "/us/usc/t50/s3041",
+        "/us/usc/t50/s3041/b/2"
+      ]
+    },
+    {
+      "law_id": "PL-032-235",
+      "public_law": "32-235",
+      "title": "Public Law 32-235 | Command Responsibility And Noncompliance Enforcement (CRANE) Act",
+      "report_path": "audit/primary/batch-08-03.json",
+      "batch": 8,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 4-5",
+        "SEC 6-7",
+        "SEC 8-10"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-032-236",
+      "public_law": "32-236",
+      "title": "Public Law 32-236 | Military Operational Authority Reform Act",
+      "report_path": "audit/primary/batch-08-03.json",
+      "batch": 8,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC 4(a)",
+        "SEC 5(a)-(d)"
+      ],
+      "targets": [
+        "/us/usc/t10/s153",
+        "/us/usc/t10/s154"
+      ]
+    },
+    {
+      "law_id": "PL-033-238",
+      "public_law": "33-238",
+      "title": "Public Law 33-238 | Conference Oversight of Discipline and Ethics Act",
+      "report_path": "audit/primary/batch-08-03.json",
+      "batch": 8,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 11-14",
+        "SEC 3(a)-(c)",
+        "SEC 4-6",
+        "SEC 7-10"
+      ],
+      "targets": [
+        "PL 25-184; PL 15-97"
+      ]
+    },
+    {
+      "law_id": "PL-034-239",
+      "public_law": "34-239",
+      "title": "Public Law 34-239 | Judicial Recall Act",
+      "report_path": "audit/primary/batch-08-03.json",
+      "batch": 8,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 3(a)",
+        "SEC 4(a)-(b)"
+      ],
+      "targets": [
+        "Public Law 26-190 section 108(c)"
+      ]
+    },
+    {
+      "law_id": "PL-034-240",
+      "public_law": "34-240",
+      "title": "Public Law 34-240 | Literally Fixing Taxes",
+      "report_path": "audit/primary/batch-08-03.json",
+      "batch": 8,
+      "source_status": "superseded",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "direct-action-provision",
+        "missing-target",
+        "status:superseded"
+      ],
+      "provision_refs": [
+        "SEC 4(a)",
+        "SEC 4(b)"
+      ],
+      "targets": [
+        "PL 32-233 section 5(2)"
+      ]
+    },
+    {
+      "law_id": "PL-034-241",
+      "public_law": "34-241",
+      "title": "Public Law 34-241 | Protecting Working Americans",
+      "report_path": "audit/primary/batch-08-03.json",
+      "batch": 8,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "multiple-laws-same-target"
+      ],
+      "provision_refs": [
+        "SEC 3(a)"
+      ],
+      "targets": [
+        "/us/usc/t5/s5332"
+      ]
+    }
+  ]
+}

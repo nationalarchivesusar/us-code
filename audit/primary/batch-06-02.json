@@ -1,0 +1,517 @@
+{
+  "batch": 6,
+  "auditor": "law-auditor-B",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-022-161",
+      "public_law": "22-161",
+      "title": "Public Law 22-161 | Second Chance Act",
+      "status": "current",
+      "status_basis": "Full source present. The Act is a generally applicable employment-and-sealing statute with short title, severability, effective date, private-employment standards, and criminal-record sealing procedures. No express positive-law Code amendment is identified in the source.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title, severability, effective date, and findings.",
+          "classes": ["short-title", "severability", "effective-date", "findings-or-sense"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act may be cited as the \"Second Chance Act.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Employment standards restricting use of old arrest or conviction records, with enumerated exceptions.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Employers ... shall not deny them on the basis of arrest records.",
+          "notes": "General-employment rule, not a numbered Code amendment."
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Petition procedure for sealing criminal records.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Following a conviction for a covered offense, an eligible person may file a petition.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The current note treatment matches the source's general, permanent character. No express Code-text operation is required."
+      },
+      "recommended_actions": [
+        "Retain as a concise statutory note at the closest subject-matter anchor.",
+        "Do not invent a positive-law section amendment.",
+        "Remove the Trello link if still present."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-022-162",
+      "public_law": "22-162",
+      "title": "Public Law 22-162 | Judicial Fairness Act",
+      "status": "current",
+      "status_basis": "Full source present. Section IV expressly amends 28 U.S.C. 1253, 1257, and 1291. Section V directly amends other Public Laws rather than the Code and is out of scope for a Code-text operation. The act itself is not repealed.",
+      "provisions": [
+        {
+          "ref": "SEC I-III",
+          "text_summary": "Short title, severability, effective date, and general provisions.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act may be cited as the \"Judicial Fairness Act.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC IV(1)",
+          "text_summary": "Amends 28 U.S.C. 1253.",
+          "classes": ["direct-amendment", "substitution"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t28/s1253",
+          "exact_change": "Replace section text with the approved Supreme Court review provision.",
+          "evidence": "Section IV(1) of the Act amends 28 U.S.C. 1253.",
+          "notes": "Approved plan exists and is sequenced after PL-17-133."
+        },
+        {
+          "ref": "SEC IV(2)",
+          "text_summary": "Amends 28 U.S.C. 1257.",
+          "classes": ["direct-amendment", "substitution"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t28/s1257",
+          "exact_change": "Replace section text with the approved review-of-final-judgments language.",
+          "evidence": "Section IV(2) of the Act amends 28 U.S.C. 1257.",
+          "notes": "Approved plan exists and is sequenced after PL-17-133."
+        },
+        {
+          "ref": "SEC IV(4)",
+          "text_summary": "Amends 28 U.S.C. 1291.",
+          "classes": ["direct-amendment", "substitution"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t28/s1291",
+          "exact_change": "Replace section text with the approved jurisdiction-of-appeals language.",
+          "evidence": "Section IV(4) of the Act amends 28 U.S.C. 1291.",
+          "notes": "Section IV(3) has no independent Code operation."
+        },
+        {
+          "ref": "SEC V",
+          "text_summary": "Direct amendments to Public Law 17-135 and Public Law 4-32, not to the Code.",
+          "classes": ["direct-amendment", "out-of-code-scope"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section V amends Public Law 17-135 and Public Law 4-32 directly.",
+          "notes": "No Code-text operation available for this phase."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s1",
+        "detail": "The plan is approved but application is deferred. No working-tree Code replacement was confirmed for the three Title 28 targets, and the plan is explicitly dependent on PL-17-133."
+      },
+      "recommended_actions": [
+        "Apply the approved 28 U.S.C. 1253, 1257, and 1291 replacements after PL-17-133.",
+        "Do not create a separate Code operation for Section V.",
+        "Remove the Trello link once the approved plan is applied."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-022-163",
+      "public_law": "22-163",
+      "title": "Public Law 22-163 | Employee's Bill of Rights",
+      "status": "current",
+      "status_basis": "Full source present. The Act creates federal-employee protections, a D.C. District Court appellate mechanism, and penalties for unlawful treatment. No express Code amendment is identified, so it belongs as a statutory note.",
+      "provisions": [
+        {
+          "ref": "SEC 1",
+          "text_summary": "Short title, effective date, conflicting-legislation clause, and definitions.",
+          "classes": ["short-title", "effective-date", "savings", "definitions"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act may go into effect upon its signature of ratification by the President.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 2",
+          "text_summary": "False-termination and retaliation rules for federal employees.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "No officer or employee of the United States shall take any personnel action.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Worker's Appellate Body and D.C. District Court jurisdiction.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The United States District Court for the District of Columbia shall have original jurisdiction.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Criminal penalties for prohibited personnel actions.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Any person who performs a personnel action prohibited under Section 2 ... shall be imprisoned.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s101",
+        "detail": "The current note treatment is directionally correct because the Act is a general federal-employment statute with no unique positive-law section target."
+      },
+      "recommended_actions": [
+        "Keep it as a statutory note at the closest employment-law anchor.",
+        "Do not force a fabricated Code amendment.",
+        "Remove any stale Trello reference if still attached."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-022-164",
+      "public_law": "22-164",
+      "title": "Public Law 22-164 | Streamlining and Protecting American Security Act",
+      "status": "current",
+      "status_basis": "Full source present. Claude's classification report preserved the act as a statutory note because no uniquely executable Code amendment exists. The report specifically places it at 50 U.S.C. 3352d. The current XML anchor is off-target if left at Title 18.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title, definitions, and introductory security terms.",
+          "classes": ["short-title", "definitions"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This act may be cited as the \"Streamlining and Protecting American Security Act.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "ODNI authority, counterintelligence, clearance controls, reporting, and automated clearances.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The Office of the Director of National Intelligence shall be the sole authority.",
+          "notes": "General national-security statute rather than a sectional Code rewrite."
+        },
+        {
+          "ref": "SEC 4-5",
+          "text_summary": "Severability and effective date.",
+          "classes": ["severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act shall become effective immediately upon enactment.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "anchor-mismatch",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "The act should remain a statutory note, but the authoritative report places it at 50 U.S.C. 3352d. Leaving it at Title 18 would misstate the subject-matter anchor."
+      },
+      "recommended_actions": [
+        "Relocate the statutory note to 50 U.S.C. 3352d.",
+        "Keep the act as note-only; do not invent positive-law section text.",
+        "Remove any stale Title 18 anchor or Trello reference."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-023-165",
+      "public_law": "23-165",
+      "title": "Public Law 23-165 | 2nd Amendment Protection Act (2APA)",
+      "status": "current",
+      "status_basis": "Full source present. Section 4(1) expressly amends 18 U.S.C. 930(g)(1), and Section 4(2) is a rule of construction with no independent host section. The act itself is not repealed.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act may be cited as the \"2nd Amendment Protection Act.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4(1)",
+          "text_summary": "Repeals and replaces 18 U.S.C. 930(g)(1) with a D.C. roads-and-sidewalks exemption.",
+          "classes": ["direct-amendment", "substitution"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t18/s930/g/1",
+          "exact_change": "Replace subsection (g)(1) text with the enacted Federal-facility definition including the D.C. road and sidewalk exemption.",
+          "evidence": "Section 4(1) amends 18 U.S.C. 930(g)(1).",
+          "notes": "Approved plan exists for this subsection."
+        },
+        {
+          "ref": "SEC 4(2)",
+          "text_summary": "Rule of construction barring overbroad firearm bans in D.C.",
+          "classes": ["rule-of-construction", "new-permanent-general"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "18 U.S.C. 930 ... must not be construed to completely ban firearm ownership.",
+          "notes": "No independent host is identified."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "The approved 18 U.S.C. 930(g)(1) amendment is not confirmed in the working tree. Section 4(2) should remain uncodified absent a clear host section."
+      },
+      "recommended_actions": [
+        "Apply the approved 18 U.S.C. 930(g)(1) replacement text.",
+        "Keep Section 4(2) as a note or commentary only; do not guess a host.",
+        "Remove the Trello link after application."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-023-166",
+      "public_law": "23-166",
+      "title": "Public Law 23-166 | Amended Federal Employment Act of 2023",
+      "status": "repealed",
+      "status_basis": "The source is unrecoverable, and the classification record marks the law as repealed with no Code text changed. No operative statutory text could be reconstructed from the supplied source bundle.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "Source deleted or not found; no operative text recoverable.",
+          "classes": ["non-code"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Source deleted or not found.",
+          "notes": "No lawful Code conclusion can be derived from the missing source."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t5/s101",
+        "detail": "The existing note is historical only. Because the source is unavailable, no Code amendment should be inferred."
+      },
+      "recommended_actions": [
+        "Retain only as a historical note.",
+        "Do not invent or extrapolate any Code operation.",
+        "Keep the source-recovery flag open."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-023-167",
+      "public_law": "23-167",
+      "title": "Public Law 23-167 | Uh Oh Act",
+      "status": "current",
+      "status_basis": "Full source present. The Act repeals Public Law 16-121 in its entirety and contains a broad series-level rule, but it does not self-repeal. It is therefore retained as current statutory history rather than as a positive-law Code rewrite.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, effective date, and background matter.",
+          "classes": ["short-title", "effective-date"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This act shall take effect immediately upon the signature of the President.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Repeals Public Law 16-121 and declares the 16th through 22nd series to remain in effect unless otherwise repealed.",
+          "classes": ["repeal", "new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "(PL 16-121)",
+          "exact_change": "Repeal-mark Public Law 16-121 wherever carried.",
+          "evidence": "Public Law 16-121 shall be repealed in its entirety.",
+          "notes": "The series-wide clause is a rule of construction, not a Code amendment."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The statutory-note treatment is appropriate; the act itself is not self-repealing and no positive-law section text is required."
+      },
+      "recommended_actions": [
+        "Keep as a statutory-history note only.",
+        "Apply repeal-marking to Public Law 16-121 where that act is carried.",
+        "Remove any stale note boilerplate if present."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-023-168",
+      "public_law": "23-168",
+      "title": "Public Law 23-168 | Affirming Innovation Act",
+      "status": "current",
+      "status_basis": "Full source present. Section 3(a) reoccupies 29 U.S.C. 208 with a new FLSA section 8 text, and Section 3(b) is intentionally uncodified because it does not identify a host section. The act itself is not repealed.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and severability.",
+          "classes": ["short-title", "severability"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act may be cited as the \"Affirming Innovation Act.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3(a)",
+          "text_summary": "Inserts a new FLSA section 8 at 29 U.S.C. 208.",
+          "classes": ["direct-amendment", "new-section"],
+          "treatment": "replace_element_xml",
+          "target": "/us/usc/t29/s208",
+          "exact_change": "Replace the bare repealed placeholder with the new limitations on non-compete agreements text and update the title heading.",
+          "evidence": "Section 3(a) amends the Fair Labor Standards Act by inserting a new section 8.",
+          "notes": "Approved plan exists and is already reflected in the working tree."
+        },
+        {
+          "ref": "SEC 3(b)",
+          "text_summary": "Enforcement and penalties for FLSA violations without a clear host section.",
+          "classes": ["uncodified-admin-direction"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 3(b) does not identify a specific subsection or Code host.",
+          "notes": "Leave uncodified."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t29/s208",
+        "detail": "The working tree already contains the reoccupied section 208 note and the heading update. Section 3(b) remains uncodified, which matches the approved plan."
+      },
+      "recommended_actions": [
+        "Keep the section 208 insertion and title update as implemented.",
+        "Do not add a separate operation for Section 3(b).",
+        "Preserve the prior-provisions history."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-023-169",
+      "public_law": "23-169",
+      "title": "Public Law 23-169 | Military Readiness Act",
+      "status": "current",
+      "status_basis": "Full source present. The Act is a general military-readiness statute with short title, severability, effective date, definitions, inspections, oversight, and enforcement, but no express Code amendment. It should be preserved as a statutory note.",
+      "provisions": [
+        {
+          "ref": "SEC 1-4",
+          "text_summary": "Short title, severability, effective date, and definitions.",
+          "classes": ["short-title", "severability", "effective-date", "definitions"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act may be referred to as the \"Military Readiness Act\".",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 5-8",
+          "text_summary": "Inspections, oversight, locations, and enforcement.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The DOD shall require units ... to perform monthly or bi-weekly inspections.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 9",
+          "text_summary": "Immediate effectiveness language.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act shall take effect immediately upon Presidential approval.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t10/s101/h",
+        "detail": "The note-only placement is appropriate, but the current note's source-limitation claim is wrong because the source text is recoverable and usable."
+      },
+      "recommended_actions": [
+        "Retain the statutory note at the Title 10 military anchor.",
+        "Correct the false source-limitation language if it remains in XML.",
+        "Do not create a positive-law section amendment."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-023-170",
+      "public_law": "23-170",
+      "title": "Public Law 23-170 | The Get Around DC Act",
+      "status": "repealed",
+      "status_basis": "The source is a local/District enactment that does not supply a permanent Code amendment and is preserved only as statutory history. The classification record marks it as repealed or superseded.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "Local/District enactment with no positive-law Code target.",
+          "classes": ["local-district", "non-code"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This enactment is preserved as a statutory note.",
+          "notes": "No Code text was changed."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t1/s1",
+        "detail": "The note-only treatment is correct for a local/DC enactment. No permanent positive-law text should be created."
+      },
+      "recommended_actions": [
+        "Keep only as a historical note.",
+        "Do not add positive-law Code text.",
+        "Remove the Trello link if still attached."
+      ],
+      "confidence": "high"
+    }
+  ]
+}

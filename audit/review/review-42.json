@@ -1,0 +1,388 @@
+{
+  "batch": 42,
+  "reviewer": "law-auditor-P",
+  "group_index": 142,
+  "law_count": 19,
+  "source_manifest": "audit/manifests/manifest-42.json",
+  "output_path": "audit/review/review-42.json",
+  "reviewed_against": [
+    "audit/manifests/manifest-42.json",
+    "codification/laws/laws/PL-024-177",
+    "codification/mass_migration/latest/reports/laws/PL-024-177.md",
+    "codification/mass_migration/latest/reports/laws/PL-024-178.md",
+    "codification/mass_migration/latest/reports/laws/PL-025-179.md",
+    "codification/mass_migration/latest/reports/laws/PL-025-180.md",
+    "codification/mass_migration/latest/reports/laws/PL-025-181.md",
+    "codification/mass_migration/latest/reports/laws/PL-025-182.md",
+    "codification/mass_migration/latest/reports/laws/PL-025-183.md",
+    "codification/mass_migration/latest/reports/laws/PL-025-184.md",
+    "codification/mass_migration/latest/reports/laws/PL-025-185.md",
+    "codification/mass_migration/latest/reports/laws/PL-030-221.md",
+    "codification/mass_migration/latest/reports/laws/PL-030-222.md",
+    "codification/mass_migration/latest/reports/laws/PL-030-223.md",
+    "codification/mass_migration/latest/reports/laws/PL-030-224.md",
+    "codification/mass_migration/latest/reports/laws/PL-031-225.md",
+    "codification/mass_migration/latest/reports/laws/PL-031-226.md",
+    "codification/mass_migration/latest/reports/laws/PL-031-227.md",
+    "codification/mass_migration/latest/reports/laws/PL-031-228.md",
+    "codification/mass_migration/latest/reports/laws/PL-031-229.md",
+    "codification/mass_migration/latest/reports/laws/PL-032-230.md",
+    "audit/chronology-report.json",
+    "audit/current-implementation.json",
+    "usc/usc01.xml",
+    "usc/usc02.xml",
+    "usc/usc05.xml",
+    "usc/usc08.xml",
+    "usc/usc28.xml",
+    "usc/usc29.xml",
+    "usc/usc31.xml",
+    "usc/usc42.xml",
+    "usc/usc46.xml",
+    "usc/usc50.xml",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-024-177",
+      "public_law": "24-177",
+      "title": "Public Law 24-177 | SS Jurisdiction Act",
+      "final_legal_status": "source-unavailable-history-only",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "No executable text recovered; retain as a source-limited history note only.",
+      "chronology_conclusion": "The source is unrecoverable and the law is treated as repealed/superseded history, so there is no executable Code change to carry forward.",
+      "source_evidence": [
+        "codification/laws/laws/PL-024-177/metadata.json marks the source unrecoverable.",
+        "codification/mass_migration/latest/reports/laws/PL-024-177.md reports no readable source text and no code operation.",
+        "audit/chronology-report.json supplies no later executable target for this act."
+      ],
+      "current_xml_comparison": "The branch only supports history-only handling; there is no verified operative insertion to compare against origin/main.",
+      "final_recommended_action": "Keep only a concise historical note and do not invent operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-024-178",
+      "public_law": "24-178",
+      "title": "Public Law 24-178 | Equality in Employment Act",
+      "final_legal_status": "already-incorporated",
+      "approved_code_treatment": "amend-existing-text",
+      "exact_target": "/us/usc/t42/s2000e-2",
+      "exact_enacted_text_or_amendment_command": "Replace 'sex, or national origin' with 'sex, gender identity, sexual orientation, or national origin' in 42 U.S.C. 2000e-2(a)(1) and (a)(2).",
+      "chronology_conclusion": "Chronology points to Title 42 section 2000e-2 as the executable home, and the act is already incorporated there; no later law in this review displaces that Title 42 amendment.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-024-178.md classifies the act as ALREADY_INCORPORATED and cites 42 U.S.C. 2000e-2.",
+        "audit/chronology-report.json groups the law to /us/usc/t42/s2000e-2.",
+        "usc/usc42.xml contains the amended text and the Pub. L. 24-178 amendment note."
+      ],
+      "current_xml_comparison": "Current branch text in usc/usc42.xml includes the added protected classes; origin/main does not show that Title 42 amendment, and usc/usc29.xml does not show a matching PL-024-178 note on text search.",
+      "final_recommended_action": "Keep the Title 42 amendment, and clean up any stale or mis-anchored codification note handling.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-179",
+      "public_law": "25-179",
+      "title": "Public Law 25-179 | Fiscal Year 21-2",
+      "final_legal_status": "statutory-note",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t2/s4501",
+      "exact_enacted_text_or_amendment_command": "Record a temporary statutory note at 2 U.S.C. 4501 suspending the COLA adjustment for fiscal year 21-2.",
+      "chronology_conclusion": "This is a temporary appropriations-style measure that belongs in a note at 2 U.S.C. 4501, not as permanent positive-law text.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-025-179.md classifies the act as STATUTORY_NOTE at 2 U.S.C. 4501.",
+        "audit/chronology-report.json pairs this target with PL-031-229 at the same 2 U.S.C. 4501 anchor.",
+        "usc/usc31.xml carries the note record for this law."
+      ],
+      "current_xml_comparison": "The current branch keeps the law as a note in usc31.xml; origin/main does not materially change the legal conclusion that the executable home is Title 2 section 4501.",
+      "final_recommended_action": "Keep it as a concise statutory note only.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-180",
+      "public_law": "25-180",
+      "title": "Public Law 25-180 | Sanction Repealment Act",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "No operative Code text; retain repeal history only.",
+      "chronology_conclusion": "The law is repealed/superseded history, so it should not produce any current Code amendment.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-025-180.md classifies the enactment as NONOPERATIVE_OR_REPEALED.",
+        "No executable Code citation is reported in the law report.",
+        "The chronology report gives no current positive-law target for this act."
+      ],
+      "current_xml_comparison": "No live Code insertion is required; the branch should remain historical only.",
+      "final_recommended_action": "Keep the repeal history and do not generate operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-181",
+      "public_law": "25-181",
+      "title": "Public Law 25-181 | Federal District of Columbia Criminal Code",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t40/s101/4",
+      "exact_enacted_text_or_amendment_command": "Retain as District of Columbia repeal history only; do not convert the local code into federal positive-law text.",
+      "chronology_conclusion": "This is a local D.C. criminal code that the canonical record treats as repealed, so the federal Code should only preserve history.",
+      "source_evidence": [
+        "codification/laws/laws/PL-025-181/metadata.json and related classification files mark it repealed/local.",
+        "codification/mass_migration/latest/reports/laws/PL-025-181.md gives no federal positive-law insertion.",
+        "The current implementation inventory places the history note in usc40.xml."
+      ],
+      "current_xml_comparison": "The branch keeps the law as a historical or note-only item in usc40.xml; origin/main does not change the fact that no federal positive-law insertion is warranted.",
+      "final_recommended_action": "Keep only a historical note and preserve the repeal classification.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-182",
+      "public_law": "25-182",
+      "title": "Public Law 25-182 | Pentagon Expansion and National Territory Authorization Act",
+      "final_legal_status": "source-unavailable-history-only",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t10/s101/h",
+      "exact_enacted_text_or_amendment_command": "No recoverable operative text; retain only a source-limited historical record.",
+      "chronology_conclusion": "The authoritative source is deleted or otherwise unavailable, so there is no safe executable amendment to codify.",
+      "source_evidence": [
+        "codification/laws/laws/PL-025-182 reports the source as deleted or not found.",
+        "codification/mass_migration/latest/reports/laws/PL-025-182.md says no readable authenticated enactment text was recovered.",
+        "audit/primary/batch-07-01.json identifies the source as unavailable historical material."
+      ],
+      "current_xml_comparison": "The branch can only support a history note; any current placement is unverifiable without the missing source.",
+      "final_recommended_action": "Leave it historical only until the source is recovered.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-183",
+      "public_law": "25-183",
+      "title": "Public Law 25-183 | Commerce and Labor Advancement Act (CLAA)",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "No duplicate positive-law text; let PL-031-226 control the present Code state.",
+      "chronology_conclusion": "The act was later repealed in full by PL-031-226, so it is no longer an active Code insertion candidate.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-025-183.md says no current Code insertion is made because PL-031-226 repeals it.",
+        "The law report and chronology both tie the present posture to 5 U.S.C. 101.",
+        "usc/usc29.xml carries the history note record for this law."
+      ],
+      "current_xml_comparison": "The branch keeps only history treatment; origin/main does not alter the repeal-driven conclusion.",
+      "final_recommended_action": "Keep it as historical only and do not duplicate the repealed framework.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-184",
+      "public_law": "25-184",
+      "title": "Public Law 25-184 | Legal Advisors, Representatives, and Professionals Exam Regulations (LARPER)",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "No operative Code text; retain repeal history only.",
+      "chronology_conclusion": "The act was later repealed by PL-033-238, so it stays historical rather than positive-law text.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-025-184.md says PL-033-238 repeals this law.",
+        "No durable federal positive-law insertion is authorized in the report.",
+        "The current implementation inventory places the remaining history note in usc28.xml."
+      ],
+      "current_xml_comparison": "The branch keeps the law as history-only material; origin/main does not change that repeal posture.",
+      "final_recommended_action": "Keep only repeal history and do not emit positive-law text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-025-185",
+      "public_law": "25-185",
+      "title": "Public Law 25-185 | Fiscal Year 21-3",
+      "final_legal_status": "statutory-note",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t2/s4501",
+      "exact_enacted_text_or_amendment_command": "Record a temporary statutory note at 2 U.S.C. 4501 for the fiscal-year suspension and do not promote it to permanent text.",
+      "chronology_conclusion": "Like PL-025-179, this is an appropriations-style temporary enactment that belongs at the 2 U.S.C. 4501 note anchor.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-025-185.md recommends a statutory note at 2 U.S.C. 4501.",
+        "audit/chronology-report.json groups this law with the same 2 U.S.C. 4501 target family.",
+        "usc/usc31.xml contains the current note record."
+      ],
+      "current_xml_comparison": "The branch keeps the note in usc31.xml; origin/main does not change the legal conclusion that this is note-only history.",
+      "final_recommended_action": "Keep it as a concise statutory note only.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-030-221",
+      "public_law": "30-221",
+      "title": "Public Law 30-221 | Judicial Efficiency and Procedure Act",
+      "final_legal_status": "already-incorporated",
+      "approved_code_treatment": "already-incorporated",
+      "exact_target": "/us/usc/t28/s2074",
+      "exact_enacted_text_or_amendment_command": "Preserve the already incorporated rulemaking and transmittal clarification at 28 U.S.C. 2074; no duplicate amendment command.",
+      "chronology_conclusion": "Chronology points to 28 U.S.C. 2074 as the operative home, and the law is already incorporated there.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-030-221.md marks the law ALREADY_INCORPORATED.",
+        "audit/chronology-report.json ties the act to /us/usc/t28/s2074.",
+        "usc/usc28.xml contains the existing rulemaking history note."
+      ],
+      "current_xml_comparison": "The branch carries the rulemaking history note in usc28.xml; origin/main differs in the note payload, but not in the conclusion that the act is already incorporated.",
+      "final_recommended_action": "Do not duplicate the already incorporated text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-030-222",
+      "public_law": "30-222",
+      "title": "Public Law 30-222 | Foreign Intelligence Surveillance Court Establishment Act",
+      "final_legal_status": "source-unavailable-history-only",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t50/s1",
+      "exact_enacted_text_or_amendment_command": "No recoverable operative text; retain only a source-limited historical record.",
+      "chronology_conclusion": "The source was not recoverable, so no executable Code operation can be verified.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-030-222.md reports source unavailable and no authorized code operation.",
+        "No express U.S. Code citation is detected in the report.",
+        "The current implementation inventory places the history record in usc50.xml."
+      ],
+      "current_xml_comparison": "The branch supports only a history note in usc50.xml; origin/main does not supply a better executable anchor.",
+      "final_recommended_action": "Retain only a source-limited historical note.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-030-223",
+      "public_law": "30-223",
+      "title": "Public Law 30-223 | Municipal Transportation Act",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "No operative text; keep repeal history only.",
+      "chronology_conclusion": "The canonical record classifies this as repealed, so it should remain history-only.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-030-223.md classifies the act as NONOPERATIVE_OR_REPEALED.",
+        "No express U.S. Code citation is reported.",
+        "The current implementation inventory places the history record in usc49.xml."
+      ],
+      "current_xml_comparison": "The branch treats the law as history-only; origin/main does not alter that repeal classification.",
+      "final_recommended_action": "Keep only a repeal history note.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-030-224",
+      "public_law": "30-224",
+      "title": "Public Law 30-224 | Vacancies and Acting Officer Reform Act",
+      "final_legal_status": "already-incorporated",
+      "approved_code_treatment": "amend-existing-text",
+      "exact_target": "/us/usc/t5/s3345",
+      "exact_enacted_text_or_amendment_command": "Revise 5 U.S.C. 3345-3349e to shorten the recess-or-adjournment period and update the holdover, exclusion, and nomination-notice rules.",
+      "chronology_conclusion": "The acting-officer framework is already reflected in the Code family at 5 U.S.C. 3345-3349e, so no duplicate insertion is needed.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-030-224.md marks the law ALREADY_INCORPORATED.",
+        "usc/usc05.xml contains the acting-officer family and the related amendment note.",
+        "The current implementation inventory places the branch treatment at /us/usc/t5/s3345."
+      ],
+      "current_xml_comparison": "The branch already contains the revised acting-officer framework; origin/main is not the source of a new executable change.",
+      "final_recommended_action": "Keep the existing framework and do not duplicate the integrated amendments.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-031-225",
+      "public_law": "31-225",
+      "title": "Public Law 31-225 | Collaborative Officer Partnership and Safety (COPS) Act",
+      "final_legal_status": "statutory-note",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t2/s4532",
+      "exact_enacted_text_or_amendment_command": "Record the act as a statutory note at 2 U.S.C. 4532; no permanent positive-law rewrite.",
+      "chronology_conclusion": "The executable anchor is Title 2 section 4532, where the law should remain a note rather than a new positive-law section.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-031-225.md recommends a statutory note at 2 U.S.C. 4532.",
+        "audit/chronology-report.json points to the same Title 2 compensation anchor.",
+        "usc/usc46.xml carries a branch note, but usc/usc02.xml does not show a matching PL-031-225 insertion on text search."
+      ],
+      "current_xml_comparison": "The branch note appears mis-anchored in usc46.xml instead of Title 2; origin/main does not supply a matching corrected Title 2 note.",
+      "final_recommended_action": "Move the note to the proper Title 2 anchor and keep it note-only.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-031-226",
+      "public_law": "31-226",
+      "title": "Public Law 31-226 | Commerce and Labor Administrative Reform Act (CLARA)",
+      "final_legal_status": "already-incorporated",
+      "approved_code_treatment": "already-incorporated",
+      "exact_target": "/us/usc/t5/s101",
+      "exact_enacted_text_or_amendment_command": "Preserve the integrated 5 U.S.C. 101 executive-department change and related repeal history; no duplicate amendment command.",
+      "chronology_conclusion": "Chronology ties the act to 5 U.S.C. 101 and the repeal package, and the operative change is already integrated.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-031-226.md marks the law ALREADY_INCORPORATED.",
+        "audit/chronology-report.json groups PL-031-226 with /us/usc/t5/s101.",
+        "usc/usc05.xml contains the Pub. L. 31-226 amendment note."
+      ],
+      "current_xml_comparison": "The branch carries the integrated executive-department treatment in usc05.xml; origin/main also contains the same code family, with minor note-text differences rather than a new executable rule.",
+      "final_recommended_action": "Keep the integrated section 101 text and do not duplicate the repeal package.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-031-227",
+      "public_law": "31-227",
+      "title": "Public Law 31-227 | Foreign Affairs Representation and Treatment Statute (FARTS)",
+      "final_legal_status": "already-incorporated",
+      "approved_code_treatment": "already-incorporated",
+      "exact_target": "/us/usc/t8/s1102",
+      "exact_enacted_text_or_amendment_command": "Preserve the 8 U.S.C. 1102 repeal/history note; no duplicate positive-law text.",
+      "chronology_conclusion": "The law is already integrated in the 8 U.S.C. 1102 family and should remain as existing code history.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-031-227.md marks the law ALREADY_INCORPORATED.",
+        "audit/chronology-report.json groups PL-031-227 with /us/usc/t8/s1102.",
+        "usc/usc08.xml contains the branch history note for the repeal of section 1102."
+      ],
+      "current_xml_comparison": "The branch keeps the 8 U.S.C. 1102 history note in usc08.xml; origin/main is not the source of a separate executable amendment.",
+      "final_recommended_action": "Keep the section 1102 repeal history and do not duplicate the diplomatic-privileges text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-031-228",
+      "public_law": "31-228",
+      "title": "Public Law 31-228 | Protecting Congressional Authority Act (PCAA)",
+      "final_legal_status": "already-incorporated",
+      "approved_code_treatment": "amend-existing-text",
+      "exact_target": "/us/usc/t2/s192",
+      "exact_enacted_text_or_amendment_command": "Reinstate 2 U.S.C. 192 and preserve the contempt-of-Congress procedure text already integrated in the Code.",
+      "chronology_conclusion": "Chronology and the source report point to reinstatement of section 192, which the Code already reflects.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-031-228.md marks the law ALREADY_INCORPORATED.",
+        "usc/usc02.xml contains the section 192 reinstatement and the related note structure.",
+        "The source text expressly repeals PL-16-112 and reinstates 2 U.S.C. 192."
+      ],
+      "current_xml_comparison": "The branch keeps the reinstated section 192 text in usc02.xml; origin/main differs from the current note/text state.",
+      "final_recommended_action": "Keep the section 192 reinstatement and do not invent new positive-law text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-031-229",
+      "public_law": "31-229",
+      "title": "Public Law 31-229 | Fiscal Year 25-1",
+      "final_legal_status": "source-unavailable-history-only",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t31/s101",
+      "exact_enacted_text_or_amendment_command": "No recoverable operative text; retain only a source-limited history note.",
+      "chronology_conclusion": "The source is unavailable, so there is no safe executable Code change even though it shares the 2 U.S.C. 4501 fiscal-year note family with PL-025-179.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-031-229.md reports source unavailable and no authorized Code operation.",
+        "audit/chronology-report.json groups the law with the 2 U.S.C. 4501 target family.",
+        "usc/usc31.xml carries the current note record."
+      ],
+      "current_xml_comparison": "The branch keeps the law as a note in usc31.xml; origin/main does not supply recoverable source text for a better codification choice.",
+      "final_recommended_action": "Retain only a source-limited historical note.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-032-230",
+      "public_law": "32-230",
+      "title": "Public Law 32-230 | Federal Executive & Senior Leadership Pay Standardization Act of 2025",
+      "final_legal_status": "already-incorporated",
+      "approved_code_treatment": "already-incorporated",
+      "exact_target": "/us/usc/t5/s5332",
+      "exact_enacted_text_or_amendment_command": "Preserve the integrated 5 U.S.C. 5332 General Schedule treatment; no duplicate pay-schedule command.",
+      "chronology_conclusion": "The pay-standardization change is already incorporated at 5 U.S.C. 5332, so no new executable amendment is required.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-032-230.md marks the law ALREADY_INCORPORATED.",
+        "audit/chronology-report.json places the law in the 5 U.S.C. 5332 family.",
+        "usc/usc05.xml contains the General Schedule text and the related note history."
+      ],
+      "current_xml_comparison": "The branch carries the integrated General Schedule treatment in usc05.xml; origin/main differs in note wording/format rather than creating a new executable target.",
+      "final_recommended_action": "Keep the already incorporated General Schedule changes and do not duplicate pay text.",
+      "confidence": "high"
+    }
+  ]
+}

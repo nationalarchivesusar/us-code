@@ -1,0 +1,300 @@
+{
+  "reviewer": "reviewer-08",
+  "group_index": 8,
+  "law_count": 10,
+  "source_manifest": "audit/review/manifest-08.json",
+  "laws": [
+    {
+      "law_id": "PL-011-073",
+      "public_law": "11-73",
+      "title": "Public Law 11-73 | Let Me Act",
+      "manifest_target": "/us/usc/t5",
+      "exact_target": null,
+      "final_statutory_text": "Repealed acting-service enactment; no current operative text remains.",
+      "chronology": "The recovered source is a general acting-service rule, but the authoritative mass report classifies the law as repealed/nonoperative, so it remains history only.",
+      "repeal_transfer_redesignation": "No surviving transfer or redesignation issue remains because the law is treated as repealed history only.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "historical-note-only",
+      "status": "repealed",
+      "status_basis": "The mass report classifies the law as repealed based on the Trello record, and no current Code operation is authorized.",
+      "current_implementation": {
+        "assessment": "misanchored-history-note",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t22/s2651a",
+        "detail": "The note is parked in Title 22 even though the law is repealed history only; a concise historical note is sufficient and no operative codification is needed."
+      },
+      "recommended_actions": [
+        "Keep only a concise repeal-history note.",
+        "Do not codify operative text or a new Title 5 section."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-012-074",
+      "public_law": "12-74",
+      "title": "Public Law 12-74 | Federal Bar Association Act of 2023",
+      "manifest_target": "/us/usc/t5",
+      "exact_target": "/us/usc/t5",
+      "final_statutory_text": "New executive-branch Federal Bar Association statute establishing the Association and its administrative functions.",
+      "chronology": "Current enactment; no later superseding repeal was found in the reviewed materials. The repeal in section 3 is a historical repeal of prior Public Law 7-47, not a repeal of this act.",
+      "repeal_transfer_redesignation": "Section 3 is a repeal of a prior public law only; sections 4 and 5 create new Title 5 organic provisions and do not transfer existing Code text.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": true,
+      "note_treatment_legally_sufficient": false,
+      "decision": "operative-text-required",
+      "status": "current",
+      "status_basis": "Sections 4-5 establish a generally applicable permanent executive-branch entity, and no later repeal of the act was identified.",
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The current XML treatment is a boilerplate note at a Title 50 anchor, but the act needs real Title 5 codification for the new association and its governing provisions."
+      },
+      "recommended_actions": [
+        "Remove the full-text dump and Trello link from the note.",
+        "Codify sections 4 and 5 as new Title 5 organic provisions.",
+        "Record the repeal of Public Law 7-47 as historical repeal context only."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-012-075",
+      "public_law": "12-75",
+      "title": "Public Law 12-75 | Freedom of Information Common Sense Act",
+      "manifest_target": "/us/usc/t5",
+      "exact_target": "/us/usc/t5/s552",
+      "final_statutory_text": "Direct amendment to 5 U.S.C. section 552 shortening FOIA response and appeal deadlines to four days.",
+      "chronology": "Current enactment; no later superseding repeal was found in the reviewed materials.",
+      "repeal_transfer_redesignation": "No repeal or transfer issue; the act directly replaces text in 5 U.S.C. section 552.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": false,
+      "decision": "operative-text-required",
+      "status": "current",
+      "status_basis": "Section 3 expressly replaces text in 5 U.S.C. section 552, so the act is a live Code amendment.",
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t44/s101",
+        "detail": "The current note is parked in Title 44, but the real target is 5 U.S.C. section 552 and the replacement text still needs to be inserted."
+      },
+      "recommended_actions": [
+        "Remove the full-text dump and Trello link from the note.",
+        "Amend 5 U.S.C. section 552(a)(6)(A)(i), (ii), and (ii)(I) with the source language.",
+        "Retain a drafting-cleanup flag for the residual 20-day-period wording."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-012-076",
+      "public_law": "12-76",
+      "title": "Public Law 12-76 | Removing Idiocy Act",
+      "manifest_target": null,
+      "exact_target": null,
+      "final_statutory_text": "Source unavailable; no operative statutory text can be verified.",
+      "chronology": "Source-limited. The public-law record is unrecoverable, so no lawful later-law or repeal chronology can be fixed from the source itself.",
+      "repeal_transfer_redesignation": "No determinable repeal, transfer, or redesignation chain could be resolved from the available source.",
+      "standalone_general_permanent": null,
+      "new_code_section_required": null,
+      "note_treatment_legally_sufficient": true,
+      "decision": "source-limited-historical-note",
+      "status": "unresolved",
+      "status_basis": "The manifest marks the source as unrecoverable because access was revoked or denied and no statutory text was extracted.",
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t1/s1",
+        "detail": "A boilerplate note and Trello link were parked at Title 1 even though the source is genuinely unavailable; the review should preserve only an honest source-limited history note."
+      },
+      "recommended_actions": [
+        "Retain only a concise source-limited historical note.",
+        "Remove any default title placement if no operative text can be recovered."
+      ],
+      "confidence": "low"
+    },
+    {
+      "law_id": "PL-012-077",
+      "public_law": "12-77",
+      "title": "Public Law 12-77 | Preventing Abuse and Promoting Democracy Act",
+      "manifest_target": null,
+      "exact_target": null,
+      "final_statutory_text": "Source unavailable; no operative statutory text can be verified.",
+      "chronology": "Source-limited. The archive does not provide recoverable statutory text, so no lawful chronology beyond note-only treatment can be fixed from the source itself.",
+      "repeal_transfer_redesignation": "No determinable repeal, transfer, or redesignation chain could be resolved from the available source.",
+      "standalone_general_permanent": null,
+      "new_code_section_required": null,
+      "note_treatment_legally_sufficient": true,
+      "decision": "source-limited-historical-note",
+      "status": "unresolved",
+      "status_basis": "The manifest marks the source as unrecoverable because it was deleted or not found and no statutory text was extracted.",
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t1/s1",
+        "detail": "A boilerplate note and Trello link were parked at Title 1 even though the source is unavailable; the review should preserve only an honest source-limited history note."
+      },
+      "recommended_actions": [
+        "Retain only a concise source-limited historical note.",
+        "Replace the boilerplate with an honest statement that the source was deleted or not found."
+      ],
+      "confidence": "low"
+    },
+    {
+      "law_id": "PL-012-078",
+      "public_law": "12-78",
+      "title": "Public Law 12-78 | Balancing Executive Act",
+      "manifest_target": null,
+      "exact_target": null,
+      "final_statutory_text": "Source unavailable; no operative statutory text can be verified.",
+      "chronology": "Source-limited. The archive does not provide recoverable statutory text, so no lawful chronology beyond note-only treatment can be fixed from the source itself.",
+      "repeal_transfer_redesignation": "No determinable repeal, transfer, or redesignation chain could be resolved from the available source.",
+      "standalone_general_permanent": null,
+      "new_code_section_required": null,
+      "note_treatment_legally_sufficient": true,
+      "decision": "source-limited-historical-note",
+      "status": "unresolved",
+      "status_basis": "The manifest marks the source as unrecoverable because it was deleted or not found and no statutory text was extracted.",
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t1/s1",
+        "detail": "A boilerplate note and Trello link were parked at Title 1 even though the source is unavailable; the review should preserve only an honest source-limited history note."
+      },
+      "recommended_actions": [
+        "Retain only a concise source-limited historical note.",
+        "Replace the boilerplate with an honest statement that the source was deleted or not found."
+      ],
+      "confidence": "low"
+    },
+    {
+      "law_id": "PL-012-079",
+      "public_law": "12-79",
+      "title": "Public Law 12-79 | Anti-Terrorism Act of 2023",
+      "manifest_target": null,
+      "exact_target": null,
+      "final_statutory_text": "Source unavailable; no operative statutory text can be verified.",
+      "chronology": "Source-limited. The recovered material is only an inaccessible or permission-denied attachment, so no lawful chronology beyond note-only treatment can be fixed from the source itself.",
+      "repeal_transfer_redesignation": "No determinable repeal, transfer, or redesignation chain could be resolved from the available source.",
+      "standalone_general_permanent": null,
+      "new_code_section_required": null,
+      "note_treatment_legally_sufficient": true,
+      "decision": "source-limited-historical-note",
+      "status": "unresolved",
+      "status_basis": "The source record is unavailable because no readable authenticated enactment text could be recovered from the card, its attachments, or its description.",
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "A boilerplate note and Trello link were parked at Title 18 even though the source is unavailable; the review should preserve only an honest source-limited history note."
+      },
+      "recommended_actions": [
+        "Retain only a concise source-limited historical note.",
+        "Replace the boilerplate with an honest statement that the source could not be recovered."
+      ],
+      "confidence": "low"
+    },
+    {
+      "law_id": "PL-012-080",
+      "public_law": "12-80",
+      "title": "Public Law 12-80 | Government Labor Management Act",
+      "manifest_target": "/us/usc/t5",
+      "exact_target": null,
+      "final_statutory_text": "Historical labor-management enactment; later repealed in full before codification.",
+      "chronology": "The mass report identifies the act as superseded before codification, and later enactment PL-031-226 repeals Public Law 12-80 in its entirety.",
+      "repeal_transfer_redesignation": "Complete repeal by PL-031-226 leaves no surviving transfer or redesignation requiring operative text.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "historical-note-only",
+      "status": "repealed",
+      "status_basis": "PL-031-226 repeals Public Law 12-80 in its entirety, so no current Code insertion is authorized.",
+      "current_implementation": {
+        "assessment": "misanchored-history-note",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t29/s201",
+        "detail": "The retained note is parked in Title 29 and still carries a source dump, but the law is repealed history only and should not be codified as operative labor law."
+      },
+      "recommended_actions": [
+        "Keep only a concise repeal-history note.",
+        "Do not codify any Title 5 labor-management chapter for this repealed act."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-012-081",
+      "public_law": "12-81",
+      "title": "Public Law 12-81 | The Integrity Act",
+      "manifest_target": "/us/usc/t22",
+      "exact_target": "/us/usc/t2/s6567",
+      "final_statutory_text": "Statutory-note enactment at 2 U.S.C. section 6567 governing Senate consultation before certain treaty or organization withdrawals.",
+      "chronology": "Current enactment; no later repeal was found in the reviewed materials.",
+      "repeal_transfer_redesignation": "No repeal or transfer issue; the rule is treated as a statutory note at 2 U.S.C. section 6567.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "note-only",
+      "status": "current",
+      "status_basis": "The act is a general and permanent enactment, but the canonical report treats it as a statutory note at 2 U.S.C. section 6567.",
+      "current_implementation": {
+        "assessment": "misanchored-note",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t22/s2651a",
+        "detail": "The current XML note is in Title 22, but the canonical anchor is 2 U.S.C. section 6567; the note form is legally sufficient once moved to the correct anchor."
+      },
+      "recommended_actions": [
+        "Move the note to 2 U.S.C. section 6567.",
+        "Keep the treatment as a statutory note, not operative text."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-012-082",
+      "public_law": "12-82",
+      "title": "Public Law 12-82 | Military Officer Commissioning Reform Act 2023",
+      "manifest_target": "/us/usc/t10",
+      "exact_target": "/us/usc/t10/s531, /us/usc/t10/s12203, /us/usc/t10/s12204, and /us/usc/t10/s151",
+      "final_statutory_text": "Direct-amendment military-officer commissioning reform; 10 U.S.C. section 531, section 12203, and section 151 are amended and section 12204 is repealed.",
+      "chronology": "Current enactment; no later repealer was found in the reviewed materials. The current XML reflects only the section 151 change, so the other section amendments still need codification.",
+      "repeal_transfer_redesignation": "Section 5(a) is a repeal of an existing Code section, while sections 4, 5(b), and 9(a) are direct amendments to existing sections. No redesignation issue remains.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": false,
+      "decision": "partially-implemented",
+      "status": "current",
+      "status_basis": "Sections 4, 5(a), 5(b), and 9(a) directly amend existing Title 10 provisions, and the law remains operative.",
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t10/s151",
+        "detail": "The current XML only reflects the section 151 change; the amendments to sections 531, 12203, and 12204 still need to be reflected in the code set."
+      },
+      "recommended_actions": [
+        "Codify the section 531, 12203, and 151 amendments and the section 12204 repeal.",
+        "Keep the existing section 151 note as amendment history, but do not treat it as the whole act."
+      ],
+      "confidence": "high"
+    }
+  ]
+}

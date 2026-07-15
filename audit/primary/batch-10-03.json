@@ -1,0 +1,512 @@
+{
+  "batch": 10,
+  "auditor": "law-auditor-L",
+  "report_path": "audit/primary/batch-10-03.json",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-003-021",
+      "public_law": "3-21",
+      "title": "Public Law 3-21 | Effective Judicial Function and General Duties Act",
+      "status": "current",
+      "status_basis": "The enacted source is complete and reviewable, and the codification register places it as a statutory note at 28 U.S.C. § 1658. It remains active, but it does not warrant positive-law text in this batch.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title, severability, and anti-supersession language.",
+          "classes": [
+            "short-title",
+            "severability"
+          ],
+          "treatment": "statutory-note",
+           "target": "/us/usc/t28/s1658",
+           "exact_change": "Keep the source as a statutory note at 28 U.S.C. § 1658; do not recast it as positive-law text.",
+           "evidence": "\"This bill may be cited as \\\"S. 14\\\"\" and \"This Resolution shall be severable\"",
+           "notes": "Housekeeping only."
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Chief Justice administrative duties over the federal judiciary.",
+           "classes": [
+             "new-permanent-general"
+           ],
+           "treatment": "statutory-note",
+           "target": "/us/usc/t28/s1658",
+           "exact_change": "Keep the Chief Justice duty language within the statutory note at 28 U.S.C. § 1658.",
+          "evidence": "\"The Chief Justice shall see that the business of the several courts of the Federal Government is attended with proper dispatch\"",
+          "notes": "Substantive and continuing."
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Reporting requirements to Congress, the President, and the Judicial Conference.",
+           "classes": [
+             "new-permanent-general"
+           ],
+           "treatment": "statutory-note",
+           "target": "/us/usc/t28/s1658",
+           "exact_change": "Keep the reporting language within the statutory note at 28 U.S.C. § 1658.",
+          "evidence": "\"he shall submit a report with the Senate and House Committees on the Judiciary\"",
+          "notes": "Substantive and continuing."
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "Immediate effective date.",
+          "classes": [
+            "effective-date"
+          ],
+          "treatment": "effective-date-note",
+           "target": "/us/usc/t28/s1658",
+           "exact_change": "Retain the immediate-effective-date language as part of the statutory note.",
+           "evidence": "\"This Act shall take effect immediately\"",
+           "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s1658",
+         "detail": "The branch parks the act as a statutory note but still carries a quoted-content dump and archive link. The correct anchor is 28 U.S.C. § 1658, and the note should be trimmed rather than turned into positive-law text."
+      },
+      "recommended_actions": [
+         "Keep the statutory note at 28 U.S.C. § 1658.",
+         "Remove the quoted-content dump and Trello archive link.",
+         "Trim any ancillary material to a concise history note."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-022",
+      "public_law": "3-22",
+      "title": "Public Law 3-22 | District of Columbia Administration Act",
+      "status": "unresolved",
+      "status_basis": "The supplied source is only Google Drive viewer debris and does not recover the enactment text. No lawful substantive conclusion can be drawn from the material provided.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "No operative statutory text recoverable; only viewer/copy-page debris is available.",
+          "classes": [
+            "source-limited",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "\"Copy of District of Columbia City Charter (ammended) - Google Drive\"",
+          "notes": "Do not invent operative language."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "The current note implies a legal conclusion from a debris page. This record should stay source-limited and historical only."
+      },
+      "recommended_actions": [
+        "Retain only a concise source-limited historical note if the archive needs one.",
+        "Do not codify any positive-law text from this record.",
+        "Recover the authentic enactment before any substantive treatment."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-023",
+      "public_law": "3-23",
+      "title": "Public Law 3-23 | Federal Law Enforcement Training Center Establishment Act",
+      "status": "unresolved",
+      "status_basis": "The metadata marks the source unrecoverable and the recovered stub says the source was deleted or not found. Because no enactment text is available, the operative provisions cannot be reconstructed lawfully.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "No recovered statutory text exists.",
+          "classes": [
+            "source-limited",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Reason: Source deleted or not found",
+          "notes": "Keep as a source-limited historical entry only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "The branch treats the law as history only, which is the right posture for an unrecoverable source, but no substantive claim should be inferred."
+      },
+      "recommended_actions": [
+        "Keep only a source-limited historical note.",
+        "Do not infer any missing statutory text or target section.",
+        "Recover the authentic enactment before attempting codification."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-024",
+      "public_law": "3-24",
+      "title": "Public Law 3-24 | Judgeship Reducation Act of 2022",
+      "status": "fully-repealed",
+      "status_basis": "The codification register records this law as repealed/nonoperative with no present code location. The source text is substantive judicial reorganization history only, and the batch should not treat it as live law.",
+      "provisions": [
+        {
+          "ref": "SECTION 1",
+          "text_summary": "Short title, severability, and immediate effective date.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date"
+          ],
+           "treatment": "historical-note-only",
+           "target": "/us/usc/t28",
+           "exact_change": "Keep as repeal-history only; do not treat as current positive law.",
+          "evidence": "\"This piece of legislation shall be referred to as the Judgeship Reduction Act of 2022\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC II",
+          "text_summary": "Sets the Supreme Court at one Chief Justice and four Associate Justices.",
+          "classes": [
+            "new-permanent-general"
+          ],
+           "treatment": "historical-note-only",
+           "target": "/us/usc/t28",
+           "exact_change": "Keep as repeal-history only; do not treat as current positive law.",
+          "evidence": "\"The available number of seats on the United States Supreme Court shall be one (1) Chief Justice and four (4) Associate Justices\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC III-VII",
+          "text_summary": "Closes the courts of appeals, limits the D.C. district court and magistrates, and supersedes conflicting prior law.",
+          "classes": [
+            "repeal",
+            "new-permanent-general"
+          ],
+           "treatment": "historical-note-only",
+           "target": "/us/usc/t28",
+           "exact_change": "Keep as repeal-history only; do not treat as current positive law.",
+          "evidence": "\"The United States Court of Appeals (in any and all circuits) shall be permanently closed\" and \"The Court of Appeals Temporary Suspension Act of 2021 is hereby superseded and repealed in full\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+         "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s1",
+         "detail": "The branch still treats the act like a live amendment candidate, but the codification register records it as repealed/nonoperative and no present code location remains."
+      },
+      "recommended_actions": [
+         "Keep only a concise repeal-history note.",
+         "Remove the quoted-content dump and Trello link from any retained note.",
+         "Do not present this act as current Title 28 text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-025",
+      "public_law": "3-25",
+      "title": "Public Law 3-25 | CRACK Act",
+      "status": "fully-repealed",
+      "status_basis": "Later replacement laws fully displaced the act: PL 38-263 repeals Titles I through IV, and PL 38-264 repeals Titles V and VI and the amendments made by those titles. No live CRACK framework remains to codify.",
+      "provisions": [
+        {
+          "ref": "Titles I-IV",
+          "text_summary": "National security and related framework repealed by later law.",
+          "classes": [
+            "repeal",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t50",
+          "exact_change": "Keep only repeal history; do not retain live text.",
+          "evidence": "\"The National Security Act of 2021 shall be repealed in its entirety\" and later PL 38-263 repeals Titles I through IV.",
+          "notes": "The later replacement act governs this space."
+        },
+        {
+          "ref": "Titles V-VI and amendments",
+          "text_summary": "Racketeering and organized-crime framework repealed and replaced by later law.",
+          "classes": [
+            "repeal",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18",
+          "exact_change": "Keep only repeal history for the Title 18 framework.",
+          "evidence": "PL 38-264 expressly repeals Titles V and VI and the amendments made by them.",
+          "notes": "No CRACK Act implementation should remain as current law."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18 and /us/usc/t50",
+        "detail": "The branch still carries CRACK Act note material, but the later replacement laws repeal the covered frameworks and replace them."
+      },
+      "recommended_actions": [
+        "Remove any live codification treatment for the CRACK Act.",
+        "Retain only concise repeal history at the affected title anchors.",
+        "Do not preserve the full quoted-content dump in permanent text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-027",
+      "public_law": "4-27",
+      "title": "Public Law 4-27 | Right to Security Act of 2022",
+      "status": "fully-repealed",
+      "status_basis": "Later law PL 29-217 expressly says that Public Law 4-27 shall be repealed in its entirety. The source act was substantive private-security and self-defense law, but it now survives only as history.",
+      "provisions": [
+        {
+          "ref": "SECTION I",
+          "text_summary": "Short title, severability, and immediate effective date.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "historical-note-only",
+          "target": "n/a",
+          "exact_change": "Keep only historical context; no positive-law text survives after repeal.",
+          "evidence": "\"This piece of legislation shall be referred to as \\\"Right to Security Act of 2022\\\"\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION II-III",
+          "text_summary": "Definitions and substantive private-security/self-defense rules.",
+          "classes": [
+            "new-permanent-general",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18",
+          "exact_change": "Do not keep this as current Code text because the act has been repealed in full.",
+          "evidence": "\"Private Security\" shall refer to any organization or firm licensed by the U.S. Department of Commerce\" and PL 29-217 repeals the act in full.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "The branch keeps a note where the entire act has already been repealed by PL 29-217."
+      },
+      "recommended_actions": [
+        "Remove any permanent-text treatment.",
+        "Replace with a concise repeal-history note only.",
+        "Do not leave the full source dump in the Code."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-028",
+      "public_law": "4-28",
+      "title": "Public Law 4-28 | House Veterans Affairs Act",
+      "status": "fully-repealed",
+      "status_basis": "The codification register records this law as nonoperative/repealed with no code location. The veterans-policy text survives only as history in this batch.",
+      "provisions": [
+        {
+          "ref": "SECTION II",
+          "text_summary": "Definitions for veteran and honorably discharged.",
+           "classes": [
+             "new-permanent-general"
+           ],
+           "treatment": "historical-note-only",
+           "target": "/us/usc/t38",
+           "exact_change": "Keep as repeal-history only; do not treat as current Title 38 text.",
+          "evidence": "\"Veteran - An individual who has been honorably discharged from the Armed Forces of the United States of America.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION III / SUB-SECTIONS 2-5",
+          "text_summary": "Veterans employment, benefits, counseling, secretary, and reporting provisions.",
+           "classes": [
+             "new-permanent-general",
+             "uncodified-admin-direction"
+           ],
+           "treatment": "historical-note-only",
+           "target": "/us/usc/t38",
+           "exact_change": "Keep as repeal-history only; do not treat as current Title 38 text.",
+          "evidence": "\"To allow for the Department of Veterans Affairs to employ legal aids and attorneys\" and \"The Department of Veterans Affairs shall submit monthly data\"",
+          "notes": "The monthly reporting piece may remain uncodified if the title has no good home for it."
+        }
+      ],
+      "current_implementation": {
+         "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t38/s101/38",
+         "detail": "The codification register records this act as repealed/nonoperative with no code location, so any retained note must be historical only."
+      },
+      "recommended_actions": [
+         "Keep only a concise repeal-history note.",
+         "Remove the quoted-content dump and Trello link.",
+         "Do not present this act as current Title 38 text."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-004-029",
+      "public_law": "4-29",
+      "title": "Public Law 4-29 | Department of Commerce and Labor Act of 2022",
+      "status": "fully-repealed",
+      "status_basis": "Later law PL 31-226 expressly says that Public Law 4-29 shall be repealed in its entirety. The source act established a new executive department and transfer framework, but it no longer remains in force.",
+      "provisions": [
+        {
+          "ref": "SECTION II",
+          "text_summary": "Definitions for Labor, Commerce, Secretary of Commerce and Labor, and President.",
+          "classes": [
+            "definitions",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t29",
+          "exact_change": "Do not keep as current Code text after repeal.",
+          "evidence": "\"SECTION II. DEFINITIONS\"",
+          "notes": "Part of the repealed enactment."
+        },
+        {
+          "ref": "SECTION III-IV",
+          "text_summary": "Transfers and consolidates departments and sets department powers and reporting structure.",
+          "classes": [
+            "transfer",
+            "new-permanent-general",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t29",
+          "exact_change": "Treat the transfer framework as repealed history, not live text.",
+          "evidence": "\"assets, personnel, liabilities, and responsibilities are to be allocated and transferred\" and \"Public Law 4-29 shall be repealed, in its entirety\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t29/s201",
+        "detail": "The branch keeps note material where the enactment has been expressly repealed in full by PL 31-226."
+      },
+      "recommended_actions": [
+        "Remove any live statutory text for this act.",
+        "Keep only a concise repeal-history note if the archive needs one.",
+        "Do not anchor the note as current positive law."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-030",
+      "public_law": "4-30",
+      "title": "Public Law 4-30 | Fugitive Justice Reform Act",
+      "status": "fully-repealed",
+      "status_basis": "Later law PL 29-207 repeals Public Law 4-30. The source act created a fugitive-list and warrant-database regime, but the operative enactment has been displaced and survives only as repeal history.",
+      "provisions": [
+        {
+          "ref": "SECTIONS 1-3",
+          "text_summary": "Short title, purpose, and enactment trigger.",
+          "classes": [
+            "short-title",
+            "effective-date",
+            "purpose"
+          ],
+          "treatment": "historical-note-only",
+          "target": "n/a",
+          "exact_change": "Keep only a concise historical note.",
+          "evidence": "\"Fugitive Justice Reform Act\" and \"This bill shall be enacted once passed through both chambers of Congress and signed by the President\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTIONS 4-7",
+          "text_summary": "Fugitive-list regime, warrant database, removal mechanisms, and repeal of H.R. 4.",
+          "classes": [
+            "new-permanent-general",
+            "repeal",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18 and /us/usc/t28",
+          "exact_change": "Do not keep this as current text because PL 29-207 repeals PL 4-30.",
+          "evidence": "\"The Marshal Services shall maintain the list of persons/parties who are ordered onto The Fugitive List\" and the later repeal entry for PL 4-30 in PL 29-207.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18 and /us/usc/t28",
+        "detail": "The branch still treats the act like a note-only codification candidate, but the later repeal means only repeal history should remain."
+      },
+      "recommended_actions": [
+        "Convert the record to repeal-history only.",
+        "Remove any live-code treatment or broad note dump.",
+        "Keep the repeal of H.R. 4 only as historical context if needed."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-031",
+      "public_law": "4-31",
+      "title": "Public Law 4-31 | Stand Your Ground Act",
+      "status": "fully-repealed",
+      "status_basis": "The archive classifies the enactment as a repealed-law item, and the current record treats it as history only. The source text is a substantive self-defense statute, but it does not remain live positive law in the current archive posture.",
+      "provisions": [
+        {
+          "ref": "SECTION 1-3",
+          "text_summary": "Short title, purpose, and effective date.",
+          "classes": [
+            "short-title",
+            "effective-date",
+            "purpose"
+          ],
+          "treatment": "historical-note-only",
+          "target": "n/a",
+          "exact_change": "Keep only as repeal-history if needed.",
+          "evidence": "\"Stand Your Ground Act\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC. 101-105",
+          "text_summary": "Definitions, justified force, presumptions, exceptions, and criminal entry rules.",
+          "classes": [
+            "new-permanent-general",
+            "historical-note-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18",
+          "exact_change": "Do not keep this as current text because the act is treated as repealed.",
+          "evidence": "\"A person who is in a dwelling or residence in which the person has a right to be has no duty to retreat\"",
+          "notes": "Substantively permanent in form, but not live in the current archive."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The current placement is wrong for a self-defense statute and the branch retains it as if active. It should be historical only and anchored to Title 18 if any note remains."
+      },
+      "recommended_actions": [
+        "Remove any live Code text.",
+        "Move any retained note to a concise historical entry under Title 18.",
+        "Do not keep it at Title 50."
+      ],
+      "confidence": "high"
+    }
+  ]
+}

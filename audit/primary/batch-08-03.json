@@ -1,0 +1,607 @@
+{
+  "batch": 8,
+  "auditor": "law-auditor-F",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-032-232",
+      "public_law": "32-232",
+      "title": "Public Law 32-232 | The Federal Pay Standardization Act",
+      "status": "current",
+      "status_basis": "Source text is complete and reviewable. Section 5 directly amends 5 U.S.C. 5332(a) with a new GS-1 through GS-15 pay table, while Sections 1-4 and 6-7 are uncodified ancillary provisions. No later-law repeal was identified in the materials reviewed.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, definitions, and findings.",
+          "classes": ["short-title", "definitions", "findings-or-sense"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act may be cited as the \"Federal Pay Standardization Act\"; SEC 2 defines terms; SEC 3 states Congress finds that...",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Establishes an Office of Personnel Management framework and director structure.",
+          "classes": ["new-permanent-general", "uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "There is established as an independent establishment in the executive branch an Office of Personnel Management.",
+          "notes": "No determinable numbered Code host is identified in the source text."
+        },
+        {
+          "ref": "SEC 5(a)",
+          "text_summary": "Replaces the 5 U.S.C. 5332(a) General Schedule table with a single-rate GS-1 through GS-15 table.",
+          "classes": ["direct-amendment", "substitution"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t5/s5332",
+          "exact_change": "Strike the existing General Schedule table in subsection (a) and insert the enacted grade/pay table for GS-1 through GS-15.",
+          "evidence": "Section 5(a) says 5 U.S.C. 5332(a) \"is amended by striking the General Schedule and inserting the following\".",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 6",
+          "text_summary": "Implementation and regulations for the new pay system.",
+          "classes": ["uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The Director of the Office of Personnel Management shall take such actions as may be necessary to implement the amendments made by this Act.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 7",
+          "text_summary": "Immediate effective-date clause.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act shall become effective immediately following a majority approval by both the Senate and House of Representatives along with the signature of the President of the United States.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s101",
+        "detail": "The current XML note is anchored at Title 5 section 101 and includes a quoted-content dump, but the required textual rewrite is 5 U.S.C. 5332(a)."
+      },
+      "recommended_actions": [
+        "Apply the 5 U.S.C. 5332(a) text replacement.",
+        "Keep the OPM framework and implementation language as concise statutory-note material if retained.",
+        "Remove the quoted-content dump and Trello link from the note."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-032-233",
+      "public_law": "32-233",
+      "title": "Public Law 32-233 | Literally Introducing Taxes (LIT)",
+      "status": "current",
+      "status_basis": "Source text is complete and reviewable. Section 5 repeals 26 U.S.C. 1 and replaces it with a flat 20 percent tax on the taxable income of every individual. No later-law repeal was identified in the reviewed materials.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This bill shall be referred to by its short title, the \"Literally Introducing Taxes\" act or \"LIT\".",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 5(1)",
+          "text_summary": "Repeals 26 U.S.C. 1 in its entirety.",
+          "classes": ["repeal"],
+          "treatment": "repeal-marking",
+          "target": "/us/usc/t26/s1",
+          "exact_change": "Mark section 1 for repeal and replacement.",
+          "evidence": "SEC 5(1) says \"26 U.S. Code § 1 shall be repealed in its entirety.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 5(2)",
+          "text_summary": "Imposes a flat 20 percent tax on the taxable income of every individual.",
+          "classes": ["direct-amendment", "substitution"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t26/s1",
+          "exact_change": "Replace the prior rate structure with the enacted flat 20 percent individual tax.",
+          "evidence": "SEC 5(2) says, \"There is hereby imposed on the taxable income of every individual a flat tax of 20%.\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t26/s1",
+        "detail": "The current XML carries a section-1 note and an amendment-history note, but it does not perform the required 26 U.S.C. 1 rewrite in positive text."
+      },
+      "recommended_actions": [
+        "Replace 26 U.S.C. 1 with the enacted flat-tax text.",
+        "Retain the short-title and effective-date language only as concise note material.",
+        "Trim the quoted-content dump and remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-032-234",
+      "public_law": "32-234",
+      "title": "Public Law 32-234 | Intelligence Appointment Transparency and Oversight Act",
+      "status": "current",
+      "status_basis": "Source text is complete and reviewable. Section 3 adds new reporting and documentation requirements to 50 U.S.C. 3041, and Section 4 expands the list of positions requiring DNI concurrence under subsection (b)(2). No later-law repeal was identified in the materials reviewed.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and definitions.",
+          "classes": ["short-title", "definitions"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act may be cited as the \"Intelligence Appointment Transparency and Oversight Act\".",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3(a)(i)-(iii)",
+          "text_summary": "Adds DNI nonconcurrence notice, consultation certification, and appointment documentation provisions to 50 U.S.C. 3041.",
+          "classes": ["direct-amendment", "new-subsection"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t50/s3041",
+          "exact_change": "Insert new reporting and documentation provisions into section 3041, including notice to the intelligence committees, consultation certifications, and appointment reporting.",
+          "evidence": "Section 3 says the listed provisions are \"added to §3041 of the current law\".",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4(a)",
+          "text_summary": "Expands the list of positions requiring DNI concurrence under 50 U.S.C. 3041(b)(2).",
+          "classes": ["direct-amendment", "substitution"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t50/s3041/b/2",
+          "exact_change": "Add the enumerated intelligence and military intelligence leadership positions to the concurrence list.",
+          "evidence": "Section 4(a) states that section 3041(b)(2) \"is amended to include the following additional positions\".",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The current XML note is anchored to Title 50 section 1, but the source requires textual amendments to 50 U.S.C. 3041 and a revised subsection (b)(2)."
+      },
+      "recommended_actions": [
+        "Apply the 50 U.S.C. 3041 textual amendments.",
+        "Move or replace the note at the correct section 3041 anchor.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-032-235",
+      "public_law": "32-235",
+      "title": "Public Law 32-235 | Command Responsibility And Noncompliance Enforcement (CRANE) Act",
+      "status": "current",
+      "status_basis": "Source text is complete and reviewable. The act is a generally applicable military policy and enforcement enactment with no determinable positive-law Code host or express Code amendment. It remains operative as current statutory history.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, purpose, and definitions.",
+          "classes": ["short-title", "findings-or-sense", "definitions"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act may be referred to as the \"Command Responsibility and Noncompliance Enforcement Act\" or \"CRANE Act.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4-5",
+          "text_summary": "Commanding-officer accountability and monthly reporting requirements.",
+          "classes": ["new-permanent-general", "uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Commanding Officers are responsible for everything that happens in their unit; every CO must submit a monthly report.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 6-7",
+          "text_summary": "Mandatory training and service-headquarters oversight/enforcement.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Every new Commanding Officer will go through mandatory training; Service Headquarters will review the actions of Commanding Officers regularly.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 8-10",
+          "text_summary": "Whistleblower protection, congressional reporting, and severability.",
+          "classes": ["new-permanent-general", "savings", "severability"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Any military member who reports misconduct in good faith will be protected from retaliation; SEC 10 is severability.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t10/s101/h",
+        "detail": "The XML note is on-topic for Title 10, but it is bloated with a full-text dump and Trello link instead of a concise historical note."
+      },
+      "recommended_actions": [
+        "Keep only a concise military statutory note.",
+        "Do not fabricate a positive-law Code section.",
+        "Remove the quoted-content dump and Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-032-236",
+      "public_law": "32-236",
+      "title": "Public Law 32-236 | Military Operational Authority Reform Act",
+      "status": "current",
+      "status_basis": "Source text is complete and reviewable. Section 4 amends 10 U.S.C. 153 and Section 5 amends 10 U.S.C. 154; Section 3 merely restates existing 10 U.S.C. 152(c) language without changing it. No later-law repeal was identified in the reviewed materials.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and definitions.",
+          "classes": ["short-title", "definitions"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act may be cited as the \"Military Operational Authority Reform Act\".",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Restates the current 10 U.S.C. 152(c) Chairman rule without changing the section text.",
+          "classes": ["statutory-note-material", "non-code"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Annex \"C\" within U.S.C. 152 defines the Chairman ... may not exercise military command over the Joint Chiefs of Staff or any of the armed forces.",
+          "notes": "No textual amendment to 10 U.S.C. 152 is needed."
+        },
+        {
+          "ref": "SEC 4(a)",
+          "text_summary": "Amends 10 U.S.C. 153 by adding Chairman operational-authority language.",
+          "classes": ["direct-amendment", "new-subsection"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t10/s153",
+          "exact_change": "Add the enacted operational-authority language as a new subsection within section 153.",
+          "evidence": "SEC 4 says U.S.C 153 \"shall be added\" with the Chairman's functions language.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 5(a)-(d)",
+          "text_summary": "Amends 10 U.S.C. 154 and adds Vice Chairman functions language.",
+          "classes": ["direct-amendment", "substitution", "new-subsection"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t10/s154",
+          "exact_change": "Revise subsection (f) and add the Vice Chairman functions text as a new subsection.",
+          "evidence": "SEC 5 says the Vice Chairman may exercise military command ... and creates an additional Annex E for Vice Chairman functions.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t10/s101/h",
+        "detail": "The current XML note sits at a title-10 history anchor, but the source requires actual textual amendments to sections 153 and 154; Section 3 should remain note-only."
+      },
+      "recommended_actions": [
+        "Apply the 10 U.S.C. 153 and 154 amendments.",
+        "Leave Section 3 as a concise historical note only.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-033-238",
+      "public_law": "33-238",
+      "title": "Public Law 33-238 | Conference Oversight of Discipline and Ethics Act",
+      "status": "current",
+      "status_basis": "Source text is complete and reviewable. The act establishes the ULPA, repeals prior public laws, and sets out a general legal-licensing framework. It remains operative in the supplied archive and is not shown as wholly repealed by later materials reviewed here.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and purpose.",
+          "classes": ["short-title", "findings-or-sense"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act may be cited as the \"Conference Oversight of Discipline and Ethics Act\", or as the \"CODE Act\".",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3(a)-(c)",
+          "text_summary": "Repeals Public Law 25-184, keeps PL 15-97 repealed, and voids bar-association replacement laws.",
+          "classes": ["repeal", "repeal-marking"],
+          "treatment": "repeal-marking",
+          "target": "PL 25-184; PL 15-97",
+          "exact_change": "Mark PL 25-184 as repealed in full and preserve PL 15-97 title I as already repealed.",
+          "evidence": "Public Law 25-184 shall be repealed in its entirety.",
+          "notes": "The bar-association nullification clause is uncodified history."
+        },
+        {
+          "ref": "SEC 4-6",
+          "text_summary": "Definitions, ULPA establishment, and licensure structure.",
+          "classes": ["definitions", "new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "There shall be a Uniform Legal Practice Authority (ULPA) which shall be established as an independent agency within the Judicial branch.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 7-10",
+          "text_summary": "Ethical rules, education/accreditation, scope of practice, and offenses/enforcement.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The ULPA shall prescribe and publish a comprehensive Professional Code of Conduct; unauthorized practice is penalized.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 11-14",
+          "text_summary": "Office-abeyance, miscellaneous powers, severability, and effective date.",
+          "classes": ["new-permanent-general", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The license ... shall be deemed to be held in abeyance ... This Act shall become effective upon enactment.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The current note is parked at a Title 50 anchor that does not match the subject matter, and it embeds a full-text dump instead of a concise history note."
+      },
+      "recommended_actions": [
+        "Keep the act as a statutory note only.",
+        "Relocate it away from the Title 50 anchor to a judicial/legal-practice anchor if one is used.",
+        "Remove the quoted-content dump and Trello link."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-034-239",
+      "public_law": "34-239",
+      "title": "Public Law 34-239 | Judicial Recall Act",
+      "status": "current",
+      "status_basis": "Source text is complete and reviewable. The act repeals Public Law 26-190 section 108(c) and replaces it with a new temporary-assignment framework for former judges and justices. No later-law repeal was identified in the reviewed materials.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and purpose.",
+          "classes": ["short-title", "findings-or-sense"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act may be cited as the \"Judicial Recall Act\".",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3(a)",
+          "text_summary": "Repeals section 108(c) of Public Law 26-190.",
+          "classes": ["repeal", "repeal-marking"],
+          "treatment": "repeal-marking",
+          "target": "Public Law 26-190 section 108(c)",
+          "exact_change": "Strike section 108(c) of PL 26-190 in full.",
+          "evidence": "Section 108, subsection C of Public Law 26-190 is repealed in its entirety.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4(a)-(b)",
+          "text_summary": "Creates the new temporary-assignment rule and removal terms for former judges and justices.",
+          "classes": ["direct-amendment", "new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Following a majority concurrence ... the Conference may ... place such a person on temporary assignment to the United States District Courts.",
+          "notes": "Source amends prior public-law text rather than a numbered U.S. Code section."
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "Immediate effective-date clause.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act shall become effective upon enactment.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The current note is again parked at a Title 50 anchor and carries a full-text dump, but the substantive repeal-marking should be tied to PL 26-190 section 108(c)."
+      },
+      "recommended_actions": [
+        "Record the PL 26-190 section 108(c) repeal at the source-law home.",
+        "Keep the temporary-assignment rule as concise history/note material only.",
+        "Remove the quoted-content dump and Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-240",
+      "public_law": "34-240",
+      "title": "Public Law 34-240 | Literally Fixing Taxes",
+      "status": "superseded",
+      "status_basis": "The source text is complete and reviewable, but the archive classifies this law as a repealed-recorded historical enactment. It is a later amendment to PL 32-233's tax language, and the current XML note treats it as retained solely for statutory history.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act may be cited as the \"Literally Fixing Taxes\" act or \"LFT\".",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4(a)",
+          "text_summary": "Amends PL 32-233 section 5(2) to raise the flat tax to 28 percent.",
+          "classes": ["direct-amendment", "substitution"],
+          "treatment": "historical-note-only",
+          "target": "PL 32-233 section 5(2)",
+          "exact_change": "Change the flat tax rate from 20% to 28%.",
+          "evidence": "Section 5(2) of H.R. 9 is hereby amended to read: \"There is hereby imposed ... a flat tax of 28%.\"",
+          "notes": "Treat as historical because the archive records the law as superseded."
+        },
+        {
+          "ref": "SEC 4(b)",
+          "text_summary": "Repeals conflicting tax-rate language to the extent of the inconsistency.",
+          "classes": ["repeal"],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "All language in H.R. 9 or any other Act establishing a tax rate inconsistent with this amendment is hereby repealed to the extent of the inconsistency.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t26/s1",
+        "detail": "The current XML treats this law as statutory history rather than live positive text, which matches the archive classification; the remaining cleanup is the quoted-content dump and Trello link."
+      },
+      "recommended_actions": [
+        "Keep this enactment as a historical note only.",
+        "Do not revive it as live positive-law text unless a later source requires it.",
+        "Trim the quoted-content dump and remove the Trello link."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-034-241",
+      "public_law": "34-241",
+      "title": "Public Law 34-241 | Protecting Working Americans",
+      "status": "current",
+      "status_basis": "Source text is complete and reviewable. Section 3 directly revises the pay scale established in the prior pay-standardization law and should be applied as a textual amendment to the existing pay section. No later-law repeal was identified in the reviewed materials.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and severability.",
+          "classes": ["short-title", "severability"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act may be cited as the \"Protecting Working Americans Act\".",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3(a)",
+          "text_summary": "Revises the GS pay scale in the prior pay-standardization act.",
+          "classes": ["direct-amendment", "substitution"],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t5/s5332",
+          "exact_change": "Replace the prior pay table with the new GS-15 through GS-1 pay amounts listed in the source.",
+          "evidence": "Section 5(a) of the Federal Executive & Senior Leadership Pay Standardization Act of 2025 \"shall be amended to read\" the new schedule.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Immediate effective-date clause.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This bill shall take effect immediately upon its passage ... and signature by the President of the United States.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t46/s101",
+        "detail": "The current XML note sits at a Title 46 anchor, but the source requires a textual rewrite of the pay table in the earlier pay-standardization section."
+      },
+      "recommended_actions": [
+        "Apply the revised pay table as a textual amendment to the underlying pay section.",
+        "Do not leave the change as note-only history.",
+        "Remove the quoted-content dump and Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-242",
+      "public_law": "34-242",
+      "title": "Public Law 34-242 | Federal Courthouse Security & Jurisdiction Act",
+      "status": "current",
+      "status_basis": "Source text is complete and reviewable. The act is a local/facilities-specific jurisdiction and security measure with no express positive-law Code amendment, so it is best preserved as statutory-note material rather than permanent section text. No later-law repeal was identified in the reviewed materials.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "This Act may be cited as the \"Federal Courthouse Security and Jurisdiction Act\" or \"FCSJ\".",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4-5",
+          "text_summary": "Defines DOJ headquarters and D.C. federal courthouse property lines.",
+          "classes": ["local-district", "new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The property lines of the United States Department of Justice headquarters ... shall be understood to include...",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 6",
+          "text_summary": "Grants U.S. Marshal Service jurisdiction, security authority, road-closure power, and notice requirements.",
+          "classes": ["local-district", "uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "The United States Marshal Service shall have full authority and jurisdiction over the premises defined in this Act.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "The current anchor is plausibly related to Title 40, but the note still contains a quoted-text dump and should be reduced to a concise facilities/jurisdiction history note."
+      },
+      "recommended_actions": [
+        "Keep the enactment as a concise statutory note.",
+        "Do not create a fabricated positive-law section amendment.",
+        "Remove the quoted-content dump and Trello link."
+      ],
+      "confidence": "high"
+    }
+  ]
+}

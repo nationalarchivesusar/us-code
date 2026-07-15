@@ -1,0 +1,588 @@
+{
+  "batch": 4,
+  "auditor": "law-auditor-C",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-015-111",
+      "public_law": "15-111",
+      "title": "Public Law 15-111 | Presidential Transition Protection Act",
+      "status": "current",
+      "status_basis": "Source is intact and operative. It creates a criminal prohibition on obstructing a presidential transition, adds definitions, and includes severability and effective-date language. Nothing in the supplied set repeals it.",
+      "provisions": [
+        {
+          "ref": "SEC I(a-c)",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t3",
+          "exact_change": "Short-title, severability, and effective-date note.",
+          "evidence": "\"This Act may be cited as the Presidential Transition Protection Act\"; \"This Act shall be severable\"; \"This Act shall become effective\".",
+          "notes": ""
+        },
+        {
+          "ref": "SEC II(a)",
+          "text_summary": "Defines 'Presidential transition'.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t3",
+          "exact_change": "Definition note.",
+          "evidence": "\"Presidential transition shall be defined as:\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC II(b)",
+          "text_summary": "Defines 'President-elect'.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t3",
+          "exact_change": "Definition note.",
+          "evidence": "\"President-elect shall be defined as:\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC II(c)",
+          "text_summary": "Defines 'Obstruction of a Presidential Transition'.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t18",
+          "exact_change": "Definition note for the offense anchor.",
+          "evidence": "\"Obstruction of a Presidential Transition shall be defined as:\"",
+          "notes": "Criminal-offense subject matter also fits title 18."
+        },
+        {
+          "ref": "SEC III(a)",
+          "text_summary": "Makes obstruction of the presidential transition unlawful.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t18",
+          "exact_change": "Add a prohibition on obstructing the presidential transition.",
+          "evidence": "\"it will be prohibited that any individual obstruct the process of the Presidential transition\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC III(b)",
+          "text_summary": "Sets a five-to-seven-day jail term and/or up to a $1,000 fine.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t18",
+          "exact_change": "Penalty note for the offense.",
+          "evidence": "\"minimum sentence of five (5) days imprisonment to a maximum sentence of seven (7) days imprisonment, a fine no higher than one thousand dollars ($1,000) or both\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC III(c)",
+          "text_summary": "Bars no future office disqualification from the conviction.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t18",
+          "exact_change": "No-office-bar note.",
+          "evidence": "\"No individual, if convicted of this act, shall be barred from holding public office in the future\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t49/s101/b/6",
+        "detail": "The note is placed under title 49, which is the wrong subject matter for a presidential-transition criminal-offense statute. Title 3 or title 18 fits better. The note is otherwise a boilerplate statutory note and includes a Trello link."
+      },
+      "recommended_actions": [
+        "Re-anchor from title 49 to title 3 (presidential transition) or title 18 (criminal offense), preferably title 18 for SEC III.",
+        "Replace the boilerplate note with a concise statutory note capturing the transition prohibition, definitions, and penalty.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-016-112",
+      "public_law": "16-112",
+      "title": "Public Law 16-112 | The Contempt of Congress Act",
+      "status": "unresolved",
+      "status_basis": "The supplied attachment is only a Google Drive permission error page, so no operative text is recoverable. The source does not support a lawful conclusion about the act's content.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "Contempt of Congress Act - no operative text recoverable.",
+          "classes": ["non-code"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t2",
+          "exact_change": "None determinable.",
+          "evidence": "\"Sorry, the owner hasn't given you permission to download this file.\"",
+          "notes": "source-defect-nondeterminable."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s1",
+        "detail": "The XML note asserts 'Repealed or superseded' with boilerplate codification prose, but the source is actually unreadable. The note should disclose the source limitation instead of pretending certainty. Trello link present."
+      },
+      "recommended_actions": [
+        "Retain only as a source-limited historical note.",
+        "Remove the Trello link and boilerplate status prose.",
+        "Do not infer any operative text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-016-113",
+      "public_law": "16-113",
+      "title": "Public Law 16-113 | The Bing Bong Act of 2023",
+      "status": "current",
+      "status_basis": "Source is intact and operative, but its sole substantive effect is to repeal PL 15-96 in full. That makes PL 16-113 itself a current repealing statute while PL 15-96 is fully repealed.",
+      "provisions": [
+        {
+          "ref": "SEC 1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t18",
+          "exact_change": "Short-title note.",
+          "evidence": "\"This Act may be cited as the The Bing Bong Act of 2023\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 2(a)",
+          "text_summary": "Repeals PL 15-96 in its entirety.",
+          "classes": ["repeal"],
+          "treatment": "amendment-note",
+          "target": "PL 15-96 (Prisoner Bail Protection Act)",
+          "exact_change": "Repeal-mark PL 15-96 in its entirety.",
+          "evidence": "\"Public Law 15-96 shall be repealed in its entirety.\"",
+          "notes": "In-batch target."
+        },
+        {
+          "ref": "SEC 3(a)",
+          "text_summary": "Effective date.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": "/us/usc/t18",
+          "exact_change": "Effective-date note.",
+          "evidence": "\"This Resolution will take effect immediately after passage\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The current note labels the repealing act itself as repealed or superseded and leaves the repeal of PL 15-96 unimplemented. Title 18 is a better anchor than title 50."
+      },
+      "recommended_actions": [
+        "Apply repeal-marking to PL 15-96 wherever it is codified.",
+        "Replace the boilerplate note with a concise note describing PL 16-113 as a current repealing statute.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-016-114",
+      "public_law": "16-114",
+      "title": "Public Law 16-114 | Amended Ambassadorial Organization and Reporting Act",
+      "status": "current",
+      "status_basis": "Source is intact and operative. Its only substantive effect is an express amendment to PL 15-102 SEC III(e) with determinable strike-and-insert text. Nothing repeals PL 16-114.",
+      "provisions": [
+        {
+          "ref": "SEC I(a-c)",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t22",
+          "exact_change": "Title/severability/effective-date note.",
+          "evidence": "\"This Act may be cited as the Amended Ambassadorial Organization and Reporting Act\"; \"This Act shall be severable\".",
+          "notes": ""
+        },
+        {
+          "ref": "SEC II(a-c)",
+          "text_summary": "Amends PL 15-102 SEC III(e) with new presidential authority and Senate-notification language.",
+          "classes": ["direct-amendment", "substitution"],
+          "treatment": "amendment-note",
+          "target": "PL 15-102 SEC III(e)",
+          "exact_change": "Strike the existing prohibition on creating regional ambassadorships and insert the new presidential authority, notification, and Senate-consent text.",
+          "evidence": "\"Section III, Subsection e shall now read the following:\"; \"The President is the only individual permitted to create more regional ambassadorships posts...\"",
+          "notes": "Determinable in-batch target."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t22/s2651",
+        "detail": "The note is broadly in the right subject area, but it only records the act as a statutory note and does not implement the textual amendment to PL 15-102 SEC III(e)."
+      },
+      "recommended_actions": [
+        "Apply the SEC III(e) substitution to PL 15-102.",
+        "Replace the boilerplate note with an honest amendment note.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-016-115",
+      "public_law": "16-115",
+      "title": "Public Law 16-115 | National Security Threat Mandatory Notification to Congressional Leadership Act",
+      "status": "current",
+      "status_basis": "Source is intact and fully operative. It creates a notification duty for foreign threats, defines terms, and ties noncompliance to 18 U.S.C. 1512. Nothing repeals it.",
+      "provisions": [
+        {
+          "ref": "SEC I(a-c)",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t50",
+          "exact_change": "Title/severability/effective-date note.",
+          "evidence": "\"This Act may be cited as the National Security Threat Mandatory Notification to Congressional Leadership Act\".",
+          "notes": ""
+        },
+        {
+          "ref": "SEC II(a-b)",
+          "text_summary": "Definitions of Congressional Leadership and National Security Threat.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t50",
+          "exact_change": "Definitions note.",
+          "evidence": "\"Congressional Leadership shall be defined as the Speaker of the House...\"; \"National Security Threat shall be defined as\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC III(a-c)",
+          "text_summary": "Mandatory notification duty and onward sharing rules.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t50",
+          "exact_change": "Mandatory-notification duty and information-sharing rules.",
+          "evidence": "\"a designated individual from the Executive Branch shall be in charge of notifying the Congressional Leadership of any threats made by any foreign leader against the United States\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC IV(a)",
+          "text_summary": "Failure-to-notify penalty cross-references 18 U.S.C. 1512.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t18/s1512",
+          "exact_change": "Cross-reference to 18 U.S.C. 1512 only; no textual amendment supplied.",
+          "evidence": "\"shall be classified as a crime under U.S.Code 1512 and shall be prosecuted by the Department of Justice.\"",
+          "notes": "Cross-reference, not an amendment."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "Title 50 is a plausible anchor, but the XML is still boilerplate and does not distinguish the 18 U.S.C. 1512 cross-reference as a reference-only provision. Trello link present."
+      },
+      "recommended_actions": [
+        "Replace the boilerplate note with an honest statutory note under title 50.",
+        "Record the 18 U.S.C. 1512 reference as cross-reference only.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-016-116",
+      "public_law": "16-116",
+      "title": "Public Law 16-116 | Combatant Command Re-establishment Act",
+      "status": "current",
+      "status_basis": "Source is intact and operative. It repeals the OCJCS Reform Act of 2022 / PL 7-48 and re-establishes six Unified Combatant Commands with command-and-control rules. Nothing repeals PL 16-116.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and definitions.",
+          "classes": ["short-title", "new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t10",
+          "exact_change": "Title/definitions note.",
+          "evidence": "\"this act may also be referred to as the Combatant Command Re-establishment Act\"; \"the term Unified Combatant Command\".",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3(a)",
+          "text_summary": "Repeals the OCJCS Reform Act of 2022 in full.",
+          "classes": ["repeal"],
+          "treatment": "amendment-note",
+          "target": "OCJCS Reform Act of 2022 / PL 7-48",
+          "exact_change": "Repeal-mark PL 7-48 in full.",
+          "evidence": "\"the OCJCS Reform Act of 2022 shall be repealed in its entirety.\"",
+          "notes": "Caption also references repeal of Public Law 7-48."
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Severability.",
+          "classes": ["severability"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t10",
+          "exact_change": "Severability note.",
+          "evidence": "\"This Act shall be severable\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 5(a-b)",
+          "text_summary": "Re-establishes six Unified Combatant Commands and makes them the sole commands.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t10",
+          "exact_change": "Establish Cyber, SOCOM, STRATCOM, TRANSCOM, EUCOM, and SPACECOM as the sole combatant commands.",
+          "evidence": "\"the following Unified Combatant Commands shall be established in the United States Military\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 6(a-e)",
+          "text_summary": "Sets jurisdiction and authority rules for combatant commanders, the Chairman, and the Secretary of Defense.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t10",
+          "exact_change": "Reporting chain and operational authority rules.",
+          "evidence": "\"all Combatant Commanders will report directly to the Chairman of the Joint Chiefs of Staff who shall report to the Secretary of Defense.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 7(a-b)",
+          "text_summary": "Superseding clause.",
+          "classes": ["savings"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t10",
+          "exact_change": "Superseding/conflict clause.",
+          "evidence": "\"This bill shall supersede and replace any previous laws\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 8(a)",
+          "text_summary": "Effective date.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": "/us/usc/t10",
+          "exact_change": "Effective-date note.",
+          "evidence": "\"This bill will take effect immediately after passage\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "Declared current status is right, but the XML only adds a note and does not implement the repeal-marking for PL 7-48. Title 50 is a weak anchor for combatant-command law; title 10 fits better."
+      },
+      "recommended_actions": [
+        "Apply repeal-marking to the OCJCS Reform Act of 2022 / PL 7-48.",
+        "Consider re-anchoring toward title 10 combatant-command provisions.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-016-117",
+      "public_law": "16-117",
+      "title": "Public Law 16-117 | The Clean Up Act",
+      "status": "current",
+      "status_basis": "Source is intact and operative. It repeals Senate Joint Resolution 2 and 3; the repealing resolution itself remains current.",
+      "provisions": [
+        {
+          "ref": "SEC 1(a)",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t2",
+          "exact_change": "Short-title note only.",
+          "evidence": "\"This Joint Resolution may be cited as the Clean Up Act of 2023\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 2(a)",
+          "text_summary": "General provision explaining why Senate Joint Resolutions 2 and 3 are being repealed.",
+          "classes": ["findings-or-sense"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t2",
+          "exact_change": "Historical note for the reasoning clause.",
+          "evidence": "\"Senate Joint Resolution 2 and 3 will never be used for their intended purposes and are now hereby rendered useless\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3(a)",
+          "text_summary": "Repeals Senate Joint Resolution 2.",
+          "classes": ["repeal"],
+          "treatment": "historical-note-only",
+          "target": "Senate Joint Resolution 2",
+          "exact_change": "Record repeal of SJRes 2.",
+          "evidence": "\"Senate Joint Resolution 2 ... shall be hereby repealed.\"",
+          "notes": "Not a Code section."
+        },
+        {
+          "ref": "SEC 3(b)",
+          "text_summary": "Repeals Senate Joint Resolution 3.",
+          "classes": ["repeal"],
+          "treatment": "historical-note-only",
+          "target": "Senate Joint Resolution 3",
+          "exact_change": "Record repeal of SJRes 3.",
+          "evidence": "\"Senate Joint Resolution 3 ... shall be hereby repealed.\"",
+          "notes": "Not a Code section."
+        },
+        {
+          "ref": "SEC 4(a)",
+          "text_summary": "Effective date.",
+          "classes": ["effective-date"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t2",
+          "exact_change": "Effective-date note.",
+          "evidence": "\"This Joint Resolution will take effect immediately after passage\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The note mislabels a current repealing resolution as 'Repealed or superseded' and uses a generic title 50 anchor. Because the targets are uncodified joint resolutions, this is a note-cleanup problem, not a textual Code amendment."
+      },
+      "recommended_actions": [
+        "Replace the boilerplate note with a concise historical note.",
+        "Correct the status to current.",
+        "Remove the Trello link.",
+        "Exclude PL 16-117 from permanent Code."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-016-118",
+      "public_law": "16-118",
+      "title": "Public Law 16-118 | The Uniformed Capitol Police Act of 2023",
+      "status": "current",
+      "status_basis": "Source is intact and operative. It repeals H.R. 8013 Section III and replaces that section with a new Capitol Police Board structure and powers. Nothing repeals PL 16-118.",
+      "provisions": [
+        {
+          "ref": "SEC 1",
+          "text_summary": "Short title.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2",
+          "exact_change": "Short-title note.",
+          "evidence": "\"This Act may be cited as the The Uniformed Capitol Police Act of 2023\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 2(a)",
+          "text_summary": "Repeals Section III of H.R. 8013.",
+          "classes": ["repeal"],
+          "treatment": "amendment-note",
+          "target": "H.R. 8013 Section III",
+          "exact_change": "Repeal Section III of H.R. 8013.",
+          "evidence": "\"the following section of H.R. 8013 shall be repealed in its entirety; (i) Section III\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3(a-c)",
+          "text_summary": "Substitutes a new Capitol Police Board section with membership and powers.",
+          "classes": ["substitution", "new-permanent-general", "local-district"],
+          "treatment": "amendment-note",
+          "target": "H.R. 8013 Section III",
+          "exact_change": "Replace Section III with the new Capitol Police Board membership and powers (Speaker, President Pro Tempore, leaders, appointments, two-thirds vote authority, and security powers).",
+          "evidence": "\"Section III shall now state the following\"; \"the following members of Congress shall be apart of the Capitol Police Board\"",
+          "notes": "Capitol Police governance."
+        },
+        {
+          "ref": "SEC 4(a)",
+          "text_summary": "Effective date.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": "/us/usc/t2",
+          "exact_change": "Effective-date note.",
+          "evidence": "\"This Resolution will take effect immediately after passage\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "The XML note sits in title 18, but the operative target is Capitol Police governance under title 2. The repeal and replacement of H.R. 8013 Section III are not implemented; the note is a boilerplate placeholder."
+      },
+      "recommended_actions": [
+        "Apply the repeal/substitution to the Capitol Police Board text at the title 2 anchor.",
+        "Re-anchor from title 18 to title 2.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-016-119",
+      "public_law": "16-119",
+      "title": "Public Law 16-119 | The Criminal Organization Act of 2023",
+      "status": "unresolved",
+      "status_basis": "The supplied source is only a Google Drive permission error page, so no operative statutory text is recoverable. The source does not support a lawful conclusion about the act's content.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "Criminal Organization Act of 2023 - no operative text recoverable.",
+          "classes": ["non-code"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18",
+          "exact_change": "None determinable.",
+          "evidence": "\"Sorry, the owner hasn't given you permission to download this file.\"",
+          "notes": "source-defect-nondeterminable."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "The XML note asserts 'Repealed or superseded' and uses boilerplate codification prose even though the source is an inaccessible-file error. That is too certain for the evidence."
+      },
+      "recommended_actions": [
+        "Retain only as a source-limited historical note.",
+        "Remove the Trello link and boilerplate status prose.",
+        "Do not infer any operative text."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-016-120",
+      "public_law": "16-120",
+      "title": "Public Law 16-120 | The Hail Columbia Act",
+      "status": "unresolved",
+      "status_basis": "The supplied source is only a Google Drive permission error page, so no operative statutory text is recoverable. The title suggests a ceremonial or patriotic measure, but that cannot be confirmed from the source.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "The Hail Columbia Act - no operative text recoverable; likely ceremonial by title.",
+          "classes": ["ceremonial", "non-code"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t36",
+          "exact_change": "None determinable.",
+          "evidence": "\"Sorry, the owner hasn't given you permission to download this file.\"",
+          "notes": "source-defect-nondeterminable; if recovered and ceremonial, exclude-from-code."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t1/s1",
+        "detail": "The XML note labels the source as repealed or superseded and places it at a generic title 1 anchor, but the source is just an unreadable Drive error page. The note should be source-limited instead."
+      },
+      "recommended_actions": [
+        "Retain only as a source-limited historical note.",
+        "If text is later recovered and ceremonial, exclude it from permanent Code text.",
+        "Remove the Trello link and boilerplate prose."
+      ],
+      "confidence": "medium"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "manifest_id": "review-repair-80",
+  "output_path": "audit/review/review-repair-80.json",
+  "purpose": "Targeted re-review of unresolved and incomplete laws.",
+  "laws": [
+    {
+      "law_id": "PL-003-020",
+      "public_law": "3-20",
+      "source_report": "audit/primary/batch-10-02.json",
+      "issue_hint": "current review unresolved"
+    },
+    {
+      "law_id": "PL-003-022",
+      "public_law": "3-22",
+      "source_report": "audit/primary/batch-10-03.json",
+      "issue_hint": "missing source evidence"
+    },
+    {
+      "law_id": "PL-003-023",
+      "public_law": "3-23",
+      "source_report": "audit/primary/batch-10-03.json",
+      "issue_hint": "unsupported source"
+    },
+    {
+      "law_id": "PL-004-032",
+      "public_law": "4-32",
+      "source_report": "audit/primary/batch-11-01.json",
+      "issue_hint": "missing source evidence"
+    }
+  ]
+}

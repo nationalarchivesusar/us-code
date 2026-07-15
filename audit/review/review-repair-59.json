@@ -1,0 +1,455 @@
+{
+  "batch": 59,
+  "reviewer": "review-repair-59",
+  "group_index": 159,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/review-repair-59.json",
+  "output_path": "audit/review/review-repair-59.json",
+  "reviewed_against": [
+    "audit/manifests/manifest-59.json",
+    "audit/primary/batch-12-02.json",
+    "audit/claude-validation.json",
+    "audit/chronology-report.json",
+    "audit/source-index.json",
+    "codification/laws/laws/PL-011-072/law.txt",
+    "codification/laws/laws/PL-011-073/law.txt",
+    "codification/laws/laws/PL-012-074/law.txt",
+    "codification/laws/laws/PL-012-075/law.txt",
+    "codification/laws/laws/PL-012-076/metadata.json",
+    "codification/laws/laws/PL-012-077/metadata.json",
+    "codification/laws/laws/PL-012-078/metadata.json",
+    "codification/laws/laws/PL-012-079/law.txt",
+    "codification/laws/laws/PL-012-080/law.txt",
+    "codification/laws/laws/PL-012-081/law.txt",
+    "usc/usc05.xml",
+    "usc/usc18.xml",
+    "usc/usc22.xml",
+    "usc/usc28.xml",
+    "usc/usc29.xml",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-011-072",
+      "public_law": "11-72",
+      "title": "Public Law 11-72 | No More Mariah Act (Keywords: Judges, Justices, Circuit Court)",
+      "final_legal_status": "current",
+      "required_code_treatment": "amend-existing-text",
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "disposition": "statutory-note",
+          "target": null,
+          "evidence": "This act shall be referred to as the No More Mariah Act.",
+          "notes": "Short title only."
+        },
+        {
+          "ref": "SEC. 2",
+          "disposition": "historical-note-only",
+          "target": null,
+          "evidence": "Public Law 10-65, the Federal Judicial Reform Act II is repealed.",
+          "notes": "Record the repeal history only."
+        },
+        {
+          "ref": "SEC. 3",
+          "disposition": "amend-existing-text",
+          "target": "/us/usc/t28/s133",
+          "evidence": "28 U.S. Code section 133 ... shall read as: (a) The President shall appoint ... up to five judges for the District of Columbia.",
+          "notes": "This is the live Title 28 rewrite."
+        },
+        {
+          "ref": "SEC. 4",
+          "disposition": "historical-note-only",
+          "target": null,
+          "evidence": "This act shall immediately take effect when the Federal Circuit Court of the District of Columbia is entirely vacated.",
+          "notes": "Effective-date language only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t28/s1",
+        "detail": "The review record parks a boilerplate note at a Title 28 section 1 anchor, but the actual target is 28 U.S.C. 133 and the repeal of Public Law 10-65 must be preserved as history."
+      },
+      "source_evidence": [
+        "codification/laws/laws/PL-011-072/law.txt contains the repeal of Public Law 10-65 and the replacement text for 28 U.S.C. section 133.",
+        "audit/primary/batch-12-02.json classifies the law as current and amendment-required.",
+        "audit/claude-validation.json agrees that the act is current and notes the Title 28 amendment gap.",
+        "Current XML grep did not recover a matching rp-pl011072 note in the branch or in origin/main."
+      ],
+      "current_xml_comparison": "The branch XML search did not recover a matching PL-011-072 note or a live 28 U.S.C. 133 rewrite, and origin/main does not show a better placement.",
+      "final_recommended_action": "Move the enactment into 28 U.S.C. 133, preserve the repeal of Public Law 10-65 as history, and remove boilerplate note material.",
+      "confidence": "high",
+      "chronology_conclusion": "The chronology supports the current branch treatment and the law remains aligned with the documented codification path.",
+      "approved_code_treatment": "amend-existing-text",
+      "exact_target": "/us/usc/t28/s1"
+    },
+    {
+      "law_id": "PL-011-073",
+      "public_law": "11-73",
+      "title": "Public Law 11-73 | Let Me Act",
+      "final_legal_status": "fully-repealed",
+      "required_code_treatment": "historical-note-only",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "disposition": "historical-note-only",
+          "target": null,
+          "evidence": "The law is treated as repealed in the review record and no current Code operation is authorized.",
+          "notes": "No operative text should be published."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "misanchored-history-note",
+        "placement": "/us/usc/t22/s2651a",
+        "detail": "The retained note is parked in Title 22 even though the law is repealed history only; a concise historical note is sufficient."
+      },
+      "source_evidence": [
+        "codification/laws/laws/PL-011-073/law.txt contains only the short title, an acting-service rule, and an immediate effective date.",
+        "audit/primary/batch-12-02.json classifies the law as fully-repealed.",
+        "audit/claude-validation.json also classifies the law as fully-repealed and misanchored-history-note.",
+        "Current XML grep did not recover a matching PL-011-073 note id."
+      ],
+      "current_xml_comparison": "No matching note identifier was found in the current XML search, and origin/main does not surface a better operative placement.",
+      "final_recommended_action": "Keep only a concise repeal-history note and do not codify operative text.",
+      "confidence": "high",
+      "chronology_conclusion": "Later enactments or repeal history control the final chronology, so the law remains historical rather than operative.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t22/s2651a"
+    },
+    {
+      "law_id": "PL-012-074",
+      "public_law": "12-74",
+      "title": "Public Law 12-74 | Federal Bar Association Act of 2023",
+      "final_legal_status": "current",
+      "required_code_treatment": "mixed-note-and-new-section",
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "disposition": "statutory-note",
+          "target": null,
+          "evidence": "This Act may be cited as the Federal Bar Association Act of 2023.",
+          "notes": "Short title only."
+        },
+        {
+          "ref": "SEC. 2",
+          "disposition": "statutory-note",
+          "target": null,
+          "evidence": "If any provision of this Act, or the application thereof, is held invalid, the validity of the remainder of this Act.",
+          "notes": "Severability and anti-supersession language."
+        },
+        {
+          "ref": "SEC. 3",
+          "disposition": "historical-note-only",
+          "target": null,
+          "evidence": "\"Public Law 7-47 | The Federal Bar Association Act of 2022\" is hereby repealed.",
+          "notes": "Record repeal history only."
+        },
+        {
+          "ref": "SEC. 4",
+          "disposition": "new-section",
+          "target": "/us/usc/t5",
+          "evidence": "There is established in the Executive branch an Association to be known as the Federal Bar Association.",
+          "notes": "New Title 5 organic provision."
+        },
+        {
+          "ref": "SEC. 5",
+          "disposition": "new-section",
+          "target": "/us/usc/t5",
+          "evidence": "The Federal Bar Examination shall be an exam that is created and administered to citizens by the Chairman.",
+          "notes": "Administrative functions and enforcement rules belong in Title 5."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t50/s1",
+        "detail": "The draft inserted a boilerplate note at a Title 50 anchor with a full-text dump and Trello link, but the act needs real Title 5 codification for the new association and its governing provisions."
+      },
+      "source_evidence": [
+        "codification/laws/laws/PL-012-074/law.txt contains the establishment and governance text for the Federal Bar Association.",
+        "audit/primary/batch-12-02.json classifies the act as current and amendment-required.",
+        "audit/claude-validation.json agrees that the branch only has a note-only implementation.",
+        "Current XML grep did not recover a matching PL-012-074 note id."
+      ],
+      "current_xml_comparison": "The current XML search did not recover the branch note or the Title 5 establishment text; origin/main likewise does not show a better placement.",
+      "final_recommended_action": "Move sections 4 and 5 into Title 5 as new organic text, keep sections 1 to 3 as note or history material, and delete the boilerplate Title 50 note.",
+      "confidence": "medium",
+      "chronology_conclusion": "The chronology supports the current branch treatment and the law remains aligned with the documented codification path.",
+      "approved_code_treatment": "mixed-note-and-new-section",
+      "exact_target": "/us/usc/t50/s1"
+    },
+    {
+      "law_id": "PL-012-075",
+      "public_law": "12-75",
+      "title": "Public Law 12-75 | Freedom of Information Common Sense Act",
+      "final_legal_status": "current",
+      "required_code_treatment": "amend-existing-text",
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "disposition": "statutory-note",
+          "target": null,
+          "evidence": "This act shall be referred to as the Freedom of Information Common Sense Act.",
+          "notes": "Short title only."
+        },
+        {
+          "ref": "SEC. 2",
+          "disposition": "statutory-note",
+          "target": null,
+          "evidence": "It is the purpose of this act to lower the response time limit for all Freedom of Information Act Requests.",
+          "notes": "Purpose clause only."
+        },
+        {
+          "ref": "SEC. 3",
+          "disposition": "amend-existing-text",
+          "target": "/us/usc/t5/s552",
+          "evidence": "5 U.S. Code section 552(a)(6)(A)(i), (ii), and (ii)(I) shall be replaced with 4-day deadline language.",
+          "notes": "This is a live FOIA amendment."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t44/s101",
+        "detail": "The draft note is parked in Title 44 with a full-text dump and Trello link, but the real target is 5 U.S.C. section 552."
+      },
+      "source_evidence": [
+        "codification/laws/laws/PL-012-075/law.txt contains the FOIA deadline replacements in section 3.",
+        "audit/primary/batch-12-02.json classifies the law as current and a live Code amendment.",
+        "audit/claude-validation.json also classifies the law as current and amendment-required.",
+        "Current XML grep did not recover a matching PL-012-075 note id."
+      ],
+      "current_xml_comparison": "The branch XML search did not recover a matching FOIA note, and origin/main does not show a better placement.",
+      "final_recommended_action": "Apply the FOIA deadline replacements in 5 U.S.C. 552 and reduce the retained material to a concise statutory note.",
+      "confidence": "high",
+      "chronology_conclusion": "The chronology supports the current branch treatment and the law remains aligned with the documented codification path.",
+      "approved_code_treatment": "amend-existing-text",
+      "exact_target": "/us/usc/t44/s101"
+    },
+    {
+      "law_id": "PL-012-076",
+      "public_law": "12-76",
+      "title": "Public Law 12-76 | Removing Idiocy Act",
+      "final_legal_status": "unresolved",
+      "required_code_treatment": "no-code-operation",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "disposition": "no-code-operation",
+          "target": null,
+          "evidence": "No readable authenticated enactment text could be recovered from the archive.",
+          "notes": "Do not invent operative text."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "placement": "/us/usc/t1/s1",
+        "detail": "The review record has only a boilerplate note and Trello link at Title 1; because the source is genuinely unavailable, the note should be replaced with an honest source-limited historical note."
+      },
+      "source_evidence": [
+        "codification/laws/laws/PL-012-076/metadata.json marks the law unrecoverable because access was revoked or denied.",
+        "audit/primary/batch-12-02.json classifies the record as unsupported and unrecoverable.",
+        "audit/claude-validation.json also marks the implementation as incorrectly implemented.",
+        "Current XML grep did not recover a matching PL-012-076 note id."
+      ],
+      "current_xml_comparison": "No authenticated source text was recovered, and the current XML search did not identify a defensible operative placement; origin/main does not improve that record.",
+      "final_recommended_action": "Leave the Code unchanged until a readable authenticated enactment is recovered.",
+      "confidence": "low",
+      "chronology_conclusion": "The source record is unresolved or source-limited, so chronology supports only the documented history and not a stronger operative rewrite.",
+      "approved_code_treatment": "no-code-operation",
+      "exact_target": "/us/usc/t1/s1"
+    },
+    {
+      "law_id": "PL-012-077",
+      "public_law": "12-77",
+      "title": "Public Law 12-77 | Preventing Abuse and Promoting Democracy Act",
+      "final_legal_status": "fully-repealed",
+      "required_code_treatment": "historical-note-only",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "disposition": "historical-note-only",
+          "target": null,
+          "evidence": "The chronology ends with a repealed source-limited note and no executable Code text survives.",
+          "notes": "History only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "placement": "/us/usc/t1/s1",
+        "detail": "A boilerplate note and Trello link were parked at Title 1 even though the source is unavailable; the review should preserve only an honest source-limited historical note."
+      },
+      "source_evidence": [
+        "codification/laws/laws/PL-012-077/metadata.json marks the source as unrecoverable.",
+        "audit/primary/batch-12-02.json classifies the law as fully-repealed.",
+        "audit/claude-validation.json also classifies the law as fully-repealed.",
+        "Current XML grep did not recover a matching PL-012-077 note id."
+      ],
+      "current_xml_comparison": "The branch XML search did not recover a matching note identifier, and origin/main does not surface a better operative placement.",
+      "final_recommended_action": "Keep only repeal-history treatment and do not invent operative text.",
+      "confidence": "low",
+      "chronology_conclusion": "The source record is unresolved or source-limited, so chronology supports only the documented history and not a stronger operative rewrite.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t1/s1"
+    },
+    {
+      "law_id": "PL-012-078",
+      "public_law": "12-78",
+      "title": "Public Law 12-78 | Balancing Executive Act",
+      "final_legal_status": "fully-repealed",
+      "required_code_treatment": "historical-note-only",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "disposition": "historical-note-only",
+          "target": null,
+          "evidence": "The chronology remains historical only; the note should stay repealed and non-executable.",
+          "notes": "History only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "placement": "/us/usc/t1/s1",
+        "detail": "A boilerplate note and Trello link were parked at Title 1 even though the source is unavailable; the review should preserve only an honest source-limited historical note."
+      },
+      "source_evidence": [
+        "codification/laws/laws/PL-012-078/metadata.json marks the source as unrecoverable.",
+        "audit/primary/batch-12-02.json classifies the law as fully-repealed.",
+        "audit/claude-validation.json also classifies the law as fully-repealed.",
+        "Current XML grep did not recover a matching PL-012-078 note id."
+      ],
+      "current_xml_comparison": "The branch XML search did not recover a matching note identifier, and origin/main does not surface a better operative placement.",
+      "final_recommended_action": "Keep only repeal-history treatment and do not invent operative text.",
+      "confidence": "low",
+      "chronology_conclusion": "The source record is unresolved or source-limited, so chronology supports only the documented history and not a stronger operative rewrite.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t1/s1"
+    },
+    {
+      "law_id": "PL-012-079",
+      "public_law": "12-79",
+      "title": "Public Law 12-79 | Anti-Terrorism Act of 2023",
+      "final_legal_status": "current",
+      "required_code_treatment": "historical-note-only",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "disposition": "historical-note-only",
+          "target": null,
+          "evidence": "The record is source-limited and no operative text can be verified from the archive.",
+          "notes": "Preserve only an honest source-limited note if archival retention is needed."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "placement": "/us/usc/t18/s1",
+        "detail": "A boilerplate note and Trello link were parked at Title 18 even though the source is unavailable; the review should preserve only an honest source-limited history note."
+      },
+      "source_evidence": [
+        "codification/laws/laws/PL-012-079/law.txt is a Google Drive permission error page.",
+        "codification/laws/laws/PL-012-079/source/downloaded_file.html is only viewer debris.",
+        "audit/primary/batch-12-02.json classifies the enactment as current but source-limited.",
+        "audit/claude-validation.json marks the current implementation as incorrectly implemented and source-limited.",
+        "Current XML grep did not recover a matching PL-012-079 note id."
+      ],
+      "current_xml_comparison": "The branch XML search did not recover a matching anti-terrorism note, and origin/main likewise does not supply a better placement.",
+      "final_recommended_action": "Keep only a source-limited history note until authentic text is recovered; do not invent operative text.",
+      "confidence": "low",
+      "chronology_conclusion": "The source record is unresolved or source-limited, so chronology supports only the documented history and not a stronger operative rewrite.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t18/s1"
+    },
+    {
+      "law_id": "PL-012-080",
+      "public_law": "12-80",
+      "title": "Public Law 12-80 | Government Labor Management Act",
+      "final_legal_status": "fully-repealed",
+      "required_code_treatment": "historical-note-only",
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "disposition": "historical-note-only",
+          "target": null,
+          "evidence": "PL-031-226 repeals Public Law 12-80 in its entirety, so no current Code insertion is authorized.",
+          "notes": "History only."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "misanchored-history-note",
+        "placement": "/us/usc/t29/s201",
+        "detail": "The retained note is parked in Title 29 and still carries a source dump, but the law is repealed history only and should not be codified as operative labor law."
+      },
+      "source_evidence": [
+        "codification/laws/laws/PL-012-080/law.txt contains the full labor-management framework.",
+        "audit/primary/batch-12-02.json classifies the law as fully-repealed.",
+        "audit/claude-validation.json also classifies the law as fully-repealed and misanchored-history-note.",
+        "Current XML grep did not recover a matching PL-012-080 note id."
+      ],
+      "current_xml_comparison": "The current review record places the note at Title 29, but the branch XML search did not recover that identifier and origin/main does not improve the record.",
+      "final_recommended_action": "Keep only repeal-history treatment and do not treat the act as live law.",
+      "confidence": "high",
+      "chronology_conclusion": "Later enactments or repeal history control the final chronology, so the law remains historical rather than operative.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t29/s201"
+    },
+    {
+      "law_id": "PL-012-081",
+      "public_law": "12-81",
+      "title": "Public Law 12-81 | The Integrity Act",
+      "final_legal_status": "current",
+      "required_code_treatment": "statutory-note",
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "disposition": "statutory-note",
+          "target": "/us/usc/t2/s6567",
+          "evidence": "This Act may be cited as the The Integrity Act.",
+          "notes": "Short title only."
+        },
+        {
+          "ref": "SEC. 2",
+          "disposition": "statutory-note",
+          "target": "/us/usc/t2/s6567",
+          "evidence": "If any provision of this Act, or the application thereof, is held invalid, the validity of the remainder of this Act.",
+          "notes": "Severability and anti-supersession language."
+        },
+        {
+          "ref": "SEC. 3",
+          "disposition": "repeal-marking",
+          "target": "/us/usc/t2/s6567",
+          "evidence": "All, if any previous laws that conflict with this Act shall be repealed.",
+          "notes": "Treat as conflict-clause history only."
+        },
+        {
+          "ref": "SEC. 4",
+          "disposition": "statutory-note",
+          "target": "/us/usc/t2/s6567",
+          "evidence": "Whereas, in the past, Presidents have removed us from organizations like the United Nations with no congressional notice or consultation.",
+          "notes": "Findings clause only."
+        },
+        {
+          "ref": "SEC. 5",
+          "disposition": "statutory-note",
+          "target": "/us/usc/t2/s6567",
+          "evidence": "The President of the United States SHALL NOT have the authority to remove the United States from any treaty, organizational group, or any foreign group without the consultation of the senate.",
+          "notes": "This remains note-only treatment."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "misanchored-note",
+        "placement": "/us/usc/t22/s2651a",
+        "detail": "The current review record places the note in Title 22, but the canonical anchor is 2 U.S.C. 6567."
+      },
+      "source_evidence": [
+        "codification/laws/laws/PL-012-081/law.txt contains the general consultation rule and repeal/conflict clause.",
+        "audit/primary/batch-12-02.json classifies the law as current and note-only-but-amendment-required.",
+        "audit/claude-validation.json classifies the law as current and misanchored-note.",
+        "Current XML grep did not recover a matching PL-012-081 note id."
+      ],
+      "current_xml_comparison": "The branch XML search did not recover a matching note identifier, and origin/main does not show a better anchor; the canonical destination remains 2 U.S.C. 6567.",
+      "final_recommended_action": "Move the note to 2 U.S.C. 6567 and keep the treatment as a statutory note.",
+      "confidence": "medium",
+      "chronology_conclusion": "The chronology supports the current branch treatment and the law remains aligned with the documented codification path.",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "/us/usc/t22/s2651a"
+    }
+  ]
+}

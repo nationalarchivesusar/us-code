@@ -1,0 +1,413 @@
+{
+  "batch": 7,
+  "auditor": "law-auditor-A",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-025-181",
+      "public_law": "25-181",
+      "title": "Public Law 25-181 | Federal District of Columbia Criminal Code",
+      "final_status": "current_local_enactment",
+      "status_basis": "The source is an operative District of Columbia criminal code that takes effect immediately and contains no sunset or self-repeal; it is local code material rather than permanent positive-law U.S. Code text.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "disposition": "historical-note-and-effective-date",
+          "code_treatment": "statutory-note",
+          "evidence": "SHORTTITLE; SEVERABILITY; EFFECTIVEDATE",
+          "notes": "Short title, severability, and immediate-effective-date language only."
+        },
+        {
+          "ref": "SEC 4; SEC 101-103; SEC 201-214; SEC 301-314; SEC 401-409; SEC 501-509; SEC 601-606; SEC 701-706",
+          "disposition": "local-substantive-code-only",
+          "code_treatment": "exclude-from-code",
+          "evidence": "TheCriminalCodeattachedtothisdocumentshallactastheCriminalCodefortheDistrictofColumbia",
+          "notes": "All operative criminal provisions are local D.C. code content and should not be converted into permanent U.S. Code positive law."
+        }
+      ],
+      "current_implementation": {
+        "xml_state": "incorrectly_marked_repealed_or_superseded",
+        "placement": "/us/usc/t40/s101/4"
+      },
+      "source_evidence": [
+        "SEC 4: the attached criminal code shall act as the Criminal Code for the District of Columbia.",
+        "SEC 101-103: definitions, enforcement powers, sentencing, probation, and parole.",
+        "SEC 201-214, 301-314, 401-409, 501-509, 601-606, 701-706: the full local offense catalog."
+      ],
+      "recommended_action": "Replace the repealed/superseded label with a current local statutory note at /us/usc/t40/s101/4; do not insert this D.C.-specific criminal code into permanent positive-law U.S. Code text."
+    },
+    {
+      "law_id": "PL-025-182",
+      "public_law": "25-182",
+      "title": "Public Law 25-182 | Pentagon Expansion and National Territory Authorization Act",
+      "final_status": "source_limited_unverified",
+      "status_basis": "The supplied attachment is deleted viewer debris, so no operative statutory text can be recovered or verified.",
+      "provisions": [
+        {
+          "ref": "SOURCE FILE",
+          "disposition": "no-recoverable-operative-text",
+          "code_treatment": "exclude-from-code",
+          "evidence": "Sorry, the file you have requested has been deleted.",
+          "notes": "No lawful basis exists to invent operative language."
+        }
+      ],
+      "current_implementation": {
+        "xml_state": "current_note_claimed_but_source_unavailable",
+        "placement": "/us/usc/t10/s101/h"
+      },
+      "source_evidence": [
+        "The only supplied source is a deleted Google Docs page / viewer page.",
+        "No authoritative statutory text was recoverable from the attachment."
+      ],
+      "recommended_action": "Retain only a source-limited historical note until the actual statutory text is recovered; remove any certainty claim that the law is current or codifiable."
+    },
+    {
+      "law_id": "PL-025-183",
+      "public_law": "25-183",
+      "title": "Public Law 25-183 | Commerce and Labor Advancement Act (CLAA)",
+      "final_status": "repealed_or_superseded_before_codification",
+      "status_basis": "The act was later repealed in its entirety by Public Law 31-226, so it should remain historical only.",
+      "provisions": [
+        {
+          "ref": "SEC 1-4",
+          "disposition": "historical-note-only",
+          "code_treatment": "historical-note-only",
+          "evidence": "CommerceandLaborAdvancementAct; Forthepurposesofthisact",
+          "notes": "Short title, severability, effective date, and definitions."
+        },
+        {
+          "ref": "SEC 5-12",
+          "disposition": "historical-note-only",
+          "code_treatment": "historical-note-only",
+          "evidence": "Thereis a barassociationoperatedunderthenameof the UniformLegalPracticeAuthority",
+          "notes": "Repeals older public laws and creates the bar/licensure framework, but later repeal means no current Code insertion."
+        },
+        {
+          "ref": "SEC 13",
+          "disposition": "historical-note-only",
+          "code_treatment": "historical-note-only",
+          "evidence": "Thegroupmoderationandmanagementteamshalltaketheneededsteptoenforceallcourtorders",
+          "notes": "Platform-specific enforcement direction only."
+        }
+      ],
+      "current_implementation": {
+        "xml_state": "aligned_as_historical_note",
+        "placement": "/us/usc/t29/s201"
+      },
+      "source_evidence": [
+        "Sections 5-12 create a general licensing and discipline framework, but the later repeal controls final Code treatment.",
+        "Public Law 31-226 repeals Public Law 25-183 in its entirety."
+      ],
+      "recommended_action": "Keep only the repeal/history note; do not present this act as current Code text."
+    },
+    {
+      "law_id": "PL-025-184",
+      "public_law": "25-184",
+      "title": "Public Law 25-184 | Legal Advisors, Representatives, and Professionals Exam Regulations (LARPER)",
+      "final_status": "repealed_or_superseded_before_codification",
+      "status_basis": "The act creates an ongoing licensing framework in the source, but later Public Law 33-238 repeals it in full, so it is historical only.",
+      "provisions": [
+        {
+          "ref": "SEC 1-4",
+          "disposition": "historical-note-only",
+          "code_treatment": "historical-note-only",
+          "evidence": "LegalAdvisors,Representatives,andProfessionalsExamRegulations; Forthepurposesofthisact",
+          "notes": "Short title, severability, effective date, and definitions."
+        },
+        {
+          "ref": "SEC 5",
+          "disposition": "historical-repeal-note",
+          "code_treatment": "historical-note-only",
+          "evidence": "TitleI ofPublicLaw15-97shallberepealed,initsentirety",
+          "notes": "Repeal of prior public laws, not a U.S. Code amendment."
+        },
+        {
+          "ref": "SEC 6-12",
+          "disposition": "historical-note-only",
+          "code_treatment": "historical-note-only",
+          "evidence": "TheUniformLegalPracticeAuthorityshallmanagealllicensesofattorneys-at-lawandofparalegals",
+          "notes": "ULPA creation, licensure, offenses, discipline, and apprenticeship rules are all superseded by later repeal."
+        }
+      ],
+      "current_implementation": {
+        "xml_state": "aligned_as_historical_note",
+        "placement": "/us/usc/t28/s1"
+      },
+      "source_evidence": [
+        "The act establishes a continuing licensing and discipline scheme in the text.",
+        "Later repeal removes it from current Code treatment."
+      ],
+      "recommended_action": "Retain only the repeal/history note; do not present the law as current operative Code text."
+    },
+    {
+      "law_id": "PL-025-185",
+      "public_law": "25-185",
+      "title": "Public Law 25-185 | Fiscal Year 21-3",
+      "final_status": "expired_appropriations",
+      "status_basis": "This is a one-year appropriations measure for fiscal year 21-3 and is no longer operative.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "disposition": "short-title-and-effective-date-note",
+          "code_treatment": "statutory-note",
+          "evidence": "FiscalYear21-3; Thisbillshallbeeffectiveimmediatelyuponpassage",
+          "notes": "Introductory note material only."
+        },
+        {
+          "ref": "SEC 3-14",
+          "disposition": "expired-appropriations-and-reporting",
+          "code_treatment": "exclude-from-code",
+          "evidence": "Thefollowingsumsin thisActareappropriated",
+          "notes": "All spending authority and reporting obligations are time-limited and expired."
+        }
+      ],
+      "current_implementation": {
+        "xml_state": "incorrectly_marked_current",
+        "placement": "/us/usc/t31/s101"
+      },
+      "source_evidence": [
+        "The act appropriates funds only for the fiscal year ending 30 days following enactment.",
+        "It contains no permanent positive-law amendment."
+      ],
+      "recommended_action": "Exclude from permanent Code text as expired appropriations history; retain only a concise historical note if desired."
+    },
+    {
+      "law_id": "PL-026-186",
+      "public_law": "26-186",
+      "title": "Public Law 26-186 | Secret Service Jurisdiction Reform Act",
+      "final_status": "current_local_or_subject_matter_note",
+      "status_basis": "The source creates continuing protective-area and law-enforcement authority rules without a sunset, but the enactment is best preserved as a statutory note rather than positive-law text.",
+      "provisions": [
+        {
+          "ref": "SECTION 1-4",
+          "disposition": "introductory-and-definitions-note",
+          "code_treatment": "statutory-note",
+          "evidence": "SecretServiceJurisdictionReformAct; ProtectedArea; SecretService",
+          "notes": "Short title, severability, effective date, and definitions."
+        },
+        {
+          "ref": "SECTION 5-10",
+          "disposition": "ongoing-protective-authority",
+          "code_treatment": "statutory-note",
+          "evidence": "TheSecretServiceshallhaveprimaryauthorityoverProtectedAreas",
+          "notes": "Primary authority, closure rules, other protective areas, and interaction with other law enforcement are continuing rules."
+        }
+      ],
+      "current_implementation": {
+        "xml_state": "aligned",
+        "placement": "/us/usc/t54/s100101/b/2"
+      },
+      "source_evidence": [
+        "Sections 6-9 establish ongoing protective-area authority, closure rules, and coordination rules.",
+        "Section 10 saves existing Secret Service authority rather than replacing it."
+      ],
+      "recommended_action": "Retain as a statutory note at the Secret Service anchor; no permanent Code-text insertion is needed."
+    },
+    {
+      "law_id": "PL-026-187",
+      "public_law": "26-187",
+      "title": "Public Law 26-187 | FPS Funding Act",
+      "final_status": "expired_appropriations",
+      "status_basis": "This is a temporary fiscal-year appropriation and is no longer operative.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "disposition": "short-title-and-effective-date-note",
+          "code_treatment": "statutory-note",
+          "evidence": "FPSFundingAct; Thisbillshallbeeffectiveimmediatelyuponpassage",
+          "notes": "Introductory note material only."
+        },
+        {
+          "ref": "SEC 3-4",
+          "disposition": "temporary-appropriation-and-amendment-history",
+          "code_treatment": "exclude-from-code",
+          "evidence": "FEDERALPROTECTIVESERVICES. $8,000,000; Section13ofPublicLaw25-189",
+          "notes": "The act changes prior appropriation levels, but the authority is expired."
+        }
+      ],
+      "current_implementation": {
+        "xml_state": "incorrectly_marked_current",
+        "placement": "/us/usc/t31/s101"
+      },
+      "source_evidence": [
+        "The text is limited to fiscal year 21-3 appropriations.",
+        "Section 4 only amends prior Public Law 25-189 funding amounts."
+      ],
+      "recommended_action": "Exclude from permanent Code text as expired appropriations history; keep only a brief historical note if needed."
+    },
+    {
+      "law_id": "PL-026-188",
+      "public_law": "26-188",
+      "title": "Public Law 26-188 | Departmental Reports Act",
+      "final_status": "current_general_reporting_law",
+      "status_basis": "The enactment establishes ongoing reporting obligations and repeals 50 U.S.C. 3371a; it is current law, but the repeal and reporting regime need the proper Code treatment.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "disposition": "short-title-and-purpose-note",
+          "code_treatment": "statutory-note",
+          "evidence": "DepartmentalReportsAct; PartlycodifyExecutiveOrder21-6intoFederalLaw",
+          "notes": "Short title and purpose/finding language only."
+        },
+        {
+          "ref": "SEC 3(a)",
+          "disposition": "executive-order-invalidation-history",
+          "code_treatment": "historical-note-only",
+          "evidence": "ExecutiveOrder21-6,Sec.3shallbeconsideredinvalidated",
+          "notes": "This is not a U.S. Code amendment."
+        },
+        {
+          "ref": "SEC 3(b)",
+          "disposition": "direct-repeal-target",
+          "code_treatment": "repeal-marking",
+          "evidence": "50U.S.Code3371ashallberepealed",
+          "notes": "The intended target is 50 U.S.C. 3371a."
+        },
+        {
+          "ref": "SEC 4-8",
+          "disposition": "ongoing-reporting-regime",
+          "code_treatment": "statutory-note",
+          "evidence": "Reportsshallbepreparedbythevariousexecutivedepartments",
+          "notes": "Monthly reporting, special reports, failure-to-report procedures, and penalties are permanent and general."
+        },
+        {
+          "ref": "SEC 5 (closing severability/effective date)",
+          "disposition": "introductory-note-material",
+          "code_treatment": "statutory-note",
+          "evidence": "IfanyprovisionofthisAct; ThisActshallbecomeeffectiveonthefirstofthemonthfollowingpassageandenactment",
+          "notes": "The source repeats the section numbers at the end."
+        }
+      ],
+      "current_implementation": {
+        "xml_state": "deferred_or_not_fully_applied",
+        "placement": "/us/usc/t50/s1"
+      },
+      "source_evidence": [
+        "SEC 3(b) expressly repeals 50 U.S.C. 3371a.",
+        "SEC 5-8 impose a permanent reporting regime on executive departments and officials."
+      ],
+      "recommended_action": "Apply the approved repeal-marking for 50 U.S.C. 3371a and keep the reporting regime as a statutory note rather than pretending the Code text is fully integrated."
+    },
+    {
+      "law_id": "PL-026-189",
+      "public_law": "26-189",
+      "title": "Public Law 26-189 | Fiscal Year 22-1",
+      "final_status": "expired_appropriations",
+      "status_basis": "This is another temporary appropriations law limited to the fiscal year and it is no longer operative.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "disposition": "short-title-and-effective-date-note",
+          "code_treatment": "statutory-note",
+          "evidence": "FiscalYear22-1; Thisbillshallbeeffectiveimmediatelyuponpassage",
+          "notes": "Introductory note material only."
+        },
+        {
+          "ref": "SEC 3-14",
+          "disposition": "expired-appropriations-and-reporting",
+          "code_treatment": "exclude-from-code",
+          "evidence": "forthefiscalyearending30daysfollowingtheenactment",
+          "notes": "All agency appropriations and reports are temporary and expired."
+        }
+      ],
+      "current_implementation": {
+        "xml_state": "incorrectly_marked_current",
+        "placement": "/us/usc/t31/s101"
+      },
+      "source_evidence": [
+        "The act appropriates funds only for the fiscal year ending 30 days after enactment.",
+        "It contains no permanent positive-law amendment."
+      ],
+      "recommended_action": "Exclude from permanent Code text as expired appropriations history; keep only a concise historical note if desired."
+    },
+    {
+      "law_id": "PL-026-190",
+      "public_law": "26-190",
+      "title": "Public Law 26-190 | The Great Reform Initiative of the Judiciary",
+      "final_status": "current_judiciary_reform_act",
+      "status_basis": "The source makes active repeals and textual rewrites to Title 28 and adds new judiciary rules without a sunset.",
+      "provisions": [
+        {
+          "ref": "SECTION 100(a-c)",
+          "disposition": "short-title-severability-effective-date-note",
+          "code_treatment": "statutory-note",
+          "evidence": "ThisActmaybecitedasTheGreatReformInitiativeoftheJudiciary",
+          "notes": "Introductory note material only."
+        },
+        {
+          "ref": "SECTION 101(a)",
+          "disposition": "chapter-15-repeal",
+          "code_treatment": "repeal-marking",
+          "evidence": "Theentiresections,exceptfor334,oftheTitle28oftheUnitedStatesCode,Chapter15,areherebyrepealed",
+          "notes": "Chapter 15 is repealed except for section 334."
+        },
+        {
+          "ref": "SECTION 101(b-i)",
+          "disposition": "rewrite-section-331",
+          "code_treatment": "amend-existing-text",
+          "evidence": "Section(a)ofTitle28,section331oftheUnitedStatesCodeisherebyamendedtoreadasfollows",
+          "notes": "The Judicial Conference text must be rewritten."
+        },
+        {
+          "ref": "SECTION 102(a)",
+          "disposition": "section-136-repeal",
+          "code_treatment": "repeal-marking",
+          "evidence": "TheentiretyofTitle28,chapter5,section136isherebyrepealed",
+          "notes": "Section 136 is repealed outright."
+        },
+        {
+          "ref": "SECTION 102(b-d)",
+          "disposition": "new-district-court-structure",
+          "code_treatment": "new-section-or-reserve-follow-on-placement",
+          "evidence": "TheUnitedStatesFederalDistrictCourt,knownastheUnitedStatesDistrictCourtfortheDistrictofColumbia",
+          "notes": "Replacement district-court text follows the repeal."
+        },
+        {
+          "ref": "SECTION 103(a-g); SECTION 105(a-d)",
+          "disposition": "new-judicial-administration-rules",
+          "code_treatment": "new-section",
+          "evidence": "TheChiefJudgeoftheDistrictCourtshallhavetheauthoritytoissuedirectiveorderstotheDistrictCourt",
+          "notes": "Chief Judge and Chief Justice administration/reporting rules are operative new text."
+        },
+        {
+          "ref": "SECTION 106(a)",
+          "disposition": "chapter-43-repeal",
+          "code_treatment": "repeal-marking",
+          "evidence": "TheentiresectionofTitle28,chapter43oftheUnitedStatesCodeisherebyrepealed",
+          "notes": "Chapter 43 is repealed."
+        },
+        {
+          "ref": "SECTION 106(b-i)",
+          "disposition": "rewrite-sections-631-and-636",
+          "code_treatment": "amend-existing-text",
+          "evidence": "Section(a)ofTitle28,section631oftheUnitedStatesCodeisherebyamendedtoreadasfollows",
+          "notes": "Magistrate judge appointment, tenure, removal, and powers are rewritten."
+        },
+        {
+          "ref": "SECTION 107(a-b)",
+          "disposition": "prejudice-and-jeopardy-rule",
+          "code_treatment": "new-section",
+          "evidence": "Dismissalwithprejudiceofanycase",
+          "notes": "New procedural rule."
+        },
+        {
+          "ref": "SECTION 108(a-c)",
+          "disposition": "chapter-13-repeal-and-replacement",
+          "code_treatment": "repeal-marking",
+          "evidence": "TheentiresectionsofTitle28,chapter13oftheUnitedStatesCodeareherebyrepealed",
+          "notes": "The Act also supplies replacement retired-judge assignment language."
+        }
+      ],
+      "current_implementation": {
+        "xml_state": "deferred_or_not_fully_applied",
+        "placement": "/us/usc/t28/s1"
+      },
+      "source_evidence": [
+        "SEC 101, 102, 106, and 108 contain the direct Title 28 repeals.",
+        "SEC 101(b-i), 106(b-i), 103, 105, and 107 contain the replacement procedural text.",
+        "The approved plan notes a drafting-gap judgment call for section 331(b), but the operative Judiciary rewrite still belongs in Code treatment."
+      ],
+      "recommended_action": "Implement the actual textual repeals and rewrites in Title 28, including the chapter 15, section 331, section 136, chapter 43, sections 631 and 636, and chapter 13 changes."
+    }
+  ]
+}

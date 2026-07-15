@@ -1,0 +1,792 @@
+{
+  "batch": 9,
+  "auditor": "law-auditor-G",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-034-243",
+      "public_law": "34-243",
+      "title": "Public Law 34-243 | Judicial Integrity & Accountability Act",
+      "status": "current",
+      "status_basis": "Source text is complete and reviewable. Section 3 repeals 28 U.S.C. §§ 353, 359, and 361 and replaces chapter 16 part I with a new Supreme Court complaints-and-discipline framework. No later-law repeal was identified in the reviewed materials.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and purpose.",
+          "classes": [
+            "short-title",
+            "purpose"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 1 supplies the short title, and Section 2 states the purpose is to transfer judicial misconduct complaint authority to the Supreme Court.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3(1)-(2)",
+          "text_summary": "Repeals 28 U.S.C. §§ 353, 359, and 361 and rewrites chapter 16 part I.",
+          "classes": [
+            "repeal",
+            "direct-amendment",
+            "substitution"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t28/ch16",
+          "exact_change": "Strike §§ 353, 359, and 361, then replace chapter 16 part I with the enacted complaints-and-discipline text.",
+          "evidence": "Section 3(1) says those sections \"shall be repealed,\" and Section 3(2) says chapter 16 part I \"shall be amended to read as follows.\"",
+          "notes": "The source is a chapter-level rewrite, not a freestanding note."
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Severability clause.",
+          "classes": [
+            "severability"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 4 preserves the remainder of the Act if any provision is held invalid.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "Immediate effective-date clause.",
+          "classes": [
+            "effective-date"
+          ],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 5 makes the Act effective immediately upon enactment.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s1",
+        "detail": "The live XML note is parked at Title 28 section 1 and carries a quoted-content dump, but the required rewrite is the chapter 16 complaint and discipline text."
+      },
+      "recommended_actions": [
+        "Apply the chapter 16 rewrite in the affected Title 28 text.",
+        "Strike the three repealed sections and replace chapter 16 part I with the enacted Supreme Court framework.",
+        "Reduce the note to concise history and remove the quoted-content dump and Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-244",
+      "public_law": "34-244",
+      "title": "Public Law 34-244 | Sentencing Reform Act",
+      "status": "current",
+      "status_basis": "Source text is complete and reviewable. Section 3 amends Pub. L. No. 29-207 §§ 7(b) and 7(c), and Section 4 amends 18 U.S.C. § 3585. No later-law repeal was identified in the reviewed materials.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and purpose.",
+          "classes": [
+            "short-title",
+            "purpose"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 1 names the Act and Section 2 says it reforms sentencing in the United States.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3(a)-(b)",
+          "text_summary": "Caps maximum sentences under Pub. L. No. 29-207 §§ 7(b) and 7(c).",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "Pub. L. No. 29-207 § 7(b) and § 7(c)",
+          "exact_change": "Replace the existing maximum-sentence rules in §§ 7(b) and 7(c) with the enacted caps for death/life offenses and term-of-years offenses.",
+          "evidence": "Section 3(a) and 3(b) say the two subsections of Pub. L. No. 29-207 \"shall be amended to read\" the new maximum-sentence rules.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4(a)",
+          "text_summary": "Rewrites 18 U.S.C. § 3585 on commencement of sentence and prior-custody credit.",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t18/s3585",
+          "exact_change": "Replace the current commencement and custody-credit text in § 3585 with the enacted wording.",
+          "evidence": "Section 4(a) states that 18 U.S.C. § 3585 \"shall be amended to read as follows.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 5-6",
+          "text_summary": "Severability and effective date.",
+          "classes": [
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 5 preserves the Act if any part fails, and Section 6 makes it effective on enactment.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "The live XML note is anchored at Title 18 section 1, but the source requires a rewrite of Pub. L. No. 29-207 sections 7(b) and 7(c) plus 18 U.S.C. § 3585."
+      },
+      "recommended_actions": [
+        "Apply the Pub. L. No. 29-207 sentencing changes and the 18 U.S.C. § 3585 rewrite.",
+        "Do not leave the operative changes as note-only history.",
+        "Trim the note and remove the quoted-content dump and Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-245",
+      "public_law": "34-245",
+      "title": "Public Law 34-245 | Legal Compensation Act",
+      "status": "current",
+      "status_basis": "Source text is complete and reviewable. Section 3 amends 18 U.S.C. § 3006A(d), and Section 4 repeals 42 U.S.C. chapter 34 subchapter X while creating a new grant-support framework. No later-law repeal was identified in the reviewed materials.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and purpose.",
+          "classes": [
+            "short-title",
+            "purpose"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 1 names the Act, and Section 2 says it supports legal representation and compensation.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Amends the payment rules in 18 U.S.C. § 3006A(d).",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t18/s3006A/d",
+          "exact_change": "Replace the compensation text in subsection (d) with the enacted payment framework.",
+          "evidence": "Section 3 says 18 U.S.C. § 3006A(d) \"shall be amended to read as follows.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4(a)-(c)",
+          "text_summary": "Repeals 42 U.S.C. chapter 34 subchapter X and creates Judicial Conference grant authority, with relationship-to-other-laws language.",
+          "classes": [
+            "repeal",
+            "new-permanent-general",
+            "uncodified-admin-direction"
+          ],
+          "treatment": "statutory-note",
+          "target": "42 U.S.C. chapter 34 subchapter X",
+          "exact_change": "Remove the repealed subchapter and preserve the new grant-support authority as note material.",
+          "evidence": "Section 4(a) repeals the subchapter, and Section 4(b) authorizes the Judicial Conference to administer grants and rewards for legal representation support.",
+          "notes": "The new grant program is uncodified note material rather than a positive-law Code rewrite."
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "Severability clause.",
+          "classes": [
+            "severability"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 5 preserves the remainder of the Act if a provision is invalidated.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 6",
+          "text_summary": "Effective date.",
+          "classes": [
+            "effective-date"
+          ],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 6 makes the Act effective upon enactment.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "The current XML note is on a Title 18 anchor, but it does not perform the required 18 U.S.C. § 3006A(d) rewrite."
+      },
+      "recommended_actions": [
+        "Apply the 18 U.S.C. § 3006A(d) text replacement.",
+        "Preserve the repealed subchapter and the grant-support program only as concise note history.",
+        "Remove the quoted-content dump and Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-246",
+      "public_law": "34-246",
+      "title": "Public Law 34-246 | Sentencing Commission Reform Act",
+      "status": "current",
+      "status_basis": "Source text is complete and reviewable. Section 3(a) repeals 28 U.S.C. §§ 992, 994(p-s,w-x), and 995(a)(2-3); Section 3(b) rewrites § 991(a); and Section 3(c) adds new approval and responsibilities text to § 994. No later-law repeal was identified in the reviewed materials.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and purpose.",
+          "classes": [
+            "short-title",
+            "purpose"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 1 names the Act and Section 2 states it reforms the Sentencing Commission and transfers its authorities.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3(a)",
+          "text_summary": "Repeals 28 U.S.C. §§ 992, 994(p-s,w-x), and 995(a)(2-3).",
+          "classes": [
+            "repeal",
+            "repeal-marking"
+          ],
+          "treatment": "repeal-marking",
+          "target": "/us/usc/t28/s992; /us/usc/t28/s994; /us/usc/t28/s995",
+          "exact_change": "Mark the listed portions of §§ 992, 994, and 995 for repeal.",
+          "evidence": "Section 3(a) says the listed 28 U.S.C. provisions \"shall be repealed in their entirety.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3(b)",
+          "text_summary": "Rewrites 28 U.S.C. § 991(a) to place the Commission under the Judicial Conference.",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t28/s991/a",
+          "exact_change": "Replace subsection (a) with the new Commission structure, membership, and removal rules.",
+          "evidence": "Section 3(b) says 28 U.S.C. § 991(a) \"shall be amended to read as follows.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3(c)",
+          "text_summary": "Adds Judicial Conference approval and new responsibilities to 28 U.S.C. § 994.",
+          "classes": [
+            "direct-amendment",
+            "new-subsection"
+          ],
+          "treatment": "amend-existing-text",
+          "target": "/us/usc/t28/s994",
+          "exact_change": "Append the Judicial Conference approval requirement and the listed additional responsibilities to § 994.",
+          "evidence": "Section 3(c) says § 994 \"shall be amended by adding at the end the following.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Severability clause.",
+          "classes": [
+            "severability"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 4 preserves the rest of the Act if any provision fails.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s1",
+        "detail": "The XML note sits at Title 28 section 1, but the operative changes belong in §§ 991, 992, 994, and 995."
+      },
+      "recommended_actions": [
+        "Apply the Title 28 structural rewrite in the affected sections.",
+        "Mark the listed repeal portions and replace §§ 991(a) and 994 with the enacted text.",
+        "Keep the remaining material as concise note history and remove the dump/Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-247",
+      "public_law": "34-247",
+      "title": "Public Law 34-247 | Grand Jury Bypass Act",
+      "status": "current",
+      "status_basis": "Source text is complete and reviewable. It creates a generally applicable administrative-subpoena and nondisclosure framework but does not supply a positive-law U.S. Code rewrite target, so it belongs in statutory-note form at the closest subject-matter anchor.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Sections 1 through 3 only set the short title, severability, and immediate effective date.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Definitions for recipients and the Attorney General's designee.",
+          "classes": [
+            "definitions"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 4 defines \"the recipient\" and \"his designee\" for the subpoena framework.",
+          "notes": "No positive-law Code host is identified."
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "Authorizes Attorney General subpoenas, service, enforcement, and court-compelled compliance.",
+          "classes": [
+            "new-permanent-general",
+            "uncodified-admin-direction"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 5 authorizes written subpoenas, service, court enforcement, and contempt remedies for noncompliance.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 6",
+          "text_summary": "Challenges to subpoenas and protection from self-incrimination.",
+          "classes": [
+            "new-permanent-general",
+            "savings"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 6 provides a motion-to-modify process and addresses self-incrimination limits on testimony demands.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s1",
+        "detail": "The note is in the correct Title 28 neighborhood, but it still carries a full-text dump and Trello link instead of a concise history note."
+      },
+      "recommended_actions": [
+        "Keep the enactment as a statutory note only.",
+        "Do not fabricate a positive-law Code section for the subpoena framework.",
+        "Remove the quoted-content dump and Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-248",
+      "public_law": "34-248",
+      "title": "Public Law 34-248 | Intelligence Community Inspector General Consolidation Act of 2025",
+      "status": "current",
+      "status_basis": "Source text is complete and reviewable. It consolidates Intelligence Community Inspector General functions and adjusts oversight rules, but the enactment is best preserved as a statutory note anchored to Title 50 rather than as a clean positive-law rewrite.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and definitions.",
+          "classes": [
+            "short-title",
+            "definitions"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 1 provides the short title, and Section 2 defines the IGIC, intelligence community element, element IG, and designation authority.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3-4",
+          "text_summary": "Transfers element IG duties, personnel, records, property, and pending matters to the IGIC.",
+          "classes": [
+            "transfer",
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Sections 3 and 4 move duties, employees, records, property, and pending matters into the IGIC structure.",
+          "notes": "The operative text is organizational rather than a line-by-line U.S. Code substitution."
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "Limits IGIC access to sensitive operations and sets written justification rules.",
+          "classes": [
+            "savings",
+            "uncodified-admin-direction"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 5 lets the DNI restrict direct access for national-security reasons and requires classified written justification.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 7",
+          "text_summary": "Protects intelligence sources and methods.",
+          "classes": [
+            "savings"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 7 preserves the DNI's duty to protect intelligence sources and methods from unauthorized disclosure.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 8-9",
+          "text_summary": "Additional oversight powers and effective date.",
+          "classes": [
+            "new-permanent-general",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 8 adds oversight-related duties and penalties, and Section 9 makes the Act effective three days after enactment.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The XML note is on a Title 50 anchor and matches the subject matter, but it still needs to be reduced to a concise statutory note."
+      },
+      "recommended_actions": [
+        "Keep the law as a statutory note at the Title 50 anchor.",
+        "Do not invent a positive-law rewrite for the IGIC consolidation scheme.",
+        "Trim the quoted-content dump and remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-249",
+      "public_law": "34-249",
+      "title": "Public Law 34-249 | Washington Diplomacy Complex Bill 2025",
+      "status": "current",
+      "status_basis": "Source text is complete and reviewable. It is a place-specific diplomacy/security enactment with no express positive-law Code amendment, so it belongs in statutory-note form at the closest Title 40 anchor.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and purpose.",
+          "classes": [
+            "short-title",
+            "purpose"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 1 names the Act and Section 2 states its purpose is to establish and define jurisdiction over the Complex.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Definitions for the Complex, Department, and United Nations Secretariat.",
+          "classes": [
+            "definitions"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 3 defines the Complex, the Department, and the United Nations Secretariat.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Jurisdiction, control, access control, and security authority over the Complex.",
+          "classes": [
+            "local-district",
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 4 gives the Department full jurisdiction, control, and authority over the Complex and its security perimeter.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "United Nations access rules and suspension/revocation conditions.",
+          "classes": [
+            "local-district",
+            "uncodified-admin-direction"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 5 allows access, suspension, and permanent revocation rules tied to Department security judgments.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 6-7",
+          "text_summary": "Regulations and severability.",
+          "classes": [
+            "uncodified-admin-direction",
+            "severability"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 6 requires regulations within fourteen days, and Section 7 is severability.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "The note is placed at a plausible Title 40 anchor, but the record still contains a quoted-content dump and should be condensed."
+      },
+      "recommended_actions": [
+        "Keep the enactment as a concise statutory note.",
+        "Do not fabricate a positive-law section rewrite.",
+        "Remove the quoted-content dump and Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-250",
+      "public_law": "34-250",
+      "title": "Public Law 34-250 | Federal Prison Standards Act of 2025",
+      "status": "current",
+      "status_basis": "Source text is complete and reviewable. It creates broad detention-facility standards, property-boundary rules, force rules, oversight, and remedies, but it does not supply a clean positive-law Code rewrite target. It belongs in statutory-note form at the closest Title 18 anchor.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, purpose, and definitions.",
+          "classes": [
+            "short-title",
+            "purpose",
+            "definitions"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Sections 1 through 3 establish the name of the Act, its prison-safety purposes, and the core definitions.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4-6",
+          "text_summary": "Property boundaries, access authority, and restricted airspace for the Washington D.C. Correctional Facility.",
+          "classes": [
+            "local-district",
+            "new-permanent-general"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Sections 4 through 6 set facility boundaries, access rules, and airspace restrictions for the correctional facility.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 7-10",
+          "text_summary": "Standards of care, abuse prohibitions, lethal-force limits, and solitary-confinement rules.",
+          "classes": [
+            "new-permanent-general",
+            "uncodified-admin-direction"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Sections 7 through 10 regulate conditions of confinement, force, and solitary confinement.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 11-12",
+          "text_summary": "Oversight, whistleblower protection, regulations, civil remedies, and criminal remedies.",
+          "classes": [
+            "new-permanent-general",
+            "savings"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Sections 11 and 12 create inspection, reporting, whistleblower, and enforcement provisions, including references to 18 U.S.C. § 113 and 42 U.S.C. § 1983.",
+          "notes": "The Act references criminal and civil remedies but does not identify a single clean U.S. Code host for a rewrite."
+        },
+        {
+          "ref": "SEC 13-15",
+          "text_summary": "Recognition, severability, and effective date.",
+          "classes": [
+            "findings-or-sense",
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 13 contains a recognition clause, Section 14 is severability, and Section 15 makes the Act effective immediately.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "The XML note is on a Title 18 anchor and matches the subject matter, but it still contains a full-text dump and should be shortened."
+      },
+      "recommended_actions": [
+        "Keep the enactment as a statutory note only.",
+        "Do not invent a positive-law detention or prison section.",
+        "Trim the quoted-content dump and remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-251",
+      "public_law": "34-251",
+      "title": "Public Law 34-251 | In-Game Sentencing Guidelines Bill",
+      "status": "superseded",
+      "status_basis": "The source text is complete and reviewable, but the archive classifies this law as superseded history. It should remain retained only as statutory history rather than live positive text.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Sections 1 through 3 set the bill's title, severability, and effective date.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Defines the Title 18 sentencing framework and aggregate-sentence limits.",
+          "classes": [
+            "new-permanent-general",
+            "statutory-note-material"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 4 establishes the sentencing caps and aggregate-sentence limitations for the in-game framework.",
+          "notes": "The enactment is retained only as historical material."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correct-in-baseline",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18/s1",
+        "detail": "The current XML already treats this law as superseded history, which matches the archive classification; the remaining work is cleanup of the dump and Trello link."
+      },
+      "recommended_actions": [
+        "Keep this enactment as historical note material only.",
+        "Do not revive it as live positive-law text.",
+        "Trim the quoted-content dump and remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-035-252",
+      "public_law": "35-252",
+      "title": "Public Law 35-252 | Magistrate Appointment Act of 2025",
+      "status": "current",
+      "status_basis": "Source text is complete and reviewable. Section 3 amends Section 106(c)(i) of Public Law 26-190, but it does not identify a clean positive-law U.S. Code text to rewrite. The enactment should remain note material at the closest Title 28 anchor.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and purpose.",
+          "classes": [
+            "short-title",
+            "purpose"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 1 names the Act and Section 2 states that it changes the magistrate-judge appointment process.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Amends Section 106(c)(i) of Public Law 26-190.",
+          "classes": [
+            "direct-amendment",
+            "substitution"
+          ],
+          "treatment": "statutory-note",
+          "target": "Public Law 26-190 section 106(c)(i)",
+          "exact_change": "Update the referenced magistrate-appointment rule in PL 26-190 to require 30 days as a bar-certified individual, with the federal-bar suspension proviso.",
+          "evidence": "Section 3 says Section 106(c)(i) of Public Law 26-190 \"shall be amended to read as follows.\"",
+          "notes": "This is a prior-public-law amendment rather than a direct U.S. Code rewrite."
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Severability clause.",
+          "classes": [
+            "severability"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 4 preserves the remainder of the Act if any provision is invalid.",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "Effective date.",
+          "classes": [
+            "effective-date"
+          ],
+          "treatment": "effective-date-note",
+          "target": null,
+          "exact_change": null,
+          "evidence": "Section 5 makes the Act effective upon enactment.",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s1",
+        "detail": "The XML note is at a plausible Title 28 anchor, but the record still carries a full-text dump and should remain as concise note history only."
+      },
+      "recommended_actions": [
+        "Keep the enactment as note history at the closest Title 28 anchor.",
+        "Do not fabricate a positive-law section rewrite.",
+        "Remove the quoted-content dump and Trello link."
+      ],
+      "confidence": "medium"
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "reviewer": "codex-repair-07",
+  "group_index": 107,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/review-repair-07.json",
+  "output_path": "audit/review/review-repair-07.json",
+  "reviewed_against": [
+    "audit/manifests/review-repair-07.json",
+    "audit/review/review-07.json",
+    "audit/chronology-report.json",
+    "origin/main",
+    "codification/laws/laws/PL-010-065/law.txt",
+    "codification/laws/laws/PL-011-070/law.txt",
+    "codification/laws/laws/PL-011-071/law.txt",
+    "codification/laws/laws/PL-011-072/law.txt",
+    "usc/usc28.xml",
+    "usc/usc40.xml"
+  ],
+  "completion_summary": "Clarified chronology for the four gap laws: PL-010-065 is source-history only, PL-011-070 is a current transfer enactment with no self-sunset, PL-011-071 remains current and integrated, and PL-011-072 is later repealed but its section 133 text survives through the independent reenactment noted in the chronology report.",
+  "changed_law_ids": [
+    "PL-010-065",
+    "PL-011-070",
+    "PL-011-071",
+    "PL-011-072"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-009-062",
+      "public_law": "9-62",
+      "title": "Public Law 9-62 | Repealing the District of Columbia Home Rule Act",
+      "status": "current",
+      "status_basis": "This repeal-history measure remains a current note-only law with no self-sunset.",
+      "provisions": [],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "The existing note still needs to be trimmed to a concise repeal-history statement."
+      },
+      "recommended_action": "Keep the repeal as a concise history note and remove any dump-style material.",
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "This repeal-history measure remains a current note-only law with no self-sunset.",
+      "approved_code_treatment": "NONOPERATIVE_OR_REPEALED",
+      "final_recommended_action": "Keep the repeal as a concise history note and remove any dump-style material.",
+      "source_evidence": [
+        "status keyword `repealed` in list or label",
+        "https://drive.google.com/file/d/1FiypGldPp_9sbhhxKnVwRtoWzVb5ywnO/view?usp=sharing",
+        "The canonical Trello record is classified as `repealed` based on status keyword `repealed` in list or label. It is not inserted as current Code text."
+      ],
+      "exact_target": "/us/usc/t40/s101/4"
+    },
+    {
+      "law_id": "PL-009-063",
+      "public_law": "9-63",
+      "title": "Public Law 9-63 | The Federal District Employment Act of 2022",
+      "status": "unresolved",
+      "status_basis": "The source remains unrecoverable, so no operative codification conclusion can be fixed from the available materials.",
+      "provisions": [],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "placement": "/us/usc/t5/s101",
+        "detail": "A default Title 5 placement was chosen despite no recoverable statutory text."
+      },
+      "recommended_action": "Retain only a concise source-limited historical note and do not invent operative text.",
+      "confidence": "medium",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source remains unrecoverable, so no operative codification conclusion can be fixed from the available materials.",
+      "approved_code_treatment": "NONOPERATIVE_OR_REPEALED",
+      "final_recommended_action": "Retain only a concise source-limited historical note and do not invent operative text.",
+      "source_evidence": [
+        "status keyword `repealed` in list or label",
+        "unavailable",
+        "The canonical Trello record is classified as `repealed` based on status keyword `repealed` in list or label. It is not inserted as current Code text."
+      ],
+      "exact_target": "/us/usc/t5/s101"
+    },
+    {
+      "law_id": "PL-010-065",
+      "public_law": "10-65",
+      "title": "Public Law 10-65 | Federal Judicial Reform Act ii",
+      "status": "fully-repealed",
+      "status_basis": "The recovered source is a judicial opinion, not enactment text, and it invalidates the challenged provisions.",
+      "provisions": [],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "placement": "/us/usc/t50/s1",
+        "detail": "A judicial opinion was treated like a statutory note and parked in an unrelated title."
+      },
+      "recommended_action": "Remove the dump and Trello link and keep only a short historical cross-reference note, if any.",
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The recovered source is a judicial opinion, not enactment text, and it invalidates the challenged provisions.",
+      "approved_code_treatment": "NONOPERATIVE_OR_REPEALED",
+      "final_recommended_action": "Remove the dump and Trello link and keep only a short historical cross-reference note, if any.",
+      "source_evidence": [
+        "status keyword `repealed` in list or label",
+        "https://drive.google.com/file/d/1GPU4hQ94yN_lHhZwkNIwBUoT0Q4ac2m2/view?usp=sharing",
+        "The canonical Trello record is classified as `repealed` based on status keyword `repealed` in list or label. It is not inserted as current Code text."
+      ],
+      "exact_target": "/us/usc/t50/s1"
+    },
+    {
+      "law_id": "PL-010-066",
+      "public_law": "10-66",
+      "title": "Public Law 10-66 | The Americans First Act",
+      "status": "current",
+      "status_basis": "The act is an operative repealer with immediate effect and does not create a new permanent Code section.",
+      "provisions": [],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t8/s1101/i/2",
+        "detail": "The note is still dump-heavy and anchored in an awkward subject area."
+      },
+      "recommended_action": "Keep only concise historical notes recording the repeals.",
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The act is an operative repealer with immediate effect and does not create a new permanent Code section.",
+      "approved_code_treatment": "NONOPERATIVE_OR_REPEALED",
+      "final_recommended_action": "Keep only concise historical notes recording the repeals.",
+      "source_evidence": [
+        "status keyword `repealed` in list or label",
+        "https://drive.google.com/file/d/1N6fHpHtQhtwxmyX3rtliFHf598atLRLM/view",
+        "The canonical Trello record is classified as `repealed` based on status keyword `repealed` in list or label. It is not inserted as current Code text."
+      ],
+      "exact_target": "/us/usc/t8/s1101/i/2"
+    },
+    {
+      "law_id": "PL-010-067",
+      "public_law": "10-67",
+      "title": "Public Law 10-67 | Ambassadorial Readjustment Act",
+      "status": "current",
+      "status_basis": "The act creates permanent ambassadorial rules and needs real Title 22 codification.",
+      "provisions": [],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t22/s2651",
+        "detail": "The current note is only a boilerplate summary with a dump and link."
+      },
+      "recommended_action": "Codify the substantive Section 2 rules as a new Title 22 provision near 22 U.S.C. 2651a.",
+      "confidence": "medium",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The act creates permanent ambassadorial rules and needs real Title 22 codification.",
+      "approved_code_treatment": "NONOPERATIVE_OR_REPEALED",
+      "final_recommended_action": "Codify the substantive Section 2 rules as a new Title 22 provision near 22 U.S.C. 2651a.",
+      "source_evidence": [
+        "status keyword `repealed` in list or label",
+        "https://drive.google.com/file/d/1oUTSyjx5mv2kR90G5u3dgwSI15PXwHPo/view",
+        "The canonical Trello record is classified as `repealed` based on status keyword `repealed` in list or label. It is not inserted as current Code text."
+      ],
+      "exact_target": "/us/usc/t22/s2651"
+    },
+    {
+      "law_id": "PL-010-068",
+      "public_law": "10-68 | American Jobs Act",
+      "title": "Public Law 10-68 | American Jobs Act",
+      "status": "current",
+      "status_basis": "The law is an operative repealer with immediate effect, so a concise historical note is sufficient.",
+      "provisions": [],
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "placement": "/us/usc/t46/s101",
+        "detail": "The current note is parked in the wrong subject area and still carries a full-text dump."
+      },
+      "recommended_action": "Record the repeal of Public Law 3-20 as a concise historical cross-reference.",
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The law is an operative repealer with immediate effect, so a concise historical note is sufficient.",
+      "approved_code_treatment": "NONOPERATIVE_OR_REPEALED",
+      "final_recommended_action": "Record the repeal of Public Law 3-20 as a concise historical cross-reference.",
+      "source_evidence": [
+        "status keyword `repealed` in list or label",
+        "https://drive.google.com/file/d/1wRGf2XipgoLnq_bqG1wJwMGWMo0b_qWm/view",
+        "The canonical Trello record is classified as `repealed` based on status keyword `repealed` in list or label. It is not inserted as current Code text."
+      ],
+      "exact_target": "/us/usc/t46/s101"
+    },
+    {
+      "law_id": "PL-011-069",
+      "public_law": "11-69",
+      "title": "Public Law 11-69 | DC Criminal Code Act",
+      "status": "current",
+      "status_basis": "The source creates enforceable D.C. criminal and traffic rules, but it belongs outside permanent federal U.S. Code text.",
+      "provisions": [],
+      "current_implementation": {
+        "assessment": "improperly-inserted-into-permanent-text",
+        "placement": "/us/usc/t18/s1",
+        "detail": "The current note treats a local D.C. criminal code as if it were federal permanent text."
+      },
+      "recommended_action": "Exclude this local/District criminal code from permanent U.S. Code text.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source creates enforceable D.C. criminal and traffic rules, but it belongs outside permanent federal U.S. Code text.",
+      "approved_code_treatment": "STATUTORY_NOTE",
+      "final_recommended_action": "Exclude this local/District criminal code from permanent U.S. Code text.",
+      "source_evidence": [
+        "active keyword `in effect` in list or label",
+        "https://drive.google.com/file/d/1jmz8UiVM4ZrAxjCUiv9KBmc6lFUSw0qB/view",
+        "No express, uniquely executable Code amendment was found. The enactment appears general and permanent (permanent score 46; temporary score 0) and is therefore preserved as a statutory note at 18 U.S.C. § 2427. Anchor selection: subject classification `crime` (score 69) and closest existing section heading `Inclusion of offenses relating to child pornography in definition of sexual activity for which any person can be charged with a criminal offense`."
+      ],
+      "exact_target": "/us/usc/t18/s1"
+    },
+    {
+      "law_id": "PL-011-070",
+      "public_law": "11-70",
+      "title": "Public Law 11-70 | Supreme Court Please Act",
+      "status": "current",
+      "status_basis": "The source directs a substantive transfer under Title 40 and should be moved to the proper anchor.",
+      "provisions": [],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t28/s1",
+        "detail": "The current note is anchored in the wrong title and only captures a boilerplate summary."
+      },
+      "recommended_action": "Move the transfer to the 40 U.S.C. 6121 anchor and codify the duty transfer there.",
+      "confidence": "medium",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source directs a substantive transfer under Title 40 and should be moved to the proper anchor.",
+      "approved_code_treatment": "STATUTORY_NOTE",
+      "final_recommended_action": "Move the transfer to the 40 U.S.C. 6121 anchor and codify the duty transfer there.",
+      "source_evidence": [
+        "active keyword `in effect` in list or label",
+        "https://drive.google.com/file/d/1pRqheuL-hP7TovYB-1BBzQukcMFqUytF/view",
+        "No express, uniquely executable Code amendment was found. The enactment appears general and permanent (permanent score 4; temporary score 0) and is therefore preserved as a statutory note at 28 U.S.C. § 561. Anchor selection: subject classification `judiciary` (score 18) and closest existing section heading `United States Marshals Service`."
+      ],
+      "exact_target": "/us/usc/t28/s1"
+    },
+    {
+      "law_id": "PL-011-071",
+      "public_law": "11-71",
+      "title": "Public Law 11-71 | Supreme Court Needs Act",
+      "status": "current",
+      "status_basis": "The act directly rewrites 28 U.S.C. section 1, so a note-alone treatment is insufficient.",
+      "provisions": [],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t28/s1",
+        "detail": "The note is parked at the right anchor but remains boilerplate."
+      },
+      "recommended_action": "Actually amend 28 U.S.C. 1 to the new Chief Justice plus four associate justices text.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The act directly rewrites 28 U.S.C. section 1, so a note-alone treatment is insufficient.",
+      "approved_code_treatment": "ALREADY_INCORPORATED",
+      "final_recommended_action": "Actually amend 28 U.S.C. 1 to the new Chief Justice plus four associate justices text.",
+      "source_evidence": [
+        "active keyword `in effect` in list or label",
+        "https://drive.google.com/file/d/16lTThB3lYn_zEXAIPy9VpULCOMiyCK8F/view",
+        "Project-generated U.S. Code material already contains this public law. The mass migration records and verifies the existing locations rather than duplicating it."
+      ],
+      "exact_target": "/us/usc/t28/s1"
+    },
+    {
+      "law_id": "PL-011-072",
+      "public_law": "11-72",
+      "title": "Public Law 11-72 | No More Mariah Act",
+      "status": "current",
+      "status_basis": "The act directly replaces Title 28 text and also records a repeal, so note-only treatment is not sufficient.",
+      "provisions": [],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t28/s1",
+        "detail": "The note is anchored at section 1, but the real target is 28 U.S.C. 133."
+      },
+      "recommended_action": "Amend 28 U.S.C. 133 with the new District of Columbia judgeship text and record the repeal of Public Law 10-65 as repeal history.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The act directly replaces Title 28 text and also records a repeal, so note-only treatment is not sufficient.",
+      "approved_code_treatment": "ALREADY_INCORPORATED",
+      "final_recommended_action": "Amend 28 U.S.C. 133 with the new District of Columbia judgeship text and record the repeal of Public Law 10-65 as repeal history.",
+      "source_evidence": [
+        "active keyword `in effect` in list or label",
+        "https://drive.google.com/file/d/1pdIGswtmNVMYpHFFTohGh9dWMJxSAVeF/view",
+        "Project-generated U.S. Code material already contains this public law. The mass migration records and verifies the existing locations rather than duplicating it."
+      ],
+      "exact_target": "/us/usc/t28/s1"
+    }
+  ]
+}

@@ -1,0 +1,736 @@
+{
+  "reviewer": "law-auditor-65",
+  "group_index": 165,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/review-repair-65.json",
+  "source_review_path": "audit/review/review-65.json",
+  "output_path": "audit/review/review-repair-65.json",
+  "reviewed_against": [
+    "audit/manifests/review-repair-65.json",
+    "audit/review/review-65.json",
+    "audit/primary/batch-14-02.json",
+    "audit/chronology-report.json",
+    "codification/mass_migration/latest/reports/MASTER-CODIFICATION-REPORT.md",
+    "codification/mass_migration/latest/plans/PL-017-133.json",
+    "codification/mass_migration/latest/plans/PL-017-134.json",
+    "codification/mass_migration/latest/plans/PL-017-135.json",
+    "codification/mass_migration/latest/plans/PL-017-136.json",
+    "codification/mass_migration/latest/plans/PL-017-137.json",
+    "codification/mass_migration/latest/plans/PL-017-138.json",
+    "codification/mass_migration/latest/plans/PL-018-139.json",
+    "codification/mass_migration/latest/plans/PL-018-140.json",
+    "codification/mass_migration/latest/plans/PL-018-141.json",
+    "codification/mass_migration/latest/plans/PL-018-142.json",
+    "codification/laws/laws/PL-017-133/law.txt",
+    "codification/laws/laws/PL-017-134/law.txt",
+    "codification/laws/laws/PL-017-135/law.txt",
+    "codification/laws/laws/PL-017-136/law.txt",
+    "codification/laws/laws/PL-017-137/law.txt",
+    "codification/laws/laws/PL-017-138/law.txt",
+    "codification/laws/laws/PL-018-139/law.txt",
+    "codification/laws/laws/PL-018-140/law.txt",
+    "codification/laws/laws/PL-018-141/law.txt",
+    "codification/laws/laws/PL-018-142/law.txt",
+    "usc/usc02.xml",
+    "usc/usc05.xml",
+    "usc/usc28.xml",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-017-133",
+      "public_law": "17-133",
+      "title": "Public Law 17-133 | Judicial Overhaul Bill (JOB) AMENDED",
+      "final_legal_status": "current",
+      "chronology_conclusion": "Operative title 28 restructuring law with no independent repeal identified in the reviewed corpus. The enacted sections 5-10 are the controlling amendment sequence, and the current XML state matches origin/main for the affected title 28 material.",
+      "approved_code_treatment": "amend-existing-text",
+      "target_resolution": {
+        "target": "/us/usc/t28",
+        "justification": "The law is already integrated as title 28 amendment history and does not belong as a new standalone section."
+      },
+      "provisions": [
+        {
+          "ref": "SEC. 1-4",
+          "legal_conclusion": "note material",
+          "approved_code_treatment": "statutory-note",
+          "target_resolution": {
+            "target": "/us/usc/t28",
+            "justification": "Opening clauses are short-form enactment material only."
+          },
+          "exact_action": "Keep the opening clauses as concise note material only.",
+          "source_evidence": [
+            "audit/primary/batch-14-02.json",
+            "codification/mass_migration/latest/plans/PL-017-133.json",
+            "codification/mass_migration/latest/sources/text/PL-017-133.txt"
+          ],
+          "current_xml_comparison": {
+            "branch_file": "usc/usc28.xml",
+            "origin_main_file": "origin/main:usc/usc28.xml",
+            "result": "No branch-only delta; the title 28 amendment trail is present in both current branch XML and origin/main."
+          }
+        },
+        {
+          "ref": "SEC. 5-10",
+          "legal_conclusion": "operative amendment",
+          "approved_code_treatment": "amend-existing-text",
+          "target_resolution": {
+            "target": "/us/usc/t28",
+            "justification": "These sections repealed and replaced title 28 provisions across Parts I-VI."
+          },
+          "exact_action": "Apply the section-by-section title 28 repeal and replacement structure already reflected in the current branch XML.",
+          "source_evidence": [
+            "audit/primary/batch-14-02.json",
+            "codification/mass_migration/latest/plans/PL-017-133.json",
+            "codification/mass_migration/latest/sources/text/PL-017-133.txt"
+          ],
+          "current_xml_comparison": {
+            "branch_file": "usc/usc28.xml",
+            "origin_main_file": "origin/main:usc/usc28.xml",
+            "result": "No branch-only delta; the same title 28 amendment trail is present in origin/main."
+          }
+        }
+      ],
+      "current_xml_comparison": {
+        "branch_file": "usc/usc28.xml",
+        "origin_main_file": "origin/main:usc/usc28.xml",
+        "result": "Present in both current branch XML and origin/main; the prior report's branch-only implementation claim is not supported by the diff."
+      },
+      "source_evidence": [
+        "audit/primary/batch-14-02.json",
+        "audit/chronology-report.json",
+        "codification/mass_migration/latest/plans/PL-017-133.json",
+        "codification/laws/laws/PL-017-133/law.txt"
+      ],
+      "final_recommended_action": "Retain the existing title 28 amendment trail and do not create a duplicate note or new section.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-134",
+      "public_law": "17-134",
+      "title": "Public Law 17-134 | Amended The Uniformed Capitol Police Act of 2023",
+      "final_legal_status": "current",
+      "chronology_conclusion": "Operative and permanent, but not a direct Code rewrite. The enactment is best preserved as a statutory note at 2 U.S.C. 1438, and no later repeal was identified in the reviewed corpus.",
+      "approved_code_treatment": "statutory-note",
+      "target_resolution": {
+        "target": "/us/usc/t2/s1438",
+        "justification": "The law amends prior public-law text and belongs as note material anchored to the title 2 severability section."
+      },
+      "provisions": [
+        {
+          "ref": "SECTION I",
+          "legal_conclusion": "note material",
+          "approved_code_treatment": "statutory-note",
+          "target_resolution": {
+            "target": "/us/usc/t2/s1438",
+            "justification": "Short title, severability, and effective date are note material only."
+          },
+          "exact_action": "Keep the opening clauses as short note material.",
+          "source_evidence": [
+            "audit/primary/batch-14-02.json",
+            "codification/mass_migration/latest/plans/PL-017-134.json",
+            "codification/laws/laws/PL-017-134/law.txt"
+          ],
+          "current_xml_comparison": {
+            "branch_file": "usc/usc02.xml",
+            "origin_main_file": "origin/main:usc/usc02.xml",
+            "result": "Absent in both current branch XML and origin/main; no PL-017-134 note is present at 2 U.S.C. 1438."
+          }
+        },
+        {
+          "ref": "SECTION II",
+          "legal_conclusion": "note-only amendment to prior public law",
+          "approved_code_treatment": "statutory-note",
+          "target_resolution": {
+            "target": "/us/usc/t2/s1438",
+            "justification": "The enacted text directs an amendment to Public Law 16-119 rather than a new positive-law section."
+          },
+          "exact_action": "Record the amendment text as a statutory note at the title 2 anchor; do not create a new Code section.",
+          "source_evidence": [
+            "audit/primary/batch-14-02.json",
+            "codification/mass_migration/latest/plans/PL-017-134.json",
+            "codification/laws/laws/PL-017-134/law.txt"
+          ],
+          "current_xml_comparison": {
+            "branch_file": "usc/usc02.xml",
+            "origin_main_file": "origin/main:usc/usc02.xml",
+            "result": "Absent in both current branch XML and origin/main; the note has not been integrated."
+          }
+        }
+      ],
+      "current_xml_comparison": {
+        "branch_file": "usc/usc02.xml",
+        "origin_main_file": "origin/main:usc/usc02.xml",
+        "result": "No PL-017-134 note is present in either XML version."
+      },
+      "source_evidence": [
+        "audit/primary/batch-14-02.json",
+        "audit/chronology-report.json",
+        "codification/mass_migration/latest/plans/PL-017-134.json",
+        "codification/laws/laws/PL-017-134/law.txt"
+      ],
+      "final_recommended_action": "Add a statutory note at 2 U.S.C. 1438 and do not create a new Code section.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-135",
+      "public_law": "17-135",
+      "title": "Public Law 17-135 | Judicial Bias Protection Act (JBPA)",
+      "final_legal_status": "current",
+      "chronology_conclusion": "Operative direct amendment law. Section 5 replaces 28 U.S.C. 144, and the live XML already contains the revised section text. The current branch and origin/main are aligned on this law, so there is no branch-only delta to repair.",
+      "approved_code_treatment": "amend-existing-text",
+      "target_resolution": {
+        "target": "/us/usc/t28/s144",
+        "justification": "Section 5 directly replaces the bias-recusal statute."
+      },
+      "provisions": [
+        {
+          "ref": "SEC. 1-4",
+          "legal_conclusion": "note material",
+          "approved_code_treatment": "statutory-note",
+          "target_resolution": {
+            "target": "/us/usc/t28/s144",
+            "justification": "Short title, severability, effective date, and definition material do not map to a separate Code section."
+          },
+          "exact_action": "Keep the opening clauses as note material only.",
+          "source_evidence": [
+            "audit/primary/batch-14-02.json",
+            "codification/mass_migration/latest/plans/PL-017-135.json",
+            "codification/laws/laws/PL-017-135/law.txt"
+          ],
+          "current_xml_comparison": {
+            "branch_file": "usc/usc28.xml",
+            "origin_main_file": "origin/main:usc/usc28.xml",
+            "result": "Present in both current branch XML and origin/main; the section 144 history note and revised text are already aligned."
+          }
+        },
+        {
+          "ref": "SEC. 5",
+          "legal_conclusion": "operative amendment",
+          "approved_code_treatment": "amend-existing-text",
+          "target_resolution": {
+            "target": "/us/usc/t28/s144",
+            "justification": "This is the controlling replacement of 28 U.S.C. 144."
+          },
+          "exact_action": "Replace 28 U.S.C. 144 with the new affidavit, review, and reassignment rules stated in section 5.",
+          "source_evidence": [
+            "audit/primary/batch-14-02.json",
+            "audit/chronology-report.json",
+            "codification/mass_migration/latest/plans/PL-017-135.json",
+            "codification/laws/laws/PL-017-135/law.txt"
+          ],
+          "current_xml_comparison": {
+            "branch_file": "usc/usc28.xml",
+            "origin_main_file": "origin/main:usc/usc28.xml",
+            "result": "Present in both current branch XML and origin/main; the prior branch-only implementation claim is not supported by the diff."
+          }
+        },
+        {
+          "ref": "SEC. 6-7",
+          "legal_conclusion": "note material",
+          "approved_code_treatment": "statutory-note",
+          "target_resolution": {
+            "target": "/us/usc/t28/s144",
+            "justification": "These generally applicable procedural rules do not direct a separate Code placement."
+          },
+          "exact_action": "Keep these rules as short note material only.",
+          "source_evidence": [
+            "audit/primary/batch-14-02.json",
+            "codification/mass_migration/latest/plans/PL-017-135.json",
+            "codification/laws/laws/PL-017-135/law.txt"
+          ],
+          "current_xml_comparison": {
+            "branch_file": "usc/usc28.xml",
+            "origin_main_file": "origin/main:usc/usc28.xml",
+            "result": "Present in both current branch XML and origin/main; no additional XML change is required."
+          }
+        }
+      ],
+      "current_xml_comparison": {
+        "branch_file": "usc/usc28.xml",
+        "origin_main_file": "origin/main:usc/usc28.xml",
+        "result": "The revised 28 U.S.C. 144 text is present in both current branch XML and origin/main; the earlier report overstated branch uniqueness."
+      },
+      "source_evidence": [
+        "audit/primary/batch-14-02.json",
+        "audit/chronology-report.json",
+        "codification/mass_migration/latest/plans/PL-017-135.json",
+        "codification/laws/laws/PL-017-135/law.txt"
+      ],
+      "final_recommended_action": "Preserve the existing heading, history notes, and revised section 144 text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-136",
+      "public_law": "17-136",
+      "title": "Public Law 17-136 | The Parks Act (TPA)",
+      "final_legal_status": "current",
+      "chronology_conclusion": "Operative permanent enactment with no later repeal identified in the reviewed corpus. The proper treatment is a title 2 statutory note at 2 U.S.C. 4577, and no XML placement exists yet in either branch state.",
+      "approved_code_treatment": "statutory-note",
+      "target_resolution": {
+        "target": "/us/usc/t2/s4577",
+        "justification": "The enactment sets continuing park authority rules rather than a new positive-law section."
+      },
+      "provisions": [
+        {
+          "ref": "SEC. 1-3",
+          "legal_conclusion": "note material",
+          "approved_code_treatment": "statutory-note",
+          "target_resolution": {
+            "target": "/us/usc/t2/s4577",
+            "justification": "Short title, severability, and effective date clauses are note material."
+          },
+          "exact_action": "Keep the opening clauses as concise note material.",
+          "source_evidence": [
+            "audit/primary/batch-14-02.json",
+            "codification/mass_migration/latest/plans/PL-017-136.json",
+            "codification/laws/laws/PL-017-136/law.txt"
+          ],
+          "current_xml_comparison": {
+            "branch_file": "usc/usc02.xml",
+            "origin_main_file": "origin/main:usc/usc02.xml",
+            "result": "Absent in both current branch XML and origin/main; no PL-017-136 note is present at 2 U.S.C. 4577."
+          }
+        },
+        {
+          "ref": "SEC. 4-5",
+          "legal_conclusion": "note-only permanent general rule",
+          "approved_code_treatment": "statutory-note",
+          "target_resolution": {
+            "target": "/us/usc/t2/s4577",
+            "justification": "The Secret Service and park-closure rules are general and permanent but do not create a separate section."
+          },
+          "exact_action": "Record the Secret Service and park-closure rules as a title 2 statutory note.",
+          "source_evidence": [
+            "audit/primary/batch-14-02.json",
+            "audit/chronology-report.json",
+            "codification/mass_migration/latest/plans/PL-017-136.json",
+            "codification/laws/laws/PL-017-136/law.txt"
+          ],
+          "current_xml_comparison": {
+            "branch_file": "usc/usc02.xml",
+            "origin_main_file": "origin/main:usc/usc02.xml",
+            "result": "Absent in both current branch XML and origin/main; the note has not been integrated."
+          }
+        }
+      ],
+      "current_xml_comparison": {
+        "branch_file": "usc/usc02.xml",
+        "origin_main_file": "origin/main:usc/usc02.xml",
+        "result": "No PL-017-136 statutory note is present in either XML version."
+      },
+      "source_evidence": [
+        "audit/primary/batch-14-02.json",
+        "audit/chronology-report.json",
+        "codification/mass_migration/latest/plans/PL-017-136.json",
+        "codification/laws/laws/PL-017-136/law.txt"
+      ],
+      "final_recommended_action": "Add a statutory note at 2 U.S.C. 4577 and do not create a new Code section.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-137",
+      "public_law": "17-137",
+      "title": "Public Law 17-137 | Federal Background Check Act",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The enactment is nonoperative history. It is later repealed by PL-018-139, so it should not be carried forward as current Code text.",
+      "approved_code_treatment": "historical-note-only",
+      "target_resolution": {
+        "target": null,
+        "justification": "The law is repealed and belongs only in repeal-history records."
+      },
+      "provisions": [
+        {
+          "ref": "SECTION I",
+          "legal_conclusion": "historical note only",
+          "approved_code_treatment": "historical-note-only",
+          "target_resolution": {
+            "target": null,
+            "justification": "Short title, severability, effective date, and definitions are nonoperative after repeal."
+          },
+          "exact_action": "Keep as repeal-history only; do not derive an operative Code placement.",
+          "source_evidence": [
+            "audit/primary/batch-14-02.json",
+            "codification/mass_migration/latest/plans/PL-017-137.json",
+            "codification/laws/laws/PL-017-137/law.txt"
+          ],
+          "current_xml_comparison": {
+            "branch_file": "usc/usc02.xml",
+            "origin_main_file": "origin/main:usc/usc02.xml",
+            "result": "No Code placement exists in either XML version."
+          }
+        },
+        {
+          "ref": "SECTION II-IV",
+          "legal_conclusion": "historical note only",
+          "approved_code_treatment": "historical-note-only",
+          "target_resolution": {
+            "target": null,
+            "justification": "Definitions and federal-employment rules are nonoperative history after repeal."
+          },
+          "exact_action": "Retain only as historical material.",
+          "source_evidence": [
+            "audit/primary/batch-14-02.json",
+            "codification/mass_migration/latest/plans/PL-017-137.json",
+            "codification/laws/laws/PL-017-137/law.txt"
+          ],
+          "current_xml_comparison": {
+            "branch_file": "usc/usc02.xml",
+            "origin_main_file": "origin/main:usc/usc02.xml",
+            "result": "No Code placement exists in either XML version."
+          }
+        },
+        {
+          "ref": "SECTION V",
+          "legal_conclusion": "historical note only",
+          "approved_code_treatment": "historical-note-only",
+          "target_resolution": {
+            "target": null,
+            "justification": "The immediate-effect clause is nonoperative history after repeal."
+          },
+          "exact_action": "Keep only as a short historical clause.",
+          "source_evidence": [
+            "audit/primary/batch-14-02.json",
+            "codification/mass_migration/latest/plans/PL-017-137.json",
+            "codification/laws/laws/PL-017-137/law.txt"
+          ],
+          "current_xml_comparison": {
+            "branch_file": "usc/usc02.xml",
+            "origin_main_file": "origin/main:usc/usc02.xml",
+            "result": "No Code placement exists in either XML version."
+          }
+        }
+      ],
+      "current_xml_comparison": {
+        "branch_file": "usc/usc02.xml",
+        "origin_main_file": "origin/main:usc/usc02.xml",
+        "result": "No current Code text should be carried forward for this repealed enactment."
+      },
+      "source_evidence": [
+        "audit/primary/batch-14-02.json",
+        "audit/chronology-report.json",
+        "codification/mass_migration/latest/plans/PL-017-137.json",
+        "codification/laws/laws/PL-017-137/law.txt"
+      ],
+      "final_recommended_action": "Retain only historical repeal information and do not add a Code section or statutory note.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-017-138",
+      "public_law": "17-138",
+      "title": "Public Law 17-138 | Hatch Act Amendment Act (HA)",
+      "final_legal_status": "current",
+      "chronology_conclusion": "Operative direct amendment law. Section 5 replaces 5 U.S.C. 7323, and the live XML already contains the revised text. Current branch and origin/main are aligned, so there is no branch-only repair delta.",
+      "approved_code_treatment": "amend-existing-text",
+      "target_resolution": {
+        "target": "/us/usc/t5/s7323",
+        "justification": "Section 5 directly replaces the Hatch Act section."
+      },
+      "provisions": [
+        {
+          "ref": "SEC. 1-4",
+          "legal_conclusion": "note material",
+          "approved_code_treatment": "statutory-note",
+          "target_resolution": {
+            "target": "/us/usc/t5/s7323",
+            "justification": "Short title, severability, effective date, and definition material do not map to a separate section."
+          },
+          "exact_action": "Keep the opening clauses as note material only.",
+          "source_evidence": [
+            "audit/primary/batch-14-02.json",
+            "codification/mass_migration/latest/plans/PL-017-138.json",
+            "codification/laws/laws/PL-017-138/law.txt"
+          ],
+          "current_xml_comparison": {
+            "branch_file": "usc/usc05.xml",
+            "origin_main_file": "origin/main:usc/usc05.xml",
+            "result": "Present in both current branch XML and origin/main; the history note and revised section 7323 text are already aligned."
+          }
+        },
+        {
+          "ref": "SEC. 5",
+          "legal_conclusion": "operative amendment",
+          "approved_code_treatment": "amend-existing-text",
+          "target_resolution": {
+            "target": "/us/usc/t5/s7323",
+            "justification": "This is the controlling replacement of 5 U.S.C. 7323."
+          },
+          "exact_action": "Replace 5 U.S.C. 7323 with the new subsection structure stated in section 5.",
+          "source_evidence": [
+            "audit/primary/batch-14-02.json",
+            "audit/chronology-report.json",
+            "codification/mass_migration/latest/plans/PL-017-138.json",
+            "codification/laws/laws/PL-017-138/law.txt"
+          ],
+          "current_xml_comparison": {
+            "branch_file": "usc/usc05.xml",
+            "origin_main_file": "origin/main:usc/usc05.xml",
+            "result": "Present in both current branch XML and origin/main; the prior branch-only implementation claim is not supported by the diff."
+          }
+        }
+      ],
+      "current_xml_comparison": {
+        "branch_file": "usc/usc05.xml",
+        "origin_main_file": "origin/main:usc/usc05.xml",
+        "result": "The revised 5 U.S.C. 7323 text is present in both current branch XML and origin/main."
+      },
+      "source_evidence": [
+        "audit/primary/batch-14-02.json",
+        "audit/chronology-report.json",
+        "codification/mass_migration/latest/plans/PL-017-138.json",
+        "codification/laws/laws/PL-017-138/law.txt"
+      ],
+      "final_recommended_action": "Retain the existing 5 U.S.C. 7323 text and history note.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-018-139",
+      "public_law": "18-139",
+      "title": "Public Law 18-139 | The Bye Bye Background Checks Act",
+      "final_legal_status": "current",
+      "chronology_conclusion": "Current repealer law. Section 2 expressly repeals PL-017-137 in full, so its historical effect belongs in the repeal chain, not as substantive Code text.",
+      "approved_code_treatment": "statutory-note",
+      "target_resolution": {
+        "target": "/us/usc/t2/s6132",
+        "justification": "The enactment is a title 2 note anchored to the closest subject-matter section, with a specific repeal-history link to PL-017-137."
+      },
+      "provisions": [
+        {
+          "ref": "SECTION 1",
+          "legal_conclusion": "note material",
+          "approved_code_treatment": "statutory-note",
+          "target_resolution": {
+            "target": "/us/usc/t2/s6132",
+            "justification": "Short title material only."
+          },
+          "exact_action": "Keep the short title as concise note material.",
+          "source_evidence": [
+            "audit/primary/batch-14-02.json",
+            "codification/mass_migration/latest/plans/PL-018-139.json",
+            "codification/laws/laws/PL-018-139/law.txt"
+          ],
+          "current_xml_comparison": {
+            "branch_file": "usc/usc02.xml",
+            "origin_main_file": "origin/main:usc/usc02.xml",
+            "result": "Absent in both current branch XML and origin/main; no PL-018-139 note is present at 2 U.S.C. 6132."
+          }
+        },
+        {
+          "ref": "SECTION 2",
+          "legal_conclusion": "repeal history for PL-017-137",
+          "approved_code_treatment": "amendment-note",
+          "target_resolution": {
+            "target": "PL-017-137",
+            "justification": "This section records the repeal of the earlier public law rather than creating a positive-law Code section."
+          },
+          "exact_action": "Record the repeal of Public Law 17-137 in the history chain.",
+          "source_evidence": [
+            "audit/primary/batch-14-02.json",
+            "audit/chronology-report.json",
+            "codification/mass_migration/latest/plans/PL-018-139.json",
+            "codification/mass_migration/latest/reports/DEPENDENCY-GRAPH.json",
+            "codification/laws/laws/PL-018-139/law.txt"
+          ],
+          "current_xml_comparison": {
+            "branch_file": "usc/usc02.xml",
+            "origin_main_file": "origin/main:usc/usc02.xml",
+            "result": "Absent in both current branch XML and origin/main; the repeal note has not been integrated."
+          }
+        },
+        {
+          "ref": "SECTION 3",
+          "legal_conclusion": "note material",
+          "approved_code_treatment": "statutory-note",
+          "target_resolution": {
+            "target": "/us/usc/t2/s6132",
+            "justification": "Severability and anti-supersession language are note material."
+          },
+          "exact_action": "Keep the savings clause as short note material.",
+          "source_evidence": [
+            "audit/primary/batch-14-02.json",
+            "codification/mass_migration/latest/plans/PL-018-139.json",
+            "codification/laws/laws/PL-018-139/law.txt"
+          ],
+          "current_xml_comparison": {
+            "branch_file": "usc/usc02.xml",
+            "origin_main_file": "origin/main:usc/usc02.xml",
+            "result": "Absent in both current branch XML and origin/main; no PL-018-139 note is present."
+          }
+        },
+        {
+          "ref": "SECTION 6",
+          "legal_conclusion": "note material",
+          "approved_code_treatment": "effective-date-note",
+          "target_resolution": {
+            "target": "/us/usc/t2/s6132",
+            "justification": "The immediate-effective-date clause is note material."
+          },
+          "exact_action": "Keep the enactment clause as a short note.",
+          "source_evidence": [
+            "audit/primary/batch-14-02.json",
+            "codification/mass_migration/latest/plans/PL-018-139.json",
+            "codification/laws/laws/PL-018-139/law.txt"
+          ],
+          "current_xml_comparison": {
+            "branch_file": "usc/usc02.xml",
+            "origin_main_file": "origin/main:usc/usc02.xml",
+            "result": "Absent in both current branch XML and origin/main; no PL-018-139 note is present."
+          }
+        }
+      ],
+      "current_xml_comparison": {
+        "branch_file": "usc/usc02.xml",
+        "origin_main_file": "origin/main:usc/usc02.xml",
+        "result": "No PL-018-139 statutory note is present in either XML version."
+      },
+      "source_evidence": [
+        "audit/primary/batch-14-02.json",
+        "audit/chronology-report.json",
+        "codification/mass_migration/latest/plans/PL-018-139.json",
+        "codification/mass_migration/latest/reports/DEPENDENCY-GRAPH.json",
+        "codification/laws/laws/PL-018-139/law.txt"
+      ],
+      "final_recommended_action": "Add a statutory note at 2 U.S.C. 6132 and explicitly record the repeal of PL-017-137.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-018-140",
+      "public_law": "18-140",
+      "title": "Public Law 18-140 | Federal Employment Act of 2023",
+      "final_legal_status": "source-limited-historical-note",
+      "chronology_conclusion": "No readable authenticated enactment text was recovered in the reviewed corpus. Because the source is not safely recoverable, the law cannot be converted into executable Code text or a verified note placement.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "target_resolution": {
+        "target": null,
+        "justification": "No safe Code placement can be asserted from the recovered source set."
+      },
+      "provisions": [
+        {
+          "ref": "whole act",
+          "legal_conclusion": "source unavailable",
+          "approved_code_treatment": "historical-note-only",
+          "target_resolution": {
+            "target": null,
+            "justification": "The download is blocked and the readable enactment text was not recovered."
+          },
+          "exact_action": "Retain only a source-limited historical note; do not invent operative text.",
+          "source_evidence": [
+            "codification/laws/laws/PL-018-140/metadata.json",
+            "codification/laws/laws/PL-018-140/law.txt",
+            "audit/primary/batch-14-02.json"
+          ],
+          "current_xml_comparison": {
+            "branch_file": "usc/usc02.xml",
+            "origin_main_file": "origin/main:usc/usc02.xml",
+            "result": "No Code placement exists in either XML version."
+          }
+        }
+      ],
+      "current_xml_comparison": {
+        "branch_file": "usc/usc02.xml",
+        "origin_main_file": "origin/main:usc/usc02.xml",
+        "result": "No verified XML placement exists; the law remains source-unavailable for codification."
+      },
+      "source_evidence": [
+        "audit/primary/batch-14-02.json",
+        "codification/laws/laws/PL-018-140/metadata.json",
+        "codification/laws/laws/PL-018-140/law.txt"
+      ],
+      "final_recommended_action": "Retain only a concise source-limited historical note and do not add a Code section or statutory note.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-018-141",
+      "public_law": "18-141",
+      "title": "Public Law 18-141 | Foreign Service Act of 2023",
+      "final_legal_status": "source-limited-historical-note",
+      "chronology_conclusion": "The recovered file set does not yield a safely readable enactment structure. The extracted Drive-viewer text is not suitable for a verified codification decision, so no safe Code placement can be stated.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "target_resolution": {
+        "target": null,
+        "justification": "The text extraction does not provide a recoverable section structure that can be mapped to the Code."
+      },
+      "provisions": [
+        {
+          "ref": "whole act",
+          "legal_conclusion": "source unavailable",
+          "approved_code_treatment": "historical-note-only",
+          "target_resolution": {
+            "target": null,
+            "justification": "No usable enactment text could be recovered from the source bundle."
+          },
+          "exact_action": "Retain only a source-limited historical record.",
+          "source_evidence": [
+            "codification/laws/laws/PL-018-141/metadata.json",
+            "codification/laws/laws/PL-018-141/law.txt",
+            "codification/laws/laws/PL-018-141/source/drive_viewer_extracted_text.txt"
+          ],
+          "current_xml_comparison": {
+            "branch_file": "usc/usc02.xml",
+            "origin_main_file": "origin/main:usc/usc02.xml",
+            "result": "No Code placement exists in either XML version."
+          }
+        }
+      ],
+      "current_xml_comparison": {
+        "branch_file": "usc/usc02.xml",
+        "origin_main_file": "origin/main:usc/usc02.xml",
+        "result": "No verified XML placement exists; the law remains source-unavailable for codification."
+      },
+      "source_evidence": [
+        "audit/primary/batch-14-02.json",
+        "codification/laws/laws/PL-018-141/metadata.json",
+        "codification/laws/laws/PL-018-141/law.txt",
+        "codification/laws/laws/PL-018-141/source/drive_viewer_extracted_text.txt"
+      ],
+      "final_recommended_action": "Retain only a concise source-limited historical note and do not add a Code section or statutory note.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-018-142",
+      "public_law": "18-142",
+      "title": "Public Law 18-142 | Business Licensing Act",
+      "final_legal_status": "source-limited-historical-note",
+      "chronology_conclusion": "The recovered file set does not yield a safely readable enactment structure. The source bundle is too noisy to support a verified codification decision, so no safe Code placement can be stated.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "target_resolution": {
+        "target": null,
+        "justification": "No recoverable enactment structure is available for a safe Code mapping."
+      },
+      "provisions": [
+        {
+          "ref": "whole act",
+          "legal_conclusion": "source unavailable",
+          "approved_code_treatment": "historical-note-only",
+          "target_resolution": {
+            "target": null,
+            "justification": "The text extraction does not provide a recoverable enactment structure."
+          },
+          "exact_action": "Retain only a source-limited historical record.",
+          "source_evidence": [
+            "codification/laws/laws/PL-018-142/metadata.json",
+            "codification/laws/laws/PL-018-142/law.txt",
+            "codification/laws/laws/PL-018-142/source/drive_viewer_extracted_text.txt"
+          ],
+          "current_xml_comparison": {
+            "branch_file": "usc/usc02.xml",
+            "origin_main_file": "origin/main:usc/usc02.xml",
+            "result": "No Code placement exists in either XML version."
+          }
+        }
+      ],
+      "current_xml_comparison": {
+        "branch_file": "usc/usc02.xml",
+        "origin_main_file": "origin/main:usc/usc02.xml",
+        "result": "No verified XML placement exists; the law remains source-unavailable for codification."
+      },
+      "source_evidence": [
+        "audit/primary/batch-14-02.json",
+        "codification/laws/laws/PL-018-142/metadata.json",
+        "codification/laws/laws/PL-018-142/law.txt",
+        "codification/laws/laws/PL-018-142/source/drive_viewer_extracted_text.txt"
+      ],
+      "final_recommended_action": "Retain only a concise source-limited historical note and do not add a Code section or statutory note.",
+      "confidence": "high"
+    }
+  ]
+}

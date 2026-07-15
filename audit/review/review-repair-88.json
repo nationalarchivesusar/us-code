@@ -1,0 +1,257 @@
+{
+  "reviewer": "law-auditor-88",
+  "group_index": 88,
+  "law_count": 5,
+  "source_manifest": "audit/manifests/review-repair-88.json",
+  "output_path": "audit/review/review-repair-88.json",
+  "completion_summary": "Resolved all five laws: PL-004-038 is repealed and history-only by provision, while PL-007-046, PL-007-051, PL-009-052, and PL-009-054 remain source-unavailable and should stay limited to historical inventory treatment.",
+  "changed_law_ids": [
+    "PL-004-038",
+    "PL-007-046",
+    "PL-007-051",
+    "PL-009-052",
+    "PL-009-054"
+  ],
+  "reviewed_against": [
+    "audit/manifests/review-repair-88.json",
+    "codification/laws/laws/PL-004-038/law.txt",
+    "codification/laws/laws/PL-004-038/metadata.json",
+    "codification/mass_migration/latest/reports/laws/PL-004-038.md",
+    "codification/laws/laws/PL-007-046/law.txt",
+    "codification/laws/laws/PL-007-046/metadata.json",
+    "codification/mass_migration/latest/reports/laws/PL-007-046.md",
+    "codification/laws/laws/PL-007-051/metadata.json",
+    "codification/laws/laws/PL-007-051/_UNRECOVERABLE.txt",
+    "codification/mass_migration/latest/reports/laws/PL-007-051.md",
+    "codification/laws/laws/PL-009-052/law.txt",
+    "codification/laws/laws/PL-009-052/metadata.json",
+    "codification/mass_migration/latest/reports/laws/PL-009-052.md",
+    "codification/laws/laws/PL-009-054/law.txt",
+    "codification/laws/laws/PL-009-054/metadata.json",
+    "codification/mass_migration/latest/reports/laws/PL-009-054.md",
+    "codification/reference/all_270_laws_classification.csv"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-004-038",
+      "public_law": "4-38",
+      "title": "Public Law 4-38 | White House Protection Act",
+      "final_status": "repealed",
+      "provision_disposition": "historical-note-only",
+      "required_code_treatment": "keep only a concise historical note; do not insert operative Code text",
+      "current_implementation": {
+        "state": "not-applicable",
+        "xml": "no verified XML placement",
+        "branch_vs_origin": "no relevant branch change identified"
+      },
+      "provisions": [
+        {
+          "ref": "SEC. 1",
+          "code_treatment": "historical-note-only",
+          "target": "/us/usc/t18/s3056",
+          "evidence": "The recovered source packet includes a short-title provision, but the law is classified as repealed and does not support live Code text.",
+          "notes": "History only."
+        },
+        {
+          "ref": "SEC. 2",
+          "code_treatment": "historical-note-only",
+          "target": "/us/usc/t18/s3056",
+          "evidence": "The purpose clause concerns Secret Service jurisdiction around the White House, which remains repeal history only.",
+          "notes": "History only."
+        },
+        {
+          "ref": "SEC. 3 (actions)",
+          "code_treatment": "historical-note-only",
+          "target": "/us/usc/t18/s3056",
+          "evidence": "The operational provisions on roads, detention, frisking, and weapons restrictions are historical only after repeal.",
+          "notes": "History only."
+        },
+        {
+          "ref": "SEC. 3 (enactment)",
+          "code_treatment": "historical-note-only",
+          "target": "/us/usc/t18/s3056",
+          "evidence": "The enactment clause is part of the repealed act and does not justify a live Code insertion.",
+          "notes": "History only."
+        }
+      ],
+      "source_evidence": [
+        "codification/laws/laws/PL-004-038/law.txt",
+        "codification/laws/laws/PL-004-038/metadata.json",
+        "codification/mass_migration/latest/reports/laws/PL-004-038.md",
+        "codification/reference/all_270_laws_classification.csv"
+      ],
+      "recommended_action": "Keep only repeal history and do not codify the White House protection framework.",
+      "chronology_conclusion": "The authoritative record treats this enactment as repealed, so every provision remains historical only.",
+      "confidence": "high",
+      "approved_code_treatment": "historical-note-only",
+      "current_xml_comparison": {
+        "assessment": "missing",
+        "placement": null,
+        "branch_vs_origin": "no relevant branch change identified",
+        "detail": null
+      },
+      "final_legal_status": "repealed",
+      "exact_target": "/us/usc/t18/s3056"
+    },
+    {
+      "law_id": "PL-007-046",
+      "public_law": "7-46",
+      "title": "Public Law 7-46 | Whistleblower Protection Act",
+      "final_status": "source-limited-historical-note",
+      "provision_disposition": "historical-note-only",
+      "required_code_treatment": "retain only source-limited history; do not infer operative text",
+      "current_implementation": {
+        "state": "source-limited historical note",
+        "xml": "no verified XML placement",
+        "branch_vs_origin": "no relevant branch change identified",
+        "assessment": "missing"
+      },
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "code_treatment": "historical-note-only",
+          "target": null,
+          "evidence": "The source packet resolves to a permission-denied page, so no statutory text can be authenticated.",
+          "notes": "Keep only source-limited history."
+        }
+      ],
+      "source_evidence": [
+        "codification/laws/laws/PL-007-046/law.txt",
+        "codification/laws/laws/PL-007-046/metadata.json",
+        "codification/mass_migration/latest/reports/laws/PL-007-046.md",
+        "codification/reference/all_270_laws_classification.csv"
+      ],
+      "recommended_action": "Keep only a source-limited historical note and do not invent operative text.",
+      "chronology_conclusion": "No readable enactment text is available in the authoritative packet, so only historical inventory treatment is supportable.",
+      "confidence": "high",
+      "approved_code_treatment": "historical-note-only",
+      "current_xml_comparison": {
+        "assessment": "missing",
+        "placement": null,
+        "branch_vs_origin": "no relevant branch change identified",
+        "detail": null
+      },
+      "final_legal_status": "repealed"
+    },
+    {
+      "law_id": "PL-007-051",
+      "public_law": "7-51",
+      "title": "Public Law 7-51 | Federal Agent Law Training Mandate",
+      "final_status": "source-limited-historical-note",
+      "provision_disposition": "historical-note-only",
+      "required_code_treatment": "retain only source-limited history; do not infer operative text",
+      "current_implementation": {
+        "state": "source-limited historical note",
+        "xml": "no verified XML placement",
+        "branch_vs_origin": "no relevant branch change identified",
+        "assessment": "missing"
+      },
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "code_treatment": "historical-note-only",
+          "target": null,
+          "evidence": "The authoritative package is unrecoverable, so the act cannot be verified as executable codification material.",
+          "notes": "Keep only source-limited history."
+        }
+      ],
+      "source_evidence": [
+        "codification/laws/laws/PL-007-051/metadata.json",
+        "codification/laws/laws/PL-007-051/_UNRECOVERABLE.txt",
+        "codification/mass_migration/latest/reports/laws/PL-007-051.md",
+        "codification/reference/all_270_laws_classification.csv"
+      ],
+      "recommended_action": "Keep only a source-limited historical note and do not invent operative text.",
+      "chronology_conclusion": "The source bundle does not expose readable enactment text, so the law must stay in historical inventory only.",
+      "confidence": "high",
+      "approved_code_treatment": "historical-note-only",
+      "current_xml_comparison": {
+        "assessment": "missing",
+        "placement": null,
+        "branch_vs_origin": "no relevant branch change identified",
+        "detail": null
+      },
+      "final_legal_status": "repealed"
+    },
+    {
+      "law_id": "PL-009-052",
+      "public_law": "9-52",
+      "title": "Public Law 9-52 | The Federal District Wages Act of 2022",
+      "final_status": "source-limited-historical-note",
+      "provision_disposition": "historical-note-only",
+      "required_code_treatment": "retain only source-limited history; do not infer operative text",
+      "current_implementation": {
+        "state": "source-limited historical note",
+        "xml": "no verified XML placement",
+        "branch_vs_origin": "no relevant branch change identified",
+        "assessment": "missing"
+      },
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "code_treatment": "historical-note-only",
+          "target": null,
+          "evidence": "The source resolves to viewer debris, so no verified enactment text can be extracted.",
+          "notes": "Keep only source-limited history."
+        }
+      ],
+      "source_evidence": [
+        "codification/laws/laws/PL-009-052/law.txt",
+        "codification/laws/laws/PL-009-052/metadata.json",
+        "codification/mass_migration/latest/reports/laws/PL-009-052.md",
+        "codification/reference/all_270_laws_classification.csv"
+      ],
+      "recommended_action": "Keep only a source-limited historical note and do not invent operative text.",
+      "chronology_conclusion": "The authoritative source does not expose readable enactment text, so only historical treatment is supportable.",
+      "confidence": "high",
+      "approved_code_treatment": "historical-note-only",
+      "current_xml_comparison": {
+        "assessment": "missing",
+        "placement": null,
+        "branch_vs_origin": "no relevant branch change identified",
+        "detail": null
+      },
+      "final_legal_status": "repealed"
+    },
+    {
+      "law_id": "PL-009-054",
+      "public_law": "9-54",
+      "title": "Public Law 9-54 | The Smart Label Congress Act",
+      "final_status": "source-limited-historical-note",
+      "provision_disposition": "historical-note-only",
+      "required_code_treatment": "retain only source-limited history; do not infer operative text",
+      "current_implementation": {
+        "state": "source-limited historical note",
+        "xml": "no verified XML placement",
+        "branch_vs_origin": "no relevant branch change identified",
+        "assessment": "missing"
+      },
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "code_treatment": "historical-note-only",
+          "target": null,
+          "evidence": "The source resolves to viewer debris, so no verified enactment text can be extracted.",
+          "notes": "Keep only source-limited history."
+        }
+      ],
+      "source_evidence": [
+        "codification/laws/laws/PL-009-054/law.txt",
+        "codification/laws/laws/PL-009-054/metadata.json",
+        "codification/mass_migration/latest/reports/laws/PL-009-054.md",
+        "codification/reference/all_270_laws_classification.csv"
+      ],
+      "recommended_action": "Keep only a source-limited historical note and do not invent operative text.",
+      "chronology_conclusion": "The authoritative source does not expose readable enactment text, so only historical treatment is supportable.",
+      "confidence": "high",
+      "approved_code_treatment": "historical-note-only",
+      "current_xml_comparison": {
+        "assessment": "missing",
+        "placement": null,
+        "branch_vs_origin": "no relevant branch change identified",
+        "detail": null
+      },
+      "final_legal_status": "repealed"
+    }
+  ]
+}

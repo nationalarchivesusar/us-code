@@ -1,0 +1,446 @@
+{
+  "reviewer": "law-auditor-B",
+  "group_index": 103,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/review-repair-03.json",
+  "output_path": "audit/review/review-repair-03.json",
+  "reviewed_against": [
+    "audit/review/review-03.json",
+    "audit/manifests/review-repair-03.json",
+    "codification/mass_migration/latest/reports/laws/PL-003-022.md",
+    "codification/mass_migration/latest/reports/laws/PL-003-023.md",
+    "codification/mass_migration/latest/reports/laws/PL-003-024.md",
+    "codification/mass_migration/latest/reports/laws/PL-003-025.md",
+    "codification/mass_migration/latest/reports/laws/PL-004-026.md",
+    "codification/mass_migration/latest/reports/laws/PL-004-027.md",
+    "codification/mass_migration/latest/reports/laws/PL-004-028.md",
+    "codification/mass_migration/latest/reports/laws/PL-004-029.md",
+    "codification/mass_migration/latest/reports/laws/PL-004-030.md",
+    "codification/mass_migration/latest/reports/laws/PL-004-031.md"
+  ],
+  "completion_summary": "Aligned review-03 to the authoritative source corpus: every assigned law is repeal-history or historical-note-only, so no live Code text is authorized.",
+  "changed_law_ids": [
+    "PL-003-022",
+    "PL-003-023",
+    "PL-003-024",
+    "PL-003-025",
+    "PL-004-026",
+    "PL-004-027",
+    "PL-004-028",
+    "PL-004-029",
+    "PL-004-030",
+    "PL-004-031"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-003-022",
+      "public_law": "3-22",
+      "title": "Public Law 3-22 | District of Columbia Administration Act",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The authoritative report classifies this enactment as repealed, and the recovered record is only a source-limited stub, so no current Code text is authorized.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "non_target_disposition": "historical-note-only",
+      "exact_enacted_text_or_amendment_command": "Keep only a concise historical note and do not create operative text.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-003-022.md classifies the law as repealed and authorizes no Code operation.",
+        "codification/laws/laws/PL-003-022/metadata.json records a valid PDF source recovery.",
+        "codification/laws/laws/PL-003-022/source/source_page.html is the recovered source stub, not executable statutory text."
+      ],
+      "current_xml_comparison": "No live XML insertion is warranted; this record remains history-only.",
+      "current_implementation": {
+        "assessment": "missing",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": null,
+        "detail": "The source record is a stub rather than recoverable enacted text, so the current tree should not carry operative language."
+      },
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "conclusion": "historical-note-only",
+          "approved_code_treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep only repeal history.",
+          "source_evidence": [
+            "PL-003-022 is classified as repealed in the law report.",
+            "The recovered source is only a stub."
+          ],
+          "notes": "No operative text can be reconstructed from the supplied source."
+        }
+      ],
+      "final_recommended_action": "Keep only repeal history and do not invent operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-023",
+      "public_law": "3-23",
+      "title": "Public Law 3-23 | Federal Law Enforcement Training Center Establishment Act",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The authoritative report classifies the law as repealed, but the source attachment is unavailable, so the enactment can only remain historical.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "non_target_disposition": "source-limited-history",
+      "exact_enacted_text_or_amendment_command": "Retain only a source-limited historical note and do not invent operative text.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-003-023.md classifies the law as repealed and notes that the source is unavailable.",
+        "codification/laws/laws/PL-003-023/metadata.json records the law metadata and unrecoverable source posture.",
+        "codification/laws/unrecoverable.json lists PL-003-023 as unrecoverable."
+      ],
+      "current_xml_comparison": "No XML comparison beyond history-only treatment is possible because the source text is unavailable.",
+      "current_implementation": {
+        "assessment": "missing",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "The source cannot be reconstructed, so no executable current-Code disposition can be verified."
+      },
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "conclusion": "historical-note-only",
+          "approved_code_treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep only a concise historical note.",
+          "source_evidence": [
+            "The law report marks the source unavailable.",
+            "The unrecoverable register includes PL-003-023."
+          ],
+          "notes": "There is no recoverable text to codify."
+        }
+      ],
+      "final_recommended_action": "Keep only repeal history and do not invent operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-024",
+      "public_law": "3-24",
+      "title": "Public Law 3-24 | Judgeship Reducation Act of 2022",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source corpus classifies this structural court-rewrite act as repealed, so the substantive Title 28 changes remain historical only.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "non_target_disposition": "historical-note-only",
+      "exact_enacted_text_or_amendment_command": "Keep only repeal history; do not convert the structural court rewrite into live Code text.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-003-024.md classifies the law as repealed and authorizes no Code operation.",
+        "codification/laws/laws/PL-003-024/metadata.json records the recovered PDF source.",
+        "codification/laws/laws/PL-003-024/law.txt contains the court-structure rewrite language for historical reference."
+      ],
+      "current_xml_comparison": "The current XML should stay history-only; the review does not authorize a live rewrite of the Title 28 court sections.",
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t28/s1",
+        "detail": "The working record still points at a Title 28 note-style treatment, but the authoritative corpus classifies the act as repealed."
+      },
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "conclusion": "historical-note-only",
+          "approved_code_treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep the court-structure rewrite as repeal history only.",
+          "source_evidence": [
+            "The law report marks PL-003-024 as repealed.",
+            "The law text contains the court-structure rewrite language."
+          ],
+          "notes": "No current Title 28 rewrite is authorized from this record."
+        }
+      ],
+      "final_recommended_action": "Keep only repeal history and do not invent operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-025",
+      "public_law": "3-25",
+      "title": "Public Law 3-25 | CRACK Act",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The authoritative report classifies the CRACK Act as repealed, so its multi-title reforms remain historical only.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "non_target_disposition": "historical-note-only",
+      "exact_enacted_text_or_amendment_command": "Keep only repeal history and do not convert the multi-title reforms into live Code text.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-003-025.md classifies the law as repealed and authorizes no Code operation.",
+        "codification/laws/laws/PL-003-025/metadata.json records the recovered PDF source.",
+        "codification/laws/laws/PL-003-025/law.txt contains the substantive Title 18 and Title 50 reform text for historical reference."
+      ],
+      "current_xml_comparison": "The current XML should remain history-only; no live Title 18 or Title 50 rewrite is authorized by this review.",
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t18 and /us/usc/t50",
+        "detail": "The working record still treats the act like a code-amendment package, but the source corpus classifies it as repealed."
+      },
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "conclusion": "historical-note-only",
+          "approved_code_treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Preserve the reform package only as repeal history.",
+          "source_evidence": [
+            "The law report marks PL-003-025 as repealed.",
+            "The law text contains broad Title 18 and Title 50 reforms."
+          ],
+          "notes": "No live code amendments are authorized from the reviewed record."
+        }
+      ],
+      "final_recommended_action": "Keep only repeal history and do not invent operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-026",
+      "public_law": "4-26",
+      "title": "Public Law 4-26 | H.J. Res. 06 (Keywords: Tigray)",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The joint resolution is classified as repealed in the source corpus, so it stays historical and non-Code.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "non_target_disposition": "historical-note-only",
+      "exact_enacted_text_or_amendment_command": "Keep only a concise historical note; do not create Code text for the resolution.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-004-026.md classifies the resolution as repealed and authorizes no Code operation.",
+        "codification/laws/laws/PL-004-026/metadata.json records the valid PDF source.",
+        "codification/laws/laws/PL-004-026/law.txt contains the resolution text for historical reference."
+      ],
+      "current_xml_comparison": "The current XML should remain unchanged because this resolution is not a live Code amendment.",
+      "current_implementation": {
+        "assessment": "history-only",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "The source corpus treats the resolution as repealed history only."
+      },
+      "provisions": [
+        {
+          "ref": "ENTIRE RESOLUTION",
+          "conclusion": "historical-note-only",
+          "approved_code_treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Record the resolution only as history.",
+          "source_evidence": [
+            "The law report marks PL-004-026 as repealed.",
+            "The source is a joint resolution, not a live Code rewrite."
+          ],
+          "notes": "No positive-law insertion is authorized."
+        }
+      ],
+      "final_recommended_action": "Keep only a concise historical note.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-027",
+      "public_law": "4-27",
+      "title": "Public Law 4-27 | Right to Security Act of 2022",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source corpus marks this act as repealed and superseded before codification, so its self-defense framework remains historical only.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "non_target_disposition": "historical-note-only",
+      "exact_enacted_text_or_amendment_command": "Keep only repeal history and do not retain live positive-law text.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-004-027.md classifies the act as repealed with superseded-before-codification disposition.",
+        "codification/laws/laws/PL-004-027/metadata.json records a valid DOCX source.",
+        "codification/laws/laws/PL-004-027/law.txt contains the self-defense and repeal language for historical reference."
+      ],
+      "current_xml_comparison": "The current XML should remain history-only; the act does not survive as live Title 18 text.",
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t18/s1",
+        "detail": "The working record still looks like retained statutory text, but the authoritative corpus treats it as repealed history."
+      },
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "conclusion": "historical-note-only",
+          "approved_code_treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep the self-defense framework only as repeal history.",
+          "source_evidence": [
+            "The law report marks the act repealed and superseded before codification.",
+            "The source text contains a repeal section."
+          ],
+          "notes": "No live Title 18 text survives."
+        }
+      ],
+      "final_recommended_action": "Keep only repeal history and do not invent operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-028",
+      "public_law": "4-28",
+      "title": "Public Law 4-28 | House Veterans Affairs Act",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source corpus classifies this veterans-policy enactment as repealed, so it remains historical only.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "non_target_disposition": "historical-note-only",
+      "exact_enacted_text_or_amendment_command": "Keep only repeal history; do not create live Title 38 text from this act.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-004-028.md classifies the act as repealed and authorizes no Code operation.",
+        "codification/laws/laws/PL-004-028/metadata.json records a valid DOCX source.",
+        "codification/laws/laws/PL-004-028/law.txt contains the veterans-policy text for historical reference."
+      ],
+      "current_xml_comparison": "The current XML should remain unchanged because the act is not live positive law.",
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t38/s1",
+        "detail": "The working record still treats the enactment as live policy text, but the authoritative corpus classifies it as repealed."
+      },
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "conclusion": "historical-note-only",
+          "approved_code_treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep the veterans-policy provisions only as repeal history.",
+          "source_evidence": [
+            "The law report marks PL-004-028 as repealed.",
+            "The law text is a substantive veterans-policy package."
+          ],
+          "notes": "No live Title 38 insertion is authorized."
+        }
+      ],
+      "final_recommended_action": "Keep only repeal history and do not invent operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-029",
+      "public_law": "4-29",
+      "title": "Public Law 4-29 | Department of Commerce and Labor Act of 2022",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source corpus says this department-reorganization act is repealed in full, so it remains historical only.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "non_target_disposition": "historical-note-only",
+      "exact_enacted_text_or_amendment_command": "Keep only repeal history and do not preserve the department-consolidation text as current law.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-004-029.md classifies the act as repealed before codification.",
+        "codification/laws/laws/PL-004-029/metadata.json records a valid DOCX source.",
+        "codification/laws/laws/PL-004-029/law.txt contains the department-consolidation text for historical reference."
+      ],
+      "current_xml_comparison": "The current XML should remain unchanged because the act was repealed before codification.",
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t29/s201",
+        "detail": "The working record still carries the department framework as if live, but the authoritative corpus treats it as repealed history."
+      },
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "conclusion": "historical-note-only",
+          "approved_code_treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep the department framework only as repeal history.",
+          "source_evidence": [
+            "The law report marks PL-004-029 as repealed before codification.",
+            "The law text contains the Commerce and Labor transfer framework."
+          ],
+          "notes": "No live Title 29 insertion is authorized."
+        }
+      ],
+      "final_recommended_action": "Keep only repeal history and do not invent operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-030",
+      "public_law": "4-30",
+      "title": "Public Law 4-30 | Fugitive Justice Reform Act",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source corpus classifies the fugitive-list and warrant-database regime as repealed, so it remains historical only.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "non_target_disposition": "historical-note-only",
+      "exact_enacted_text_or_amendment_command": "Keep only repeal history and do not convert the fugitive framework into current Code text.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-004-030.md classifies the act as repealed and authorizes no Code operation.",
+        "codification/laws/laws/PL-004-030/metadata.json records a valid PDF source.",
+        "codification/laws/laws/PL-004-030/law.txt contains the fugitive-list and warrant-database provisions for historical reference."
+      ],
+      "current_xml_comparison": "The current XML should remain history-only; no live Title 18 or Title 28 fugitive framework is authorized.",
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t18 and /us/usc/t28",
+        "detail": "The working record still treats the regime like code material, but the authoritative corpus classifies it as repealed."
+      },
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "conclusion": "historical-note-only",
+          "approved_code_treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep the fugitive regime only as repeal history.",
+          "source_evidence": [
+            "The law report marks PL-004-030 as repealed.",
+            "The law text contains the fugitive-list and warrant-database regime."
+          ],
+          "notes": "No live multi-title insertion is authorized."
+        }
+      ],
+      "final_recommended_action": "Keep only repeal history and do not invent operative text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-004-031",
+      "public_law": "4-31",
+      "title": "Public Law 4-31 | Stand Your Ground Act",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source corpus classifies the self-defense framework as repealed, so it remains historical only.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": null,
+      "non_target_disposition": "historical-note-only",
+      "exact_enacted_text_or_amendment_command": "Keep only repeal history and do not preserve the self-defense framework as current law.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-004-031.md classifies the act as repealed and authorizes no Code operation.",
+        "codification/laws/laws/PL-004-031/metadata.json records a valid PDF source.",
+        "codification/laws/laws/PL-004-031/law.txt contains the stand-your-ground provisions for historical reference."
+      ],
+      "current_xml_comparison": "The current XML should remain history-only; no live Title 18 self-defense rewrite is authorized.",
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The working record still retains the act as if active, but the authoritative corpus treats it as repealed history."
+      },
+      "provisions": [
+        {
+          "ref": "ENTIRE ACT",
+          "conclusion": "historical-note-only",
+          "approved_code_treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep the self-defense framework only as repeal history.",
+          "source_evidence": [
+            "The law report marks PL-004-031 as repealed.",
+            "The law text contains the stand-your-ground framework."
+          ],
+          "notes": "No live Title 18 insertion is authorized."
+        }
+      ],
+      "final_recommended_action": "Keep only repeal history and do not invent operative text.",
+      "confidence": "high"
+    }
+  ]
+}

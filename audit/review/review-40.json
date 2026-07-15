@@ -1,0 +1,827 @@
+{
+  "auditor": "law-auditor-N",
+  "batch": 40,
+  "law_count": 20,
+  "laws": [
+    {
+      "law_id": "PL-007-049",
+      "public_law": "Pub. L. 7-49",
+      "title": "Legislative Initiative to Grow Monetary Access Act of 2022 (LIGMA Act)",
+      "status": "fully-repealed",
+      "decision": "historical-note-only",
+      "status_basis": "Chronology leaves no surviving executable Code text for this enactment; the correct treatment is history only in the title 31 note record.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Historical note only; no operative positive-law amendment remains in force.",
+          "classes": [
+            "history",
+            "repeal"
+          ],
+          "treatment": "historical-note-only",
+          "target": "title 31 statutory note",
+          "exact_change": "No operative positive-law amendment is left in force.",
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-007-049.md; usc/usc31.xml",
+          "notes": "Branch-only note insertion at rp-pl007049-codification."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correctly preserved as a historical statutory note",
+        "placement": "title 31 statutory note",
+        "detail": "The working tree keeps the law as note material rather than positive-law text."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-007-049.md",
+        "usc/usc31.xml",
+        "origin/main:usc/usc31.xml"
+      ],
+      "current_xml_comparison": "Current branch adds rp-pl007049-codification in usc/usc31.xml; origin/main did not show the matching note id.",
+      "recommended_action": "Retain the historical note and make no codification change.",
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "Chronology leaves no surviving executable Code text for this enactment; the correct treatment is history only in the title 31 note record.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "title 31 statutory note",
+      "exact_change": "No operative positive-law amendment is left in force."
+    },
+    {
+      "law_id": "PL-007-050",
+      "public_law": "Pub. L. 7-50",
+      "title": "Coast Guard Base Repurposing Act of 2022",
+      "status": "fully-repealed",
+      "decision": "historical-note-only",
+      "status_basis": "The enactment is a repealed local measure, so chronology supports retention as history only, not executable Code text.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Historical note only; no positive-law insertion is warranted.",
+          "classes": [
+            "history",
+            "local"
+          ],
+          "treatment": "historical-note-only",
+          "target": "title 14 statutory note",
+          "exact_change": "No positive-law insertion is warranted for this repealed local enactment.",
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-007-050.md; usc/usc14.xml",
+          "notes": "Branch-only note insertion at rp-pl007050-codification."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correctly preserved as a historical statutory note",
+        "placement": "title 14 statutory note",
+        "detail": "The branch preserves the enacted text in note form only."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-007-050.md",
+        "usc/usc14.xml",
+        "origin/main:usc/usc14.xml"
+      ],
+      "current_xml_comparison": "Current branch adds rp-pl007050-codification in usc/usc14.xml; origin/main did not show the matching note id.",
+      "recommended_action": "Retain the historical note and make no codification change.",
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The enactment is a repealed local measure, so chronology supports retention as history only, not executable Code text.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "title 14 statutory note",
+      "exact_change": "No positive-law insertion is warranted for this repealed local enactment."
+    },
+    {
+      "law_id": "PL-007-051",
+      "public_law": "Pub. L. 7-51",
+      "title": "Federal Agent Law Training Mandate",
+      "status": "fully-repealed",
+      "decision": "historical-note-only",
+      "status_basis": "The source is unrecoverable, and chronology does not justify inventing executable text; the law stays as a historical note only.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Source-limited historical note only; no authenticated operative text was recovered.",
+          "classes": [
+            "history",
+            "source-unavailable"
+          ],
+          "treatment": "historical-note-only",
+          "target": "title 1 statutory note",
+          "exact_change": "No verified operative text can be stated.",
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-007-051.md; usc/usc01.xml",
+          "notes": "Branch-only note insertion at rp-pl007051-codification."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "source-limited historical note",
+        "placement": "title 1 statutory note",
+        "detail": "The branch records the law as history only; no authenticated enactment text was available."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-007-051.md",
+        "usc/usc01.xml",
+        "origin/main:usc/usc01.xml"
+      ],
+      "current_xml_comparison": "Current branch adds rp-pl007051-codification in usc/usc01.xml; origin/main did not show the matching note id.",
+      "recommended_action": "Retain the historical note and do not invent operative text.",
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source is unrecoverable, and chronology does not justify inventing executable text; the law stays as a historical note only.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "title 1 statutory note",
+      "exact_change": "No verified operative text can be stated."
+    },
+    {
+      "law_id": "PL-009-052",
+      "public_law": "Pub. L. 9-52",
+      "title": "Federal District Wages Act of 2022",
+      "status": "fully-repealed",
+      "decision": "historical-note-only",
+      "status_basis": "Chronology ends in a repealed archival note; no executable Code text survives.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Historical note only; no operative positive-law amendment remains in force.",
+          "classes": [
+            "history",
+            "repeal"
+          ],
+          "treatment": "historical-note-only",
+          "target": "title 29 statutory note",
+          "exact_change": "No operative positive-law amendment is left in force.",
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-009-052.md; usc/usc29.xml",
+          "notes": "Branch-only note insertion at rp-pl009052-codification."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "source-limited historical note",
+        "placement": "title 29 statutory note",
+        "detail": "The current repository preserves the law as a note without recovered enactment text."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-009-052.md",
+        "usc/usc29.xml",
+        "origin/main:usc/usc29.xml"
+      ],
+      "current_xml_comparison": "Current branch adds rp-pl009052-codification in usc/usc29.xml; origin/main did not show the matching note id.",
+      "recommended_action": "Retain the historical note and make no codification change.",
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "Chronology ends in a repealed archival note; no executable Code text survives.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "title 29 statutory note",
+      "exact_change": "No operative positive-law amendment is left in force."
+    },
+    {
+      "law_id": "PL-009-054",
+      "public_law": "Pub. L. 9-54",
+      "title": "Smart Label Congress Act",
+      "status": "fully-repealed",
+      "decision": "historical-note-only",
+      "status_basis": "The repealed status is settled by chronology; the right treatment is a historical note in title 2, not executable text.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Historical note only; no operative positive-law amendment remains in force.",
+          "classes": [
+            "history",
+            "repeal"
+          ],
+          "treatment": "historical-note-only",
+          "target": "title 2 statutory note",
+          "exact_change": "No operative positive-law amendment is left in force.",
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-009-054.md; usc/usc02.xml",
+          "notes": "Branch-only note insertion at rp-pl009054-codification."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "source-limited historical note",
+        "placement": "title 2 statutory note",
+        "detail": "The branch keeps the law as a historical note; no authenticated enactment text is available."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-009-054.md",
+        "usc/usc02.xml",
+        "origin/main:usc/usc02.xml"
+      ],
+      "current_xml_comparison": "Current branch adds rp-pl009054-codification in usc/usc02.xml; origin/main did not show the matching note id.",
+      "recommended_action": "Retain the historical note and do not synthesize operative text.",
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The repealed status is settled by chronology; the right treatment is a historical note in title 2, not executable text.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "title 2 statutory note",
+      "exact_change": "No operative positive-law amendment is left in force."
+    },
+    {
+      "law_id": "PL-009-063",
+      "public_law": "Pub. L. 9-63",
+      "title": "Federal District Employment Act of 2022",
+      "status": "fully-repealed",
+      "decision": "historical-note-only",
+      "status_basis": "The chronology resolves this as repealed history only, with no executable Code text surviving.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Historical note only; no positive-law insertion is warranted.",
+          "classes": [
+            "history",
+            "repeal"
+          ],
+          "treatment": "historical-note-only",
+          "target": "title 29 statutory note",
+          "exact_change": "No positive-law insertion is warranted for this repealed enactment.",
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-009-063.md; usc/usc05.xml",
+          "notes": "Branch-only note insertion at rp-pl009063-codification."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "source-limited historical note",
+        "placement": "title 29 statutory note",
+        "detail": "The note is present, but no authenticated enactment text was recovered."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-009-063.md",
+        "usc/usc05.xml",
+        "origin/main:usc/usc05.xml"
+      ],
+      "current_xml_comparison": "Current branch adds rp-pl009063-codification in usc/usc05.xml; origin/main did not show the matching note id.",
+      "recommended_action": "Retain the historical note and make no codification change.",
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The chronology resolves this as repealed history only, with no executable Code text surviving.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "title 29 statutory note",
+      "exact_change": "No positive-law insertion is warranted for this repealed enactment."
+    },
+    {
+      "law_id": "PL-012-076",
+      "public_law": "Pub. L. 12-76",
+      "title": "Removing Idiocy Act",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "Chronology cannot produce executable positive-law text because the source is unrecoverable; the correct archival treatment is to keep the current note.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Current statutory note only; no authenticated operative text was recovered.",
+          "classes": [
+            "current",
+            "source-unavailable"
+          ],
+          "treatment": "statutory-note",
+          "target": "title 1 statutory note",
+          "exact_change": "No verified operative language can be stated.",
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-012-076.md; usc/usc01.xml",
+          "notes": "Branch-only note insertion at rp-pl012076-codification."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "current but source-limited",
+        "placement": "title 1 statutory note",
+        "detail": "The current branch keeps the law as an active note, but the enactment text remains unrecovered."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-012-076.md",
+        "usc/usc01.xml",
+        "origin/main:usc/usc01.xml"
+      ],
+      "current_xml_comparison": "Current branch adds rp-pl012076-codification in usc/usc01.xml; origin/main did not show the matching note id.",
+      "recommended_action": "Retain the current note and do not synthesize text.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Chronology cannot produce executable positive-law text because the source is unrecoverable; the correct archival treatment is to keep the current note.",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "title 1 statutory note",
+      "exact_change": "No verified operative language can be stated."
+    },
+    {
+      "law_id": "PL-012-077",
+      "public_law": "Pub. L. 12-77",
+      "title": "Preventing Abuse and Promoting Democracy Act",
+      "status": "fully-repealed",
+      "decision": "historical-note-only",
+      "status_basis": "Chronology ends with a repealed source-limited note; no executable Code text survives.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Historical note only; no authenticated operative text was recovered.",
+          "classes": [
+            "history",
+            "source-unavailable"
+          ],
+          "treatment": "historical-note-only",
+          "target": "title 1 statutory note",
+          "exact_change": "No verified operative text can be stated.",
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-012-077.md; usc/usc01.xml",
+          "notes": "Branch-only note insertion at rp-pl012077-codification."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "historical note with source limitation",
+        "placement": "title 1 statutory note",
+        "detail": "The branch stores the law as historical note material; no source text is available to test any operative language."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-012-077.md",
+        "usc/usc01.xml",
+        "origin/main:usc/usc01.xml"
+      ],
+      "current_xml_comparison": "Current branch adds rp-pl012077-codification in usc/usc01.xml; origin/main did not show the matching note id.",
+      "recommended_action": "Retain the historical note and do not invent operative text.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Chronology ends with a repealed source-limited note; no executable Code text survives.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "title 1 statutory note",
+      "exact_change": "No verified operative text can be stated."
+    },
+    {
+      "law_id": "PL-012-078",
+      "public_law": "Pub. L. 12-78",
+      "title": "Balancing Executive Act",
+      "status": "fully-repealed",
+      "decision": "historical-note-only",
+      "status_basis": "The chronology remains historical only; the note should stay repealed and non-executable.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Historical note only; no authenticated operative text was recovered.",
+          "classes": [
+            "history",
+            "source-unavailable"
+          ],
+          "treatment": "historical-note-only",
+          "target": "title 1 statutory note",
+          "exact_change": "No verified operative text can be stated.",
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-012-078.md; usc/usc01.xml",
+          "notes": "Branch-only note insertion at rp-pl012078-codification."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "historical note with source limitation",
+        "placement": "title 1 statutory note",
+        "detail": "The current branch preserves the law only as a note, with no authenticated enactment text."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-012-078.md",
+        "usc/usc01.xml",
+        "origin/main:usc/usc01.xml"
+      ],
+      "current_xml_comparison": "Current branch adds rp-pl012078-codification in usc/usc01.xml; origin/main did not show the matching note id.",
+      "recommended_action": "Retain the historical note and do not invent operative text.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The chronology remains historical only; the note should stay repealed and non-executable.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "title 1 statutory note",
+      "exact_change": "No verified operative text can be stated."
+    },
+    {
+      "law_id": "PL-012-079",
+      "public_law": "Pub. L. 12-79",
+      "title": "Anti-Terrorism Act of 2023",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "Chronology cannot be pushed into positive-law text because the source is unrecoverable; the archive should keep the note as current but source-limited.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Current statutory note only; the underlying enactment text was not recovered.",
+          "classes": [
+            "current",
+            "source-unavailable"
+          ],
+          "treatment": "statutory-note",
+          "target": "closest subject-matter statutory note",
+          "exact_change": "No verified operative language can be stated.",
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-012-079.md; usc/usc18.xml",
+          "notes": "Branch-only note insertion at rp-pl012079-codification."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "current but source-limited",
+        "placement": "closest subject-matter statutory note",
+        "detail": "The archive treats the law as active, but the underlying enactment text was not recoverable."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-012-079.md",
+        "usc/usc18.xml",
+        "origin/main:usc/usc18.xml"
+      ],
+      "current_xml_comparison": "Current branch adds rp-pl012079-codification in usc/usc18.xml; origin/main did not show the matching note id.",
+      "recommended_action": "Retain the current note and do not invent operative text.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Chronology cannot be pushed into positive-law text because the source is unrecoverable; the archive should keep the note as current but source-limited.",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "closest subject-matter statutory note",
+      "exact_change": "No verified operative language can be stated."
+    },
+    {
+      "law_id": "PL-014-091",
+      "public_law": "Pub. L. 14-91",
+      "title": "Uniform Code of Military Justice Reform Act of 2023",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "Chronology and the source report agree that this enactment belongs at the 2 U.S.C. 190d note anchor rather than as executable positive-law text.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Statutory note only at the title 2 anchor; no executable positive-law section text is created.",
+          "classes": [
+            "current",
+            "statutory-note"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2/s190d",
+          "exact_change": "No executable positive-law section text is created.",
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-014-091.md; usc/usc10.xml",
+          "notes": "Branch-only note insertion at rp-pl014091-codification."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "correctly preserved as a statutory note",
+        "placement": "2 U.S.C. s 190d note",
+        "detail": "The current branch keeps the enactment as note material rather than positive-law text."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-014-091.md",
+        "usc/usc10.xml",
+        "origin/main:usc/usc10.xml"
+      ],
+      "current_xml_comparison": "Current branch adds rp-pl014091-codification in usc/usc10.xml; origin/main did not show the matching note id.",
+      "recommended_action": "Retain the statutory note placement and do not promote the proposal text into positive law.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Chronology and the source report agree that this enactment belongs at the 2 U.S.C. 190d note anchor rather than as executable positive-law text.",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "2 U.S.C. s 190d note",
+      "exact_change": "No executable positive-law section text is created."
+    },
+    {
+      "law_id": "PL-015-094",
+      "public_law": "Pub. L. 15-94",
+      "title": "Whistleblower Protections Act of 2023",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "Chronology cannot be pushed into executable text because the source is unrecoverable; the note should remain current but source-limited.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Current statutory note only; no readable enactment text was recovered.",
+          "classes": [
+            "current",
+            "source-unavailable"
+          ],
+          "treatment": "statutory-note",
+          "target": "closest subject-matter statutory note",
+          "exact_change": "No verified operative language can be stated.",
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-015-094.md; usc/usc18.xml",
+          "notes": "Branch-only note insertion at rp-pl015094-codification."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "current but source-limited",
+        "placement": "closest subject-matter statutory note",
+        "detail": "The law is treated as active in the archive, but no readable enactment text was recovered."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-015-094.md",
+        "usc/usc18.xml",
+        "origin/main:usc/usc18.xml"
+      ],
+      "current_xml_comparison": "Current branch adds rp-pl015094-codification in usc/usc18.xml; origin/main did not show the matching note id.",
+      "recommended_action": "Retain the current note and do not invent operative text.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Chronology cannot be pushed into executable text because the source is unrecoverable; the note should remain current but source-limited.",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "closest subject-matter statutory note",
+      "exact_change": "No verified operative language can be stated."
+    },
+    {
+      "law_id": "PL-015-095",
+      "public_law": "Pub. L. 15-95",
+      "title": "An Act to Repeal the White House Protection Act",
+      "status": "fully-repealed",
+      "decision": "historical-note-only",
+      "status_basis": "The chronology is clear: this repealer belongs in statutory history, not executable Code text.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Historical note only; no operative positive-law amendment remains in force.",
+          "classes": [
+            "history",
+            "repeal"
+          ],
+          "treatment": "historical-note-only",
+          "target": "title 3 statutory note",
+          "exact_change": "No operative positive-law amendment is left in force.",
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-015-095.md; usc/usc03.xml",
+          "notes": "Branch-only note insertion at rp-pl015095-codification."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "historical note with source limitation",
+        "placement": "title 3 statutory note",
+        "detail": "The current branch stores the repeal act as history only; the underlying enactment text was not recovered."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-015-095.md",
+        "usc/usc03.xml",
+        "origin/main:usc/usc03.xml"
+      ],
+      "current_xml_comparison": "Current branch adds rp-pl015095-codification in usc/usc03.xml; origin/main did not show the matching note id.",
+      "recommended_action": "Retain the historical note and do not invent operative text.",
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The chronology is clear: this repealer belongs in statutory history, not executable Code text.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "title 3 statutory note",
+      "exact_change": "No operative positive-law amendment is left in force."
+    },
+    {
+      "law_id": "PL-015-107",
+      "public_law": "Pub. L. 15-107",
+      "title": "Guidance to Guidances Act",
+      "status": "fully-repealed",
+      "decision": "historical-note-only",
+      "status_basis": "Chronology cannot improve this beyond a source-limited historical note; no executable text is recoverable.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Historical note only; no authenticated source text is available.",
+          "classes": [
+            "history",
+            "source-unavailable"
+          ],
+          "treatment": "historical-note-only",
+          "target": "title 1 statutory note",
+          "exact_change": "No verified operative text can be stated.",
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-015-107.md; usc/usc01.xml",
+          "notes": "Branch-only note insertion at rp-pl015107-codification."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "historical note with source limitation",
+        "placement": "title 1 statutory note",
+        "detail": "The branch records the law as history only; no authenticated source text is available."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-015-107.md",
+        "usc/usc01.xml",
+        "origin/main:usc/usc01.xml"
+      ],
+      "current_xml_comparison": "Current branch adds rp-pl015107-codification in usc/usc01.xml; origin/main did not show the matching note id.",
+      "recommended_action": "Retain the historical note and do not invent operative text.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Chronology cannot improve this beyond a source-limited historical note; no executable text is recoverable.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "title 1 statutory note",
+      "exact_change": "No verified operative text can be stated."
+    },
+    {
+      "law_id": "PL-015-110",
+      "public_law": "Pub. L. 15-110",
+      "title": "A Bill to Direct the DoD IG to Investigate Damascus embassy attack",
+      "status": "fully-repealed",
+      "decision": "historical-note-only",
+      "status_basis": "The source report says no readable enactment text was recovered, so chronology supports a history-only record.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Historical note only; no readable enactment text was recovered.",
+          "classes": [
+            "history",
+            "source-unavailable"
+          ],
+          "treatment": "historical-note-only",
+          "target": "title 18 statutory note",
+          "exact_change": "No readable source text was recovered.",
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-015-110.md; usc/usc22.xml",
+          "notes": "Branch-only note insertion at rp-pl015110-codification."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "historical note with source limitation",
+        "placement": "title 18 statutory note",
+        "detail": "The current branch preserves the note as history only; no readable source text was recovered."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-015-110.md",
+        "usc/usc22.xml",
+        "origin/main:usc/usc22.xml"
+      ],
+      "current_xml_comparison": "Current branch adds rp-pl015110-codification in usc/usc22.xml; origin/main did not show the matching note id.",
+      "recommended_action": "Retain the historical note and do not invent operative text.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source report says no readable enactment text was recovered, so chronology supports a history-only record.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "title 18 statutory note",
+      "exact_change": "No readable source text was recovered."
+    },
+    {
+      "law_id": "PL-016-112",
+      "public_law": "Pub. L. 16-112",
+      "title": "Contempt of Congress Act",
+      "status": "superseded",
+      "decision": "historical-note-only",
+      "status_basis": "Chronology resolves this law as superseded before codification: Pub. L. 31-228 later repealed Public Law 16-112 and reinstated 2 U.S.C. 192 in full, so the law should remain history only.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Historical note only; later law repealed the enactment and reinstated 2 U.S.C. 192 in full.",
+          "classes": [
+            "history",
+            "superseded"
+          ],
+          "treatment": "historical-note-only",
+          "target": "title 2 statutory note",
+          "exact_change": "Pub. L. 31-228 repealed Public Law 16-112 and reinstated 2 U.S.C. 192 in full.",
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-016-112.md; usc/usc02.xml",
+          "notes": "Branch-only note insertion at rp-pl016112-codification."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "superseded historical note",
+        "placement": "title 2 statutory note",
+        "detail": "The current XML note and the migration report both treat the enactment as superseded, with the later contempt rule occupying the operative history."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-016-112.md",
+        "usc/usc02.xml",
+        "origin/main:usc/usc02.xml"
+      ],
+      "current_xml_comparison": "Current branch adds rp-pl016112-codification in usc/usc02.xml; origin/main did not show the matching note id.",
+      "recommended_action": "Retain the supersession history and leave the reinstated 2 U.S.C. 192 operative reference in place.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Chronology resolves this law as superseded before codification: Pub. L. 31-228 later repealed Public Law 16-112 and reinstated 2 U.S.C. 192 in full, so the law should remain history only.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "title 2 statutory note",
+      "exact_change": "Pub. L. 31-228 repealed Public Law 16-112 and reinstated 2 U.S.C. 192 in full."
+    },
+    {
+      "law_id": "PL-016-119",
+      "public_law": "Pub. L. 16-119",
+      "title": "Criminal Organization Act of 2023",
+      "status": "current",
+      "decision": "statutory-note",
+      "status_basis": "Chronology cannot be converted into executable text because the source is unrecoverable; the law remains a current note only.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Current statutory note only; the enactment text was not recoverable.",
+          "classes": [
+            "current",
+            "source-unavailable"
+          ],
+          "treatment": "statutory-note",
+          "target": "closest subject-matter statutory note",
+          "exact_change": "No verified operative language can be stated.",
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-016-119.md; usc/usc18.xml",
+          "notes": "Branch-only note insertion at rp-pl016119-codification."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "current but source-limited",
+        "placement": "closest subject-matter statutory note",
+        "detail": "The archive treats the law as active, but the enactment text was not recoverable."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-016-119.md",
+        "usc/usc18.xml",
+        "origin/main:usc/usc18.xml"
+      ],
+      "current_xml_comparison": "Current branch adds rp-pl016119-codification in usc/usc18.xml; origin/main did not show the matching note id.",
+      "recommended_action": "Retain the current note and do not invent operative text.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Chronology cannot be converted into executable text because the source is unrecoverable; the law remains a current note only.",
+      "approved_code_treatment": "statutory-note",
+      "exact_target": "closest subject-matter statutory note",
+      "exact_change": "No verified operative language can be stated."
+    },
+    {
+      "law_id": "PL-016-120",
+      "public_law": "Pub. L. 16-120",
+      "title": "Hail Columbia Act",
+      "status": "fully-repealed",
+      "decision": "historical-note-only",
+      "status_basis": "Chronology keeps this as historical-only note material; no executable Code text survives.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Historical note only; no readable enactment text was recovered.",
+          "classes": [
+            "history",
+            "source-unavailable"
+          ],
+          "treatment": "historical-note-only",
+          "target": "title 1 statutory note",
+          "exact_change": "No readable source text was recovered.",
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-016-120.md; usc/usc01.xml",
+          "notes": "Branch-only note insertion at rp-pl016120-codification."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "historical note with source limitation",
+        "placement": "title 1 statutory note",
+        "detail": "The note is present but the enactment text was not recovered."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-016-120.md",
+        "usc/usc01.xml",
+        "origin/main:usc/usc01.xml"
+      ],
+      "current_xml_comparison": "Current branch adds rp-pl016120-codification in usc/usc01.xml; origin/main did not show the matching note id.",
+      "recommended_action": "Retain the historical note and do not invent operative text.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Chronology keeps this as historical-only note material; no executable Code text survives.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "title 1 statutory note",
+      "exact_change": "No readable source text was recovered."
+    },
+    {
+      "law_id": "PL-016-121",
+      "public_law": "Pub. L. 16-121",
+      "title": "Bill Transparency Understanding Act",
+      "status": "fully-repealed",
+      "decision": "historical-note-only",
+      "status_basis": "Chronology keeps this as a repealed historical note; no executable Code text survives.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Historical note only; the enactment text was not recovered.",
+          "classes": [
+            "history",
+            "source-unavailable"
+          ],
+          "treatment": "historical-note-only",
+          "target": "title 1 statutory note",
+          "exact_change": "No verified operative language can be stated.",
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-016-121.md; usc/usc01.xml",
+          "notes": "Branch-only note insertion at rp-pl016121-codification."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "historical note with source limitation",
+        "placement": "title 1 statutory note",
+        "detail": "The current branch stores the law as a historical note without recoverable text."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-016-121.md",
+        "usc/usc01.xml",
+        "origin/main:usc/usc01.xml"
+      ],
+      "current_xml_comparison": "Current branch adds rp-pl016121-codification in usc/usc01.xml; origin/main did not show the matching note id.",
+      "recommended_action": "Retain the historical note and do not invent operative text.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Chronology keeps this as a repealed historical note; no executable Code text survives.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "title 1 statutory note",
+      "exact_change": "No verified operative language can be stated."
+    },
+    {
+      "law_id": "PL-016-122",
+      "public_law": "Pub. L. 16-122",
+      "title": "Congressional Competency Act of 2023",
+      "status": "fully-repealed",
+      "decision": "historical-note-only",
+      "status_basis": "Chronology ends in a repealed note-only record; no executable Code text survives.",
+      "provisions": [
+        {
+          "ref": "entire enactment",
+          "text_summary": "Historical note only; no readable enactment text was recovered.",
+          "classes": [
+            "history",
+            "source-unavailable"
+          ],
+          "treatment": "historical-note-only",
+          "target": "title 2 statutory note",
+          "exact_change": "No readable source text was recovered.",
+          "evidence": "codification/mass_migration/latest/reports/laws/PL-016-122.md; usc/usc02.xml",
+          "notes": "Branch-only note insertion at rp-pl016122-codification."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "historical note with source limitation",
+        "placement": "title 2 statutory note",
+        "detail": "The current branch preserves the law only as historical note material; no source text was recovered."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-016-122.md",
+        "usc/usc02.xml",
+        "origin/main:usc/usc02.xml"
+      ],
+      "current_xml_comparison": "Current branch adds rp-pl016122-codification in usc/usc02.xml; origin/main did not show the matching note id.",
+      "recommended_action": "Retain the historical note and do not invent operative text.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Chronology ends in a repealed note-only record; no executable Code text survives.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "title 2 statutory note",
+      "exact_change": "No readable source text was recovered."
+    }
+  ]
+}

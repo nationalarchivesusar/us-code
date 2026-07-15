@@ -1,0 +1,602 @@
+{
+  "batch": 4,
+  "auditor": "law-auditor-B",
+  "law_count": 10,
+  "laws": [
+    {
+      "law_id": "PL-015-100",
+      "public_law": "15-100",
+      "title": "Public Law 15-100 | Employment Rights and Limitations Act",
+      "status": "current",
+      "status_basis": "Source intact and fully operative; establishes employment limitations, protected leave, holidays, working hours, termination-notice rights, anti-discrimination, and enforcement. No self-repeal or sunset in the text. The manifest 'Repealed Laws' label is not corroborated by the source or any later act in the set.",
+      "provisions": [
+        {
+          "ref": "SEC 1",
+          "text_summary": "Short title: Employment Rights and Limitations Act.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5",
+          "exact_change": "Short-title note",
+          "evidence": "\"This Act may be cited as the Employment Rights and Limitations Act.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 2",
+          "text_summary": "Definitions referencing 5 U.S.C. sections 101, 102, and 105 for executive and military departments and agencies.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5/s101",
+          "exact_change": "Definitions incorporate title 5 department/agency terms by reference only.",
+          "evidence": "\"Executive department\" means those departments listed in Section 101 of Title 5 of the United States Code.",
+          "notes": "References title 5 but does not amend it."
+        },
+        {
+          "ref": "SEC 3-5",
+          "text_summary": "Citizenship requirement; position limits; position definitions; clarifying rules.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5",
+          "exact_change": "Multiple-office-holding limits",
+          "evidence": "\"A person shall only retain a maximum of: one primary position and two secondary positions; or three secondary positions.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 6",
+          "text_summary": "Employment rights: leave, holidays, working hours, accommodations, termination notice, anti-retaliation, anti-discrimination, civil action.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5",
+          "exact_change": "Employee leave, termination, and anti-discrimination protections",
+          "evidence": "\"No employee shall be terminated on the basis of any protected grounds.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 7",
+          "text_summary": "Enforcement: AG investigations, agency-head policies, fines and penalties for violations.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5",
+          "exact_change": "Enforcement and penalties",
+          "evidence": "\"shall be fined not more than $5,000\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-inserted-into-permanent-text",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s101",
+        "detail": "The note declares 'Repealed or superseded' and carries a full-text quoted-content dump. The source is actually current, so the note is both misclassified and overstuffed. Trello link present."
+      },
+      "recommended_actions": [
+        "Remove the full-text quoted-content dump and Trello link.",
+        "Correct the status to current.",
+        "Replace the boilerplate note with a concise statutory note under title 5."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-015-101",
+      "public_law": "15-101",
+      "title": "Public Law 15-101 | Guidance to Guidances Act (source text; manifest title 'Ensuring Accountability in Federal Agencies Act' is a mislabel)",
+      "status": "current",
+      "status_basis": "The extracted source is intact and fully operative. It is actually the Guidance to Guidances Act, not the manifest's 'Ensuring Accountability in Federal Agencies Act'. It creates guidance-publication rules referencing 5 U.S.C. 551 and 553 and contains no self-repeal or sunset.",
+      "provisions": [
+        {
+          "ref": "SEC 1",
+          "text_summary": "Short title: Guidance to Guidances Act.",
+          "classes": ["short-title"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5",
+          "exact_change": "Short-title note",
+          "evidence": "\"This Act may be cited as the Guidance to Guidances Act.\"",
+          "notes": "Contradicts the manifest heading."
+        },
+        {
+          "ref": "SEC 2",
+          "text_summary": "Definitions: agency per 5 U.S.C. 551; guidance document is a non-binding agency statement not a 553 rule.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5/s551",
+          "exact_change": "Defines terms by reference to 5 U.S.C. 551 and 553.",
+          "evidence": "\"the term agency has the meaning given that term in section 551 of title 5\"",
+          "notes": "References title 5 but does not amend it."
+        },
+        {
+          "ref": "SEC 3",
+          "text_summary": "Publication mandate for new and previously issued guidance documents; Director designation.",
+          "classes": ["new-permanent-general", "uncodified-admin-direction"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5",
+          "exact_change": "Publication and transparency mandate for guidance documents",
+          "evidence": "\"the agency shall publish the guidance document\"",
+          "notes": "The Trello board requirement is substantive statutory text, not audit debris."
+        },
+        {
+          "ref": "SEC 3(d)",
+          "text_summary": "FOIA exemption carve-out: material exempt under 5 U.S.C. 552(b) is not subject to publication.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5/s552",
+          "exact_change": "Exempts FOIA-exempt material from publication requirements.",
+          "evidence": "\"exempt from disclosure under section 552(b) of title 5\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "Severability.",
+          "classes": ["severability"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5",
+          "exact_change": "Severability note",
+          "evidence": "\"If any provision of this Act\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 6",
+          "text_summary": "Effective immediately on passage and signature.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": "/us/usc/t5",
+          "exact_change": "Effective-date note",
+          "evidence": "\"This bill will take effect immediately\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "Serious mismatch: the note heading says 'Ensuring Accountability in Federal Agencies Act' and sits at title 50, but the source is the Guidance to Guidances Act about FOIA and agency guidance publication. Placement and title are both wrong. Trello link present; the operative text is readable. No dump."
+      },
+      "recommended_actions": [
+        "Correct the title to Guidance to Guidances Act.",
+        "Re-anchor from title 50 to title 5, near 5 U.S.C. 551 and 553.",
+        "Replace the boilerplate note with an honest statutory note describing the guidance-publication mandate and FOIA carve-out.",
+        "Remove the audit Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-102",
+      "public_law": "15-102",
+      "title": "Public Law 15-102 | New Ambassadorial Organizational and Reporting Act",
+      "status": "partially-current",
+      "status_basis": "Source intact and operative. It repeals the Ambassadorial Readjustment Act and PL 14-90 section 2(a)(i), and it creates regional ambassadorships plus weekly reporting duties. The act remains operative, but it is treated as partially current because later-law amendment status is not fully resolved in the supplied codification record.",
+      "provisions": [
+        {
+          "ref": "SECTION I",
+          "text_summary": "Short title, severability, anti-supersession, and effective date.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t22",
+          "exact_change": "Title, severability, and effective-date notes",
+          "evidence": "\"This Act may be cited as the New Ambassadorial Organization and Reporting Act\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION II(a)",
+          "text_summary": "Repeals the Ambassadorial Readjustment Act in its entirety.",
+          "classes": ["repeal"],
+          "treatment": "amendment-note",
+          "target": "Ambassadorial Readjustment Act",
+          "exact_change": "Repeal-mark the Ambassadorial Readjustment Act.",
+          "evidence": "\"the Ambassadorial Readjustment Act shall be repealed in its entirety\"",
+          "notes": "Out-of-batch target."
+        },
+        {
+          "ref": "SECTION II(b)",
+          "text_summary": "Repeals PL 14-90 section 2(a)(i) for U.S. Ambassadors.",
+          "classes": ["repeal"],
+          "treatment": "amendment-note",
+          "target": "PL 14-90 section 2(a)(i)",
+          "exact_change": "Strike the U.S. Ambassador acting-waiver clause from PL 14-90.",
+          "evidence": "\"subsection (i) of the Presidential Suck Up Act shall be repealed in its entirety\"",
+          "notes": "In-batch target."
+        },
+        {
+          "ref": "SECTION III",
+          "text_summary": "Creates regional ambassadorships and assigns nomination/consent and portfolio rules.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t22",
+          "exact_change": "Regional ambassadorship framework",
+          "evidence": "\"The following regional ambassadorships shall be created under this Act\"",
+          "notes": ""
+        },
+        {
+          "ref": "SECTION IV",
+          "text_summary": "Weekly reporting duty to the President, Secretary of State, and foreign-affairs committees.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t22",
+          "exact_change": "Weekly reporting duty",
+          "evidence": "\"shall submit ... weekly reports of their work\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t22/s2651",
+        "detail": "The XML note is boilerplate and does not record the two express repeals this act makes, nor the later amendment cross-reference captured in the broader codification record. Trello link present; no dump."
+      },
+      "recommended_actions": [
+        "Implement repeal-marking for the Ambassadorial Readjustment Act and PL 14-90 section 2(a)(i).",
+        "Add a cross-reference for the later amendment to SECTION III(e) if present in the codification record.",
+        "Replace the boilerplate note with an honest statutory note under title 22.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-104",
+      "public_law": "15-104",
+      "title": "Public Law 15-104 | The Military Justice Reorganization and Reform Act",
+      "status": "current",
+      "status_basis": "Source intact and fully operative; establishes the Chief Judge Advocate General, branch JAGs, military courts and judges, an ethics review board, confidentiality rules, and military paralegals. No self-repeal or sunset. No later act in the supplied set repeals it.",
+      "provisions": [
+        {
+          "ref": "SEC 1-3",
+          "text_summary": "Short title, purpose, and Armed Services definitions.",
+          "classes": ["short-title", "findings-or-sense", "new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t10",
+          "exact_change": "Title, purpose, and definitions",
+          "evidence": "\"cited as Military Justice Reform Act of 2023\"",
+          "notes": "Internal section numbering is duplicated and inconsistent."
+        },
+        {
+          "ref": "SEC 4-6",
+          "text_summary": "Chief Judge Advocate General office, responsibilities, reform measures, reporting, and oversight.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t10",
+          "exact_change": "Creates the CJAG office and duties",
+          "evidence": "\"The Chief Judge Advocate General shall be the Chief Legal Officer of the United States Armed Forces\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 7-8",
+          "text_summary": "Branch Judge Advocates General and Deputy JAGs, duties, reporting, and oversight.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t10",
+          "exact_change": "Creates branch JAG and DJAG offices",
+          "evidence": "\"Each United States Armed Services Branch shall be granted a Judge Advocate General\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 9-10",
+          "text_summary": "Military courts, military judges, chief military judges, and the Military Ethics Review Board.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t10",
+          "exact_change": "Court, judge, and ethics-board structure",
+          "evidence": "\"Each branch of the Armed Services shall establish military courts\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 11-14",
+          "text_summary": "Legal confidentiality, classified-material handling, lawyer duties, and military paralegals.",
+          "classes": ["new-permanent-general"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t10",
+          "exact_change": "Confidentiality and legal-personnel provisions",
+          "evidence": "\"The attorney-client privilege shall be recognized and respected in military cases.\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC (Establishment)",
+          "text_summary": "Effective on simple-majority passage and signature unless veto overridden.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": "/us/usc/t10",
+          "exact_change": "Effective-date note",
+          "evidence": "\"This bill shall be declared law once passed with a simple majority\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-inserted-into-permanent-text",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t10/s101/h",
+        "detail": "The note declares 'Repealed or superseded' and carries a full-text quoted-content dump plus a Trello link. The source is current, so the note is misclassified and should not be pasted into permanent text."
+      },
+      "recommended_actions": [
+        "Remove the full-text quoted-content dump and the Trello link.",
+        "Correct the status from repealed or superseded to current.",
+        "Replace the boilerplate with a concise statutory note under title 10."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-015-105",
+      "public_law": "15-105",
+      "title": "Public Law 15-105 | The Municipal Prosecution Act of 2023",
+      "status": "current",
+      "status_basis": "Source intact and operative. It makes multiple express repeals and amendments to other laws, and it delegates District of Columbia prosecution to the Department of Justice. Nothing in the supplied set repeals PL 15-105.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and purpose: remove DC Attorney General authority and delegate to DOJ.",
+          "classes": ["short-title", "findings-or-sense"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t40",
+          "exact_change": "Title and purpose notes",
+          "evidence": "\"remove the District Attorney General's Office for the District of Columbia\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3(a)",
+          "text_summary": "Repeals Part D of PL 12-88, the New District of Columbia Home Rule Act.",
+          "classes": ["repeal", "local-district"],
+          "treatment": "amendment-note",
+          "target": "PL 12-88 Part D",
+          "exact_change": "Repeal Part D of PL 12-88.",
+          "evidence": "\"Part D shall be hereby repealed\"",
+          "notes": "Out-of-batch target."
+        },
+        {
+          "ref": "SEC 4",
+          "text_summary": "Delegates municipal and federal prosecution for DC to the U.S. Attorney's Office and allows special prosecutors.",
+          "classes": ["new-permanent-general", "local-district"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t28",
+          "exact_change": "DOJ and U.S. Attorney assume DC municipal prosecution.",
+          "evidence": "\"shall have the sole responsibility for prosecuting both municipal and federal laws\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 5",
+          "text_summary": "Recall and initiative petition process delegated to U.S. AG and FEC, and Title 6 section 37 of PL 12-88 is repealed.",
+          "classes": ["new-permanent-general", "repeal", "local-district"],
+          "treatment": "amendment-note",
+          "target": "PL 12-88 Title 6 section 37",
+          "exact_change": "Repeal Title 6 section 37 of PL 12-88 and delegate the recall process.",
+          "evidence": "\"Title 6, Section 37 of Public Law 12-88 shall be repealed\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 6(a-c)",
+          "text_summary": "Repeals PL 15-97 section 103(b)(iii) and 102(f)(ii), and substitutes section 103(b)(v) text.",
+          "classes": ["repeal", "substitution"],
+          "treatment": "amendment-note",
+          "target": "PL 15-97 section 103(b)(iii), section 102(f)(ii), and section 103(b)(v)",
+          "exact_change": "Strike two provisions from PL 15-97 and replace section 103(b)(v) text.",
+          "evidence": "\"Section 103, Sub-Section iii shall be repealed\"",
+          "notes": "In-batch target."
+        },
+        {
+          "ref": "SEC (final)",
+          "text_summary": "Effective immediately on passage and signature.",
+          "classes": ["effective-date"],
+          "treatment": "effective-date-note",
+          "target": "/us/usc/t28",
+          "exact_change": "Effective-date note",
+          "evidence": "\"This Resolution will take effect immediately\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "The XML note is boilerplate, declares the law repealed or superseded, and fails to record the express repeals and amendments to PL 12-88 and PL 15-97. Placement at title 40 is odd for a DC-prosecution/judiciary act; title 28 fits better. Trello link present; no dump."
+      },
+      "recommended_actions": [
+        "Implement the amendments to PL 15-97 and repeal-mark PL 12-88 Part D and Title 6 section 37.",
+        "Correct the status to current and re-anchor to title 28.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-106",
+      "public_law": "15-106",
+      "title": "Public Law 15-106 | The Congress Strikes Back Repealment",
+      "status": "current",
+      "status_basis": "Source intact and operative; its sole substantive act is the express repeal of The Congress Strikes Back Act of 2022. Nothing in the supplied set repeals PL 15-106 itself.",
+      "provisions": [
+        {
+          "ref": "SEC I",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": ["short-title", "severability", "effective-date"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2",
+          "exact_change": "Title, severability, and effective-date notes",
+          "evidence": "\"The Congress Strikes Back Repealment\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC II",
+          "text_summary": "Reasoning section citing an OLC memo on unconstitutionality.",
+          "classes": ["findings-or-sense"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2",
+          "exact_change": "Findings note",
+          "evidence": "\"cannot co-exist with the United States Constitution\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC III",
+          "text_summary": "Repeals The Congress Strikes Back Act in its entirety.",
+          "classes": ["repeal"],
+          "treatment": "amendment-note",
+          "target": "The Congress Strikes Back Act of 2022",
+          "exact_change": "Repeal-mark The Congress Strikes Back Act.",
+          "evidence": "\"shall be repealed in its entirety\"",
+          "notes": ""
+        }
+      ],
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s1",
+        "detail": "The note declares 'Repealed or superseded' about PL 15-106 itself, but this repealing act is current. The actual repeal of The Congress Strikes Back Act is not implemented. Trello link present; no dump."
+      },
+      "recommended_actions": [
+        "Repeal-mark The Congress Strikes Back Act at its codified location and add an amendment note citing PL 15-106 section III.",
+        "Correct the status to current.",
+        "Remove the Trello link.",
+        "Keep the act as a statutory note under title 2."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-107",
+      "public_law": "15-107",
+      "title": "Public Law 15-107 | Guidance to Guidances Act",
+      "status": "unresolved",
+      "status_basis": "Source status is unrecoverable; no source files exist, law.txt is absent, and no operative text can be authenticated. The title also matches the recovered text of PL 15-101, so this may be a duplicate or renumbering. Own text may not be invented.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "Guidance to Guidances Act text unrecoverable; likely duplicate of PL 15-101's recovered source.",
+          "classes": ["non-code"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t5",
+          "exact_change": "None determinable; source deleted or not found.",
+          "evidence": "No readable authenticated enactment text could be recovered.",
+          "notes": "Source-defect-nondeterminable; cross-check possible duplication with PL 15-101."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t1/s1",
+        "detail": "The XML note declares 'Repealed or superseded' with boilerplate prose, but the source is actually unrecoverable and no lawful substantive conclusion is possible. Trello link present; no dump."
+      },
+      "recommended_actions": [
+        "Retain only as a source-limited historical note stating the source is unrecoverable.",
+        "Investigate possible duplication with PL 15-101 and consolidate if appropriate.",
+        "Remove the Trello link and boilerplate."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-108",
+      "public_law": "15-108",
+      "title": "Public Law 15-108 | The Reclassification of Labeling Act of 2023",
+      "status": "current",
+      "status_basis": "Source intact and operative. It sets internal congressional document-labeling rules for bills, resolutions, amendments, committee reports, and treaty documents. No self-repeal or sunset. The 'amend/insert/repeal' hits are false positives from procedural language, not actual USC amendments.",
+      "provisions": [
+        {
+          "ref": "SEC 1-2",
+          "text_summary": "Short title and purpose: fix congressional document labeling.",
+          "classes": ["short-title", "findings-or-sense"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2",
+          "exact_change": "Title and purpose notes",
+          "evidence": "\"The Reclassification of Labeling Act of 2023\"",
+          "notes": ""
+        },
+        {
+          "ref": "SEC 3-8",
+          "text_summary": "Prescribes labeling conventions for bills, resolutions, concurrent resolutions, joint resolutions, amendments, and treaty documents.",
+          "classes": ["new-permanent-general", "non-code"],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t2",
+          "exact_change": "Internal congressional-labeling rules.",
+          "evidence": "\"H.R.# and S.# shall be only used when bills are being proposed.\"",
+          "notes": "Internal rules of Congress; ordinarily excluded from positive-law Code sections."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The XML note is anchored at title 50, which is wrong for a congressional-labeling act. Title 2 fits better. Declared current is right, but the codification prose is boilerplate and no actual Code amendment is made. Trello link present; no dump."
+      },
+      "recommended_actions": [
+        "Re-anchor from title 50 to title 2 as a statutory or historical note.",
+        "Do not treat the procedural amendment language as USC amendments.",
+        "Remove the Trello link.",
+        "Keep it as a note only if the repository wants internal congressional procedure material."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-109",
+      "public_law": "15-109",
+      "title": "Public Law 15-109 | Ending Tigray for the Last Time",
+      "status": "current",
+      "status_basis": "Source intact and operative as a joint resolution. Its sole act is to formally repeal House Joint Resolution 6, the Tigray war notice. It is a ceremonial war-powers wind-down, not a permanent Code section.",
+      "provisions": [
+        {
+          "ref": "Whereas/Resolved",
+          "text_summary": "Formally ends the state of war with Tigray by repealing House Joint Resolution 6 in its entirety.",
+          "classes": ["repeal", "ceremonial", "non-code"],
+          "treatment": "amendment-note",
+          "target": "House Joint Resolution 6",
+          "exact_change": "Repeal-mark House Joint Resolution 6.",
+          "evidence": "\"shall be formally repealed in its entirety\"",
+          "notes": "War-declaration wind-down; keep as a concise historical note."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s1",
+        "detail": "The note declares 'Repealed or superseded' about PL 15-109 itself, which is wrong because this resolution is the repealing instrument and is current. The actual action - marking HJRes 6 repealed - is not done. The title 2 anchor is generic; a war-powers or foreign-relations anchor fits better. Trello link present; no dump."
+      },
+      "recommended_actions": [
+        "Repeal-mark House Joint Resolution 6 wherever it is recorded and add a note citing PL 15-109.",
+        "Correct the status of PL 15-109 to current.",
+        "Exclude PL 15-109 from permanent Code text and keep only a concise historical note.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-110",
+      "public_law": "15-110",
+      "title": "Public Law 15-110 | A Bill to Direct the DoD Inspector General to Investigate the Attack on the U.S. Embassy in Damascus",
+      "status": "unresolved",
+      "status_basis": "Source status is unrecoverable; no source files exist, law.txt is absent, and the operative text cannot be authenticated. The title indicates a one-time investigative directive, but nothing recoverable can be safely codified.",
+      "provisions": [
+        {
+          "ref": "(whole act)",
+          "text_summary": "DoD Inspector General investigative directive is unrecoverable.",
+          "classes": ["uncodified-admin-direction", "non-code"],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t10",
+          "exact_change": "None determinable; source deleted or not found.",
+          "evidence": "No readable authenticated enactment text could be recovered.",
+          "notes": "A one-time investigative directive would ordinarily be excluded from code even if recovered."
+        }
+      ],
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t22/s2651",
+        "detail": "The XML note declares 'Repealed or superseded' with boilerplate prose, but the source is actually unrecoverable. Trello link present; no dump."
+      },
+      "recommended_actions": [
+        "Retain only as a source-limited historical note.",
+        "If the source is ever recovered, keep it as a non-code investigative directive rather than permanent section text.",
+        "Remove the Trello link and boilerplate."
+      ],
+      "confidence": "high"
+    }
+  ]
+}

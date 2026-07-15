@@ -1,0 +1,397 @@
+{
+  "reviewer": "reviewer-21",
+  "group_index": 21,
+  "law_count": 10,
+  "source_manifest": "audit/review/manifest-21.json",
+  "output_path": "audit/review/review-21.json",
+  "laws": [
+    {
+      "law_id": "PL-029-208",
+      "public_law": "29-208",
+      "title": "Public Law 29-208 | Foreign Affairs Accountability Act",
+      "final_statutory_text": "Requires monthly ambassador reporting, a State Department summary/report duty, and a major-international-developments report duty; repeals Section IV of Public Law 15-102.",
+      "provision_level_disposition": "Standalone general and permanent law preserved as a statutory note at 22 U.S.C. 2658a; no uniquely executable positive-law amendment was identified.",
+      "chronology": "Current enactment. The source is intact and permanent, and no later enactment in the reviewed set repeals Public Law 29-208.",
+      "repeal_transfer_redesignation": "Section IV of Public Law 15-102 is repealed; no transfer or redesignation chain survives.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "note-only",
+      "status": "current",
+      "status_basis": "The source text is readable and permanent, but it does not produce a uniquely executable Code substitution. The mass-migration record classifies it as a statutory note at 22 U.S.C. 2658a.",
+      "current_implementation": {
+        "assessment": "implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t22/s2658a",
+        "detail": "Current XML already carries the Pub. L. 29-208 statutory note at the title 22 anchor."
+      },
+      "source_evidence": [
+        "codification/laws/laws/PL-029-208/law.txt states the monthly reporting duties and the repeal of Section IV of Public Law 15-102.",
+        "codification/mass_migration/latest/reports/laws/PL-029-208.md classifies the act as STATUTORY_NOTE at 22 U.S.C. 2658a.",
+        "usc/usc22.xml contains the note id rp-pl029208-codification at the title 22 anchor."
+      ],
+      "recommended_actions": [
+        "Retain the statutory note at 22 U.S.C. 2658a.",
+        "Do not create a new Code section.",
+        "Keep the repeal history for Public Law 15-102 section IV."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Current enactment. The source is intact and permanent, and no later enactment in the reviewed set repeals Public Law 29-208.",
+      "approved_code_treatment": "note-only",
+      "final_recommended_action": "Retain the statutory note at 22 U.S.C. 2658a. | Do not create a new Code section. | Keep the repeal history for Public Law 15-102 section IV.",
+      "exact_target": "/us/usc/t22/s2658a"
+    },
+    {
+      "law_id": "PL-029-210",
+      "public_law": "29-210",
+      "title": "Public Law 29-210 | Military Justice Reform Act of 2024",
+      "final_statutory_text": "Creates a freestanding military justice structure, amends multiple UCMJ article provisions by reference to Public Law 14-91, repeals Public Laws 15-104 and 19-146, and includes blanket supersession language.",
+      "provision_level_disposition": "General and permanent military-justice enactment preserved as a statutory note; no safe concrete Title 10 section-body target was determinable from the packet text.",
+      "chronology": "Current enactment. The source is intact and reviewable, and no later enactment in the reviewed set repeals Public Law 29-210.",
+      "repeal_transfer_redesignation": "Direct repeal of Public Laws 15-104 and 19-146, with blanket supersession language and no safe transfer/redesignation chain.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "note-only",
+      "status": "current",
+      "status_basis": "The packet text is complete and reviewable, but the review memo found no safely determinable current XML target for a concrete section-body rewrite.",
+      "current_implementation": {
+        "assessment": "implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t10",
+        "detail": "Current XML carries the Pub. L. 29-210 statutory note, but no definitive section-body substitution was safely authored."
+      },
+      "source_evidence": [
+        "codification/decisions/PL-029-210.md says there is no present XML operation and no safely determinable current XML target.",
+        "usc/usc10.xml contains the note id rp-pl029210-codification.",
+        "codification/plans/draft/PL-029-210.json remains a zero-operation draft."
+      ],
+      "recommended_actions": [
+        "Preserve the statutory note under title 10.",
+        "Do not infer a concrete section-body substitution without a formal policy mapping.",
+        "Do not treat the blanket supersession clause as a free-standing XML rewrite instruction."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Current enactment. The source is intact and reviewable, and no later enactment in the reviewed set repeals Public Law 29-210.",
+      "approved_code_treatment": "note-only",
+      "final_recommended_action": "Preserve the statutory note under title 10. | Do not infer a concrete section-body substitution without a formal policy mapping. | Do not treat the blanket supersession clause as a free-standing XML rewrite instruction.",
+      "exact_target": "/us/usc/t10"
+    },
+    {
+      "law_id": "PL-029-211",
+      "public_law": "29-211",
+      "title": "Public Law 29-211 | Amendment to the Presidential Succession Act of 1947",
+      "final_statutory_text": "Amends 3 U.S.C. 19(c)(2), (d)(1), and (d)(2) to revise the acting-presidency succession rules.",
+      "provision_level_disposition": "Direct amendment to existing Code text; implemented through the title 3 section-19 fragment.",
+      "chronology": "Current enactment. The source is intact and operative, and later laws reviewed for this section do not undo the amendment.",
+      "repeal_transfer_redesignation": "No repeal or transfer chain; the act is an affirmative amendment to 3 U.S.C. 19.",
+      "standalone_general_permanent": false,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": false,
+      "decision": "amend-existing-text",
+      "status": "current",
+      "status_basis": "The decision memorandum and approved fragment both identify a direct section-19 amendment, and the current branch contains the corresponding amendment note.",
+      "current_implementation": {
+        "assessment": "implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t3/s19",
+        "detail": "Current XML contains the Pub. L. 29-211 amendment note and the revised 3 U.S.C. 19 subsections."
+      },
+      "source_evidence": [
+        "codification/decisions/PL-029-211.md says section 3 amends 3 U.S.C. 19(c)(2), (d)(1), and (d)(2).",
+        "usc/usc03.xml contains the note id rp-pl029211-3-19-amendments.",
+        "codification/plans/approved/PL-029-211-t3-s19-fragment.xml is the approved replacement fragment."
+      ],
+      "recommended_actions": [
+        "Retain the current 3 U.S.C. 19 text and history note.",
+        "No further Code change is required for this law.",
+        "Keep the amendment history aligned with Public Law 29-215."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Current enactment. The source is intact and operative, and later laws reviewed for this section do not undo the amendment.",
+      "approved_code_treatment": "amend-existing-text",
+      "final_recommended_action": "Retain the current 3 U.S.C. 19 text and history note. | No further Code change is required for this law. | Keep the amendment history aligned with Public Law 29-215.",
+      "exact_target": "/us/usc/t3/s19"
+    },
+    {
+      "law_id": "PL-029-213",
+      "public_law": "29-213",
+      "title": "Public Law 29-213 | D.C Delegate Elimination Act",
+      "final_statutory_text": "Repeals Public Law 16-120 section 4 and declares the delegate position null and void.",
+      "provision_level_disposition": "Nonoperative / repealed enactment; no current Code operation is authorized.",
+      "chronology": "Repealed enactment. The source report classifies the law as repealed, and no current Code placement is authorized.",
+      "repeal_transfer_redesignation": "Direct repeal of Public Law 16-120 section 4; no transfer or redesignation survives.",
+      "standalone_general_permanent": false,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "nonoperative-or-repealed",
+      "status": "repealed",
+      "status_basis": "The mass-migration report classifies the act as repealed based on the source metadata and gives no Code operation.",
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "No current XML implementation should be carried forward for this repealed enactment."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-029-213.md classifies the act as NONOPERATIVE_OR_REPEALED.",
+        "codification/mass_migration/latest/plans/PL-029-213.json records no operations.",
+        "codification/mass_migration/latest/sources/text/PL-029-213.txt states the repeal of Public Law 16-120 section 4."
+      ],
+      "recommended_actions": [
+        "Retain only as historical repeal information.",
+        "Do not add a Code section or statutory note.",
+        "Do not infer operative text."
+      ],
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "Repealed enactment. The source report classifies the law as repealed, and no current Code placement is authorized.",
+      "approved_code_treatment": "nonoperative-or-repealed",
+      "final_recommended_action": "Retain only as historical repeal information. | Do not add a Code section or statutory note. | Do not infer operative text."
+    },
+    {
+      "law_id": "PL-029-214",
+      "public_law": "29-214",
+      "title": "Public Law 29-214 | Safeguarding American Democracy and Maintaining Order in our Streets Act",
+      "final_statutory_text": "Prohibits unauthorized private paramilitary activity, defines the covered conduct, and sets exceptions and penalties.",
+      "provision_level_disposition": "General and permanent law preserved as a statutory note at 2 U.S.C. 172; no uniquely executable positive-law amendment was identified.",
+      "chronology": "Current enactment. The source is intact and permanent, and nothing in the reviewed set repeals it.",
+      "repeal_transfer_redesignation": "No repeal or transfer chain was identified.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "note-only",
+      "status": "current",
+      "status_basis": "The report classifies the law as active and permanent, but it does not supply a uniquely executable positive-law placement.",
+      "current_implementation": {
+        "assessment": "not-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s172",
+        "detail": "The branch has title 2 material at section 172, but no PL-29-214 statutory note was found."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-029-214.md classifies the act as STATUTORY_NOTE at 2 U.S.C. 172.",
+        "codification/mass_migration/latest/plans/PL-029-214.json records the same target and disposition.",
+        "codification/mass_migration/latest/sources/text/PL-029-214.txt describes the private-paramilitary prohibition."
+      ],
+      "recommended_actions": [
+        "Add a statutory note at 2 U.S.C. 172.",
+        "Do not create a new Code section.",
+        "Do not treat the note as a new operative section."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Current enactment. The source is intact and permanent, and nothing in the reviewed set repeals it.",
+      "approved_code_treatment": "note-only",
+      "final_recommended_action": "Add a statutory note at 2 U.S.C. 172. | Do not create a new Code section. | Do not treat the note as a new operative section.",
+      "exact_target": "/us/usc/t2/s172"
+    },
+    {
+      "law_id": "PL-029-215",
+      "public_law": "29-215",
+      "title": "Public Law 29-215 | Stability in the Presidency Act",
+      "final_statutory_text": "Adds 3 U.S.C. 19(g) and (h) governing incapacity declarations, appeal, congressional action, and judicial review.",
+      "provision_level_disposition": "Direct amendment to existing Code text; implemented through the title 3 section-19 fragment.",
+      "chronology": "Current enactment. The source is intact and operative, and later laws reviewed for this section do not undo the amendment.",
+      "repeal_transfer_redesignation": "No repeal or transfer chain; the act adds new subsections to 3 U.S.C. 19.",
+      "standalone_general_permanent": false,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": false,
+      "decision": "amend-existing-text",
+      "status": "current",
+      "status_basis": "The decision memorandum and current XML both show the new subsections (g) and (h) added to 3 U.S.C. 19.",
+      "current_implementation": {
+        "assessment": "implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t3/s19",
+        "detail": "Current XML contains the added subsections (g) and (h) and the Pub. L. 29-215 amendment note."
+      },
+      "source_evidence": [
+        "codification/decisions/PL-029-215.md says section 4 adds subsections (g) and (h) to 3 U.S.C. 19.",
+        "usc/usc03.xml contains the note id rp-pl029215-3-19-amendments.",
+        "codification/plans/approved/PL-029-215-t3-s19-fragment.xml is the approved replacement fragment."
+      ],
+      "recommended_actions": [
+        "Retain the current 3 U.S.C. 19 text and history note.",
+        "No further Code change is required for this law.",
+        "Keep the amendment history aligned with Public Law 29-211."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Current enactment. The source is intact and operative, and later laws reviewed for this section do not undo the amendment.",
+      "approved_code_treatment": "amend-existing-text",
+      "final_recommended_action": "Retain the current 3 U.S.C. 19 text and history note. | No further Code change is required for this law. | Keep the amendment history aligned with Public Law 29-211.",
+      "exact_target": "/us/usc/t3/s19"
+    },
+    {
+      "law_id": "PL-029-216",
+      "public_law": "29-216",
+      "title": "Public Law 29-216 | District of Columbia Home Rule Act of 2025",
+      "final_statutory_text": "Overhauls District of Columbia home-rule governance, charter provisions, police structure, referendum rules, and related matters.",
+      "provision_level_disposition": "Nonoperative / repealed enactment; no current Code operation is authorized.",
+      "chronology": "Repealed enactment. The source report classifies the law as repealed, and no current Code placement is authorized.",
+      "repeal_transfer_redesignation": "No safe transfer or redesignation chain was identified; the enactment is excluded from current Code treatment.",
+      "standalone_general_permanent": false,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "nonoperative-or-repealed",
+      "status": "repealed",
+      "status_basis": "The mass-migration report classifies the act as repealed and authorizes no Code operation.",
+      "current_implementation": {
+        "assessment": "not-applicable",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "No current XML implementation should be carried forward for this repealed enactment."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-029-216.md classifies the act as NONOPERATIVE_OR_REPEALED.",
+        "codification/mass_migration/latest/plans/PL-029-216.json records no operations.",
+        "codification/mass_migration/latest/sources/text/PL-029-216.txt contains the home-rule and police provisions."
+      ],
+      "recommended_actions": [
+        "Retain only as historical repeal information.",
+        "Do not add a Code section or statutory note.",
+        "Do not infer operative text."
+      ],
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "Repealed enactment. The source report classifies the law as repealed, and no current Code placement is authorized.",
+      "approved_code_treatment": "nonoperative-or-repealed",
+      "final_recommended_action": "Retain only as historical repeal information. | Do not add a Code section or statutory note. | Do not infer operative text."
+    },
+    {
+      "law_id": "PL-029-217",
+      "public_law": "29-217",
+      "title": "Public Law 29-217 | Private Regulations and Compliance Act",
+      "final_statutory_text": "Replaces Public Law 4-27 with a private-regulations and compliance framework and cross-references criminal penalties under 18 U.S.C. 1752 and 912.",
+      "provision_level_disposition": "General and permanent law preserved as a statutory note at 2 U.S.C. 4103; no uniquely executable positive-law amendment was identified.",
+      "chronology": "Current enactment. The source is intact and permanent, and nothing in the reviewed set repeals it.",
+      "repeal_transfer_redesignation": "The act supersedes Public Law 4-27; no additional transfer or redesignation chain was identified.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "note-only",
+      "status": "current",
+      "status_basis": "The report classifies the act as a permanent statutory note at 2 U.S.C. 4103 and identifies no uniquely executable positive-law placement.",
+      "current_implementation": {
+        "assessment": "not-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s4103",
+        "detail": "The branch has title 2 section 4103, but no PL-29-217 statutory note was found."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-029-217.md classifies the act as STATUTORY_NOTE at 2 U.S.C. 4103.",
+        "codification/mass_migration/latest/plans/PL-029-217.json records the same target and disposition.",
+        "codification/mass_migration/latest/sources/text/PL-029-217.txt describes the repeal-and-replace of Public Law 4-27."
+      ],
+      "recommended_actions": [
+        "Add a statutory note at 2 U.S.C. 4103.",
+        "Do not create a new Code section.",
+        "Do not treat the note as a new operative section."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Current enactment. The source is intact and permanent, and nothing in the reviewed set repeals it.",
+      "approved_code_treatment": "note-only",
+      "final_recommended_action": "Add a statutory note at 2 U.S.C. 4103. | Do not create a new Code section. | Do not treat the note as a new operative section.",
+      "exact_target": "/us/usc/t2/s4103"
+    },
+    {
+      "law_id": "PL-029-218",
+      "public_law": "29-218",
+      "title": "Public Law 29-218 | Public Officials Security Act",
+      "final_statutory_text": "Creates security restrictions for private security and federal-property access and cross-references 18 U.S.C. 1752 and 912.",
+      "provision_level_disposition": "General and permanent law preserved as a statutory note at 2 U.S.C. 4338; no uniquely executable positive-law amendment was identified.",
+      "chronology": "Current enactment. The source is intact and permanent, and nothing in the reviewed set repeals it.",
+      "repeal_transfer_redesignation": "No repeal or transfer chain was identified.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "note-only",
+      "status": "current",
+      "status_basis": "The report classifies the act as a permanent statutory note at 2 U.S.C. 4338 and identifies no uniquely executable positive-law placement.",
+      "current_implementation": {
+        "assessment": "not-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s4338",
+        "detail": "The branch has title 2 section 4338, but no PL-29-218 statutory note was found."
+      },
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-029-218.md classifies the act as STATUTORY_NOTE at 2 U.S.C. 4338.",
+        "codification/mass_migration/latest/plans/PL-029-218.json records the same target and disposition.",
+        "codification/mass_migration/latest/sources/text/PL-029-218.txt describes the private-security and federal-property restrictions."
+      ],
+      "recommended_actions": [
+        "Add a statutory note at 2 U.S.C. 4338.",
+        "Do not create a new Code section.",
+        "Do not treat the note as a new operative section."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Current enactment. The source is intact and permanent, and nothing in the reviewed set repeals it.",
+      "approved_code_treatment": "note-only",
+      "final_recommended_action": "Add a statutory note at 2 U.S.C. 4338. | Do not create a new Code section. | Do not treat the note as a new operative section.",
+      "exact_target": "/us/usc/t2/s4338"
+    },
+    {
+      "law_id": "PL-030-220",
+      "public_law": "30-220",
+      "title": "Public Law 30-220 | Supreme Court Justice Allotment Act",
+      "final_statutory_text": "Reinstates and amends 28 U.S.C. 42 to authorize allotment of Supreme Court justices as circuit justices or district judges and allows repeated or shared assignments.",
+      "provision_level_disposition": "Direct amendment to existing Code text; implemented through the title 28 section-42 replacement and TOC update.",
+      "chronology": "Current enactment. The source is intact and operative, and the later-law review found no undoing repeal.",
+      "repeal_transfer_redesignation": "Public Law 17-133 previously repealed the section, but Public Law 30-220 independently reinstates and amends it; no non-revival issue blocks implementation.",
+      "standalone_general_permanent": false,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": false,
+      "decision": "amend-existing-text",
+      "status": "current",
+      "status_basis": "The decision memorandum approves reinstatement and amendment of 28 U.S.C. 42, and the current branch contains the amended section text and history note.",
+      "current_implementation": {
+        "assessment": "implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28/s42",
+        "detail": "Current XML contains the reinstated section text, the updated heading, and the Pub. L. 30-220 amendment note."
+      },
+      "source_evidence": [
+        "codification/decisions/PL-030-220.md says Public Law 30-220 reinstates and amends 28 U.S.C. 42.",
+        "usc/usc28.xml contains the section 42 text and the Pub. L. 30-220, § 3, amendment note.",
+        "codification/packets/PL-030-220/law.txt states the allotment authority for circuit justices and district judges."
+      ],
+      "recommended_actions": [
+        "Retain the amended 28 U.S.C. 42 text and history note.",
+        "Keep the updated title 28 table of contents heading.",
+        "No further Code change is required for this law."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "Current enactment. The source is intact and operative, and the later-law review found no undoing repeal.",
+      "approved_code_treatment": "amend-existing-text",
+      "final_recommended_action": "Retain the amended 28 U.S.C. 42 text and history note. | Keep the updated title 28 table of contents heading. | No further Code change is required for this law.",
+      "exact_target": "/us/usc/t28/s42"
+    }
+  ]
+}

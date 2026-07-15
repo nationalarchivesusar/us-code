@@ -1,0 +1,240 @@
+{
+  "reviewer": "law-auditor-85",
+  "group_index": 85,
+  "law_count": 3,
+  "source_manifest": "audit/manifests/review-repair-85.json",
+  "output_path": "audit/review/review-repair-85.json",
+  "completion_summary": "Reviewed 3 assigned laws: 1 already incorporated in the current title 5 framework, 1 needs a concise statutory-note treatment with no live XML marker located, and 1 is temporary appropriations text that should remain out of the U.S. Code.",
+  "reviewed_against": [
+    "audit/manifests/review-repair-85.json",
+    "codification/laws/laws/PL-028-205/law.txt",
+    "codification/laws/laws/PL-028-205/metadata.json",
+    "codification/laws/laws/PL-029-209/law.txt",
+    "codification/laws/laws/PL-029-209/metadata.json",
+    "codification/laws/laws/PL-031-229/law.txt",
+    "codification/laws/laws/PL-031-229/metadata.json",
+    "codification/backups/PL-032-230/20260703_181006/usc/usc05.xml",
+    "codification/backups/PL-036-258/20260703_181025/usc/usc05.xml",
+    "codification/backups/final_public_laws_20260704_033045/usc/usc50.xml"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-028-205",
+      "public_law": "28-205",
+      "title": "Public Law 28-205 | Inspector General Reform Act of 2024",
+      "status": "current",
+      "status_basis": "The source text is a general and permanent Inspector General enactment, and the current title 5 snapshots already carry the CIGIE framework and related executive-department and legislative-branch references that the act relies on.",
+      "approved_code_treatment": "already-incorporated",
+      "source_evidence": [
+        "codification/laws/laws/PL-028-205/law.txt",
+        "codification/laws/laws/PL-028-205/metadata.json",
+        "codification/backups/PL-032-230/20260703_181006/usc/usc05.xml",
+        "codification/backups/PL-036-258/20260703_181025/usc/usc05.xml"
+      ],
+      "current_implementation": {
+        "assessment": "already incorporated",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t5/s424",
+        "detail": "The live title 5 material already contains the Council of the Inspectors General on Integrity and Efficiency framework and the related department references, so no separate rewrite was identified from the supplied source."
+      },
+      "provisions": [
+        {
+          "ref": "SEC. 1-3",
+          "text_summary": "Short title, purpose, and repealment language.",
+          "classes": [
+            "short-title",
+            "purpose",
+            "repeal"
+          ],
+          "treatment": "statutory-note",
+          "target": "/us/usc/t5/s424",
+          "exact_change": "Keep the framing and repeal language as concise note material only.",
+          "evidence": "The source opens with a short title, purpose, and a repealment clause aimed at earlier Inspector General material.",
+          "notes": "No separate operative Code rewrite is exposed by the current snapshot."
+        },
+        {
+          "ref": "SEC. 4-5",
+          "text_summary": "Department-list and CIGIE structure language.",
+          "classes": [
+            "direct-amendment",
+            "new-permanent-general"
+          ],
+          "treatment": "already-incorporated",
+          "target": "/us/usc/t5/s424",
+          "exact_change": "Leave the existing CIGIE and related title 5 framework in place.",
+          "evidence": "The title 5 snapshots already contain the Council of the Inspectors General on Integrity and Efficiency and the department references used by the bill.",
+          "notes": "No additional live XML change is warranted from the reviewed source."
+        }
+      ],
+      "recommended_actions": [
+        "Leave the current title 5 framework unchanged.",
+        "Retain only concise historical note material if a record entry is needed."
+      ],
+      "confidence": "medium",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source text is a general and permanent Inspector General enactment, and the current title 5 snapshots already carry the CIGIE framework and related executive-department and legislative-branch references that the act relies on.",
+      "final_recommended_action": "Leave the current title 5 framework unchanged. | Retain only concise historical note material if a record entry is needed.",
+      "exact_target": "/us/usc/t5/s424",
+      "exact_change": "Keep the framing and repeal language as concise note material only. | Leave the existing CIGIE and related title 5 framework in place."
+    },
+    {
+      "law_id": "PL-029-209",
+      "public_law": "29-209",
+      "title": "Public Law 29-209 | Terms of Service Act",
+      "status": "current",
+      "status_basis": "The source text is general and permanent, but no live U.S. Code note marker or operative integration was located in the available snapshots.",
+      "approved_code_treatment": "statutory-note",
+      "source_evidence": [
+        "codification/laws/laws/PL-029-209/law.txt",
+        "codification/laws/laws/PL-029-209/metadata.json"
+      ],
+      "current_implementation": {
+        "assessment": "missing-note",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "I did not find a matching live XML note or codified text for this enactment in the available snapshots."
+      },
+      "provisions": [
+        {
+          "ref": "SEC. 1-3",
+          "text_summary": "Short title, severability, and effective date.",
+          "classes": [
+            "short-title",
+            "severability",
+            "effective-date"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Keep the framing clauses as note-only material.",
+          "evidence": "The opening sections supply only title, severability, and effective-date language.",
+          "notes": "No operative Code text is created by these clauses."
+        },
+        {
+          "ref": "SEC. 4",
+          "text_summary": "Findings regarding proposed-bill restrictions.",
+          "classes": [
+            "findings",
+            "sense-of-congress"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Preserve the findings as concise note material only.",
+          "evidence": "The source states findings about proposed bills and Roblox Terms of Service concerns.",
+          "notes": "This is introductory policy material."
+        },
+        {
+          "ref": "SEC. 5",
+          "text_summary": "Restrictions on bills that would violate Roblox Terms of Service or Game Rules.",
+          "classes": [
+            "new-permanent-general",
+            "uncodified-admin-direction"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Record the restriction language as note-only material.",
+          "evidence": "The section bars proposed bills that would violate the stated rules and lists prohibited content categories.",
+          "notes": "No safe positive-law rewrite target was identified from the available code snapshots."
+        },
+        {
+          "ref": "SEC. 6",
+          "text_summary": "Procedural repercussions for noncompliant proposals.",
+          "classes": [
+            "uncodified-admin-direction"
+          ],
+          "treatment": "statutory-note",
+          "target": null,
+          "exact_change": "Keep the repercussions language as note-only material.",
+          "evidence": "The source directs removal of prohibited bills and escalation to chamber leadership.",
+          "notes": "This remains procedural and note-only."
+        }
+      ],
+      "recommended_actions": [
+        "Add a concise statutory note if a codification anchor is later identified.",
+        "Do not manufacture operative text from the policy language.",
+        "Keep the current record free of dump-style boilerplate."
+      ],
+      "confidence": "medium",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source text is general and permanent, but no live U.S. Code note marker or operative integration was located in the available snapshots.",
+      "final_recommended_action": "Add a concise statutory note if a codification anchor is later identified. | Do not manufacture operative text from the policy language. | Keep the current record free of dump-style boilerplate.",
+      "exact_change": "Keep the framing clauses as note-only material. | Preserve the findings as concise note material only. | Record the restriction language as note-only material."
+    },
+    {
+      "law_id": "PL-031-229",
+      "public_law": "31-229",
+      "title": "Public Law 31-229 | Fiscal Year 25-1",
+      "status": "current",
+      "status_basis": "The source is a temporary appropriations and funding measure, and the classification record marks it as no_code_text.",
+      "approved_code_treatment": "historical-note-only; exclude-from-code",
+      "source_evidence": [
+        "codification/laws/laws/PL-031-229/law.txt",
+        "codification/laws/laws/PL-031-229/metadata.json",
+        "codification/reference/all_270_laws_classification.csv",
+        "codification/reference/noncodifiable_and_borderline_laws.csv"
+      ],
+      "current_implementation": {
+        "assessment": "correctly absent",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "No permanent U.S. Code text is warranted for a temporary appropriations law."
+      },
+      "provisions": [
+        {
+          "ref": "SEC. 1-2",
+          "text_summary": "Short title and immediate-effective-date language.",
+          "classes": [
+            "short-title",
+            "effective-date"
+          ],
+          "treatment": "historical-note-only",
+          "target": null,
+          "exact_change": "Keep the framing clauses as history only.",
+          "evidence": "The opening provisions only supply the title and immediate-effect clause.",
+          "notes": "No permanent Code text is created."
+        },
+        {
+          "ref": "SEC. 3-5",
+          "text_summary": "Appropriations, availability of funds, and congressional pay adjustment language.",
+          "classes": [
+            "appropriation",
+            "temporary",
+            "direct-amendment"
+          ],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": "Exclude the funding and temporary compensation language from permanent Code text.",
+          "evidence": "The act appropriates funds, conditions availability, and suspends a pay adjustment for the fiscal year.",
+          "notes": "This is temporary spending material."
+        },
+        {
+          "ref": "SEC. 6-10",
+          "text_summary": "Agency-by-agency funding directives.",
+          "classes": [
+            "appropriation",
+            "temporary"
+          ],
+          "treatment": "exclude-from-code",
+          "target": null,
+          "exact_change": "Keep the agency funding directives out of the U.S. Code.",
+          "evidence": "The remaining sections set fiscal-year amounts for defense, justice, transportation, commerce, and state/foreign operations.",
+          "notes": "Temporary appropriations directives only."
+        }
+      ],
+      "recommended_actions": [
+        "Do not create permanent Code text.",
+        "Retain only brief historical record material if needed."
+      ],
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source is a temporary appropriations and funding measure, and the classification record marks it as no_code_text.",
+      "final_recommended_action": "Do not create permanent Code text. | Retain only brief historical record material if needed.",
+      "exact_change": "Keep the framing clauses as history only. | Exclude the funding and temporary compensation language from permanent Code text. | Keep the agency funding directives out of the U.S. Code."
+    }
+  ]
+}

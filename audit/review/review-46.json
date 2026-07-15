@@ -1,0 +1,205 @@
+{
+  "reviewer": "law-auditor-T",
+  "group_index": 146,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/manifest-46.json",
+  "output_path": "audit/review/review-46.json",
+  "reviewed_against": [
+    "audit/manifests/manifest-46.json",
+    "audit/primary/batch-01.json",
+    "audit/primary/batch-01-02.json",
+    "audit/primary/batch-01-03.json",
+    "audit/chronology-report.json",
+    "codification/reference/all_270_laws_classification.csv",
+    "usc/usc05.xml",
+    "usc/usc08.xml",
+    "usc/usc18.xml",
+    "usc/usc22.xml",
+    "usc/usc28.xml",
+    "usc/usc44.xml",
+    "usc/usc50.xml",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-002-012",
+      "public_law": "2-12",
+      "title": "Public Law 2-12 | Fee Prohibition Act",
+      "chronology_conclusion": "The act is no longer operative because a later law expressly repeals H.R.4/PL-2-12 in full; only repeal history survives.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t28",
+      "exact_enacted_text_or_amendment_command": "Keep only a historical note for the court-fee prohibition and record the later repeal by PL 4-30 sec. 7.",
+      "source_evidence": [
+        "audit/primary/batch-01.json classifies PL-002-012 as fully-repealed and ties the repeal to PL 4-30 sec. 7.",
+        "usc/usc50.xml:1583 contains rp-pl002012-codification with a repealed/superseded history note.",
+        "origin/main has no matching PL-002-012 note in the live XML."
+      ],
+      "current_xml_comparison": "The branch preserves a history note in usc/usc50.xml, but the proper posture is repeal history only at the Title 28 anchor; origin/main does not carry the note.",
+      "final_recommended_action": "Leave PL-002-012 as repeal history only and ensure the repeal marker remains intact.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-002-013",
+      "public_law": "2-13",
+      "title": "Public Law 2-13 | The Employees Termination Notification Act of 2021",
+      "chronology_conclusion": "No later law in the reviewed set clearly repeals it, so the 48-hour notice rule remains a live employment-duty statute.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "new-section",
+      "exact_target": "/us/usc/t29",
+      "exact_enacted_text_or_amendment_command": "Create a Title 29 employment-notice provision requiring reasons for termination to be given within 48 hours, with a Title 5 cross-reference for federal employees if desired.",
+      "source_evidence": [
+        "audit/primary/batch-01.json treats the 48-hour termination notice as current Title 29 operative text.",
+        "usc/usc05.xml:1999 contains rp-pl002013-codification in the current branch.",
+        "origin/main has no matching PL-002-013 note."
+      ],
+      "current_xml_comparison": "The branch parks the law as a note in usc/usc05.xml, and origin/main lacks the note entirely; the operative text still needs a real Title 29 insertion.",
+      "final_recommended_action": "Codify the termination-notice duty as operative Title 29 text.",
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-002-014",
+      "public_law": "2-14",
+      "title": "Public Law 2-14 | National Federal Torts Act",
+      "chronology_conclusion": "The tort statute was later expressly repealed by PL 15-99, so it survives only as repeal history.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t28",
+      "exact_enacted_text_or_amendment_command": "Keep a historical note for the federal-torts framework and record the repeal by PL 15-99.",
+      "source_evidence": [
+        "audit/primary/batch-01.json classifies PL-002-014 as current in the source batch, but later materials supersede it.",
+        "usc/usc28.xml:1052 contains rp-pl002014-codification, and the same file also carries rp-pl015099-codification repealing PL 2-14.",
+        "origin/main has no matching PL-002-014 note."
+      ],
+      "current_xml_comparison": "The branch holds the old tort note in usc/usc28.xml, but the live XML also includes PL 15-99's repeal of PL 2-14; origin/main does not resolve that history.",
+      "final_recommended_action": "Treat PL-002-014 as fully repealed and retain only the repeal history.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-015",
+      "public_law": "3-15",
+      "title": "Public Law 3-15 | Admission to the United Nations Act",
+      "chronology_conclusion": "A later law expressly repeals PL 3-15, so the act is no longer operative.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t22/s2651",
+      "exact_enacted_text_or_amendment_command": "Keep only a historical note for the UN-admission consent procedure and record the later repeal by PL 15-93.",
+      "source_evidence": [
+        "audit/primary/batch-01.json maps the admission-consent procedure to a Title 22 anchor.",
+        "usc/usc22.xml:60315 contains rp-pl003015-codification.",
+        "usc/usc22.xml:60315 also contains rp-pl015093-codification, which expressly repeals PL 3-15."
+      ],
+      "current_xml_comparison": "The branch still shows the PL-003-015 history note in usc/usc22.xml, but the same file also contains the later repeal note; origin/main lacks the PL-003-015 entry.",
+      "final_recommended_action": "Leave PL-003-015 as repeal history only.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-016",
+      "public_law": "3-16",
+      "title": "Public Law 3-16 | The Capitol Police Establishment",
+      "chronology_conclusion": "The base Capitol Police statute remains in force, but its deployment section is later rewritten by PL 3-18.",
+      "final_legal_status": "partially-current",
+      "approved_code_treatment": "new-section",
+      "exact_target": "/us/usc/t2",
+      "exact_enacted_text_or_amendment_command": "Codify the Capitol Police Board, protective authority, arrest authority, Capitol-complex policing, and the deployment framework, then fold in PL 3-18's Section V rewrite.",
+      "source_evidence": [
+        "audit/primary/batch-01.json treats PL-003-016 as current but notes later amendment by PL-003-018.",
+        "usc/usc18.xml:1326 contains rp-pl003016-codification in the current branch.",
+        "PL-003-018 is the same-target amendment law that replaces Section V of PL-003-016."
+      ],
+      "current_xml_comparison": "The branch keeps the Capitol Police law as a note in usc/usc18.xml, while the same-target amendment is still not integrated into operative Title 2 text; origin/main lacks the branch note.",
+      "final_recommended_action": "Codify the Title 2 base statute and integrate PL 3-18's replacement Section V.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-017",
+      "public_law": "3-17",
+      "title": "Public Law 3-17 | The Diplomatic Protections Act",
+      "chronology_conclusion": "A later law expressly repeals PL 3-17 in full, so it survives only as history.",
+      "final_legal_status": "fully-repealed",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t22/s2651",
+      "exact_enacted_text_or_amendment_command": "Keep only a historical note for the diplomatic-protection rules and record the later repeal by PL 10-66.",
+      "source_evidence": [
+        "audit/primary/batch-01.json maps the diplomatic-protection rules to a Title 22 anchor.",
+        "usc/usc22.xml:60315 contains rp-pl003017-codification.",
+        "usc/usc22.xml also contains rp-pl010066-codification, which expressly repeals PL 3-17."
+      ],
+      "current_xml_comparison": "The branch still shows the PL-003-017 history note in usc/usc22.xml, but the same file also contains the later repeal note; origin/main lacks the PL-003-017 entry.",
+      "final_recommended_action": "Leave PL-003-017 as repeal history only.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-018",
+      "public_law": "3-18",
+      "title": "Public Law 3-18 | Amendment to S.12",
+      "chronology_conclusion": "This is a direct amendment to the Capitol Police statute, not a standalone repeal or new framework.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "amend-existing-text",
+      "exact_target": "/us/usc/t2",
+      "exact_enacted_text_or_amendment_command": "Replace Section V of PL 3-16 in full with the new outside-jurisdiction authority and renamed section title.",
+      "source_evidence": [
+        "audit/primary/batch-01.json describes PL-003-018 as a direct rewrite of PL-003-016 Section V.",
+        "usc/usc50.xml:1583 contains rp-pl003018-codification in the branch.",
+        "The base law PL-003-016 is the same-target statute being amended."
+      ],
+      "current_xml_comparison": "The branch parks PL-003-018 as a Title 50 history note instead of applying the amendment to Title 2; origin/main lacks the branch note.",
+      "final_recommended_action": "Apply the Section V rewrite directly to the Capitol Police provisions.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-019",
+      "public_law": "3-19",
+      "title": "Public Law 3-19 | The NARA Act",
+      "chronology_conclusion": "The Archivist-notification duty remains operative and has no later repeal in the reviewed materials.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "new-section",
+      "exact_target": "/us/usc/t44/s101",
+      "exact_enacted_text_or_amendment_command": "Add the Title 44 duty requiring the President to notify the Archivist of the United States of all bills signed into law.",
+      "source_evidence": [
+        "audit/primary/batch-01.json sends the Archivist-notification duty to Title 44.",
+        "usc/usc44.xml:592 contains rp-pl003019-codification in the current branch.",
+        "origin/main has no matching PL-003-019 note."
+      ],
+      "current_xml_comparison": "The branch keeps the NARA Act as a Title 44 history note, but origin/main lacks the note; the operative records-duty text still needs to be codified.",
+      "final_recommended_action": "Codify the Archivist-notification duty as operative Title 44 text.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-020",
+      "public_law": "3-20",
+      "title": "Public Law 3-20 | National Immigration Employment Act of 2021",
+      "chronology_conclusion": "The source remains unrecoverable, so the act cannot be verified beyond a source-limited placeholder.",
+      "final_legal_status": "unresolved",
+      "approved_code_treatment": "source-limited-note",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "Retain only a source-limited historical note until OCR or another extractable text source is recovered; do not invent operative language.",
+      "source_evidence": [
+        "audit/primary/batch-01-03.json marks the source as scanned/unextractable and leaves the law unresolved.",
+        "usc/usc08.xml:4406 contains rp-pl003020-codification with an explicit source-limitation note.",
+        "origin/main has no matching PL-003-020 note."
+      ],
+      "current_xml_comparison": "The branch note in usc/usc08.xml correctly admits the source limitation, while origin/main lacks the entry; there is still no recoverable operative text.",
+      "final_recommended_action": "Keep PL-003-020 source-limited until the statute text can be recovered.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-003-021",
+      "public_law": "3-21",
+      "title": "Public Law 3-21 | Effective Judicial Function and General Duties Act",
+      "chronology_conclusion": "The Chief Justice duties and reporting requirements remain operative; no later law in the reviewed set clearly repeals them.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "new-section",
+      "exact_target": "/us/usc/t28",
+      "exact_enacted_text_or_amendment_command": "Create a Title 28 section for Chief Justice administrative duties and a companion reporting requirement to Congress and the Judicial Conference.",
+      "source_evidence": [
+        "audit/primary/batch-01-03.json gives the act as current and locates the operative duties in Title 28.",
+        "usc/usc50.xml:1583 contains rp-pl003021-codification in the branch.",
+        "origin/main has no matching PL-003-021 note."
+      ],
+      "current_xml_comparison": "The branch still parks PL-003-021 as a Title 50 note, but the operative Title 28 text is absent and origin/main does not supply it either.",
+      "final_recommended_action": "Codify the Chief Justice duties and reporting rules as actual Title 28 text.",
+      "confidence": "high"
+    }
+  ]
+}

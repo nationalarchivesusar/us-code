@@ -1,0 +1,311 @@
+{
+  "reviewer": "reviewer-11",
+  "group_index": 11,
+  "law_count": 10,
+  "source_manifest": "audit/review/manifest-11.json",
+  "laws": [
+    {
+      "law_id": "PL-015-104",
+      "public_law": "15-104",
+      "title": "Public Law 15-104 | The Military Justice Reorganization and Reform Act",
+      "manifest_target": "/us/usc/t10",
+      "exact_target": "/us/usc/t10",
+      "final_statutory_text": "Creates a chief judge advocate general, branch judge advocates general and deputies, military courts and judges, an ethics review board, confidentiality rules, and military paralegals for the armed forces.",
+      "chronology": "Source is intact and current; no later act in the reviewed set repeals or displaces it.",
+      "repeal_transfer_redesignation": "No repeal, transfer, or redesignation chain was resolved; this is a standalone permanent military-justice reorganization.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "note-only",
+      "status": "current",
+      "status_basis": "Source intact and fully operative; the act establishes permanent military-justice offices, courts, confidentiality rules, and legal personnel. No self-repeal or sunset appears in the supplied materials.",
+      "current_implementation": {
+        "assessment": "improperly-inserted-into-permanent-text",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t10/s101/h",
+        "detail": "The current note declares 'Repealed or superseded' and carries a full-text quoted-content dump plus a Trello link. The source is current, so the note is misclassified and should not be pasted into permanent text."
+      },
+      "recommended_actions": [
+        "Remove the full-text quoted-content dump and the Trello link.",
+        "Correct the status from repealed or superseded to current.",
+        "Replace the boilerplate with a concise statutory note under title 10."
+      ],
+      "confidence": "medium"
+    },
+    {
+      "law_id": "PL-015-105",
+      "public_law": "15-105",
+      "title": "Public Law 15-105 | The Municipal Prosecution Act of 2023",
+      "manifest_target": "/us/usc/t28",
+      "exact_target": "/us/usc/t28",
+      "final_statutory_text": "Delegates District of Columbia municipal and federal prosecution to the Department of Justice and the U.S. Attorney, repeals PL 12-88 Part D and Title 6 section 37, and strikes and replaces specified provisions of PL 15-97.",
+      "chronology": "Source is intact and operative. The reviewed materials do not identify a later enactment that cleanly supersedes the act as a whole.",
+      "repeal_transfer_redesignation": "The enactment is a bundle of direct repeal and substitution instructions affecting PL 12-88 and PL 15-97; no wholesale transfer or redesignation chain was resolved.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": false,
+      "decision": "note-only-but-amendment-required",
+      "status": "current",
+      "status_basis": "Source intact and operative; it makes multiple express repeals and amendments and delegates DC prosecution authority to DOJ. Nothing in the supplied set repeals PL 15-105.",
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t40/s101/4",
+        "detail": "The XML note is boilerplate, declares the law repealed or superseded, and fails to record the express repeals and amendments to PL 12-88 and PL 15-97. Placement at title 40 is odd for a DC-prosecution/judiciary act; title 28 fits better. Trello link present; no dump."
+      },
+      "recommended_actions": [
+        "Implement the amendments to PL 15-97 and repeal-mark PL 12-88 Part D and Title 6 section 37.",
+        "Correct the status to current and re-anchor to title 28.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-106",
+      "public_law": "15-106",
+      "title": "Public Law 15-106 | The Congress Strikes Back Repealment",
+      "manifest_target": "/us/usc/t2",
+      "exact_target": "The Congress Strikes Back Act of 2022",
+      "final_statutory_text": "Repeals The Congress Strikes Back Act of 2022 in its entirety.",
+      "chronology": "Current repealing statute. Its only operative effect is the repeal of the earlier act, and no later material in the reviewed set displaces that repeal.",
+      "repeal_transfer_redesignation": "Pure repeal of a non-Code special act; no transfer or redesignation chain and no new permanent Code text is needed.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "note-only",
+      "status": "current",
+      "status_basis": "Source intact and operative; its sole substantive act is the express repeal of The Congress Strikes Back Act of 2022. Nothing in the supplied set repeals PL 15-106 itself.",
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s1",
+        "detail": "The note declares 'Repealed or superseded' about PL 15-106 itself, but this repealing act is current. The actual repeal of The Congress Strikes Back Act is not implemented."
+      },
+      "recommended_actions": [
+        "Repeal-mark The Congress Strikes Back Act at its recorded location and add an amendment note citing PL 15-106 section III.",
+        "Correct the status to current.",
+        "Remove the Trello link.",
+        "Keep the act as a statutory note under title 2."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-107",
+      "public_law": "15-107",
+      "title": "Public Law 15-107 | Guidance to Guidances Act",
+      "manifest_target": "/us/usc/t5",
+      "exact_target": null,
+      "final_statutory_text": "Source unavailable; no operative statutory text can be verified.",
+      "chronology": "Source-limited. The public-law text is unrecoverable, so no later-law or repeal chronology can be lawfully pinned down from the text itself.",
+      "repeal_transfer_redesignation": "No determinable repeal, transfer, or redesignation chain could be resolved from the available source.",
+      "standalone_general_permanent": null,
+      "new_code_section_required": null,
+      "note_treatment_legally_sufficient": true,
+      "decision": "source-limited-historical-note",
+      "status": "unresolved",
+      "status_basis": "The source status is unrecoverable; no source files exist, law.txt is absent, and no operative text can be authenticated.",
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t1/s1",
+        "detail": "The XML note declares 'Repealed or superseded' with boilerplate prose, but the source is actually unrecoverable and no lawful substantive conclusion is possible. Trello link present; no dump."
+      },
+      "recommended_actions": [
+        "Retain only as a source-limited historical note stating the source is unrecoverable.",
+        "Investigate possible duplication with PL 15-101 and consolidate if appropriate.",
+        "Remove the Trello link and boilerplate."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-108",
+      "public_law": "15-108",
+      "title": "Public Law 15-108 | The Reclassification of Labeling Act of 2023",
+      "manifest_target": "/us/usc/t2",
+      "exact_target": "/us/usc/t2",
+      "final_statutory_text": "Sets congressional labeling conventions for bills, resolutions, concurrent resolutions, joint resolutions, amendments, committee reports, and treaty documents; it is an internal procedural enactment rather than a freestanding positive-law section.",
+      "chronology": "Source is intact and operative. No later enactment in the reviewed set supersedes it, but the subject matter is procedural and non-Code.",
+      "repeal_transfer_redesignation": "No repeal or transfer issue; the enactment belongs, if anywhere, as a statutory note or chamber-rule-style provision rather than a new Code section.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "note-only",
+      "status": "current",
+      "status_basis": "Source intact and operative. It regulates congressional document labeling and does not create a positive-law USC section.",
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The XML note is anchored at title 50, which is wrong for a congressional-labeling act. Title 2 fits better. Declared current is right, but the codification prose is boilerplate and no actual Code amendment is made. Trello link present; no dump."
+      },
+      "recommended_actions": [
+        "Re-anchor from title 50 to title 2 as a statutory or historical note.",
+        "Do not treat the procedural amendment language as USC amendments.",
+        "Remove the Trello link.",
+        "Keep it as a note only if the repository wants internal congressional procedure material."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-109",
+      "public_law": "15-109",
+      "title": "Public Law 15-109 | Ending Tigray for the Last Time",
+      "manifest_target": "House Joint Resolution 6",
+      "exact_target": "House Joint Resolution 6",
+      "final_statutory_text": "Formally repeals House Joint Resolution 6 and ends the Tigray war notice.",
+      "chronology": "Current and operative as a repeal instrument; no later enactment in the reviewed materials displaces the repeal effect.",
+      "repeal_transfer_redesignation": "Straight repeal of a joint resolution; no permanent Code section is needed.",
+      "standalone_general_permanent": false,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "note-only",
+      "status": "current",
+      "status_basis": "Source intact and operative as a joint resolution. Its sole act is to repeal House Joint Resolution 6, so it is a current repealing instrument, not a permanent Code section.",
+      "current_implementation": {
+        "assessment": "improperly-retained-despite-repeal",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s1",
+        "detail": "The note declares 'Repealed or superseded' about PL 15-109 itself, which is wrong because this resolution is the repealing instrument and is current. The actual action - marking HJRes 6 repealed - is not done. The title 2 anchor is generic; a war-powers or foreign-relations anchor fits better. Trello link present; no dump."
+      },
+      "recommended_actions": [
+        "Repeal-mark House Joint Resolution 6 wherever it is recorded and add a note citing PL 15-109.",
+        "Correct the status of PL 15-109 to current.",
+        "Exclude PL 15-109 from permanent Code text and keep only a concise historical note.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-110",
+      "public_law": "15-110",
+      "title": "Public Law 15-110 | A Bill to Direct the DoD Inspector General to Investigate the Attack on the U.S. Embassy in Damascus",
+      "manifest_target": "/us/usc/t10",
+      "exact_target": null,
+      "final_statutory_text": "Source unavailable; no operative statutory text can be verified.",
+      "chronology": "Source-limited. The public-law text is unrecoverable, so no later-law or repeal chronology can be lawfully pinned down from the text itself.",
+      "repeal_transfer_redesignation": "No determinable repeal, transfer, or redesignation chain could be resolved from the available source.",
+      "standalone_general_permanent": null,
+      "new_code_section_required": null,
+      "note_treatment_legally_sufficient": true,
+      "decision": "source-limited-historical-note",
+      "status": "unresolved",
+      "status_basis": "The source status is unrecoverable; no source files exist, law.txt is absent, and the operative text cannot be authenticated.",
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t22/s2651",
+        "detail": "The XML note declares 'Repealed or superseded' with boilerplate prose, but the source is actually unrecoverable. Trello link present; no dump."
+      },
+      "recommended_actions": [
+        "Retain only as a source-limited historical note.",
+        "If the source is ever recovered, keep it as a non-code investigative directive rather than permanent section text.",
+        "Remove the Trello link and boilerplate."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-015-111",
+      "public_law": "15-111",
+      "title": "Public Law 15-111 | Presidential Transition Protection Act",
+      "manifest_target": "/us/usc/t18",
+      "exact_target": "/us/usc/t18",
+      "final_statutory_text": "Defines presidential-transition terms, prohibits obstruction of a presidential transition, sets a five-to-seven-day jail term and/or up to a $1,000 fine, and bars no future-office disqualification.",
+      "chronology": "Source is intact and operative. No later enactment in the reviewed set supersedes it.",
+      "repeal_transfer_redesignation": "No repeal or transfer chain; this is a standalone permanent criminal-prohibition measure that belongs as a note in Title 18, with the transition definitions potentially anchored in Title 3.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "note-only",
+      "status": "current",
+      "status_basis": "Source is intact and operative. It creates a criminal prohibition on obstructing a presidential transition, adds definitions, and includes severability and effective-date language.",
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t49/s101/b/6",
+        "detail": "The note is placed under title 49, which is the wrong subject matter for a presidential-transition criminal-offense statute. Title 3 or title 18 fits better. The note is otherwise a boilerplate statutory note and includes a Trello link."
+      },
+      "recommended_actions": [
+        "Re-anchor from title 49 to title 3 (presidential transition) or title 18 (criminal offense), preferably title 18 for SEC III.",
+        "Replace the boilerplate note with a concise statutory note capturing the transition prohibition, definitions, and penalty.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-016-112",
+      "public_law": "16-112",
+      "title": "Public Law 16-112 | The Contempt of Congress Act",
+      "manifest_target": "/us/usc/t2",
+      "exact_target": null,
+      "final_statutory_text": "Source unavailable; no operative statutory text can be verified.",
+      "chronology": "Source-limited. The supplied attachment is only a Google Drive permission error page, so no lawful chronology beyond note-only treatment can be fixed from the source itself.",
+      "repeal_transfer_redesignation": "No determinable repeal, transfer, or redesignation chain could be resolved from the available source.",
+      "standalone_general_permanent": null,
+      "new_code_section_required": null,
+      "note_treatment_legally_sufficient": true,
+      "decision": "source-limited-historical-note",
+      "status": "unresolved",
+      "status_basis": "The supplied attachment is only a Google Drive permission error page, so no operative text is recoverable and the source does not support a lawful conclusion about the act's content.",
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2/s1",
+        "detail": "The XML note asserts 'Repealed or superseded' with boilerplate codification prose, but the source is actually unreadable. The note should disclose the source limitation instead of pretending certainty. Trello link present."
+      },
+      "recommended_actions": [
+        "Retain only as a source-limited historical note.",
+        "Remove the Trello link and boilerplate status prose.",
+        "Do not infer any operative text."
+      ],
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-016-113",
+      "public_law": "16-113",
+      "title": "Public Law 16-113 | The Bing Bong Act of 2023",
+      "manifest_target": "PL 15-96 (Prisoner Bail Protection Act)",
+      "exact_target": "PL 15-96 (Prisoner Bail Protection Act)",
+      "final_statutory_text": "Repeals Public Law 15-96 in its entirety.",
+      "chronology": "Current repealing statute. Its operative effect is to repeal PL 15-96, which is fully repealed in the reviewed materials.",
+      "repeal_transfer_redesignation": "Complete repeal of PL 15-96; no surviving transfer or redesignation requires code text.",
+      "standalone_general_permanent": true,
+      "new_code_section_required": false,
+      "note_treatment_legally_sufficient": true,
+      "decision": "note-only",
+      "status": "current",
+      "status_basis": "Source is intact and operative, but its sole substantive effect is to repeal PL 15-96 in full. That makes PL 16-113 itself a current repealing statute while PL 15-96 is fully repealed.",
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t50/s1",
+        "detail": "The current note labels the repealing act itself as repealed or superseded and leaves the repeal of PL 15-96 unimplemented. Title 18 is a better anchor than title 50."
+      },
+      "recommended_actions": [
+        "Apply repeal-marking to PL 15-96 wherever it is codified.",
+        "Replace the boilerplate note with a concise note describing PL 16-113 as a current repealing statute.",
+        "Remove the Trello link."
+      ],
+      "confidence": "high"
+    }
+  ]
+}

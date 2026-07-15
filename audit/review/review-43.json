@@ -1,0 +1,406 @@
+{
+  "reviewer": "law-auditor-Q",
+  "source_manifest": "audit/manifests/manifest-43.json",
+  "law_count": 19,
+  "reviewed_against": [
+    "audit/manifests/manifest-43.json",
+    "audit/chronology-report.json",
+    "codification/mass_migration/latest/reports/laws/PL-032-231.md",
+    "codification/mass_migration/latest/reports/laws/PL-032-232.md",
+    "codification/mass_migration/latest/reports/laws/PL-032-233.md",
+    "codification/mass_migration/latest/reports/laws/PL-032-234.md",
+    "codification/mass_migration/latest/reports/laws/PL-032-235.md",
+    "codification/mass_migration/latest/reports/laws/PL-032-236.md",
+    "codification/mass_migration/latest/reports/laws/PL-033-238.md",
+    "codification/mass_migration/latest/reports/laws/PL-034-239.md",
+    "codification/mass_migration/latest/reports/laws/PL-034-240.md",
+    "codification/mass_migration/latest/reports/laws/PL-034-241.md",
+    "codification/mass_migration/latest/reports/laws/PL-034-242.md",
+    "codification/mass_migration/latest/reports/laws/PL-034-243.md",
+    "codification/mass_migration/latest/reports/laws/PL-034-244.md",
+    "codification/mass_migration/latest/reports/laws/PL-034-245.md",
+    "codification/mass_migration/latest/reports/laws/PL-034-246.md",
+    "codification/mass_migration/latest/reports/laws/PL-034-247.md",
+    "codification/mass_migration/latest/reports/laws/PL-034-248.md",
+    "codification/mass_migration/latest/reports/laws/PL-034-249.md",
+    "codification/mass_migration/latest/reports/laws/PL-034-250.md",
+    "codification/laws/laws/PL-034-241/law.txt",
+    "usc/usc02.xml",
+    "usc/usc05.xml",
+    "usc/usc10.xml",
+    "usc/usc18.xml",
+    "usc/usc26.xml",
+    "usc/usc28.xml",
+    "usc/usc49.xml",
+    "usc/usc50.xml",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-032-231",
+      "public_law": "32-231",
+      "title": "District Improvement Act (DIA)",
+      "chronology_conclusion": "Repealed history only; no Code operation survives into the live sequence.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "NONOPERATIVE_OR_REPEALED",
+      "exact_target_where_executable": null,
+      "exact_enacted_text_or_exact_amendment_command_where_needed": "No Code operation authorized; retained as repealed public-law history only.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-032-231.md",
+        "audit/review/review-37.json"
+      ],
+      "current_xml_comparison": "Absent from current branch XML; origin/main likewise has no Code insertion.",
+      "final_recommended_action": "Leave out of the Code.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-032-232",
+      "public_law": "32-232",
+      "title": "The Federal Pay Standardization Act",
+      "chronology_conclusion": "Earlier pay-table enactment in the shared 5 U.S.C. 5332 sequence; it is the upstream anchor for the later pay-law overlap with PL-034-241.",
+      "final_legal_status": "superseded",
+      "approved_code_treatment": "ALREADY_INCORPORATED",
+      "exact_target_where_executable": "/us/usc/t5/s5332",
+      "exact_enacted_text_or_exact_amendment_command_where_needed": "Already incorporated at /us/usc/t5/s5332; no new amendment command is needed.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-032-232.md",
+        "codification/mass_migration/latest/plans/PL-032-232.json",
+        "audit/chronology-report.json",
+        "usc/usc05.xml",
+        "origin/main"
+      ],
+      "current_xml_comparison": "Current branch already contains the integrated 5 U.S.C. 5332 text; origin/main does not.",
+      "final_recommended_action": "No additional change.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-032-233",
+      "public_law": "32-233",
+      "title": "Literally Introducing Taxes (LIT)",
+      "chronology_conclusion": "Integrated tax rewrite; the live branch already carries the replacement tax text and history note.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "ALREADY_INCORPORATED",
+      "exact_target_where_executable": "/us/usc/t26/s1",
+      "exact_enacted_text_or_exact_amendment_command_where_needed": "Pub. L. 32-233, Sec. 5, repeals and replaces 26 U.S.C. 1 with a flat 20 percent individual tax.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-032-233.md",
+        "audit/review/review-37.json",
+        "usc/usc26.xml",
+        "origin/main"
+      ],
+      "current_xml_comparison": "Current branch contains the 26 U.S.C. 1 rewrite and statutory-history note; origin/main lacks the integrated change.",
+      "final_recommended_action": "No additional change.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-032-234",
+      "public_law": "32-234",
+      "title": "Intelligence Appointment Transparency and Oversight Act",
+      "chronology_conclusion": "Current and already integrated at the Title 50 target; no chronology conflict is present in the batch.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "ALREADY_INCORPORATED",
+      "exact_target_where_executable": "/us/usc/t50/s3041",
+      "exact_enacted_text_or_exact_amendment_command_where_needed": "Already incorporated at /us/usc/t50/s3041; the branch keeps the subsection (d) material and the revised subsection (b)(2) treatment.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-032-234.md",
+        "audit/review/review-37.json",
+        "usc/usc50.xml",
+        "origin/main"
+      ],
+      "current_xml_comparison": "Current branch contains the Title 50 amendment; origin/main does not.",
+      "final_recommended_action": "No additional change.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-032-235",
+      "public_law": "32-235",
+      "title": "Command Responsibility And Noncompliance Enforcement (CRANE) Act",
+      "chronology_conclusion": "Non-Code enactment only; no executable Code target is approved.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "NON_CODE",
+      "exact_target_where_executable": null,
+      "exact_enacted_text_or_exact_amendment_command_where_needed": "No Code operation authorized; retain as non-Code public-law history only.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-032-235.md",
+        "audit/review/review-37.json"
+      ],
+      "current_xml_comparison": "No XML insertion is expected or present in the current branch or origin/main.",
+      "final_recommended_action": "Leave out of the Code.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-032-236",
+      "public_law": "32-236",
+      "title": "Military Operational Authority Reform Act",
+      "chronology_conclusion": "Integrated military rewrite; the current branch already carries the 10 U.S.C. 153 and 154 changes.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "ALREADY_INCORPORATED",
+      "exact_target_where_executable": [
+        "/us/usc/t10/s153",
+        "/us/usc/t10/s154"
+      ],
+      "exact_enacted_text_or_exact_amendment_command_where_needed": "Pub. L. 32-236, Secs. 4-5, add subsection (e) to 10 U.S.C. 153 and revise 10 U.S.C. 154 with the new operational-authority and function language.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-032-236.md",
+        "codification/mass_migration/latest/plans/PL-032-236.json",
+        "usc/usc10.xml",
+        "origin/main"
+      ],
+      "current_xml_comparison": "Current branch contains the amended Title 10 sections; origin/main does not.",
+      "final_recommended_action": "No additional change.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-033-238",
+      "public_law": "33-238",
+      "title": "Conference Oversight of Discipline and Ethics Act",
+      "chronology_conclusion": "General and permanent, but still awaiting the classified statutory note at the Title 28 anchor.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "STATUTORY_NOTE",
+      "exact_target_where_executable": "/us/usc/t28/s526",
+      "exact_enacted_text_or_exact_amendment_command_where_needed": "SEC. 3 is to be preserved as a statutory note at /us/usc/t28/s526.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-033-238.md",
+        "audit/review/review-37.json",
+        "usc/usc28.xml",
+        "origin/main"
+      ],
+      "current_xml_comparison": "Current branch still lacks the note at 28 U.S.C. 526; origin/main lacks it too.",
+      "final_recommended_action": "Add the statutory note at 28 U.S.C. 526.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-239",
+      "public_law": "34-239",
+      "title": "Judicial Recall Act",
+      "chronology_conclusion": "Temporary or self-expiring history only; no Code insertion is approved.",
+      "final_legal_status": "active",
+      "approved_code_treatment": "NON_CODE",
+      "exact_target_where_executable": null,
+      "exact_enacted_text_or_exact_amendment_command_where_needed": "No Code operation authorized; retain as public-law history only.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-034-239.md",
+        "audit/review/review-37.json"
+      ],
+      "current_xml_comparison": "No XML insertion is expected or present in the current branch or origin/main.",
+      "final_recommended_action": "Leave out of the Code.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-240",
+      "public_law": "34-240",
+      "title": "Literally Fixing Taxes",
+      "chronology_conclusion": "Repealed/superseded history only; the branch already retains it as a statutory-history note in 26 U.S.C. 1.",
+      "final_legal_status": "repealed",
+      "approved_code_treatment": "HISTORICAL_NOTE_ONLY",
+      "exact_target_where_executable": "/us/usc/t26/s1",
+      "exact_enacted_text_or_exact_amendment_command_where_needed": "Pub. L. 34-240, Sec. 4, would amend the LIT tax rate to 28 percent, but the law itself is repealed/superseded and stays historical only.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-034-240.md",
+        "audit/review/review-37.json",
+        "usc/usc26.xml",
+        "origin/main"
+      ],
+      "current_xml_comparison": "Current branch preserves only the statutory-history note; origin/main does likewise.",
+      "final_recommended_action": "Keep the statutory-history note only.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-241",
+      "public_law": "34-241",
+      "title": "Protecting Working Americans",
+      "chronology_conclusion": "This enactment sits in the same pay-table chronology cluster as PL-032-232 on the 5 U.S.C. 5332 sequence, but the authenticated codification report still classifies it as a statutory note at 2 U.S.C. 29.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "STATUTORY_NOTE",
+      "exact_target_where_executable": "/us/usc/t2/s29",
+      "exact_enacted_text_or_exact_amendment_command_where_needed": "SEC. 3 revises Section 5(a) of the Federal Executive and Senior Leadership Pay Standardization Act of 2025; codification keeps it as a statutory note at /us/usc/t2/s29.",
+      "source_evidence": [
+        "codification/laws/laws/PL-034-241/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-034-241.md",
+        "audit/chronology-report.json",
+        "usc/usc02.xml",
+        "origin/main"
+      ],
+      "current_xml_comparison": "Current branch lacks the classified note at 2 U.S.C. 29; origin/main lacks it too.",
+      "final_recommended_action": "Add the statutory note at 2 U.S.C. 29.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-242",
+      "public_law": "34-242",
+      "title": "Public Law 34-242 | Federal Courthouse Security & Jurisdiction Act",
+      "chronology_conclusion": "General and permanent, but still uncodified at the classified Title 28 note anchor.",
+      "final_legal_status": "active",
+      "approved_code_treatment": "STATUTORY_NOTE",
+      "exact_target_where_executable": "/us/usc/t28/s362",
+      "exact_enacted_text_or_exact_amendment_command_where_needed": "SEC. 3 is to be preserved as a statutory note at /us/usc/t28/s362.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-034-242.md",
+        "audit/review/review-24.json",
+        "usc/usc28.xml",
+        "origin/main"
+      ],
+      "current_xml_comparison": "Current branch still lacks the note at 28 U.S.C. 362; origin/main lacks it too.",
+      "final_recommended_action": "Add the statutory note at 28 U.S.C. 362.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-243",
+      "public_law": "34-243",
+      "title": "Public Law 34-243 | Judicial Integrity & Accountability Act",
+      "chronology_conclusion": "Direct chapter-level rewrite already carried in the branch; no further chronological adjustment is needed.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "AMEND_EXISTING_TEXT",
+      "exact_target_where_executable": "/us/usc/t28/ch16",
+      "exact_enacted_text_or_exact_amendment_command_where_needed": "Pub. L. 34-243, Sec. 3, replaces Title 28 chapter 16 and its affected sections.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-034-243.md",
+        "codification/mass_migration/latest/plans/PL-034-243.json",
+        "usc/usc28.xml",
+        "origin/main"
+      ],
+      "current_xml_comparison": "Current branch includes the replacement chapter 16 framework; origin/main lacks the rewrite.",
+      "final_recommended_action": "No further Code change is required.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-244",
+      "public_law": "34-244",
+      "title": "Public Law 34-244 | Sentencing Reform Act",
+      "chronology_conclusion": "Direct Title 18 amendment already integrated; no chronology conflict remains in the branch.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "AMEND_EXISTING_TEXT",
+      "exact_target_where_executable": "/us/usc/t18/s3585",
+      "exact_enacted_text_or_exact_amendment_command_where_needed": "Pub. L. 34-244, Sec. 3, amends 18 U.S.C. 3585.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-034-244.md",
+        "codification/mass_migration/latest/plans/PL-034-244.json",
+        "usc/usc18.xml",
+        "origin/main"
+      ],
+      "current_xml_comparison": "Current branch includes the amended commencement and prior-custody-credit language; origin/main lacks the change.",
+      "final_recommended_action": "No further Code change is required.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-245",
+      "public_law": "34-245",
+      "title": "Public Law 34-245 | Legal Compensation Act",
+      "chronology_conclusion": "Mixed enactment: one direct Title 18 rewrite and one repeal-with-note package, both already reflected in the branch.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "MIXED_AMENDMENT_AND_NOTE",
+      "exact_target_where_executable": [
+        "/us/usc/t18/s3006A/d",
+        "/us/usc/t42/ch34/schX"
+      ],
+      "exact_enacted_text_or_exact_amendment_command_where_needed": "Pub. L. 34-245, Sec. 3, rewrites 18 U.S.C. 3006A(d) and repeals 42 U.S.C. chapter 34 subchapter X with the supporting note material.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-034-245.md",
+        "codification/mass_migration/latest/plans/PL-034-245.json",
+        "usc/usc18.xml",
+        "origin/main"
+      ],
+      "current_xml_comparison": "Current branch contains both the subsection rewrite and the subchapter repeal/note; origin/main lacks the package.",
+      "final_recommended_action": "No further Code change is required.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-246",
+      "public_law": "34-246",
+      "title": "Public Law 34-246 | Sentencing Commission Reform Act",
+      "chronology_conclusion": "Direct Title 28 rewrite already integrated; the branch reflects the post-enactment commission structure.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "AMEND_EXISTING_TEXT",
+      "exact_target_where_executable": [
+        "/us/usc/t28/s991",
+        "/us/usc/t28/s992",
+        "/us/usc/t28/s994",
+        "/us/usc/t28/s995"
+      ],
+      "exact_enacted_text_or_exact_amendment_command_where_needed": "Pub. L. 34-246, Secs. 3(a)-(c), revise 28 U.S.C. 991, 992, 994, and 995.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-034-246.md",
+        "codification/mass_migration/latest/plans/PL-034-246.json",
+        "usc/usc28.xml",
+        "origin/main"
+      ],
+      "current_xml_comparison": "Current branch contains the revised commission provisions and repeal markings; origin/main lacks the changes.",
+      "final_recommended_action": "No further Code change is required.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-247",
+      "public_law": "34-247",
+      "title": "Public Law 34-247 | Grand Jury Bypass Act",
+      "chronology_conclusion": "General and permanent statutory-note enactment; the current branch already carries the note at the Title 28 anchor.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "STATUTORY_NOTE",
+      "exact_target_where_executable": "/us/usc/t28/s2261",
+      "exact_enacted_text_or_exact_amendment_command_where_needed": "SEC. 5 is to be preserved as a statutory note at /us/usc/t28/s2261.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-034-247.md",
+        "audit/review/review-24.json",
+        "usc/usc28.xml",
+        "origin/main"
+      ],
+      "current_xml_comparison": "Current branch contains the Pub. L. 34-247 note at 28 U.S.C. 2261; origin/main lacks it.",
+      "final_recommended_action": "No further Code change is required.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-248",
+      "public_law": "34-248",
+      "title": "Public Law 34-248 | Intelligence Community Inspector General Consolidation Act of 2025",
+      "chronology_conclusion": "Non-Code enactment only; no executable Code target is approved.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "NON_CODE",
+      "exact_target_where_executable": null,
+      "exact_enacted_text_or_exact_amendment_command_where_needed": "No Code operation authorized; retain as history only.",
+      "source_evidence": [
+        "codification/mass_migration/latest/plans/PL-034-248.json",
+        "audit/review/review-24.json"
+      ],
+      "current_xml_comparison": "No XML insertion is expected or present in the current branch or origin/main.",
+      "final_recommended_action": "Leave out of the Code.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-249",
+      "public_law": "34-249",
+      "title": "Public Law 34-249 | Washington Diplomacy Complex Bill 2025",
+      "chronology_conclusion": "General and permanent, but still uncodified at the classified 2 U.S.C. note anchor.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "STATUTORY_NOTE",
+      "exact_target_where_executable": "/us/usc/t2/s6567",
+      "exact_enacted_text_or_exact_amendment_command_where_needed": "SEC. 3 is to be preserved as a statutory note at /us/usc/t2/s6567.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-034-249.md",
+        "audit/review/review-24.json",
+        "usc/usc02.xml",
+        "origin/main"
+      ],
+      "current_xml_comparison": "Current branch lacks the note at 2 U.S.C. 6567; origin/main lacks it too.",
+      "final_recommended_action": "Add the statutory note at 2 U.S.C. 6567.",
+      "confidence": "high"
+    },
+    {
+      "law_id": "PL-034-250",
+      "public_law": "34-250",
+      "title": "Public Law 34-250 | Federal Prison Standards Act of 2025",
+      "chronology_conclusion": "General and permanent, but still uncodified at the classified 49 U.S.C. note anchor.",
+      "final_legal_status": "current",
+      "approved_code_treatment": "STATUTORY_NOTE",
+      "exact_target_where_executable": "/us/usc/t49/s46307",
+      "exact_enacted_text_or_exact_amendment_command_where_needed": "SEC. 3 is to be preserved as a statutory note at /us/usc/t49/s46307.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-034-250.md",
+        "audit/review/review-24.json",
+        "usc/usc49.xml",
+        "origin/main"
+      ],
+      "current_xml_comparison": "Current branch lacks the note at 49 U.S.C. 46307; origin/main lacks it too.",
+      "final_recommended_action": "Add the statutory note at 49 U.S.C. 46307.",
+      "confidence": "high"
+    }
+  ]
+}

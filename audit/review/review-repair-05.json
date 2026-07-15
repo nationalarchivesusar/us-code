@@ -1,0 +1,476 @@
+{
+  "reviewer": "law-auditor-C",
+  "group_index": 1050,
+  "law_count": 10,
+  "source_manifest": "audit/manifests/review-repair-05.json",
+  "output_path": "audit/review/review-repair-05.json",
+  "reviewed_against": [
+    "audit/review/review-05.json",
+    "audit/manifests/review-repair-05.json",
+    "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv",
+    "codification/mass_migration/latest/reports/SOURCE-AUDIT.csv"
+  ],
+  "completion_summary": "Normalized the PL-007-042 through PL-007-051 batch into source-grounded history or source-limited conclusions and filled the missing validator-facing fields without changing XML.",
+  "changed_law_ids": [
+    "PL-007-042",
+    "PL-007-043",
+    "PL-007-044",
+    "PL-007-045",
+    "PL-007-046",
+    "PL-007-047",
+    "PL-007-048",
+    "PL-007-049",
+    "PL-007-050",
+    "PL-007-051"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-007-042",
+      "public_law": "7-42",
+      "title": "Public Law 7-42 | Transportation Act of 2022",
+      "final_legal_status": "fully-repealed",
+      "chronology_conclusion": "The source corpus classifies this transportation enactment as repealed history only, so it does not support a live Code insertion.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t49",
+      "exact_enacted_text_or_amendment_command": "Retain only a concise history note at the Title 49 transportation anchor; do not create live statutory text.",
+      "source_evidence": [
+        "codification/laws/laws/PL-007-042/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-007-042.md",
+        "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+      ],
+      "current_xml_comparison": "No law-specific XML placement is visible in the current branch or origin/main.",
+      "final_recommended_action": "Keep the act as historical note material only at the closest Title 49 anchor.",
+      "confidence": "high",
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t49",
+        "detail": "The note treatment is directionally right, but the XML note still carries extra baggage that should stay history-only."
+      },
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "Transportation enactment recorded as repeal history only.",
+          "classes": [
+            "repeal",
+            "history-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t49",
+          "exact_change": "Retain as history only and do not create live Title 49 text.",
+          "evidence": [
+            "codification/laws/laws/PL-007-042/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-007-042.md",
+            "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+          ],
+          "notes": "The corpus treats this as repealed transportation history."
+        }
+      ]
+    },
+    {
+      "law_id": "PL-007-043",
+      "public_law": "7-43",
+      "title": "Public Law 7-43 | District of Columbia Reorganization Initiative Act",
+      "final_legal_status": "fully-repealed",
+      "chronology_conclusion": "This is local District of Columbia charter history, not a federal Code enactment, so the correct disposition is exclusion from the U.S. Code.",
+      "approved_code_treatment": "exclude-from-code",
+      "exact_target": "D.C. City Charter Art. I / Art. II (non-U.S. Code)",
+      "exact_enacted_text_or_amendment_command": "Keep the charter changes as local history only; do not convert them into federal Code text.",
+      "source_evidence": [
+        "codification/laws/laws/PL-007-043/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-007-043.md",
+        "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+      ],
+      "current_xml_comparison": "No law-specific XML placement is visible in the current branch or origin/main.",
+      "final_recommended_action": "Keep only local charter history and do not create a U.S. Code section.",
+      "confidence": "high",
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t40",
+        "detail": "The branch note is directionally local-history-only, but it should remain outside federal positive law."
+      },
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "D.C. charter reorganization and succession history.",
+          "classes": [
+            "direct-amendment",
+            "local-district",
+            "history-only"
+          ],
+          "treatment": "exclude-from-code",
+          "target": "D.C. City Charter Art. I / Art. II",
+          "exact_change": "Keep the charter changes as local history only.",
+          "evidence": [
+            "codification/laws/laws/PL-007-043/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-007-043.md",
+            "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+          ],
+          "notes": "This is District of Columbia local law, not U.S. Code text."
+        }
+      ]
+    },
+    {
+      "law_id": "PL-007-044",
+      "public_law": "7-44",
+      "title": "Public Law 7-44 | The Bye Bye Terrorism Act",
+      "final_legal_status": "fully-repealed",
+      "chronology_conclusion": "The corpus treats this as repealed firearms-policy history, so the only lawful treatment is a history note.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t18",
+      "exact_enacted_text_or_amendment_command": "Retain as history only at the Title 18 firearms anchor; do not create a live rewrite.",
+      "source_evidence": [
+        "codification/laws/laws/PL-007-044/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-007-044.md",
+        "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+      ],
+      "current_xml_comparison": "No law-specific XML placement is visible in the current branch or origin/main.",
+      "final_recommended_action": "Keep the enactment as a concise historical note only.",
+      "confidence": "high",
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t18",
+        "detail": "The note should remain history-only and not be treated as current firearms text."
+      },
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "Firearms-policy history only after repeal.",
+          "classes": [
+            "direct-amendment",
+            "history-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t18",
+          "exact_change": "Keep as history only and do not create a live Title 18 rewrite.",
+          "evidence": [
+            "codification/laws/laws/PL-007-044/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-007-044.md",
+            "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+          ],
+          "notes": "The source corpus does not support current positive-law text."
+        }
+      ]
+    },
+    {
+      "law_id": "PL-007-045",
+      "public_law": "7-45",
+      "title": "Public Law 7-45 | United States Capitol Police Reorganization Act of 2022",
+      "final_legal_status": "fully-repealed",
+      "chronology_conclusion": "This Capitol Police reorganization measure is treated as repealed history only, with no live positive-law insertion authorized.",
+      "approved_code_treatment": "exclude-from-code",
+      "exact_target": "/us/usc/t2 or /us/usc/t40",
+      "exact_enacted_text_or_amendment_command": "Keep the act as historical note material at the closest congressional or Capitol anchor; do not create a standalone Code section.",
+      "source_evidence": [
+        "codification/laws/laws/PL-007-045/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-007-045.md",
+        "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+      ],
+      "current_xml_comparison": "No law-specific XML placement is visible in the current branch or origin/main.",
+      "final_recommended_action": "Keep only a historical note at the closest congressional or Capitol anchor.",
+      "confidence": "high",
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t2",
+        "detail": "The branch note is history-only in substance, but it should not be promoted into permanent text."
+      },
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "Capitol Police reorganization history only.",
+          "classes": [
+            "direct-amendment",
+            "local-district",
+            "history-only"
+          ],
+          "treatment": "exclude-from-code",
+          "target": "/us/usc/t2 or /us/usc/t40",
+          "exact_change": "Keep the act as history only at the closest congressional or Capitol anchor.",
+          "evidence": [
+            "codification/laws/laws/PL-007-045/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-007-045.md",
+            "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+          ],
+          "notes": "This is a local/organizational measure, not permanent federal Code text."
+        }
+      ]
+    },
+    {
+      "law_id": "PL-007-046",
+      "public_law": "7-46",
+      "title": "Public Law 7-46 | Whistleblower Protection Act",
+      "final_legal_status": "unresolved",
+      "chronology_conclusion": "The source remains unavailable, so no lawful codification conclusion beyond source-limited history can be fixed from the record.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "Leave unresolved and do not invent operative text.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-007-046.md",
+        "codification/mass_migration/latest/reports/SOURCE-AUDIT.csv"
+      ],
+      "current_xml_comparison": "No authenticated source or XML anchor could be matched for this law.",
+      "final_recommended_action": "Retain only a source-limited historical note until a readable enactment is recovered.",
+      "confidence": "medium",
+      "current_implementation": {
+        "assessment": "missing",
+        "dump_present": false,
+        "trello_present": false,
+        "false_source_limitation": false,
+        "placement": null,
+        "detail": "The record does not supply usable statutory text."
+      },
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "No readable enactment text is available in the authoritative source package.",
+          "classes": [
+            "source-unavailable",
+            "history-only"
+          ],
+          "treatment": "source-limited-historical-note",
+          "target": null,
+          "exact_change": "Do not invent operative text; keep only a source-limited history note.",
+          "evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-007-046.md",
+            "codification/mass_migration/latest/reports/SOURCE-AUDIT.csv"
+          ],
+          "notes": "The source package does not expose usable text."
+        }
+      ]
+    },
+    {
+      "law_id": "PL-007-047",
+      "public_law": "7-47",
+      "title": "Public Law 7-47 | The Federal Bar Association Act of 2022",
+      "final_legal_status": "fully-repealed",
+      "chronology_conclusion": "The source corpus treats this organic bar-law enactment as repealed history only, so no live Title 28 text should be created.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t28",
+      "exact_enacted_text_or_amendment_command": "Keep the act as repeal history only at the Title 28 anchor.",
+      "source_evidence": [
+        "codification/laws/laws/PL-007-047/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-007-047.md",
+        "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+      ],
+      "current_xml_comparison": "No law-specific XML placement is visible in the current branch or origin/main.",
+      "final_recommended_action": "Keep the enactment as a concise historical note only.",
+      "confidence": "high",
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t28",
+        "detail": "The note should remain history-only because the act was later repealed."
+      },
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "Federal bar association history only after repeal.",
+          "classes": [
+            "direct-amendment",
+            "history-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t28",
+          "exact_change": "Keep as repeal history only at the Title 28 anchor.",
+          "evidence": [
+            "codification/laws/laws/PL-007-047/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-007-047.md",
+            "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+          ],
+          "notes": "No live positive-law text is warranted."
+        }
+      ]
+    },
+    {
+      "law_id": "PL-007-048",
+      "public_law": "7-48",
+      "title": "Public Law 7-48 | OCJCS Reform Act of 2022",
+      "final_legal_status": "fully-repealed",
+      "chronology_conclusion": "The corpus treats this military reorganization as repealed history only, so no live Title 10 rewrite is warranted.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t10",
+      "exact_enacted_text_or_amendment_command": "Keep the repeal history only at the Title 10 anchor.",
+      "source_evidence": [
+        "codification/laws/laws/PL-007-048/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-007-048.md",
+        "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+      ],
+      "current_xml_comparison": "No law-specific XML placement is visible in the current branch or origin/main.",
+      "final_recommended_action": "Retain as historical note material only.",
+      "confidence": "high",
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t10",
+        "detail": "The note should stay history-only because the reform act no longer has operative force."
+      },
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "Military reorganization history only after repeal.",
+          "classes": [
+            "direct-amendment",
+            "history-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t10",
+          "exact_change": "Keep as repeal history only at the Title 10 anchor.",
+          "evidence": [
+            "codification/laws/laws/PL-007-048/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-007-048.md",
+            "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+          ],
+          "notes": "No live military-organic text should remain."
+        }
+      ]
+    },
+    {
+      "law_id": "PL-007-049",
+      "public_law": "7-49",
+      "title": "Public Law 7-49 | Legislative Initiative to Grow Monetary Access Act of 2022 (LIGMA Act)",
+      "final_legal_status": "fully-repealed",
+      "chronology_conclusion": "This compensation-focused enactment is treated as repeal history only, not as a live Title 31 spending section.",
+      "approved_code_treatment": "historical-note-only",
+      "exact_target": "/us/usc/t31",
+      "exact_enacted_text_or_amendment_command": "Keep the law as repeal history only; do not create a live Title 31 compensation section.",
+      "source_evidence": [
+        "codification/laws/laws/PL-007-049/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-007-049.md",
+        "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+      ],
+      "current_xml_comparison": "No law-specific XML placement is visible in the current branch or origin/main.",
+      "final_recommended_action": "Keep the enactment as a concise history note only.",
+      "confidence": "high",
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t31",
+        "detail": "The note should remain history-only because the compensation scheme is no longer treated as live Code text."
+      },
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "Legislative compensation history only after repeal.",
+          "classes": [
+            "appropriation",
+            "history-only"
+          ],
+          "treatment": "historical-note-only",
+          "target": "/us/usc/t31",
+          "exact_change": "Keep as repeal history only at the Title 31 anchor.",
+          "evidence": [
+            "codification/laws/laws/PL-007-049/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-007-049.md",
+            "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+          ],
+          "notes": "No live spending text is warranted."
+        }
+      ]
+    },
+    {
+      "law_id": "PL-007-050",
+      "public_law": "7-50",
+      "title": "Public Law 7-50 | Coast Guard Base Repurposing Act of 2022",
+      "final_legal_status": "fully-repealed",
+      "chronology_conclusion": "This site-specific installation measure is local history only and should not be converted into permanent positive-law text.",
+      "approved_code_treatment": "exclude-from-code",
+      "exact_target": "Specific installation / non-U.S. Code",
+      "exact_enacted_text_or_amendment_command": "Keep the installation repurposing as site-specific history only.",
+      "source_evidence": [
+        "codification/laws/laws/PL-007-050/law.txt",
+        "codification/mass_migration/latest/reports/laws/PL-007-050.md",
+        "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+      ],
+      "current_xml_comparison": "No law-specific XML placement is visible in the current branch or origin/main.",
+      "final_recommended_action": "Keep the measure as site-specific historical note material only.",
+      "confidence": "high",
+      "current_implementation": {
+        "assessment": "partially-implemented",
+        "dump_present": true,
+        "trello_present": true,
+        "false_source_limitation": false,
+        "placement": "/us/usc/t14",
+        "detail": "The note should remain outside permanent Code text because the act is site-specific and later repealed."
+      },
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "Site-specific Coast Guard base repurposing history only.",
+          "classes": [
+            "local-district",
+            "history-only"
+          ],
+          "treatment": "exclude-from-code",
+          "target": "Specific installation / non-U.S. Code",
+          "exact_change": "Keep the installation repurposing as history only.",
+          "evidence": [
+            "codification/laws/laws/PL-007-050/law.txt",
+            "codification/mass_migration/latest/reports/laws/PL-007-050.md",
+            "codification/mass_migration/latest/reports/CODE-LOCATION-REGISTER.csv"
+          ],
+          "notes": "This is a one-off installation disposition, not Code text."
+        }
+      ]
+    },
+    {
+      "law_id": "PL-007-051",
+      "public_law": "7-51",
+      "title": "Public Law 7-51 | Federal Agent Law Training Mandate",
+      "final_legal_status": "unresolved",
+      "chronology_conclusion": "The record remains source-limited, so no operative statutory conclusion can be fixed from the available corpus.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "exact_target": null,
+      "exact_enacted_text_or_amendment_command": "Retain only a source-limited historical note.",
+      "source_evidence": [
+        "codification/mass_migration/latest/reports/laws/PL-007-051.md",
+        "codification/mass_migration/latest/reports/SOURCE-AUDIT.csv"
+      ],
+      "current_xml_comparison": "No authenticated source or XML anchor could be matched for this law.",
+      "final_recommended_action": "Leave unresolved until a readable enactment is recovered.",
+      "confidence": "medium",
+      "current_implementation": {
+        "assessment": "correctly-implemented",
+        "dump_present": false,
+        "trello_present": true,
+        "false_source_limitation": true,
+        "placement": null,
+        "detail": "The source limitation is respected, and no operative text is invented."
+      },
+      "provisions": [
+        {
+          "ref": "entire_act",
+          "text_summary": "No readable enactment text is available in the authoritative source package.",
+          "classes": [
+            "source-unavailable",
+            "history-only"
+          ],
+          "treatment": "source-limited-historical-note",
+          "target": null,
+          "exact_change": "Do not invent operative text; keep only a source-limited history note.",
+          "evidence": [
+            "codification/mass_migration/latest/reports/laws/PL-007-051.md",
+            "codification/mass_migration/latest/reports/SOURCE-AUDIT.csv"
+          ],
+          "notes": "The source package does not expose usable text."
+        }
+      ]
+    }
+  ]
+}

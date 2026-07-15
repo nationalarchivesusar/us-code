@@ -1,0 +1,234 @@
+{
+  "reviewer": "reviewer-16",
+  "group_index": 16,
+  "law_count": 10,
+  "output_path": "audit/review/review-16.json",
+  "laws": [
+    {
+      "law_id": "PL-022-154",
+      "public_law": "22-154",
+      "title": "Public Law 22-154 | Officer Bill of Rights (OBR)",
+      "report_path": "audit/primary/batch-06-01.json",
+      "batch": 6,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC11",
+        "SEC4",
+        "SEC5",
+        "SEC6",
+        "SEC7",
+        "SEC8-10"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-022-155",
+      "public_law": "22-155",
+      "title": "Public Law 22-155 | Department of Education Repealment Act",
+      "report_path": "audit/primary/batch-06-01.json",
+      "batch": 6,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION V(a)",
+        "SECTION V(b)"
+      ],
+      "targets": [
+        "PL 17-129"
+      ]
+    },
+    {
+      "law_id": "PL-022-156",
+      "public_law": "22-156",
+      "title": "Public Law 22-156 | Local Law Enforcement Agencies Reform and Nurturing (LLEARN)",
+      "report_path": "audit/primary/batch-06-01.json",
+      "batch": 6,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC5",
+        "SEC6",
+        "SEC7(1)",
+        "SEC7(2)",
+        "SEC7(3)",
+        "SEC7(4)",
+        "SEC7(5)(1)",
+        "SEC7(5)(2)",
+        "SEC7(5)(3)",
+        "SEC7(5)(4)",
+        "SEC7(5)(5)",
+        "SEC7(6)"
+      ],
+      "targets": [
+        "/us/usc/t2/s1901a",
+        "/us/usc/t2/s1961",
+        "/us/usc/t2/s1966",
+        "/us/usc/t2/s1966a",
+        "/us/usc/t2/s1969",
+        "/us/usc/t2/s1974",
+        "PL 3-16, PL 7-45, PL 16-119, PL 17-134, PL 18-143, PL 11-69, and 2 U.S.C. 1902, 1903, 1904, 1905, 1905a, 1905b, 1907, 1907a, 1907b, 1910, 1921, 1921a, 1922, 1923, 1926, 1927, 1930, 1931, 1932, 1933, 1934, 1964, 1965, 1966, 1968, 1971, 1972, 1973, 1976, 1980, 1981"
+      ]
+    },
+    {
+      "law_id": "PL-022-157",
+      "public_law": "22-157",
+      "title": "Public Law 22-157 | Area Management Update Act (AMUA)",
+      "report_path": "audit/primary/batch-06-01.json",
+      "batch": 6,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SEC5(1)",
+        "SEC5(2)"
+      ],
+      "targets": [
+        "PL 19-144 sec. 6",
+        "PL 19-144 sec. 8"
+      ]
+    },
+    {
+      "law_id": "PL-022-158",
+      "public_law": "22-158",
+      "title": "Public Law 22-158 | Service Members Protection Act (SMPA)",
+      "report_path": "audit/primary/batch-06-01.json",
+      "batch": 6,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC5",
+        "SEC6(1)",
+        "SEC6(2)",
+        "SEC6(3)"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-022-159",
+      "public_law": "22-159",
+      "title": "Public Law 22-159 | D.C. Statute of Limitations Act",
+      "report_path": "audit/primary/batch-06-01.json",
+      "batch": 6,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SECTION IV"
+      ],
+      "targets": [
+        "PL 11-69"
+      ]
+    },
+    {
+      "law_id": "PL-022-160",
+      "public_law": "22-160",
+      "title": "Public Law 22-160 | To Amend the U.S. Code",
+      "report_path": "audit/primary/batch-06-01.json",
+      "batch": 6,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision"
+      ],
+      "provision_refs": [
+        "SECTION IV(a)",
+        "SECTION IV(b)"
+      ],
+      "targets": [
+        "/us/usc/t18/s205"
+      ]
+    },
+    {
+      "law_id": "PL-022-161",
+      "public_law": "22-161",
+      "title": "Public Law 22-161 | Second Chance Act",
+      "report_path": "audit/primary/batch-06-02.json",
+      "batch": 6,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 3",
+        "SEC 4"
+      ],
+      "targets": []
+    },
+    {
+      "law_id": "PL-022-162",
+      "public_law": "22-162",
+      "title": "Public Law 22-162 | Judicial Fairness Act",
+      "report_path": "audit/primary/batch-06-02.json",
+      "batch": 6,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "direct-action-provision",
+        "missing-target"
+      ],
+      "provision_refs": [
+        "SEC IV(1)",
+        "SEC IV(2)",
+        "SEC IV(4)",
+        "SEC V"
+      ],
+      "targets": [
+        "/us/usc/t28/s1253",
+        "/us/usc/t28/s1257",
+        "/us/usc/t28/s1291"
+      ]
+    },
+    {
+      "law_id": "PL-022-163",
+      "public_law": "22-163",
+      "title": "Public Law 22-163 | Employee's Bill of Rights",
+      "report_path": "audit/primary/batch-06-02.json",
+      "batch": 6,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 2",
+        "SEC 3",
+        "SEC 4"
+      ],
+      "targets": []
+    }
+  ]
+}

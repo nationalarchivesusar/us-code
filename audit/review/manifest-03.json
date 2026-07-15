@@ -1,0 +1,249 @@
+{
+  "reviewer": "reviewer-03",
+  "group_index": 3,
+  "law_count": 10,
+  "output_path": "audit/review/review-03.json",
+  "laws": [
+    {
+      "law_id": "PL-003-022",
+      "public_law": "3-22",
+      "title": "Public Law 3-22 | District of Columbia Administration Act",
+      "report_path": "audit/primary/batch-01-03.json",
+      "batch": 1,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-003-023",
+      "public_law": "3-23",
+      "title": "Public Law 3-23 | Federal Law Enforcement Training Center Establishment Act",
+      "report_path": "audit/primary/batch-01-03.json",
+      "batch": 1,
+      "source_status": "unresolved",
+      "validation_status": "unsupported",
+      "confidence": "high",
+      "reasons": [
+        "status:unresolved"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-003-024",
+      "public_law": "3-24",
+      "title": "Public Law 3-24 | Judgeship Reducation Act of 2022",
+      "report_path": "audit/primary/batch-01-03.json",
+      "batch": 1,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "direct-action-provision",
+        "missing-target",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC II",
+        "SEC III",
+        "SEC IV",
+        "SEC V",
+        "SEC VII"
+      ],
+      "targets": [
+        "/us/usc/t28"
+      ]
+    },
+    {
+      "law_id": "PL-003-025",
+      "public_law": "3-25",
+      "title": "Public Law 3-25 | CRACK Act",
+      "report_path": "audit/primary/batch-01-03.json",
+      "batch": 1,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "direct-action-provision",
+        "missing-target",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 101",
+        "SEC 150",
+        "SEC 153",
+        "SEC 154(a)",
+        "SEC 154(b)",
+        "SEC 420",
+        "SECs 102-105",
+        "SECs 201-205",
+        "SECs 206-214",
+        "SECs 230-232",
+        "SECs 302-303",
+        "SECs 402-403",
+        "SECs 404-406",
+        "SECs 407-409",
+        "SECs 501-504",
+        "SECs 601-604",
+        "SECs 605-609"
+      ],
+      "targets": [
+        "/us/usc/t18/ch124/s2801",
+        "/us/usc/t18/ch96",
+        "/us/usc/t18/s1041",
+        "/us/usc/t18/s1510",
+        "/us/usc/t18/s2332i",
+        "/us/usc/t18/s2333",
+        "/us/usc/t18/s2339C",
+        "/us/usc/t18/s2510",
+        "/us/usc/t18/s3286",
+        "/us/usc/t5/s552",
+        "/us/usc/t50"
+      ]
+    },
+    {
+      "law_id": "PL-004-026",
+      "public_law": "4-26",
+      "title": "Public Law 4-26 | H.J. Res. 06 (Keywords: Tigray)",
+      "report_path": "audit/primary/batch-01-03.json",
+      "batch": 1,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium"
+      ],
+      "provision_refs": [],
+      "targets": []
+    },
+    {
+      "law_id": "PL-004-027",
+      "public_law": "4-27",
+      "title": "Public Law 4-27 | Right to Security Act of 2022",
+      "report_path": "audit/primary/batch-01-03.json",
+      "batch": 1,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION II",
+        "SECTION III"
+      ],
+      "targets": [
+        "/us/usc/t18"
+      ]
+    },
+    {
+      "law_id": "PL-004-028",
+      "public_law": "4-28",
+      "title": "Public Law 4-28 | House Veterans Affairs Act",
+      "report_path": "audit/primary/batch-01-03.json",
+      "batch": 1,
+      "source_status": "current",
+      "validation_status": "accepted with corrections",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION II",
+        "SECTION III / SUB-SECTION 2",
+        "SECTION III / SUB-SECTION 3",
+        "SECTION III / SUB-SECTION 4"
+      ],
+      "targets": [
+        "/us/usc/t38"
+      ]
+    },
+    {
+      "law_id": "PL-004-029",
+      "public_law": "4-29",
+      "title": "Public Law 4-29 | Department of Commerce and Labor Act of 2022",
+      "report_path": "audit/primary/batch-01-03.json",
+      "batch": 1,
+      "source_status": "current",
+      "validation_status": "missing chronology analysis",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "direct-action-provision",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SECTION II",
+        "SECTION III",
+        "SECTION IV"
+      ],
+      "targets": [
+        "/us/usc/t29"
+      ]
+    },
+    {
+      "law_id": "PL-004-030",
+      "public_law": "4-30",
+      "title": "Public Law 4-30 | Fugitive Justice Reform Act",
+      "report_path": "audit/primary/batch-01-03.json",
+      "batch": 1,
+      "source_status": "current",
+      "validation_status": "incomplete",
+      "confidence": "medium",
+      "reasons": [
+        "confidence:medium",
+        "direct-action-provision",
+        "missing-target",
+        "multiple-laws-same-target",
+        "standalone-permanent-provision"
+      ],
+      "provision_refs": [
+        "SEC 7",
+        "SECTION 4",
+        "SECTION 5"
+      ],
+      "targets": [
+        "/us/usc/t18",
+        "/us/usc/t28"
+      ]
+    },
+    {
+      "law_id": "PL-004-031",
+      "public_law": "4-31",
+      "title": "Public Law 4-31 | Stand Your Ground Act",
+      "report_path": "audit/primary/batch-02-01.json",
+      "batch": 2,
+      "source_status": "fully-repealed",
+      "validation_status": "missing chronology analysis",
+      "confidence": "high",
+      "reasons": [
+        "standalone-permanent-provision",
+        "status:fully-repealed"
+      ],
+      "provision_refs": [
+        "SEC. 101",
+        "SEC. 102",
+        "SEC. 103",
+        "SEC. 104",
+        "SEC. 105"
+      ],
+      "targets": [
+        "/us/usc/t18 (crimes/self-defense) or t50 as placed",
+        "n/a",
+        "title 18",
+        "title 18 (crimes/self-defense) - not title 50 as placed"
+      ]
+    }
+  ]
+}

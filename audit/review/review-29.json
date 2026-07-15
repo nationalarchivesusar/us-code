@@ -1,0 +1,179 @@
+{
+  "reviewer": "reviewer-29",
+  "group_index": 29,
+  "law_count": 6,
+  "source_manifest": "audit/manifests/manifest-29.json",
+  "output_path": "audit/review/review-29.json",
+  "reviewed_against": [
+    "audit/manifests/manifest-29.json",
+    "audit/primary/batch-03-02.json",
+    "audit/primary/batch-04-01.json",
+    "audit/primary/batch-04-02.json",
+    "audit/chronology-report.json",
+    "usc XML in current branch",
+    "origin/main"
+  ],
+  "laws": [
+    {
+      "law_id": "PL-012-078",
+      "public_law": "12-78",
+      "title": "Public Law 12-78 | Balancing Executive Act",
+      "report_path": "audit/primary/batch-03-02.json",
+      "batch": 3,
+      "status": "unresolved",
+      "decision": "source-limited-historical-note",
+      "status_basis": "The manifest marks the source as unrecoverable because it was deleted or not found, and the primary report confirms there is no recoverable statutory text.",
+      "provision_refs": [
+        "(entire act)"
+      ],
+      "targets": null,
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t1/s1",
+        "detail": "The current XML contains only a boilerplate note and Trello link at Title 1. Because the source is unavailable, the entry should be replaced with an honest source-limited historical note."
+      },
+      "recommended_action": "Remove the Trello link from rp-pl012078-codification and replace the boilerplate with a source-limited historical note stating that the source was deleted or not found.",
+      "confidence": "low",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The manifest marks the source as unrecoverable because it was deleted or not found, and the primary report confirms there is no recoverable statutory text.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t1/s1"
+    },
+    {
+      "law_id": "PL-012-079",
+      "public_law": "12-79",
+      "title": "Public Law 12-79 | Anti-Terrorism Act of 2023",
+      "report_path": "audit/primary/batch-03-02.json",
+      "batch": 3,
+      "status": "unresolved",
+      "decision": "source-limited-historical-note",
+      "status_basis": "The recovered file is only a Google Drive permission-denied HTML stub, so no operative statutory text is available.",
+      "provision_refs": [
+        "(entire act)"
+      ],
+      "targets": null,
+      "current_implementation": {
+        "assessment": "note-only-but-amendment-required",
+        "placement": "/us/usc/t18/s1",
+        "detail": "The current XML has a boilerplate note and Trello link at Title 18. Because the source is only a permission-denied stub, the note should be replaced with an honest source-limited historical note."
+      },
+      "recommended_action": "Remove the Trello link from rp-pl012079-codification and replace the boilerplate with a source-limited historical note stating that the source is unrecoverable due to Google Drive access denial.",
+      "confidence": "low",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The recovered file is only a Google Drive permission-denied HTML stub, so no operative statutory text is available.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t18/s1"
+    },
+    {
+      "law_id": "PL-014-091",
+      "public_law": "14-91",
+      "title": "Public Law 14-91 | Uniform Code of Military Justice Reform Act of 2023",
+      "report_path": "audit/primary/batch-04-01.json",
+      "batch": 4,
+      "status": "unresolved",
+      "decision": "source-limited-historical-note",
+      "status_basis": "The act is only a shell: it supplies a short title, definitions, severability, findings, an immediate-application directive, and enactment language, but not the actual substantive UCMJ text needed for lawful codification.",
+      "provision_refs": [
+        "SEC 1(a)",
+        "SEC 2(a)",
+        "SEC 3(a)",
+        "SEC 4",
+        "SEC 5 (Findings)",
+        "SEC 5 (Enactment)"
+      ],
+      "targets": null,
+      "current_implementation": {
+        "assessment": "improperly-inserted-into-permanent-text",
+        "placement": "/us/usc/t10/s101/h",
+        "detail": "The current note includes a full-text dump and Trello link at the Title 10 anchor, but the source does not supply determinable operative UCMJ text."
+      },
+      "recommended_action": "Remove the full-text dump and Trello link, then keep only a concise Title 10 statutory note recording the short title, findings, and severability while flagging that the referenced proposed UCMJ text was not supplied.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The act is only a shell: it supplies a short title, definitions, severability, findings, an immediate-application directive, and enactment language, but not the actual substantive UCMJ text needed for lawful codification.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "source_evidence": "active keyword `in effect` in list or label | view | https://drive.google.com/file/d/1n7VO5jSF0UaMgBC4TILivenV8rWZYt1P/view | bcb17ab6ce41858c6a88220798c20481b1012da42c0d42e59c0ae75a0709e7fe",
+      "exact_target": "/us/usc/t10/s101/h"
+    },
+    {
+      "law_id": "PL-015-094",
+      "public_law": "15-94",
+      "title": "Public Law 15-94 | Whistleblower Protections Act of 2023",
+      "report_path": "audit/primary/batch-04-01.json",
+      "batch": 4,
+      "status": "unresolved",
+      "decision": "source-limited-historical-note",
+      "status_basis": "The source PDF is image-only/scanned, so text_extracted is false and no operative text is recoverable.",
+      "provision_refs": [
+        "(whole act)"
+      ],
+      "targets": null,
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "placement": "/us/usc/t18/s1",
+        "detail": "The XML declares a current-status note with boilerplate codification prose even though the source is unextractable; the placement also sits in an awkward title-18 location for a whistleblower measure."
+      },
+      "recommended_action": "Retain only a source-limited historical note, remove the Trello link and false-precision codification prose, and consider re-anchoring the note to Title 5 with a cross-reference from PL 15-98.",
+      "confidence": "medium",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source PDF is image-only/scanned, so text_extracted is false and no operative text is recoverable.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t18/s1"
+    },
+    {
+      "law_id": "PL-015-095",
+      "public_law": "15-95",
+      "title": "Public Law 15-95 | An Act to Repeal the White House Protection Act",
+      "report_path": "audit/primary/batch-04-01.json",
+      "batch": 4,
+      "status": "unresolved",
+      "decision": "source-limited-historical-note",
+      "status_basis": "The source is unrecoverable: no source files are present, law.txt is absent, and the operative repeal target cannot be authenticated from the recovered record.",
+      "provision_refs": [
+        "(whole act)"
+      ],
+      "targets": null,
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "placement": "/us/usc/t3/s1",
+        "detail": "The XML uses boilerplate repeal-language prose at a Title 3 anchor, but the actual source text is missing and the target repeal cannot be determined."
+      },
+      "recommended_action": "Retain only a source-limited historical note stating that the source is unrecoverable, remove the Trello link and false-precision codification prose, and do not implement any repeal because the target text is unknown.",
+      "confidence": "high",
+      "final_legal_status": "repealed",
+      "chronology_conclusion": "The source is unrecoverable: no source files are present, law.txt is absent, and the operative repeal target cannot be authenticated from the recovered record.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "source_evidence": "status keyword `repealed` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t3/s1"
+    },
+    {
+      "law_id": "PL-015-107",
+      "public_law": "15-107",
+      "title": "Public Law 15-107 | Guidance to Guidances Act",
+      "report_path": "audit/primary/batch-04-02.json",
+      "batch": 4,
+      "status": "unresolved",
+      "decision": "source-limited-historical-note",
+      "status_basis": "The source is unrecoverable: no source files exist, law.txt is absent, and the title may duplicate PL 15-101, so no operative text can be authenticated.",
+      "provision_refs": [
+        "(whole act)"
+      ],
+      "targets": null,
+      "current_implementation": {
+        "assessment": "incorrectly-implemented",
+        "placement": "/us/usc/t1/s1",
+        "detail": "The XML note declares the law repealed or superseded with boilerplate prose, but the source is actually unrecoverable and the enactment may duplicate PL 15-101."
+      },
+      "recommended_action": "Retain only a source-limited historical note stating that the source is unrecoverable, investigate the possible duplication with PL 15-101 and consolidate if appropriate, and remove the Trello link and boilerplate.",
+      "confidence": "high",
+      "final_legal_status": "active",
+      "chronology_conclusion": "The source is unrecoverable: no source files exist, law.txt is absent, and the title may duplicate PL 15-101, so no operative text can be authenticated.",
+      "approved_code_treatment": "source-limited-historical-note",
+      "source_evidence": "active keyword `in effect` in list or label | unavailable | unavailable | unavailable",
+      "exact_target": "/us/usc/t1/s1"
+    }
+  ]
+}

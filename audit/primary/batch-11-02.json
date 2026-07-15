@@ -1,0 +1,790 @@
+﻿{
+    "batch":  11,
+    "auditor":  "law-auditor-H",
+    "law_count":  10,
+    "laws":  [
+                 {
+                     "law_id":  "PL-007-042",
+                     "public_law":  "7-42",
+                     "title":  "Public Law 7-42 | Transportation Act of 2022",
+                     "status":  "fully-repealed",
+                     "status_basis":  "Listed under \u0027Repealed Laws\u0027. Internally permanent general (creates transit divisions, FTA, TSA); no self-repeal/sunset (contains a repeal of another measure, not itself). Repeal external.",
+                     "provisions":  [
+                                        {
+                                            "ref":  "PART I",
+                                            "text_summary":  "General provisions: short title (declines to endorse), effective date, severability, conflicting-legislation null.",
+                                            "classes":  [
+                                                            "short-title",
+                                                            "effective-date",
+                                                            "severability"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "/us/usc/t49",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œreferred to as the â€˜Transportation Act of 2020â€™. No short title is endorsed by Congress.â€",
+                                            "notes":  "Source text says 2020; PL titled 2022 â€” likely reused/backdated draft."
+                                        },
+                                        {
+                                            "ref":  "PART II",
+                                            "text_summary":  "Findings/whereas clauses on transportation needs.",
+                                            "classes":  [
+                                                            "findings-or-sense"
+                                                        ],
+                                            "treatment":  "exclude-from-code",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œWHEREAS; Vehicles in this country tend to cause significant delay...â€",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "PART III",
+                                            "text_summary":  "Establishes a Bus Rapid Transit Division under DOT.",
+                                            "classes":  [
+                                                            "new-permanent-general"
+                                                        ],
+                                            "treatment":  "new-section",
+                                            "target":  "/us/usc/t49 (transportation)",
+                                            "exact_change":  "Create BRT Division under DOT.",
+                                            "evidence":  "â€œThere shall be a Bus Rapid Transit Division under the Federal Government, specifically the Department of Transportationâ€",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "PART IV",
+                                            "text_summary":  "Forms the Federal Transit Administration under DOT with a Director and duties.",
+                                            "classes":  [
+                                                            "new-permanent-general"
+                                                        ],
+                                            "treatment":  "new-section",
+                                            "target":  "/us/usc/t49",
+                                            "exact_change":  "Establish FTA.",
+                                            "evidence":  "â€œThe Federal Transit Administration is hereby formed under the direction of the Department of Transportationâ€",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "PART V",
+                                            "text_summary":  "Establishes the Transportation Security Administration under DOT; air-traffic regulation authority.",
+                                            "classes":  [
+                                                            "new-permanent-general"
+                                                        ],
+                                            "treatment":  "new-section",
+                                            "target":  "/us/usc/t49",
+                                            "exact_change":  "Establish TSA.",
+                                            "evidence":  "â€œThe Transportation Security Administration is hereby established under the direction of the Department of Transportationâ€",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "PART VI",
+                                            "text_summary":  "Regulations; municipal-law prohibition repealing conflicting municipal transit/towing laws pursuant to D.C. Home Rule Act (Pub. L. 12-9); deprivatization; general counsel. Also strikes/repeals \u0027S 63 Towing Companies Regulation Act.\u0027",
+                                            "classes":  [
+                                                            "new-permanent-general",
+                                                            "repeal",
+                                                            "local-district"
+                                                        ],
+                                            "treatment":  "repeal-marking",
+                                            "target":  "prior \u0027S 63 Towing Companies Regulation Act\u0027 (non-USC target)",
+                                            "exact_change":  "Repeal S. 63 Towing Companies Regulation Act; repeal conflicting municipal transit/towing laws.",
+                                            "evidence":  "â€œS 63 Towing Companies Regulation Act is hereby struck down and repealed.â€; â€œpursuant to the District of Columbia Home Rule Act of 2015, Pub. L. 12-9.â€",
+                                            "notes":  "Cites Pub. L. 12-9 (a later-numbered PL) as authority â€” anachronistic cross-reference in source; flag for integrator."
+                                        },
+                                        {
+                                            "ref":  "PART VII",
+                                            "text_summary":  "Municipal authority over routes/towing/airspace recommendations.",
+                                            "classes":  [
+                                                            "local-district",
+                                                            "new-permanent-general"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "/us/usc/t49",
+                                            "exact_change":  "",
+                                            "evidence":  "â€œthe Municipal Government shall entertain the authority to establish transportation regulationsâ€",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "PART IX",
+                                            "text_summary":  "Development suggestions (expressly not law).",
+                                            "classes":  [
+                                                            "findings-or-sense",
+                                                            "non-code"
+                                                        ],
+                                            "treatment":  "exclude-from-code",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œThis section should not be construed to be the law of the United States, but the unanimous suggestion...â€",
+                                            "notes":  "Self-identified non-operative."
+                                        }
+                                    ],
+                     "current_implementation":  {
+                                                    "assessment":  "improperly-retained-despite-repeal",
+                                                    "dump_present":  true,
+                                                    "trello_present":  true,
+                                                    "false_source_limitation":  false,
+                                                    "placement":  "/us/usc/t49/s101/b/6",
+                                                    "detail":  "Full-text dump + Trello link at t49 (correct subject). Repealed law; dump/Trello must be removed. The internal repeal of \u0027S 63 Towing Companies Regulation Act\u0027 and reliance on Pub. L. 12-9 should be captured in a history note only, not as new section text."
+                                                },
+                     "recommended_actions":  [
+                                                 "Remove full-text dump and Trello link from rp-pl007042-codification.",
+                                                 "Retain a concise historical note in title 49 (repealed); flag anachronistic cross-reference to Pub. L. 12-9 and the repeal of S. 63 for the integrator."
+                                             ],
+                     "confidence":  "high"
+                 },
+                 {
+                     "law_id":  "PL-007-043",
+                     "public_law":  "7-43",
+                     "title":  "Public Law 7-43 | District of Columbia Reorganization Initiative Act",
+                     "status":  "fully-repealed",
+                     "status_basis":  "Listed under \u0027Repealed Laws\u0027. Purely local/District measure amending the D.C. City Charter; no self-repeal/sunset. Repeal external.",
+                     "provisions":  [
+                                        {
+                                            "ref":  "SEC. I",
+                                            "text_summary":  "Short title, severability, effective date; anti-supersession clause.",
+                                            "classes":  [
+                                                            "short-title",
+                                                            "severability",
+                                                            "effective-date"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "n/a (local)",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œtitled the â€˜District of Columbia Reorganization Initiative Actâ€™â€",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. II",
+                                            "text_summary":  "Definitions; references external City Charter via hackmd.io link.",
+                                            "classes":  [
+                                                            "local-district"
+                                                        ],
+                                            "treatment":  "exclude-from-code",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œThe current City Charter of Washington, District of Columbia shall be as linked: https://hackmd.io/...â€",
+                                            "notes":  "External-link dependency; amends a document not in the U.S. Code."
+                                        },
+                                        {
+                                            "ref":  "SEC. III",
+                                            "text_summary":  "Amends Article I of the D.C. City Charter (Council membership from six to five members; abolishes Section IV of Article I).",
+                                            "classes":  [
+                                                            "direct-amendment",
+                                                            "local-district",
+                                                            "repeal"
+                                                        ],
+                                            "treatment":  "exclude-from-code",
+                                            "target":  "D.C. City Charter Art. I (not U.S. Code)",
+                                            "exact_change":  "Council reduced to five members (chairman + four); Section IV of Article I abolished.",
+                                            "evidence":  "â€œThe Council established shall consist of five members... The chairman and four members shall be elected at largeâ€; â€œSection IV... shall be abolished by its entirety.â€",
+                                            "notes":  "Amends the D.C. Charter, not the U.S. Code â€” local, not codifiable in USC."
+                                        },
+                                        {
+                                            "ref":  "SEC. IV",
+                                            "text_summary":  "Amends Article II of the D.C. City Charter (Mayor\u0027s designation of acting officers now requires City Council consent).",
+                                            "classes":  [
+                                                            "direct-amendment",
+                                                            "local-district"
+                                                        ],
+                                            "treatment":  "exclude-from-code",
+                                            "target":  "D.C. City Charter Art. II",
+                                            "exact_change":  "Add City-Council-consent requirement to Mayor\u0027s acting-officer designation.",
+                                            "evidence":  "â€œThe Mayor may designate the officer or officers... with the consent of the City Council.â€",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. V",
+                                            "text_summary":  "Establishes D.C. line of succession for the office of Mayor.",
+                                            "classes":  [
+                                                            "local-district",
+                                                            "new-permanent-general"
+                                                        ],
+                                            "treatment":  "exclude-from-code",
+                                            "target":  "n/a (local)",
+                                            "exact_change":  "",
+                                            "evidence":  "â€œThe Line of Succession for the Office of the Mayor of Washington, DC shall be the following...â€",
+                                            "notes":  ""
+                                        }
+                                    ],
+                     "current_implementation":  {
+                                                    "assessment":  "improperly-retained-despite-repeal",
+                                                    "dump_present":  true,
+                                                    "trello_present":  true,
+                                                    "false_source_limitation":  false,
+                                                    "placement":  "/us/usc/t40/s101/4",
+                                                    "detail":  "Full-text dump + Trello link at t40. Note correctly recognizes local character (\u0027local, appropriations, individual...\u0027), but retains a full dump. This is a purely local/District Charter amendment â€” not U.S. Code section text â€” and is repealed."
+                                                },
+                     "recommended_actions":  [
+                                                 "Remove full-text dump and Trello link from rp-pl007043-codification.",
+                                                 "Exclude from permanent Code (local/District Charter amendment, repealed); keep at most a concise historical note."
+                                             ],
+                     "confidence":  "high"
+                 },
+                 {
+                     "law_id":  "PL-007-044",
+                     "public_law":  "7-44",
+                     "title":  "Public Law 7-44 | The Bye Bye Terrorism Act",
+                     "status":  "fully-repealed",
+                     "status_basis":  "Listed under \u0027Repealed Laws\u0027. Internally permanent general (limits fully-automatic firearms to semi-auto); no self-repeal/sunset. Repeal external.",
+                     "provisions":  [
+                                        {
+                                            "ref":  "SEC. I",
+                                            "text_summary":  "Short title (The Bye Bye Terrorism Act).",
+                                            "classes":  [
+                                                            "short-title"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "/us/usc/t18",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œcited as the â€˜The Bye Bye Terrorism Actâ€™â€",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. II",
+                                            "text_summary":  "Definition of \u0027Fully Automatic Firearm.\u0027",
+                                            "classes":  [
+                                                            "new-permanent-general"
+                                                        ],
+                                            "treatment":  "new-section",
+                                            "target":  "/us/usc/t18 (firearms)",
+                                            "exact_change":  "Define fully automatic firearm.",
+                                            "evidence":  "â€œIf both the feeding and ignition procedures are automatically cycled, the weapon will be considered â€˜fully automaticâ€™â€",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. III",
+                                            "text_summary":  "Direct provision: any fully-automatic weapon in sale (in-game/gamepass) limited to semi-fire only.",
+                                            "classes":  [
+                                                            "new-permanent-general",
+                                                            "uncodified-admin-direction"
+                                                        ],
+                                            "treatment":  "exclude-from-code",
+                                            "target":  "n/a (game-mechanics direction)",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œany fully automatic weapon in sale, whether it be in-game, or game pass will have its firing capabilities limited to semi firing only.â€",
+                                            "notes":  "Game-mechanics directive."
+                                        },
+                                        {
+                                            "ref":  "SEC. IV",
+                                            "text_summary":  "Enactment immediately after passage/signature.",
+                                            "classes":  [
+                                                            "effective-date"
+                                                        ],
+                                            "treatment":  "effective-date-note",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œThis resolution shall take effect immediately after its passageâ€",
+                                            "notes":  ""
+                                        }
+                                    ],
+                     "current_implementation":  {
+                                                    "assessment":  "improperly-retained-despite-repeal",
+                                                    "dump_present":  true,
+                                                    "trello_present":  true,
+                                                    "false_source_limitation":  false,
+                                                    "placement":  "/us/usc/t18/s1",
+                                                    "detail":  "Full-text dump + Trello link at t18/s1 (firearms subject is plausible). Repealed law; dump/Trello must be removed; content is largely game-mechanics direction not suited to permanent section text."
+                                                },
+                     "recommended_actions":  [
+                                                 "Remove full-text dump and Trello link from rp-pl007044-codification.",
+                                                 "Retain a concise historical note (repealed) in title 18."
+                                             ],
+                     "confidence":  "high"
+                 },
+                 {
+                     "law_id":  "PL-007-045",
+                     "public_law":  "7-45",
+                     "title":  "Public Law 7-45 | United States Capitol Police Reorganization Act of 2022",
+                     "status":  "fully-repealed",
+                     "status_basis":  "Listed under \u0027Repealed Laws\u0027. Internally reorganizes Capitol Police (repeals parts of a prior \u0027S. 12\u0027); no self-repeal/sunset of itself. Repeal external. Note PL 9-53 SEC. 5 later authorizes transfer/suspension of Capitol Police authority, and PL 9-60 makes the MPD Chief an ex-officio Capitol Police Board member â€” related but not repealing.",
+                     "provisions":  [
+                                        {
+                                            "ref":  "SEC. I",
+                                            "text_summary":  "Short title, severability, effective date; anti-supersession clause.",
+                                            "classes":  [
+                                                            "short-title",
+                                                            "severability",
+                                                            "effective-date"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "/us/usc/t2 (Congress) or t40",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œtitled the â€˜United States Capitol Police Reorganization Act of 2022â€™â€",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. II",
+                                            "text_summary":  "Repeals Section II and Section V of \u0027S. 12 - The Capitol Police Establishment\u0027 in their entirety.",
+                                            "classes":  [
+                                                            "repeal",
+                                                            "direct-amendment"
+                                                        ],
+                                            "treatment":  "repeal-marking",
+                                            "target":  "prior \u0027S. 12 - The Capitol Police Establishment\u0027 (non-USC target)",
+                                            "exact_change":  "Repeal Sections II and V of S. 12.",
+                                            "evidence":  "â€œthe following sections of S. 12 - The Capitol Police Establishment shall be repealed by its entirety: (i) Section II... (ii) Section Vâ€",
+                                            "notes":  "Target is another local act, not a numbered USC section; capture as history note."
+                                        },
+                                        {
+                                            "ref":  "SEC. III",
+                                            "text_summary":  "Establishes new Capitol Police Board (congressional leaders + appointees); board duties (appoint/remove Chief, security oversight).",
+                                            "classes":  [
+                                                            "new-permanent-general"
+                                                        ],
+                                            "treatment":  "new-section",
+                                            "target":  "/us/usc/t2 or t40",
+                                            "exact_change":  "Establish Capitol Police Board composition and duties.",
+                                            "evidence":  "â€œthe following members of Congress shall be apart of the Capitol Police Boardâ€",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. IV",
+                                            "text_summary":  "Limits Capitol Police deployment outside jurisdiction; conditions for deployment.",
+                                            "classes":  [
+                                                            "new-permanent-general"
+                                                        ],
+                                            "treatment":  "new-section",
+                                            "target":  "/us/usc/t2 or t40",
+                                            "exact_change":  "",
+                                            "evidence":  "â€œThe United States Capitol Police shall not be deployed outside of its jurisdiction unless the Chief... notifies the Capitol Police Board.â€",
+                                            "notes":  ""
+                                        }
+                                    ],
+                     "current_implementation":  {
+                                                    "assessment":  "improperly-retained-despite-repeal",
+                                                    "dump_present":  true,
+                                                    "trello_present":  true,
+                                                    "false_source_limitation":  false,
+                                                    "placement":  "/us/usc/t18/s1",
+                                                    "detail":  "Full-text dump + Trello link at t18/s1. Subject (Capitol Police organization) fits better in t2 (Congress) or t40 than t18 (crimes). Repealed law; dump/Trello must be removed."
+                                                },
+                     "recommended_actions":  [
+                                                 "Remove full-text dump and Trello link from rp-pl007045-codification.",
+                                                 "Move any retained note out of t18 to t2/t40; mark repealed; capture repeal of S. 12 sections as history."
+                                             ],
+                     "confidence":  "high"
+                 },
+                 {
+                     "law_id":  "PL-007-046",
+                     "public_law":  "7-46",
+                     "title":  "Public Law 7-46 | Whistleblower Protection Act",
+                     "status":  "unresolved",
+                     "status_basis":  "Source unrecoverable: law.txt is Google-Drive access-denied debris (\u0027Sorry, the owner hasn\u0027t given you permission to download this file\u0027). No statutory text available; no lawful codification conclusion possible. Listed under \u0027Repealed Laws\u0027 (external label only).",
+                     "provisions":  [
+                                        {
+                                            "ref":  "(whole act)",
+                                            "text_summary":  "Text unavailable — source is a Google Drive \u0027can\u0027t download\u0027 page.",
+                                            "classes":  [
+                                                            "non-code",
+                                                            "source-limited"
+                                                        ],
+                                            "treatment":  "historical-note-only",
+                                            "target":  "n/a",
+                                            "exact_change":  "none; source text unavailable",
+                                            "evidence":  "Google Drive - Can\u0027t download file",
+                                            "notes":  "The enacted text cannot be reconstructed from the supplied record."
+                                        }
+                                    ],
+                     "current_implementation":  {
+                                                    "assessment":  "missing",
+                                                    "dump_present":  false,
+                                                    "trello_present":  false,
+                                                    "false_source_limitation":  false,
+                                                    "placement":  null,
+                                                    "detail":  "No branch XML note was found, so the current tree lacks any lawful source-limited preservation."
+                                                },
+                     "recommended_actions":  [
+                                                 "Leave unresolved and do not invent operative text.",
+                                                 "If recovery later becomes possible, add only a source-limited historical note."
+                                             ],
+                     "confidence":  "medium"
+                 },
+                 {
+                     "law_id":  "PL-007-047",
+                     "public_law":  "7-47",
+                     "title":  "Public Law 7-47 | The Federal Bar Association Act of 2022",
+                     "status":  "fully-repealed",
+                     "status_basis":  "Listed under \u0027Repealed Laws\u0027. Internally reorganizes the Federal Bar Association (repeals a prior \u0027Senate Bill 2\u0027); no self-repeal/sunset. Repeal external.",
+                     "provisions":  [
+                                        {
+                                            "ref":  "SEC. 1",
+                                            "text_summary":  "Short title (FBA Act of 2022).",
+                                            "classes":  [
+                                                            "short-title"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "/us/usc/t28",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œcited as the â€˜FBA Act of 2022â€™â€",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. 2",
+                                            "text_summary":  "Purpose: reorganize the Federal Bar Association.",
+                                            "classes":  [
+                                                            "findings-or-sense"
+                                                        ],
+                                            "treatment":  "exclude-from-code",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œReorganize the Federal Bar Association.â€",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. 3",
+                                            "text_summary":  "Repeals \u0027Senate Bill 2\u0027 in its entirety.",
+                                            "classes":  [
+                                                            "repeal"
+                                                        ],
+                                            "treatment":  "repeal-marking",
+                                            "target":  "prior \u0027Senate Bill 2\u0027 (non-USC target)",
+                                            "exact_change":  "Repeal Senate Bill 2 entirely.",
+                                            "evidence":  "â€œSenate Bill 2 shall be hereby repealed in its entirety.â€",
+                                            "notes":  "History note only."
+                                        },
+                                        {
+                                            "ref":  "SEC. 4",
+                                            "text_summary":  "Establishes Federal Bar Association; administers Bar Exam (85% pass); 9-member composition; discipline/suspension powers; appeals.",
+                                            "classes":  [
+                                                            "new-permanent-general"
+                                                        ],
+                                            "treatment":  "new-section",
+                                            "target":  "/us/usc/t28 (judiciary/legal profession)",
+                                            "exact_change":  "Establish FBA, exam, membership, disciplinary authority.",
+                                            "evidence":  "â€œthe Federal Bar Association shall be establishedâ€; â€œshall be responsible for administering the Bar Examâ€",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. 5 (Code of Conduct)",
+                                            "text_summary":  "FBA Code of Professional Conduct to be attached; applies to all certified persons.",
+                                            "classes":  [
+                                                            "new-permanent-general",
+                                                            "uncodified-admin-direction"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "/us/usc/t28",
+                                            "exact_change":  "",
+                                            "evidence":  "â€œThe Federal Bar Association shall have a Code of Professional Conduct which shall be attached herein.â€",
+                                            "notes":  "Attachment not present in source."
+                                        },
+                                        {
+                                            "ref":  "SEC. 5 (Enactment)",
+                                            "text_summary":  "Effective immediately after passage/signature.",
+                                            "classes":  [
+                                                            "effective-date"
+                                                        ],
+                                            "treatment":  "effective-date-note",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œThis bill will take effect immediately after passageâ€",
+                                            "notes":  "Duplicate \u0027SECTION 5\u0027 numbering in source."
+                                        }
+                                    ],
+                     "current_implementation":  {
+                                                    "assessment":  "improperly-retained-despite-repeal",
+                                                    "dump_present":  true,
+                                                    "trello_present":  true,
+                                                    "false_source_limitation":  false,
+                                                    "placement":  "/us/usc/t50/s1",
+                                                    "detail":  "Full-text dump + Trello link at t50/s1 (wrong subject â€” legal profession/judiciary belongs in t28, not war/defense). Repealed; dump/Trello must be removed and placement corrected if a note is kept."
+                                                },
+                     "recommended_actions":  [
+                                                 "Remove full-text dump and Trello link from rp-pl007047-codification.",
+                                                 "Move any retained note out of t50 to title 28; mark repealed."
+                                             ],
+                     "confidence":  "high"
+                 },
+                 {
+                     "law_id":  "PL-007-048",
+                     "public_law":  "7-48",
+                     "title":  "Public Law 7-48 | OCJCS Reform Act of 2022",
+                     "status":  "fully-repealed",
+                     "status_basis":  "Listed under \u0027Repealed Laws\u0027. Internally permanent general (reorganizes Joint Chiefs / combatant commands); no self-repeal/sunset. Repeal external.",
+                     "provisions":  [
+                                        {
+                                            "ref":  "SEC 1",
+                                            "text_summary":  "Short title (OCJCS Reform Act of 2022).",
+                                            "classes":  [
+                                                            "short-title"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "/us/usc/t10",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œreferred to as â€˜OCJCS Reform Act of 2022.â€™â€",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC 2",
+                                            "text_summary":  "Abolishes Combatant Commander positions (except USSOCOM); remands duties to the Chairman JCS; grants JCS service chiefs operational authority over their forces.",
+                                            "classes":  [
+                                                            "new-permanent-general",
+                                                            "repeal"
+                                                        ],
+                                            "treatment":  "new-section",
+                                            "target":  "/us/usc/t10 (armed forces / JCS)",
+                                            "exact_change":  "Abolish geographic/specialized combatant-commander positions except USSOCOM; vest duties in Chairman; grant service chiefs operational authority.",
+                                            "evidence":  "â€œThe position of Combatant Commander for any geographic region or specialized skill-set, except for the United States Special Operations Command shall be abolished.â€",
+                                            "notes":  "Subsection labeled \u0027(b)\u0027 with no \u0027(a)\u0027 â€” drafting artifact."
+                                        },
+                                        {
+                                            "ref":  "SEC 3",
+                                            "text_summary":  "Severability; anti-supersession clause.",
+                                            "classes":  [
+                                                            "severability"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "/us/usc/t10",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œThis Act shall be severable...â€",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC 4",
+                                            "text_summary":  "Effective immediately upon passage of both chambers.",
+                                            "classes":  [
+                                                            "effective-date"
+                                                        ],
+                                            "treatment":  "effective-date-note",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œThis bill shall take effect immediately upon passage of both chambers of Congress.â€",
+                                            "notes":  ""
+                                        }
+                                    ],
+                     "current_implementation":  {
+                                                    "assessment":  "improperly-retained-despite-repeal",
+                                                    "dump_present":  true,
+                                                    "trello_present":  true,
+                                                    "false_source_limitation":  false,
+                                                    "placement":  "/us/usc/t50/s1",
+                                                    "detail":  "Full-text dump + Trello link at t50/s1. Subject (armed forces/JCS) fits title 10 better than t50. Repealed; dump/Trello must be removed."
+                                                },
+                     "recommended_actions":  [
+                                                 "Remove full-text dump and Trello link from rp-pl007048-codification.",
+                                                 "Move any retained note out of t50 to title 10; mark repealed."
+                                             ],
+                     "confidence":  "high"
+                 },
+                 {
+                     "law_id":  "PL-007-049",
+                     "public_law":  "7-49",
+                     "title":  "Public Law 7-49 | Legislative Initiative to Grow Monetary Access Act of 2022 (LIGMA Act)",
+                     "status":  "fully-repealed",
+                     "status_basis":  "Listed under \u0027Repealed Laws\u0027. Internally grants recurring in-game compensation to legislators (appropriation-like/ongoing pay); no self-repeal but duration clause makes it ongoing. Repeal external.",
+                     "provisions":  [
+                                        {
+                                            "ref":  "SEC 1",
+                                            "text_summary":  "Short title (LIGMA Act).",
+                                            "classes":  [
+                                                            "short-title"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "/us/usc/t2 or t31",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œentitled the â€˜Legislative Initiative to Grow Monetary Access Act of 2022â€™ (LIGMA Act).â€",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC 2",
+                                            "text_summary":  "Severability; anti-supersession clause.",
+                                            "classes":  [
+                                                            "severability"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œThis Act shall be severable...â€",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC 3",
+                                            "text_summary":  "Synopsis: grants in-game compensation to elected federal legislators.",
+                                            "classes":  [
+                                                            "findings-or-sense"
+                                                        ],
+                                            "treatment":  "exclude-from-code",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œThis act grants in-game compensation to elected federal legislative officialsâ€",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC 4",
+                                            "text_summary":  "Effective for members after next standard House election; references Amdt XXIII.",
+                                            "classes":  [
+                                                            "effective-date"
+                                                        ],
+                                            "treatment":  "effective-date-note",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œthis bill will become effective for Senators and Representatives... following the next standard electionâ€",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC 5",
+                                            "text_summary":  "Compensation changes: $450 in-game paychecks to House/Senate teams, disbursed every 900 seconds; continues in successor games.",
+                                            "classes":  [
+                                                            "appropriation",
+                                                            "temporary"
+                                                        ],
+                                            "treatment":  "exclude-from-code",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œthe â€˜House of Representativesâ€™ and â€˜Senateâ€™ teams shall receive paychecks of $450 in-gameâ€; â€œdisbursed every 900 seconds (15 minutes)â€",
+                                            "notes":  "In-game compensation â€” appropriation-like, not permanent Code."
+                                        },
+                                        {
+                                            "ref":  "SEC 6",
+                                            "text_summary":  "Purpose: parity of legislator pay with other in-game roles.",
+                                            "classes":  [
+                                                            "findings-or-sense"
+                                                        ],
+                                            "treatment":  "exclude-from-code",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œSenators and Representatives do not receive any in-game compensation. This is bizarre...â€",
+                                            "notes":  ""
+                                        }
+                                    ],
+                     "current_implementation":  {
+                                                    "assessment":  "improperly-retained-despite-repeal",
+                                                    "dump_present":  true,
+                                                    "trello_present":  true,
+                                                    "false_source_limitation":  false,
+                                                    "placement":  "/us/usc/t31/s101",
+                                                    "detail":  "Full-text dump + Trello link at t31 (money/finance â€” plausible for compensation). Repealed; content is appropriation-like in-game pay, not permanent section text. Dump/Trello must be removed."
+                                                },
+                     "recommended_actions":  [
+                                                 "Remove full-text dump and Trello link from rp-pl007049-codification.",
+                                                 "Exclude from permanent Code (in-game compensation/appropriation-like, repealed); keep at most a concise history note."
+                                             ],
+                     "confidence":  "high"
+                 },
+                 {
+                     "law_id":  "PL-007-050",
+                     "public_law":  "7-50",
+                     "title":  "Public Law 7-50 | Coast Guard Base Repurposing Act of 2022",
+                     "status":  "fully-repealed",
+                     "status_basis":  "Listed under \u0027Repealed Laws\u0027. Internally a one-time property-repurposing directive for a specific installation; no self-repeal/sunset. Repeal external.",
+                     "provisions":  [
+                                        {
+                                            "ref":  "SEC 1",
+                                            "text_summary":  "Short title (CGBR Act).",
+                                            "classes":  [
+                                                            "short-title"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œentitled the â€˜Coast Guard Base Repurposing Act of 2022â€™ (CGBR Act).â€",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC 2",
+                                            "text_summary":  "Severability; anti-supersession clause.",
+                                            "classes":  [
+                                                            "severability"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œThis Act shall be severable...â€",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC 3",
+                                            "text_summary":  "Definitions (\u0027Coast Guard Base\u0027, \u0027Washington, D.C. Remastered\u0027).",
+                                            "classes":  [
+                                                            "local-district"
+                                                        ],
+                                            "treatment":  "exclude-from-code",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œâ€˜Coast Guard Baseâ€™ refers to the installation serving the Coast Guard on the Potomac River at Washington, D.C. Remastered.â€",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC 4/6",
+                                            "text_summary":  "Repurposes a specific Coast Guard base to the Navy; transfers jurisdiction; directs signage/emblem changes.",
+                                            "classes":  [
+                                                            "local-district",
+                                                            "uncodified-admin-direction",
+                                                            "transfer"
+                                                        ],
+                                            "treatment":  "exclude-from-code",
+                                            "target":  "n/a (specific installation)",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œA base currently serving the Coast Guard shall be repurposed to a base for the United States Navy.â€",
+                                            "notes":  "One-time, site-specific administrative/property action."
+                                        },
+                                        {
+                                            "ref":  "SEC 5",
+                                            "text_summary":  "Effective on passage/signature; developers to make changes.",
+                                            "classes":  [
+                                                            "effective-date",
+                                                            "uncodified-admin-direction"
+                                                        ],
+                                            "treatment":  "effective-date-note",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œDevelopers for Washington, D.C. Remastered shall be expected to make the appropriate changes as soon as possible.â€",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC 7",
+                                            "text_summary":  "Purpose/findings: Coast Guard non-operational.",
+                                            "classes":  [
+                                                            "findings-or-sense"
+                                                        ],
+                                            "treatment":  "exclude-from-code",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "â€œthe United States Coast Guard is not operationalâ€",
+                                            "notes":  ""
+                                        }
+                                    ],
+                     "current_implementation":  {
+                                                    "assessment":  "improperly-retained-despite-repeal",
+                                                    "dump_present":  true,
+                                                    "trello_present":  true,
+                                                    "false_source_limitation":  false,
+                                                    "placement":  "/us/usc/t14/s101",
+                                                    "detail":  "Full-text dump + Trello link at t14 (Coast Guard â€” plausible subject). Note correctly recognizes local/individual character. Repealed; one-time property-repurposing action not suited to permanent Code. Dump/Trello must be removed."
+                                                },
+                     "recommended_actions":  [
+                                                 "Remove full-text dump and Trello link from rp-pl007050-codification.",
+                                                 "Exclude from permanent Code (site-specific property action, repealed); keep at most a concise history note."
+                                             ],
+                     "confidence":  "high"
+                 },
+                 {
+                     "law_id":  "PL-007-051",
+                     "public_law":  "7-51",
+                     "title":  "Public Law 7-51 | Federal Agent Law Training Mandate",
+                     "status":  "fully-repealed",
+                     "status_basis":  "The source is unrecoverable, and chronology does not justify inventing executable text; the law stays as a historical note only.",
+                     "provisions":  [
+                                        {
+                                            "ref":  "(whole act)",
+                                            "text_summary":  "Source-limited historical note only; no authenticated operative text was recovered.",
+                                            "classes":  [
+                                                            "history",
+                                                            "source-unavailable"
+                                                        ],
+                                            "treatment":  "historical-note-only",
+                                            "target":  "title 1 statutory note",
+                                            "exact_change":  "No verified operative text can be stated.",
+                                            "evidence":  "codification/mass_migration/latest/reports/laws/PL-007-051.md; usc/usc01.xml",
+                                            "notes":  "Branch-only note insertion at rp-pl007051-codification."
+                                        }
+                                    ],
+                     "current_implementation":  {
+                                                    "assessment":  "source-limited historical note",
+                                                    "dump_present":  false,
+                                                    "trello_present":  true,
+                                                    "false_source_limitation":  false,
+                                                    "placement":  "/us/usc/t1/s1",
+                                                    "detail":  "The branch records the law as history only; no authenticated enactment text was available."
+                                                },
+                     "recommended_actions":  [
+                                                 "Retain the historical note and do not invent operative text."
+                                             ],
+                     "confidence":  "high"
+                 }
+             ]
+}

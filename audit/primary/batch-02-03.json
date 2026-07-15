@@ -1,0 +1,756 @@
+{
+    "batch":  2,
+    "auditor":  "law-auditor-C",
+    "law_count":  10,
+    "laws":  [
+                 {
+                     "law_id":  "PL-007-051",
+                     "public_law":  "7-51",
+                     "title":  "Public Law 7-51 | Federal Agent Law Training Mandate",
+                     "status":  "unresolved",
+                     "status_basis":  "Source unrecoverable: manifest marks source_status \u0027unrecoverable\u0027 / text_extracted false, and law.txt does not exist. No statutory text available; no lawful codification conclusion possible. Listed under \u0027Repealed Laws\u0027 (external label only).",
+                     "provisions":  [
+                                        {
+                                            "ref":  "(whole act)",
+                                            "text_summary":  "Text unavailable — source deleted/not found; law.txt absent.",
+                                            "classes":  [
+                                                            "non-code"
+                                                        ],
+                                            "treatment":  "exclude-from-code",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "Manifest: source_status \u0027unrecoverable\u0027, source_reason \u0027Source deleted or not found\u0027; law.txt does not exist on disk.",
+                                            "notes":  "Source-limited; provisions cannot be enumerated."
+                                        }
+                                    ],
+                     "current_implementation":  {
+                                                    "assessment":  "incorrectly-implemented",
+                                                    "dump_present":  false,
+                                                    "trello_present":  true,
+                                                    "false_source_limitation":  false,
+                                                    "placement":  "/us/usc/t1/s1",
+                                                    "detail":  "Note asserts specific status/codification despite unrecoverable source — unsupported. Placed at t1/s1 (general provisions) as a default anchor. No dump. Trello link present."
+                                                },
+                     "recommended_actions":  [
+                                                 "Recover true source text before codification.",
+                                                 "Retain only a source-limited historical note (source unrecoverable); remove Trello link."
+                                             ],
+                     "confidence":  "medium"
+                 },
+                 {
+                     "law_id":  "PL-009-052",
+                     "public_law":  "9-52",
+                     "title":  "Public Law 9-52 | The Federal District Wages Act of 2022",
+                     "status":  "unresolved",
+                     "status_basis":  "Source unrecoverable: law.txt is Google-Drive access-denied debris. No statutory text available; no lawful codification conclusion possible. Listed under \u0027Repealed Laws\u0027 (external label only).",
+                     "provisions":  [
+                                        {
+                                            "ref":  "(whole act)",
+                                            "text_summary":  "Text unavailable — source is a Google Drive \u0027can’t download\u0027 page. Title suggests District wages.",
+                                            "classes":  [
+                                                            "non-code"
+                                                        ],
+                                            "treatment":  "exclude-from-code",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“Google Drive - Can\u0027t download file ... the owner hasn\u0027t given you permission to download this file.”",
+                                            "notes":  "Source-limited; provisions cannot be enumerated."
+                                        }
+                                    ],
+                     "current_implementation":  {
+                                                    "assessment":  "incorrectly-implemented",
+                                                    "dump_present":  false,
+                                                    "trello_present":  true,
+                                                    "false_source_limitation":  false,
+                                                    "placement":  "/us/usc/t29/s201",
+                                                    "detail":  "Note asserts specific status/codification despite unrecoverable source — unsupported. Placed at t29/s201 (labor/wages) as a subject guess. No dump. Trello link present."
+                                                },
+                     "recommended_actions":  [
+                                                 "Recover true source text before codification.",
+                                                 "Retain only a source-limited historical note (source unrecoverable); remove Trello link."
+                                             ],
+                     "confidence":  "medium"
+                 },
+                 {
+                     "law_id":  "PL-009-053",
+                     "public_law":  "9-53",
+                     "title":  "Public Law 9-53 | Save Our Businesses Act of 2022",
+                     "status":  "fully-repealed",
+                     "status_basis":  "Listed under \u0027Repealed Laws\u0027. Internally makes express repeals and amendments (including a direct amendment to 3 U.S.C. §301) and contains sunset-tagged detected language; no self-repeal but repealed externally. Its own amendments would need unwinding upon its repeal.",
+                     "provisions":  [
+                                        {
+                                            "ref":  "SEC. 1",
+                                            "text_summary":  "Short title (Save Our Businesses Act of 2022).",
+                                            "classes":  [
+                                                            "short-title"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“referred to as the ‘Save Our Businesses Act of 2022.’”",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. 2",
+                                            "text_summary":  "Repeals Public Law 7-40 (Media Protections Act) and Public Law 3-22 (District of Columbia Administration Act).",
+                                            "classes":  [
+                                                            "repeal"
+                                                        ],
+                                            "treatment":  "repeal-marking",
+                                            "target":  "PL 7-40 (in this batch) and PL 3-22",
+                                            "exact_change":  "Repeal PL 7-40 and PL 3-22 in their entirety.",
+                                            "evidence":  "“Public Law 7-40, the Media Protections Act is repealed. Public Law 3-22, the District of Columbia Administration Act is repealed.”",
+                                            "notes":  "Confirms fully-repealed status of PL 7-40 (this batch)."
+                                        },
+                                        {
+                                            "ref":  "SEC. 3",
+                                            "text_summary":  "Regulatory power of the Department of Commerce (draft policy, notify businesses, delegate authority, investigate, refer violations, require reporting).",
+                                            "classes":  [
+                                                            "new-permanent-general"
+                                                        ],
+                                            "treatment":  "new-section",
+                                            "target":  "/us/usc/t15 (commerce)",
+                                            "exact_change":  "Grant Commerce regulatory/enforcement powers over business licensing.",
+                                            "evidence":  "“The Secretary shall within 3 business days of passage: Draft sufficient policy, or issue regulations...”",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. 4",
+                                            "text_summary":  "Contract negotiations for issuance/renewal of business licenses; publication; optional arbitration.",
+                                            "classes":  [
+                                                            "new-permanent-general"
+                                                        ],
+                                            "treatment":  "new-section",
+                                            "target":  "/us/usc/t15",
+                                            "exact_change":  "",
+                                            "evidence":  "“Prior to the issuance, or renewal of a business license or registry, the Secretary shall: Negotiate a contract...”",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. 5",
+                                            "text_summary":  "EXPRESS AMENDMENT of 3 U.S.C. §301 (General authorization to delegate functions) — amends it to read a new expanded delegation text (adds authority to establish departments/agencies, suspend/transfer statutory authorities and personnel, transfer Capitol Police authority/personnel with congressional consent, require training/certification).",
+                                            "classes":  [
+                                                            "direct-amendment",
+                                                            "substitution"
+                                                        ],
+                                            "treatment":  "amend-existing-text",
+                                            "target":  "/us/usc/t3/s301",
+                                            "exact_change":  "Amend 3 U.S.C. §301 to read the quoted expanded text: retains existing delegation language and appends new clauses authorizing establishment of executive departments/agencies from existing authorities; suspension/transfer of statutory authorities and personnel; transfer/suspension of U.S. Capitol Police statutory authority and personnel with written consent of both principal congressional officers; and mandatory training/certification requirements.",
+                                            "evidence":  "“3 U.S. Code §301 - General authorization to delegate functions; publication of delegations is amended to read: The President of the United States is authorized to designate and empower...”",
+                                            "notes":  "THIS IS A REAL TEXTUAL AMENDMENT to a numbered USC section — must be an actual amend-existing-text, not a note. On PL 9-53\u0027s own repeal, this amendment\u0027s disposition must be resolved by the integrator."
+                                        },
+                                        {
+                                            "ref":  "SEC. 6",
+                                            "text_summary":  "Amends \u0027The Employees Termination Notification Act of 2021\u0027 by adding Section 5 (Presidential Exemption for terminating political appointees).",
+                                            "classes":  [
+                                                            "direct-amendment",
+                                                            "insertion"
+                                                        ],
+                                            "treatment":  "amend-existing-text",
+                                            "target":  "prior \u0027Employees Termination Notification Act of 2021\u0027 (non-USC-numbered target)",
+                                            "exact_change":  "Add new SEC. 5 (Presidential Exemption): President exempt from the act re: termination of political appointees.",
+                                            "evidence":  "“The Employees Termination Notification Act of 2021 is amended by adding an additional section (section 5)... (a) The President... is exempt from the provisions of this act in relation to the termination of political appointees.”",
+                                            "notes":  "Target act not identified as a USC section; integrator must locate."
+                                        },
+                                        {
+                                            "ref":  "SEC. 7",
+                                            "text_summary":  "Amends Section 5(c-d) of \u0027The Federal Metro Policing Act\u0027 (PL 9-60), striking and replacing with new text on administrative changes and MPD Executive Office Leadership composition.",
+                                            "classes":  [
+                                                            "direct-amendment",
+                                                            "substitution"
+                                                        ],
+                                            "treatment":  "amend-existing-text",
+                                            "target":  "PL 9-60 (in this batch), SEC. V(c)-(d)",
+                                            "exact_change":  "Strike Section 5(c-d) of the Federal Metro Policing Act and replace with the quoted text: (c) President/designee may provide administrative changes, prescribe logos/designs, establish divisions/bureaus/offices/chain of command; (d) MPD Executive Office Leadership = Chief, Deputy Chief, Assistant Chief, Commanders.",
+                                            "evidence":  "“Section 5 (c-d) of The Federal Metro Policing Act is stricken and shall now read as: (c) The President, or an authorized designee may provide for certain administrative changes...”",
+                                            "notes":  "Ordering oddity: 9-53 (seq 53) amends 9-60 (seq 60), which has a higher sequence — both in this batch. Flag for integrator; PL 9-60 is itself repealed (see 9-60)."
+                                        },
+                                        {
+                                            "ref":  "SEC. 8 (Status)",
+                                            "text_summary":  "Recognizes the District of Columbia as a political subdivision of the Federal Government; Congress asserts authority over former municipal entities.",
+                                            "classes":  [
+                                                            "new-permanent-general",
+                                                            "local-district"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "/us/usc/t4 or DC-related",
+                                            "exact_change":  "",
+                                            "evidence":  "“The District of Columbia shall be recognized as a political subdivision of the Federal Government of the United States.”",
+                                            "notes":  "Two sections numbered \u0027SECTION 8\u0027 in source."
+                                        },
+                                        {
+                                            "ref":  "SEC. 8 (Definitions)",
+                                            "text_summary":  "Statutory definitions (\u0027The Secretary\u0027, \u0027Principal officers\u0027, \u0027Political appointee\u0027).",
+                                            "classes":  [
+                                                            "new-permanent-general"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“‘The Secretary’ refers to the Secretary of Commerce...”",
+                                            "notes":  "Duplicate SECTION 8 numbering in source."
+                                        },
+                                        {
+                                            "ref":  "SEC. 9",
+                                            "text_summary":  "Severability; anti-supersession clause.",
+                                            "classes":  [
+                                                            "severability"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“This act shall be severable...”",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. 10",
+                                            "text_summary":  "Immediate effective date on passage.",
+                                            "classes":  [
+                                                            "effective-date"
+                                                        ],
+                                            "treatment":  "effective-date-note",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“This act shall immediately take effect upon passage.”",
+                                            "notes":  ""
+                                        }
+                                    ],
+                     "current_implementation":  {
+                                                    "assessment":  "note-only-but-amendment-required",
+                                                    "dump_present":  true,
+                                                    "trello_present":  true,
+                                                    "false_source_limitation":  false,
+                                                    "placement":  "/us/usc/t3/s1",
+                                                    "detail":  "Full-text dump + Trello link at t3/s1. Note says \u0027Operative amendments are integrated where determinable,\u0027 but the draft only added a note; the express amendment to 3 U.S.C. §301 (SEC. 5) was NOT performed as actual textual amendment. Placement at t3/s1 is generic; the §301 amendment target is t3/s301. Because PL 9-53 is itself repealed, the integrator must decide whether its §301 amendment survives or is unwound."
+                                                },
+                     "recommended_actions":  [
+                                                 "Perform the actual textual amendment of 3 U.S.C. §301 per SEC. 5 (or, given PL 9-53\u0027s repeal, resolve whether the amendment is unwound) — do not leave it as a note.",
+                                                 "Record express repeals of PL 7-40 and PL 3-22 (SEC. 2) as repeal-marking/history.",
+                                                 "Record SEC. 6 and SEC. 7 amendments to the Employees Termination Notification Act and PL 9-60 as amendments/history; flag the 9-53→amends→9-60 ordering oddity.",
+                                                 "Remove full-text dump and Trello link from rp-pl009053-codification; move the §301 change to t3/s301."
+                                             ],
+                     "confidence":  "high"
+                 },
+                 {
+                     "law_id":  "PL-009-054",
+                     "public_law":  "9-54",
+                     "title":  "Public Law 9-54 | The Smart Label Congress Act",
+                     "status":  "unresolved",
+                     "status_basis":  "Source unrecoverable: law.txt is Google-Drive access-denied debris. No statutory text available; no lawful codification conclusion possible. Listed under \u0027Repealed Laws\u0027 (external label only).",
+                     "provisions":  [
+                                        {
+                                            "ref":  "(whole act)",
+                                            "text_summary":  "Text unavailable — source is a Google Drive \u0027can’t download\u0027 page.",
+                                            "classes":  [
+                                                            "non-code"
+                                                        ],
+                                            "treatment":  "exclude-from-code",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“Google Drive - Can\u0027t download file ... the owner hasn\u0027t given you permission to download this file.”",
+                                            "notes":  "Source-limited; provisions cannot be enumerated."
+                                        }
+                                    ],
+                     "current_implementation":  {
+                                                    "assessment":  "incorrectly-implemented",
+                                                    "dump_present":  false,
+                                                    "trello_present":  true,
+                                                    "false_source_limitation":  false,
+                                                    "placement":  "/us/usc/t2/s1",
+                                                    "detail":  "Note asserts specific status/codification despite unrecoverable source — unsupported. Placed at t2/s1 (Congress) as a subject guess. No dump. Trello link present."
+                                                },
+                     "recommended_actions":  [
+                                                 "Recover true source text before codification.",
+                                                 "Retain only a source-limited historical note (source unrecoverable); remove Trello link."
+                                             ],
+                     "confidence":  "medium"
+                 },
+                 {
+                     "law_id":  "PL-009-055",
+                     "public_law":  "9-55",
+                     "title":  "Public Law 9-55 | Economic Sanctions on Iran Act of 2022",
+                     "status":  "fully-repealed",
+                     "status_basis":  "Listed under \u0027Repealed Laws\u0027. Internally levies sanctions with a lift-on-conditions/repeal clause; no self-repeal/sunset. Repeal external.",
+                     "provisions":  [
+                                        {
+                                            "ref":  "SEC. 1",
+                                            "text_summary":  "Short title (Economic Sanctions on Iran Act of 2022).",
+                                            "classes":  [
+                                                            "short-title"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "/us/usc/t22 (foreign relations)",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“referred to as the Economic Sanctions on Iran Act of 2022.”",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. 2",
+                                            "text_summary":  "Purpose: levy sanctions to encourage Iran to cease nuclear proliferation.",
+                                            "classes":  [
+                                                            "findings-or-sense"
+                                                        ],
+                                            "treatment":  "exclude-from-code",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“to levy sanctions on the Islamic Republic of Iran, with the aim of encouraging them to cease nuclear proliferation.”",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. 3",
+                                            "text_summary":  "Provisions: economic sanctions levied against Iran; lifted upon Iran ceasing uranium enrichment/proliferation or if the bill is repealed.",
+                                            "classes":  [
+                                                            "new-permanent-general"
+                                                        ],
+                                            "treatment":  "new-section",
+                                            "target":  "/us/usc/t22 (sanctions)",
+                                            "exact_change":  "Impose sanctions on Iran; conditional lift.",
+                                            "evidence":  "“economic sanctions will be levied by the United States of America against the Islamic Republic of Iran.”; “These sanctions will be lifted upon the Islamic Republic of Iran agreeing to cease uranium enrichment... or if this bill is repealed.”",
+                                            "notes":  "\u0027or if this bill is repealed\u0027 — given external repeal, the sanctions are lifted by the law\u0027s own terms."
+                                        },
+                                        {
+                                            "ref":  "SEC. 6 (Enactment)",
+                                            "text_summary":  "Effective immediately after passage/signature.",
+                                            "classes":  [
+                                                            "effective-date"
+                                                        ],
+                                            "treatment":  "effective-date-note",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“This bill will take effect immediately after passage”",
+                                            "notes":  "Section numbering jumps to 6."
+                                        }
+                                    ],
+                     "current_implementation":  {
+                                                    "assessment":  "improperly-retained-despite-repeal",
+                                                    "dump_present":  true,
+                                                    "trello_present":  true,
+                                                    "false_source_limitation":  false,
+                                                    "placement":  "/us/usc/t22/s2651",
+                                                    "detail":  "Full-text dump + Trello link at t22 (foreign relations — correct subject). Repealed (and self-lifting on repeal); dump/Trello must be removed; concise history note is warranted."
+                                                },
+                     "recommended_actions":  [
+                                                 "Remove full-text dump and Trello link from rp-pl009055-codification.",
+                                                 "Retain a concise historical note in title 22 (sanctions lifted by the Act\u0027s own terms on repeal)."
+                                             ],
+                     "confidence":  "high"
+                 },
+                 {
+                     "law_id":  "PL-009-056",
+                     "public_law":  "9-56",
+                     "title":  "Public Law 9-56 | Federal Judicial Reform Act",
+                     "status":  "fully-repealed",
+                     "status_basis":  "Listed under \u0027Repealed Laws\u0027. Internally permanent general (structures Supreme Court, District Court, magistrates); no self-repeal/sunset. Repeal external.",
+                     "provisions":  [
+                                        {
+                                            "ref":  "SEC. 1",
+                                            "text_summary":  "Short title (Federal Judicial Reform Act of 2022).",
+                                            "classes":  [
+                                                            "short-title"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "/us/usc/t28",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“cited as the ‘Federal Judicial Reform Act of 2022’.”",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. 2",
+                                            "text_summary":  "Purpose: reform the Federal Judiciary.",
+                                            "classes":  [
+                                                            "findings-or-sense"
+                                                        ],
+                                            "treatment":  "exclude-from-code",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“Reform the Federal Judiciary”",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. 3",
+                                            "text_summary":  "Definitions (Supreme Court, Federal Circuit Court of DC, Federal District Court).",
+                                            "classes":  [
+                                                            "new-permanent-general"
+                                                        ],
+                                            "treatment":  "new-section",
+                                            "target":  "/us/usc/t28",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“The Supreme Court, the highest court of the land.”",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. 4",
+                                            "text_summary":  "Supreme Court: 7 Justices incl. Chief; nomination with Senate consent; jurisdiction; Chief Justice as head of Judicial Branch; monthly Judicial Conference; Code of Ethics updates.",
+                                            "classes":  [
+                                                            "new-permanent-general"
+                                                        ],
+                                            "treatment":  "new-section",
+                                            "target":  "/us/usc/t28",
+                                            "exact_change":  "Set Supreme Court composition/jurisdiction.",
+                                            "evidence":  "“The Supreme Court shall consist of seven (7) Justices including the Chief Justice”",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. 5",
+                                            "text_summary":  "Establishes the United States District Court (1 Chief Judge, 2 Senior Admin Judges, 4 Standard Judges); sole federal district court for DC; original jurisdiction.",
+                                            "classes":  [
+                                                            "new-permanent-general"
+                                                        ],
+                                            "treatment":  "new-section",
+                                            "target":  "/us/usc/t28",
+                                            "exact_change":  "Establish U.S. District Court composition.",
+                                            "evidence":  "“The United States District Court shall be hereby established.”",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. 6",
+                                            "text_summary":  "Four magistrates under the District Court; nominated by Chief Judge, confirmed by District Court Panel.",
+                                            "classes":  [
+                                                            "new-permanent-general"
+                                                        ],
+                                            "treatment":  "new-section",
+                                            "target":  "/us/usc/t28",
+                                            "exact_change":  "",
+                                            "evidence":  "“There shall only be four (4) magistrates under the United States District Court”",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. 7",
+                                            "text_summary":  "Applicability: does not remove/affect any current Justice, District Court judge, or magistrate.",
+                                            "classes":  [
+                                                            "applicability",
+                                                            "savings"
+                                                        ],
+                                            "treatment":  "savings-note",
+                                            "target":  "/us/usc/t28",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“This statue shall not be applied in a manner that shall remove or otherwise affect any person currently a Justice...”",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. 8",
+                                            "text_summary":  "Effective immediately after passage/signature.",
+                                            "classes":  [
+                                                            "effective-date"
+                                                        ],
+                                            "treatment":  "effective-date-note",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“This bill will take effect immediately after passage”",
+                                            "notes":  ""
+                                        }
+                                    ],
+                     "current_implementation":  {
+                                                    "assessment":  "improperly-retained-despite-repeal",
+                                                    "dump_present":  true,
+                                                    "trello_present":  true,
+                                                    "false_source_limitation":  false,
+                                                    "placement":  "/us/usc/t50/s1",
+                                                    "detail":  "Full-text dump + Trello link at t50/s1 (wrong subject — judiciary belongs in title 28, not war/defense). Repealed; dump/Trello must be removed and placement corrected if a note is kept."
+                                                },
+                     "recommended_actions":  [
+                                                 "Remove full-text dump and Trello link from rp-pl009056-codification.",
+                                                 "Move any retained note out of t50 to title 28; mark repealed."
+                                             ],
+                     "confidence":  "high"
+                 },
+                 {
+                     "law_id":  "PL-009-057",
+                     "public_law":  "9-57",
+                     "title":  "Public Law 9-57 | Repealing S.B.1/Pub. Law 7-39",
+                     "status":  "current",
+                     "status_basis":  "Listed under \u0027Repealed Laws\u0027 but the Act itself is a pure repealer whose operative effect (repeal of PL 7-39 and revival of prior law) is spent/self-executing; it enacts no permanent general text. Treated as \u0027current\u0027 in the sense that its repeal effect stands. (If the batch intends 9-57 itself to be repealed, the repeal effect on 7-39 nonetheless already executed.)",
+                     "provisions":  [
+                                        {
+                                            "ref":  "SEC. 1",
+                                            "text_summary":  "Short title (Repealment of S.B.1/Public Law 7-39).",
+                                            "classes":  [
+                                                            "short-title"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“cited as the ‘Repealment of S.B.1/Public Law 7-39’.”",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. 3 (Purpose)",
+                                            "text_summary":  "Purpose: repeal S.B.1 (FLETC) as superfluous.",
+                                            "classes":  [
+                                                            "findings-or-sense"
+                                                        ],
+                                            "treatment":  "exclude-from-code",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“The purpose of this act is to repeal S.B.1...”",
+                                            "notes":  "Duplicate \u0027SEC. 3\u0027 numbering (Purpose and Definitions)."
+                                        },
+                                        {
+                                            "ref":  "SEC. 3 (Definitions)",
+                                            "text_summary":  "Defines \u0027Repealment.\u0027",
+                                            "classes":  [
+                                                            "new-permanent-general"
+                                                        ],
+                                            "treatment":  "exclude-from-code",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“REPEALMENT - ‘revoke or annul (a law or congressional act).’”",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. 4",
+                                            "text_summary":  "REPEALS PL 7-39 (Mandatory FLETC Training) in its entirety and revives prior law as if 7-39 had never been enacted.",
+                                            "classes":  [
+                                                            "repeal",
+                                                            "savings"
+                                                        ],
+                                            "treatment":  "repeal-marking",
+                                            "target":  "PL 7-39 (in this batch)",
+                                            "exact_change":  "Repeal PL 7-39 entirely; restore/revive prior law amended or repealed by it as if not enacted.",
+                                            "evidence":  "“S.B.1- Mandatory FLETC Training/Public Law 7-39 is repealed, and the provisions of law amended or repealed by that act are restored or revived as if the act had not been enacted.”",
+                                            "notes":  "Operative repeal; confirms fully-repealed status of PL 7-39."
+                                        }
+                                    ],
+                     "current_implementation":  {
+                                                    "assessment":  "incorrectly-implemented",
+                                                    "dump_present":  false,
+                                                    "trello_present":  true,
+                                                    "false_source_limitation":  false,
+                                                    "placement":  "/us/usc/t54/s100101/b/2",
+                                                    "detail":  "Note placed at t54/s100101/b/2 (National Park Service organic act) — wrong subject; a FLETC/law-enforcement-training repealer has no connection to title 54. No dump. Trello link present. The repeal effect on PL 7-39 should be recorded as an amendment/repeal history note tied to PL 7-39\u0027s placement, not at t54."
+                                                },
+                     "recommended_actions":  [
+                                                 "Remove Trello link from rp-pl009057-codification and correct placement out of t54.",
+                                                 "Record the repeal of PL 7-39 (and revival of prior law) as a repeal/history note associated with PL 7-39\u0027s anchor."
+                                             ],
+                     "confidence":  "high"
+                 },
+                 {
+                     "law_id":  "PL-009-058",
+                     "public_law":  "9-58",
+                     "title":  "Public Law 9-58 | To Bar PhillipRobecq From Public Office",
+                     "status":  "fully-repealed",
+                     "status_basis":  "Listed under \u0027Repealed Laws\u0027. This is a private/individual bill of attainder-style measure targeting one named person; no self-repeal/sunset. Repeal external. Inherently not general permanent law.",
+                     "provisions":  [
+                                        {
+                                            "ref":  "SEC. I",
+                                            "text_summary":  "Short title (HJR 1 - To Bar PhilipRobecq From Public Office).",
+                                            "classes":  [
+                                                            "short-title"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“cited as the ‘HJR 1 - To Bar PhilipRobecq From Public Office’.”",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. II",
+                                            "text_summary":  "Severability; anti-supersession clause.",
+                                            "classes":  [
+                                                            "severability"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“This Act shall be severable...”",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. III",
+                                            "text_summary":  "Effective on majority approval of both chambers.",
+                                            "classes":  [
+                                                            "effective-date"
+                                                        ],
+                                            "treatment":  "effective-date-note",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“This Act shall become effective following a majority approval”",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. IV / V",
+                                            "text_summary":  "Bars named individual PhilipRobecq from public office; details of barment (may join law enforcement/Fire/EMS/military but barred from leadership/commissioned-officer roles).",
+                                            "classes":  [
+                                                            "private-relief",
+                                                            "local-district"
+                                                        ],
+                                            "treatment":  "exclude-from-code",
+                                            "target":  "n/a (individual)",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“PhilipRobecq, shall be hereby barred from holding any public office under the seal of the United States.”",
+                                            "notes":  "Private/individual measure; not codifiable as permanent general law. (Also duplicate \u0027SECTION V\u0027 numbering.)"
+                                        }
+                                    ],
+                     "current_implementation":  {
+                                                    "assessment":  "improperly-retained-despite-repeal",
+                                                    "dump_present":  false,
+                                                    "trello_present":  true,
+                                                    "false_source_limitation":  false,
+                                                    "placement":  "/us/usc/t46/s101",
+                                                    "detail":  "Note placed at t46/s101 (shipping) — wrong subject for an individual barment measure. Note correctly recognizes individual character in its codification prose. No dump. Trello link present. Repealed and inherently non-codifiable (private relief / bill-of-attainder-style)."
+                                                },
+                     "recommended_actions":  [
+                                                 "Remove Trello link from rp-pl009058-codification and correct placement out of t46.",
+                                                 "Exclude from permanent Code (private/individual measure, repealed); keep at most a concise historical note."
+                                             ],
+                     "confidence":  "high"
+                 },
+                 {
+                     "law_id":  "PL-009-059",
+                     "public_law":  "9-59",
+                     "title":  "Public Law 9-59 | M.P.D Act",
+                     "status":  "fully-repealed",
+                     "status_basis":  "Expressly repealed by PL 9-60 (also in this batch), SEC. IV(b): \u0027H.R. 8 - The MPD Act shall be hereby repealed.\u0027 Also listed under \u0027Repealed Laws\u0027.",
+                     "provisions":  [
+                                        {
+                                            "ref":  "SEC. I",
+                                            "text_summary":  "Short title (M.P.D Act).",
+                                            "classes":  [
+                                                            "short-title"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“cited as the ‘M.P.D Act’”",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. II",
+                                            "text_summary":  "Severability; anti-supersession clause.",
+                                            "classes":  [
+                                                            "severability"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“This Act shall be severable...”",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. III",
+                                            "text_summary":  "Effective on majority approval and Presidential signature.",
+                                            "classes":  [
+                                                            "effective-date"
+                                                        ],
+                                            "treatment":  "effective-date-note",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“This Act shall become effective following a majority approval by both the Senate and House of Representatives and signed by the President”",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. IV",
+                                            "text_summary":  "Places the DC Metropolitan Police Department under DOJ jurisdiction; MPD operates as an LEA under DOJ; Chief of Police nominated by President, confirmed by Senate.",
+                                            "classes":  [
+                                                            "local-district",
+                                                            "new-permanent-general"
+                                                        ],
+                                            "treatment":  "exclude-from-code",
+                                            "target":  "n/a (repealed by PL 9-60)",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“The Metropolitan Police Department of Washington District of Columbia shall be placed under the Jurisdiction of the Department of Justice.”",
+                                            "notes":  "Superseded/repealed by PL 9-60\u0027s Federal Metro Policing scheme."
+                                        }
+                                    ],
+                     "current_implementation":  {
+                                                    "assessment":  "improperly-retained-despite-repeal",
+                                                    "dump_present":  false,
+                                                    "trello_present":  true,
+                                                    "false_source_limitation":  false,
+                                                    "placement":  "/us/usc/t40/s101/4",
+                                                    "detail":  "Note at t40 correctly recognizes local character. Expressly repealed by PL 9-60. No dump. Trello link present. Because it is repealed and superseded, only a concise history note is warranted."
+                                                },
+                     "recommended_actions":  [
+                                                 "Remove Trello link from rp-pl009059-codification.",
+                                                 "Reflect express repeal by PL 9-60; exclude from permanent Code (local, repealed); keep at most a concise history note."
+                                             ],
+                     "confidence":  "high"
+                 },
+                 {
+                     "law_id":  "PL-009-060",
+                     "public_law":  "9-60",
+                     "title":  "Public Law 9-60 | The Federal Metro Policing Act",
+                     "status":  "fully-repealed",
+                     "status_basis":  "Listed under \u0027Repealed Laws\u0027. Internally repeals PL 9-59 and reorganizes the MPD under DOJ; no self-repeal/sunset. Also expressly amended by PL 9-53 SEC. 7 (strikes/replaces its Section 5(c-d)). Repeal external.",
+                     "provisions":  [
+                                        {
+                                            "ref":  "SEC. I",
+                                            "text_summary":  "Short title (S.B. 20 - The Federal Metro Policing Act).",
+                                            "classes":  [
+                                                            "short-title"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“cited as the ‘S.B. 20- The Federal Metro Policing Act’.”",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. II",
+                                            "text_summary":  "Severability; anti-supersession clause.",
+                                            "classes":  [
+                                                            "severability"
+                                                        ],
+                                            "treatment":  "statutory-note",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“This Act shall be severable...”",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. III",
+                                            "text_summary":  "Effective on majority approval and Presidential signature.",
+                                            "classes":  [
+                                                            "effective-date"
+                                                        ],
+                                            "treatment":  "effective-date-note",
+                                            "target":  "n/a",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“This Act shall become effective following a majority approval by both the Senate and House”",
+                                            "notes":  ""
+                                        },
+                                        {
+                                            "ref":  "SEC. IV",
+                                            "text_summary":  "Provisions: enacts S.B. 20; REPEALS \u0027H.R. 8 - The MPD Act\u0027 (PL 9-59).",
+                                            "classes":  [
+                                                            "repeal",
+                                                            "local-district"
+                                                        ],
+                                            "treatment":  "repeal-marking",
+                                            "target":  "PL 9-59 (in this batch)",
+                                            "exact_change":  "Repeal H.R. 8 - The MPD Act (PL 9-59).",
+                                            "evidence":  "“H.R. 8 - The MPD Act shall be hereby repealed.”",
+                                            "notes":  "Confirms fully-repealed status of PL 9-59."
+                                        },
+                                        {
+                                            "ref":  "SEC. V",
+                                            "text_summary":  "Metropolitan Police Department placed under DOJ as a sub-agency; dual-employment restrictions; Chief of Police appointed by President (no Senate confirmation) and ex-officio Capitol Police Board member; three bureaus with detailed rank structures; Executive Office Leadership; removal provisions; MPD recognized as Federal LEA. NOTE: Section 5(c-d) here is stricken/replaced by PL 9-53 SEC. 7.",
+                                            "classes":  [
+                                                            "local-district",
+                                                            "new-permanent-general"
+                                                        ],
+                                            "treatment":  "exclude-from-code",
+                                            "target":  "n/a (repealed; local MPD org)",
+                                            "exact_change":  "n/a",
+                                            "evidence":  "“The Metropolitan Police Department shall be under the seal and authority of the Department of Justice.”; “The Chief of Police shall be a position appointed by the President... and shall not be subject to senate confirmation.”",
+                                            "notes":  "Subsections (c)-(d) were amended by PL 9-53 SEC. 7 (an ordering oddity, since 9-53 is a lower sequence number than 9-60). Whole act now repealed."
+                                        }
+                                    ],
+                     "current_implementation":  {
+                                                    "assessment":  "improperly-retained-despite-repeal",
+                                                    "dump_present":  true,
+                                                    "trello_present":  true,
+                                                    "false_source_limitation":  false,
+                                                    "placement":  "/us/usc/t50/s1",
+                                                    "detail":  "Full-text dump + Trello link at t50/s1 (wrong subject — local DC police organization, not war/defense). Repealed; dump/Trello must be removed. Cross-amendment interplay with PL 9-53 SEC. 7 and repeal of PL 9-59 should be captured as history."
+                                                },
+                     "recommended_actions":  [
+                                                 "Remove full-text dump and Trello link from rp-pl009060-codification.",
+                                                 "Exclude from permanent Code (local DC police org, repealed); keep at most a concise history note; capture repeal of PL 9-59 and the PL 9-53 SEC. 7 amendment interplay.",
+                                                 "Correct placement out of t50."
+                                             ],
+                     "confidence":  "high"
+                 }
+             ]
+}
