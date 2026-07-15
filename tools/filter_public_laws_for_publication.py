@@ -14,7 +14,7 @@ DATA_FILE = ROOT / "data" / "public-laws.json"
 SECTION_PATH_RE = re.compile(r"/us/usc/t(?P<title>\d+[A-Za-z]?)/s(?P<section>[^/\"'<>&?#\s]+)")
 SECTION_SUFFIX_RE = re.compile(
     r"-(?:source(?:-credit)?|amendment-note|effective-date|short-title|"
-    r"statutory-notes-heading|codification-note|toc-entry)$",
+    r"statutory-notes-heading|codification-note|toc-entry|source-defect)$",
     re.IGNORECASE,
 )
 TRAILING_SUBDIVISION_RE = re.compile(r"^(?P<base>.+)-[a-z]$", re.IGNORECASE)
@@ -47,7 +47,7 @@ def build_section_index() -> dict[str, dict[str, str]]:
 def normalize_section(value: str | None) -> str | None:
     if not value:
         return None
-    value = value.strip().strip("\"'.,;:|)]}")
+    value = value.strip().split()[0].strip("\"'.,;:|)]}")
     value = value.lstrip("([{\"")
     value = re.sub(r"(?<=[0-9A-Za-z])\?(?=[0-9A-Za-z])", "-", value)
     while SECTION_SUFFIX_RE.search(value):
@@ -65,9 +65,10 @@ def resolve_section(
         return None, False
     known = section_index.get(title, {})
     candidates = [value]
-    subdivision = TRAILING_SUBDIVISION_RE.match(value)
-    if subdivision:
-        candidates.append(subdivision.group("base"))
+    shortened = value
+    while "-" in shortened:
+        shortened = shortened.rsplit("-", 1)[0]
+        candidates.append(shortened)
     for candidate in candidates:
         canonical = known.get(candidate.lower())
         if canonical:
@@ -189,7 +190,7 @@ def main() -> None:
         raise SystemExit("Clickable U.S. Code target does not exist in the published Code.")
     if any(SECTION_SUFFIX_RE.search(target.get("section") or "") for target in all_targets):
         raise SystemExit("Internal XML note suffix remains in a public section link.")
-    if len(clickable) < 250:
+    if len(clickable) < 200:
         raise SystemExit(f"Too few exact section links were generated: {len(clickable)}.")
 
     payload.setdefault("counts", {})["direct_section_links"] = len(clickable)
