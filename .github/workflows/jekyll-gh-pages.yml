@@ -65,6 +65,7 @@ jobs:
           python tools/build_title42_chunks.py
           python tools/build_index.py
           python tools/build_public_laws_index.py
+          python tools/filter_public_laws_for_publication.py
           test -s data/titles.json
           test -s data/title-42/manifest.json
           test -s data/public-laws.json
@@ -92,6 +93,11 @@ jobs:
           assert len(payload['laws']) == 270
           assert all(law['status'] in {'active', 'repealed'} for law in payload['laws'])
           assert all(law['actions'] is not None for law in payload['laws'])
+          assert all(
+              action['result_label'] == 'Historical disposition'
+              for law in payload['laws'] if law['status'] == 'repealed'
+              for action in law['actions']
+          )
           print('Public-law index validation passed.')
           PY
 
