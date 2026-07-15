@@ -1,0 +1,2878 @@
+{
+  "source": "uploaded laws.zip/laws/audit.json",
+  "baseline_commit": "00ea0e9b430e4a2eb2253a77d35e6fb125ba5f46",
+  "mode": "apply",
+  "changed_xml_files": [
+    "usc/usc01.xml",
+    "usc/usc02.xml",
+    "usc/usc03.xml",
+    "usc/usc05.xml",
+    "usc/usc08.xml",
+    "usc/usc10.xml",
+    "usc/usc14.xml",
+    "usc/usc18.xml",
+    "usc/usc20.xml",
+    "usc/usc22.xml",
+    "usc/usc26.xml",
+    "usc/usc28.xml",
+    "usc/usc29.xml",
+    "usc/usc31.xml",
+    "usc/usc38.xml",
+    "usc/usc40.xml",
+    "usc/usc46.xml",
+    "usc/usc49.xml",
+    "usc/usc50.xml",
+    "usc/usc54.xml"
+  ],
+  "summary": {
+    "repealed_laws_checked": 129,
+    "clean": 119,
+    "manual_review_required": 2,
+    "errors": 8,
+    "nodes_removed": 165,
+    "nodes_restored": 5,
+    "notes_rewritten": 121,
+    "later_active_replacements": 0
+  },
+  "laws": [
+    {
+      "law_id": "PL-001-002",
+      "public_law": "1-2",
+      "title": "United States Bar Act",
+      "actions": 5,
+      "retained": {},
+      "conflicts": [
+        {
+          "file": "usc/usc28.xml",
+          "node": "rp-pl001002-codification",
+          "reason": "missing repeal-history note"
+        }
+      ],
+      "errors": [
+        "no repeal-history note found"
+      ],
+      "disposition": "error",
+      "files": [
+        "usc/usc28.xml"
+      ],
+      "nodes_removed": [
+        "rp-pl001002-t28-s530E",
+        "rp-pl001002-t28-s530E-a",
+        "rp-pl001002-t28-s530E-b",
+        "rp-pl001002-t28-s530E-c",
+        "rp-pl001002-t28-s530E-effective-date",
+        "rp-pl001002-t28-s530E-notes",
+        "rp-pl001002-t28-s530E-short-title",
+        "rp-pl001002-t28-s530E-source",
+        "rp-pl001002-t28-s530E-statutory-notes-heading"
+      ],
+      "nodes_restored": [],
+      "notes_rewritten": [],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-001-004",
+      "public_law": "1-4",
+      "title": "Retracting of Resignations Act",
+      "actions": 3,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc18.xml"
+      ],
+      "nodes_removed": [
+        "rp-pl001004-t18-s918",
+        "rp-pl001004-t18-s918-a",
+        "rp-pl001004-t18-s918-b",
+        "rp-pl001004-t18-s918-notes",
+        "rp-pl001004-t18-s918-source",
+        "rp-pl001004-t18-s918-source-defect"
+      ],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl001004-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-002-005",
+      "public_law": "2-5",
+      "title": "Judicial Efficiency Act (Keywords: Maximum, Minimum, Sentence, Sentencing)",
+      "actions": 3,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc18.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl002005-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-002-006",
+      "public_law": "2-6",
+      "title": "Shelby-Kabob Act of 2021",
+      "actions": 4,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc18.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl002006-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-002-007",
+      "public_law": "2-7",
+      "title": "Court of Appeals Temporary Suspension Act of 2021",
+      "actions": 3,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc28.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl002007-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-002-008",
+      "public_law": "2-8",
+      "title": "National Security Act of 2021",
+      "actions": 7,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc50.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl002008-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-002-009",
+      "public_law": "2-9",
+      "title": "District of Columbia City Charter",
+      "actions": 5,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc40.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl002009-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-002-010",
+      "public_law": "2-10",
+      "title": "Amendment to the District of Columbia City Charter",
+      "actions": 2,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc40.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl002010-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-002-011",
+      "public_law": "2-11",
+      "title": "Criminal Statute of Limitations Act",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc18.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl002011-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-002-012",
+      "public_law": "2-12",
+      "title": "Fee Prohibition Act",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc50.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl002012-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-002-013",
+      "public_law": "2-13",
+      "title": "The Employees Termination Notification Act of 2021",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc05.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl002013-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-002-014",
+      "public_law": "2-14",
+      "title": "National Federal Torts Act",
+      "actions": 2,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc28.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl002014-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-003-015",
+      "public_law": "3-15",
+      "title": "Admission to the United Nations Act",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc22.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl003015-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-003-016",
+      "public_law": "3-16",
+      "title": "The Capitol Police Establishment",
+      "actions": 2,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc18.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl003016-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-003-017",
+      "public_law": "3-17",
+      "title": "The Diplomatic Protections Act",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc22.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl003017-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-003-018",
+      "public_law": "3-18",
+      "title": "Amendment to S.12",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc50.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl003018-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-003-020",
+      "public_law": "3-20",
+      "title": "National Immigration Employment Act of 2021",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [
+        {
+          "file": "usc/usc08.xml",
+          "node": "rp-pl003020-codification",
+          "reason": "missing repeal-history note"
+        }
+      ],
+      "errors": [
+        "no repeal-history note found"
+      ],
+      "disposition": "error",
+      "files": [
+        "usc/usc08.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-003-022",
+      "public_law": "3-22",
+      "title": "District of Columbia Administration Act",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc40.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl003022-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-003-023",
+      "public_law": "3-23",
+      "title": "Federal Law Enforcement Training Center Establishment Act",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc18.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl003023-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-003-024",
+      "public_law": "3-24",
+      "title": "Judgeship Reducation Act of 2022",
+      "actions": 3,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc28.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl003024-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-003-025",
+      "public_law": "3-25",
+      "title": "CRACK Act",
+      "actions": 2,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc18.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl003025-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-004-026",
+      "public_law": "4-26",
+      "title": "H.J. Res. 06 (Keywords: Tigray)",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc50.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl004026-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-004-027",
+      "public_law": "4-27",
+      "title": "Right to Security Act of 2022",
+      "actions": 2,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc18.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl004027-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-004-028",
+      "public_law": "4-28",
+      "title": "House Veterans Affairs Act",
+      "actions": 2,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc38.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl004028-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-004-029",
+      "public_law": "4-29",
+      "title": "Department of Commerce and Labor Act of 2022",
+      "actions": 2,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc29.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl004029-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-004-030",
+      "public_law": "4-30",
+      "title": "Fugitive Justice Reform Act",
+      "actions": 2,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc18.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl004030-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-004-031",
+      "public_law": "4-31",
+      "title": "Stand Your Ground Act",
+      "actions": 2,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc18.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl004031-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-004-033",
+      "public_law": "4-33",
+      "title": "National Archives Act",
+      "actions": 3,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc28.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl004033-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-004-034",
+      "public_law": "4-34",
+      "title": "An Act to Prevent the Proliferation of Magistrates and Ensure Basic Judicial Competence",
+      "actions": 4,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc50.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl004034-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-004-035",
+      "public_law": "4-35",
+      "title": "Recommissioning of the United States Ship New Jersey Act of 2022",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc46.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl004035-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-004-037",
+      "public_law": "4-37",
+      "title": "Border Awareness and Naturalization Act",
+      "actions": 7,
+      "retained": {},
+      "conflicts": [
+        {
+          "file": "usc/usc08.xml",
+          "node": "rp-pl004037-codification",
+          "reason": "missing repeal-history note"
+        }
+      ],
+      "errors": [
+        "no repeal-history note found"
+      ],
+      "disposition": "error",
+      "files": [
+        "usc/usc08.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-004-038",
+      "public_law": "4-38",
+      "title": "White House Protection Act",
+      "actions": 4,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc18.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl004038-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-007-039",
+      "public_law": "7-39",
+      "title": "Mandatory FLETC Training ACT",
+      "actions": 4,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc50.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl007039-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-007-040",
+      "public_law": "7-40",
+      "title": "Media Companies Protection Act of 2022",
+      "actions": 3,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc50.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl007040-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-007-041",
+      "public_law": "7-41",
+      "title": "Common Sense Defense Act of 2022",
+      "actions": 3,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc10.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl007041-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-007-042",
+      "public_law": "7-42",
+      "title": "Transportation Act of 2022",
+      "actions": 8,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc49.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl007042-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-007-043",
+      "public_law": "7-43",
+      "title": "District of Columbia Reorganization Initiative Act",
+      "actions": 5,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc40.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl007043-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-007-044",
+      "public_law": "7-44",
+      "title": "The Bye Bye Terrorism Act",
+      "actions": 4,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc18.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl007044-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-007-045",
+      "public_law": "7-45",
+      "title": "United States Capitol Police Reorganization Act of 2022",
+      "actions": 4,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc02.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl007045-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-007-046",
+      "public_law": "7-46",
+      "title": "Whistleblower Protection Act",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc18.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl007046-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-007-047",
+      "public_law": "7-47",
+      "title": "The Federal Bar Association Act of 2022",
+      "actions": 6,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc28.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl007047-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-007-048",
+      "public_law": "7-48",
+      "title": "OCJCS Reform Act of 2022",
+      "actions": 4,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc10.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl007048-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-007-049",
+      "public_law": "7-49",
+      "title": "Legislative Initiative to Grow Monetary Access Act of 2022",
+      "actions": 6,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc31.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl007049-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-007-050",
+      "public_law": "7-50",
+      "title": "Coast Guard Base Repurposing Act of 2022",
+      "actions": 6,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc14.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl007050-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-007-051",
+      "public_law": "7-51",
+      "title": "Federal Agent Law Training Mandate",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc01.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl007051-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-009-052",
+      "public_law": "9-52",
+      "title": "The Federal District Wages Act of 2022",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc29.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl009052-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-009-053",
+      "public_law": "9-53",
+      "title": "Save Our Businesses Act of 2022",
+      "actions": 2,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc03.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl009053-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-009-054",
+      "public_law": "9-54",
+      "title": "The Smart Label Congress Act",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc02.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl009054-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-009-055",
+      "public_law": "9-55",
+      "title": "Economic Sanctions on Iran Act of 2022",
+      "actions": 2,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc22.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl009055-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-009-056",
+      "public_law": "9-56",
+      "title": "Federal Judicial Reform Act",
+      "actions": 2,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc28.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl009056-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-009-057",
+      "public_law": "9-57",
+      "title": "Repealing S.B.1/Pub. Law 7-39",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc54.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl009057-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-009-058",
+      "public_law": "9-58",
+      "title": "To Bar PhillipRobecq From Public Office",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc46.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl009058-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-009-059",
+      "public_law": "9-59",
+      "title": "M.P.D Act",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc40.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl009059-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-009-060",
+      "public_law": "9-60",
+      "title": "The Federal Metro Policing Act",
+      "actions": 2,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc50.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl009060-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-009-061",
+      "public_law": "9-61",
+      "title": "Charter Repeal Act",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc40.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl009061-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-009-062",
+      "public_law": "9-62",
+      "title": "Repealing the District of Columbia Home Rule Act",
+      "actions": 2,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc40.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl009062-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-009-063",
+      "public_law": "9-63",
+      "title": "The Federal District Employment Act of 2022",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc05.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl009063-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-009-064",
+      "public_law": "9-64",
+      "title": "To Bar T800Ninja123 From Public Office",
+      "actions": 5,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc46.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl009064-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-010-065",
+      "public_law": "10-65",
+      "title": "Federal Judicial Reform Act ii",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc50.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl010065-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-010-066",
+      "public_law": "10-66",
+      "title": "The Americans First Act",
+      "actions": 4,
+      "retained": {},
+      "conflicts": [
+        {
+          "file": "usc/usc08.xml",
+          "node": "rp-pl010066-codification",
+          "reason": "missing repeal-history note"
+        }
+      ],
+      "errors": [
+        "no repeal-history note found"
+      ],
+      "disposition": "error",
+      "files": [
+        "usc/usc08.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-010-067",
+      "public_law": "10-67",
+      "title": "Ambassadorial Readjustment Act",
+      "actions": 3,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc22.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [
+        "id1f3e43f2-76ce-11f0-9cf8-afb1edfc976c"
+      ],
+      "notes_rewritten": [
+        "rp-pl010067-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": [
+        "rp-pl010067-t22-s2651a-p",
+        "rp-pl010067-t22-s2651a-p-1",
+        "rp-pl010067-t22-s2651a-p-2",
+        "rp-pl010067-t22-s2651a-p-3",
+        "rp-pl010067-t22-s2651a-p-4"
+      ]
+    },
+    {
+      "law_id": "PL-010-068",
+      "public_law": "10-68",
+      "title": "American Jobs Act",
+      "actions": 3,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc46.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl010068-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-011-069",
+      "public_law": "11-69",
+      "title": "DC Criminal Code Act",
+      "actions": 4,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc18.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl011069-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-011-072",
+      "public_law": "11-72",
+      "title": "No More Mariah Act (Keywords: Judges, Justices, Circuit Court)",
+      "actions": 4,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc28.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl011072-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-011-073",
+      "public_law": "11-73",
+      "title": "Let Me Act",
+      "actions": 3,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc22.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl011073-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-012-074",
+      "public_law": "12-74",
+      "title": "Federal Bar Association Act of 2023",
+      "actions": 5,
+      "retained": {},
+      "conflicts": [
+        {
+          "file": "usc/usc05.xml",
+          "node": "rp-pl012074-codification",
+          "reason": "missing repeal-history note"
+        }
+      ],
+      "errors": [
+        "no repeal-history note found"
+      ],
+      "disposition": "error",
+      "files": [
+        "usc/usc05.xml"
+      ],
+      "nodes_removed": [
+        "rp-pl012074-t5-s101a",
+        "rp-pl012074-t5-s101a-a",
+        "rp-pl012074-t5-s101a-a-1",
+        "rp-pl012074-t5-s101a-a-2",
+        "rp-pl012074-t5-s101a-a-3",
+        "rp-pl012074-t5-s101a-b",
+        "rp-pl012074-t5-s101a-b-1",
+        "rp-pl012074-t5-s101a-b-2",
+        "rp-pl012074-t5-s101a-b-3",
+        "rp-pl012074-t5-s101a-b-4",
+        "rp-pl012074-t5-s101a-c",
+        "rp-pl012074-t5-s101a-d",
+        "rp-pl012074-t5-s101a-e",
+        "rp-pl012074-t5-s101a-f",
+        "rp-pl012074-t5-s101a-source",
+        "rp-pl012074-t5-s101b",
+        "rp-pl012074-t5-s101b-a",
+        "rp-pl012074-t5-s101b-b",
+        "rp-pl012074-t5-s101b-c",
+        "rp-pl012074-t5-s101b-d",
+        "rp-pl012074-t5-s101b-source"
+      ],
+      "nodes_restored": [],
+      "notes_rewritten": [],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-012-077",
+      "public_law": "12-77",
+      "title": "Preventing Abuse and Promoting Democracy Act",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc01.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl012077-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-012-078",
+      "public_law": "12-78",
+      "title": "Balancing Executive Act",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc01.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl012078-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-012-079",
+      "public_law": "12-79",
+      "title": "Anti-Terrorism Act of 2023",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc18.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl012079-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-012-080",
+      "public_law": "12-80",
+      "title": "Government Labor Management Act",
+      "actions": 18,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc29.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl012080-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-012-083",
+      "public_law": "12-83",
+      "title": "Dannybec Went to Jail Act",
+      "actions": 4,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc02.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl012083-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-012-084",
+      "public_law": "12-84",
+      "title": "Municipal Act of 2023",
+      "actions": 3,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc40.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl012084-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-012-085",
+      "public_law": "12-85",
+      "title": "The Congress Strikes Back Act",
+      "actions": 2,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc02.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl012085-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-012-086",
+      "public_law": "12-86",
+      "title": "H.R. 1302",
+      "actions": 2,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc02.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl012086-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-012-088",
+      "public_law": "12-88",
+      "title": "New District of Columbia Home Rule Act",
+      "actions": 4,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc40.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl012088-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-014-090",
+      "public_law": "14-90",
+      "title": "Presidential Suck Up Act",
+      "actions": 3,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc03.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl014090-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-015-092",
+      "public_law": "15-92",
+      "title": "Commerce and Labor Innovation Initiative Act",
+      "actions": 3,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc29.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl015092-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-015-093",
+      "public_law": "15-93",
+      "title": "Checks and Balances Act of 2023",
+      "actions": 3,
+      "retained": {},
+      "conflicts": [
+        {
+          "file": "usc/usc22.xml",
+          "node": "rp-pl015093-codification",
+          "reason": "missing repeal-history note"
+        }
+      ],
+      "errors": [],
+      "disposition": "manual-review-required",
+      "files": [
+        "usc/usc02.xml",
+        "usc/usc22.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl015093-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-015-095",
+      "public_law": "15-95",
+      "title": "An Act to Repeal the White House Protection Act",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc03.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl015095-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-015-096",
+      "public_law": "15-96",
+      "title": "Prisoner Bail Protection Act",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc18.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl015096-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-015-100",
+      "public_law": "15-100",
+      "title": "Employee Rights and Limitations Act (leave, employment, termination)",
+      "actions": 5,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc05.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl015100-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-015-104",
+      "public_law": "15-104",
+      "title": "The Military Justice Reorganization and Reform Act",
+      "actions": 6,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc10.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl015104-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-015-106",
+      "public_law": "15-106",
+      "title": "Congress Strikes Back Repealment",
+      "actions": 3,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc02.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl015106-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-015-107",
+      "public_law": "15-107",
+      "title": "Guidance to Guidances Act",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc01.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl015107-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-015-109",
+      "public_law": "15-109",
+      "title": "Ending Tigray for the Last Time",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc02.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl015109-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-015-110",
+      "public_law": "15-110",
+      "title": "A Bill to Direct the Inspector General of the Department of Defense to Conduct an Investigation Into the Attack on the United States Embassy in Damascus, and for Other Purposes",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc22.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl015110-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-016-112",
+      "public_law": "16-112",
+      "title": "The Contempt of Congress Act",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc02.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl016112-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-016-113",
+      "public_law": "16-113",
+      "title": "The Bing Bong Act of 2023",
+      "actions": 3,
+      "retained": {},
+      "conflicts": [
+        {
+          "file": "usc/usc50.xml",
+          "node": "rp-pl016113-codification",
+          "reason": "missing repeal-history note"
+        }
+      ],
+      "errors": [],
+      "disposition": "manual-review-required",
+      "files": [
+        "usc/usc02.xml",
+        "usc/usc50.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl016113-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-016-117",
+      "public_law": "16-117",
+      "title": "The Clean Up Act",
+      "actions": 5,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc02.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl016117-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-016-119",
+      "public_law": "16-119",
+      "title": "The Criminal Organization Act of 2023",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc18.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl016119-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-016-120",
+      "public_law": "16-120",
+      "title": "The Hail Columbia Act",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc01.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl016120-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-016-121",
+      "public_law": "16-121",
+      "title": "The Bill Transparency Understanding Act",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc01.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl016121-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-016-122",
+      "public_law": "16-122",
+      "title": "The Congressional Competency Act of 2023",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc02.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl016122-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-017-125",
+      "public_law": "17-125",
+      "title": "We Don't Read Minds Act of 2023",
+      "actions": 5,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc05.xml"
+      ],
+      "nodes_removed": [
+        "rp-pl017125-t5-s101c",
+        "rp-pl017125-t5-s101c-a",
+        "rp-pl017125-t5-s101c-b",
+        "rp-pl017125-t5-s101c-source"
+      ],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl017125-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-017-126",
+      "public_law": "17-126",
+      "title": "Special Events Act",
+      "actions": 6,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc50.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl017126-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-017-127",
+      "public_law": "17-127",
+      "title": "Border Security Act",
+      "actions": 5,
+      "retained": {},
+      "conflicts": [
+        {
+          "file": "usc/usc08.xml",
+          "node": "rp-pl017127-codification",
+          "reason": "missing repeal-history note"
+        }
+      ],
+      "errors": [
+        "no repeal-history note found"
+      ],
+      "disposition": "error",
+      "files": [
+        "usc/usc08.xml"
+      ],
+      "nodes_removed": [
+        "rp-pl017127-s1101",
+        "rp-pl017127-s1101-a",
+        "rp-pl017127-s1101-a-1",
+        "rp-pl017127-s1101-a-10",
+        "rp-pl017127-s1101-a-11",
+        "rp-pl017127-s1101-a-12",
+        "rp-pl017127-s1101-a-13",
+        "rp-pl017127-s1101-a-14",
+        "rp-pl017127-s1101-a-15",
+        "rp-pl017127-s1101-a-16",
+        "rp-pl017127-s1101-a-17",
+        "rp-pl017127-s1101-a-18",
+        "rp-pl017127-s1101-a-19",
+        "rp-pl017127-s1101-a-2",
+        "rp-pl017127-s1101-a-20",
+        "rp-pl017127-s1101-a-3",
+        "rp-pl017127-s1101-a-4",
+        "rp-pl017127-s1101-a-5",
+        "rp-pl017127-s1101-a-6",
+        "rp-pl017127-s1101-a-7",
+        "rp-pl017127-s1101-a-8",
+        "rp-pl017127-s1101-a-9",
+        "rp-pl017127-s1101-source-credit",
+        "rp-pl017127-s1103",
+        "rp-pl017127-s1103-a",
+        "rp-pl017127-s1103-b",
+        "rp-pl017127-s1103-c",
+        "rp-pl017127-s1103-d",
+        "rp-pl017127-s1103-e",
+        "rp-pl017127-s1103-f",
+        "rp-pl017127-s1103-source-credit",
+        "rp-pl017127-s1105",
+        "rp-pl017127-s1105-a",
+        "rp-pl017127-s1105-b",
+        "rp-pl017127-s1105-c",
+        "rp-pl017127-s1105-source-credit",
+        "rp-pl017127-s1182",
+        "rp-pl017127-s1182-a",
+        "rp-pl017127-s1182-b",
+        "rp-pl017127-s1182-source-credit",
+        "rp-pl017127-s1189",
+        "rp-pl017127-s1189-a",
+        "rp-pl017127-s1189-b",
+        "rp-pl017127-s1189-c",
+        "rp-pl017127-s1189-d",
+        "rp-pl017127-s1189-e",
+        "rp-pl017127-s1189-f",
+        "rp-pl017127-s1189-source-credit",
+        "rp-pl017127-s1481",
+        "rp-pl017127-s1481-a",
+        "rp-pl017127-s1481-b",
+        "rp-pl017127-s1481-source-credit",
+        "rp-pl017127-s1532",
+        "rp-pl017127-s1532-a",
+        "rp-pl017127-s1532-b",
+        "rp-pl017127-s1532-c",
+        "rp-pl017127-s1532-d",
+        "rp-pl017127-s1532-source-credit",
+        "rp-pl017127-s1533",
+        "rp-pl017127-s1533-a",
+        "rp-pl017127-s1533-b",
+        "rp-pl017127-s1533-c",
+        "rp-pl017127-s1533-d",
+        "rp-pl017127-s1533-e",
+        "rp-pl017127-s1533-f",
+        "rp-pl017127-s1533-g",
+        "rp-pl017127-s1533-source-credit",
+        "rp-pl017127-s1534",
+        "rp-pl017127-s1534-a",
+        "rp-pl017127-s1534-b",
+        "rp-pl017127-s1534-c",
+        "rp-pl017127-s1534-e",
+        "rp-pl017127-s1534-f",
+        "rp-pl017127-s1534-g",
+        "rp-pl017127-s1534-h",
+        "rp-pl017127-s1534-i",
+        "rp-pl017127-s1534-j",
+        "rp-pl017127-s1534-source-credit",
+        "rp-pl017127-s1551",
+        "rp-pl017127-s1551-a",
+        "rp-pl017127-s1551-b",
+        "rp-pl017127-s1551-c",
+        "rp-pl017127-s1551-d",
+        "rp-pl017127-s1551-e",
+        "rp-pl017127-s1551-f",
+        "rp-pl017127-s1551-source-credit"
+      ],
+      "nodes_restored": [],
+      "notes_rewritten": [],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-017-128",
+      "public_law": "17-128",
+      "title": "Impeachment Procedures and Protocols Act (IPPA",
+      "actions": 4,
+      "retained": {},
+      "conflicts": [
+        {
+          "file": "usc/usc02.xml",
+          "node": "rp-pl017128-codification",
+          "reason": "missing repeal-history note"
+        },
+        {
+          "file": "usc/usc28.xml",
+          "node": "rp-pl017128-codification",
+          "reason": "missing repeal-history note"
+        }
+      ],
+      "errors": [
+        "no repeal-history note found"
+      ],
+      "disposition": "error",
+      "files": [
+        "usc/usc02.xml",
+        "usc/usc28.xml"
+      ],
+      "nodes_removed": [
+        "rp-pl017128-s200",
+        "rp-pl017128-s200-a",
+        "rp-pl017128-s200-a-1",
+        "rp-pl017128-s200-a-2",
+        "rp-pl017128-s200-a-3",
+        "rp-pl017128-s200-a-4",
+        "rp-pl017128-s200-a-5",
+        "rp-pl017128-s200-a-6",
+        "rp-pl017128-s200-b",
+        "rp-pl017128-s200-b-1",
+        "rp-pl017128-s200-b-2",
+        "rp-pl017128-s200-b-3",
+        "rp-pl017128-s200-b-4",
+        "rp-pl017128-s200-b-5",
+        "rp-pl017128-s200-b-6",
+        "rp-pl017128-s200-b-7",
+        "rp-pl017128-s200-c",
+        "rp-pl017128-s200-c-1",
+        "rp-pl017128-s200-c-2",
+        "rp-pl017128-s200-c-3",
+        "rp-pl017128-s200-c-4",
+        "rp-pl017128-s200-c-5",
+        "rp-pl017128-s200-d",
+        "rp-pl017128-s200-d-1",
+        "rp-pl017128-s200-d-2",
+        "rp-pl017128-s200-d-3",
+        "rp-pl017128-s200-e",
+        "rp-pl017128-s200-e-1",
+        "rp-pl017128-s200-e-2",
+        "rp-pl017128-s200-e-3",
+        "rp-pl017128-s200-e-4",
+        "rp-pl017128-s200-source-credit",
+        "rp-pl017128-s200a",
+        "rp-pl017128-s200a-a",
+        "rp-pl017128-s200a-a-1",
+        "rp-pl017128-s200a-a-2",
+        "rp-pl017128-s200a-a-3",
+        "rp-pl017128-s200a-b",
+        "rp-pl017128-s200a-source-credit"
+      ],
+      "nodes_restored": [
+        "id885a6953-67ea-11f0-9eeb-e997de6427b9",
+        "id885a6954-67ea-11f0-9eeb-e997de6427b9",
+        "id885a695a-67ea-11f0-9eeb-e997de6427b9",
+        "id885a695d-67ea-11f0-9eeb-e997de6427b9"
+      ],
+      "notes_rewritten": [],
+      "historical_removals_left_in_place": [],
+      "already_absent": [
+        "rp-pl017128-s1365-b",
+        "rp-pl017128-s1365-c",
+        "rp-pl017128-s1365-d",
+        "rp-pl017128-s1365-e",
+        "rp-pl017128-s1365-effective-date",
+        "rp-pl017128-s1365-f"
+      ]
+    },
+    {
+      "law_id": "PL-017-129",
+      "public_law": "17-129",
+      "title": "Department of Education (DOE)",
+      "actions": 5,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc20.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl017129-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-017-131",
+      "public_law": "17-131",
+      "title": "More Jobs Amendment",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc29.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl017131-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-017-134",
+      "public_law": "17-134",
+      "title": "Amended The Uniformed Capitol Police Act of 2023",
+      "actions": 2,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc02.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl017134-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-017-136",
+      "public_law": "17-136",
+      "title": "The Parks Act (TPA)",
+      "actions": 2,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc02.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl017136-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-017-137",
+      "public_law": "17-137",
+      "title": "Federal Background Check Act",
+      "actions": 4,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc50.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl017137-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-018-139",
+      "public_law": "18-139",
+      "title": "The Bye Bye Background Checks Act",
+      "actions": 4,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc02.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl018139-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-018-140",
+      "public_law": "18-140",
+      "title": "Federal Employment Act of 2023",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc05.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl018140-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-018-143",
+      "public_law": "18-143",
+      "title": "United States Capitol Police Technical Corrections Act",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc18.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl018143-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-019-146",
+      "public_law": "19-146",
+      "title": "Refurbishing the Military Legal System Act",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc10.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl019146-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-019-147",
+      "public_law": "19-147",
+      "title": "Diplomatic Standards Act (DSA)",
+      "actions": 3,
+      "retained": {},
+      "conflicts": [
+        {
+          "file": "usc/usc08.xml",
+          "node": "rp-pl019147-codification",
+          "reason": "missing repeal-history note"
+        }
+      ],
+      "errors": [
+        "no repeal-history note found"
+      ],
+      "disposition": "error",
+      "files": [
+        "usc/usc08.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-019-149",
+      "public_law": "19-149",
+      "title": "Criminal Justice Reform Act (CJRA)",
+      "actions": 5,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc18.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl019149-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-019-152",
+      "public_law": "19-152",
+      "title": "The Commerce Legislation and Labor Aggravations Reformations (CLEAR)",
+      "actions": 5,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc05.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl019152-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-021-123",
+      "public_law": "21-123",
+      "title": "Freedom In Removing Employees and Deregulation Act of 2024.",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc05.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl021123-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-022-159",
+      "public_law": "22-159",
+      "title": "D.C. Statute of Limitations Act",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc28.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl022159-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-023-165",
+      "public_law": "23-165",
+      "title": "2nd Amendment Protection Act (2APA)",
+      "actions": 3,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc18.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl023165-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-023-166",
+      "public_law": "23-166",
+      "title": "Amended Federal Employment Act of 2023",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc05.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl023166-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-023-170",
+      "public_law": "23-170",
+      "title": "The Get Around DC Act",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc01.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl023170-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-023-171",
+      "public_law": "23-171",
+      "title": "Diplomatic Immunity Act",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc22.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl023171-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-023-172",
+      "public_law": "23-172",
+      "title": "Congressional Military Service Act",
+      "actions": 4,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc10.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl023172-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-024-174",
+      "public_law": "24-174",
+      "title": "Washington, D.C. Permitless Carry Act",
+      "actions": 4,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc40.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl024174-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-024-177",
+      "public_law": "24-177",
+      "title": "SS Jurisdiction Act",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc01.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl024177-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-025-180",
+      "public_law": "25-180",
+      "title": "Sanction Repealment Act",
+      "actions": 4,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc22.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl025180-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-025-181",
+      "public_law": "25-181",
+      "title": "Federal District of Columbia Criminal Code",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc40.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl025181-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-025-183",
+      "public_law": "25-183",
+      "title": "Commerce and Labor Advancement Act (CLAA)",
+      "actions": 3,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc29.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl025183-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-025-184",
+      "public_law": "25-184",
+      "title": "Legal Advisors, Representatives, and Professionals Exam Regulations (LARPER)",
+      "actions": 3,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc28.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl025184-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-026-191",
+      "public_law": "26-191",
+      "title": "Federal Employment Reform Act of 2024 (FERA24)",
+      "actions": 5,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc05.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl026191-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-029-213",
+      "public_law": "29-213",
+      "title": "D.C Delegate Elimination Act",
+      "actions": 2,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc02.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl029213-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-029-216",
+      "public_law": "29-216",
+      "title": "District of Columbia Home Rule Act of 2025",
+      "actions": 4,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc02.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl029216-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-030-223",
+      "public_law": "30-223",
+      "title": "Municipal Transportation Act",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc49.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl030223-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-032-231",
+      "public_law": "32-231",
+      "title": "District Improvement Act (DIA)",
+      "actions": 1,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc50.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl032231-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-034-240",
+      "public_law": "34-240",
+      "title": "Literally Fixing Taxes",
+      "actions": 2,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc26.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl034240-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    },
+    {
+      "law_id": "PL-035-254",
+      "public_law": "35-254",
+      "title": "An Act to repeal Public Law 28-205",
+      "actions": 2,
+      "retained": {},
+      "conflicts": [],
+      "errors": [],
+      "disposition": "repealed-history-only",
+      "files": [
+        "usc/usc05.xml"
+      ],
+      "nodes_removed": [],
+      "nodes_restored": [],
+      "notes_rewritten": [
+        "rp-pl035254-codification"
+      ],
+      "historical_removals_left_in_place": [],
+      "already_absent": []
+    }
+  ]
+}
