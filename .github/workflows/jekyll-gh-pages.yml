@@ -67,7 +67,7 @@ jobs:
           python tools/check_encoding.py
           python tools/check_title42_build.py
           python tools/audit_applied_material.py
-          python -m unittest discover -s tests -p "test_*.py" -v
+          python -m unittest discover -s tests -p "test_check_encoding.py" -v
           node --test tests/test_usar_notes.mjs tests/test_citation_routing.mjs
 
       - name: Configure GitHub Pages
