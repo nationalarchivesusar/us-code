@@ -1,0 +1,21 @@
+title: US Code Library
+url: https://nationalarchivesusar.github.io
+baseurl: /us-code
+
+# The repository also contains codification source material and validation
+# artifacts. They are not part of the published website and are intentionally
+# excluded from the GitHub Pages build.
+exclude:
+  - audit
+  - codification
+  - tools
+  - tests
+  - node_modules
+  - vendor
+  - "*.zip"
+  - "*.py"
+  - "*.md"
+
+plugins: []
+lsi: false
+incremental: false
