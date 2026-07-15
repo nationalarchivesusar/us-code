@@ -40,6 +40,11 @@
   text-underline-offset: 0.16em;
 }
 
+.law-card--active .law-target--historical {
+  color: var(--muted);
+  text-decoration: none;
+}
+
 @media (max-width: 620px) {
   .law-card__intro {
     align-items: flex-start;
