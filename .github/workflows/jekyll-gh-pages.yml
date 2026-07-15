@@ -29,7 +29,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           lfs: true
-          fetch-depth: 0
+          fetch-depth: 1
+
+      - name: Fetch codification baseline
+        run: git fetch --no-tags --depth=1 origin 00ea0e9b430e4a2eb2253a77d35e6fb125ba5f46
 
       - name: Set up Python
         uses: actions/setup-python@v5
