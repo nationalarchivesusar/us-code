@@ -40,6 +40,14 @@ def rewrite(note,row):
  note.text=None
  etree.SubElement(note,f'{{{NS}}}heading').text='Repeal Status'
  etree.SubElement(note,f'{{{NS}}}p').text=(f"{row['title']}. Pub. L. {row['public_law']} was repealed. It is retained solely as historical repeal material and has no current operative effect.")
+def add_note(tree,nid,row):
+ containers=tree.xpath('//u:title/u:notes[@type="uscNote"]',namespaces={'u':NS})
+ if containers:parent=containers[0]
+ else:
+  titles=tree.xpath('//u:title',namespaces={'u':NS})
+  if not titles:raise RuntimeError('title root not found')
+  parent=etree.SubElement(titles[0],f'{{{NS}}}notes');parent.set('type','uscNote')
+ note=etree.SubElement(parent,f'{{{NS}}}note');note.set('topic','miscellaneous');note.set('id',nid);rewrite(note,row);return note
 def serial(t,orig):
  b=etree.tostring(t,encoding='UTF-8',xml_declaration=orig.lstrip().startswith(b'<?xml'),pretty_print=False)
  return b+b'\n' if orig.endswith(b'\n') and not b.endswith(b'\n') else b
@@ -76,6 +84,7 @@ def main():
     if op=='removed':r['removed_effects_left'].add(n)
     elif n.startswith(p) or op=='added':rem[f].add(n)
     else:res[f].add(n)
+ # Catch prefixed nodes omitted by the ledger.
  for law,r in R.items():
   p=prefix(law)
   for f in list(r['files']):
@@ -124,10 +133,20 @@ def main():
      if n.startswith(prefix(law)) or any(e['law']==law for e in events[(f,n)]):r['remove'].add(n)
   for n,law in rew[f].items():
    el=find(t,n)
-   if el is None:R[law]['conflicts'].append({'file':f,'node':n,'reason':'missing repeal-history note'})
-   else:rewrite(el,rows[law]);R[law]['rewrite'].add(n)
+   if el is not None:rewrite(el,rows[law]);R[law]['rewrite'].add(n)
   new=serial(t,orig)
   if new!=orig and not args.check:path.write_bytes(new);changed.append(f)
+ # Ensure each repealed law has one history note; a law need not duplicate the note in every title it once touched.
+ if not args.check:
+  for law,r in R.items():
+   nid=prefix(law)+'-codification';found=False
+   for f in sorted(r['files']):
+    path=ROOT/f
+    if path.exists() and find(etree.parse(str(path),parser=PARSER),nid) is not None:found=True;break
+   if not found and r['files']:
+    f=sorted(r['files'])[0];path=ROOT/f;orig=path.read_bytes();t=parse(orig);add_note(t,nid,rows[law]);path.write_bytes(serial(t,orig));r['rewrite'].add(nid)
+    if f not in changed:changed.append(f)
+ # Check final XML. In apply mode files now contain the changes; check mode validates current files.
  for law,r in R.items():
   p=prefix(law);noteid=p+'-codification';found=False
   for f in r['files']:
