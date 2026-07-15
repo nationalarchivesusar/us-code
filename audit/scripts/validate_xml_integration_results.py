@@ -38,6 +38,25 @@ BASELINE_TEXT_CACHE: dict[str, str | None] = {}
 DIFF_TEXT_CACHE: dict[str, str] = {}
 BASELINE_NODE_EXISTS_CACHE: dict[str, bool] = {}
 BASELINE_NODE_IDS: set[str] | None = None
+PROJECT_NOTE_FORBIDDEN = [
+    "audit/",
+    "codification/laws/",
+    ".json",
+    "review-",
+    "manifest-",
+    "batch-",
+    "Provision dispositions",
+    "Source evidence",
+    "Code treatment",
+    "approved treatment",
+    "recommended action",
+    "integration command",
+    "current XML",
+    "trello.com",
+    "Authenticated statutory text was unavailable",
+    "supplied attachment yielded only viewer",
+]
+WINDOWS_PATH_RE = re.compile(r"[A-Za-z]:\\\\")
 
 
 def git(*args: str) -> str:
@@ -140,7 +159,21 @@ def scan_xml_artifacts() -> list[str]:
             if '<quotedContent origin="/us/pl/' in note:
                 issues.append(f"{rel}: project full-law quotedContent remains in rp codification note")
                 break
+            for token in PROJECT_NOTE_FORBIDDEN:
+                if token.lower() in note.lower():
+                    issues.append(f"{rel}: project note contains internal metadata token {token!r}")
+                    break
+            if WINDOWS_PATH_RE.search(note):
+                issues.append(f"{rel}: project note contains a local Windows path")
     return issues
+
+
+def project_note_count() -> int:
+    total = 0
+    project_note_re = re.compile(r'<note\b(?=[^>]*\bid="rp-pl\d{6}-codification")', re.S)
+    for path in (ROOT / "usc").glob("*.xml"):
+        total += len(project_note_re.findall(path.read_text(encoding="utf-8")))
+    return total
 
 
 def final_node_ids(texts: dict[str, str]) -> set[str]:
@@ -485,6 +518,7 @@ def main() -> int:
         "claimed_removed_nodes_still_present": claimed_removed_nodes_still_present,
         "already_satisfied_baseline_proof_failures": baseline_proof_failures,
         "note_action_proof_failures": note_action_proof_failures,
+        "distinct_project_notes_verified": project_note_count(),
         "source_credit_failures": source_credit_failures,
         "amendment_note_failures": amendment_note_failures,
         "toc_failures": toc_failures,

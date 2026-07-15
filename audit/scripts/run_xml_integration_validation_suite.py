@@ -15,6 +15,25 @@ from xml.etree import ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[2]
 REPORT = ROOT / "audit" / "xml-integration-validation-report.json"
+PROJECT_NOTE_FORBIDDEN = [
+    "audit/",
+    "codification/laws/",
+    ".json",
+    "review-",
+    "manifest-",
+    "batch-",
+    "Provision dispositions",
+    "Source evidence",
+    "Code treatment",
+    "approved treatment",
+    "recommended action",
+    "integration command",
+    "current XML",
+    "trello.com",
+    "Authenticated statutory text was unavailable",
+    "supplied attachment yielded only viewer",
+]
+WINDOWS_PATH_RE = re.compile(r"[A-Za-z]:\\\\")
 
 
 def run_command(label: str, command: list[str], timeout: int = 300) -> dict:
@@ -115,6 +134,7 @@ def note_action_reconciliation() -> dict:
     }
     missing = []
     stale = []
+    internal_metadata_hits = []
     verified = 0
     xml_text = "\n".join(path.read_text(encoding="utf-8") for path in (ROOT / "usc").glob("usc*.xml"))
     for row in plan.get("provisions", []):
@@ -132,20 +152,32 @@ def note_action_reconciliation() -> dict:
                 missing.append(row["action_id"])
             else:
                 verified += 1
-    project_note_re = re.compile(r'<note\b(?=[^>]*\bid="rp-pl\d{6}-codification")[^>]*>.*?</note>', re.S)
-    for note in project_note_re.findall(xml_text):
-        lowered = note.lower()
+    project_note_re = re.compile(r'<note\b(?=[^>]*\bid="(rp-pl\d{6}-codification)")[^>]*>.*?</note>', re.S)
+    project_note_count = 0
+    for match in project_note_re.finditer(xml_text):
+        project_note_count += 1
+        note_id = match.group(1)
+        note_xml = match.group(0)
+        lowered = note_xml.lower()
         if "trello.com" in lowered:
             stale.append("project-note Trello URL")
         if "<quotedcontent" in lowered:
             stale.append("project-note quotedContent dump")
         if "authenticated statutory text was unavailable" in lowered:
             stale.append("project-note false authenticated-source boilerplate")
+        for token in PROJECT_NOTE_FORBIDDEN:
+            if token.lower() in lowered:
+                internal_metadata_hits.append({"id": note_id, "token": token})
+                break
+        if WINDOWS_PATH_RE.search(note_xml):
+            internal_metadata_hits.append({"id": note_id, "token": "local Windows path"})
     return {
         "note_actions_verified": verified,
+        "distinct_project_notes_checked": project_note_count,
         "missing_note_action_results": missing,
         "stale_note_patterns": stale,
-        "exit_code": 0 if not missing and not stale else 1,
+        "internal_metadata_hits": internal_metadata_hits,
+        "exit_code": 0 if not missing and not stale and not internal_metadata_hits else 1,
     }
 
 
