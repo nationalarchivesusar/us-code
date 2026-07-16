@@ -3,30 +3,55 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Browse, search, and share the United States Code with the USAR community."
+    />
+    <link rel="canonical" href="https://nationalarchivesusar.github.io/us-code/" />
+    <meta property="og:title" content="US Code Library | United States of America Roblox" />
+    <meta
+      property="og:description"
+      content="Browse, search, and share the United States Code with the USAR community."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="US Code Library" />
+    <meta property="og:url" content="https://nationalarchivesusar.github.io/us-code/" />
+    <meta
+      property="og:image"
+      content="https://nationalarchivesusar.github.io/us-code/assets/images/social-card.png"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://nationalarchivesusar.github.io/us-code/assets/images/social-card.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="400" />
+    <meta
+      property="og:image:alt"
+      content="Great Seal of the United States and United States Code Library branding."
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="US Code Library | United States of America Roblox" />
+    <meta
+      name="twitter:description"
+      content="Browse, search, and share the United States Code with the USAR community."
+    />
+    <meta
+      name="twitter:image"
+      content="https://nationalarchivesusar.github.io/us-code/assets/images/social-card.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Great Seal of the United States and United States Code Library branding."
+    />
+    <meta name="theme-color" content="#8b1e1e" />
     <title>US Code Library | United States of America Roblox</title>
     <script>
-      // GitHub Pages SPA fallback.
-      //
-      // This site is a single-page app that uses history.pushState to
-      // produce shareable URLs like /us-code/cite/42/1983/. GitHub Pages
-      // has no server-side URL rewriting: it serves whatever static file
-      // matches the request path, and this 404.html for everything else.
-      // Crucially, a 404 response is not a redirect -- the browser's
-      // address bar and window.location still show the URL the user
-      // actually requested (a direct link, a bookmark, a page refresh).
-      //
-      // So: capture that original path (plus any query string and hash,
-      // e.g. a `?p=` pinpoint), and send the browser to the real app entry
-      // point with it encoded in a `redirect` query parameter. app.js's
-      // restoreRedirectedPath() decodes that on load and calls
-      // history.replaceState to put the address bar back to the exact
-      // original URL -- a client-side-only change, so this never loops
-      // back through 404.html again.
-      //
-      // This performs exactly one real navigation (this page to the app's
-      // index.html); location.replace (not .href) is used so 404.html never
-      // becomes its own back-button history entry, keeping back/forward
-      // behaving as if the direct link had loaded normally.
+      // GitHub Pages SPA fallback. Valid Code citation routes are generated as
+      // static social-metadata pages during deployment; this remains the safe
+      // fallback for unknown paths and preserves the requested URL for app.js.
       (function () {
         var BASE_PATH = "/us-code/";
         var loc = window.location;
