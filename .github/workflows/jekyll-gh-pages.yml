@@ -120,6 +120,11 @@ jobs:
           rm -f _site/usc/usc42.xml
           touch _site/.nojekyll
 
+          # Discord and other crawlers do not run the SPA's JavaScript fallback.
+          # Generate a small 200-response HTML shell with static metadata for
+          # every title and section route while browsers continue into app.js.
+          python tools/build_social_routes.py --site-dir _site
+
           test -s _site/index.html
           test -s _site/404.html
           test -s _site/public-laws.html
@@ -127,7 +132,14 @@ jobs:
           test -s _site/assets/css/public-laws.css
           test -s _site/data/titles.json
           test -s _site/data/public-laws.json
+          test -s _site/data/social-routes.json
           test -s _site/data/title-42/manifest.json
+          test -s _site/cite/18/111/index.html
+          test -s _site/cite/28/530B/index.html
+          test -s _site/cite/42/1983/index.html
+          grep -q 'property="og:title"' _site/cite/18/111/index.html
+          grep -q 'property="og:image"' _site/cite/18/111/index.html
+          grep -q '18 U.S.C. § 111' _site/cite/18/111/index.html
           test ! -e _site/usc/usc42.xml
           test ! -e _site/audit
           test ! -e _site/codification
