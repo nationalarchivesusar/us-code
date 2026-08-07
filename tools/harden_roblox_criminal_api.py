@@ -1,21 +1,19 @@
 #!/usr/bin/env python3
 """Fail-closed hardening for the Roblox-facing criminal-law API.
 
-This post-build pass has two non-negotiable jobs:
+This post-build pass enforces two rules:
+1. Platform-restricted content is removed wholesale from charge/detail/search
+   output. Supporting metadata is scrubbed fail-closed.
+2. Only positively identified criminal charges are displayable.
 
-1. The API must never expose content unsuitable for the Roblox experience.
-   Any section that references minors, sexual content/conduct, controlled drugs,
-   alcohol/tobacco/vaping, gambling, or self-harm is removed wholesale from
-   charge/detail/search output. Supporting metadata is scrubbed fail-closed.
-2. A section must be an actual charge before it can be exposed as a charge.
-   FCC and federalized D.C. entries must carry is_offense=true in the source.
-   Title 18 entries are admitted only by a deliberately strict positive rule:
-   a current Part I section must contain actor language AND direct criminal
-   punishment language, while administrative/definition/procedure headings are
-   excluded. False negatives are preferred to false positives.
+FCC and federalized D.C. entries must be explicitly marked is_offense=true.
+Title 18 is intentionally stricter: only current Part I sections with both
+actor language and direct criminal-punishment language survive, and obvious
+administrative/definition/procedure headings are excluded. False negatives are
+preferred to false positives.
 
-The script also audits every generated JSON file and aborts the build if a
-blocked reference survives. It is intentionally conservative.
+The pass ends with a recursive audit of every generated API JSON file. Any
+surviving blocked reference or non-charge display record fails the build.
 """
 from __future__ import annotations
 
@@ -29,43 +27,49 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "data" / "api" / "v1" / "criminal-law"
 TITLE18_DIR = BASE / "title18"
 
-# Roblox-safety filter. These expressions are intentionally broad and
-# fail-closed. A false positive removes a legal entry from the game API; it does
-# not alter the source law stored elsewhere in the repository.
+# Intentionally broad. False positives remove an entry from the Roblox API but
+# do not alter the legal source material elsewhere in the repository.
 BLOCKED_PATTERNS: tuple[tuple[str, re.Pattern[str]], ...] = (
-    # Minors / age-specific youth references.
-    ("minors", re.compile(r"\b(?:minor|minor's|minors|child|children|juvenile|juveniles|underage|infant|youth)\b", re.I)),
-    ("minor-age", re.compile(r"\bunder\s+(?:the\s+)?age\s+of\b|\bunder\s+(?:sixteen|seventeen|eighteen|16|17|18)\b", re.I)),
-
-    # Sexual content, sexual conduct, exploitation, nudity, obscenity.
-    ("sexual", re.compile(r"\b(?:sex|sexual|sexually|rape|raped|raping|sodomy|prostitut(?:e|ion)|porn(?:ography|ographic)?|obscene|obscenity|lewd|indecent|genital|intercourse|molest(?:ation|ed|ing)?|erotic|nudity|nude|naked)\b", re.I)),
-
-    # Drugs / controlled substances / narcotics.
-    ("drugs", re.compile(r"\b(?:drug|drugs|drugged|drugging|narcotic|narcotics|controlled\s+substance|controlled\s+substances|marijuana|cannabis|cocaine|heroin|methamphetamine|meth|fentanyl|opioid|opioids|opiate|opiates|lsd|pcp|ecstasy|mdma)\b", re.I)),
-
-    # Other regulated/intoxicating products that should not be surfaced in the
-    # Roblox booking/reference experience.
-    ("alcohol-tobacco", re.compile(r"\b(?:alcohol|alcoholic|liquor|beer|wine|tobacco|cigarette|cigarettes|cigar|cigars|nicotine|vape|vaping|vapor\s+product)\b", re.I)),
-
-    # Gambling / wagering.
-    ("gambling", re.compile(r"\b(?:gambling|gamble|wager|wagering|betting|bookmaking|lottery|lotteries)\b", re.I)),
-
-    # Self-harm / suicide references.
-    ("self-harm", re.compile(r"\b(?:suicide|suicidal|self[- ]?harm|self[- ]?injur(?:y|ies|ious))\b", re.I)),
+    ("protected-youth", re.compile(
+        r"\b(?:minor|minor's|minors|child|children|juvenile|juveniles|underage|infant|youth)\b"
+        r"|\bunder\s+(?:the\s+)?age\s+of\b"
+        r"|\bunder\s+(?:sixteen|seventeen|eighteen|16|17|18)\b",
+        re.I,
+    )),
+    ("adult-content", re.compile(
+        r"\b(?:sex|sexual|sexually|rape|raped|raping|sodomy|prostitut(?:e|ion)|"
+        r"porn(?:ography|ographic)?|obscene|obscenity|lewd|indecent|genital|"
+        r"intercourse|molest(?:ation|ed|ing)?|erotic|nudity|nude|naked)\b",
+        re.I,
+    )),
+    ("controlled-substances", re.compile(
+        r"\b(?:drug|drugs|drugged|drugging|narcotic|narcotics|controlled\s+substance|"
+        r"controlled\s+substances|marijuana|cannabis|cocaine|heroin|methamphetamine|"
+        r"meth|fentanyl|opioid|opioids|opiate|opiates|lsd|pcp|ecstasy|mdma)\b",
+        re.I,
+    )),
+    ("regulated-intoxicants", re.compile(
+        r"\b(?:alcohol|alcoholic|liquor|beer|wine|tobacco|cigarette|cigarettes|"
+        r"cigar|cigars|nicotine|vape|vaping|vapor\s+product)\b",
+        re.I,
+    )),
+    ("gambling", re.compile(
+        r"\b(?:gambling|gamble|wager|wagering|betting|bookmaking|lottery|lotteries)\b",
+        re.I,
+    )),
+    ("self-injury", re.compile(
+        r"\b(?:suicide|suicidal|self[- ]?harm|self[- ]?injur(?:y|ies|ious))\b",
+        re.I,
+    )),
 )
 
-# Headings that are not standalone criminal charges. These are excluded even
-# if their text happens to quote or cross-reference a criminal penalty.
 NON_CHARGE_HEADING = re.compile(
-    r"\b(?:"
-    r"definitions?|definition of terms|rules?|regulations?|reports?|annual report|"
-    r"construction|applicability|effective date|effective dates|jurisdiction|venue|"
-    r"limitations?|limitation of actions|procedure|procedures|administrative|"
-    r"authorization|appropriations?|duties|powers|establishment|findings|"
-    r"severability|preemption|exceptions?|immunity|disclosure|records?|"
-    r"civil remedies?|civil remedy|injunctions?|forfeiture|restitution|sentencing|"
-    r"penalties|penalty|definitions and rules|use of certain terms"
-    r")\b",
+    r"\b(?:definitions?|definition of terms|rules?|regulations?|reports?|annual report|"
+    r"construction|applicability|effective dates?|jurisdiction|venue|limitations?|"
+    r"limitation of actions|procedures?|administrative|authorization|appropriations?|"
+    r"duties|powers|establishment|findings|severability|preemption|exceptions?|"
+    r"immunity|disclosure|records?|civil remedies?|injunctions?|forfeiture|restitution|"
+    r"sentencing|penalties|penalty|definitions and rules|use of certain terms)\b",
     re.I,
 )
 
@@ -75,13 +79,15 @@ TITLE18_ACTOR_PATTERNS = (
     re.compile(r"\ba\s+person\s+who\b", re.I),
     re.compile(r"\bit\s+shall\s+be\s+unlawful\s+for\b", re.I),
 )
-
 TITLE18_PENALTY_PATTERNS = (
     re.compile(r"\bshall\s+be\s+fined\b", re.I),
     re.compile(r"\bshall\s+be\s+imprisoned\b", re.I),
     re.compile(r"\bshall\s+be\s+punished\b", re.I),
     re.compile(r"\bis\s+guilty\s+of\b", re.I),
-    re.compile(r"\bshall\s+be\s+subject\s+to\b.{0,120}\b(?:fine|imprisonment)\b", re.I | re.S),
+    re.compile(
+        r"\bshall\s+be\s+subject\s+to\b.{0,120}\b(?:fine|imprisonment)\b",
+        re.I | re.S,
+    ),
 )
 
 
@@ -100,8 +106,7 @@ def iter_strings(value: Any) -> Iterable[str]:
     if isinstance(value, str):
         yield value
     elif isinstance(value, dict):
-        for key, item in value.items():
-            yield str(key)
+        for item in value.values():
             yield from iter_strings(item)
     elif isinstance(value, list):
         for item in value:
@@ -122,9 +127,7 @@ def is_safe(value: Any) -> bool:
 
 def strict_title18_charge(detail: dict) -> bool:
     """Positive, fail-closed classification for a displayable Title 18 charge."""
-    if detail.get("status") != "current":
-        return False
-    if not detail.get("charge_candidate"):
+    if detail.get("status") != "current" or not detail.get("charge_candidate"):
         return False
     if not is_safe(detail):
         return False
@@ -134,17 +137,16 @@ def strict_title18_charge(detail: dict) -> bool:
     if not body.strip() or NON_CHARGE_HEADING.search(heading):
         return False
 
-    actor = any(pattern.search(body) for pattern in TITLE18_ACTOR_PATTERNS)
-    penalty = any(pattern.search(body) for pattern in TITLE18_PENALTY_PATTERNS)
-    return actor and penalty
+    return (
+        any(pattern.search(body) for pattern in TITLE18_ACTOR_PATTERNS)
+        and any(pattern.search(body) for pattern in TITLE18_PENALTY_PATTERNS)
+    )
 
 
 def sanitize_supporting_value(value: Any) -> Any:
-    """Scrub blocked strings from non-charge supporting metadata fail-closed."""
+    """Scrub blocked strings from non-charge supporting metadata."""
     if isinstance(value, str):
-        if blocked_reason(value):
-            return "[BLOCKED FOR ROBLOX SAFETY]"
-        return value
+        return "[PLATFORM-RESTRICTED CONTENT REMOVED]" if blocked_reason(value) else value
     if isinstance(value, list):
         return [sanitize_supporting_value(item) for item in value]
     if isinstance(value, dict):
@@ -153,17 +155,17 @@ def sanitize_supporting_value(value: Any) -> Any:
 
 
 def harden() -> None:
-    required = [
-        BASE / "charges.json",
-        BASE / "federal-code.json",
-        BASE / "dc-code.json",
-        BASE / "title18-index.json",
-        BASE / "title18-search.json",
-        BASE / "manifest.json",
-        BASE / "sentencing.json",
-        BASE / "documents.json",
-    ]
-    missing = [str(path) for path in required if not path.is_file()]
+    required = (
+        "charges.json",
+        "federal-code.json",
+        "dc-code.json",
+        "title18-index.json",
+        "title18-search.json",
+        "manifest.json",
+        "sentencing.json",
+        "documents.json",
+    )
+    missing = [name for name in required if not (BASE / name).is_file()]
     if missing:
         raise RuntimeError(f"Cannot harden missing API files: {missing}")
 
@@ -174,8 +176,7 @@ def harden() -> None:
     charges = load(BASE / "charges.json")
     manifest = load(BASE / "manifest.json")
 
-    # Local codes: only explicit offense sections, and only if the complete
-    # exposed section object is safe for Roblox.
+    # Local-code detail endpoints become charge-only.
     federal_sections = [
         sec for sec in federal.get("sections", [])
         if sec.get("is_offense") is True and is_safe(sec)
@@ -188,13 +189,10 @@ def harden() -> None:
     dc["sections"] = dc_sections
     federal["display_scope"] = "roblox_safe_charges_only"
     dc["display_scope"] = "roblox_safe_charges_only"
-
     allowed_federal = {sec["id"] for sec in federal_sections}
     allowed_dc = {sec["id"] for sec in dc_sections}
 
-    # Title 18: classify from the full generated detail objects. Anything that
-    # is unsafe OR not positively classifiable as a standalone charge is deleted
-    # from the public API directory, not merely hidden from charges.json.
+    # Title 18 detail files are deleted unless positively classified AND safe.
     allowed_title18: dict[str, dict] = {}
     removed_files = 0
     for path in sorted(TITLE18_DIR.glob("*.json")):
@@ -209,12 +207,16 @@ def harden() -> None:
             path.unlink()
             removed_files += 1
 
-    # Rebuild the Title 18 index from surviving detail files only.
+    index_by_id = {
+        item.get("id"): item for item in title18_index.get("sections", [])
+    }
     safe_index_sections = []
-    index_by_id = {item.get("id"): item for item in title18_index.get("sections", [])}
     for charge_id, detail in sorted(
         allowed_title18.items(),
-        key=lambda pair: (int(pair[1]["section"]) if str(pair[1]["section"]).isdigit() else 10**9, str(pair[1]["section"])),
+        key=lambda pair: (
+            int(pair[1]["section"]) if str(pair[1]["section"]).isdigit() else 10**9,
+            str(pair[1]["section"]),
+        ),
     ):
         old = dict(index_by_id.get(charge_id) or {})
         old.pop("charge_candidate", None)
@@ -226,7 +228,7 @@ def harden() -> None:
     title18_index["counts"] = {
         "sections": len(safe_index_sections),
         "charges": len(safe_index_sections),
-        "unsafe_or_noncharge_removed": removed_files,
+        "filtered_out": removed_files,
     }
     title18_index["display_scope"] = "roblox_safe_charges_only"
 
@@ -239,8 +241,7 @@ def harden() -> None:
     title18_search["count"] = len(safe_search_entries)
     title18_search["display_scope"] = "roblox_safe_charges_only"
 
-    # charges.json is the sole display catalog used by Roblox. A charge survives
-    # only if it is backed by an allowed charge section above.
+    # The booking catalog can contain only backed, safe charge records.
     safe_charges = []
     for entry in charges.get("charges", []):
         source = entry.get("source")
@@ -261,9 +262,15 @@ def harden() -> None:
 
     counts = {
         "total": len(safe_charges),
-        "federal_code": sum(1 for item in safe_charges if item.get("source") == "federal-criminal-code-2025"),
-        "dc_code": sum(1 for item in safe_charges if item.get("source") == "dc-criminal-code-federalized"),
-        "title18": sum(1 for item in safe_charges if item.get("source") == "title18"),
+        "federal_code": sum(
+            item.get("source") == "federal-criminal-code-2025"
+            for item in safe_charges
+        ),
+        "dc_code": sum(
+            item.get("source") == "dc-criminal-code-federalized"
+            for item in safe_charges
+        ),
+        "title18": sum(item.get("source") == "title18" for item in safe_charges),
     }
     charges["charges"] = safe_charges
     charges["counts"] = counts
@@ -272,22 +279,22 @@ def harden() -> None:
         "roblox_safe_only": True,
         "fail_closed": True,
         "note": (
-            "Only positively classified criminal charges that pass the Roblox safety filter are exposed. "
-            "Unsafe, ambiguous, administrative, definitional, procedural, and other non-charge sections are excluded."
+            "Only positively classified criminal charges that pass the platform "
+            "safety filter are exposed. Ambiguous, administrative, definitional, "
+            "procedural, restricted-content, and other non-charge sections are excluded."
         ),
     }
 
-    # Supporting endpoints are not charge catalogs. Scrub them anyway so a
-    # blocked reference cannot survive anywhere under the Roblox-facing API.
+    # Supporting endpoints are scrubbed as well so restricted references cannot
+    # survive anywhere under the Roblox-facing API path.
     sentencing = sanitize_supporting_value(load(BASE / "sentencing.json"))
     documents = load(BASE / "documents.json")
     for doc in documents.get("documents", []):
-        doc["sections"] = [sec for sec in doc.get("sections", []) if is_safe(sec)]
+        doc["sections"] = [
+            sec for sec in doc.get("sections", []) if is_safe(sec)
+        ]
     documents = sanitize_supporting_value(documents)
 
-    # The manifest explicitly tells clients that charges.json is the only list
-    # of displayable offenses. Other endpoints may be used only to resolve a
-    # selected charge or supporting sentencing metadata.
     manifest = sanitize_supporting_value(manifest)
     roblox = manifest.setdefault("roblox", {})
     roblox["display_contract"] = {
@@ -298,17 +305,18 @@ def harden() -> None:
         "never_display_unlisted_sections": True,
     }
     roblox["booking_catalog_sources"] = [
-        "Strictly classified, Roblox-safe current Title 18 charges",
-        "Roblox-safe Federal Criminal Code offenses enacted by Public Law 37-261",
-        "Roblox-safe D.C. Criminal Code offenses federalized by Public Law 36-260",
+        "Strictly classified, platform-safe current Title 18 charges",
+        "Platform-safe Federal Criminal Code offenses enacted by Public Law 37-261",
+        "Platform-safe D.C. Criminal Code offenses federalized by Public Law 36-260",
     ]
     roblox["title18_classification"] = (
-        "Title 18 is fail-closed: only current Part I sections with positive actor-and-criminal-penalty language "
-        "and no administrative/definition/procedure heading are exposed."
+        "Title 18 is fail-closed: only current Part I sections with positive "
+        "actor-and-criminal-penalty language and no administrative, definition, "
+        "or procedure heading are exposed."
     )
     roblox["content_filter"] = (
-        "Sections referencing minors, sexual content/conduct, drugs or controlled substances, alcohol/tobacco/vaping, "
-        "gambling, or self-harm are excluded from the Roblox-facing API."
+        "A fail-closed platform-safety filter removes restricted-content sections "
+        "before publication. Clients must never display an unlisted section."
     )
 
     write(BASE / "federal-code.json", federal)
@@ -323,13 +331,14 @@ def harden() -> None:
     audit()
     print(
         "Roblox criminal API hardened: "
-        f"{counts['federal_code']} FCC + {counts['dc_code']} D.C. + {counts['title18']} Title 18 charges; "
-        f"{removed_files} Title 18 unsafe/non-charge detail files removed."
+        f"{counts['federal_code']} FCC + {counts['dc_code']} D.C. + "
+        f"{counts['title18']} Title 18 charges; {removed_files} Title 18 "
+        "restricted/non-charge detail files removed."
     )
 
 
 def audit() -> None:
-    """Abort if blocked text or non-charge display records survive."""
+    """Abort if blocked text or a non-charge display record survives."""
     if not BASE.is_dir():
         raise RuntimeError(f"API directory does not exist: {BASE}")
 
@@ -341,7 +350,7 @@ def audit() -> None:
             offenders.append(f"{path.relative_to(ROOT)} ({reason})")
     if offenders:
         raise RuntimeError(
-            "Roblox safety audit failed; blocked content survived in generated API: "
+            "Roblox safety audit failed; blocked content survived: "
             + ", ".join(offenders[:20])
         )
 
@@ -371,7 +380,7 @@ def audit() -> None:
     for path in TITLE18_DIR.glob("*.json"):
         detail = load(path)
         if detail.get("is_charge") is not True or not is_safe(detail):
-            raise RuntimeError(f"Unsafe/non-charge Title 18 detail survived: {path.name}")
+            raise RuntimeError(f"Restricted/non-charge Title 18 detail survived: {path.name}")
 
 
 def main() -> int:
