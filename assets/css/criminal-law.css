@@ -141,8 +141,9 @@
 .result-badge--class { color: var(--usar-green-ink); background: var(--usar-green-bg); border-color: color-mix(in srgb, var(--usar-green) 45%, var(--border)); }
 .result-body { border-top: 1px solid var(--border); padding: 1rem 1.1rem 1.2rem; }
 .result-body p { white-space: pre-line; margin: 0; font-family: var(--serif); line-height: 1.65; }
-.result-body__toolbar { display: flex; gap: .8rem; justify-content: space-between; align-items: center; margin-bottom: .9rem; color: var(--muted); font-size: .78rem; }
+.result-body__toolbar { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: space-between; align-items: center; margin-bottom: .9rem; color: var(--muted); font-size: .78rem; }
 .result-body__toolbar a { font-weight: 700; }
+.result-body__links { display: inline-flex; flex-wrap: wrap; justify-content: flex-end; gap: .75rem; }
 .result-sentence { margin-top: 1rem; padding: .75rem .85rem; border-left: 3px solid var(--usar-green); background: var(--usar-green-bg); color: var(--usar-green-ink); font-size: .82rem; }
 
 .api-docs { border-top: 1px solid var(--border); padding-top: 2rem; }
@@ -172,4 +173,5 @@
   .section-heading--inline { display: block; }
   .result-summary { display: block; margin-top: .5rem; }
   .law-result summary { grid-template-columns: minmax(0,1fr) auto; }
+  .result-body__links { width: 100%; justify-content: flex-start; }
 }
