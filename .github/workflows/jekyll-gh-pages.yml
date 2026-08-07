@@ -89,6 +89,7 @@ jobs:
           python -m unittest discover -s tests -p "test_check_encoding.py" -v
           node --check assets/js/public-laws.js
           node --check assets/js/criminal-law.js
+          python -m py_compile tools/build_criminal_law_api.py tools/build_criminal_law_routes.py
           node --test tests/test_usar_notes.mjs tests/test_citation_routing.mjs
           python - <<'PY'
           import json
@@ -122,8 +123,11 @@ jobs:
           sentencing = json.loads((base / 'sentencing.json').read_text(encoding='utf-8'))
 
           assert manifest['schema_version'] == '1.0'
+          assert manifest['api_base'].startswith('https://')
           assert charges['counts']['federal_code'] == 66
           assert charges['counts']['title18'] > 500
+          assert all(charge.get('status') == 'current' for charge in charges['charges'] if charge['source'] == 'title18')
+          assert all(charge['details_url'].startswith('https://') for charge in charges['charges'])
           assert any(item['section'] == '1111' for item in title18['sections'])
           assert (base / 'title18' / '1111.json').is_file()
           f201 = next(item for item in federal['sections'] if item['section'] == '201')
@@ -155,8 +159,13 @@ jobs:
 
           # Discord and other crawlers do not run the SPA's JavaScript fallback.
           # Generate a small 200-response HTML shell with static metadata for
-          # every title and section route while browsers continue into app.js.
+          # every U.S. Code title and section route.
           python tools/build_social_routes.py --site-dir _site
+
+          # Criminal-law material gets full-text permanent HTML pages so it is
+          # searchable by humans, crawlable by search engines, and linkable
+          # without depending on JavaScript.
+          python tools/build_criminal_law_routes.py --site-dir _site
 
           test -s _site/index.html
           test -s _site/404.html
@@ -166,6 +175,7 @@ jobs:
           test -s _site/assets/js/criminal-law.js
           test -s _site/assets/css/public-laws.css
           test -s _site/assets/css/criminal-law.css
+          test -s _site/assets/css/criminal-law-static.css
           test -s _site/data/titles.json
           test -s _site/data/public-laws.json
           test -s _site/data/social-routes.json
@@ -176,9 +186,20 @@ jobs:
           test -s _site/cite/18/111/index.html
           test -s _site/cite/28/530B/index.html
           test -s _site/cite/42/1983/index.html
+          test -s _site/criminal/index.html
+          test -s _site/criminal/fcc/201/index.html
+          test -s _site/criminal/dc/102/index.html
+          test -s _site/criminal/title18/1111/index.html
+          test -s _site/criminal/public-law/39-267/6/index.html
+          test -s _site/sitemap-criminal.xml
+          test -s _site/robots.txt
           grep -q 'property="og:title"' _site/cite/18/111/index.html
           grep -q 'property="og:image"' _site/cite/18/111/index.html
           grep -q '18 U.S.C. § 111' _site/cite/18/111/index.html
+          grep -q 'United States Attorney' _site/criminal/dc/102/index.html
+          grep -q 'FIRST DEGREE MURDER' _site/criminal/fcc/301/index.html
+          grep -q '18 U.S.C. § 1111' _site/criminal/title18/1111/index.html
+          grep -q 'Sitemap:' _site/robots.txt
           test ! -e _site/usc/usc42.xml
           test ! -e _site/audit
           test ! -e _site/codification
