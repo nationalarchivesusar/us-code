@@ -129,6 +129,7 @@ def title18_sections(path: Path) -> list[dict]:
                     "charge_candidate": charge_candidate,
                     "text": body,
                     "cite_url": f"{PUBLIC_BASE}cite/18/{number}/",
+                    "web_url": f"{PUBLIC_BASE}criminal/title18/{number}/",
                 })
         for child in list(node):
             walk(child, next_part, next_chapter)
@@ -143,6 +144,10 @@ def title18_sections(path: Path) -> list[dict]:
 def code_payload(doc: dict, *, apply_integration: bool = False) -> dict:
     rules = doc.get("class_rules") or {}
     sections = []
+    route_family = {
+        "federal-criminal-code-2025": "fcc",
+        "dc-criminal-code-federalized": "dc",
+    }.get(doc["id"])
     for raw in doc.get("sections", []):
         text = raw.get("text", "")
         if apply_integration and raw.get("integration_append"):
@@ -160,6 +165,8 @@ def code_payload(doc: dict, *, apply_integration: bool = False) -> dict:
             "is_offense": bool(raw.get("is_offense")),
             "text": text,
         }
+        if route_family:
+            section["web_url"] = f"{PUBLIC_BASE}criminal/{route_family}/{raw['number']}/"
         if cls and cls in rules:
             section["class_rule"] = rules[cls]
         sections.append(section)
@@ -212,15 +219,25 @@ def main() -> int:
     source_hash = digest.hexdigest()
 
     title18_index_sections = []
+    title18_search_entries = []
     title18_charge_entries = []
     for sec in title18:
         filename = f"{safe_filename(sec['section'])}.json"
         detail_url = f"{API_BASE}title18/{filename}"
         detail = {"schema_version":"1.0", "generated_at":generated_at, **sec}
         write_json(TITLE18_OUT / filename, detail)
-        index_item = {k: sec[k] for k in ("id","section","citation","heading","part","chapter","status","charge_candidate","cite_url")}
+        index_item = {k: sec[k] for k in ("id","section","citation","heading","part","chapter","status","charge_candidate","cite_url","web_url")}
         index_item["details_url"] = detail_url
         title18_index_sections.append(index_item)
+        title18_search_entries.append({
+            "id": sec["id"],
+            "search_text": compact_text(" ".join([
+                sec["citation"],
+                sec["heading"],
+                (sec.get("chapter") or {}).get("heading", ""),
+                sec["text"],
+            ])).lower(),
+        })
         if sec["charge_candidate"]:
             title18_charge_entries.append({
                 "id": sec["id"],
@@ -232,6 +249,7 @@ def main() -> int:
                 "part": sec["part"],
                 "chapter": sec["chapter"],
                 "details_url": detail_url,
+                "web_url": sec["web_url"],
                 "cite_url": sec["cite_url"],
             })
 
@@ -246,6 +264,12 @@ def main() -> int:
         "title":"Crimes and Criminal Procedure",
         "counts":{"sections":len(title18_index_sections),"charge_candidates":len(title18_charge_entries),"by_status":status_counts},
         "sections":title18_index_sections,
+    })
+    write_json(OUT / "title18-search.json", {
+        "schema_version":"1.0",
+        "generated_at":generated_at,
+        "count":len(title18_search_entries),
+        "entries":title18_search_entries,
     })
     write_json(OUT / "federal-code.json", {"generated_at":generated_at, **federal})
     write_json(OUT / "dc-code.json", {"generated_at":generated_at, **dc})
@@ -266,11 +290,18 @@ def main() -> int:
     public_law_docs = []
     for doc_id in ("pl-36-260","pl-37-261","pl-39-267"):
         doc = docs[doc_id]
+        law_number = doc["citation"].replace("Public Law ", "")
+        sections = []
+        for section in doc.get("sections", []):
+            item = dict(section)
+            item["web_url"] = f"{PUBLIC_BASE}criminal/public-law/{law_number}/{section['number']}/"
+            sections.append(item)
         public_law_docs.append({
             "id":doc["id"], "citation":doc["citation"], "title":doc["title"],
             "status":doc.get("status"), "source_date":doc.get("source_date"),
-            "sections":doc.get("sections", []),
-            "public_law_url":f"{PUBLIC_BASE}public-laws.html#pl-{doc['citation'].replace('Public Law ','')}",
+            "sections":sections,
+            "public_law_url":f"{PUBLIC_BASE}public-laws.html#pl-{law_number}",
+            "permanent_index_url":f"{PUBLIC_BASE}criminal/public-law/{law_number}/",
         })
     write_json(OUT / "documents.json", {
         "schema_version":"1.0","generated_at":generated_at,"documents":public_law_docs,
@@ -293,7 +324,7 @@ def main() -> int:
             "chapter":sec.get("chapter"),
             "chapter_heading":sec.get("chapter_heading"),
             "details_url":f"{API_BASE}federal-code.json",
-            "web_url":f"{PUBLIC_BASE}criminal-law.html#fcc-{sec['section']}",
+            "web_url":sec["web_url"],
             "anchor":f"fcc-{sec['section']}",
         })
 
@@ -314,12 +345,14 @@ def main() -> int:
         "generated_at":generated_at,
         "revision":source_hash[:16],
         "site_url":PUBLIC_BASE,
+        "permanent_index_url":f"{PUBLIC_BASE}criminal/",
         "api_base":API_BASE,
         "endpoints":{
             "charges":"charges.json",
             "federal_code":"federal-code.json",
             "dc_code":"dc-code.json",
             "title18_index":"title18-index.json",
+            "title18_search":"title18-search.json",
             "title18_section":"title18/{section}.json",
             "sentencing":"sentencing.json",
             "source_documents":"documents.json",
@@ -333,6 +366,7 @@ def main() -> int:
         "roblox":{
             "recommended_startup_endpoint":"charges.json",
             "cache_strategy":"Cache the manifest revision and charges catalog server-side; use each charge's absolute details_url when full statutory text is requested.",
+            "browser_only_endpoint":"title18-search.json is intended for full-text website search and normally should not be downloaded by Roblox clients.",
         },
     })
 
