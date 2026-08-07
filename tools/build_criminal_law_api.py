@@ -2,7 +2,7 @@
 """Build a static criminal-law API for the website and Roblox clients.
 
 Inputs:
-  legal-data/criminal-law-sources.json
+  legal-data/criminal-law/*.json
   usc/usc18.xml
 Outputs:
   data/api/v1/criminal-law/*.json
@@ -23,7 +23,8 @@ SOURCE_DIR = ROOT / "legal-data" / "criminal-law"
 TITLE18 = ROOT / "usc" / "usc18.xml"
 OUT = ROOT / "data" / "api" / "v1" / "criminal-law"
 TITLE18_OUT = OUT / "title18"
-USLM_NS = "http://xml.house.gov/schemas/uslm/1.0"
+PUBLIC_BASE = "https://nationalarchivesusar.github.io/us-code/"
+API_BASE = f"{PUBLIC_BASE}data/api/v1/criminal-law/"
 
 
 def load_json(path: Path):
@@ -72,6 +73,17 @@ def safe_filename(section: str) -> str:
     return re.sub(r"[^0-9A-Za-z._-]", "_", section)
 
 
+def section_status(heading: str) -> str:
+    lowered = heading.lower()
+    if "repealed" in lowered:
+        return "repealed"
+    if "omitted" in lowered:
+        return "omitted"
+    if "transferred" in lowered:
+        return "transferred"
+    return "current"
+
+
 def title18_sections(path: Path) -> list[dict]:
     tree = ET.parse(path)
     root = tree.getroot()
@@ -100,7 +112,9 @@ def title18_sections(path: Path) -> list[dict]:
                 heading = element_text(direct_child(node, "heading")) or f"Section {number}"
                 body = section_body_text(node)
                 part_number = (next_part or {}).get("number", "")
-                charge_candidate = bool(re.search(r"\bI\b", part_number)) or number.isdigit() and int(number) < 3000
+                status = section_status(heading)
+                is_part_i = bool(re.search(r"\bI\b", part_number)) or (number.isdigit() and int(number) < 3000)
+                charge_candidate = is_part_i and status == "current"
                 sections.append({
                     "id": f"usc-18-{number}",
                     "source": "title18",
@@ -111,9 +125,10 @@ def title18_sections(path: Path) -> list[dict]:
                     "heading": heading,
                     "part": next_part,
                     "chapter": next_chapter,
+                    "status": status,
                     "charge_candidate": charge_candidate,
                     "text": body,
-                    "cite_url": f"cite/18/{number}/",
+                    "cite_url": f"{PUBLIC_BASE}cite/18/{number}/",
                 })
         for child in list(node):
             walk(child, next_part, next_chapter)
@@ -200,11 +215,11 @@ def main() -> int:
     title18_charge_entries = []
     for sec in title18:
         filename = f"{safe_filename(sec['section'])}.json"
-        detail_path = f"data/api/v1/criminal-law/title18/{filename}"
+        detail_url = f"{API_BASE}title18/{filename}"
         detail = {"schema_version":"1.0", "generated_at":generated_at, **sec}
         write_json(TITLE18_OUT / filename, detail)
-        index_item = {k: sec[k] for k in ("id","section","citation","heading","part","chapter","charge_candidate","cite_url")}
-        index_item["details_url"] = detail_path
+        index_item = {k: sec[k] for k in ("id","section","citation","heading","part","chapter","status","charge_candidate","cite_url")}
+        index_item["details_url"] = detail_url
         title18_index_sections.append(index_item)
         if sec["charge_candidate"]:
             title18_charge_entries.append({
@@ -213,18 +228,23 @@ def main() -> int:
                 "citation": sec["citation"],
                 "section": sec["section"],
                 "label": sec["heading"],
+                "status": sec["status"],
                 "part": sec["part"],
                 "chapter": sec["chapter"],
-                "details_url": detail_path,
+                "details_url": detail_url,
                 "cite_url": sec["cite_url"],
             })
+
+    status_counts = {}
+    for sec in title18:
+        status_counts[sec["status"]] = status_counts.get(sec["status"], 0) + 1
 
     write_json(OUT / "title18-index.json", {
         "schema_version":"1.0",
         "generated_at":generated_at,
         "source":"18 U.S.C.",
         "title":"Crimes and Criminal Procedure",
-        "counts":{"sections":len(title18_index_sections),"charge_candidates":len(title18_charge_entries)},
+        "counts":{"sections":len(title18_index_sections),"charge_candidates":len(title18_charge_entries),"by_status":status_counts},
         "sections":title18_index_sections,
     })
     write_json(OUT / "federal-code.json", {"generated_at":generated_at, **federal})
@@ -250,7 +270,7 @@ def main() -> int:
             "id":doc["id"], "citation":doc["citation"], "title":doc["title"],
             "status":doc.get("status"), "source_date":doc.get("source_date"),
             "sections":doc.get("sections", []),
-            "public_law_url":f"public-laws.html#pl-{doc['citation'].replace('Public Law ','')}",
+            "public_law_url":f"{PUBLIC_BASE}public-laws.html#pl-{doc['citation'].replace('Public Law ','')}",
         })
     write_json(OUT / "documents.json", {
         "schema_version":"1.0","generated_at":generated_at,"documents":public_law_docs,
@@ -267,11 +287,13 @@ def main() -> int:
             "formal_citation":sec["citation"],
             "section":sec["section"],
             "label":sec["heading"],
+            "status":"current",
             "offense_class":sec.get("offense_class"),
             "class_rule":sec.get("class_rule"),
             "chapter":sec.get("chapter"),
             "chapter_heading":sec.get("chapter_heading"),
-            "details_url":"data/api/v1/criminal-law/federal-code.json",
+            "details_url":f"{API_BASE}federal-code.json",
+            "web_url":f"{PUBLIC_BASE}criminal-law.html#fcc-{sec['section']}",
             "anchor":f"fcc-{sec['section']}",
         })
 
@@ -291,7 +313,8 @@ def main() -> int:
         "schema_version":"1.0",
         "generated_at":generated_at,
         "revision":source_hash[:16],
-        "api_base":"data/api/v1/criminal-law/",
+        "site_url":PUBLIC_BASE,
+        "api_base":API_BASE,
         "endpoints":{
             "charges":"charges.json",
             "federal_code":"federal-code.json",
@@ -302,18 +325,18 @@ def main() -> int:
             "source_documents":"documents.json",
         },
         "sources":[
-            {"id":"title18","citation":"18 U.S.C.","status":"current"},
+            {"id":"title18","citation":"18 U.S.C.","status":"current sections only are included in the booking charge catalog"},
             {"id":"federal-criminal-code-2025","citation":"Public Law 37-261 § 4","status":"current"},
             {"id":"dc-criminal-code-federalized","citation":"Public Law 36-260 § 10(b)","status":"federalized source"},
             {"id":"sentencing","citation":"Public Law 39-267","status":"current"},
         ],
         "roblox":{
             "recommended_startup_endpoint":"charges.json",
-            "cache_strategy":"Cache the manifest revision and charges catalog server-side; fetch individual Title 18 section JSON only when full text is requested.",
+            "cache_strategy":"Cache the manifest revision and charges catalog server-side; use each charge's absolute details_url when full statutory text is requested.",
         },
     })
 
-    print(f"Built criminal-law API: {len(local_charges)} FCC offenses, {len(title18_index_sections)} Title 18 sections, {len(title18_charge_entries)} Title 18 charge candidates")
+    print(f"Built criminal-law API: {len(local_charges)} FCC offenses, {len(title18_index_sections)} Title 18 sections, {len(title18_charge_entries)} current Title 18 charge candidates")
     return 0
 
 if __name__ == "__main__":
