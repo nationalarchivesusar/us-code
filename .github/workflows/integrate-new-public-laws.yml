@@ -1,0 +1,38 @@
+name: Integrate new public laws
+
+on:
+  push:
+    branches:
+      - agent/integrate-pl-41-271-42-272-42-273
+
+permissions:
+  contents: write
+
+jobs:
+  integrate:
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out integration branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install PDF text extractor
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - name: Apply enacted laws
+        run: python audit/scripts/integrate_pl041271_pl042272_pl042273.py
+      - name: Validate changed XML
+        run: |
+          python - <<'PY'
+          from xml.etree import ElementTree as ET
+          for f in ['usc/usc01.xml','usc/usc06.xml','usc/usc15.xml','usc/usc18.xml','usc/usc40.xml','usc/usc50.xml']:
+              ET.parse(f)
+              print('OK', f)
+          PY
+      - name: Commit integrated Code
+        run: |
+          git config user.name "NARA Codification Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Integrate public laws 41-271, 42-272, and 42-273"
+          git push
