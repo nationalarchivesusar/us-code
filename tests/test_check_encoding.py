@@ -1,4 +1,5 @@
 import importlib.util
+import json
 import sys
 import tempfile
 import unittest
@@ -86,6 +87,60 @@ class CheckEncodingTests(unittest.TestCase):
         path = self.write_temp("<section>All clear, right?</section>\n")
         exit_code = self.mod.main([str(path)])
         self.assertEqual(0, exit_code)
+
+
+class Title18SentencingRegressionTests(unittest.TestCase):
+    """Protect the Roblox catalog from reverting Title 18 to blanket manual sentencing."""
+
+    @classmethod
+    def setUpClass(cls):
+        path = ROOT / "data" / "api" / "v1" / "criminal-law" / "charges.json"
+        if not path.is_file():
+            raise unittest.SkipTest("Generated criminal-law API is not present")
+        cls.payload = json.loads(path.read_text(encoding="utf-8"))
+        cls.title18 = [
+            item for item in cls.payload.get("charges", [])
+            if item.get("source") == "title18"
+        ]
+
+    def test_title18_has_both_automatic_and_manual_entries(self):
+        automatic = [
+            item for item in self.title18
+            if item.get("sentencing_mode") == "automatic_class_rule"
+        ]
+        manual = [
+            item for item in self.title18
+            if item.get("sentencing_mode") == "manual_required"
+        ]
+        self.assertGreater(len(automatic), 0)
+        self.assertGreater(len(manual), 0)
+        self.assertEqual(len(automatic), self.payload["counts"]["title18_automatic"])
+        self.assertEqual(len(manual), self.payload["counts"]["title18_manual"])
+        self.assertEqual(len(self.title18), len(automatic) + len(manual))
+
+    def test_automatic_title18_entries_have_class_and_sentence_metadata(self):
+        automatic = [
+            item for item in self.title18
+            if item.get("sentencing_mode") == "automatic_class_rule"
+        ]
+        for item in automatic:
+            with self.subTest(section=item.get("section")):
+                self.assertIn(item.get("offense_category"), {"felony", "misdemeanor"})
+                self.assertIn(item.get("offense_class"), {"A", "B", "C", "D", "E"})
+                self.assertEqual(item.get("classification_status"), "derived_from_title18")
+                self.assertIsInstance(item.get("suggested_minutes"), (int, float))
+                self.assertGreater(item["suggested_minutes"], 0)
+                self.assertIn("18 U.S.C. § 3559", item.get("classification_basis", ""))
+
+    def test_multitier_section_111_remains_manual(self):
+        section_111 = next(
+            item for item in self.title18 if str(item.get("section")) == "111"
+        )
+        self.assertEqual(section_111.get("sentencing_mode"), "manual_required")
+        self.assertEqual(
+            section_111.get("classification_status"),
+            "manual_review_required",
+        )
 
 
 if __name__ == "__main__":
