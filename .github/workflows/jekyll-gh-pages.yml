@@ -76,6 +76,10 @@ jobs:
           python tools/filter_public_laws_for_publication.py
           python tools/build_criminal_law_api.py
           python tools/include_dc_booking_charges.py
+          python tools/harden_roblox_criminal_api.py
+          python tools/finalize_roblox_criminal_api.py
+          python tools/harden_roblox_criminal_api.py --check
+          python tools/finalize_roblox_criminal_api.py --check
           test -s data/titles.json
           test -s data/title-42/manifest.json
           test -s data/public-laws.json
@@ -86,6 +90,7 @@ jobs:
           test -s data/api/v1/criminal-law/title18-index.json
           test -s data/api/v1/criminal-law/title18-search.json
           test -s data/api/v1/criminal-law/sentencing.json
+          test ! -e data/api/v1/criminal-law/documents.json
 
       - name: Run website validation
         shell: bash
@@ -98,8 +103,11 @@ jobs:
           python -m unittest discover -s tests -p "test_check_encoding.py" -v
           node --check assets/js/public-laws.js
           node --check assets/js/criminal-law.js
-          python -m py_compile tools/build_criminal_law_api.py tools/include_dc_booking_charges.py tools/build_criminal_law_routes.py
+          python -m py_compile tools/build_criminal_law_api.py tools/include_dc_booking_charges.py tools/harden_roblox_criminal_api.py tools/finalize_roblox_criminal_api.py tools/build_criminal_law_routes.py
+          python tools/harden_roblox_criminal_api.py --check
+          python tools/finalize_roblox_criminal_api.py --check
           node --test tests/test_usar_notes.mjs tests/test_citation_routing.mjs
+
           python - <<'PY'
           import json
           from pathlib import Path
@@ -119,6 +127,7 @@ jobs:
           )
           print('Public-law index validation passed.')
           PY
+
           python - <<'PY'
           import json
           from pathlib import Path
@@ -134,34 +143,57 @@ jobs:
 
           assert manifest['schema_version'] == '1.0'
           assert manifest['api_base'].startswith('https://')
-          assert manifest['permanent_index_url'].startswith('https://')
-          assert manifest['endpoints']['title18_search'] == 'title18-search.json'
-          assert charges['counts']['federal_code'] == 66
-          dc_offense_count = sum(1 for item in dc['sections'] if item['is_offense'])
-          assert dc_offense_count > 50
-          assert charges['counts']['dc_code'] == dc_offense_count
-          assert charges['counts']['title18'] > 500
+          assert manifest['roblox']['display_contract']['charge_only'] is True
+          assert manifest['roblox']['display_contract']['roblox_safe_only'] is True
+          assert manifest['roblox']['display_contract']['fail_closed'] is True
+          assert manifest['roblox']['display_contract']['never_display_unlisted_sections'] is True
+          assert manifest['roblox']['public_surface']['advertised'] is False
+          assert manifest['roblox']['public_surface']['charge_catalog_only'] is True
+          assert manifest['roblox']['public_surface']['source_documents_exposed'] is False
+          assert 'source_documents' not in manifest['endpoints']
+          assert 'documents' not in manifest['endpoints']
+          assert not (base / 'documents.json').exists()
+
+          assert charges['display_contract']['charge_only'] is True
+          assert charges['display_contract']['roblox_safe_only'] is True
+          assert charges['display_contract']['fail_closed'] is True
           assert charges['counts']['total'] == len(charges['charges'])
+          assert charges['counts']['federal_code'] == len(federal['sections'])
+          assert charges['counts']['dc_code'] == len(dc['sections'])
+          assert charges['counts']['title18'] == len(title18['sections'])
+          assert charges['counts']['federal_code'] > 0
+          assert charges['counts']['dc_code'] > 0
+          assert charges['counts']['title18'] > 0
           assert set(charges['available_local_codes']) == {'federal-criminal-code-2025', 'dc-criminal-code-federalized'}
-          assert any(charge['source'] == 'dc-criminal-code-federalized' and charge['section'] == '409' for charge in charges['charges'])
-          assert 'Public Law 36-260' in charges['local_code_status_note']
-          assert all(charge.get('status') == 'current' for charge in charges['charges'] if charge['source'] == 'title18')
+
+          assert all(item.get('is_offense') is True for item in federal['sections'])
+          assert all(item.get('is_offense') is True for item in dc['sections'])
+          assert all(item.get('is_charge') is True for item in title18['sections'])
+          assert all(item.get('is_charge') is True for item in charges['charges'])
+          assert all(item.get('content_policy') == 'roblox_safe' for item in charges['charges'])
           assert all(charge['details_url'].startswith('https://') for charge in charges['charges'])
           assert all(charge['web_url'].startswith('https://') for charge in charges['charges'])
-          assert any(item['section'] == '1111' for item in title18['sections'])
+
+          assert any(item['section'] == '111' for item in title18['sections'])
           assert title18_search['count'] == title18['counts']['sections']
-          murder_search = next(item for item in title18_search['entries'] if item['id'] == 'usc-18-1111')
-          assert 'malice aforethought' in murder_search['search_text']
-          assert (base / 'title18' / '1111.json').is_file()
+          assert {item['id'] for item in title18_search['entries']} == {item['id'] for item in title18['sections']}
+          assert (base / 'title18' / '111.json').is_file()
+
           f201 = next(item for item in federal['sections'] if item['section'] == '201')
           assert f201['offense_class'] == 'E'
           assert f201['web_url'].endswith('/criminal/fcc/201/')
-          d102 = next(item for item in dc['sections'] if item['section'] == '102')
-          assert 'United States Attorney' in d102['text']
-          assert d102['web_url'].endswith('/criminal/dc/102/')
+
+          d201 = next(item for item in dc['sections'] if item['section'] == '201')
+          assert d201['offense_class'] == 'E'
+          assert d201['web_url'].endswith('/criminal/dc/201/')
+
           assert sentencing['rules']['crosswalk_status'] == 'not_expressly_defined'
-          print('Criminal-law API validation passed.')
+          print('Criminal-law API charge-only/safety validation passed.')
           PY
+
+          ! grep -q 'Use the Roblox API' criminal-law.html
+          ! grep -q 'api-docs' criminal-law.html
+          ! grep -q 'Roblox server example' criminal-law.html
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -187,9 +219,7 @@ jobs:
           # every U.S. Code title and section route.
           python tools/build_social_routes.py --site-dir _site
 
-          # Criminal-law material gets full-text permanent HTML pages so it is
-          # searchable by humans, crawlable by search engines, and linkable
-          # without depending on JavaScript.
+          # Build only permanent pages for the hardened charge catalog.
           python tools/build_criminal_law_routes.py --site-dir _site
 
           test -s _site/index.html
@@ -208,26 +238,32 @@ jobs:
           test -s _site/data/api/v1/criminal-law/manifest.json
           test -s _site/data/api/v1/criminal-law/charges.json
           test -s _site/data/api/v1/criminal-law/title18-search.json
-          test -s _site/data/api/v1/criminal-law/title18/1111.json
+          test -s _site/data/api/v1/criminal-law/title18/111.json
+          test ! -e _site/data/api/v1/criminal-law/documents.json
+
           test -s _site/cite/18/111/index.html
           test -s _site/cite/28/530B/index.html
           test -s _site/cite/42/1983/index.html
           test -s _site/criminal/index.html
           test -s _site/criminal/fcc/201/index.html
-          test -s _site/criminal/dc/102/index.html
-          test -s _site/criminal/title18/1111/index.html
-          test -s _site/criminal/public-law/39-267/6/index.html
+          test -s _site/criminal/dc/201/index.html
+          test -s _site/criminal/title18/111/index.html
           test -s _site/sitemap-criminal.xml
           test -s _site/robots.txt
+
           grep -q 'property="og:title"' _site/cite/18/111/index.html
           grep -q 'property="og:image"' _site/cite/18/111/index.html
           grep -q '18 U.S.C. § 111' _site/cite/18/111/index.html
-          grep -q 'United States Attorney' _site/criminal/dc/102/index.html
-          grep -q 'FIRST DEGREE MURDER' _site/criminal/fcc/301/index.html
-          grep -q '18 U.S.C. § 1111' _site/criminal/title18/1111/index.html
+          grep -q 'FCC § 201' _site/criminal/fcc/201/index.html
+          grep -q 'D.C. Criminal Code § 201' _site/criminal/dc/201/index.html
+          grep -q '18 U.S.C. § 111' _site/criminal/title18/111/index.html
           grep -q '<urlset' _site/sitemap-criminal.xml
-          grep -q '/criminal/title18/1111/' _site/sitemap-criminal.xml
+          grep -q '/criminal/title18/111/' _site/sitemap-criminal.xml
           grep -q 'Sitemap:' _site/robots.txt
+          grep -q 'Disallow: /us-code/data/api/v1/criminal-law/' _site/robots.txt
+          ! grep -q '/data/api/v1/criminal-law/' _site/sitemap-criminal.xml
+          ! grep -q 'Roblox server example' _site/criminal-law.html
+
           test ! -e _site/usc/usc42.xml
           test ! -e _site/audit
           test ! -e _site/codification
