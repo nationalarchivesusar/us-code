@@ -49,6 +49,14 @@ jobs:
           python tools/apply_current_law_notes.py
           python tools/apply_current_law_notes.py --check
 
+      - name: Apply substantive 2026 current-law sections
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/apply_current_law_sections.py
+          python tools/apply_current_law_sections.py --check
+          python -m unittest tests.test_current_law_sections -v
+
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
@@ -103,7 +111,7 @@ jobs:
           python -m unittest discover -s tests -p "test_check_encoding.py" -v
           node --check assets/js/public-laws.js
           node --check assets/js/criminal-law.js
-          python -m py_compile tools/build_criminal_law_api.py tools/include_dc_booking_charges.py tools/harden_roblox_criminal_api.py tools/finalize_roblox_criminal_api.py tools/build_criminal_law_routes.py
+          python -m py_compile tools/build_criminal_law_api.py tools/include_dc_booking_charges.py tools/harden_roblox_criminal_api.py tools/finalize_roblox_criminal_api.py tools/build_criminal_law_routes.py tools/apply_current_law_sections.py
           python tools/harden_roblox_criminal_api.py --check
           python tools/finalize_roblox_criminal_api.py --check
           node --test tests/test_usar_notes.mjs tests/test_citation_routing.mjs
