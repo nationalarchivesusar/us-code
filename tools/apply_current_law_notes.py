@@ -2,23 +2,24 @@
 """Project USAR current-law transfer and supersession notes into title XML.
 
 The repository intentionally preserves the OLRC baseline wording of a section unless
-an enactment supplies a uniquely executable Code amendment.  Some later USAR laws,
+an enactment supplies a uniquely executable Code amendment. Some later USAR laws,
 however, transfer functions or supersede procedures without literally striking every
-older U.S. Code section that names the former agency or procedure.  Readers need to
+older U.S. Code section that names the former agency or procedure. Readers need to
 see those later enactments where they encounter the older text.
 
 This tool reads legal-data/current-law-notes.json and inserts deterministic `rp-`
-notes at the affected Code sections.  The source manifest is the reviewable legal
+notes at the affected Code sections. The source manifest is the reviewable legal
 mapping; this script contains no hard-coded substantive law.
 
 The GitHub Pages workflow runs the projection after checkout and before the search
-index/title chunks are built.  Thus the published Code, citation pages, and keyword
+index/title chunks are built. Thus the published Code, citation pages, and keyword
 search all consume the reconciled XML while the repository can continue to retain
 its upstream OLRC baseline plus separately reviewable USAR overlays.
 """
 from __future__ import annotations
 
 import argparse
+import io
 import json
 import sys
 from collections import defaultdict
@@ -95,6 +96,12 @@ def verify_note(note: etree._Element, spec: dict) -> list[str]:
     if direct_paragraphs(note) != expected_paragraphs:
         problems.append("paragraph text differs from manifest")
     return problems
+
+
+def parse_document(raw: bytes) -> etree._ElementTree:
+    # etree.parse, unlike fromstring, preserves processing instructions that
+    # precede the root element (notably the OLRC xml-stylesheet instruction).
+    return etree.parse(io.BytesIO(raw), PARSER)
 
 
 def serialize(tree: etree._ElementTree, original: bytes) -> bytes:
@@ -178,7 +185,7 @@ def main(argv: list[str] | None = None) -> int:
             errors.append(f"Title {title}: {path.name} is an unresolved Git LFS pointer")
             continue
         try:
-            tree = etree.ElementTree(etree.fromstring(original, parser=PARSER))
+            tree = parse_document(original)
         except etree.XMLSyntaxError as exc:
             errors.append(f"Title {title}: XML parse failed: {exc}")
             continue
@@ -261,9 +268,9 @@ def main(argv: list[str] | None = None) -> int:
     for title in sorted(grouped, key=lambda value: int(value)):
         path, original, tree = parsed[title]
         projected = serialize(tree, original)
-        # Strictly reparse staged bytes before replacing the workspace file.
+        # Strictly reparse the staged full document before replacing the build-workspace file.
         try:
-            etree.fromstring(projected, parser=PARSER)
+            parse_document(projected)
         except etree.XMLSyntaxError as exc:
             print(f"ERROR: staged {path.name} is not well formed: {exc}", file=sys.stderr)
             return 1
