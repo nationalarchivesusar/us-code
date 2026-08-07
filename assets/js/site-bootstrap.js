@@ -1,6 +1,10 @@
 (() => {
   const THEME_STORAGE_KEY = "usc-theme";
   const allowedThemes = new Set(["system", "light", "dark"]);
+  const scriptUrl = document.currentScript?.src;
+  const APP_BASE_URL = scriptUrl
+    ? new URL("../../", scriptUrl)
+    : new URL("./", window.location.href);
 
   let theme = "system";
   try {
@@ -18,32 +22,44 @@
   document.documentElement.dataset.theme =
     theme === "dark" || (theme === "system" && prefersDark) ? "dark" : "light";
 
+  function rootPrimaryNavigation() {
+    document.querySelectorAll(".brand, .primary-nav a").forEach((anchor) => {
+      const href = anchor.getAttribute("href") || "";
+      if (!href || href.startsWith("#")) return;
+      anchor.href = new URL(href, APP_BASE_URL).toString();
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", rootPrimaryNavigation);
+
   const params = new URLSearchParams(window.location.search);
   const redirect = params.get("redirect");
   if (!redirect) return;
 
-  const base = new URL(document.baseURI);
   let target;
   try {
-    target = new URL(redirect, base);
+    target = new URL(redirect, APP_BASE_URL);
   } catch {
     params.delete("redirect");
-    const clean = new URL(base);
+    const clean = new URL(APP_BASE_URL);
     clean.search = params.toString();
     history.replaceState(null, "", clean.toString());
     return;
   }
 
-  if (target.origin !== base.origin || !target.pathname.startsWith(base.pathname)) {
+  if (
+    target.origin !== APP_BASE_URL.origin ||
+    !target.pathname.startsWith(APP_BASE_URL.pathname)
+  ) {
     params.delete("redirect");
-    const clean = new URL(base);
+    const clean = new URL(APP_BASE_URL);
     clean.search = params.toString();
     history.replaceState(null, "", clean.toString());
     return;
   }
 
   const relativePath = target.pathname
-    .slice(base.pathname.length)
+    .slice(APP_BASE_URL.pathname.length)
     .replace(/^\/+|\/+$/g, "");
   const parts = relativePath.split("/").filter(Boolean);
 
@@ -56,7 +72,7 @@
     } catch {
       title = null;
     }
-    const normalized = new URL(base);
+    const normalized = new URL(APP_BASE_URL);
     if (title) normalized.searchParams.set("t", title);
     if (target.searchParams.has("p")) {
       normalized.searchParams.set("p", target.searchParams.get("p"));
@@ -70,10 +86,9 @@
 
   const destination = parts.at(-1);
   if (destination === "criminal-law.html" || destination === "public-laws.html") {
-    window.location.replace(new URL(destination, base).toString());
+    window.location.replace(new URL(destination, APP_BASE_URL).toString());
     return;
   }
 
-  const normalized = new URL(base);
-  history.replaceState(null, "", normalized.toString());
+  history.replaceState(null, "", APP_BASE_URL.toString());
 })();
