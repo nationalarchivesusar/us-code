@@ -62,13 +62,21 @@ jobs:
         run: |
           set -euo pipefail
           rm -rf data/title-42
+          rm -rf data/api/v1/criminal-law
           python tools/build_title42_chunks.py
           python tools/build_index.py
           python tools/build_public_laws_index.py
           python tools/filter_public_laws_for_publication.py
+          python tools/build_criminal_law_api.py
           test -s data/titles.json
           test -s data/title-42/manifest.json
           test -s data/public-laws.json
+          test -s data/api/v1/criminal-law/manifest.json
+          test -s data/api/v1/criminal-law/charges.json
+          test -s data/api/v1/criminal-law/federal-code.json
+          test -s data/api/v1/criminal-law/dc-code.json
+          test -s data/api/v1/criminal-law/title18-index.json
+          test -s data/api/v1/criminal-law/sentencing.json
 
       - name: Run website validation
         shell: bash
@@ -80,6 +88,7 @@ jobs:
           python tools/reconcile_repealed_laws.py --check
           python -m unittest discover -s tests -p "test_check_encoding.py" -v
           node --check assets/js/public-laws.js
+          node --check assets/js/criminal-law.js
           node --test tests/test_usar_notes.mjs tests/test_citation_routing.mjs
           python - <<'PY'
           import json
@@ -100,6 +109,30 @@ jobs:
           )
           print('Public-law index validation passed.')
           PY
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          base = Path('data/api/v1/criminal-law')
+          manifest = json.loads((base / 'manifest.json').read_text(encoding='utf-8'))
+          charges = json.loads((base / 'charges.json').read_text(encoding='utf-8'))
+          federal = json.loads((base / 'federal-code.json').read_text(encoding='utf-8'))
+          dc = json.loads((base / 'dc-code.json').read_text(encoding='utf-8'))
+          title18 = json.loads((base / 'title18-index.json').read_text(encoding='utf-8'))
+          sentencing = json.loads((base / 'sentencing.json').read_text(encoding='utf-8'))
+
+          assert manifest['schema_version'] == '1.0'
+          assert charges['counts']['federal_code'] == 66
+          assert charges['counts']['title18'] > 500
+          assert any(item['section'] == '1111' for item in title18['sections'])
+          assert (base / 'title18' / '1111.json').is_file()
+          f201 = next(item for item in federal['sections'] if item['section'] == '201')
+          assert f201['offense_class'] == 'E'
+          d102 = next(item for item in dc['sections'] if item['section'] == '102')
+          assert 'United States Attorney' in d102['text']
+          assert sentencing['rules']['crosswalk_status'] == 'not_expressly_defined'
+          print('Criminal-law API validation passed.')
+          PY
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -111,7 +144,7 @@ jobs:
           rm -rf _site
           mkdir -p _site
 
-          cp index.html 404.html public-laws.html _site/
+          cp index.html 404.html public-laws.html criminal-law.html _site/
           cp -a assets _site/assets
           cp -a data _site/data
           cp -a usc _site/usc
@@ -128,12 +161,18 @@ jobs:
           test -s _site/index.html
           test -s _site/404.html
           test -s _site/public-laws.html
+          test -s _site/criminal-law.html
           test -s _site/assets/js/public-laws.js
+          test -s _site/assets/js/criminal-law.js
           test -s _site/assets/css/public-laws.css
+          test -s _site/assets/css/criminal-law.css
           test -s _site/data/titles.json
           test -s _site/data/public-laws.json
           test -s _site/data/social-routes.json
           test -s _site/data/title-42/manifest.json
+          test -s _site/data/api/v1/criminal-law/manifest.json
+          test -s _site/data/api/v1/criminal-law/charges.json
+          test -s _site/data/api/v1/criminal-law/title18/1111.json
           test -s _site/cite/18/111/index.html
           test -s _site/cite/28/530B/index.html
           test -s _site/cite/42/1983/index.html
