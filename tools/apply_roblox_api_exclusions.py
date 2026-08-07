@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Apply targeted display exclusions to the Roblox-facing criminal-law API.
 
-This pass is intentionally narrow. It removes specifically disallowed charges
+This pass is intentionally narrow. It removes specifically excluded charges
 from the generated booking catalog and withholds the statutory body of one
 otherwise retained charge. It does not alter the underlying U.S. Code or Public
 Law sources elsewhere on the site.
@@ -21,6 +21,18 @@ LOCAL_REMOVE_SECTIONS = {"312"}
 
 # Title 18 charges to remove entirely from the Roblox-facing catalog.
 TITLE18_REMOVE_SECTIONS = {
+    # Chapter 3 and other animal-specific offenses are not useful to this RP's
+    # booking flow and are intentionally omitted from the Roblox catalog.
+    "41",
+    "42",
+    "43",
+    "47",
+    "48",
+    "49",
+    "1368",
+    "2316",
+    "2317",
+    # Existing content exclusions.
     "175",
     "1091",
     "2280a",
@@ -126,7 +138,7 @@ def apply() -> None:
     title18_search["count"] = len(search_entries)
 
     # Remove the same charges from the authoritative booking catalog. Preserve
-    # 2385 as a charge but mark its detail body withheld.
+    # the retained-withheld charge but mark its detail body withheld.
     kept_charges = []
     for item in charges.get("charges", []):
         source = item.get("source")
@@ -172,8 +184,8 @@ def apply() -> None:
 
     check()
     print(
-        "Applied targeted Roblox API exclusions: removed local §312; removed "
-        "18 U.S.C. §§ 175, 1091, 2280a, 2283, 2340A, and 2441; withheld §2385 body."
+        "Applied targeted Roblox API exclusions, including animal-specific Title 18 "
+        "offenses; retained §2385 with its body withheld."
     )
 
 
