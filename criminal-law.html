@@ -59,9 +59,14 @@
           <p class="eyebrow">Criminal Law Reference</p>
           <h1 id="criminal-heading">Search the laws officers actually need at booking.</h1>
           <p class="criminal-hero__lede">
-            One searchable reference for Title 18, the Federal Criminal Code enacted by Public Law 37-261,
+            One full-text searchable reference for Title 18, the Federal Criminal Code enacted by Public Law 37-261,
             the D.C. Criminal Code federalized by Public Law 36-260, and the non-court sentencing limits in
             Public Law 39-267.
+          </p>
+          <p class="criminal-hero__links">
+            <a href="criminal/">Browse the permanent full-text index</a>
+            <span aria-hidden="true">·</span>
+            <a href="#api">Use the Roblox API</a>
           </p>
         </div>
         <aside class="criminal-hero__status" aria-label="API status">
@@ -120,15 +125,15 @@
       <section class="criminal-search" aria-labelledby="criminal-search-heading">
         <div class="section-heading section-heading--inline">
           <div>
-            <p class="eyebrow">Unified Search</p>
+            <p class="eyebrow">Unified Full-Text Search</p>
             <h2 id="criminal-search-heading">Find a charge, section, or rule</h2>
           </div>
           <span id="result-summary" class="result-summary">Loading legal catalog…</span>
         </div>
         <div class="criminal-controls">
           <div class="criminal-control criminal-control--search">
-            <label for="criminal-query">Search citation, offense, heading, or text</label>
-            <input id="criminal-query" type="search" placeholder="murder, resisting arrest, 18 USC 111, § 409…" autocomplete="off" />
+            <label for="criminal-query">Search citation, offense, heading, or statutory text</label>
+            <input id="criminal-query" type="search" placeholder="malice aforethought, resisting arrest, 18 USC 111, § 409…" autocomplete="off" />
           </div>
           <div class="criminal-control">
             <label for="criminal-source">Source</label>
@@ -137,7 +142,7 @@
               <option value="federal-criminal-code-2025">Federal Criminal Code</option>
               <option value="title18">Title 18 U.S.C.</option>
               <option value="dc-criminal-code-federalized">Federalized D.C. Code</option>
-              <option value="source-law">Public Laws 36-260, 37-261 & 39-267</option>
+              <option value="source-law">Public Laws 36-260, 37-261 &amp; 39-267</option>
             </select>
           </div>
           <div class="criminal-control">
@@ -159,17 +164,19 @@
         <div class="section-heading">
           <p class="eyebrow">Developer Access</p>
           <h2 id="api-heading">Static API for Roblox and other clients</h2>
-          <p>All endpoints are public JSON on GitHub Pages. Roblox should fetch the compact charge catalog once on the server, cache the revision from the manifest, and request full Title 18 text only when an officer opens a section.</p>
+          <p>All endpoints are public JSON on GitHub Pages. Roblox should fetch the compact charge catalog once on the server, cache the revision from the manifest, and request full Title 18 text only when an officer opens a section. The larger Title 18 full-text search index is intended for the website, not normal in-game startup.</p>
         </div>
         <div class="api-grid">
           <div class="api-endpoints" aria-label="Criminal law API endpoints">
-            <div><code>data/api/v1/criminal-law/manifest.json</code><span>Version, revision, source status, endpoint discovery</span></div>
-            <div><code>data/api/v1/criminal-law/charges.json</code><span>Compact booking catalog for Title 18 + Federal Criminal Code offenses</span></div>
-            <div><code>data/api/v1/criminal-law/federal-code.json</code><span>Full Federal Criminal Code sections and A–G class metadata</span></div>
+            <div><code>data/api/v1/criminal-law/manifest.json</code><span>Version, revision, absolute API base, source status, and endpoint discovery</span></div>
+            <div><code>data/api/v1/criminal-law/charges.json</code><span>Compact booking catalog for current Title 18 charge candidates + Federal Criminal Code offenses</span></div>
+            <div><code>data/api/v1/criminal-law/federal-code.json</code><span>Full Federal Criminal Code sections, permanent URLs, and A–G class metadata</span></div>
             <div><code>data/api/v1/criminal-law/dc-code.json</code><span>Federalized D.C. Code with PL 36-260 § 102(11) integration applied</span></div>
-            <div><code>data/api/v1/criminal-law/title18-index.json</code><span>Compact Title 18 section index</span></div>
+            <div><code>data/api/v1/criminal-law/title18-index.json</code><span>Compact Title 18 section/status index</span></div>
+            <div><code>data/api/v1/criminal-law/title18-search.json</code><span>Browser full-text search index; normally do not fetch this from Roblox</span></div>
             <div><code>data/api/v1/criminal-law/title18/{section}.json</code><span>On-demand Title 18 section text</span></div>
-            <div><code>data/api/v1/criminal-law/sentencing.json</code><span>PL 39-267 rules plus Federal Criminal Code class schedule</span></div>
+            <div><code>data/api/v1/criminal-law/sentencing.json</code><span>PL 39-267 rules plus the separately exposed Federal Criminal Code class schedule</span></div>
+            <div><code>data/api/v1/criminal-law/documents.json</code><span>Structured text for PL 36-260, PL 37-261, and PL 39-267</span></div>
           </div>
           <div class="api-example">
             <div class="api-example__header"><strong>Roblox server example</strong><span>Luau</span></div>
@@ -193,7 +200,7 @@ print(catalog.revision, #catalog.charges)</code></pre>
     <footer class="site-footer">
       <div class="site-footer__inner">
         <p>Maintained for the USAR community.</p>
-        <p>Title 18 text is generated from the repository’s USLM source; local criminal-law material is structured from Public Laws 36-260, 37-261, 39-267 and their attached codes.</p>
+        <p>Title 18 text is generated from the repository’s USLM source; local criminal-law material is structured from Public Laws 36-260, 37-261, 39-267 and their attached codes. Permanent HTML section pages are listed in <a href="criminal/">the criminal-law index</a>.</p>
       </div>
     </footer>
 
