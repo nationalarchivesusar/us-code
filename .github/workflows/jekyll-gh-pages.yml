@@ -75,6 +75,7 @@ jobs:
           python tools/build_public_laws_index.py
           python tools/filter_public_laws_for_publication.py
           python tools/build_criminal_law_api.py
+          python tools/include_dc_booking_charges.py
           test -s data/titles.json
           test -s data/title-42/manifest.json
           test -s data/public-laws.json
@@ -97,7 +98,7 @@ jobs:
           python -m unittest discover -s tests -p "test_check_encoding.py" -v
           node --check assets/js/public-laws.js
           node --check assets/js/criminal-law.js
-          python -m py_compile tools/build_criminal_law_api.py tools/build_criminal_law_routes.py
+          python -m py_compile tools/build_criminal_law_api.py tools/include_dc_booking_charges.py tools/build_criminal_law_routes.py
           node --test tests/test_usar_notes.mjs tests/test_citation_routing.mjs
           python - <<'PY'
           import json
@@ -136,7 +137,14 @@ jobs:
           assert manifest['permanent_index_url'].startswith('https://')
           assert manifest['endpoints']['title18_search'] == 'title18-search.json'
           assert charges['counts']['federal_code'] == 66
+          dc_offense_count = sum(1 for item in dc['sections'] if item['is_offense'])
+          assert dc_offense_count > 50
+          assert charges['counts']['dc_code'] == dc_offense_count
           assert charges['counts']['title18'] > 500
+          assert charges['counts']['total'] == len(charges['charges'])
+          assert set(charges['available_local_codes']) == {'federal-criminal-code-2025', 'dc-criminal-code-federalized'}
+          assert any(charge['source'] == 'dc-criminal-code-federalized' and charge['section'] == '409' for charge in charges['charges'])
+          assert 'Public Law 36-260' in charges['local_code_status_note']
           assert all(charge.get('status') == 'current' for charge in charges['charges'] if charge['source'] == 'title18')
           assert all(charge['details_url'].startswith('https://') for charge in charges['charges'])
           assert all(charge['web_url'].startswith('https://') for charge in charges['charges'])
