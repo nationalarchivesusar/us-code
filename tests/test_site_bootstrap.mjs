@@ -7,10 +7,21 @@ const SCRIPT = fs.readFileSync(new URL("../assets/js/site-bootstrap.js", import.
 const ORIGIN = "https://nationalarchivesusar.github.io";
 const BASE = `${ORIGIN}/us-code/`;
 
-function runBootstrap(href, { storedTheme = null, prefersDark = false } = {}) {
+function makeAnchor(href) {
+  return {
+    rawHref: href,
+    href,
+    getAttribute(name) {
+      return name === "href" ? this.rawHref : null;
+    },
+  };
+}
+
+function runBootstrap(href, { storedTheme = null, prefersDark = false, anchors = [] } = {}) {
   let current = new URL(href);
   const historyLog = [];
   const replaceLog = [];
+  const listeners = new Map();
   const storage = new Map();
   if (storedTheme !== null) storage.set("usc-theme", storedTheme);
 
@@ -26,8 +37,10 @@ function runBootstrap(href, { storedTheme = null, prefersDark = false } = {}) {
 
   const sandbox = {
     document: {
-      baseURI: BASE,
+      currentScript: { src: `${BASE}assets/js/site-bootstrap.js` },
       documentElement: { dataset: {} },
+      addEventListener(name, callback) { listeners.set(name, callback); },
+      querySelectorAll() { return anchors; },
     },
     window: null,
     location,
@@ -49,7 +62,7 @@ function runBootstrap(href, { storedTheme = null, prefersDark = false } = {}) {
   sandbox.window = sandbox;
   vm.createContext(sandbox);
   vm.runInContext(SCRIPT, sandbox, { filename: "site-bootstrap.js" });
-  return { sandbox, current, historyLog, replaceLog, storage };
+  return { sandbox, current, historyLog, replaceLog, storage, listeners, anchors };
 }
 
 test("fresh visitors default to System and resolve the OS dark preference before CSS loads", () => {
@@ -62,6 +75,21 @@ test("an explicit saved light preference wins over a dark OS preference", () => 
   const result = runBootstrap(BASE, { storedTheme: "light", prefersDark: true });
   assert.equal(result.storage.get("usc-theme"), "light");
   assert.equal(result.sandbox.document.documentElement.dataset.theme, "light");
+});
+
+test("primary page links are rooted at the app while hash-only links are left alone", () => {
+  const criminal = makeAnchor("criminal-law.html");
+  const publicLaws = makeAnchor("public-laws.html");
+  const home = makeAnchor("./");
+  const hash = makeAnchor("#search");
+  const result = runBootstrap(`${BASE}cite/18/111/`, {
+    anchors: [criminal, publicLaws, home, hash],
+  });
+  result.listeners.get("DOMContentLoaded")();
+  assert.equal(criminal.href, `${BASE}criminal-law.html`);
+  assert.equal(publicLaws.href, `${BASE}public-laws.html`);
+  assert.equal(home.href, BASE);
+  assert.equal(hash.href, "#search");
 });
 
 test("title-only social routes normalize to the app's existing title query state", () => {
