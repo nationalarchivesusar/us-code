@@ -26,6 +26,8 @@ def find_identifier(root,ident):
         if ident==root.get("identifier"):
             titles=[x for x in found if x.tag==q("title")]
             if len(titles)==1:return titles[0]
+        managed=[x for x in found if x.get("id","").startswith("rp-2026-")]
+        if len(managed)==1:return managed[0]
         raise RuntimeError(f"duplicate identifier {ident}")
     return found[0] if found else None
 
@@ -152,14 +154,20 @@ def replace_note(tree,s):
     for txt in s.get("paragraphs",[]):ET.SubElement(n,q("p"),style="-uslm-lc:I21",**{"class":"indent0"}).text=txt
     parent.remove(old);parent.insert(i,n)
 
+def is_managed(e):return e.get("id","").startswith("rp-2026-")
 def validate(tree,t):
-    root=tree.getroot();ids=set();idents={};title_ident=f"/us/usc/t{t}"
+    root=tree.getroot();ids={};idents={};title_ident=f"/us/usc/t{t}"
     for e in root.iter():
         eid=e.get("id");ident=e.get("identifier")
-        if eid in ids:raise RuntimeError(f"duplicate id in title {t}: {eid}")
-        if eid:ids.add(eid)
+        if eid:
+            prev=ids.get(eid)
+            if prev is not None and (is_managed(prev) or is_managed(e)):raise RuntimeError(f"duplicate managed id in title {t}: {eid}")
+            ids.setdefault(eid,e)
         if ident:
-            if ident in idents and not (ident==title_ident and {idents[ident].tag,e.tag}=={q("uscDoc"),q("title")}):raise RuntimeError(f"duplicate identifier in title {t}: {ident}")
+            prev=idents.get(ident)
+            if prev is not None:
+                title_pair=ident==title_ident and {prev.tag,e.tag}=={q("uscDoc"),q("title")}
+                if not title_pair and (is_managed(prev) or is_managed(e)):raise RuntimeError(f"duplicate managed identifier in title {t}: {ident}")
             idents.setdefault(ident,e)
     for sec in root.xpath("//*[starts-with(@id,'rp-2026-t') and local-name()='section']"):
         if len(" ".join("".join(sec.itertext()).split()))<40:raise RuntimeError(f"managed section too short: {sec.get('identifier')}")
