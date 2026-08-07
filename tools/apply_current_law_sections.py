@@ -30,9 +30,12 @@ def find_identifier(root,ident):
     return found[0] if found else None
 
 def layout(parent):
-    toc=parent.find(q("toc")); out=toc.find(q("layout")) if toc is not None else None
-    if out is None: raise RuntimeError(f"no direct TOC on {parent.get('identifier')}")
-    return out
+    node=parent
+    while node is not None:
+        toc=node.find(q("toc")); out=toc.find(q("layout")) if toc is not None else None
+        if out is not None:return out
+        node=node.getparent()
+    raise RuntimeError(f"no TOC on {parent.get('identifier')} or its ancestors")
 
 def tailnum(s):
     m=re.search(r"(\d+)$",s or ""); return int(m.group(1)) if m else None
