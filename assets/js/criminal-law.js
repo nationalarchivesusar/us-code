@@ -5,11 +5,8 @@ const state = {
   theme: "system",
   query: "",
   source: "all",
-  kind: "all",
   records: [],
   filtered: [],
-  federalCode: null,
-  dcCode: null,
   manifest: null,
   title18Details: new Map(),
   title18SearchReady: false,
@@ -20,7 +17,6 @@ const elements = {
   themeButtons: document.querySelectorAll("[data-theme-choice]"),
   query: document.getElementById("criminal-query"),
   source: document.getElementById("criminal-source"),
-  kind: document.getElementById("criminal-kind"),
   results: document.getElementById("criminal-law-results"),
   loading: document.getElementById("criminal-loading"),
   empty: document.getElementById("criminal-empty"),
@@ -75,7 +71,6 @@ function sourceLabel(source) {
     "federal-criminal-code-2025": "Federal Criminal Code",
     "dc-criminal-code-federalized": "Federalized D.C. Code",
     title18: "Title 18 U.S.C.",
-    "source-law": "Source Public Law",
   }[source] || source;
 }
 
@@ -95,68 +90,52 @@ function prepareRecord(record) {
 
 function makeLocalRecords(payload, source) {
   const isFederal = source === "federal-criminal-code-2025";
-  return (payload.sections || []).map((section) => prepareRecord({
-    id: `${source}-${section.section}`,
-    source,
-    sourceLabel: sourceLabel(source),
-    kind: section.is_offense ? "offense" : "provision",
-    citation: isFederal ? `FCC § ${section.section}` : `D.C. Criminal Code § ${section.section}`,
-    formalCitation: section.citation,
-    section: section.section,
-    heading: section.heading,
-    chapter: section.chapter,
-    chapterHeading: section.chapter_heading,
-    offenseClass: section.offense_class,
-    classRule: section.class_rule,
-    status: "current",
-    text: section.text,
-    webUrl: section.web_url || `criminal/${isFederal ? "fcc" : "dc"}/${section.section}/`,
-    publicLawUrl: isFederal ? "public-laws.html#pl-37-261" : "public-laws.html#pl-36-260",
-    anchor: isFederal ? `fcc-${section.section}` : `dcc-${section.section}`,
-  }));
+  return (payload.sections || [])
+    .filter((section) => section.is_offense === true)
+    .map((section) => prepareRecord({
+      id: section.id || `${source}-${section.section}`,
+      source,
+      sourceLabel: sourceLabel(source),
+      citation: isFederal ? `FCC § ${section.section}` : `D.C. Criminal Code § ${section.section}`,
+      formalCitation: section.citation,
+      section: section.section,
+      heading: section.heading,
+      chapter: section.chapter,
+      chapterHeading: section.chapter_heading,
+      offenseClass: section.offense_class,
+      classRule: section.class_rule,
+      status: "current",
+      text: section.text,
+      webUrl: section.web_url || `criminal/${isFederal ? "fcc" : "dc"}/${section.section}/`,
+      publicLawUrl: isFederal ? "public-laws.html#pl-37-261" : "public-laws.html#pl-36-260",
+      anchor: isFederal ? `fcc-${section.section}` : `dcc-${section.section}`,
+    }));
 }
 
 function makeTitle18Records(payload) {
-  return (payload.sections || []).map((section) => prepareRecord({
-    id: section.id,
-    source: "title18",
-    sourceLabel: sourceLabel("title18"),
-    kind: section.charge_candidate ? "offense" : "provision",
-    citation: section.citation,
-    section: section.section,
-    heading: section.heading,
-    chapter: section.chapter?.number || "",
-    chapterHeading: section.chapter?.heading || "",
-    part: section.part,
-    status: section.status || "current",
-    detailsUrl: section.details_url,
-    citeUrl: section.cite_url,
-    webUrl: section.web_url || `criminal/title18/${section.section}/`,
-    text: "",
-    anchor: `usc18-${section.section}`,
-  }));
-}
-
-function makeSourceLawRecords(payload) {
-  return (payload.documents || []).flatMap((doc) => (doc.sections || []).map((section) => prepareRecord({
-    id: `${doc.id}-${section.number}`,
-    source: "source-law",
-    sourceLabel: doc.citation,
-    kind: "provision",
-    citation: `${doc.citation} § ${section.number}`,
-    section: section.number,
-    heading: section.heading,
-    status: doc.status || "current",
-    text: section.text,
-    webUrl: section.web_url,
-    publicLawUrl: doc.public_law_url,
-    anchor: `${doc.id}-${section.number}`,
-  })));
+  return (payload.sections || [])
+    .filter((section) => section.is_charge === true)
+    .map((section) => prepareRecord({
+      id: section.id,
+      source: "title18",
+      sourceLabel: sourceLabel("title18"),
+      citation: section.citation,
+      section: section.section,
+      heading: section.heading,
+      chapter: section.chapter?.number || "",
+      chapterHeading: section.chapter?.heading || "",
+      part: section.part,
+      status: section.status || "current",
+      detailsUrl: section.details_url,
+      citeUrl: section.cite_url,
+      webUrl: section.web_url || `criminal/title18/${section.section}/`,
+      text: "",
+      anchor: `usc18-${section.section}`,
+    }));
 }
 
 function matches(record) {
   if (state.source !== "all" && record.source !== state.source) return false;
-  if (state.kind !== "all" && record.kind !== state.kind) return false;
   const query = normalize(state.query);
   if (!query) return true;
   return record.haystack.includes(query);
@@ -165,7 +144,7 @@ function matches(record) {
 function sentenceText(record) {
   if (!record.classRule) return "";
   const r = record.classRule;
-  return `Federal Criminal Code class ${record.offenseClass}: initial arrest ${r.initial_min_minutes}–${r.initial_max_minutes} minutes; court maximum ${r.court_max_days} days; citation maximum $${Number(r.citation_max).toLocaleString()}. Public Law 39-267 is published separately because no express class crosswalk was supplied.`;
+  return `Class ${record.offenseClass}: initial arrest ${r.initial_min_minutes}–${r.initial_max_minutes} minutes; court maximum ${r.court_max_days} days; citation maximum $${Number(r.citation_max).toLocaleString()}.`;
 }
 
 async function loadTitle18Text(record, body, textNode) {
@@ -176,13 +155,16 @@ async function loadTitle18Text(record, body, textNode) {
       const response = await fetch(record.detailsUrl, { cache: "force-cache" });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       detail = await response.json();
+      if (detail.is_charge !== true || detail.display_scope !== "roblox_safe_charge") {
+        throw new Error("section is not available in the charge catalog");
+      }
       state.title18Details.set(record.section, detail);
     }
-    record.text = detail.text || "No operative text was extracted for this section.";
+    record.text = detail.text || "No operative text was extracted for this charge.";
     textNode.textContent = record.text;
     body.dataset.loaded = "true";
   } catch (error) {
-    textNode.textContent = `The Title 18 section text could not be loaded: ${error.message}`;
+    textNode.textContent = `This charge text could not be loaded: ${error.message}`;
   }
 }
 
@@ -191,7 +173,7 @@ async function ensureTitle18Search() {
   if (state.title18SearchPromise) return state.title18SearchPromise;
 
   const previousSummary = elements.summary.textContent;
-  elements.summary.textContent = "Loading the full-text Title 18 search index…";
+  elements.summary.textContent = "Loading the Title 18 charge text index…";
   state.title18SearchPromise = fetchJson("title18-search.json")
     .then((payload) => {
       const byId = new Map((payload.entries || []).map((entry) => [entry.id, entry.search_text || ""]));
@@ -205,7 +187,7 @@ async function ensureTitle18Search() {
       render();
     })
     .catch((error) => {
-      console.error("Title 18 full-text search index could not be loaded", error);
+      console.error("Title 18 charge-text index could not be loaded", error);
       state.title18SearchPromise = null;
       elements.summary.textContent = previousSummary;
     });
@@ -248,12 +230,6 @@ function createResult(record) {
     cls.textContent = `Class ${record.offenseClass}`;
     meta.appendChild(cls);
   }
-  if (record.status && record.status !== "current") {
-    const status = document.createElement("span");
-    status.className = "result-badge";
-    status.textContent = record.status[0].toUpperCase() + record.status.slice(1);
-    meta.appendChild(status);
-  }
   if (record.chapterHeading) {
     const chapter = document.createElement("span");
     chapter.className = "result-badge";
@@ -274,14 +250,14 @@ function createResult(record) {
 
   const links = document.createElement("span");
   links.className = "result-body__links";
-  appendToolbarLink(links, record.webUrl, "Permanent section page");
+  appendToolbarLink(links, record.webUrl, "Permanent charge page");
   if (record.citeUrl) appendToolbarLink(links, record.citeUrl, "U.S. Code viewer");
   if (record.publicLawUrl) appendToolbarLink(links, record.publicLawUrl, "Source Public Law");
   if (links.childElementCount) toolbar.appendChild(links);
   body.appendChild(toolbar);
 
   const text = document.createElement("p");
-  text.textContent = record.source === "title18" ? "Open this section to load the statutory text…" : record.text;
+  text.textContent = record.source === "title18" ? "Open this charge to load the statutory text…" : record.text;
   body.appendChild(text);
   const sentence = sentenceText(record);
   if (sentence) {
@@ -308,8 +284,8 @@ function render() {
   elements.results.replaceChildren();
   elements.empty.hidden = state.filtered.length !== 0;
   elements.summary.textContent = allMatches.length > 250
-    ? `Showing first 250 of ${allMatches.length} matches`
-    : `${allMatches.length} matching records`;
+    ? `Showing first 250 of ${allMatches.length} charges`
+    : `${allMatches.length} matching charges`;
   const fragment = document.createDocumentFragment();
   state.filtered.forEach((record) => fragment.appendChild(createResult(record)));
   elements.results.appendChild(fragment);
@@ -332,32 +308,39 @@ async function fetchJson(path) {
 
 async function loadCatalog() {
   try {
-    const [manifest, charges, federal, dc, title18, documents] = await Promise.all([
+    const [manifest, charges, federal, dc, title18] = await Promise.all([
       fetchJson("manifest.json"),
       fetchJson("charges.json"),
       fetchJson("federal-code.json"),
       fetchJson("dc-code.json"),
       fetchJson("title18-index.json"),
-      fetchJson("documents.json"),
     ]);
+
+    if (manifest.roblox?.display_contract?.charge_only !== true ||
+        charges.display_contract?.charge_only !== true ||
+        charges.display_contract?.roblox_safe_only !== true) {
+      throw new Error("catalog safety contract is missing");
+    }
+
     state.manifest = manifest;
-    state.federalCode = federal;
-    state.dcCode = dc;
     state.records = [
       ...makeLocalRecords(federal, "federal-criminal-code-2025"),
       ...makeTitle18Records(title18),
       ...makeLocalRecords(dc, "dc-criminal-code-federalized"),
-      ...makeSourceLawRecords(documents),
     ];
-    elements.revision.textContent = `API v${manifest.schema_version} · revision ${manifest.revision}`;
-    elements.statTitle18.textContent = Number(title18.counts?.sections || 0).toLocaleString();
-    elements.statFcc.textContent = federal.sections.filter((section) => section.is_offense).length.toLocaleString();
-    elements.statDc.textContent = dc.sections.length.toLocaleString();
+
+    const allowedIds = new Set((charges.charges || []).filter((item) => item.is_charge === true).map((item) => item.id));
+    state.records = state.records.filter((record) => allowedIds.has(record.id));
+
+    elements.revision.textContent = `Revision ${manifest.revision}`;
+    elements.statTitle18.textContent = Number(charges.counts?.title18 || 0).toLocaleString();
+    elements.statFcc.textContent = Number(charges.counts?.federal_code || 0).toLocaleString();
+    elements.statDc.textContent = Number(charges.counts?.dc_code || 0).toLocaleString();
     elements.statCharges.textContent = Number(charges.counts?.total || 0).toLocaleString();
     elements.loading.hidden = true;
     render();
   } catch (error) {
-    elements.loading.textContent = `The criminal-law catalog could not be loaded: ${error.message}`;
+    elements.loading.textContent = `The criminal charge catalog could not be loaded: ${error.message}`;
     elements.loading.classList.add("is-error");
     elements.summary.textContent = "Catalog unavailable";
   }
@@ -368,8 +351,10 @@ elements.query.addEventListener("input", (event) => {
   if (state.query.trim()) ensureTitle18Search();
   render();
 });
-elements.source.addEventListener("change", (event) => { state.source = event.target.value; render(); });
-elements.kind.addEventListener("change", (event) => { state.kind = event.target.value; render(); });
+elements.source.addEventListener("change", (event) => {
+  state.source = event.target.value;
+  render();
+});
 
 initializeTheme();
 loadCatalog();
