@@ -76,6 +76,7 @@ jobs:
           test -s data/api/v1/criminal-law/federal-code.json
           test -s data/api/v1/criminal-law/dc-code.json
           test -s data/api/v1/criminal-law/title18-index.json
+          test -s data/api/v1/criminal-law/title18-search.json
           test -s data/api/v1/criminal-law/sentencing.json
 
       - name: Run website validation
@@ -120,20 +121,29 @@ jobs:
           federal = json.loads((base / 'federal-code.json').read_text(encoding='utf-8'))
           dc = json.loads((base / 'dc-code.json').read_text(encoding='utf-8'))
           title18 = json.loads((base / 'title18-index.json').read_text(encoding='utf-8'))
+          title18_search = json.loads((base / 'title18-search.json').read_text(encoding='utf-8'))
           sentencing = json.loads((base / 'sentencing.json').read_text(encoding='utf-8'))
 
           assert manifest['schema_version'] == '1.0'
           assert manifest['api_base'].startswith('https://')
+          assert manifest['permanent_index_url'].startswith('https://')
+          assert manifest['endpoints']['title18_search'] == 'title18-search.json'
           assert charges['counts']['federal_code'] == 66
           assert charges['counts']['title18'] > 500
           assert all(charge.get('status') == 'current' for charge in charges['charges'] if charge['source'] == 'title18')
           assert all(charge['details_url'].startswith('https://') for charge in charges['charges'])
+          assert all(charge['web_url'].startswith('https://') for charge in charges['charges'])
           assert any(item['section'] == '1111' for item in title18['sections'])
+          assert title18_search['count'] == title18['counts']['sections']
+          murder_search = next(item for item in title18_search['entries'] if item['id'] == 'usc-18-1111')
+          assert 'malice aforethought' in murder_search['search_text']
           assert (base / 'title18' / '1111.json').is_file()
           f201 = next(item for item in federal['sections'] if item['section'] == '201')
           assert f201['offense_class'] == 'E'
+          assert f201['web_url'].endswith('/criminal/fcc/201/')
           d102 = next(item for item in dc['sections'] if item['section'] == '102')
           assert 'United States Attorney' in d102['text']
+          assert d102['web_url'].endswith('/criminal/dc/102/')
           assert sentencing['rules']['crosswalk_status'] == 'not_expressly_defined'
           print('Criminal-law API validation passed.')
           PY
@@ -182,6 +192,7 @@ jobs:
           test -s _site/data/title-42/manifest.json
           test -s _site/data/api/v1/criminal-law/manifest.json
           test -s _site/data/api/v1/criminal-law/charges.json
+          test -s _site/data/api/v1/criminal-law/title18-search.json
           test -s _site/data/api/v1/criminal-law/title18/1111.json
           test -s _site/cite/18/111/index.html
           test -s _site/cite/28/530B/index.html
@@ -199,6 +210,8 @@ jobs:
           grep -q 'United States Attorney' _site/criminal/dc/102/index.html
           grep -q 'FIRST DEGREE MURDER' _site/criminal/fcc/301/index.html
           grep -q '18 U.S.C. § 1111' _site/criminal/title18/1111/index.html
+          grep -q '<urlset' _site/sitemap-criminal.xml
+          grep -q '/criminal/title18/1111/' _site/sitemap-criminal.xml
           grep -q 'Sitemap:' _site/robots.txt
           test ! -e _site/usc/usc42.xml
           test ! -e _site/audit
