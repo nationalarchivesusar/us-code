@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Search Title 18, the Federal Criminal Code for the District of Columbia, the federalized D.C. Criminal Code, and current non-court sentencing rules." />
+    <meta name="description" content="Search Roblox-safe booking charges from Title 18, the Federal Criminal Code, and the federalized D.C. Criminal Code." />
     <link rel="canonical" href="https://nationalarchivesusar.github.io/us-code/criminal-law.html" />
     <meta property="og:title" content="Criminal Law Reference | US Code Library" />
-    <meta property="og:description" content="Search booking-ready federal criminal law, D.C. criminal-code lineage, and sentencing rules." />
+    <meta property="og:description" content="Search the current charge catalog used for federal booking in USAR." />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="US Code Library" />
     <meta property="og:url" content="https://nationalarchivesusar.github.io/us-code/criminal-law.html" />
     <meta property="og:image" content="https://nationalarchivesusar.github.io/us-code/assets/images/social-card.png" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Criminal Law Reference | US Code Library" />
-    <meta name="twitter:description" content="Search booking-ready federal criminal law, D.C. criminal-code lineage, and sentencing rules." />
+    <meta name="twitter:description" content="Search the current charge catalog used for federal booking in USAR." />
     <meta name="twitter:image" content="https://nationalarchivesusar.github.io/us-code/assets/images/social-card.png" />
     <meta name="theme-color" content="#8b1e1e" />
     <title>Criminal Law Reference | US Code Library</title>
@@ -58,22 +58,20 @@
       <div class="criminal-hero__inner">
         <div>
           <p class="eyebrow">Criminal Law Reference</p>
-          <h1 id="criminal-heading">Search the laws officers actually need at booking.</h1>
+          <h1 id="criminal-heading">Search the charges officers actually need at booking.</h1>
           <p class="criminal-hero__lede">
-            One full-text searchable reference for Title 18, the Federal Criminal Code enacted by Public Law 37-261,
-            the D.C. Criminal Code federalized by Public Law 36-260, and the non-court sentencing limits in
-            Public Law 39-267.
+            This reference is intentionally limited to current, platform-safe criminal charges from Title 18,
+            the Federal Criminal Code enacted by Public Law 37-261, and the D.C. Criminal Code federalized by
+            Public Law 36-260. General provisions and restricted-content sections are not included here.
           </p>
           <p class="criminal-hero__links">
-            <a href="criminal/">Browse the permanent full-text index</a>
-            <span aria-hidden="true">·</span>
-            <a href="#api">Use the Roblox API</a>
+            <a href="criminal/">Browse the permanent charge index</a>
           </p>
         </div>
-        <aside class="criminal-hero__status" aria-label="API status">
+        <aside class="criminal-hero__status" aria-label="Catalog status">
           <span class="status-dot" aria-hidden="true"></span>
           <div>
-            <strong>Roblox-ready static API</strong>
+            <strong>Current booking catalog</strong>
             <span id="api-revision">Loading current revision…</span>
           </div>
         </aside>
@@ -81,11 +79,11 @@
     </section>
 
     <main class="criminal-shell">
-      <section class="criminal-stats" aria-label="Criminal law dataset totals">
-        <div><strong id="stat-title18">—</strong><span>Title 18 sections</span></div>
-        <div><strong id="stat-fcc">—</strong><span>Federal Code offenses</span></div>
-        <div><strong id="stat-dc">—</strong><span>Federalized D.C. sections</span></div>
-        <div><strong id="stat-charges">—</strong><span>Booking catalog entries</span></div>
+      <section class="criminal-stats" aria-label="Criminal charge totals">
+        <div><strong id="stat-title18">—</strong><span>Title 18 charges</span></div>
+        <div><strong id="stat-fcc">—</strong><span>Federal Code charges</span></div>
+        <div><strong id="stat-dc">—</strong><span>Federalized D.C. charges</span></div>
+        <div><strong id="stat-charges">—</strong><span>Total booking charges</span></div>
       </section>
 
       <section class="legal-lineage" aria-labelledby="lineage-heading">
@@ -103,13 +101,13 @@
           <article class="lineage-card lineage-card--primary">
             <div class="lineage-card__number">PL 37-261</div>
             <h3>Federal Criminal Code Act of 2025</h3>
-            <p>Re-established a Federal Criminal Code for the District of Columbia and made the attached code enforceable by federal law-enforcement officers across the District. The supplied Act does not expressly repeal the D.C. Criminal Code adopted by PL 36-260, so the reference and booking API expose both sources rather than silently discarding one.</p>
+            <p>Re-established a Federal Criminal Code for the District of Columbia and made the attached code enforceable by federal law-enforcement officers across the District. The supplied Act does not expressly repeal the D.C. Criminal Code adopted by PL 36-260, so both offense sets remain available where applicable.</p>
             <a href="public-laws.html#pl-37-261">Open Public Law 37-261</a>
           </article>
           <article class="lineage-card">
             <div class="lineage-card__number">PL 39-267</div>
             <h3>Reform Sentencing Act</h3>
-            <p>Controls non-court-imposed sentencing and caps multi-charge imprisonment at 30 minutes. Its felony/misdemeanor class scheme is published separately because the supplied law does not expressly cross-walk it to the Federal Criminal Code’s A–G offense classes.</p>
+            <p>Controls non-court-imposed sentencing and caps multi-charge imprisonment at 30 minutes. Its felony/misdemeanor class scheme is kept separate because the supplied law does not expressly cross-walk it to the Federal Criminal Code’s A–G offense classes.</p>
             <a href="public-laws.html#pl-39-267">Open Public Law 39-267</a>
           </article>
         </div>
@@ -119,89 +117,44 @@
         <div class="sentencing-alert__icon" aria-hidden="true">§</div>
         <div>
           <h2 id="sentencing-alert-heading">Sentencing data is deliberately not guessed.</h2>
-          <p>Public Law 39-267 uses Class A–E felonies and Class A–C misdemeanors, while the Federal Criminal Code assigns offenses Classes A–G. Because the supplied enactments do not state a crosswalk, the API exposes both schedules and marks the relationship <code>not_expressly_defined</code> rather than inventing one.</p>
+          <p>Public Law 39-267 uses Class A–E felonies and Class A–C misdemeanors, while the Federal Criminal Code assigns offenses Classes A–G. Because the supplied enactments do not state a crosswalk, the reference keeps the schedules separate rather than inventing one.</p>
         </div>
       </section>
 
       <section class="criminal-search" aria-labelledby="criminal-search-heading">
         <div class="section-heading section-heading--inline">
           <div>
-            <p class="eyebrow">Unified Full-Text Search</p>
-            <h2 id="criminal-search-heading">Find a charge, section, or rule</h2>
+            <p class="eyebrow">Charge Search</p>
+            <h2 id="criminal-search-heading">Find a charge</h2>
           </div>
-          <span id="result-summary" class="result-summary">Loading legal catalog…</span>
+          <span id="result-summary" class="result-summary">Loading charge catalog…</span>
         </div>
         <div class="criminal-controls">
           <div class="criminal-control criminal-control--search">
-            <label for="criminal-query">Search citation, offense, heading, or statutory text</label>
-            <input id="criminal-query" type="search" placeholder="malice aforethought, resisting arrest, 18 USC 111, § 409…" autocomplete="off" />
+            <label for="criminal-query">Search citation, charge name, chapter, or statutory text</label>
+            <input id="criminal-query" type="search" placeholder="resisting arrest, 18 USC 111, § 409…" autocomplete="off" />
           </div>
           <div class="criminal-control">
             <label for="criminal-source">Source</label>
             <select id="criminal-source">
-              <option value="all">All criminal-law sources</option>
+              <option value="all">All charge sources</option>
               <option value="federal-criminal-code-2025">Federal Criminal Code</option>
               <option value="title18">Title 18 U.S.C.</option>
               <option value="dc-criminal-code-federalized">Federalized D.C. Code</option>
-              <option value="source-law">Public Laws 36-260, 37-261 &amp; 39-267</option>
-            </select>
-          </div>
-          <div class="criminal-control">
-            <label for="criminal-kind">Record type</label>
-            <select id="criminal-kind">
-              <option value="all">All records</option>
-              <option value="offense">Charge / offense</option>
-              <option value="provision">General provision</option>
             </select>
           </div>
         </div>
       </section>
 
-      <p id="criminal-loading" class="criminal-message" role="status">Loading the criminal-law API…</p>
-      <p id="criminal-empty" class="criminal-message" hidden>No matching sections were found.</p>
+      <p id="criminal-loading" class="criminal-message" role="status">Loading the criminal-law catalog…</p>
+      <p id="criminal-empty" class="criminal-message" hidden>No matching charges were found.</p>
       <section id="criminal-law-results" class="criminal-results" aria-live="polite"></section>
-
-      <section class="api-docs" id="api" aria-labelledby="api-heading">
-        <div class="section-heading">
-          <p class="eyebrow">Developer Access</p>
-          <h2 id="api-heading">Static API for Roblox and other clients</h2>
-          <p>All endpoints are public JSON on GitHub Pages. Roblox should fetch the compact charge catalog once on the server, cache the revision from the manifest, and request full Title 18 text only when an officer opens a section. The compact catalog includes Title 18 charge candidates, Federal Criminal Code offenses, and federalized D.C. Criminal Code offenses. The larger Title 18 full-text search index is intended for the website, not normal in-game startup.</p>
-        </div>
-        <div class="api-grid">
-          <div class="api-endpoints" aria-label="Criminal law API endpoints">
-            <div><code>data/api/v1/criminal-law/manifest.json</code><span>Version, revision, absolute API base, source status, and endpoint discovery</span></div>
-            <div><code>data/api/v1/criminal-law/charges.json</code><span>Compact booking catalog for current Title 18 charge candidates + Federal Criminal Code offenses + federalized D.C. Criminal Code offenses</span></div>
-            <div><code>data/api/v1/criminal-law/federal-code.json</code><span>Full Federal Criminal Code sections, permanent URLs, and A–G class metadata</span></div>
-            <div><code>data/api/v1/criminal-law/dc-code.json</code><span>Federalized D.C. Code with PL 36-260 § 102(11) integration applied</span></div>
-            <div><code>data/api/v1/criminal-law/title18-index.json</code><span>Compact Title 18 section/status index</span></div>
-            <div><code>data/api/v1/criminal-law/title18-search.json</code><span>Browser full-text search index; normally do not fetch this from Roblox</span></div>
-            <div><code>data/api/v1/criminal-law/title18/{section}.json</code><span>On-demand Title 18 section text</span></div>
-            <div><code>data/api/v1/criminal-law/sentencing.json</code><span>PL 39-267 rules plus the separately exposed Federal Criminal Code class schedule</span></div>
-            <div><code>data/api/v1/criminal-law/documents.json</code><span>Structured text for PL 36-260, PL 37-261, and PL 39-267</span></div>
-          </div>
-          <div class="api-example">
-            <div class="api-example__header"><strong>Roblox server example</strong><span>Luau</span></div>
-            <pre><code>local HttpService = game:GetService("HttpService")
-local BASE = "https://nationalarchivesusar.github.io/us-code/data/api/v1/criminal-law/"
-
-local manifest = HttpService:JSONDecode(
-    HttpService:GetAsync(BASE .. "manifest.json")
-)
-
-local catalog = HttpService:JSONDecode(
-    HttpService:GetAsync(BASE .. manifest.endpoints.charges)
-)
-
-print(catalog.revision, #catalog.charges)</code></pre>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer">
       <div class="site-footer__inner">
         <p>Maintained for the USAR community.</p>
-        <p>Title 18 text is generated from the repository’s USLM source; local criminal-law material is structured from Public Laws 36-260, 37-261, 39-267 and their attached codes. Permanent HTML section pages are listed in <a href="criminal/">the criminal-law index</a>.</p>
+        <p>Only current, platform-safe charge material is exposed through this booking reference. Full source laws remain available through the ordinary U.S. Code and Public Laws pages.</p>
       </div>
     </footer>
 
