@@ -12,6 +12,8 @@ const state = {
   dcCode: null,
   manifest: null,
   title18Details: new Map(),
+  title18SearchReady: false,
+  title18SearchPromise: null,
 };
 
 const elements = {
@@ -61,7 +63,11 @@ function initializeTheme() {
 }
 
 function normalize(value) {
-  return String(value || "").toLowerCase().replace(/[§.,]/g, " ").replace(/\s+/g, " ").trim();
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[§.,;:()[\]{}'“”‘’]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function sourceLabel(source) {
@@ -73,25 +79,28 @@ function sourceLabel(source) {
   }[source] || source;
 }
 
-function searchableText(record) {
-  return normalize([
+function prepareRecord(record) {
+  record.haystack = normalize([
     record.citation,
     record.formalCitation,
     record.heading,
     record.text,
     record.chapterHeading,
     record.sourceLabel,
+    record.status,
     record.offenseClass ? `class ${record.offenseClass}` : "",
   ].filter(Boolean).join(" "));
+  return record;
 }
 
 function makeLocalRecords(payload, source) {
-  return (payload.sections || []).map((section) => ({
+  const isFederal = source === "federal-criminal-code-2025";
+  return (payload.sections || []).map((section) => prepareRecord({
     id: `${source}-${section.section}`,
     source,
     sourceLabel: sourceLabel(source),
     kind: section.is_offense ? "offense" : "provision",
-    citation: source === "federal-criminal-code-2025" ? `FCC § ${section.section}` : `D.C. Code § ${section.section}`,
+    citation: isFederal ? `FCC § ${section.section}` : `D.C. Criminal Code § ${section.section}`,
     formalCitation: section.citation,
     section: section.section,
     heading: section.heading,
@@ -99,13 +108,16 @@ function makeLocalRecords(payload, source) {
     chapterHeading: section.chapter_heading,
     offenseClass: section.offense_class,
     classRule: section.class_rule,
+    status: "current",
     text: section.text,
-    anchor: source === "federal-criminal-code-2025" ? `fcc-${section.section}` : `dcc-${section.section}`,
+    webUrl: section.web_url || `criminal/${isFederal ? "fcc" : "dc"}/${section.section}/`,
+    publicLawUrl: isFederal ? "public-laws.html#pl-37-261" : "public-laws.html#pl-36-260",
+    anchor: isFederal ? `fcc-${section.section}` : `dcc-${section.section}`,
   }));
 }
 
 function makeTitle18Records(payload) {
-  return (payload.sections || []).map((section) => ({
+  return (payload.sections || []).map((section) => prepareRecord({
     id: section.id,
     source: "title18",
     sourceLabel: sourceLabel("title18"),
@@ -116,15 +128,17 @@ function makeTitle18Records(payload) {
     chapter: section.chapter?.number || "",
     chapterHeading: section.chapter?.heading || "",
     part: section.part,
+    status: section.status || "current",
     detailsUrl: section.details_url,
     citeUrl: section.cite_url,
+    webUrl: section.web_url || `criminal/title18/${section.section}/`,
     text: "",
     anchor: `usc18-${section.section}`,
   }));
 }
 
 function makeSourceLawRecords(payload) {
-  return (payload.documents || []).flatMap((doc) => (doc.sections || []).map((section) => ({
+  return (payload.documents || []).flatMap((doc) => (doc.sections || []).map((section) => prepareRecord({
     id: `${doc.id}-${section.number}`,
     source: "source-law",
     sourceLabel: doc.citation,
@@ -132,7 +146,9 @@ function makeSourceLawRecords(payload) {
     citation: `${doc.citation} § ${section.number}`,
     section: section.number,
     heading: section.heading,
+    status: doc.status || "current",
     text: section.text,
+    webUrl: section.web_url,
     publicLawUrl: doc.public_law_url,
     anchor: `${doc.id}-${section.number}`,
   })));
@@ -141,8 +157,9 @@ function makeSourceLawRecords(payload) {
 function matches(record) {
   if (state.source !== "all" && record.source !== state.source) return false;
   if (state.kind !== "all" && record.kind !== state.kind) return false;
-  if (!state.query) return true;
-  return searchableText(record).includes(normalize(state.query));
+  const query = normalize(state.query);
+  if (!query) return true;
+  return record.haystack.includes(query);
 }
 
 function sentenceText(record) {
@@ -167,6 +184,40 @@ async function loadTitle18Text(record, body, textNode) {
   } catch (error) {
     textNode.textContent = `The Title 18 section text could not be loaded: ${error.message}`;
   }
+}
+
+async function ensureTitle18Search() {
+  if (state.title18SearchReady) return;
+  if (state.title18SearchPromise) return state.title18SearchPromise;
+
+  const previousSummary = elements.summary.textContent;
+  elements.summary.textContent = "Loading the full-text Title 18 search index…";
+  state.title18SearchPromise = fetchJson("title18-search.json")
+    .then((payload) => {
+      const byId = new Map((payload.entries || []).map((entry) => [entry.id, entry.search_text || ""]));
+      state.records.forEach((record) => {
+        if (record.source !== "title18") return;
+        const fullText = byId.get(record.id);
+        if (fullText) record.haystack = `${record.haystack} ${normalize(fullText)}`.trim();
+      });
+      state.title18SearchReady = true;
+      state.title18SearchPromise = null;
+      render();
+    })
+    .catch((error) => {
+      console.error("Title 18 full-text search index could not be loaded", error);
+      state.title18SearchPromise = null;
+      elements.summary.textContent = previousSummary;
+    });
+  return state.title18SearchPromise;
+}
+
+function appendToolbarLink(container, href, label) {
+  if (!href) return;
+  const link = document.createElement("a");
+  link.href = href;
+  link.textContent = label;
+  container.appendChild(link);
 }
 
 function createResult(record) {
@@ -197,6 +248,12 @@ function createResult(record) {
     cls.textContent = `Class ${record.offenseClass}`;
     meta.appendChild(cls);
   }
+  if (record.status && record.status !== "current") {
+    const status = document.createElement("span");
+    status.className = "result-badge";
+    status.textContent = record.status[0].toUpperCase() + record.status.slice(1);
+    meta.appendChild(status);
+  }
   if (record.chapterHeading) {
     const chapter = document.createElement("span");
     chapter.className = "result-badge";
@@ -214,15 +271,17 @@ function createResult(record) {
   const provenance = document.createElement("span");
   provenance.textContent = record.formalCitation || record.sourceLabel;
   toolbar.appendChild(provenance);
-  if (record.citeUrl || record.publicLawUrl) {
-    const link = document.createElement("a");
-    link.href = record.citeUrl || record.publicLawUrl;
-    link.textContent = record.citeUrl ? "Open in U.S. Code viewer" : "Open source Public Law";
-    toolbar.appendChild(link);
-  }
+
+  const links = document.createElement("span");
+  links.className = "result-body__links";
+  appendToolbarLink(links, record.webUrl, "Permanent section page");
+  if (record.citeUrl) appendToolbarLink(links, record.citeUrl, "U.S. Code viewer");
+  if (record.publicLawUrl) appendToolbarLink(links, record.publicLawUrl, "Source Public Law");
+  if (links.childElementCount) toolbar.appendChild(links);
   body.appendChild(toolbar);
+
   const text = document.createElement("p");
-  text.textContent = record.source === "title18" ? "Open this section to load the current statutory text…" : record.text;
+  text.textContent = record.source === "title18" ? "Open this section to load the statutory text…" : record.text;
   body.appendChild(text);
   const sentence = sentenceText(record);
   if (sentence) {
@@ -244,11 +303,13 @@ function createResult(record) {
 }
 
 function render() {
-  state.filtered = state.records.filter(matches).slice(0, 250);
+  const allMatches = state.records.filter(matches);
+  state.filtered = allMatches.slice(0, 250);
   elements.results.replaceChildren();
   elements.empty.hidden = state.filtered.length !== 0;
-  const totalMatched = state.records.filter(matches).length;
-  elements.summary.textContent = totalMatched > 250 ? `Showing first 250 of ${totalMatched} matches` : `${totalMatched} matching records`;
+  elements.summary.textContent = allMatches.length > 250
+    ? `Showing first 250 of ${allMatches.length} matches`
+    : `${allMatches.length} matching records`;
   const fragment = document.createDocumentFragment();
   state.filtered.forEach((record) => fragment.appendChild(createResult(record)));
   elements.results.appendChild(fragment);
@@ -302,7 +363,11 @@ async function loadCatalog() {
   }
 }
 
-elements.query.addEventListener("input", (event) => { state.query = event.target.value; render(); });
+elements.query.addEventListener("input", (event) => {
+  state.query = event.target.value;
+  if (state.query.trim()) ensureTitle18Search();
+  render();
+});
 elements.source.addEventListener("change", (event) => { state.source = event.target.value; render(); });
 elements.kind.addEventListener("change", (event) => { state.kind = event.target.value; render(); });
 
