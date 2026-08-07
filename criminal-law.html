@@ -96,13 +96,13 @@
           <article class="lineage-card">
             <div class="lineage-card__number">PL 36-260</div>
             <h3>Fixing the District of Columbia Act of 2025</h3>
-            <p>Dissolved the municipal government and adopted the D.C. Criminal Code as federal law in § 10(b), adding a new § 102(11) assigning prosecutions to the U.S. Attorney’s Office for the District of Columbia.</p>
+            <p>Dissolved the municipal government and adopted the D.C. Criminal Code as federal law in § 10(b), adding a new § 102(11) assigning prosecutions to the U.S. Attorney’s Office for the District of Columbia. Section 10(e) says the adopted laws remain in force until amended or repealed by Congress.</p>
             <a href="public-laws.html#pl-36-260">Open Public Law 36-260</a>
           </article>
           <article class="lineage-card lineage-card--primary">
             <div class="lineage-card__number">PL 37-261</div>
             <h3>Federal Criminal Code Act of 2025</h3>
-            <p>Re-established a Federal Criminal Code for the District of Columbia and made the attached code enforceable by federal law-enforcement officers across the District.</p>
+            <p>Re-established a Federal Criminal Code for the District of Columbia and made the attached code enforceable by federal law-enforcement officers across the District. The supplied Act does not expressly repeal the D.C. Criminal Code adopted by PL 36-260, so the reference and booking API expose both sources rather than silently discarding one.</p>
             <a href="public-laws.html#pl-37-261">Open Public Law 37-261</a>
           </article>
           <article class="lineage-card">
@@ -164,12 +164,12 @@
         <div class="section-heading">
           <p class="eyebrow">Developer Access</p>
           <h2 id="api-heading">Static API for Roblox and other clients</h2>
-          <p>All endpoints are public JSON on GitHub Pages. Roblox should fetch the compact charge catalog once on the server, cache the revision from the manifest, and request full Title 18 text only when an officer opens a section. The larger Title 18 full-text search index is intended for the website, not normal in-game startup.</p>
+          <p>All endpoints are public JSON on GitHub Pages. Roblox should fetch the compact charge catalog once on the server, cache the revision from the manifest, and request full Title 18 text only when an officer opens a section. The compact catalog includes Title 18 charge candidates, Federal Criminal Code offenses, and federalized D.C. Criminal Code offenses. The larger Title 18 full-text search index is intended for the website, not normal in-game startup.</p>
         </div>
         <div class="api-grid">
           <div class="api-endpoints" aria-label="Criminal law API endpoints">
             <div><code>data/api/v1/criminal-law/manifest.json</code><span>Version, revision, absolute API base, source status, and endpoint discovery</span></div>
-            <div><code>data/api/v1/criminal-law/charges.json</code><span>Compact booking catalog for current Title 18 charge candidates + Federal Criminal Code offenses</span></div>
+            <div><code>data/api/v1/criminal-law/charges.json</code><span>Compact booking catalog for current Title 18 charge candidates + Federal Criminal Code offenses + federalized D.C. Criminal Code offenses</span></div>
             <div><code>data/api/v1/criminal-law/federal-code.json</code><span>Full Federal Criminal Code sections, permanent URLs, and A–G class metadata</span></div>
             <div><code>data/api/v1/criminal-law/dc-code.json</code><span>Federalized D.C. Code with PL 36-260 § 102(11) integration applied</span></div>
             <div><code>data/api/v1/criminal-law/title18-index.json</code><span>Compact Title 18 section/status index</span></div>
