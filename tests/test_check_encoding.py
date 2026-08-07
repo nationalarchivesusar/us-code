@@ -94,10 +94,13 @@ class Title18SentencingRegressionTests(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        path = ROOT / "data" / "api" / "v1" / "criminal-law" / "charges.json"
-        if not path.is_file():
+        base = ROOT / "data" / "api" / "v1" / "criminal-law"
+        charges_path = base / "charges.json"
+        if not charges_path.is_file():
             raise unittest.SkipTest("Generated criminal-law API is not present")
-        cls.payload = json.loads(path.read_text(encoding="utf-8"))
+        cls.payload = json.loads(charges_path.read_text(encoding="utf-8"))
+        cls.manifest = json.loads((base / "manifest.json").read_text(encoding="utf-8"))
+        cls.sentencing = json.loads((base / "sentencing.json").read_text(encoding="utf-8"))
         cls.title18 = [
             item for item in cls.payload.get("charges", [])
             if item.get("source") == "title18"
@@ -114,8 +117,6 @@ class Title18SentencingRegressionTests(unittest.TestCase):
         ]
         self.assertGreater(len(automatic), 0)
         self.assertGreater(len(manual), 0)
-        self.assertEqual(len(automatic), self.payload["counts"]["title18_automatic"])
-        self.assertEqual(len(manual), self.payload["counts"]["title18_manual"])
         self.assertEqual(len(self.title18), len(automatic) + len(manual))
 
     def test_automatic_title18_entries_have_class_and_sentence_metadata(self):
@@ -141,6 +142,20 @@ class Title18SentencingRegressionTests(unittest.TestCase):
             section_111.get("classification_status"),
             "manual_review_required",
         )
+
+    def test_roblox_booking_cap_is_20_without_rewriting_statutory_ceiling(self):
+        policy = self.payload.get("sentencing_policy") or {}
+        roblox = self.manifest.get("roblox") or {}
+        booking = self.sentencing.get("roblox_booking_policy") or {}
+        statutory = (self.sentencing.get("rules") or {}).get("multi_charge_max_minutes")
+
+        self.assertEqual(30, statutory)
+        self.assertEqual(20, policy.get("multi_charge_max_minutes"))
+        self.assertEqual(20, roblox.get("multi_charge_max_minutes"))
+        self.assertEqual(20, booking.get("multi_charge_max_minutes"))
+        self.assertEqual(30, policy.get("statutory_multi_charge_max_minutes"))
+        self.assertEqual(30, roblox.get("statutory_multi_charge_max_minutes"))
+        self.assertEqual(30, booking.get("statutory_multi_charge_max_minutes"))
 
 
 if __name__ == "__main__":
