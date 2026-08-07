@@ -25,13 +25,14 @@ MANIFEST = BASE / "manifest.json"
 CHARGES = BASE / "charges.json"
 DOCUMENTS = BASE / "documents.json"
 TITLE18_DIR = BASE / "title18"
-FILTER_VERSION = "roblox-safe-charge-only-v3"
+FILTER_VERSION = "roblox-safe-charge-only-v4"
 
 # Defense-in-depth patterns. The primary hardener already blocks the main
-# categories; these catch alternate youth/age wording and additional categories
-# that can be problematic under Roblox Community Standards. Keep wording out of
-# public API metadata so the audit cannot reintroduce the terms it removes.
+# categories; these catch alternate wording and adjacent restricted categories.
+# Keep explicit category vocabulary out of public API metadata so the audit
+# itself cannot reintroduce words it is designed to remove.
 SECONDARY_BLOCKED: tuple[re.Pattern[str], ...] = (
+    # Alternate age/youth formulations.
     re.compile(
         r"\b(?:has|have|had)\s+not\s+attained\s+(?:the\s+)?age\s+of\s+"
         r"(?:16|17|18|sixteen|seventeen|eighteen)\b",
@@ -43,30 +44,60 @@ SECONDARY_BLOCKED: tuple[re.Pattern[str], ...] = (
         re.I,
     ),
     re.compile(r"\b(?:16|17|18)\s+years?\s+of\s+age\b", re.I),
+    re.compile(r"\b(?:young\s+persons?|adolescents?|prepubescent|pubescent)\b", re.I),
+
+    # Alternate adult-content terminology.
+    re.compile(
+        r"\b(?:carnal|fornication|adultery|lascivious|masturbat(?:e|ed|es|ing|ion)|"
+        r"bestiality|incest(?:uous)?|voyeur(?:ism|istic)?|sextortion|"
+        r"explicit\s+sexual|sexually\s+explicit|sexual\s+abuse|sexual\s+exploitation|"
+        r"sexual\s+activity|sexual\s+act|sexual\s+contact)\b",
+        re.I,
+    ),
+
+    # Alternate controlled/intoxicating substance terminology.
+    re.compile(
+        r"\b(?:amphetamine|barbiturate|hallucinogen|psychoactive|ketamine|psilocybin|"
+        r"ghb|rohypnol|phencyclidine|steroid|steroids|syringe|syringes|"
+        r"drug\s+paraphernalia|smoking\s+paraphernalia)\b",
+        re.I,
+    ),
+
+    # Gambling aliases not caught by the primary wording.
+    re.compile(
+        r"\b(?:gaming\s+establishments?|casino|casinos|slot\s+machines?|poker|"
+        r"pari[- ]mutuel|games?\s+of\s+chance|sportsbooks?|sports\s+books?)\b",
+        re.I,
+    ),
+
+    # Exploitation / coercion categories.
     re.compile(
         r"\b(?:human\s+trafficking|trafficking\s+in\s+persons|forced\s+labor|"
         r"involuntary\s+servitude|peonage|slavery)\b",
         re.I,
     ),
+
+    # Extremism and related organization/activity references.
     re.compile(
         r"\b(?:terrorism|terrorist|terrorists|extremism|extremist|extremists)\b",
         re.I,
     ),
+
+    # Harassment/discrimination categories.
     re.compile(
         r"\b(?:harassment|harass(?:ed|ing)?|stalking|stalker|bullying|"
         r"discrimination|discriminatory|hate\s+crimes?)\b",
         re.I,
     ),
+
+    # Additional self-injury / disordered-behavior language.
     re.compile(
         r"\b(?:eating\s+disorder|anorexia|bulimia|self[- ]?starvation|"
-        r"depression|depressive)\b",
+        r"depression|depressive|self[- ]?mutilation|cutting\s+oneself)\b",
         re.I,
     ),
-    re.compile(
-        r"\b(?:steroid|steroids|syringe|syringes|drug\s+paraphernalia|"
-        r"smoking\s+paraphernalia)\b",
-        re.I,
-    ),
+
+    # Strong profanity.
     re.compile(
         r"\b(?:fuck|fucking|shit|bullshit|bitch|asshole|cunt)\b",
         re.I,
