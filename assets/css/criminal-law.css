@@ -1,0 +1,175 @@
+.criminal-hero__inner,
+.criminal-shell {
+  width: min(var(--measure), calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.criminal-hero {
+  background: linear-gradient(135deg, var(--surface) 0%, var(--surface-alt) 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.criminal-hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: center;
+  padding: clamp(1.75rem, 5vw, 3.75rem) 0;
+}
+
+.criminal-hero h1,
+.section-heading h2,
+.sentencing-alert h2 {
+  font-family: var(--serif);
+}
+
+.criminal-hero h1 {
+  margin: .35rem 0 .8rem;
+  max-width: 48rem;
+  font-size: clamp(2rem, 4.5vw, 3.8rem);
+  line-height: 1.02;
+  letter-spacing: -.025em;
+}
+
+.criminal-hero__lede {
+  max-width: 52rem;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.criminal-hero__status {
+  min-width: 15rem;
+  display: flex;
+  align-items: flex-start;
+  gap: .7rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: 0 4px 16px rgba(0,0,0,.04);
+}
+
+.criminal-hero__status strong,
+.criminal-hero__status span {
+  display: block;
+}
+
+.criminal-hero__status span {
+  color: var(--muted);
+  font-size: .82rem;
+  margin-top: .15rem;
+}
+
+.status-dot {
+  width: .68rem;
+  height: .68rem;
+  flex: 0 0 auto;
+  margin-top: .32rem;
+  border-radius: 50%;
+  background: var(--usar-green);
+  box-shadow: 0 0 0 4px var(--usar-green-bg);
+}
+
+.criminal-shell {
+  flex: 1;
+  padding: 1.5rem 0 3.5rem;
+}
+
+.criminal-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid var(--border);
+  background: var(--surface);
+  margin-bottom: 2rem;
+}
+
+.criminal-stats > div {
+  padding: 1.1rem 1.25rem;
+  border-right: 1px solid var(--border);
+}
+
+.criminal-stats > div:last-child { border-right: 0; }
+.criminal-stats strong { display: block; font-family: var(--serif); font-size: 1.7rem; line-height: 1; }
+.criminal-stats span { display: block; margin-top: .35rem; color: var(--muted); font-size: .82rem; }
+
+.section-heading { margin-bottom: 1rem; }
+.section-heading .eyebrow { margin: 0 0 .2rem; }
+.section-heading h2 { margin: 0; font-size: clamp(1.45rem, 3vw, 2.1rem); }
+.section-heading > p:not(.eyebrow) { max-width: 56rem; color: var(--muted); }
+.section-heading--inline { display: flex; justify-content: space-between; gap: 1rem; align-items: end; }
+.result-summary { color: var(--muted); font-size: .88rem; }
+
+.legal-lineage { margin-bottom: 2rem; }
+.lineage-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; }
+.lineage-card { padding: 1.2rem; border: 1px solid var(--border); background: var(--surface); }
+.lineage-card--primary { border-top: 4px solid var(--cornell-red); padding-top: calc(1.2rem - 3px); }
+.lineage-card__number { color: var(--cornell-red-dark); font-weight: 800; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
+.lineage-card h3 { margin: .45rem 0 .6rem; font-family: var(--serif); font-size: 1.2rem; }
+.lineage-card p { color: var(--muted); font-size: .9rem; }
+.lineage-card a { font-weight: 700; }
+
+.sentencing-alert { display: grid; grid-template-columns: auto 1fr; gap: 1rem; padding: 1.15rem 1.25rem; margin-bottom: 2rem; border: 1px solid #d5b85f; border-left: 5px solid var(--gold); background: color-mix(in srgb, var(--surface) 87%, var(--gold) 13%); }
+.sentencing-alert__icon { width: 2.2rem; height: 2.2rem; display: grid; place-items: center; border-radius: 50%; background: var(--gold); color: #111; font-family: var(--serif); font-weight: 700; }
+.sentencing-alert h2 { margin: 0 0 .3rem; font-size: 1.15rem; }
+.sentencing-alert p { margin: 0; color: var(--muted); font-size: .9rem; }
+.sentencing-alert code { color: var(--ink); }
+
+.criminal-search { padding: 1.2rem; border: 1px solid var(--border); background: var(--surface); }
+.criminal-controls { display: grid; grid-template-columns: minmax(0, 2fr) minmax(11rem, .8fr) minmax(11rem, .7fr); gap: .8rem; }
+.criminal-control { display: grid; gap: .32rem; }
+.criminal-control label { font-size: .78rem; font-weight: 700; color: var(--muted); }
+.criminal-control input,
+.criminal-control select { width: 100%; border: 1px solid var(--border-strong); background: var(--surface); color: var(--ink); padding: .72rem .78rem; min-height: 2.8rem; }
+.criminal-control input:focus,
+.criminal-control select:focus { outline: none; box-shadow: var(--focus); border-color: var(--cornell-red); }
+
+.criminal-message { padding: 1rem; border: 1px solid var(--border); background: var(--surface-alt); }
+.criminal-message.is-error { border-color: var(--cornell-red); color: var(--cornell-red-dark); }
+
+.criminal-results { display: grid; gap: .7rem; margin: 1rem 0 2.5rem; }
+.law-result { border: 1px solid var(--border); background: var(--surface); }
+.law-result[open] { border-color: var(--border-strong); }
+.law-result summary { cursor: pointer; list-style: none; padding: .95rem 1rem; display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 1rem; align-items: center; }
+.law-result summary::-webkit-details-marker { display: none; }
+.law-result summary::before { content: "+"; grid-column: 2; grid-row: 1; color: var(--cornell-red-dark); font-weight: 800; }
+.law-result[open] summary::before { content: "−"; }
+.result-heading { min-width: 0; grid-column: 1; grid-row: 1; }
+.result-citation { display: block; color: var(--cornell-red-dark); font-size: .78rem; font-weight: 800; letter-spacing: .04em; }
+.result-title { display: block; margin-top: .15rem; font-family: var(--serif); font-size: 1.12rem; font-weight: 700; }
+.result-meta { display: flex; gap: .45rem; flex-wrap: wrap; margin-top: .45rem; }
+.result-badge { display: inline-flex; align-items: center; padding: .16rem .42rem; border: 1px solid var(--border); background: var(--surface-alt); color: var(--muted); font-size: .72rem; font-weight: 700; }
+.result-badge--class { color: var(--usar-green-ink); background: var(--usar-green-bg); border-color: color-mix(in srgb, var(--usar-green) 45%, var(--border)); }
+.result-body { border-top: 1px solid var(--border); padding: 1rem 1.1rem 1.2rem; }
+.result-body p { white-space: pre-line; margin: 0; font-family: var(--serif); line-height: 1.65; }
+.result-body__toolbar { display: flex; gap: .8rem; justify-content: space-between; align-items: center; margin-bottom: .9rem; color: var(--muted); font-size: .78rem; }
+.result-body__toolbar a { font-weight: 700; }
+.result-sentence { margin-top: 1rem; padding: .75rem .85rem; border-left: 3px solid var(--usar-green); background: var(--usar-green-bg); color: var(--usar-green-ink); font-size: .82rem; }
+
+.api-docs { border-top: 1px solid var(--border); padding-top: 2rem; }
+.api-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 1rem; }
+.api-endpoints { border: 1px solid var(--border); background: var(--surface); }
+.api-endpoints > div { display: grid; gap: .25rem; padding: .8rem .9rem; border-bottom: 1px solid var(--border); }
+.api-endpoints > div:last-child { border-bottom: 0; }
+.api-endpoints code { overflow-wrap: anywhere; color: var(--cornell-red-dark); font-weight: 700; }
+.api-endpoints span { color: var(--muted); font-size: .8rem; }
+.api-example { min-width: 0; border: 1px solid var(--border); background: #111; color: #eee; }
+.api-example__header { display: flex; justify-content: space-between; padding: .7rem .85rem; border-bottom: 1px solid #333; color: #ddd; font-size: .8rem; }
+.api-example pre { margin: 0; padding: 1rem; overflow-x: auto; font-size: .78rem; line-height: 1.55; }
+
+@media (max-width: 860px) {
+  .criminal-hero__inner { grid-template-columns: 1fr; }
+  .criminal-hero__status { min-width: 0; }
+  .criminal-stats { grid-template-columns: repeat(2,1fr); }
+  .criminal-stats > div:nth-child(2) { border-right: 0; }
+  .criminal-stats > div:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
+  .lineage-grid, .api-grid { grid-template-columns: 1fr; }
+  .criminal-controls { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  .criminal-hero__inner, .criminal-shell { width: min(100% - 1rem, var(--measure)); }
+  .criminal-stats { grid-template-columns: 1fr 1fr; }
+  .section-heading--inline { display: block; }
+  .result-summary { display: block; margin-top: .5rem; }
+  .law-result summary { grid-template-columns: minmax(0,1fr) auto; }
+}
