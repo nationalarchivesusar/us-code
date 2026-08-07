@@ -20,7 +20,14 @@ TITLE18_DIR = BASE / "title18"
 LOCAL_REMOVE_SECTIONS = {"312"}
 
 # Title 18 charges to remove entirely from the Roblox-facing catalog.
-TITLE18_REMOVE_SECTIONS = {"175", "2280a", "2283", "2340A"}
+TITLE18_REMOVE_SECTIONS = {
+    "175",
+    "1091",
+    "2280a",
+    "2283",
+    "2340A",
+    "2441",
+}
 
 # Title 18 charges that remain selectable, but whose statutory body must not be
 # displayed in Roblox.
@@ -166,7 +173,7 @@ def apply() -> None:
     check()
     print(
         "Applied targeted Roblox API exclusions: removed local §312; removed "
-        "18 U.S.C. §§ 175, 2280a, 2283, and 2340A; withheld §2385 body."
+        "18 U.S.C. §§ 175, 1091, 2280a, 2283, 2340A, and 2441; withheld §2385 body."
     )
 
 
