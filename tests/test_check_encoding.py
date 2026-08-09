@@ -7,14 +7,19 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_PATH = ROOT / "tools" / "check_encoding.py"
+CLASSIFIER_PATH = ROOT / "tools" / "title18_charge_classifier.py"
+
+
+def load_module_from(path: Path, name: str):
+    spec = importlib.util.spec_from_file_location(name, path)
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[name] = module
+    spec.loader.exec_module(module)
+    return module
 
 
 def load_module():
-    spec = importlib.util.spec_from_file_location("check_encoding_under_test", SCRIPT_PATH)
-    module = importlib.util.module_from_spec(spec)
-    sys.modules["check_encoding_under_test"] = module
-    spec.loader.exec_module(module)
-    return module
+    return load_module_from(SCRIPT_PATH, "check_encoding_under_test")
 
 
 class CheckEncodingTests(unittest.TestCase):
@@ -89,8 +94,87 @@ class CheckEncodingTests(unittest.TestCase):
         self.assertEqual(0, exit_code)
 
 
+class Title18ChargeClassifierTests(unittest.TestCase):
+    """Protect common Title 18 drafting styles from false-negative filtering."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.mod = load_module_from(
+            CLASSIFIER_PATH, "title18_charge_classifier_under_test"
+        )
+
+    def detail(self, section: str, heading: str, text: str) -> dict:
+        return {
+            "section": section,
+            "heading": heading,
+            "text": text,
+            "status": "current",
+            "charge_candidate": True,
+        }
+
+    def test_known_offense_is_checked_before_heading_filter(self):
+        detail = self.detail(
+            "113",
+            "Assaults within maritime and territorial jurisdiction",
+            "Whoever commits an assault shall be fined under this title.",
+        )
+        self.assertTrue(self.mod.title18_is_positive_charge(detail))
+
+    def test_conditional_penalty_clause_is_a_charge(self):
+        detail = self.detail(
+            "752",
+            "Instigating or assisting escape",
+            (
+                "Whoever assists an escape shall, if the custody is by virtue "
+                "of a felony arrest, be fined under this title or imprisoned."
+            ),
+        )
+        self.assertTrue(self.mod.title18_is_positive_charge(detail))
+
+    def test_intervening_penalty_clause_is_a_charge(self):
+        detail = self.detail(
+            "1501",
+            "Assault on process server",
+            (
+                "Whoever obstructs an officer shall, except as otherwise "
+                "provided by law, be fined under this title or imprisoned."
+            ),
+        )
+        self.assertTrue(self.mod.title18_is_positive_charge(detail))
+
+    def test_conspiracy_formulation_is_a_charge(self):
+        detail = self.detail(
+            "2384",
+            "Seditious conspiracy",
+            (
+                "If two or more persons conspire to oppose lawful authority, "
+                "they shall each be fined under this title or imprisoned."
+            ),
+        )
+        self.assertTrue(self.mod.title18_is_positive_charge(detail))
+
+    def test_split_prohibition_and_penalty_section_is_a_charge(self):
+        detail = self.detail(
+            "1962",
+            "Prohibited activities",
+            "It shall be unlawful for any person to engage in the prohibited conduct.",
+        )
+        self.assertTrue(self.mod.title18_is_positive_charge(detail))
+
+    def test_administrative_heading_remains_noncharge(self):
+        detail = self.detail(
+            "2518",
+            "Procedure for interception of wire, oral, or electronic communications",
+            (
+                "A person who violates an order shall be fined under this title "
+                "or imprisoned."
+            ),
+        )
+        self.assertFalse(self.mod.title18_is_positive_charge(detail))
+
+
 class Title18SentencingRegressionTests(unittest.TestCase):
-    """Protect the Roblox catalog from reverting Title 18 to blanket manual sentencing."""
+    """Protect the Roblox catalog from sentencing and charge-retention regressions."""
 
     @classmethod
     def setUpClass(cls):
@@ -106,6 +190,9 @@ class Title18SentencingRegressionTests(unittest.TestCase):
             item for item in cls.payload.get("charges", [])
             if item.get("source") == "title18"
         ]
+        cls.title18_by_section = {
+            str(item.get("section")): item for item in cls.title18
+        }
 
     def test_title18_has_both_automatic_and_manual_entries(self):
         automatic = [
@@ -135,9 +222,7 @@ class Title18SentencingRegressionTests(unittest.TestCase):
                 self.assertIn("18 U.S.C. § 3559", item.get("classification_basis", ""))
 
     def test_multitier_section_111_remains_manual(self):
-        section_111 = next(
-            item for item in self.title18 if str(item.get("section")) == "111"
-        )
+        section_111 = self.title18_by_section["111"]
         self.assertEqual(section_111.get("sentencing_mode"), "manual_required")
         self.assertEqual(
             section_111.get("classification_status"),
@@ -145,9 +230,7 @@ class Title18SentencingRegressionTests(unittest.TestCase):
         )
 
     def test_escape_section_751_remains_bookable_with_body_withheld(self):
-        section_751 = next(
-            item for item in self.title18 if str(item.get("section")) == "751"
-        )
+        section_751 = self.title18_by_section["751"]
         self.assertEqual(section_751.get("charge_classification"), "known_positive_charge")
         self.assertEqual(section_751.get("sentencing_mode"), "manual_required")
         self.assertTrue(section_751.get("text_withheld"))
@@ -156,6 +239,55 @@ class Title18SentencingRegressionTests(unittest.TestCase):
         self.assertEqual(detail.get("heading"), "Prisoners in custody of institution or officer")
         self.assertTrue(detail.get("text_withheld"))
         self.assertEqual(detail.get("text_display_scope"), "withheld_for_platform_safety")
+
+    def test_representative_legitimate_charges_survive_classifier_audit(self):
+        required = {
+            "81",    # arson in special maritime/territorial jurisdiction
+            "113",   # assault in special maritime/territorial jurisdiction
+            "241",   # conspiracy against rights
+            "371",   # general conspiracy
+            "752",   # instigating/assisting escape
+            "956",   # conspiracy to kill/kidnap/maim/injure abroad
+            "1001",  # false statements
+            "1031",  # major fraud against the United States
+            "1113",  # attempt to commit murder/manslaughter
+            "1501",  # assault on process server
+            "1505",  # obstruction of agency/committee proceedings
+            "1751",  # protectee assassination/kidnapping/assault
+            "1962",  # prohibited racketeering activities
+            "2119",  # motor-vehicle robbery/carjacking
+            "2384",  # seditious conspiracy
+            "2511",  # unlawful interception/disclosure
+        }
+        missing = required - set(self.title18_by_section)
+        self.assertEqual(set(), missing)
+
+    def test_body_only_secondary_references_are_withheld_not_deleted(self):
+        for section in ("1001", "1505"):
+            with self.subTest(section=section):
+                item = self.title18_by_section[section]
+                self.assertTrue(item.get("text_withheld"))
+                detail = json.loads(
+                    (self.base / "title18" / f"{section}.json").read_text(
+                        encoding="utf-8"
+                    )
+                )
+                self.assertTrue(detail.get("text_withheld"))
+                self.assertEqual(
+                    detail.get("text_display_scope"),
+                    "withheld_for_platform_safety",
+                )
+
+    def test_obvious_noncharge_sections_remain_absent(self):
+        for section in ("5", "17", "2518"):
+            with self.subTest(section=section):
+                self.assertNotIn(section, self.title18_by_section)
+
+    def test_secondary_filter_declares_body_withholding_contract(self):
+        roblox = self.manifest.get("roblox") or {}
+        surface = roblox.get("public_surface") or {}
+        self.assertEqual("roblox-safe-charge-only-v5", roblox.get("filter_version"))
+        self.assertTrue(surface.get("body_only_secondary_failures_are_withheld"))
 
     def test_roblox_booking_cap_is_20_without_rewriting_statutory_ceiling(self):
         policy = self.payload.get("sentencing_policy") or {}
