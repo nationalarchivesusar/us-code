@@ -131,8 +131,10 @@ TITLE18_PENALTY_PATTERNS = (
 
 # The original classifier already has a small set of charges whose complex
 # cross-references make any text-only recognition rule unnecessarily brittle.
-# Keep that escape hatch, and include §751 as a permanent regression guard.
-hardener.KNOWN_TITLE18_CHARGES.add("751")
+# Keep that escape hatch for audited exceptions: §751 is a legacy drafting
+# regression, while USAR-added §242e uses the bespoke phrase "shall face ...
+# imprisonment" rather than ordinary congressional penalty syntax.
+hardener.KNOWN_TITLE18_CHARGES.update({"751", "242e"})
 
 # "Intoxicant" is an alternate label for the already-blocked regulated-
 # intoxicant category. Treat it the same way so a synonym cannot bypass the
@@ -192,10 +194,13 @@ hardener.title18_is_positive_charge = title18_is_positive_charge
 # body-only safety hits, incorporated penalties, direct prohibitions, older
 # drafting styles, and offense headings beginning with words that can otherwise
 # look administrative (Disclosure / Forfeiture / specific Penalties for ...).
+# The USAR-added §242-series checks ensure the live current-law overlay is also
+# represented, rather than auditing only legacy federal source text.
 REQUIRED_TITLE18_CHARGES = {
-    "81", "113", "241", "371", "492", "605", "751", "752", "798", "956",
-    "1001", "1031", "1113", "1121", "1429", "1501", "1505", "1751", "1902",
-    "1905", "1906", "1907", "1962", "2075", "2119", "2384", "2511",
+    "81", "113", "241", "242a", "242b", "242e", "371", "492", "605", "751",
+    "752", "798", "956", "1001", "1031", "1113", "1121", "1429", "1501",
+    "1505", "1751", "1902", "1905", "1906", "1907", "1962", "2075", "2119",
+    "2384", "2511",
 }
 OBVIOUS_NON_CHARGES = {
     "2", "5", "13", "17", "934", "983", "1034", "1153", "1963", "229B",
