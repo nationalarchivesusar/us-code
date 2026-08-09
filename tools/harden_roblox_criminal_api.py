@@ -15,17 +15,21 @@ withheld without deleting an otherwise safe charge.
 """
 from __future__ import annotations
 
+import json
 import re
+from pathlib import Path
 
 import harden_roblox_criminal_api_v2 as hardener
 from apply_roblox_api_exclusions import main as exclusions_main
 from set_roblox_booking_cap import main as booking_cap_main
 
 
-# Headings that describe definitions, procedure, remedies, jurisdiction, or
-# other framework provisions rather than independently bookable offenses.
+# Reject headings that BEGIN as framework/administrative provisions. Do not use
+# a substring test here: legitimate criminal headings can contain words such as
+# "jurisdiction", "penalties", "records", or "disclosure" descriptively (for
+# example §§ 113, 1751, and 2511).
 NON_CHARGE_HEADING = re.compile(
-    r"\b(?:definitions?|definition of terms|defined|rules?|regulations?|reports?|"
+    r"^\s*(?:definitions?|definition of terms|defined|rules?|regulations?|reports?|"
     r"annual report|construction|applicability|effective dates?|jurisdiction|venue|"
     r"limitations?|limitation of actions|procedures?|administrative|authorization|"
     r"appropriations?|duties|powers|establishment|findings|severability|separability|"
@@ -129,12 +133,16 @@ def title18_is_positive_charge(detail: dict) -> bool:
     body = str(detail.get("text") or "")
     section = str(detail.get("section") or "")
 
-    if not body.strip() or NON_CHARGE_HEADING.search(heading):
+    if not body.strip():
         return False
     if section in TITLE18_NON_CHARGE_SECTIONS:
         return False
+    # Check known positive charges before the heading guard. A descriptive
+    # heading must never make an already-audited offense disappear.
     if section in hardener.KNOWN_TITLE18_CHARGES:
         return True
+    if NON_CHARGE_HEADING.search(heading):
+        return False
     if any(pattern.search(body) for pattern in TITLE18_STRONG_OFFENSE_PATTERNS):
         return True
 
@@ -153,6 +161,43 @@ hardener.TITLE18_PENALTY_PATTERNS = TITLE18_PENALTY_PATTERNS
 hardener.title18_is_positive_charge = title18_is_positive_charge
 
 
+# Regression set spans the exact false-negative families found in the source
+# audit: descriptive headings, conditional penalties, body-only safety hits,
+# incorporated penalties, direct prohibitions, and older drafting styles.
+REQUIRED_TITLE18_CHARGES = {
+    "81", "113", "241", "371", "752", "956", "1001", "1031", "1113",
+    "1121", "1501", "1505", "1751", "1962", "2119", "2384", "2511",
+}
+OBVIOUS_NON_CHARGES = {"5", "17", "2518"}
+
+
+def audit_charge_coverage() -> None:
+    """Fail CI if representative legitimate charges disappear again."""
+    path = Path(__file__).resolve().parents[1] / "data" / "api" / "v1" / "criminal-law" / "charges.json"
+    if not path.is_file():
+        return
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    present = {
+        str(item.get("section") or "")
+        for item in payload.get("charges", [])
+        if item.get("source") == "title18"
+    }
+
+    missing = sorted(REQUIRED_TITLE18_CHARGES - present)
+    if missing:
+        raise RuntimeError(
+            "Title 18 charge coverage audit failed; legitimate charges were filtered out: "
+            + repr(missing)
+        )
+
+    leaked = sorted(OBVIOUS_NON_CHARGES & present)
+    if leaked:
+        raise RuntimeError(
+            "Title 18 charge coverage audit failed; obvious non-charge sections were exposed: "
+            + repr(leaked)
+        )
+
+
 def main() -> int:
     result = hardener.main()
     if result not in (None, 0):
@@ -161,7 +206,10 @@ def main() -> int:
     if result not in (None, 0):
         return int(result)
     result = booking_cap_main()
-    return 0 if result is None else int(result)
+    if result not in (None, 0):
+        return int(result)
+    audit_charge_coverage()
+    return 0
 
 
 if __name__ == "__main__":
