@@ -98,6 +98,7 @@ class Title18SentencingRegressionTests(unittest.TestCase):
         charges_path = base / "charges.json"
         if not charges_path.is_file():
             raise unittest.SkipTest("Generated criminal-law API is not present")
+        cls.base = base
         cls.payload = json.loads(charges_path.read_text(encoding="utf-8"))
         cls.manifest = json.loads((base / "manifest.json").read_text(encoding="utf-8"))
         cls.sentencing = json.loads((base / "sentencing.json").read_text(encoding="utf-8"))
@@ -142,6 +143,19 @@ class Title18SentencingRegressionTests(unittest.TestCase):
             section_111.get("classification_status"),
             "manual_review_required",
         )
+
+    def test_escape_section_751_remains_bookable_with_body_withheld(self):
+        section_751 = next(
+            item for item in self.title18 if str(item.get("section")) == "751"
+        )
+        self.assertEqual(section_751.get("charge_classification"), "known_positive_charge")
+        self.assertEqual(section_751.get("sentencing_mode"), "manual_required")
+        self.assertTrue(section_751.get("text_withheld"))
+
+        detail = json.loads((self.base / "title18" / "751.json").read_text(encoding="utf-8"))
+        self.assertEqual(detail.get("heading"), "Prisoners in custody of institution or officer")
+        self.assertTrue(detail.get("text_withheld"))
+        self.assertEqual(detail.get("text_display_scope"), "withheld_for_platform_safety")
 
     def test_roblox_booking_cap_is_20_without_rewriting_statutory_ceiling(self):
         policy = self.payload.get("sentencing_policy") or {}
