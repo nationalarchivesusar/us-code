@@ -59,8 +59,9 @@ TITLE18_STRONG_OFFENSE_PATTERNS = (
     # another section of the same chapter.
     re.compile(r"\b(?:it\s+)?(?:is|shall\s+be)\s+unlawful\b", re.I),
     re.compile(r"\bno\s+person\s+shall\b", re.I),
-    # Explicit declarations of criminal guilt or offense class.
+    # Explicit declarations of criminal guilt, contempt, or offense class.
     re.compile(r"\b(?:shall\s+be|is|are)\s+guilty\s+of\b", re.I),
+    re.compile(r"\bis\s+(?:a|an)\s+criminal\s+(?:contempt|offense)\b", re.I),
     re.compile(
         r"\b(?:is|are|shall\s+be)\s+subject\s+to\b.{0,180}"
         r"\b(?:felony|misdemeanor|criminal\s+offense)\b",
