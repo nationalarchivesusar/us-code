@@ -1,5 +1,6 @@
 import importlib.util
 import json
+import re
 import sys
 import tempfile
 import unittest
@@ -90,7 +91,7 @@ class CheckEncodingTests(unittest.TestCase):
 
 
 class Title18SentencingRegressionTests(unittest.TestCase):
-    """Protect the Roblox catalog from reverting Title 18 to blanket manual sentencing."""
+    """Protect the Roblox catalog from charge-classification/filter regressions."""
 
     @classmethod
     def setUpClass(cls):
@@ -106,6 +107,9 @@ class Title18SentencingRegressionTests(unittest.TestCase):
             item for item in cls.payload.get("charges", [])
             if item.get("source") == "title18"
         ]
+        cls.title18_by_section = {
+            str(item.get("section")): item for item in cls.title18
+        }
 
     def test_title18_has_both_automatic_and_manual_entries(self):
         automatic = [
@@ -135,9 +139,7 @@ class Title18SentencingRegressionTests(unittest.TestCase):
                 self.assertIn("18 U.S.C. § 3559", item.get("classification_basis", ""))
 
     def test_multitier_section_111_remains_manual(self):
-        section_111 = next(
-            item for item in self.title18 if str(item.get("section")) == "111"
-        )
+        section_111 = self.title18_by_section["111"]
         self.assertEqual(section_111.get("sentencing_mode"), "manual_required")
         self.assertEqual(
             section_111.get("classification_status"),
@@ -145,9 +147,7 @@ class Title18SentencingRegressionTests(unittest.TestCase):
         )
 
     def test_escape_section_751_remains_bookable_with_body_withheld(self):
-        section_751 = next(
-            item for item in self.title18 if str(item.get("section")) == "751"
-        )
+        section_751 = self.title18_by_section["751"]
         self.assertEqual(section_751.get("charge_classification"), "known_positive_charge")
         self.assertEqual(section_751.get("sentencing_mode"), "manual_required")
         self.assertTrue(section_751.get("text_withheld"))
@@ -156,6 +156,113 @@ class Title18SentencingRegressionTests(unittest.TestCase):
         self.assertEqual(detail.get("heading"), "Prisoners in custody of institution or officer")
         self.assertTrue(detail.get("text_withheld"))
         self.assertEqual(detail.get("text_display_scope"), "withheld_for_platform_safety")
+
+    def test_unusual_criminal_drafting_forms_remain_bookable(self):
+        # Representative sections from every drafting form that the old exact-
+        # phrase classifier missed: conditional penalties, incorporated penalty
+        # sections, guilt declarations, punishable-by clauses, em-dash penalty
+        # lists, and direct substantive prohibitions.
+        required = {
+            "40", "40A", "153", "203", "204", "205", "208", "209", "213",
+            "241", "371", "372", "402", "514", "650", "752", "842", "922",
+            "937", "956", "1031", "1113", "1115", "1117", "1120", "1121",
+            "1366", "1389", "1501", "1694", "1695", "1725", "1865", "1866",
+            "1917", "1962", "2119", "2319B", "2319C", "2384", "2722",
+        }
+        missing = sorted(required - set(self.title18_by_section))
+        self.assertEqual([], missing, f"Legitimate Title 18 charges were filtered out: {missing}")
+
+    def test_secondary_body_hits_with_safe_metadata_are_withheld_not_deleted(self):
+        # These sections were previously false negatives because the secondary
+        # screen searched the entire detail record and deleted the charge when a
+        # restricted word appeared only in the body.
+        sections = {"112", "226", "491", "832", "970", "1001", "1505", "2280"}
+        missing = sorted(sections - set(self.title18_by_section))
+        self.assertEqual([], missing, f"Body-only safety hits deleted safe charges: {missing}")
+        for section in sorted(sections):
+            with self.subTest(section=section):
+                item = self.title18_by_section[section]
+                self.assertTrue(item.get("text_withheld"))
+                detail = json.loads(
+                    (self.base / "title18" / f"{section}.json").read_text(encoding="utf-8")
+                )
+                self.assertTrue(detail.get("text_withheld"))
+                self.assertEqual(
+                    detail.get("text_display_scope"),
+                    "withheld_for_platform_safety",
+                )
+
+    def test_explicit_platform_exclusions_stay_excluded(self):
+        excluded = {
+            "41", "42", "43", "47", "48", "49", "175", "1091", "1368",
+            "2280a", "2283", "2316", "2317", "2340A", "2441",
+        }
+        leaked = sorted(excluded & set(self.title18_by_section))
+        self.assertEqual([], leaked, f"Explicit Roblox exclusions leaked into booking: {leaked}")
+
+    def test_secondary_filter_is_charge_preserving_v5(self):
+        roblox = self.manifest.get("roblox") or {}
+        surface = roblox.get("public_surface") or {}
+        self.assertEqual("roblox-safe-charge-only-v5", roblox.get("filter_version"))
+        self.assertTrue(surface.get("preserve_safe_charge_metadata_when_body_withheld"))
+
+    def test_classifier_audit_finds_no_obvious_charge_syntax_false_negatives(self):
+        # Independent source-level audit: deliberately use simpler/broader
+        # offense signals than the production classifier. If a future Title 18
+        # section has unmistakable criminal syntax but production fails to
+        # recognize it, CI must fail instead of silently dropping the charge.
+        tools_dir = str(ROOT / "tools")
+        if tools_dir not in sys.path:
+            sys.path.insert(0, tools_dir)
+        import build_criminal_law_api as builder
+        import harden_roblox_criminal_api as production
+
+        audit_non_charge_heading = re.compile(
+            r"\b(?:definitions?|defined|rules?|regulations?|reports?|construction|"
+            r"applicability|jurisdiction|venue|limitations?|procedures?|administrative|"
+            r"authorization|appropriations?|duties|powers|findings|severability|"
+            r"separability|preemption|exceptions?|exemptions?|immunity|disclosure|"
+            r"records?|civil remedies?|civil proceedings?|civil actions?|injunctions?|"
+            r"forfeitures?|restitution|sentencing|penalties|penalty|licensing|"
+            r"licenses? and user permits|laws? governing|exclusive remedies|"
+            r"effect on state law)\b",
+            re.I,
+        )
+        audit_signals = (
+            re.compile(r"\b(?:it\s+)?(?:is|shall\s+be)\s+unlawful\b", re.I),
+            re.compile(r"\bno\s+person\s+shall\b", re.I),
+            re.compile(r"\b(?:shall\s+be|is|are)\s+guilty\s+of\b", re.I),
+            re.compile(
+                r"\bshall\b[^.;]{0,560}\b(?:be\s+)?"
+                r"(?:fined|imprisoned|punished|sentenced)\b",
+                re.I | re.S,
+            ),
+            re.compile(
+                r"\bpunishable\s+by\b[^.;]{0,320}\b(?:fine|imprisonment)\b",
+                re.I | re.S,
+            ),
+            re.compile(
+                r"\bsubject\s+to\b[^.;]{0,220}"
+                r"\b(?:felony|misdemeanor|criminal\s+offense)\b",
+                re.I | re.S,
+            ),
+        )
+        framework_sections = {"2", "1153"}
+        misses = []
+        for detail in builder.title18_sections(ROOT / "usc" / "usc18.xml"):
+            section = str(detail.get("section") or "")
+            heading = str(detail.get("heading") or "")
+            body = str(detail.get("text") or "")
+            if detail.get("status") != "current" or not detail.get("charge_candidate"):
+                continue
+            if section in framework_sections or audit_non_charge_heading.search(heading):
+                continue
+            if not any(pattern.search(body) for pattern in audit_signals):
+                continue
+            if not production.title18_is_positive_charge(detail):
+                misses.append((section, heading))
+
+        self.assertEqual([], misses, f"Classifier missed charge-like Title 18 sections: {misses}")
 
     def test_roblox_booking_cap_is_20_without_rewriting_statutory_ceiling(self):
         policy = self.payload.get("sentencing_policy") or {}
