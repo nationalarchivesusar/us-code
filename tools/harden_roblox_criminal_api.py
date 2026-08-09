@@ -25,27 +25,47 @@ from set_roblox_booking_cap import main as booking_cap_main
 
 
 # Reject headings that BEGIN as framework/administrative provisions. Do not use
-# a substring test here: legitimate criminal headings can contain words such as
-# "jurisdiction", "penalties", "records", or "disclosure" descriptively (for
-# example §§ 113, 1751, and 2511).
+# a substring test here: legitimate criminal headings can contain framework
+# vocabulary descriptively. Also avoid treating words such as "disclosure",
+# "forfeiture", or a specific "penalties for ..." heading as dispositive by
+# themselves; several current Title 18 sections with those headings contain
+# independently punishable conduct.
 NON_CHARGE_HEADING = re.compile(
     r"^\s*(?:definitions?|definition of terms|defined|rules?|regulations?|reports?|"
     r"annual report|construction|applicability|effective dates?|jurisdiction|venue|"
     r"limitations?|limitation of actions|procedures?|administrative|authorization|"
     r"appropriations?|duties|powers|establishment|findings|severability|separability|"
-    r"preemption|exceptions?|exemptions?|immunity|disclosure|records?|civil remedies?|"
-    r"civil proceedings?|civil actions?|injunctions?|forfeitures?|restitution|"
-    r"sentencing|penalties|penalty|definitions and rules|use of certain terms|"
-    r"licensing|licenses? and user permits|laws? governing|exclusive remedies|"
-    r"effect on state law)\b",
+    r"preemption|exceptions?|exemptions?|immunity|records?|civil remedies?|"
+    r"civil proceedings?|civil actions?|injunctions?|restitution|sentencing|"
+    r"definitions and rules|use of certain terms|licensing|licenses? and user permits|"
+    r"laws? governing|exclusive remedies|effect on state law)\b",
     re.I,
 )
 
-# These sections can contain offense vocabulary while functioning as liability,
-# jurisdiction, or charging frameworks rather than independent offenses.
+# Generic penalty headings are usually sentencing crosswalks rather than a
+# separately bookable offense. Keep these out while allowing specific headings
+# such as "Penalties for neglect or refusal ..." to be classified from their
+# operative criminal text. This also keeps broad mixed penalty sections such as
+# §§ 844 and 924 out of a section-level catalog that cannot identify subsections.
+GENERIC_NON_CHARGE_HEADING = re.compile(
+    r"^\s*(?:penalties|penalties and injunctions|enhanced penalties|penalty when\b.*)\s*$",
+    re.I,
+)
+
+# These sections can contain strong offense vocabulary while functioning as
+# liability, jurisdiction/incorporation, forfeiture, civil-remedy, regulatory,
+# or sentencing frameworks rather than independent booking charges.
 TITLE18_NON_CHARGE_SECTIONS = {
     "2",     # principals / derivative liability
+    "13",    # assimilates State offenses in Federal enclaves; not standalone conduct
+    "934",   # forfeiture/fine consequences for §§ 932-933 convictions
+    "983",   # civil forfeiture procedure
+    "1034",  # civil penalties and injunctions for § 1033 conduct
     "1153",  # Indian-country jurisdiction and offense incorporation framework
+    "1963",  # penalties/forfeiture for § 1962 RICO violations
+    "229B",  # forfeiture/destruction consequences for § 229A convictions
+    "2326",  # enhanced punishment for separately charged fraud offenses
+    "2343",  # recordkeeping/reporting/inspection regulatory framework
 }
 
 # Ordinary criminal drafting forms. These are intentionally syntax-oriented,
@@ -56,6 +76,9 @@ TITLE18_ACTOR_PATTERNS = (
     re.compile(r"\b(?:any|a|an|each|every)\s+(?:person|individual|citizen|driver)\b", re.I),
     re.compile(r"\btwo\s+or\s+more\s+persons?\b", re.I),
     re.compile(r"\b(?:person|individual)\s+who\b", re.I),
+    # Older provisions sometimes use a role noun rather than "whoever" or
+    # "person" (for example § 2075: "Every officer ... shall be fined").
+    re.compile(r"\bevery\s+officer\b", re.I),
 )
 
 TITLE18_STRONG_OFFENSE_PATTERNS = (
@@ -91,9 +114,12 @@ TITLE18_PENALTY_PATTERNS = (
     ),
     re.compile(r"\b(?:is|are|shall\s+be)\s+guilty\s+of\b", re.I),
     # Conflict-of-interest and similar provisions often incorporate a penalty
-    # section instead of restating the punishment.
+    # section instead of restating the punishment. A reference to a CIVIL
+    # penalty is not enough to classify a criminal booking charge.
     re.compile(
-        r"\bshall\s+be\s+subject\s+to\b.{0,260}?\bpenalt(?:y|ies)\b",
+        r"\bshall\s+be\s+subject\s+to\b"
+        r"(?:(?!\bcivil\s+penalt(?:y|ies)\b).){0,260}?"
+        r"\bpenalt(?:y|ies)\b",
         re.I | re.S,
     ),
     re.compile(
@@ -141,7 +167,7 @@ def title18_is_positive_charge(detail: dict) -> bool:
     # heading must never make an already-audited offense disappear.
     if section in hardener.KNOWN_TITLE18_CHARGES:
         return True
-    if NON_CHARGE_HEADING.search(heading):
+    if NON_CHARGE_HEADING.search(heading) or GENERIC_NON_CHARGE_HEADING.search(heading):
         return False
     if any(pattern.search(body) for pattern in TITLE18_STRONG_OFFENSE_PATTERNS):
         return True
@@ -162,13 +188,19 @@ hardener.title18_is_positive_charge = title18_is_positive_charge
 
 
 # Regression set spans the exact false-negative families found in the source
-# audit: descriptive headings, conditional penalties, body-only safety hits,
-# incorporated penalties, direct prohibitions, and older drafting styles.
+# and deployed-artifact audits: descriptive headings, conditional penalties,
+# body-only safety hits, incorporated penalties, direct prohibitions, older
+# drafting styles, and offense headings beginning with words that can otherwise
+# look administrative (Disclosure / Forfeiture / specific Penalties for ...).
 REQUIRED_TITLE18_CHARGES = {
-    "81", "113", "241", "371", "752", "956", "1001", "1031", "1113",
-    "1121", "1501", "1505", "1751", "1962", "2119", "2384", "2511",
+    "81", "113", "241", "371", "492", "605", "751", "752", "798", "956",
+    "1001", "1031", "1113", "1121", "1429", "1501", "1505", "1751", "1902",
+    "1905", "1906", "1907", "1962", "2075", "2119", "2384", "2511",
 }
-OBVIOUS_NON_CHARGES = {"5", "17", "2518"}
+OBVIOUS_NON_CHARGES = {
+    "2", "5", "13", "17", "934", "983", "1034", "1153", "1963", "229B",
+    "2326", "2343", "2518",
+}
 
 
 def audit_charge_coverage() -> None:
