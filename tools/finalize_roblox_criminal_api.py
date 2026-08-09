@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 """Finalize and defensively re-audit the Roblox criminal-law API.
 
-This runs after the primary hardening pass. It intentionally applies a second,
-independent conservative screen for alternate wording and additional Roblox
-Community Standards categories, then removes the source-document endpoint and
-versions the final hardened output for client cache invalidation.
+The primary hardener positively identifies charges and applies the main Roblox
+content screen. This pass independently checks alternate restricted wording and
+versions the final API surface.
 
-False negatives are preferred to false positives: if a section is questionable,
-it is removed from the Roblox-facing catalog while the underlying legal source
-remains available elsewhere in the repository/site.
+Important invariant: a legitimate charge is not deleted merely because its full
+statutory body contains a restricted reference. If the displayed charge metadata
+is safe, the charge remains bookable and only its body/search text is withheld.
+Unsafe displayed metadata, non-charges, and explicitly excluded sections remain
+excluded.
 """
 from __future__ import annotations
 
@@ -25,7 +26,12 @@ MANIFEST = BASE / "manifest.json"
 CHARGES = BASE / "charges.json"
 DOCUMENTS = BASE / "documents.json"
 TITLE18_DIR = BASE / "title18"
-FILTER_VERSION = "roblox-safe-charge-only-v4"
+FILTER_VERSION = "roblox-safe-charge-only-v5"
+
+WITHHELD_TEXT = (
+    "Full statutory text is not displayed in this Roblox-facing reference. "
+    "The charge citation and name remain available for booking."
+)
 
 # Defense-in-depth patterns. The primary hardener already blocks the main
 # categories; these catch alternate wording and adjacent restricted categories.
@@ -104,6 +110,13 @@ SECONDARY_BLOCKED: tuple[re.Pattern[str], ...] = (
     ),
 )
 
+DISPLAY_METADATA_KEYS = {
+    "id", "source", "citation", "formal_citation", "section", "label",
+    "heading", "part", "chapter", "chapter_heading", "status",
+    "offense_class", "sentencing_mode", "sentencing_reason",
+    "charge_classification", "classification_status", "class_display",
+}
+
 
 def load(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -135,6 +148,52 @@ def secondary_safe(value: Any) -> bool:
     )
 
 
+def displayed_metadata(record: dict) -> dict:
+    return {key: record.get(key) for key in DISPLAY_METADATA_KEYS if key in record}
+
+
+def metadata_safe(record: dict) -> bool:
+    return secondary_safe(displayed_metadata(record))
+
+
+def withhold_unsafe_body(record: dict) -> tuple[dict, bool]:
+    """Keep a safe charge but neutralize body text that fails this screen."""
+    result = dict(record)
+    if result.get("text_withheld") is True:
+        # The primary pass already replaced the body with the same neutral text.
+        result["text"] = WITHHELD_TEXT
+        result["text_display_scope"] = "withheld_for_platform_safety"
+        return result, True
+
+    text = str(result.get("text") or "")
+    if text and not secondary_safe(text):
+        result["text"] = WITHHELD_TEXT
+        result["text_withheld"] = True
+        result["text_display_scope"] = "withheld_for_platform_safety"
+        return result, True
+
+    result["text_withheld"] = False
+    return result, False
+
+
+def safe_search_text(item: dict) -> str:
+    chapter = item.get("chapter") or {}
+    values = [item.get("citation"), item.get("heading")]
+    if isinstance(chapter, dict):
+        values.extend([chapter.get("number"), chapter.get("heading")])
+    return " ".join(str(value) for value in values if value)
+
+
+def filter_local_sections(sections: list[dict]) -> list[dict]:
+    kept: list[dict] = []
+    for sec in sections:
+        if sec.get("is_offense") is not True or not metadata_safe(sec):
+            continue
+        safe_sec, _ = withhold_unsafe_body(sec)
+        kept.append(safe_sec)
+    return kept
+
+
 def apply_secondary_filter() -> None:
     federal_path = BASE / "federal-code.json"
     dc_path = BASE / "dc-code.json"
@@ -147,65 +206,105 @@ def apply_secondary_filter() -> None:
     title18_search = load(title18_search_path)
     charges = load(CHARGES)
 
-    federal["sections"] = [
-        sec for sec in federal.get("sections", [])
-        if sec.get("is_offense") is True and secondary_safe(sec)
-    ]
-    dc["sections"] = [
-        sec for sec in dc.get("sections", [])
-        if sec.get("is_offense") is True and secondary_safe(sec)
-    ]
+    # Local code: unsafe metadata still removes an offense, but unsafe body text
+    # is withheld instead of deleting the otherwise safe charge.
+    federal["sections"] = filter_local_sections(federal.get("sections", []))
+    dc["sections"] = filter_local_sections(dc.get("sections", []))
     allowed_federal = {sec["id"] for sec in federal["sections"]}
     allowed_dc = {sec["id"] for sec in dc["sections"]}
+    local_by_id = {
+        sec["id"]: sec
+        for sec in [*federal["sections"], *dc["sections"]]
+    }
 
-    # Remove any surviving Title 18 detail whose alternate wording trips the
-    # secondary screen. The detail file itself is the authoritative safety test.
-    allowed_title18 = set()
+    # Title 18: apply the same metadata/body distinction to each detail record.
+    allowed_title18_details: dict[str, dict] = {}
     for path in sorted(TITLE18_DIR.glob("*.json")):
         detail = load(path)
-        if detail.get("is_charge") is True and secondary_safe(detail):
-            allowed_title18.add(detail["id"])
-        else:
+        if detail.get("is_charge") is not True or not metadata_safe(detail):
             path.unlink()
+            continue
+        detail, _ = withhold_unsafe_body(detail)
+        write(path, detail)
+        allowed_title18_details[str(detail["id"])] = detail
 
-    title18_index["sections"] = [
-        item for item in title18_index.get("sections", [])
-        if item.get("id") in allowed_title18 and item.get("is_charge") is True
-        and secondary_safe(item)
-    ]
-    allowed_title18 = {item["id"] for item in title18_index["sections"]}
-    title18_search["entries"] = [
-        item for item in title18_search.get("entries", [])
-        if item.get("id") in allowed_title18 and secondary_safe(item)
-    ]
-    title18_search["count"] = len(title18_search["entries"])
+    old_index_by_id = {
+        str(item.get("id") or ""): item
+        for item in title18_index.get("sections", [])
+    }
+    safe_index: list[dict] = []
+    for charge_id, detail in allowed_title18_details.items():
+        old = dict(old_index_by_id.get(charge_id) or {})
+        if not old or old.get("is_charge") is not True or not metadata_safe(old):
+            continue
+        old["text_withheld"] = bool(detail.get("text_withheld"))
+        safe_index.append(old)
+
+    safe_index.sort(
+        key=lambda item: (
+            int(item["section"]) if str(item.get("section", "")).isdigit() else 10**9,
+            str(item.get("section", "")),
+        )
+    )
+    title18_index["sections"] = safe_index
+    allowed_title18 = {str(item["id"]) for item in safe_index}
+
+    # Search entries can contain the entire statutory body. Whenever either
+    # safety layer withheld the body, rebuild search text from safe metadata.
+    old_search_by_id = {
+        str(item.get("id") or ""): item
+        for item in title18_search.get("entries", [])
+    }
+    safe_search: list[dict] = []
+    for item in safe_index:
+        charge_id = str(item["id"])
+        old = dict(old_search_by_id.get(charge_id) or {})
+        if not old:
+            old = {"id": charge_id}
+        detail = allowed_title18_details[charge_id]
+        if detail.get("text_withheld") or not secondary_safe(old):
+            old = {"id": charge_id, "search_text": safe_search_text(item)}
+        if secondary_safe(old):
+            safe_search.append(old)
+
+    title18_search["entries"] = safe_search
+    title18_search["count"] = len(safe_search)
     title18_index["counts"] = {
-        "sections": len(title18_index["sections"]),
-        "charges": len(title18_index["sections"]),
+        "sections": len(safe_index),
+        "charges": len(safe_index),
         "filtered_out": None,
+        "text_withheld": sum(bool(item.get("text_withheld")) for item in safe_index),
     }
 
     allowed_ids = allowed_federal | allowed_dc | allowed_title18
-    charges["charges"] = [
-        item for item in charges.get("charges", [])
-        if item.get("id") in allowed_ids
-        and item.get("is_charge") is True
-        and secondary_safe(item)
-    ]
+    safe_charges: list[dict] = []
+    for item in charges.get("charges", []):
+        charge_id = str(item.get("id") or "")
+        if charge_id not in allowed_ids or item.get("is_charge") is not True:
+            continue
+        if not metadata_safe(item):
+            continue
+        copy = dict(item)
+        if copy.get("source") == "title18":
+            copy["text_withheld"] = bool(
+                allowed_title18_details[charge_id].get("text_withheld")
+            )
+        else:
+            copy["text_withheld"] = bool(local_by_id[charge_id].get("text_withheld"))
+        safe_charges.append(copy)
+
+    charges["charges"] = safe_charges
     charges["counts"] = {
-        "total": len(charges["charges"]),
+        "total": len(safe_charges),
         "federal_code": sum(
             item.get("source") == "federal-criminal-code-2025"
-            for item in charges["charges"]
+            for item in safe_charges
         ),
         "dc_code": sum(
             item.get("source") == "dc-criminal-code-federalized"
-            for item in charges["charges"]
+            for item in safe_charges
         ),
-        "title18": sum(
-            item.get("source") == "title18"
-            for item in charges["charges"]
-        ),
+        "title18": sum(item.get("source") == "title18" for item in safe_charges),
     }
 
     write(federal_path, federal)
@@ -254,7 +353,12 @@ def finalize() -> None:
         "charge_catalog_only": True,
         "source_documents_exposed": False,
         "defense_in_depth": True,
-        "note": "The JSON surface exists only for the game/reference implementation and is not advertised as a public developer API.",
+        "preserve_safe_charge_metadata_when_body_withheld": True,
+        "note": (
+            "The JSON surface exists only for the game/reference implementation and "
+            "is not advertised as a public developer API. Restricted body text is "
+            "withheld without deleting safely named criminal charges."
+        ),
     }
 
     write(CHARGES, charges)
@@ -262,7 +366,7 @@ def finalize() -> None:
 
     check()
     print(
-        "Roblox criminal API finalized with two-layer content screening: "
+        "Roblox criminal API finalized with charge-preserving two-layer screening: "
         f"revision={revision}, charges={len(charges.get('charges', []))}."
     )
 
@@ -288,6 +392,8 @@ def check() -> None:
         raise RuntimeError("Manifest does not explicitly disable source-document exposure")
     if surface.get("defense_in_depth") is not True:
         raise RuntimeError("Secondary safety screen is not declared")
+    if surface.get("preserve_safe_charge_metadata_when_body_withheld") is not True:
+        raise RuntimeError("Manifest does not declare charge-preserving body withholding")
     if (manifest.get("roblox") or {}).get("filter_version") != FILTER_VERSION:
         raise RuntimeError("Manifest filter version is missing or stale")
 
@@ -297,23 +403,45 @@ def check() -> None:
     if charges.get("revision") != revision:
         raise RuntimeError("Manifest and charge catalog revisions do not match")
 
-    if not all(sec.get("is_offense") is True and secondary_safe(sec) for sec in federal.get("sections", [])):
+    if not all(
+        sec.get("is_offense") is True and metadata_safe(sec) and secondary_safe(sec)
+        for sec in federal.get("sections", [])
+    ):
         raise RuntimeError("Federal-code endpoint contains a secondary-screen failure or non-offense")
-    if not all(sec.get("is_offense") is True and secondary_safe(sec) for sec in dc.get("sections", [])):
+    if not all(
+        sec.get("is_offense") is True and metadata_safe(sec) and secondary_safe(sec)
+        for sec in dc.get("sections", [])
+    ):
         raise RuntimeError("D.C.-code endpoint contains a secondary-screen failure or non-offense")
-    if not all(sec.get("is_charge") is True and secondary_safe(sec) for sec in title18.get("sections", [])):
+    if not all(
+        sec.get("is_charge") is True and metadata_safe(sec) and secondary_safe(sec)
+        for sec in title18.get("sections", [])
+    ):
         raise RuntimeError("Title 18 index contains a secondary-screen failure or non-charge")
     if not all(secondary_safe(item) for item in title18_search.get("entries", [])):
         raise RuntimeError("Title 18 search index contains a secondary-screen failure")
-    if not all(item.get("is_charge") is True and secondary_safe(item) for item in charges.get("charges", [])):
+    if not all(
+        item.get("is_charge") is True and metadata_safe(item) and secondary_safe(item)
+        for item in charges.get("charges", [])
+    ):
         raise RuntimeError("Charge catalog contains a secondary-screen failure or non-charge")
 
-    # No Title 18 detail may exist unless it survived both screens.
-    title_ids = {item["id"] for item in title18.get("sections", [])}
+    # No detail may survive unless its charge survived both metadata screens;
+    # after body withholding, no blocked secondary text may remain anywhere.
+    title_ids = {str(item["id"]) for item in title18.get("sections", [])}
     for path in TITLE18_DIR.glob("*.json"):
         detail = load(path)
-        if detail.get("id") not in title_ids or detail.get("is_charge") is not True or not secondary_safe(detail):
+        if (
+            str(detail.get("id") or "") not in title_ids
+            or detail.get("is_charge") is not True
+            or not metadata_safe(detail)
+            or not secondary_safe(detail)
+        ):
             raise RuntimeError(f"Unapproved Title 18 detail survived: {path.name}")
+
+    search_ids = {str(item.get("id") or "") for item in title18_search.get("entries", [])}
+    if search_ids != title_ids:
+        raise RuntimeError("Title 18 search/index IDs diverged after secondary screening")
 
 
 def main() -> int:
