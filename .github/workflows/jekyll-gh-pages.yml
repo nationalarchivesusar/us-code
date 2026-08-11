@@ -111,7 +111,7 @@ jobs:
           python -m unittest discover -s tests -p "test_check_encoding.py" -v
           node --check assets/js/public-laws.js
           node --check assets/js/criminal-law.js
-          python -m py_compile tools/build_criminal_law_api.py tools/include_dc_booking_charges.py tools/harden_roblox_criminal_api.py tools/finalize_roblox_criminal_api.py tools/build_criminal_law_routes.py tools/apply_current_law_sections.py
+          python -m py_compile tools/build_criminal_law_api.py tools/include_dc_booking_charges.py tools/harden_roblox_criminal_api.py tools/finalize_roblox_criminal_api.py tools/build_criminal_law_routes.py tools/apply_current_law_sections.py tools/augment_public_laws_with_current_laws.py tools/filter_public_laws_for_publication.py
           python tools/harden_roblox_criminal_api.py --check
           python tools/finalize_roblox_criminal_api.py --check
           node --test tests/test_usar_notes.mjs tests/test_citation_routing.mjs
@@ -121,11 +121,13 @@ jobs:
           from pathlib import Path
 
           payload = json.loads(Path('data/public-laws.json').read_text(encoding='utf-8'))
-          assert payload['counts']['total'] == 270
-          assert payload['counts']['active'] == 141
+          assert payload['counts']['total'] == 272
+          assert payload['counts']['active'] == 143
           assert payload['counts']['repealed'] == 129
-          assert payload['counts']['actions'] == 903
-          assert len(payload['laws']) == 270
+          assert len(payload['laws']) == 272
+          assert payload['counts']['actions'] == sum(
+              law['action_count'] for law in payload['laws']
+          )
           assert all(law['status'] in {'active', 'repealed'} for law in payload['laws'])
           assert all(law['actions'] is not None for law in payload['laws'])
           assert all(
@@ -133,6 +135,28 @@ jobs:
               for law in payload['laws'] if law['status'] == 'repealed'
               for action in law['actions']
           )
+
+          laws = {law['public_law']: law for law in payload['laws']}
+          assert {'41-271', '42-272', '42-273'} <= set(laws)
+          assert laws['41-271']['status'] == 'active'
+          assert laws['42-272']['status'] == 'active'
+          assert laws['42-273']['status'] == 'active'
+
+          def sections(law_number, title):
+              return {
+                  int(target['section'])
+                  for target in laws[law_number]['targets']
+                  if target.get('title') == str(title)
+                  and str(target.get('section') or '').isdigit()
+              }
+
+          assert set(range(9701, 9717)) <= sections('42-272', 40)
+          assert set(range(1801, 1816)) <= sections('42-273', 6)
+          assert set(range(5001, 5008)) <= sections('41-271', 50)
+          assert set(range(10001, 10012)) <= sections('41-271', 15)
+          assert set(range(2501, 2505)) <= sections('41-271', 5)
+          assert set(range(2308, 2315)) <= sections('41-271', 5)
+          assert 205 in sections('41-271', 18)
           print('Public-law index validation passed.')
           PY
 

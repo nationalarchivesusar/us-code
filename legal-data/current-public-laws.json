@@ -1,0 +1,128 @@
+{
+  "source": "Post-audit enacted laws and substantive 2026 codification registry",
+  "description": "Publication metadata for enacted laws whose current Code dispositions are maintained by the substantive current-law overlay rather than the completed 270-law audit action ledger.",
+  "laws": [
+    {
+      "law_id": "PL-041-271",
+      "public_law": "41-271",
+      "title": "The Great Change Act of 2026",
+      "status": "active",
+      "actions": [
+        {
+          "provision": "Title II, §§ 201–207",
+          "effect_category": "code",
+          "effect_label": "Integrated into the Code",
+          "treatment": "new Code sections",
+          "description": "National-security eligibility provisions are classified to 50 U.S.C. §§ 5001–5007.",
+          "targets": [
+            {"title": "50", "range": [5001, 5007]}
+          ]
+        },
+        {
+          "provision": "Title III, §§ 301–311",
+          "effect_category": "code",
+          "effect_label": "Integrated into the Code",
+          "treatment": "new Code sections",
+          "description": "Commerce, trade, intellectual-property, and labor transfer provisions are classified to 15 U.S.C. §§ 10001–10011.",
+          "targets": [
+            {"title": "15", "range": [10001, 10011]}
+          ]
+        },
+        {
+          "provision": "Title IV, §§ 403–406",
+          "effect_category": "code",
+          "effect_label": "Integrated into the Code",
+          "treatment": "amend existing Code section",
+          "description": "Conflict-of-interest provisions are consolidated into 18 U.S.C. § 205 as new subsections (k)–(n).",
+          "targets": [
+            {"title": "18", "section": "205"}
+          ]
+        },
+        {
+          "provision": "Title V, §§ 501–504",
+          "effect_category": "code",
+          "effect_label": "Integrated into the Code",
+          "treatment": "new Code sections",
+          "description": "Commissioned-service staffing and continuity provisions are classified to 5 U.S.C. §§ 2501–2504.",
+          "targets": [
+            {"title": "5", "range": [2501, 2504]}
+          ]
+        },
+        {
+          "provision": "Title VI, §§ 601–607",
+          "effect_category": "code",
+          "effect_label": "Integrated into the Code",
+          "treatment": "new Code sections",
+          "description": "Whistleblower and oversight protections are classified to 5 U.S.C. §§ 2308–2314.",
+          "targets": [
+            {"title": "5", "range": [2308, 2314]}
+          ]
+        },
+        {
+          "provision": "Title I and transition provisions",
+          "effect_category": "note",
+          "effect_label": "Repeal and transition history",
+          "treatment": "historical and statutory notes",
+          "description": "Express repeals and transition, savings, severability, and effective-date provisions are retained as statutory history or notes where appropriate.",
+          "targets": []
+        }
+      ]
+    },
+    {
+      "law_id": "PL-042-272",
+      "public_law": "42-272",
+      "title": "Metropolitan Police Department Public Safety and Property Reform Act",
+      "status": "active",
+      "actions": [
+        {
+          "provision": "§§ 2–17",
+          "effect_category": "code",
+          "effect_label": "Integrated into the Code",
+          "treatment": "new Code chapter and sections",
+          "description": "Permanent MPD public-safety and property-authority provisions are classified to 40 U.S.C. §§ 9701–9716.",
+          "targets": [
+            {"title": "40", "range": [9701, 9716]}
+          ]
+        },
+        {
+          "provision": "§§ 1, 18–19",
+          "effect_category": "note",
+          "effect_label": "Statutory notes",
+          "treatment": "short-title, severability, and effective-date notes",
+          "description": "Short-title, severability, and effective-date provisions are retained as notes at 40 U.S.C. § 9701.",
+          "targets": [
+            {"title": "40", "section": "9701"}
+          ]
+        }
+      ]
+    },
+    {
+      "law_id": "PL-042-273",
+      "public_law": "42-273",
+      "title": "Homeland Security Coordination Act",
+      "status": "active",
+      "actions": [
+        {
+          "provision": "§§ 2–16",
+          "effect_category": "code",
+          "effect_label": "Integrated into the Code",
+          "treatment": "new Code chapter and sections",
+          "description": "Federal law-enforcement communications and coordination provisions are classified to 6 U.S.C. §§ 1801–1815.",
+          "targets": [
+            {"title": "6", "range": [1801, 1815]}
+          ]
+        },
+        {
+          "provision": "§§ 1, 17–18",
+          "effect_category": "note",
+          "effect_label": "Statutory notes",
+          "treatment": "short-title, severability, and effective-date notes",
+          "description": "Short-title, severability, and effective-date provisions are retained as notes at 6 U.S.C. § 1801.",
+          "targets": [
+            {"title": "6", "section": "1801"}
+          ]
+        }
+      ]
+    }
+  ]
+}
