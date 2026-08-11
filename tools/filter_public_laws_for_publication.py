@@ -9,6 +9,8 @@ from collections import defaultdict
 from pathlib import Path
 from urllib.parse import quote
 
+from augment_public_laws_with_current_laws import augment
+
 ROOT = Path(__file__).resolve().parents[1]
 DATA_FILE = ROOT / "data" / "public-laws.json"
 SECTION_PATH_RE = re.compile(r"/us/usc/t(?P<title>\d+[A-Za-z]?)/s(?P<section>[^/\"'<>&?#\s]+)")
@@ -137,15 +139,16 @@ def dedupe_targets(
 
 
 def main() -> None:
-    payload = json.loads(DATA_FILE.read_text(encoding="utf-8"))
+    payload = augment(json.loads(DATA_FILE.read_text(encoding="utf-8")))
     section_index = build_section_index()
 
     for law in payload.get("laws", []):
         repealed = law.get("status") == "repealed"
-        if not re.fullmatch(
-            r"https://trello\.com/c/[0-9A-Za-z]{8}", law.get("trello_url") or ""
+        trello_url = law.get("trello_url")
+        if trello_url and not re.fullmatch(
+            r"https://trello\.com/c/[0-9A-Za-z]{8}", trello_url
         ):
-            raise SystemExit(f"Missing or invalid Trello card URL for {law.get('law_id')}.")
+            raise SystemExit(f"Invalid Trello card URL for {law.get('law_id')}.")
 
         law_targets: list[dict] = []
         for action in law.get("actions", []):
