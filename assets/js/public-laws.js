@@ -222,13 +222,15 @@ function createLawCard(law) {
   summaryText.textContent = law.summary;
   intro.appendChild(summaryText);
 
-  const trello = document.createElement("a");
-  trello.className = "trello-link";
-  trello.href = law.trello_url;
-  trello.target = "_blank";
-  trello.rel = "noreferrer";
-  trello.textContent = "View Public Law on Trello";
-  intro.appendChild(trello);
+  if (law.trello_url) {
+    const trello = document.createElement("a");
+    trello.className = "trello-link";
+    trello.href = law.trello_url;
+    trello.target = "_blank";
+    trello.rel = "noreferrer";
+    trello.textContent = "View Public Law on Trello";
+    intro.appendChild(trello);
+  }
   body.appendChild(intro);
 
   const locations = document.createElement("section");
