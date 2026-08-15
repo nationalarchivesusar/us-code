@@ -55,29 +55,33 @@
     <header class="site-header">
       <div class="masthead">
         <div class="masthead__inner">
-          <a class="brand" href="./" aria-label="US Code Library home">
-            <span class="brand-abbr">USC</span>
+          <a class="brand" href="./" aria-label="United States Code home">
+            <img class="brand-mark" src="assets/images/icon-512.png" alt="" />
             <span class="brand-text">
-              <span class="brand-kicker">Legal Information Reference</span>
-              <span class="brand-title">United States Code Library</span>
+              <span class="brand-kicker">Federal Statutory Law</span>
+              <span class="brand-title">United States Code</span>
+              <span class="brand-tagline">Legal information and legislative history</span>
             </span>
           </a>
 
-          <div class="theme-switcher" role="group" aria-label="Color theme">
-            <button type="button" class="theme-switcher__button" data-theme-choice="system">System</button>
-            <button type="button" class="theme-switcher__button" data-theme-choice="light">Light</button>
-            <button type="button" class="theme-switcher__button" data-theme-choice="dark">Dark</button>
+          <div class="masthead__tools">
+            <div class="theme-switcher" role="group" aria-label="Color theme">
+              <button type="button" class="theme-switcher__button" data-theme-choice="system">System</button>
+              <button type="button" class="theme-switcher__button" data-theme-choice="light">Light</button>
+              <button type="button" class="theme-switcher__button" data-theme-choice="dark">Dark</button>
+            </div>
           </div>
         </div>
       </div>
 
       <nav class="primary-nav" aria-label="Primary navigation">
         <div class="primary-nav__inner">
-          <a href="#search">Search</a>
-          <a href="#browse">Browse Titles</a>
+          <a href="./" aria-current="page">Home</a>
+          <a href="#search">Search Code</a>
+          <a href="#browse">Code Titles</a>
           <a href="criminal-law.html">Criminal Law</a>
           <a href="public-laws.html">Public Laws</a>
-          <a href="https://nationalarchivesusar.github.io/courts/">United States Courts</a>
+          <a class="primary-nav__related" href="https://nationalarchivesusar.github.io/courts/" aria-label="United States Courts, related site">United States Courts <span aria-hidden="true">↗</span></a>
         </div>
       </nav>
     </header>
@@ -163,19 +167,22 @@
 
     <footer class="site-footer">
       <div class="site-footer__inner">
-        <div class="site-footer__brand">
-          <strong>United States Code Library</strong>
-          <a class="site-footer__nara" href="https://discord.gg/vhTGAHgkHC">
+        <div class="footer-primary">
+          <a class="nara-attribution" href="https://discord.gg/vhTGAHgkHC" rel="noopener noreferrer">
             <img src="assets/images/nara.png" alt="National Archives and Records Administration" />
-            <span>Maintained by the National Archives and Records Administration for the USAR community.</span>
+            <span>Maintained by the <strong>National Archives and Records Administration</strong> for the United States Code.</span>
           </a>
+
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="./">Home</a>
+            <a href="./#browse">Code Titles</a>
+            <a href="criminal-law.html">Criminal Law</a>
+            <a href="public-laws.html">Public Laws</a>
+            <a href="https://nationalarchivesusar.github.io/courts/">United States Courts</a>
+          </nav>
         </div>
-        <nav class="site-footer__links" aria-label="Related legal resources">
-          <span>Related legal resources</span>
-          <a href="https://nationalarchivesusar.github.io/courts/">United States Courts</a>
-          <a href="public-laws.html">Public Laws</a>
-        </nav>
-        <p class="site-footer__note">Source XML files are published by the Office of the Law Revision Counsel.</p>
+        <p class="footer-source">Source XML files are published by the Office of the Law Revision Counsel.</p>
+        <p class="footer-disclaimer">An independent USAR community resource. Not affiliated with the real United States government.</p>
       </div>
     </footer>
 

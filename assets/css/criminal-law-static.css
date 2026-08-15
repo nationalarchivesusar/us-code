@@ -1,37 +1,6 @@
-.static-law-header {
-  border-top: 5px solid var(--cornell-red);
-  border-bottom: 1px solid var(--border);
-  background: var(--surface);
-}
-
-.static-law-header__inner,
 .static-law-shell {
   width: min(var(--measure), calc(100% - 2rem));
   margin: 0 auto;
-}
-
-.static-law-header__inner {
-  min-height: 4.8rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.25rem;
-}
-
-.static-law-brand {
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: 1.3rem;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.static-law-header nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .9rem;
-  font-size: .85rem;
-  font-weight: 700;
 }
 
 .static-law-shell {
@@ -158,12 +127,6 @@
 }
 
 @media (max-width: 700px) {
-  .static-law-header__inner {
-    align-items: flex-start;
-    flex-direction: column;
-    padding: .9rem 0;
-  }
-
   .static-law-index__list a {
     grid-template-columns: 1fr;
     gap: .15rem;

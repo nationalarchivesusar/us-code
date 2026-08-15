@@ -77,17 +77,19 @@ test("an explicit saved light preference wins over a dark OS preference", () => 
   assert.equal(result.sandbox.document.documentElement.dataset.theme, "light");
 });
 
-test("primary page links are rooted at the app while hash-only links are left alone", () => {
+test("header and footer page links are rooted at the app while hash-only links are left alone", () => {
   const criminal = makeAnchor("criminal-law.html");
   const publicLaws = makeAnchor("public-laws.html");
+  const footerHome = makeAnchor("./");
   const home = makeAnchor("./");
   const hash = makeAnchor("#search");
   const result = runBootstrap(`${BASE}cite/18/111/`, {
-    anchors: [criminal, publicLaws, home, hash],
+    anchors: [criminal, publicLaws, footerHome, home, hash],
   });
   result.listeners.get("DOMContentLoaded")();
   assert.equal(criminal.href, `${BASE}criminal-law.html`);
   assert.equal(publicLaws.href, `${BASE}public-laws.html`);
+  assert.equal(footerHome.href, BASE);
   assert.equal(home.href, BASE);
   assert.equal(hash.href, "#search");
 });

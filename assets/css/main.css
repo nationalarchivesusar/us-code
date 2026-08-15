@@ -16,6 +16,10 @@
   --usar-green-dark: #1b5e20;
   --usar-green-bg: #eaf5ea;
   --usar-green-ink: #14401a;
+  --footer-bg: #5d1117;
+  --footer-ink: #f7ece8;
+  --footer-muted: #ddc8c3;
+  --footer-link: #fff7f3;
   --focus: 0 0 0 3px rgba(179, 27, 27, 0.22);
   --measure: 74rem;
   --serif: Georgia, "Times New Roman", serif;
@@ -41,6 +45,10 @@
   --usar-green-dark: #7fd17f;
   --usar-green-bg: #1c2c1d;
   --usar-green-ink: #cdeecd;
+  --footer-bg: #310b0f;
+  --footer-ink: #fff2ee;
+  --footer-muted: #d8c1bc;
+  --footer-link: #fff8f5;
   --focus: 0 0 0 3px rgba(240, 106, 106, 0.28);
 }
 
@@ -113,6 +121,8 @@ summary {
 }
 
 .site-header {
+  position: relative;
+  z-index: 20;
   background: var(--surface);
   border-bottom: 1px solid var(--border);
 }
@@ -131,12 +141,12 @@ summary {
 }
 
 .masthead__inner {
-  min-height: 6.2rem;
+  min-height: 6.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  padding: 1.1rem 0;
+  padding: 0.8rem 0;
 }
 
 .brand {
@@ -148,17 +158,11 @@ summary {
   min-width: 0;
 }
 
-.brand-abbr {
-  width: 3.5rem;
-  height: 3.5rem;
-  display: grid;
-  place-items: center;
-  background: var(--cornell-red);
-  color: #fff;
-  font-family: var(--serif);
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+.brand-mark {
+  width: 4.5rem;
+  height: 4.5rem;
+  object-fit: contain;
+  flex: 0 0 auto;
 }
 
 .brand-text {
@@ -170,17 +174,32 @@ summary {
 .brand-kicker,
 .eyebrow {
   color: var(--cornell-red-dark);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
 .brand-title {
   font-family: var(--serif);
-  font-size: clamp(1.8rem, 3vw, 2.65rem);
-  line-height: 1;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  font-weight: 700;
+  line-height: 1.03;
   overflow-wrap: anywhere;
+}
+
+.brand-tagline {
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 0.94rem;
+  font-style: italic;
+}
+
+.masthead__tools {
+  display: grid;
+  justify-items: end;
+  gap: 0.75rem;
 }
 
 .theme-switcher {
@@ -206,8 +225,8 @@ summary {
 }
 
 .theme-switcher__button.is-active {
-  background: var(--surface);
-  color: var(--cornell-red-dark);
+  background: var(--cornell-red-dark);
+  color: #fff;
 }
 
 .primary-nav {
@@ -218,16 +237,20 @@ summary {
 
 .primary-nav__inner {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 0;
-  overflow-x: auto;
+  overflow: visible;
 }
 
 .primary-nav a {
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
   color: var(--ink);
   text-decoration: none;
-  padding: 0.8rem 1rem;
+  padding: 0.72rem 0.82rem;
   border-left: 1px solid var(--border);
+  font-size: 0.88rem;
   font-weight: 700;
   white-space: nowrap;
 }
@@ -236,9 +259,18 @@ summary {
   border-right: 1px solid var(--border);
 }
 
-.primary-nav a:hover {
+.primary-nav a:hover,
+.primary-nav a[aria-current="page"] {
   background: var(--surface);
   color: var(--cornell-red-dark);
+}
+
+.primary-nav a[aria-current="page"] {
+  box-shadow: inset 0 -3px var(--cornell-red-dark);
+}
+
+.primary-nav__related {
+  margin-left: auto;
 }
 
 .search-band {
@@ -1022,16 +1054,13 @@ input:focus-visible {
 
 .site-footer {
   margin-top: auto;
-  border-top: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--muted);
+  padding: 1.7rem 0 1.35rem;
+  border-top: 5px solid var(--gold);
+  background: var(--footer-bg);
+  color: var(--footer-ink);
 }
 
 .site-footer__inner {
-  display: grid;
-  grid-template-columns: minmax(18rem, 1.25fr) minmax(12rem, 0.75fr);
-  gap: 1.25rem 2rem;
-  padding: 1.35rem 0;
   font-size: 0.86rem;
 }
 
@@ -1039,54 +1068,69 @@ input:focus-visible {
   margin: 0;
 }
 
-.site-footer__brand {
-  display: grid;
-  gap: 0.55rem;
+.footer-primary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
 }
 
-.site-footer__brand > strong {
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: 1rem;
+.site-footer a {
+  color: var(--footer-link);
 }
 
-.site-footer__nara {
-  max-width: 37rem;
+.site-footer a:hover {
+  color: #fff;
+}
+
+.nara-attribution {
+  max-width: 42rem;
   display: flex;
   align-items: center;
-  gap: 0.65rem;
-  color: var(--muted);
+  gap: 0.85rem;
+  color: var(--footer-ink) !important;
   text-decoration: none;
 }
 
-.site-footer__nara:hover {
-  color: var(--cornell-red-dark);
-}
-
-.site-footer__nara img {
-  width: 2.8rem;
-  height: 2.8rem;
+.nara-attribution img {
+  width: 3.6rem;
+  height: 3.6rem;
   object-fit: contain;
   flex: 0 0 auto;
 }
 
-.site-footer__links {
-  display: grid;
-  align-content: start;
-  gap: 0.35rem;
+.nara-attribution span {
+  font-size: 0.86rem;
 }
 
-.site-footer__links span {
-  color: var(--ink);
-  font-weight: 700;
+.nara-attribution strong {
+  color: #fff;
 }
 
-.site-footer__note {
-  grid-column: 1 / -1;
-  padding-top: 0.85rem;
-  border-top: 1px solid var(--border);
-  color: var(--faint);
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  font-size: 0.84rem;
+}
+
+.footer-source,
+.footer-disclaimer {
+  max-width: 60rem;
+  color: var(--footer-muted);
+}
+
+.footer-source {
+  margin-top: 1.2rem !important;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 0.78rem;
+}
+
+.footer-disclaimer {
+  margin-top: 0.55rem !important;
+  font-size: 0.74rem;
 }
 
 @media (max-width: 1050px) {
@@ -1108,6 +1152,11 @@ input:focus-visible {
     flex-direction: column;
   }
 
+  .masthead__tools {
+    width: 100%;
+    justify-items: start;
+  }
+
   .theme-switcher {
     width: 100%;
     justify-content: space-between;
@@ -1126,16 +1175,17 @@ input:focus-visible {
 
   .primary-nav a {
     flex: 1 1 50%;
+    justify-content: center;
     text-align: center;
     border-bottom: 1px solid var(--border);
   }
 
-  .site-footer__inner {
-    grid-template-columns: 1fr;
+  .primary-nav__related {
+    margin-left: 0;
   }
 
-  .site-footer__note {
-    grid-column: auto;
+  .footer-primary {
+    display: grid;
   }
 
   .search-band h1 {
@@ -1189,16 +1239,18 @@ input:focus-visible {
     width: 100%;
   }
 
-  .brand-abbr {
-    flex: 0 0 auto;
-    width: 3rem;
-    height: 3rem;
-    font-size: 1rem;
+  .brand-mark {
+    width: 3.6rem;
+    height: 3.6rem;
   }
 
   .brand-title {
     font-size: clamp(1.5rem, 9vw, 2.2rem);
     line-height: 1.05;
+  }
+
+  .brand-tagline {
+    font-size: 0.8rem;
   }
 
   .primary-nav a {

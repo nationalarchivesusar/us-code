@@ -22,15 +22,15 @@
   document.documentElement.dataset.theme =
     theme === "dark" || (theme === "system" && prefersDark) ? "dark" : "light";
 
-  function rootPrimaryNavigation() {
-    document.querySelectorAll(".brand, .primary-nav a").forEach((anchor) => {
+  function rootSiteNavigation() {
+    document.querySelectorAll(".brand, .primary-nav a, .footer-nav a").forEach((anchor) => {
       const href = anchor.getAttribute("href") || "";
       if (!href || href.startsWith("#")) return;
       anchor.href = new URL(href, APP_BASE_URL).toString();
     });
   }
 
-  document.addEventListener("DOMContentLoaded", rootPrimaryNavigation);
+  document.addEventListener("DOMContentLoaded", rootSiteNavigation);
 
   const params = new URLSearchParams(window.location.search);
   const redirect = params.get("redirect");

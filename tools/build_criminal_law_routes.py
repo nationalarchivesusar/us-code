@@ -56,20 +56,54 @@ def shell(*, title: str, description: str, canonical: str, body: str) -> str:
   <meta name="theme-color" content="#8b1e1e">
   <link rel="stylesheet" href="{BASE_URL}assets/css/main.css">
   <link rel="stylesheet" href="{BASE_URL}assets/css/criminal-law-static.css">
+  <script src="{BASE_URL}assets/js/site-bootstrap.js"></script>
 </head>
 <body>
-  <header class="static-law-header">
-    <div class="static-law-header__inner">
-      <a class="static-law-brand" href="{BASE_URL}">United States Code Library</a>
-      <nav aria-label="Criminal law navigation">
-        <a href="{BASE_URL}criminal-law.html">Criminal Law Search</a>
-        <a href="{BASE_URL}criminal/">Permanent Charge Index</a>
-        <a href="{BASE_URL}public-laws.html">Public Laws</a>
-      </nav>
+  <a class="skip-link" href="#static-law-content">Skip to legal text</a>
+  <header class="site-header">
+    <div class="masthead">
+      <div class="masthead__inner">
+        <a class="brand" href="{BASE_URL}" aria-label="United States Code home">
+          <img class="brand-mark" src="{BASE_URL}assets/images/icon-512.png" alt="">
+          <span class="brand-text">
+            <span class="brand-kicker">Federal Statutory Law</span>
+            <span class="brand-title">United States Code</span>
+            <span class="brand-tagline">Legal information and legislative history</span>
+          </span>
+        </a>
+      </div>
     </div>
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <div class="primary-nav__inner">
+        <a href="{BASE_URL}">Home</a>
+        <a href="{BASE_URL}#search">Search Code</a>
+        <a href="{BASE_URL}#browse">Code Titles</a>
+        <a href="{BASE_URL}criminal-law.html" aria-current="page">Criminal Law</a>
+        <a href="{BASE_URL}public-laws.html">Public Laws</a>
+        <a class="primary-nav__related" href="https://nationalarchivesusar.github.io/courts/" aria-label="United States Courts, related site">United States Courts <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
   </header>
   {body}
-  <footer class="site-footer"><div class="site-footer__inner"><p>Maintained for the USAR community.</p><p>This permanent index contains only current, platform-safe booking charges.</p></div></footer>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="footer-primary">
+        <a class="nara-attribution" href="https://discord.gg/vhTGAHgkHC" rel="noopener noreferrer">
+          <img src="{BASE_URL}assets/images/nara.png" alt="National Archives and Records Administration">
+          <span>Maintained by the <strong>National Archives and Records Administration</strong> for the United States Code.</span>
+        </a>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="{BASE_URL}">Home</a>
+          <a href="{BASE_URL}#browse">Code Titles</a>
+          <a href="{BASE_URL}criminal-law.html">Criminal Law</a>
+          <a href="{BASE_URL}public-laws.html">Public Laws</a>
+          <a href="https://nationalarchivesusar.github.io/courts/">United States Courts</a>
+        </nav>
+      </div>
+      <p class="footer-source">This permanent index contains only current, platform-safe booking charges.</p>
+      <p class="footer-disclaimer">An independent USAR community resource. Not affiliated with the real United States government.</p>
+    </div>
+  </footer>
 </body>
 </html>\n'''
 
@@ -98,7 +132,7 @@ def section_page(*, citation: str, heading: str, text: str, source: str,
     if source_link:
         link_html = f'<a class="static-law-source-link" href="{html.escape(source_link, quote=True)}">Open related source</a>'
     body = f'''
-<main class="static-law-shell">
+<main id="static-law-content" class="static-law-shell">
   <nav class="static-law-breadcrumbs" aria-label="Breadcrumb"><a href="{BASE_URL}criminal/">Criminal Law</a><span>›</span><span>{esc(source)}</span></nav>
   <article class="static-law-article">
     <p class="eyebrow">{esc(source)}</p>
@@ -120,7 +154,7 @@ def list_page(*, title: str, description: str, canonical: str, eyebrow: str,
         for citation, heading, url in items
     )
     body = f'''
-<main class="static-law-shell">
+<main id="static-law-content" class="static-law-shell">
   <section class="static-law-index">
     <p class="eyebrow">{esc(eyebrow)}</p>
     <h1>{esc(title)}</h1>
