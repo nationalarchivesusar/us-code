@@ -196,7 +196,6 @@ def sanitize_supporting_value(value: Any) -> Any:
 def harden() -> None:
     required = (
         "charges.json",
-        "federal-code.json",
         "dc-code.json",
         "title18-index.json",
         "title18-search.json",
@@ -207,8 +206,9 @@ def harden() -> None:
     missing = [name for name in required if not (BASE / name).is_file()]
     if missing:
         raise RuntimeError(f"Cannot harden missing API files: {missing}")
+    if (BASE / "federal-code.json").exists():
+        raise RuntimeError("Duplicative federal-code.json must not be published")
 
-    federal = load(BASE / "federal-code.json")
     dc = load(BASE / "dc-code.json")
     title18_index = load(BASE / "title18-index.json")
     title18_search = load(BASE / "title18-search.json")
@@ -226,13 +226,9 @@ def harden() -> None:
             kept.append(safe_sec)
         return kept
 
-    federal_sections = harden_local(federal.get("sections", []))
     dc_sections = harden_local(dc.get("sections", []))
-    federal["sections"] = federal_sections
     dc["sections"] = dc_sections
-    federal["display_scope"] = "roblox_safe_charges_only"
     dc["display_scope"] = "roblox_safe_charges_only"
-    allowed_federal = {sec["id"] for sec in federal_sections}
     allowed_dc = {sec["id"] for sec in dc_sections}
 
     # Classify from the original operative text first. Then apply display safety.
@@ -334,8 +330,7 @@ def harden() -> None:
         source = entry.get("source")
         charge_id = entry.get("id")
         allowed = (
-            (source == "federal-criminal-code-2025" and charge_id in allowed_federal)
-            or (source == "dc-criminal-code-federalized" and charge_id in allowed_dc)
+            (source == "dc-criminal-code-federalized" and charge_id in allowed_dc)
             or (source == "title18" and charge_id in allowed_title18_ids)
         )
         if not allowed:
@@ -358,10 +353,6 @@ def harden() -> None:
 
     counts = {
         "total": len(safe_charges),
-        "federal_code": sum(
-            item.get("source") == "federal-criminal-code-2025"
-            for item in safe_charges
-        ),
         "dc_code": sum(
             item.get("source") == "dc-criminal-code-federalized"
             for item in safe_charges
@@ -397,7 +388,6 @@ def harden() -> None:
     }
     roblox["booking_catalog_sources"] = [
         "Positively classified current Title 18 charges",
-        "Federal Criminal Code offenses enacted by Public Law 37-261",
         "D.C. Criminal Code offenses federalized by Public Law 36-260",
     ]
     roblox["title18_classification"] = (
@@ -410,7 +400,6 @@ def harden() -> None:
         "Clients must never display an unlisted section."
     )
 
-    write(BASE / "federal-code.json", federal)
     write(BASE / "dc-code.json", dc)
     write(BASE / "title18-index.json", title18_index)
     write(BASE / "title18-search.json", title18_search)
@@ -422,7 +411,7 @@ def harden() -> None:
     audit()
     print(
         "Roblox criminal API hardened: "
-        f"{counts['federal_code']} FCC + {counts['dc_code']} D.C. + "
+        f"{counts['dc_code']} D.C. + "
         f"{counts['title18']} Title 18 charges; {removed_files} Title 18 "
         f"non-charge/restricted-metadata files removed; {withheld_files} "
         "charge bodies withheld."
@@ -437,9 +426,6 @@ def ensure_core_violent_charges() -> None:
         for item in charges
     }
     required = {
-        ("federal-criminal-code-2025", "301"),
-        ("federal-criminal-code-2025", "308"),
-        ("federal-criminal-code-2025", "309"),
         ("dc-criminal-code-federalized", "301"),
         ("dc-criminal-code-federalized", "308"),
         ("dc-criminal-code-federalized", "309"),
@@ -472,13 +458,12 @@ def audit() -> None:
             + ", ".join(offenders[:20])
         )
 
-    federal = load(BASE / "federal-code.json")
+    if (BASE / "federal-code.json").exists():
+        raise RuntimeError("Duplicative federal-code.json survived the API build")
     dc = load(BASE / "dc-code.json")
     title18 = load(BASE / "title18-index.json")
     charges = load(BASE / "charges.json")
 
-    if not all(sec.get("is_offense") is True for sec in federal.get("sections", [])):
-        raise RuntimeError("federal-code.json contains a non-offense section")
     if not all(sec.get("is_offense") is True for sec in dc.get("sections", [])):
         raise RuntimeError("dc-code.json contains a non-offense section")
     if not all(sec.get("is_charge") is True for sec in title18.get("sections", [])):
@@ -487,13 +472,17 @@ def audit() -> None:
         raise RuntimeError("charges.json contains an entry not explicitly classified as a charge")
 
     allowed_ids = {
-        *(sec["id"] for sec in federal.get("sections", [])),
         *(sec["id"] for sec in dc.get("sections", [])),
         *(sec["id"] for sec in title18.get("sections", [])),
     }
     charge_ids = {item["id"] for item in charges.get("charges", [])}
     if not charge_ids <= allowed_ids:
         raise RuntimeError("charges.json contains an entry without an allowed charge detail record")
+    if any(
+        item.get("source") == "federal-criminal-code-2025"
+        for item in charges.get("charges", [])
+    ):
+        raise RuntimeError("charges.json contains a duplicative FCC charge")
 
     for path in TITLE18_DIR.glob("*.json"):
         detail = load(path)

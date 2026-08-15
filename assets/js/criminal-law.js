@@ -23,7 +23,6 @@ const elements = {
   summary: document.getElementById("result-summary"),
   revision: document.getElementById("api-revision"),
   statTitle18: document.getElementById("stat-title18"),
-  statFcc: document.getElementById("stat-fcc"),
   statDc: document.getElementById("stat-dc"),
   statCharges: document.getElementById("stat-charges"),
 };
@@ -68,7 +67,6 @@ function normalize(value) {
 
 function sourceLabel(source) {
   return {
-    "federal-criminal-code-2025": "Federal Criminal Code",
     "dc-criminal-code-federalized": "Federalized D.C. Code",
     title18: "Title 18 U.S.C.",
   }[source] || source;
@@ -88,15 +86,15 @@ function prepareRecord(record) {
   return record;
 }
 
-function makeLocalRecords(payload, source) {
-  const isFederal = source === "federal-criminal-code-2025";
+function makeLocalRecords(payload) {
+  const source = "dc-criminal-code-federalized";
   return (payload.sections || [])
     .filter((section) => section.is_offense === true)
     .map((section) => prepareRecord({
       id: section.id || `${source}-${section.section}`,
       source,
       sourceLabel: sourceLabel(source),
-      citation: isFederal ? `FCC § ${section.section}` : `D.C. Criminal Code § ${section.section}`,
+      citation: `D.C. Criminal Code § ${section.section}`,
       formalCitation: section.citation,
       section: section.section,
       heading: section.heading,
@@ -106,9 +104,9 @@ function makeLocalRecords(payload, source) {
       classRule: section.class_rule,
       status: "current",
       text: section.text,
-      webUrl: section.web_url || `criminal/${isFederal ? "fcc" : "dc"}/${section.section}/`,
-      publicLawUrl: isFederal ? "public-laws.html#pl-37-261" : "public-laws.html#pl-36-260",
-      anchor: isFederal ? `fcc-${section.section}` : `dcc-${section.section}`,
+      webUrl: section.web_url || `criminal/dc/${section.section}/`,
+      publicLawUrl: "public-laws.html#pl-36-260",
+      anchor: `dcc-${section.section}`,
     }));
 }
 
@@ -308,10 +306,9 @@ async function fetchJson(path) {
 
 async function loadCatalog() {
   try {
-    const [manifest, charges, federal, dc, title18] = await Promise.all([
+    const [manifest, charges, dc, title18] = await Promise.all([
       fetchJson("manifest.json"),
       fetchJson("charges.json"),
-      fetchJson("federal-code.json"),
       fetchJson("dc-code.json"),
       fetchJson("title18-index.json"),
     ]);
@@ -324,9 +321,8 @@ async function loadCatalog() {
 
     state.manifest = manifest;
     state.records = [
-      ...makeLocalRecords(federal, "federal-criminal-code-2025"),
       ...makeTitle18Records(title18),
-      ...makeLocalRecords(dc, "dc-criminal-code-federalized"),
+      ...makeLocalRecords(dc),
     ];
 
     const allowedIds = new Set((charges.charges || []).filter((item) => item.is_charge === true).map((item) => item.id));
@@ -334,7 +330,6 @@ async function loadCatalog() {
 
     elements.revision.textContent = `Revision ${manifest.revision}`;
     elements.statTitle18.textContent = Number(charges.counts?.title18 || 0).toLocaleString();
-    elements.statFcc.textContent = Number(charges.counts?.federal_code || 0).toLocaleString();
     elements.statDc.textContent = Number(charges.counts?.dc_code || 0).toLocaleString();
     elements.statCharges.textContent = Number(charges.counts?.total || 0).toLocaleString();
     elements.loading.hidden = true;

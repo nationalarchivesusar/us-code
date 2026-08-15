@@ -172,7 +172,6 @@ def main() -> None:
     site = args.site_dir.resolve()
     api = site / "data" / "api" / "v1" / "criminal-law"
 
-    federal = load(api / "federal-code.json")
     dc = load(api / "dc-code.json")
     title18_index = load(api / "title18-index.json")
     charges = load(api / "charges.json")
@@ -187,54 +186,6 @@ def main() -> None:
         if item.get("is_charge") is True
     }
     urls: list[str] = []
-
-    # Federal Criminal Code charges.
-    fcc_items = []
-    for sec in federal.get("sections", []):
-        if sec.get("is_offense") is not True or sec.get("id") not in allowed_ids:
-            continue
-        number = str(sec["section"])
-        relative = f"criminal/fcc/{quote(number, safe='')}"
-        canonical = BASE_URL + relative + "/"
-        cls = sec.get("offense_class")
-        rule = sec.get("class_rule") or {}
-        meta = []
-        if cls:
-            meta.append(f"Class {cls}")
-        if sec.get("chapter"):
-            meta.append(f"Chapter {sec['chapter']}: {sec.get('chapter_heading','')}")
-        extra = ""
-        if rule:
-            extra = (
-                '<aside class="static-law-note"><strong>Class schedule</strong>'
-                f'<p>Initial arrest: {rule.get("initial_min_minutes")}–{rule.get("initial_max_minutes")} minutes. '
-                f'Court maximum: {rule.get("court_max_days")} days. Citation maximum: ${int(rule.get("citation_max",0)):,}.</p>'
-                '</aside>'
-            )
-        page = section_page(
-            citation=f"FCC § {number}",
-            heading=sec["heading"],
-            text=sec["text"],
-            source="Federal Criminal Code (Public Law 37-261)",
-            canonical=canonical,
-            meta=meta,
-            extra_html=extra,
-            source_link=BASE_URL + "public-laws.html#pl-37-261",
-        )
-        url = write_page(site, relative, page)
-        urls.append(url)
-        fcc_items.append((f"FCC § {number}", sec["heading"], url))
-
-    fcc_index = BASE_URL + "criminal/fcc/"
-    write_page(site, "criminal/fcc", list_page(
-        title="Federal Criminal Code Charges",
-        description="Permanent charge index for the Federal Criminal Code enacted by Public Law 37-261.",
-        canonical=fcc_index,
-        eyebrow="Public Law 37-261",
-        intro="Current platform-safe Federal Criminal Code charges available to the booking reference.",
-        items=fcc_items,
-    ))
-    urls.append(fcc_index)
 
     # Federalized D.C. Criminal Code charges.
     dc_items = []
@@ -314,17 +265,16 @@ def main() -> None:
     urls.append(title18_root)
 
     root_items = [
-        ("Federal Criminal Code", "Current platform-safe charges", fcc_index),
         ("Title 18 U.S.C.", "Current platform-safe charges", title18_root),
         ("Federalized D.C. Criminal Code", "Current platform-safe charges", dc_index),
     ]
     criminal_root = BASE_URL + "criminal/"
     write_page(site, "criminal", list_page(
         title="Criminal Law Permanent Charge Index",
-        description="Static charge-only index for Title 18, the Federal Criminal Code, and the federalized D.C. Criminal Code.",
+        description="Static charge-only index for Title 18 and the federalized D.C. Criminal Code.",
         canonical=criminal_root,
         eyebrow="Permanent Charge Index",
-        intro="This index intentionally excludes general provisions, administrative sections, and platform-restricted material.",
+        intro="This index excludes general provisions, platform-restricted material, and the duplicative Federal Criminal Code offense set.",
         items=root_items,
     ))
     urls.append(criminal_root)
@@ -346,7 +296,6 @@ def main() -> None:
 
     # Build-level verification uses known safe charge sections only.
     required = [
-        site / "criminal" / "fcc" / "201" / "index.html",
         site / "criminal" / "dc" / "201" / "index.html",
         site / "criminal" / "title18" / "111" / "index.html",
         site / "sitemap-criminal.xml",

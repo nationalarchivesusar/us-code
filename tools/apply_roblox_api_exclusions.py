@@ -75,22 +75,16 @@ def safe_search_text(item: dict) -> str:
 
 
 def apply() -> None:
-    federal_path = BASE / "federal-code.json"
     dc_path = BASE / "dc-code.json"
     title18_index_path = BASE / "title18-index.json"
     title18_search_path = BASE / "title18-search.json"
     charges_path = BASE / "charges.json"
 
-    federal = load(federal_path)
     dc = load(dc_path)
     title18_index = load(title18_index_path)
     title18_search = load(title18_search_path)
     charges = load(charges_path)
 
-    federal["sections"] = [
-        item for item in federal.get("sections", [])
-        if section_key(item.get("section")) not in LOCAL_REMOVE_SECTIONS
-    ]
     dc["sections"] = [
         item for item in dc.get("sections", [])
         if section_key(item.get("section")) not in LOCAL_REMOVE_SECTIONS
@@ -143,7 +137,7 @@ def apply() -> None:
     for item in charges.get("charges", []):
         source = item.get("source")
         section = section_key(item.get("section"))
-        if source in {"federal-criminal-code-2025", "dc-criminal-code-federalized"}:
+        if source == "dc-criminal-code-federalized":
             if section in LOCAL_REMOVE_SECTIONS:
                 continue
         if source == "title18" and section in TITLE18_REMOVE_SECTIONS:
@@ -156,10 +150,6 @@ def apply() -> None:
 
     counts = {
         "total": len(kept_charges),
-        "federal_code": sum(
-            item.get("source") == "federal-criminal-code-2025"
-            for item in kept_charges
-        ),
         "dc_code": sum(
             item.get("source") == "dc-criminal-code-federalized"
             for item in kept_charges
@@ -176,7 +166,6 @@ def apply() -> None:
     )
     title18_index["counts"] = index_counts
 
-    write(federal_path, federal)
     write(dc_path, dc)
     write(title18_index_path, title18_index)
     write(title18_search_path, title18_search)
@@ -190,17 +179,17 @@ def apply() -> None:
 
 
 def check() -> None:
-    federal = load(BASE / "federal-code.json")
+    if (BASE / "federal-code.json").exists():
+        raise RuntimeError("Duplicative federal-code.json must not be published")
     dc = load(BASE / "dc-code.json")
     title18 = load(BASE / "title18-index.json")
     title18_search = load(BASE / "title18-search.json")
     charges = load(BASE / "charges.json")
 
-    for payload, name in ((federal, "federal-code"), (dc, "dc-code")):
-        present = {section_key(item.get("section")) for item in payload.get("sections", [])}
-        bad = present & LOCAL_REMOVE_SECTIONS
-        if bad:
-            raise RuntimeError(f"{name} still contains excluded sections: {sorted(bad)}")
+    present = {section_key(item.get("section")) for item in dc.get("sections", [])}
+    bad = present & LOCAL_REMOVE_SECTIONS
+    if bad:
+        raise RuntimeError(f"dc-code still contains excluded sections: {sorted(bad)}")
 
     title_sections = {
         section_key(item.get("section")): item for item in title18.get("sections", [])
@@ -228,9 +217,13 @@ def check() -> None:
         (str(item.get("source") or ""), section_key(item.get("section")))
         for item in charges.get("charges", [])
     }
-    for source in ("federal-criminal-code-2025", "dc-criminal-code-federalized"):
-        if any((source, section) in charge_pairs for section in LOCAL_REMOVE_SECTIONS):
-            raise RuntimeError(f"Booking catalog still contains excluded local charge for {source}")
+    if any(
+        ("dc-criminal-code-federalized", section) in charge_pairs
+        for section in LOCAL_REMOVE_SECTIONS
+    ):
+        raise RuntimeError("Booking catalog still contains an excluded local D.C. charge")
+    if any(source == "federal-criminal-code-2025" for source, _ in charge_pairs):
+        raise RuntimeError("Booking catalog contains a duplicative FCC charge")
     if any(("title18", section) in charge_pairs for section in TITLE18_REMOVE_SECTIONS):
         raise RuntimeError("Booking catalog still contains an excluded Title 18 charge")
     if not all(("title18", section) in charge_pairs for section in TITLE18_WITHHOLD_BODY):

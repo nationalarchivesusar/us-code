@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Finalize the Roblox booking catalog and attach sentencing metadata.
 
-FCC and federalized D.C. offenses use their enacted A-G class rules. Title 18
+Federalized D.C. offenses use their enacted A-G class rules. Title 18
 offenses are classified pursuant to 18 U.S.C. § 3559 only when the section
 yields one unambiguous federal felony/misdemeanor class; Public Law 39-267
 then supplies the matching non-court maximum. Mixed or uncertain sections stay
@@ -311,10 +311,7 @@ def main() -> int:
     manifest = load(manifest_path)
     index = load(index_path)
 
-    federal = [x for x in charges.get("charges", []) if x.get("source") == "federal-criminal-code-2025"]
     title18 = [x for x in charges.get("charges", []) if x.get("source") == "title18"]
-    for entry in federal:
-        apply_local(entry)
 
     automatic = manual = 0
     by_id = {}
@@ -359,18 +356,20 @@ def main() -> int:
         apply_local(entry)
         dc_entries.append(entry)
 
-    combined = federal + dc_entries + title18
+    combined = dc_entries + title18
     charges["charges"] = combined
     charges["counts"] = {
-        "total": len(combined), "federal_code": len(federal), "dc_code": len(dc_entries),
+        "total": len(combined), "dc_code": len(dc_entries),
         "title18": len(title18), "title18_automatic": automatic, "title18_manual": manual,
     }
-    charges["available_local_codes"] = ["federal-criminal-code-2025", "dc-criminal-code-federalized"]
+    charges["available_local_codes"] = ["dc-criminal-code-federalized"]
     charges["local_code_status_note"] = (
         "Public Law 36-260 § 10(b) adopted the D.C. Criminal Code as federal law, "
         "and § 10(e) keeps adopted municipal laws in force until amended or repealed "
-        "by Congress. Public Law 37-261 contains no express repeal of that adoption, "
-        "so both local-code offense sets are exposed."
+        "by Congress. The Federal Criminal Code enacted by Public Law 37-261 is not "
+        "included in this API because all 66 of its offenses duplicate D.C. Criminal "
+        "Code offenses by section number, offense heading, and class. Its enacted "
+        "source remains preserved outside the API."
     )
 
     rules = sentencing.get("rules") or {}
@@ -378,13 +377,13 @@ def main() -> int:
     charges["sentencing_policy"] = {
         "non_court_scope": rules.get("scope"),
         "multi_charge_max_minutes": cap,
-        "automatic_sources": ["federal-criminal-code-2025", "dc-criminal-code-federalized", "title18"],
+        "automatic_sources": ["dc-criminal-code-federalized", "title18"],
         "conditionally_manual_sources": ["title18"],
         "manual_sources": ["title18"],
         "per_charge_mode_is_authoritative": True,
         "class_crosswalk_status": rules.get("crosswalk_status"),
         "automatic_rule": (
-            "FCC and federalized D.C. charges use their local class rules. A Title 18 "
+            "Federalized D.C. charges use their local class rules. A Title 18 "
             "charge is automatic only when one federal class is resolved pursuant to "
             "18 U.S.C. § 3559; Public Law 39-267 then supplies the matching "
             "felony/misdemeanor non-court maximum."
@@ -410,7 +409,7 @@ def main() -> int:
             "charges remain manual."
         ),
         "important_distinction": (
-            "This does not crosswalk FCC/D.C. A-G offense classes to Public Law 39-267. "
+            "This does not crosswalk D.C. A-G offense classes to Public Law 39-267. "
             "Title 18 uses the federal felony/misdemeanor letter classes supplied by "
             "18 U.S.C. § 3559 itself."
         ),
@@ -429,7 +428,6 @@ def main() -> int:
     roblox = manifest.setdefault("roblox", {})
     roblox["booking_catalog_sources"] = [
         "18 U.S.C. current Part I charge candidates",
-        "Federal Criminal Code enacted by Public Law 37-261",
         "D.C. Criminal Code federalized by Public Law 36-260",
     ]
     roblox["local_code_note"] = charges["local_code_status_note"]
@@ -448,7 +446,7 @@ def main() -> int:
 
     print(
         "Booking catalog includes "
-        f"{len(federal)} FCC offenses, {len(dc_entries)} federalized D.C. offenses, "
+        f"{len(dc_entries)} federalized D.C. offenses, "
         f"and {len(title18)} Title 18 charge candidates ({automatic} automatic, {manual} manual); "
         f"multi-charge cap={cap!r} minutes."
     )

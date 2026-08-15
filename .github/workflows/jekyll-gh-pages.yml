@@ -93,7 +93,7 @@ jobs:
           test -s data/public-laws.json
           test -s data/api/v1/criminal-law/manifest.json
           test -s data/api/v1/criminal-law/charges.json
-          test -s data/api/v1/criminal-law/federal-code.json
+          test ! -e data/api/v1/criminal-law/federal-code.json
           test -s data/api/v1/criminal-law/dc-code.json
           test -s data/api/v1/criminal-law/title18-index.json
           test -s data/api/v1/criminal-law/title18-search.json
@@ -108,13 +108,13 @@ jobs:
           python tools/check_title42_build.py
           python tools/audit_applied_material.py
           python tools/reconcile_repealed_laws.py --check
-          python -m unittest discover -s tests -p "test_check_encoding.py" -v
+          python -m unittest discover -s tests -p "test_*.py" -v
           node --check assets/js/public-laws.js
           node --check assets/js/criminal-law.js
           python -m py_compile tools/build_criminal_law_api.py tools/include_dc_booking_charges.py tools/harden_roblox_criminal_api.py tools/finalize_roblox_criminal_api.py tools/build_criminal_law_routes.py tools/apply_current_law_sections.py tools/augment_public_laws_with_current_laws.py tools/filter_public_laws_for_publication.py
           python tools/harden_roblox_criminal_api.py --check
           python tools/finalize_roblox_criminal_api.py --check
-          node --test tests/test_usar_notes.mjs tests/test_citation_routing.mjs
+          node --test tests/*.mjs
 
           python - <<'PY'
           import json
@@ -167,7 +167,6 @@ jobs:
           base = Path('data/api/v1/criminal-law')
           manifest = json.loads((base / 'manifest.json').read_text(encoding='utf-8'))
           charges = json.loads((base / 'charges.json').read_text(encoding='utf-8'))
-          federal = json.loads((base / 'federal-code.json').read_text(encoding='utf-8'))
           dc = json.loads((base / 'dc-code.json').read_text(encoding='utf-8'))
           title18 = json.loads((base / 'title18-index.json').read_text(encoding='utf-8'))
           title18_search = json.loads((base / 'title18-search.json').read_text(encoding='utf-8'))
@@ -184,36 +183,35 @@ jobs:
           assert manifest['roblox']['public_surface']['source_documents_exposed'] is False
           assert 'source_documents' not in manifest['endpoints']
           assert 'documents' not in manifest['endpoints']
+          assert 'federal_code' not in manifest['endpoints']
           assert not (base / 'documents.json').exists()
+          assert not (base / 'federal-code.json').exists()
 
           assert charges['display_contract']['charge_only'] is True
           assert charges['display_contract']['roblox_safe_only'] is True
           assert charges['display_contract']['fail_closed'] is True
           assert charges['counts']['total'] == len(charges['charges'])
-          assert charges['counts']['federal_code'] == len(federal['sections'])
           assert charges['counts']['dc_code'] == len(dc['sections'])
           assert charges['counts']['title18'] == len(title18['sections'])
-          assert charges['counts']['federal_code'] > 0
+          assert 'federal_code' not in charges['counts']
           assert charges['counts']['dc_code'] > 0
           assert charges['counts']['title18'] > 0
-          assert set(charges['available_local_codes']) == {'federal-criminal-code-2025', 'dc-criminal-code-federalized'}
+          assert set(charges['available_local_codes']) == {'dc-criminal-code-federalized'}
 
-          assert all(item.get('is_offense') is True for item in federal['sections'])
           assert all(item.get('is_offense') is True for item in dc['sections'])
           assert all(item.get('is_charge') is True for item in title18['sections'])
           assert all(item.get('is_charge') is True for item in charges['charges'])
           assert all(item.get('content_policy') == 'roblox_safe' for item in charges['charges'])
           assert all(charge['details_url'].startswith('https://') for charge in charges['charges'])
           assert all(charge['web_url'].startswith('https://') for charge in charges['charges'])
+          assert not any(charge['source'] == 'federal-criminal-code-2025' for charge in charges['charges'])
+          exclusions = {item['id']: item['reason'] for item in manifest['excluded_sources']}
+          assert 'duplicat' in exclusions['federal-criminal-code-2025'].lower()
 
           assert any(item['section'] == '111' for item in title18['sections'])
           assert title18_search['count'] == title18['counts']['sections']
           assert {item['id'] for item in title18_search['entries']} == {item['id'] for item in title18['sections']}
           assert (base / 'title18' / '111.json').is_file()
-
-          f201 = next(item for item in federal['sections'] if item['section'] == '201')
-          assert f201['offense_class'] == 'E'
-          assert f201['web_url'].endswith('/criminal/fcc/201/')
 
           d201 = next(item for item in dc['sections'] if item['section'] == '201')
           assert d201['offense_class'] == 'E'
@@ -272,12 +270,13 @@ jobs:
           test -s _site/data/api/v1/criminal-law/title18-search.json
           test -s _site/data/api/v1/criminal-law/title18/111.json
           test ! -e _site/data/api/v1/criminal-law/documents.json
+          test ! -e _site/data/api/v1/criminal-law/federal-code.json
 
           test -s _site/cite/18/111/index.html
           test -s _site/cite/28/530B/index.html
           test -s _site/cite/42/1983/index.html
           test -s _site/criminal/index.html
-          test -s _site/criminal/fcc/201/index.html
+          test ! -e _site/criminal/fcc
           test -s _site/criminal/dc/201/index.html
           test -s _site/criminal/title18/111/index.html
           test -s _site/sitemap-criminal.xml
@@ -286,11 +285,11 @@ jobs:
           grep -q 'property="og:title"' _site/cite/18/111/index.html
           grep -q 'property="og:image"' _site/cite/18/111/index.html
           grep -q '18 U.S.C. § 111' _site/cite/18/111/index.html
-          grep -q 'FCC § 201' _site/criminal/fcc/201/index.html
           grep -q 'D.C. Criminal Code § 201' _site/criminal/dc/201/index.html
           grep -q '18 U.S.C. § 111' _site/criminal/title18/111/index.html
           grep -q '<urlset' _site/sitemap-criminal.xml
           grep -q '/criminal/title18/111/' _site/sitemap-criminal.xml
+          ! grep -q '/criminal/fcc/' _site/sitemap-criminal.xml
           grep -q 'Sitemap:' _site/robots.txt
           grep -q 'Disallow: /us-code/data/api/v1/criminal-law/' _site/robots.txt
           ! grep -q '/data/api/v1/criminal-law/' _site/sitemap-criminal.xml

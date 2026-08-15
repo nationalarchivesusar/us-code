@@ -77,7 +77,7 @@
 
 .criminal-stats {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   border: 1px solid var(--border);
   background: var(--surface);
   margin-bottom: 2rem;
@@ -160,16 +160,15 @@
 @media (max-width: 860px) {
   .criminal-hero__inner { grid-template-columns: 1fr; }
   .criminal-hero__status { min-width: 0; }
-  .criminal-stats { grid-template-columns: repeat(2,1fr); }
-  .criminal-stats > div:nth-child(2) { border-right: 0; }
-  .criminal-stats > div:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
+  .criminal-stats { grid-template-columns: 1fr; }
+  .criminal-stats > div { border-right: 0; border-bottom: 1px solid var(--border); }
+  .criminal-stats > div:last-child { border-bottom: 0; }
   .lineage-grid, .api-grid { grid-template-columns: 1fr; }
   .criminal-controls { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {
   .criminal-hero__inner, .criminal-shell { width: min(100% - 1rem, var(--measure)); }
-  .criminal-stats { grid-template-columns: 1fr 1fr; }
   .section-heading--inline { display: block; }
   .result-summary { display: block; margin-top: .5rem; }
   .law-result summary { grid-template-columns: minmax(0,1fr) auto; }

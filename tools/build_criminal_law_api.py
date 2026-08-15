@@ -145,7 +145,6 @@ def code_payload(doc: dict, *, apply_integration: bool = False) -> dict:
     rules = doc.get("class_rules") or {}
     sections = []
     route_family = {
-        "federal-criminal-code-2025": "fcc",
         "dc-criminal-code-federalized": "dc",
     }.get(doc["id"])
     for raw in doc.get("sections", []):
@@ -185,6 +184,35 @@ def code_payload(doc: dict, *, apply_integration: bool = False) -> dict:
     }
 
 
+def assert_fcc_offenses_are_duplicated(federal: dict, dc: dict) -> int:
+    """Fail if the FCC ever gains an offense not represented in the D.C. code.
+
+    The two enactments contain minor whitespace, numbering, and drafting
+    variations. For catalog deduplication, a statute is the same offense when
+    section number, normalized heading, and enacted A-G class all match.
+    """
+    def identities(payload: dict) -> set[tuple[str, str, str]]:
+        return {
+            (
+                str(section["section"]),
+                re.sub(r"[^a-z0-9]+", " ", section["heading"].lower()).strip(),
+                str(section.get("offense_class") or ""),
+            )
+            for section in payload.get("sections", [])
+            if section.get("is_offense") is True
+        }
+
+    federal_offenses = identities(federal)
+    dc_offenses = identities(dc)
+    unique_federal = sorted(federal_offenses - dc_offenses)
+    if unique_federal:
+        raise RuntimeError(
+            "The Federal Criminal Code now contains offenses not duplicated in "
+            f"the D.C. Criminal Code; reassess the API exclusion: {unique_federal}"
+        )
+    return len(federal_offenses)
+
+
 def main() -> int:
     source_paths = sorted(SOURCE_DIR.glob("*.json"))
     docs = {}
@@ -205,6 +233,7 @@ def main() -> int:
         raise RuntimeError(f"Missing criminal-law source documents: {sorted(missing)}")
     federal = code_payload(docs["federal-criminal-code-2025"])
     dc = code_payload(docs["dc-criminal-code-federalized"], apply_integration=True)
+    duplicated_fcc_offenses = assert_fcc_offenses_are_duplicated(federal, dc)
     title18 = title18_sections(TITLE18)
 
     if OUT.exists():
@@ -271,7 +300,6 @@ def main() -> int:
         "count":len(title18_search_entries),
         "entries":title18_search_entries,
     })
-    write_json(OUT / "federal-code.json", {"generated_at":generated_at, **federal})
     write_json(OUT / "dc-code.json", {"generated_at":generated_at, **dc})
 
     rsa = docs["pl-39-267"]
@@ -283,8 +311,8 @@ def main() -> int:
         "status":rsa.get("status"),
         "rules":rsa.get("sentencing_rules", {}),
         "sections":rsa.get("sections", []),
-        "federal_code_class_rules":federal["class_rules"],
-        "note":"Public Law 39-267 governs non-court-imposed sentencing, but its felony/misdemeanor class scheme is not expressly cross-walked in the supplied text to the A–G offense classes used by the Federal Criminal Code. The API therefore exposes both rules without inventing a mapping.",
+        "dc_code_class_rules":dc["class_rules"],
+        "note":"Public Law 39-267 governs non-court-imposed sentencing, but its felony/misdemeanor class scheme is not expressly cross-walked in the supplied text to the A–G offense classes used by the federalized D.C. Criminal Code. The API therefore exposes both rules without inventing a mapping.",
     })
 
     public_law_docs = []
@@ -307,36 +335,20 @@ def main() -> int:
         "schema_version":"1.0","generated_at":generated_at,"documents":public_law_docs,
     })
 
-    local_charges = []
-    for sec in federal["sections"]:
-        if not sec["is_offense"]:
-            continue
-        local_charges.append({
-            "id":sec["id"],
-            "source":"federal-criminal-code-2025",
-            "citation":f"FCC § {sec['section']}",
-            "formal_citation":sec["citation"],
-            "section":sec["section"],
-            "label":sec["heading"],
-            "status":"current",
-            "offense_class":sec.get("offense_class"),
-            "class_rule":sec.get("class_rule"),
-            "chapter":sec.get("chapter"),
-            "chapter_heading":sec.get("chapter_heading"),
-            "details_url":f"{API_BASE}federal-code.json",
-            "web_url":sec["web_url"],
-            "anchor":f"fcc-{sec['section']}",
-        })
-
-    charges = local_charges + title18_charge_entries
+    charges = title18_charge_entries
     write_json(OUT / "charges.json", {
         "schema_version":"1.0",
         "generated_at":generated_at,
         "revision":source_hash[:16],
-        "default_local_code":"federal-criminal-code-2025",
+        "default_local_code":"dc-criminal-code-federalized",
         "sentencing_overlay":"Public Law 39-267",
         "sentencing_crosswalk_status":"not_expressly_defined",
-        "counts":{"total":len(charges),"federal_code":len(local_charges),"title18":len(title18_charge_entries)},
+        "counts":{"total":len(charges),"dc_code":0,"title18":len(title18_charge_entries)},
+        "excluded_sources":[{
+            "id":"federal-criminal-code-2025",
+            "citation":"Public Law 37-261 § 4",
+            "reason":f"Omitted from the booking API to avoid duplicating all {duplicated_fcc_offenses} FCC offenses already represented by the federalized D.C. Criminal Code.",
+        }],
         "charges":charges,
     })
 
@@ -349,7 +361,6 @@ def main() -> int:
         "api_base":API_BASE,
         "endpoints":{
             "charges":"charges.json",
-            "federal_code":"federal-code.json",
             "dc_code":"dc-code.json",
             "title18_index":"title18-index.json",
             "title18_search":"title18-search.json",
@@ -359,10 +370,14 @@ def main() -> int:
         },
         "sources":[
             {"id":"title18","citation":"18 U.S.C.","status":"current sections only are included in the booking charge catalog"},
-            {"id":"federal-criminal-code-2025","citation":"Public Law 37-261 § 4","status":"current"},
             {"id":"dc-criminal-code-federalized","citation":"Public Law 36-260 § 10(b)","status":"federalized source"},
             {"id":"sentencing","citation":"Public Law 39-267","status":"current"},
         ],
+        "excluded_sources":[{
+            "id":"federal-criminal-code-2025",
+            "citation":"Public Law 37-261 § 4",
+            "reason":f"Not published as an API endpoint or charge source because its {duplicated_fcc_offenses} offenses duplicate the federalized D.C. Criminal Code by section, offense heading, and class. The enacted source remains preserved outside the API.",
+        }],
         "roblox":{
             "recommended_startup_endpoint":"charges.json",
             "cache_strategy":"Cache the manifest revision and charges catalog server-side; use each charge's absolute details_url when full statutory text is requested.",
@@ -370,7 +385,11 @@ def main() -> int:
         },
     })
 
-    print(f"Built criminal-law API: {len(local_charges)} FCC offenses, {len(title18_index_sections)} Title 18 sections, {len(title18_charge_entries)} current Title 18 charge candidates")
+    print(
+        "Built criminal-law API: FCC omitted as a fully duplicated offense set "
+        f"({duplicated_fcc_offenses} offenses); {len(title18_index_sections)} Title 18 "
+        f"sections, {len(title18_charge_entries)} current Title 18 charge candidates."
+    )
     return 0
 
 if __name__ == "__main__":

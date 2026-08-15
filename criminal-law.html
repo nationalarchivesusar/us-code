@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Search Roblox-safe booking charges from Title 18, the Federal Criminal Code, and the federalized D.C. Criminal Code." />
+    <meta name="description" content="Search Roblox-safe booking charges from Title 18 and the federalized D.C. Criminal Code." />
     <link rel="canonical" href="https://nationalarchivesusar.github.io/us-code/criminal-law.html" />
     <meta property="og:title" content="Criminal Law Reference | US Code Library" />
     <meta property="og:description" content="Search the current charge catalog used for federal booking in USAR." />
@@ -65,9 +65,9 @@
           <p class="eyebrow">Criminal Law Reference</p>
           <h1 id="criminal-heading">Search the charges officers actually need at booking.</h1>
           <p class="criminal-hero__lede">
-            This reference is intentionally limited to current, platform-safe criminal charges from Title 18,
-            the Federal Criminal Code enacted by Public Law 37-261, and the D.C. Criminal Code federalized by
-            Public Law 36-260. General provisions and restricted-content sections are not included here.
+            This reference is intentionally limited to current, platform-safe criminal charges from Title 18
+            and the D.C. Criminal Code federalized by Public Law 36-260. General provisions, duplicate offense
+            sets, and restricted-content sections are not included here.
           </p>
           <p class="criminal-hero__links">
             <a href="criminal/">Browse the permanent charge index</a>
@@ -86,7 +86,6 @@
     <main class="criminal-shell">
       <section class="criminal-stats" aria-label="Criminal charge totals">
         <div><strong id="stat-title18">—</strong><span>Title 18 charges</span></div>
-        <div><strong id="stat-fcc">—</strong><span>Federal Code charges</span></div>
         <div><strong id="stat-dc">—</strong><span>Federalized D.C. charges</span></div>
         <div><strong id="stat-charges">—</strong><span>Total booking charges</span></div>
       </section>
@@ -106,13 +105,13 @@
           <article class="lineage-card lineage-card--primary">
             <div class="lineage-card__number">PL 37-261</div>
             <h3>Federal Criminal Code Act of 2025</h3>
-            <p>Re-established a Federal Criminal Code for the District of Columbia and made the attached code enforceable by federal law-enforcement officers across the District. The supplied Act does not expressly repeal the D.C. Criminal Code adopted by PL 36-260, so both offense sets remain available where applicable.</p>
+            <p>Re-established a Federal Criminal Code for the District of Columbia. A section-by-section catalog review found that all 66 FCC offenses duplicate D.C. Criminal Code offenses by section number, offense heading, and class. The FCC source remains preserved, but it is omitted from the booking API to avoid duplicate charges.</p>
             <a href="public-laws.html#pl-37-261">Open Public Law 37-261</a>
           </article>
           <article class="lineage-card">
             <div class="lineage-card__number">PL 39-267</div>
             <h3>Reform Sentencing Act</h3>
-            <p>Controls non-court-imposed sentencing and caps multi-charge imprisonment at 30 minutes. Its felony/misdemeanor class scheme is kept separate because the supplied law does not expressly cross-walk it to the Federal Criminal Code’s A–G offense classes.</p>
+            <p>Controls non-court-imposed sentencing and caps multi-charge imprisonment at 30 minutes. Its felony/misdemeanor class scheme is kept separate because the supplied law does not expressly cross-walk it to the federalized D.C. Criminal Code’s A–G offense classes.</p>
             <a href="public-laws.html#pl-39-267">Open Public Law 39-267</a>
           </article>
         </div>
@@ -122,7 +121,7 @@
         <div class="sentencing-alert__icon" aria-hidden="true">§</div>
         <div>
           <h2 id="sentencing-alert-heading">Sentencing data is deliberately not guessed.</h2>
-          <p>Public Law 39-267 uses Class A–E felonies and Class A–C misdemeanors, while the Federal Criminal Code assigns offenses Classes A–G. Because the supplied enactments do not state a crosswalk, the reference keeps the schedules separate rather than inventing one.</p>
+          <p>Public Law 39-267 uses Class A–E felonies and Class A–C misdemeanors, while the federalized D.C. Criminal Code assigns offenses Classes A–G. Because the supplied enactments do not state a crosswalk, the reference keeps the schedules separate rather than inventing one.</p>
         </div>
       </section>
 
@@ -143,7 +142,6 @@
             <label for="criminal-source">Source</label>
             <select id="criminal-source">
               <option value="all">All charge sources</option>
-              <option value="federal-criminal-code-2025">Federal Criminal Code</option>
               <option value="title18">Title 18 U.S.C.</option>
               <option value="dc-criminal-code-federalized">Federalized D.C. Code</option>
             </select>
@@ -172,7 +170,7 @@
             <a href="https://nationalarchivesusar.github.io/courts/">United States Courts</a>
           </nav>
         </div>
-        <p class="footer-source">Only current, platform-safe charge material is exposed through this booking reference. Full source laws remain available through the ordinary U.S. Code and Public Laws pages.</p>
+        <p class="footer-source">Only current, platform-safe, non-duplicative charge material is exposed through this booking reference. The excluded FCC source remains available through the Public Laws page.</p>
         <p class="footer-disclaimer">An independent USAR community resource. Not affiliated with the real United States government.</p>
       </div>
     </footer>

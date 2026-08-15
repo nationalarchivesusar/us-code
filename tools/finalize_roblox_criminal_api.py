@@ -195,12 +195,10 @@ def filter_local_sections(sections: list[dict]) -> list[dict]:
 
 
 def apply_secondary_filter() -> None:
-    federal_path = BASE / "federal-code.json"
     dc_path = BASE / "dc-code.json"
     title18_index_path = BASE / "title18-index.json"
     title18_search_path = BASE / "title18-search.json"
 
-    federal = load(federal_path)
     dc = load(dc_path)
     title18_index = load(title18_index_path)
     title18_search = load(title18_search_path)
@@ -208,13 +206,11 @@ def apply_secondary_filter() -> None:
 
     # Local code: unsafe metadata still removes an offense, but unsafe body text
     # is withheld instead of deleting the otherwise safe charge.
-    federal["sections"] = filter_local_sections(federal.get("sections", []))
     dc["sections"] = filter_local_sections(dc.get("sections", []))
-    allowed_federal = {sec["id"] for sec in federal["sections"]}
     allowed_dc = {sec["id"] for sec in dc["sections"]}
     local_by_id = {
         sec["id"]: sec
-        for sec in [*federal["sections"], *dc["sections"]]
+        for sec in dc["sections"]
     }
 
     # Title 18: apply the same metadata/body distinction to each detail record.
@@ -276,7 +272,7 @@ def apply_secondary_filter() -> None:
         "text_withheld": sum(bool(item.get("text_withheld")) for item in safe_index),
     }
 
-    allowed_ids = allowed_federal | allowed_dc | allowed_title18
+    allowed_ids = allowed_dc | allowed_title18
     safe_charges: list[dict] = []
     for item in charges.get("charges", []):
         charge_id = str(item.get("id") or "")
@@ -296,10 +292,6 @@ def apply_secondary_filter() -> None:
     charges["charges"] = safe_charges
     charges["counts"] = {
         "total": len(safe_charges),
-        "federal_code": sum(
-            item.get("source") == "federal-criminal-code-2025"
-            for item in safe_charges
-        ),
         "dc_code": sum(
             item.get("source") == "dc-criminal-code-federalized"
             for item in safe_charges
@@ -307,7 +299,6 @@ def apply_secondary_filter() -> None:
         "title18": sum(item.get("source") == "title18" for item in safe_charges),
     }
 
-    write(federal_path, federal)
     write(dc_path, dc)
     write(title18_index_path, title18_index)
     write(title18_search_path, title18_search)
@@ -319,7 +310,6 @@ def hardened_revision() -> str:
     digest.update(FILTER_VERSION.encode("utf-8"))
     for name in (
         "charges.json",
-        "federal-code.json",
         "dc-code.json",
         "title18-index.json",
         "title18-search.json",
@@ -336,6 +326,7 @@ def finalize() -> None:
     manifest = load(MANIFEST)
     charges = load(CHARGES)
     endpoints = manifest.setdefault("endpoints", {})
+    endpoints.pop("federal_code", None)
     endpoints.pop("source_documents", None)
     endpoints.pop("documents", None)
 
@@ -374,12 +365,13 @@ def finalize() -> None:
 def check() -> None:
     manifest = load(MANIFEST)
     charges = load(CHARGES)
-    federal = load(BASE / "federal-code.json")
     dc = load(BASE / "dc-code.json")
     title18 = load(BASE / "title18-index.json")
     title18_search = load(BASE / "title18-search.json")
     endpoints = manifest.get("endpoints") or {}
 
+    if "federal_code" in endpoints or (BASE / "federal-code.json").exists():
+        raise RuntimeError("Duplicative Federal Criminal Code API surface still exists")
     if "source_documents" in endpoints or "documents" in endpoints:
         raise RuntimeError("Manifest still exposes a source-document endpoint")
     if DOCUMENTS.exists():
@@ -405,11 +397,6 @@ def check() -> None:
 
     if not all(
         sec.get("is_offense") is True and metadata_safe(sec) and secondary_safe(sec)
-        for sec in federal.get("sections", [])
-    ):
-        raise RuntimeError("Federal-code endpoint contains a secondary-screen failure or non-offense")
-    if not all(
-        sec.get("is_offense") is True and metadata_safe(sec) and secondary_safe(sec)
         for sec in dc.get("sections", [])
     ):
         raise RuntimeError("D.C.-code endpoint contains a secondary-screen failure or non-offense")
@@ -425,6 +412,17 @@ def check() -> None:
         for item in charges.get("charges", [])
     ):
         raise RuntimeError("Charge catalog contains a secondary-screen failure or non-charge")
+    if any(
+        item.get("source") == "federal-criminal-code-2025"
+        for item in charges.get("charges", [])
+    ):
+        raise RuntimeError("Charge catalog contains a duplicative FCC charge")
+    excluded = {
+        item.get("id"): item.get("reason", "")
+        for item in manifest.get("excluded_sources", [])
+    }
+    if "duplicat" not in excluded.get("federal-criminal-code-2025", "").lower():
+        raise RuntimeError("Manifest does not explain the FCC duplication exclusion")
 
     # No detail may survive unless its charge survived both metadata screens;
     # after body withholding, no blocked secondary text may remain anywhere.
