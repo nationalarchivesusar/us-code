@@ -31,6 +31,13 @@
   }
 
   function addConstitutionLinks() {
+    if (
+      typeof document.querySelector !== "function" ||
+      typeof document.createElement !== "function"
+    ) {
+      return;
+    }
+
     const constitutionUrl = new URL("constitution.html", APP_BASE_URL).toString();
     const isConstitution =
       new URL(window.location.href).pathname === new URL(constitutionUrl).pathname;
@@ -62,12 +69,16 @@
   }
 
   function loadPageEnhancements() {
-    if (document.getElementById("document-viewer")) {
-      const moduleUrl = new URL("assets/js/research-tools.js", APP_BASE_URL).toString();
-      import(moduleUrl).catch((error) => {
-        console.error("Unable to load research tools", error);
-      });
+    if (
+      typeof document.getElementById !== "function" ||
+      !document.getElementById("document-viewer")
+    ) {
+      return;
     }
+    const moduleUrl = new URL("assets/js/research-tools.js", APP_BASE_URL).toString();
+    import(moduleUrl).catch((error) => {
+      console.error("Unable to load research tools", error);
+    });
   }
 
   document.addEventListener("DOMContentLoaded", () => {
