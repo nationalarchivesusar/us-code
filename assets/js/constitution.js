@@ -59,14 +59,6 @@ function initializeTheme() {
   });
 }
 
-function slug(value) {
-  return String(value || "")
-    .toLowerCase()
-    .replace(/[’']/g, "")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-}
-
 function normalizedBlocks(text) {
   return text
     .replace(/\r\n/g, "\n")
@@ -76,19 +68,37 @@ function normalizedBlocks(text) {
     .filter(Boolean);
 }
 
-function headingWithPermalink(tagName, text, id, className) {
+function headingWithPermalink({ tagName, label, title = "", id, className }) {
   const wrapper = document.createElement("div");
   wrapper.className = "constitution-heading-row";
+
   const heading = document.createElement(tagName);
   heading.id = id;
   heading.className = className;
-  heading.textContent = text;
+
+  const labelSpan = document.createElement("span");
+  labelSpan.className = "constitution-heading__label";
+  labelSpan.textContent = label;
+  heading.appendChild(labelSpan);
+
+  if (title) {
+    const separator = document.createElement("span");
+    separator.className = "constitution-heading__separator";
+    separator.textContent = "-";
+    heading.appendChild(separator);
+
+    const titleSpan = document.createElement("span");
+    titleSpan.className = "constitution-heading__title";
+    titleSpan.textContent = title;
+    heading.appendChild(titleSpan);
+  }
+
   wrapper.appendChild(heading);
 
   const link = document.createElement("a");
   link.className = "constitution-permalink";
   link.href = `#${id}`;
-  link.setAttribute("aria-label", `Link to ${text}`);
+  link.setAttribute("aria-label", `Link to ${[label, title].filter(Boolean).join(" - ")}`);
   link.textContent = "¶";
   wrapper.appendChild(link);
   return wrapper;
@@ -102,6 +112,17 @@ function addTocLink(container, text, id, level = 1) {
   container.appendChild(link);
 }
 
+function appendBodyParagraph(text, { preamble = false } = {}) {
+  const value = String(text || "").trim();
+  if (!value) return null;
+  const paragraph = document.createElement("p");
+  paragraph.className = "constitution-block";
+  if (preamble) paragraph.classList.add("constitution-preamble");
+  paragraph.textContent = value;
+  elements.document.appendChild(paragraph);
+  return paragraph;
+}
+
 function parseAndRender(text) {
   const blocks = normalizedBlocks(text);
   elements.document.replaceChildren();
@@ -113,10 +134,10 @@ function parseAndRender(text) {
   let preambleStarted = false;
 
   blocks.forEach((block, index) => {
-    const article = block.match(/^Article\s+([IVXLC]+)\s*-\s*(.+)$/i);
-    const amendment = block.match(/^Amendment\s+([IVXLC]+)\s*-\s*(.+)$/i);
-    const articleSection = block.match(/^Section\s+([IVXLC]+)$/i);
-    const amendmentSection = block.match(/^(?:Section|Secton)\.?\s*(\d+)\.\s*(.*)$/i);
+    const article = block.match(/^(Article\s+([IVXLC]+))\s*[-–—]\s*(.+)$/i);
+    const amendment = block.match(/^(Amendment\s+([IVXLC]+))\s*[-–—]\s*(.+)$/i);
+    const articleSection = block.match(/^(Section\s+([IVXLC]+))(?:[.:])?\s*(.*)$/i);
+    const amendmentSection = block.match(/^((?:Section|Secton)\.?\s*(\d+)\.?)\s*(.*)$/i);
 
     if (!titleRendered && index === 0 && /Constitution/i.test(block)) {
       const title = document.createElement("h2");
@@ -128,66 +149,77 @@ function parseAndRender(text) {
     }
 
     if (article) {
-      currentArticle = article[1].toUpperCase();
+      currentArticle = article[2].toUpperCase();
       currentAmendment = null;
       const id = `article-${currentArticle.toLowerCase()}`;
       elements.document.appendChild(
-        headingWithPermalink("h2", `Article ${currentArticle} — ${article[2]}`, id, "constitution-article"),
+        headingWithPermalink({
+          tagName: "h2",
+          label: article[1],
+          title: article[3],
+          id,
+          className: "constitution-article",
+        }),
       );
-      addTocLink(elements.toc, `Article ${currentArticle} — ${article[2]}`, id, 1);
+      addTocLink(elements.toc, `${article[1]} - ${article[3]}`, id, 1);
       return;
     }
 
     if (amendment) {
-      currentAmendment = amendment[1].toUpperCase();
+      currentAmendment = amendment[2].toUpperCase();
       currentArticle = null;
       const id = `amendment-${currentAmendment.toLowerCase()}`;
       elements.document.appendChild(
-        headingWithPermalink(
-          "h2",
-          `Amendment ${currentAmendment} — ${amendment[2]}`,
+        headingWithPermalink({
+          tagName: "h2",
+          label: amendment[1],
+          title: amendment[3],
           id,
-          "constitution-amendment",
-        ),
+          className: "constitution-amendment",
+        }),
       );
-      addTocLink(elements.toc, `Amendment ${currentAmendment} — ${amendment[2]}`, id, 1);
+      addTocLink(elements.toc, `${amendment[1]} - ${amendment[3]}`, id, 1);
       return;
     }
 
     if (currentArticle && articleSection) {
-      const sectionRoman = articleSection[1].toUpperCase();
+      const sectionRoman = articleSection[2].toUpperCase();
       const id = `article-${currentArticle.toLowerCase()}-section-${sectionRoman.toLowerCase()}`;
       elements.document.appendChild(
-        headingWithPermalink("h3", `Section ${sectionRoman}`, id, "constitution-section"),
+        headingWithPermalink({
+          tagName: "h3",
+          label: articleSection[1],
+          id,
+          className: "constitution-section",
+        }),
       );
-      addTocLink(elements.toc, `Section ${sectionRoman}`, id, 2);
+      addTocLink(elements.toc, articleSection[1], id, 2);
+      appendBodyParagraph(articleSection[3]);
       return;
     }
 
     if (currentAmendment && amendmentSection) {
-      const sectionNumber = amendmentSection[1];
+      const sectionNumber = amendmentSection[2];
       const id = `amendment-${currentAmendment.toLowerCase()}-section-${sectionNumber}`;
       elements.document.appendChild(
-        headingWithPermalink("h3", `Section ${sectionNumber}`, id, "constitution-section"),
+        headingWithPermalink({
+          tagName: "h3",
+          label: amendmentSection[1],
+          id,
+          className: "constitution-section",
+        }),
       );
-      addTocLink(elements.toc, `Section ${sectionNumber}`, id, 2);
-      if (amendmentSection[2]) {
-        const p = document.createElement("p");
-        p.className = "constitution-block";
-        p.textContent = amendmentSection[2];
-        elements.document.appendChild(p);
-      }
+      addTocLink(elements.toc, amendmentSection[1], id, 2);
+      appendBodyParagraph(amendmentSection[3]);
       return;
     }
 
-    const paragraph = document.createElement("p");
-    paragraph.className = "constitution-block";
+    appendBodyParagraph(block, {
+      preamble: !currentArticle && !currentAmendment && titleRendered && !preambleStarted,
+    });
     if (!currentArticle && !currentAmendment && titleRendered && !preambleStarted) {
-      paragraph.classList.add("constitution-preamble");
       preambleStarted = true;
     }
-    paragraph.textContent = block;
-    elements.document.appendChild(paragraph);
   });
 
   const hash = window.location.hash;
