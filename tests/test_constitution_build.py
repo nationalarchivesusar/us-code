@@ -30,7 +30,7 @@ The House of Representatives shall be composed of representatives.
             rendered,
         )
         self.assertIn(
-            "representatives.\n\nSection II\n\nThe House of Representatives",
+            "Congress.\n\nSection II\n\nThe House of Representatives",
             rendered,
         )
 
