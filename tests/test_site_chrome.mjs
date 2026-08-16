@@ -6,6 +6,7 @@ const pages = [
   ["index.html", "Home"],
   ["criminal-law.html", "Criminal Law"],
   ["public-laws.html", "Public Laws"],
+  ["constitution.html", "Constitution"],
 ];
 
 for (const [filename, currentLabel] of pages) {

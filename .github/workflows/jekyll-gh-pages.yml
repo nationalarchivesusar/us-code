@@ -78,6 +78,7 @@ jobs:
           set -euo pipefail
           rm -rf data/title-42
           rm -rf data/api/v1/criminal-law
+          python tools/build_constitution.py
           python tools/build_title42_chunks.py
           python tools/build_index.py
           python tools/build_public_laws_index.py
@@ -88,6 +89,7 @@ jobs:
           python tools/finalize_roblox_criminal_api.py
           python tools/harden_roblox_criminal_api.py --check
           python tools/finalize_roblox_criminal_api.py --check
+          test -s data/constitution.txt
           test -s data/titles.json
           test -s data/title-42/manifest.json
           test -s data/public-laws.json
@@ -111,7 +113,9 @@ jobs:
           python -m unittest discover -s tests -p "test_*.py" -v
           node --check assets/js/public-laws.js
           node --check assets/js/criminal-law.js
-          python -m py_compile tools/build_criminal_law_api.py tools/include_dc_booking_charges.py tools/harden_roblox_criminal_api.py tools/finalize_roblox_criminal_api.py tools/build_criminal_law_routes.py tools/apply_current_law_sections.py tools/augment_public_laws_with_current_laws.py tools/filter_public_laws_for_publication.py
+          node --check assets/js/research-tools.js
+          node --check assets/js/constitution.js
+          python -m py_compile tools/build_constitution.py tools/build_criminal_law_api.py tools/include_dc_booking_charges.py tools/harden_roblox_criminal_api.py tools/finalize_roblox_criminal_api.py tools/build_criminal_law_routes.py tools/apply_current_law_sections.py tools/augment_public_laws_with_current_laws.py tools/filter_public_laws_for_publication.py
           python tools/harden_roblox_criminal_api.py --check
           python tools/finalize_roblox_criminal_api.py --check
           node --test tests/*.mjs
@@ -221,6 +225,8 @@ jobs:
           print('Criminal-law API charge-only/safety validation passed.')
           PY
 
+          grep -q 'Article III - The Judiciary' data/constitution.txt
+          grep -q 'Amendment XXVII - Commerce Regulation Authority' data/constitution.txt
           ! grep -q 'Use the Roblox API' criminal-law.html
           ! grep -q 'api-docs' criminal-law.html
           ! grep -q 'Roblox server example' criminal-law.html
@@ -235,7 +241,7 @@ jobs:
           rm -rf _site
           mkdir -p _site
 
-          cp index.html 404.html public-laws.html criminal-law.html _site/
+          cp index.html 404.html public-laws.html criminal-law.html constitution.html _site/
           cp -a assets _site/assets
           cp -a data _site/data
           cp -a usc _site/usc
@@ -256,11 +262,17 @@ jobs:
           test -s _site/404.html
           test -s _site/public-laws.html
           test -s _site/criminal-law.html
+          test -s _site/constitution.html
           test -s _site/assets/js/public-laws.js
           test -s _site/assets/js/criminal-law.js
+          test -s _site/assets/js/research-tools.js
+          test -s _site/assets/js/constitution.js
           test -s _site/assets/css/public-laws.css
           test -s _site/assets/css/criminal-law.css
           test -s _site/assets/css/criminal-law-static.css
+          test -s _site/assets/css/research-tools.css
+          test -s _site/assets/css/constitution.css
+          test -s _site/data/constitution.txt
           test -s _site/data/titles.json
           test -s _site/data/public-laws.json
           test -s _site/data/social-routes.json

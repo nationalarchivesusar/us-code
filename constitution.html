@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Browse and search the Constitution of the United States used by the USAR community."
+    />
+    <link rel="canonical" href="https://nationalarchivesusar.github.io/us-code/constitution.html" />
+    <meta property="og:title" content="Constitution | US Code Library" />
+    <meta
+      property="og:description"
+      content="Browse, search, and deep-link the Constitution of the United States used by the USAR community."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="US Code Library" />
+    <meta
+      property="og:url"
+      content="https://nationalarchivesusar.github.io/us-code/constitution.html"
+    />
+    <meta
+      property="og:image"
+      content="https://nationalarchivesusar.github.io/us-code/assets/images/social-card.png"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Constitution | US Code Library" />
+    <meta
+      name="twitter:description"
+      content="Browse, search, and deep-link the Constitution of the United States used by the USAR community."
+    />
+    <meta
+      name="twitter:image"
+      content="https://nationalarchivesusar.github.io/us-code/assets/images/social-card.png"
+    />
+    <title>Constitution | US Code Library</title>
+    <script src="assets/js/site-bootstrap.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/constitution.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#constitution-document">Skip to Constitution</a>
+
+    <header class="site-header">
+      <div class="masthead">
+        <div class="masthead__inner">
+          <a class="brand" href="./" aria-label="United States Code home">
+            <img class="brand-mark" src="assets/images/icon-512.png" alt="" />
+            <span class="brand-text">
+              <span class="brand-kicker">Federal Statutory Law</span>
+              <span class="brand-title">United States Code</span>
+              <span class="brand-tagline">Legal information and legislative history</span>
+            </span>
+          </a>
+
+          <div class="masthead__tools">
+            <div class="theme-switcher" role="group" aria-label="Color theme">
+              <button type="button" class="theme-switcher__button" data-theme-choice="system">System</button>
+              <button type="button" class="theme-switcher__button" data-theme-choice="light">Light</button>
+              <button type="button" class="theme-switcher__button" data-theme-choice="dark">Dark</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <div class="primary-nav__inner">
+          <a href="./">Home</a>
+          <a href="./#search">Search Code</a>
+          <a href="./#browse">Code Titles</a>
+          <a href="criminal-law.html">Criminal Law</a>
+          <a href="public-laws.html">Public Laws</a>
+          <a href="constitution.html" data-legal-material="constitution" aria-current="page">Constitution</a>
+          <a class="primary-nav__related" href="https://nationalarchivesusar.github.io/courts/" aria-label="United States Courts, related site">United States Courts <span aria-hidden="true">↗</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="constitution-hero" aria-labelledby="constitution-heading">
+      <div class="constitution-hero__inner">
+        <div>
+          <p class="eyebrow">Related Legal Material</p>
+          <h1 id="constitution-heading">The Constitution of the United States</h1>
+          <p>
+            Search and cite the constitutional text maintained by the USAR National
+            Archives. This material is presented separately from the United States Code.
+          </p>
+        </div>
+        <a
+          class="constitution-source-link"
+          href="https://hackmd.io/CDCV7p2_Sca6O0FrEJyaIQ?view"
+          target="_blank"
+          rel="noreferrer"
+        >View NARA source copy ↗</a>
+      </div>
+    </section>
+
+    <main class="constitution-shell">
+      <section class="constitution-controls" aria-label="Search Constitution">
+        <form id="constitution-search-form" class="constitution-search" autocomplete="off">
+          <label for="constitution-search">Search the Constitution</label>
+          <div class="constitution-search__row">
+            <input
+              id="constitution-search"
+              type="search"
+              placeholder="Search for impeachment, public office, due process…"
+            />
+            <button type="submit" class="button">Find</button>
+          </div>
+          <p id="constitution-search-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <div class="constitution-layout">
+        <aside class="constitution-toc" aria-label="Constitution contents">
+          <div class="constitution-toc__header">
+            <h2>Contents</h2>
+            <button type="button" id="constitution-toc-toggle" aria-expanded="true">Collapse</button>
+          </div>
+          <nav id="constitution-toc-list"></nav>
+        </aside>
+
+        <article id="constitution-document" class="constitution-document" aria-live="polite">
+          <p id="constitution-loading" class="constitution-loading">Loading constitutional text…</p>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="footer-primary">
+          <a class="nara-attribution" href="https://discord.gg/vhTGAHgkHC" rel="noopener noreferrer">
+            <img src="assets/images/nara.png" alt="National Archives and Records Administration" />
+            <span>Maintained by the <strong>National Archives and Records Administration</strong> for the United States Code.</span>
+          </a>
+
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="./">Home</a>
+            <a href="./#browse">Code Titles</a>
+            <a href="criminal-law.html">Criminal Law</a>
+            <a href="public-laws.html">Public Laws</a>
+            <a href="constitution.html" data-legal-material="constitution">Constitution</a>
+            <a href="https://nationalarchivesusar.github.io/courts/">United States Courts</a>
+          </nav>
+        </div>
+        <p class="footer-source">
+          Constitutional text is synchronized at build time from the NARA HackMD source copy.
+        </p>
+        <p class="footer-disclaimer">An independent USAR community resource. Not affiliated with the real United States government.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="assets/js/constitution.js"></script>
+  </body>
+</html>
