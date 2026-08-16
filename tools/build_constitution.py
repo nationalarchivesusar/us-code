@@ -72,7 +72,11 @@ def fetch_download() -> str | None:
     )
     if not response.ok:
         return None
-    candidate = strip_markdown(response.text)
+    content_type = (response.headers.get("content-type") or "").lower()
+    body = response.text
+    if "html" in content_type or body.lstrip().lower().startswith("<!doctype html"):
+        return None
+    candidate = strip_markdown(body)
     return candidate if valid_constitution(candidate) else None
 
 
@@ -94,7 +98,7 @@ def fetch_rendered_page() -> str:
 
     doc = candidates[0]
     lines: list[str] = []
-    for element in doc.xpath(".//h1 | .//h2 | .//h3 | .//h4 | .//p | .//blockquote"):
+    for element in doc.xpath(".//h1 | .//h2 | .//h3 | .//h4 | .//p"):
         text = " ".join(part.strip() for part in element.itertext() if part.strip())
         text = re.sub(r"\s+", " ", text).strip()
         if text:
