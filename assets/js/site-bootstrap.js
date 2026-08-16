@@ -75,9 +75,16 @@
     ) {
       return;
     }
-    const moduleUrl = new URL("assets/js/research-tools.js", APP_BASE_URL).toString();
-    import(moduleUrl).catch((error) => {
-      console.error("Unable to load research tools", error);
+
+    const modules = [
+      ["research tools", "assets/js/research-tools.js"],
+      ["section comparisons", "assets/js/section-comparison.js"],
+    ];
+    modules.forEach(([label, path]) => {
+      const moduleUrl = new URL(path, APP_BASE_URL).toString();
+      import(moduleUrl).catch((error) => {
+        console.error(`Unable to load ${label}`, error);
+      });
     });
   }
 
