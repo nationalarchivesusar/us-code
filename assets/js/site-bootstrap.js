@@ -30,7 +30,50 @@
     });
   }
 
-  document.addEventListener("DOMContentLoaded", rootSiteNavigation);
+  function addConstitutionLinks() {
+    const constitutionUrl = new URL("constitution.html", APP_BASE_URL).toString();
+    const isConstitution =
+      new URL(window.location.href).pathname === new URL(constitutionUrl).pathname;
+
+    const nav = document.querySelector(".primary-nav__inner");
+    if (nav && !nav.querySelector('[data-legal-material="constitution"]')) {
+      const link = document.createElement("a");
+      link.href = constitutionUrl;
+      link.textContent = "Constitution";
+      link.dataset.legalMaterial = "constitution";
+      if (isConstitution) link.setAttribute("aria-current", "page");
+      const related = nav.querySelector(".primary-nav__related");
+      if (related) related.before(link);
+      else nav.appendChild(link);
+    }
+
+    document.querySelectorAll(".footer-nav").forEach((footerNav) => {
+      if (footerNav.querySelector('[data-legal-material="constitution"]')) return;
+      const link = document.createElement("a");
+      link.href = constitutionUrl;
+      link.textContent = "Constitution";
+      link.dataset.legalMaterial = "constitution";
+      const courts = Array.from(footerNav.querySelectorAll("a")).find((anchor) =>
+        /United States Courts/i.test(anchor.textContent || ""),
+      );
+      if (courts) courts.before(link);
+      else footerNav.appendChild(link);
+    });
+  }
+
+  function loadPageEnhancements() {
+    if (document.getElementById("document-viewer")) {
+      import(new URL("research-tools.js", scriptUrl).toString()).catch((error) => {
+        console.error("Unable to load research tools", error);
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    rootSiteNavigation();
+    addConstitutionLinks();
+    loadPageEnhancements();
+  });
 
   const params = new URLSearchParams(window.location.search);
   const redirect = params.get("redirect");
@@ -85,7 +128,11 @@
   if (parts.length === 3) return;
 
   const destination = parts.at(-1);
-  if (destination === "criminal-law.html" || destination === "public-laws.html") {
+  if (
+    destination === "criminal-law.html" ||
+    destination === "public-laws.html" ||
+    destination === "constitution.html"
+  ) {
     window.location.replace(new URL(destination, APP_BASE_URL).toString());
     return;
   }
