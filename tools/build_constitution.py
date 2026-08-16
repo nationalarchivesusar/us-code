@@ -34,7 +34,24 @@ def valid_constitution(value: str) -> bool:
     return len(value) > 10000 and all(marker in value for marker in REQUIRED_MARKERS)
 
 
+def append_blank(lines: list[str]) -> None:
+    if lines and lines[-1] != "":
+        lines.append("")
+
+
+def strip_inline_markdown(value: str) -> str:
+    return value.replace("**", "").replace("__", "").strip()
+
+
 def strip_markdown(markdown: str) -> str:
+    """Convert HackMD Markdown to stable plain text without losing legal structure.
+
+    Headings are deliberately surrounded by blank lines.  The browser renderer uses
+    those boundaries to distinguish Articles, Amendments, and Sections from the body
+    text.  The previous importer removed ``#``/``###`` markers in-place, which could
+    turn ``### Section I`` plus the following paragraph into one ordinary text block.
+    """
+
     lines = markdown.replace("\r\n", "\n").replace("\r", "\n").splitlines()
     cleaned: list[str] = []
     in_frontmatter = False
@@ -53,12 +70,20 @@ def strip_markdown(markdown: str) -> str:
         if frontmatter_seen and not cleaned and not line.strip():
             continue
 
-        line = re.sub(r"^#{1,6}\s+", "", line)
-        line = re.sub(r"^>\s?", "", line)
-        line = line.replace("**", "").replace("__", "")
-        if line.strip() == "---":
-            cleaned.append("")
+        stripped = line.strip()
+        if stripped == "---":
+            append_blank(cleaned)
             continue
+
+        heading_match = re.match(r"^#{1,6}\s+(.+?)\s*$", line)
+        if heading_match:
+            append_blank(cleaned)
+            cleaned.append(strip_inline_markdown(heading_match.group(1)))
+            append_blank(cleaned)
+            continue
+
+        line = re.sub(r"^>\s?", "", line)
+        line = strip_inline_markdown(line)
         cleaned.append(line)
 
     return clean_text("\n".join(cleaned))
