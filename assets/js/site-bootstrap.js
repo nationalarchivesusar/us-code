@@ -63,7 +63,8 @@
 
   function loadPageEnhancements() {
     if (document.getElementById("document-viewer")) {
-      import(new URL("research-tools.js", scriptUrl).toString()).catch((error) => {
+      const moduleUrl = new URL("assets/js/research-tools.js", APP_BASE_URL).toString();
+      import(moduleUrl).catch((error) => {
         console.error("Unable to load research tools", error);
       });
     }
