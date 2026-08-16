@@ -10,6 +10,11 @@ from pathlib import Path
 from urllib.parse import quote
 
 from augment_public_laws_with_current_laws import augment
+from build_section_history import (
+    DEFAULT_BASELINE,
+    OUTPUT_DIR as SECTION_HISTORY_DIR,
+    build as build_section_history,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_FILE = ROOT / "data" / "public-laws.json"
@@ -222,6 +227,19 @@ def main() -> None:
         f"Filtered public-law dataset: {len(clickable)} verified section links, "
         f"{payload['counts']['unavailable_section_references']} nonlinked section references, "
         f"and {payload['counts']['trello_links']} Trello card links."
+    )
+
+    history = build_section_history(
+        baseline=DEFAULT_BASELINE,
+        output_dir=SECTION_HISTORY_DIR,
+        public_laws_path=DATA_FILE,
+    )
+    counts = history["counts"]
+    if counts["changed"] <= 0:
+        raise SystemExit("Section-history build produced no verified changed sections.")
+    print(
+        f"Prepared section-history publication data: {counts['changed']} changed sections "
+        f"from {counts['tracked_targets']} tracked Public Law targets."
     )
 
 
