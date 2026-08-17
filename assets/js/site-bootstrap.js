@@ -114,6 +114,7 @@
       ["research tools", "assets/js/research-tools.js"],
       ["section comparisons", "assets/js/section-comparison.js"],
       ["section research", "assets/js/section-research.js"],
+      ["Courts case-law bridge", "assets/js/court-bridge.js"],
     ];
     modules.forEach(([label, path]) => {
       const moduleUrl = new URL(path, APP_BASE_URL).toString();
