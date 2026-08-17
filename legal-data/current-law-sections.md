@@ -1,6 +1,6 @@
 # 2026 Substantive Current-Law Codification
 
-This register documents the editorial U.S. Code classification applied at build time for three enacted USAR laws. Congress's failure to supply a U.S. Code section number is not treated as a reason to leave general and permanent law uncodified. The assigned Code numbers below are editorial classifications; the source credits identify the enactment and source section.
+This register documents the editorial U.S. Code classification applied at build time for enacted USAR laws. Congress's failure to supply a U.S. Code section number is not treated as a reason to leave general and permanent law uncodified. The assigned Code numbers below are editorial classifications; the source credits identify the enactment and source section.
 
 ## Homeland Security Coordination Act — H.R. 9, 42d Congress
 
@@ -75,6 +75,36 @@ Classified in **Title 5, chapter 23, Merit System Principles**:
 ### Repeals and transition
 Title I's express repeals of Pub. L. 28–206 (Washington Diplomacy Complex Boundary Act), Pub. L. 27–196 (National Commission on Judicial Activity, Efficiency and Accountability Act), and Pub. L. 17–130 (Oath and Offices Protection) remain historical rather than operative law. Great Change transition, savings, severability, and effective-date provisions remain as statutory history/notes where appropriate.
 
+## United States Capitol Police Reform and Accountability Act — Pub. L. 42–274
+
+Classified to **Title 2, chapter 70, United States Capitol Police Reform and Accountability**:
+
+- 2 U.S.C. § 7001 — Definitions (source § 3)
+- 2 U.S.C. § 7002 — United States Capitol Police (source § 4)
+- 2 U.S.C. § 7003 — Capitol Police Board (source § 5)
+- 2 U.S.C. § 7004 — Chief of the United States Capitol Police (source § 6)
+- 2 U.S.C. § 7005 — Directives of the Board and Sergeants at Arms (source § 7)
+- 2 U.S.C. § 7006 — Deputy Chief and Acting Chief (source § 8)
+- 2 U.S.C. § 7007 — Jurisdiction of the United States Capitol Police (source § 9)
+- 2 U.S.C. § 7008 — Authority in House, Senate, and shared spaces (source § 10)
+- 2 U.S.C. § 7009 — Protection of Members, officers, employees, witnesses, and guests (source § 11)
+- 2 U.S.C. § 7010 — Deployment outside the United States Capitol Buildings and Grounds (source § 12)
+- 2 U.S.C. § 7011 — Special officers of the Capitol Police (source § 13)
+- 2 U.S.C. § 7012 — Removals, detentions, and arrests (source § 14)
+- 2 U.S.C. § 7013 — Use of force (source § 15)
+- 2 U.S.C. § 7014 — Executive noninterference and interagency assistance (source § 16)
+- 2 U.S.C. § 7015 — Complaints, discipline, and internal review (source § 17)
+- 2 U.S.C. § 7016 — Access rules and restricted areas (source § 18)
+- 2 U.S.C. § 7017 — Emergency authority, lockdowns, and evacuations (source § 19)
+- 2 U.S.C. § 7018 — Political neutrality and prohibited uses (source § 20)
+- 2 U.S.C. § 7019 — Criminal offenses and penalties (source § 21)
+
+Source §§ 1–2 and 22–24 are retained at § 7001 as short-title, repeal/supersession, severability, rule-of-construction, and effective-date/transition notes. Section 2 expressly repeals the named Uniformed Capitol Police Act of 2023 and United States Capitol Police Technical Corrections Act and supersedes inconsistent continuing authority.
+
+The existing baseline Title 2, chapter 29 Capitol Police provisions are not silently deleted because Pub. L. 42–274 does not identify those federal Code sections for literal repeal. Current-law notices are projected onto the most directly affected chapter 29 sections so the published Code makes the later USAR framework visible and gives it controlling effect to the extent of inconsistency. The archive contains a conflicting historical public-law-number assignment for the named 2023 Uniformed Capitol Police Act, so the new Act's repeal is recorded by enacted act name rather than by overwriting an unrelated audited public-law identity.
+
 ## Implementation
 
-`tools/apply_current_law_sections.py` applies these classifications to the working USLM title XML during the Pages build. The ordered `current-law-sections.json.gz.b64.part*` files contain a compressed structured manifest of the section text used by the overlay. The pass is deterministic and idempotent, rejects collisions with non-managed Code sections, and validates duplicate IDs/identifiers before the site build continues. Maintenance normalization may consolidate the manifest into a single canonical part without changing its decoded contents.
+`tools/apply_current_law_sections.py` applies these classifications to the working USLM title XML during the Pages build. The ordered `current-law-sections.json.gz.b64.part*` files contain the compressed historical structured manifest; later enactments may be kept in reviewable `current-law-sections.extra.*.json` sidecars, which are merged deterministically at build time. The pass is deterministic and idempotent, rejects collisions with non-managed Code sections, and validates duplicate IDs/identifiers before the site build continues.
+
+`tools/apply_current_law_notes.py` similarly merges `current-law-notes.extra.*.json` sidecars with the primary current-law-note manifest so later transfer and supersession notices can be maintained without rewriting historical manifest data.
