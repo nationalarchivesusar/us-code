@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Documentation for the versioned USAR United States Code public JSON API." />
     <link rel="canonical" href="https://nationalarchivesusar.github.io/us-code/api.html" />
-    <meta property="og:title" content="Code API | US Code Library" />
+    <meta property="og:title" content="Developer API | US Code Library" />
     <meta property="og:description" content="Use the versioned general United States Code JSON API." />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="US Code Library" />
     <meta property="og:url" content="https://nationalarchivesusar.github.io/us-code/api.html" />
     <meta property="og:image" content="https://nationalarchivesusar.github.io/us-code/assets/images/social-card.png" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Code API | US Code Library" />
+    <meta name="twitter:title" content="Developer API | US Code Library" />
     <meta name="twitter:description" content="Use the versioned general United States Code JSON API." />
     <meta name="twitter:image" content="https://nationalarchivesusar.github.io/us-code/assets/images/social-card.png" />
-    <title>Code API | US Code Library</title>
+    <title>Developer API | US Code Library</title>
     <script src="assets/js/site-bootstrap.js"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png" />
@@ -47,21 +47,18 @@
       </div>
       <nav class="primary-nav" aria-label="Primary navigation">
         <div class="primary-nav__inner">
-          <a href="./">Home</a>
-          <a href="./#search">Search Code</a>
-          <a href="./#browse">Code Titles</a>
-          <a href="criminal-law.html">Criminal Law</a>
+          <a href="./">U.S. Code</a>
           <a href="public-laws.html">Public Laws</a>
-          <a href="changes.html" data-legal-material="code-changes">Code Changes</a>
-          <a href="constitution.html" data-legal-material="constitution">Constitution</a>
-          <a class="primary-nav__related" href="https://nationalarchivesusar.github.io/courts/" aria-label="United States Courts, related site">United States Courts <span aria-hidden="true">↗</span></a>
+          <a href="constitution.html">Constitution</a>
+          <a href="criminal-law.html">Criminal Law</a>
+          <a class="primary-nav__related" href="https://nationalarchivesusar.github.io/courts/">United States Courts <span aria-hidden="true">↗</span></a>
         </div>
       </nav>
     </header>
 
     <section class="api-hero" aria-labelledby="api-heading">
       <div class="api-hero__inner">
-        <p class="eyebrow">Public Data Interface</p>
+        <p class="eyebrow">Developer Utility</p>
         <h1 id="api-heading">United States Code API</h1>
         <p>A compact, versioned JSON index for the general Code, published separately from the established Criminal Law API.</p>
       </div>
@@ -121,7 +118,6 @@ const chunkPath = manifest.section_to_chunk["1752"];
 const chunk = await fetch(`https://nationalarchivesusar.github.io/us-code/${chunkPath}`).then(r =&gt; r.json());
 const section = chunk.sections.find(item =&gt; item.section === "1752");
 
-// Complete statutory text remains in the site's published USLM XML:
 const sourceXml = `https://nationalarchivesusar.github.io/us-code/${manifest.source_xml}`;
 console.log(section.identifier, sourceXml);</code></pre>
       </section>
@@ -141,13 +137,11 @@ console.log(section.identifier, sourceXml);</code></pre>
             <span>Maintained by the <strong>National Archives and Records Administration</strong> for the United States Code.</span>
           </a>
           <nav class="footer-nav" aria-label="Footer navigation">
-            <a href="./">Home</a>
-            <a href="./#browse">Code Titles</a>
-            <a href="criminal-law.html">Criminal Law</a>
+            <a href="./">U.S. Code</a>
             <a href="public-laws.html">Public Laws</a>
-            <a href="changes.html" data-legal-material="code-changes">Code Changes</a>
-            <a href="constitution.html" data-legal-material="constitution">Constitution</a>
-            <a href="api.html" data-legal-material="api" aria-current="page">API</a>
+            <a href="constitution.html">Constitution</a>
+            <a href="criminal-law.html">Criminal Law</a>
+            <a href="api.html" aria-current="page">Developer API</a>
             <a href="https://nationalarchivesusar.github.io/courts/">United States Courts</a>
           </nav>
         </div>
