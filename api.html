@@ -63,7 +63,7 @@
       <div class="api-hero__inner">
         <p class="eyebrow">Public Data Interface</p>
         <h1 id="api-heading">United States Code API</h1>
-        <p>A versioned JSON interface for the general Code, published separately from the established Criminal Law API.</p>
+        <p>A compact, versioned JSON index for the general Code, published separately from the established Criminal Law API.</p>
       </div>
     </section>
 
@@ -76,7 +76,7 @@
       <section class="api-section">
         <p class="eyebrow">Start here</p>
         <h2>API root</h2>
-        <p>The root index lists available Code titles and the per-title manifests used for section lookup.</p>
+        <p>The root index lists available Code titles, their compact section manifests, and the already-published USLM XML source for each title.</p>
         <div class="api-endpoint"><code>data/api/v1/code/index.json</code><a href="data/api/v1/code/index.json">Open JSON</a></div>
       </section>
 
@@ -87,9 +87,10 @@
           <li>Fetch <code>data/api/v1/code/index.json</code> and select the title.</li>
           <li>Fetch that title's manifest, for example <code>data/api/v1/code/titles/18/manifest.json</code>.</li>
           <li>Look up the desired section in <code>section_to_chunk</code>.</li>
-          <li>Fetch that compact chunk and select the matching object from its <code>sections</code> array.</li>
+          <li>Fetch that compact chunk and select the matching metadata object from its <code>sections</code> array.</li>
+          <li>If complete statutory text is needed, fetch the title manifest's <code>source_xml</code> and locate the section by its exact USLM <code>identifier</code>.</li>
         </ol>
-        <p>The chunked design avoids requiring clients to download an entire large U.S. Code title to retrieve one provision.</p>
+        <p>The API deliberately does not duplicate the entire statutory corpus in JSON. The authoritative USLM XML is already published by the site, so the compact API provides fast discovery and stable pointers while keeping one source of statutory text.</p>
       </section>
 
       <section class="api-section">
@@ -98,12 +99,16 @@
         <div class="api-field-grid">
           <code>section</code><span>Canonical section number.</span>
           <code>citation</code><span>Formatted U.S. Code citation.</span>
-          <code>identifier</code><span>USLM section identifier.</span>
-          <code>heading</code><span>Section heading.</span>
-          <code>body</code><span>Operative statutory body, excluding source/history notes.</span>
+          <code>identifier</code><span>Exact USLM section identifier used to locate complete text in the title's <code>source_xml</code>.</span>
+          <code>heading</code><span>Section heading for discovery and display.</span>
           <code>web_url</code><span>Relative deep link to the human-readable Code section.</span>
         </div>
-        <p>Text-oriented clients can combine <code>heading</code> and <code>body</code> when a single display string is needed.</p>
+      </section>
+
+      <section class="api-section">
+        <p class="eyebrow">Title manifest</p>
+        <h2>Full-text source pointer</h2>
+        <p>Every title manifest exposes <code>source_xml</code> and <code>source_format: "USLM XML"</code>. A client that needs complete statutory language should fetch that file and locate the section whose <code>identifier</code> matches the API record.</p>
       </section>
 
       <section class="api-section">
@@ -114,7 +119,11 @@ const title = root.titles.find(item =&gt; item.title === "18");
 const manifest = await fetch(`https://nationalarchivesusar.github.io/us-code/${title.manifest}`).then(r =&gt; r.json());
 const chunkPath = manifest.section_to_chunk["1752"];
 const chunk = await fetch(`https://nationalarchivesusar.github.io/us-code/${chunkPath}`).then(r =&gt; r.json());
-const section = chunk.sections.find(item =&gt; item.section === "1752");</code></pre>
+const section = chunk.sections.find(item =&gt; item.section === "1752");
+
+// Complete statutory text remains in the site's published USLM XML:
+const sourceXml = `https://nationalarchivesusar.github.io/us-code/${manifest.source_xml}`;
+console.log(section.identifier, sourceXml);</code></pre>
       </section>
 
       <section class="api-section">
