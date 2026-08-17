@@ -1,26 +1,62 @@
+.constitution-heading-row[data-research-enhanced="true"] {
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: baseline;
+  column-gap: 0.45rem;
+}
+
+.constitution-heading-row[data-research-enhanced="true"] > h2,
+.constitution-heading-row[data-research-enhanced="true"] > h3 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
 .constitution-heading-actions {
   display: inline-flex;
+  grid-column: 2;
+  grid-row: 1;
   flex: 0 0 auto;
-  align-self: start;
-  gap: 0.3rem;
-  margin-left: auto;
+  align-self: baseline;
+  gap: 0.12rem;
+  margin-left: 0;
+  white-space: nowrap;
+  font-family: var(--sans);
+}
+
+.constitution-heading-row[data-research-enhanced="true"] .constitution-permalink {
+  grid-column: 3;
+  grid-row: 1;
+  align-self: baseline;
+  margin-top: 0;
 }
 
 .constitution-heading-actions button {
-  border: 1px solid var(--border);
-  background: var(--surface-alt);
+  border: 1px solid transparent;
+  background: transparent;
   color: var(--muted);
-  padding: 0.28rem 0.48rem;
-  font-size: 0.68rem;
-  font-weight: 800;
+  padding: 0.24rem 0.34rem;
+  font: inherit;
+  font-size: 0.67rem;
+  font-weight: 750;
+  line-height: 1.25;
   cursor: pointer;
 }
 
-.constitution-heading-actions button:hover,
+.constitution-heading-actions button + button {
+  border-left-color: var(--border);
+}
+
+.constitution-heading-actions button:hover {
+  border-color: var(--border);
+  background: var(--surface-alt);
+  color: var(--cornell-red-dark);
+}
+
 .constitution-heading-actions button:focus-visible {
   border-color: var(--border-strong);
+  background: var(--surface-alt);
   color: var(--cornell-red-dark);
-  outline: none;
+  outline: 2px solid color-mix(in srgb, var(--cornell-red) 35%, transparent);
+  outline-offset: 1px;
 }
 
 .constitution-toc__link.is-active {
@@ -114,11 +150,6 @@
 }
 
 @media (max-width: 760px) {
-  .constitution-heading-actions {
-    flex-basis: 100%;
-    margin-left: 0;
-  }
-
   .constitution-provenance__grid {
     grid-template-columns: 1fr;
   }
@@ -130,6 +161,33 @@
 
   .constitution-provenance__grid dd {
     padding-top: 0.1rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .constitution-heading-row[data-research-enhanced="true"] {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+  }
+
+  .constitution-heading-row[data-research-enhanced="true"] > h2,
+  .constitution-heading-row[data-research-enhanced="true"] > h3 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .constitution-heading-row[data-research-enhanced="true"] .constitution-permalink {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+    margin-top: 0.15rem;
+  }
+
+  .constitution-heading-actions {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    align-self: start;
+    margin-top: -0.15rem;
   }
 }
 
