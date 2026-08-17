@@ -1,340 +1,529 @@
 # U.S. Code Legal Research Roadmap
 
-This file is the recovery and continuation plan for the legal-research features on the USAR U.S. Code website. Read it first if work resumes in another chat or coding session.
+This is the recovery/continuation file for the USAR U.S. Code legal-research project. Read it first if work resumes in another chat, coding session, or AI agent.
 
-## Core architecture
+## Project map
 
 - **Repository:** `nationalarchivesusar/us-code`
 - **Production:** `https://nationalarchivesusar.github.io/us-code/`
-- **Courts site:** `https://nationalarchivesusar.github.io/courts/`
-- **Constitution source:** NARA HackMD note `CDCV7p2_Sca6O0FrEJyaIQ`
-- **Public Law/codification index:** repository audit/legal-data inputs compiled into `data/public-laws.json`
-- **Codification comparison baseline:** `00ea0e9b430e4a2eb2253a77d35e6fb125ba5f46`
-- **Criminal Law API:** `data/api/v1/criminal-law/` — preserve its public contract unless a change is explicitly requested.
+- **Courts repository:** `nationalarchivesusar/courts`
+- **Courts production:** `https://nationalarchivesusar.github.io/courts/`
+- **Constitution publication source:** NARA HackMD note `CDCV7p2_Sca6O0FrEJyaIQ`
+- **Fixed codification comparison baseline:** `00ea0e9b430e4a2eb2253a77d35e6fb125ba5f46`
+- **Existing Criminal Law API:** `data/api/v1/criminal-law/` — its public contract must remain unchanged unless explicitly requested.
 
-The intended research model is:
+The intended research ecosystem is:
 
 1. **U.S. Code** — what the law currently says.
-2. **Public Laws** — how the Code got there.
-3. **Constitution** — the controlling constitutional text published from the NARA HackMD source.
-4. **Courts** — what the judiciary has said about the law.
+2. **Public Laws** — how the statutory law got there.
+3. **Code Changes / History** — verified textual state changes and recorded codification actions.
+4. **Constitution** — constitutional text published from the NARA source copy, with provenance.
+5. **United States Courts** — what the judiciary has said about statutes/constitutional provisions.
+6. **Public APIs** — machine-readable access without forcing consumers to scrape the research UI.
 
-These surfaces should be tightly linked without being visually identical.
-
----
-
-## Completed foundation
-
-### Shared Code research tools
-
-Implemented:
-
-- U.S. Code citation jumper, including subsection pinpoints.
-- Public Law citation jumper.
-- Section toolbar with copy citation, copy link, source laws, XML source, and print.
-- Code → Public Law source history backed by `data/public-laws.json`.
-- Public Law → Code affected-section links.
-- Stable `/cite/<title>/<section>/` routes and subsection pinpoint behavior.
-
-Primary files:
-
-- `assets/js/research-tools.js`
-- `assets/css/research-tools.css`
-- `tools/build_public_laws_index.py`
-- `tools/filter_public_laws_for_publication.py`
-
-### Constitution
-
-Implemented:
-
-- Dedicated Constitution page.
-- Search and sticky table of contents.
-- Article, Amendment, and Section permalinks.
-- Light/dark theme support and print styling.
-- Build-time synchronization from the NARA HackMD source.
-- Validation that rejects a truncated or malformed source.
-- Preservation of HackMD legal-document hierarchy so Articles, Amendments, and Sections render correctly.
-- Tolerant structural recognition of source wording such as `Section 1.`, `Section. 1.`, and the existing `Secton. 1.` typo without rewriting the constitutional text.
-
-Important legal/source rule: **editing the HackMD changes the website publication source, but does not itself establish that a constitutional amendment was legally adopted.** Legal validity still depends on the RP constitutional amendment/ratification process.
-
-Primary files:
-
-- `constitution.html`
-- `assets/js/constitution.js`
-- `assets/css/constitution.css`
-- `tools/build_constitution.py`
-- `tests/test_constitution_build.py`
+These sites/surfaces should be deeply linked while remaining visually and conceptually distinct.
 
 ---
 
-## Current implementation: verified section redlines
+# Production foundation already merged
 
-### Goal
+## PR #13 — verified baseline redlines
 
-Give a researcher a defensible answer to:
+PR **#13 — Add verified U.S. Code section redlines** was merged into `main` at:
 
-> **What changed in this U.S. Code section compared with the codification repository baseline?**
+`3e3d869d66cef16b8b411268aa8cd7098e225192`
 
-### Reliability boundary
+That release established the first defensible textual-history layer:
 
-The repository preserves two different kinds of evidence:
-
-- `data/public-laws.json` identifies Public Laws/actions associated with a Code section.
-- Baseline commit `00ea0e9b430e4a2eb2253a77d35e6fb125ba5f46` preserves actual earlier Code text.
-
-Therefore the current feature makes only the claim the evidence supports:
-
-> **Verified repository baseline → current published text.**
-
-It must **not** fabricate an intermediate text version after each Public Law. Public Laws may be identified as associated section history without claiming that the site has reconstructed the exact Code text immediately after each enactment.
-
-### Branch / pull request
-
-- Feature branch: `feature/section-redlines`
-- Pull request: **#13 — Add verified U.S. Code section redlines**
-
-If PR #13 has already been merged or closed when this file is read, continue from the latest `main`; do not recreate obsolete branch work blindly.
-
-### Build-time comparison engine
-
-Primary builder: `tools/build_section_history.py`
-
-The builder:
-
-1. reads the finalized public-law dataset;
-2. identifies section targets actually referenced by that codification index;
-3. loads the current U.S. Code XML section;
-4. loads the same title from the fixed baseline commit;
-5. compares substantive section text;
-6. emits a record only where a verified substantive difference exists;
-7. verifies that its diff operations reconstruct both the baseline and current text exactly.
-
-Generated output:
-
+- `tools/build_section_history.py`
 - `data/section-history/manifest.json`
 - `data/section-history/<title>/<section>.json`
-
-The manifest is intentionally small so the browser can determine whether a current section has a comparison without downloading the entire history corpus.
-
-Per-section records contain:
-
-- schema version;
-- title, section, and citation;
-- comparison status: `amended`, `added`, or `removed`;
-- baseline commit, text, heading, presence flag, and SHA-256;
-- current text, heading, presence flag, and SHA-256;
-- build-time diff operations: `equal`, `insert`, and `delete`.
-
-### Statutory-text scope
-
-Redlines compare the section heading and substantive statutory body. They intentionally exclude:
-
-- source credits;
-- statutory notes;
-- historical/amendment notes;
-- table-of-contents metadata.
-
-Those remain available through the normal Code presentation and Public Law history. This prevents a source-credit or note-only change from being displayed as though the operative statutory text changed.
-
-### Publication pipeline
-
-The normal Pages pipeline already:
-
-1. checks out current XML/LFS content;
-2. fetches baseline commit `00ea0e9b430e4a2eb2253a77d35e6fb125ba5f46`;
-3. applies current-law overlays;
-4. builds the initial Public Law index;
-5. runs `tools/filter_public_laws_for_publication.py` to finalize/validate public-facing targets.
-
-The redline build is hooked into the **end of `tools/filter_public_laws_for_publication.py`**, after `data/public-laws.json` has been finalized. That step invokes `tools/build_section_history.py` against the fixed baseline while the current XML corpus is still present.
-
-This ordering matters: comparison candidates must come from the cleaned, public-facing section targets rather than raw internal codification identifiers.
-
-Title 42 is Git LFS-managed. `tools/build_section_history.py` detects an LFS pointer in baseline material and smudges/materializes the historical object. CI must demonstrate that Title 42 history can be handled without silently substituting current text.
-
-The normal static-site step copies the entire `data/` tree into `_site`, so generated `data/section-history/` files are published without adding a second copy mechanism.
-
-### Browser UI
-
-The comparison UI is deliberately isolated from the existing research toolbar implementation.
-
-Primary files:
-
 - `assets/js/section-comparison.js`
 - `assets/css/section-comparison.css`
-- `assets/js/site-bootstrap.js`
+
+The fixed comparison is:
+
+> **repository baseline → current published Code**
+
+The build compares section heading + operative statutory body, excluding source credits and historical/statutory notes so metadata-only changes do not masquerade as statutory amendments.
+
+The clean PR artifact examined **254** unique Public-Law-linked targets and produced:
+
+- **97 verified substantive changes**
+  - 84 added
+  - 3 amended
+  - 10 removed from the current source
+- **157 substantively unchanged tracked targets**
+- **0 unavailable titles** in that build
+
+Representative amended sections included 5 U.S.C. § 552, 6 U.S.C. § 101, and 18 U.S.C. § 205. Newly created provisions such as 40 U.S.C. § 9701 correctly appeared as added.
+
+The key reliability rule remains permanent:
+
+> A Public Law being associated with a section does **not** prove the exact statutory text immediately after that enactment.
+
+Never manufacture an intermediate version.
+
+---
+
+# Phase II implementation
+
+## Working branch
+
+`feature/research-suite-phase-2`
+
+This branch is the comprehensive legal-research expansion requested after PR #13. At the time this roadmap revision was written, it had **not yet been merged**. Full Pages CI and production deployment must be completed before changing this status.
+
+## 1. Homepage/search consolidation
+
+Problem addressed: the homepage had a second pink **“Jump to a legal citation”** block below the real search form, creating unnecessary whitespace and duplicating the same research function.
+
+New files:
+
+- `assets/js/homepage-search.js`
+- `assets/css/homepage-search.css`
 
 Behavior:
 
-1. `site-bootstrap.js` loads both `research-tools.js` and `section-comparison.js` on Code viewer pages.
-2. `section-comparison.js` waits for the ordinary section toolbar.
-3. It lazily loads `data/section-history/manifest.json`.
-4. **Compare versions** appears only where the current section has a verified comparison record.
-5. The detailed per-section JSON is fetched only after the user opens the comparison.
-6. The comparison panel provides:
-   - **Redline** — inline insertions and deletions;
-   - **Side by side** — baseline and current text in separate columns.
-7. The panel is explicitly labeled **Verified baseline comparison**.
-8. The panel states that Public Law history does **not yet** represent reconstructed per-enactment text snapshots.
-9. A control opens the existing **Source laws & section history** panel so textual change and enactment history remain connected.
-10. Baseline/current text hashes are surfaced as a verification aid.
+- the legacy `#quick-citation-form` is removed/hidden;
+- the main Citation search remains the one search surface;
+- its section field becomes **Section or citation**;
+- it accepts ordinary title + section input as before;
+- it also accepts full citations such as `18 U.S.C. § 1752(a)(1)`;
+- it accepts Public Law forms such as `Pub. L. 41-271`;
+- subsection pinpoints continue to route through `?p=`;
+- keyword mode remains the existing keyword search.
 
-Security/presentation detail: statutory comparison text is inserted as DOM text nodes and `<ins>/<del>` elements rather than interpolated into unsafe HTML.
+The goal is a compact legal-research homepage, not a dashboard full of replacement cards.
 
-Responsive behavior:
+## 2. Exact repository-state version history
 
-- side-by-side comparison stacks on narrow screens;
-- normal theme variables support light/dark mode;
-- print output keeps comparison text legible while suppressing unnecessary controls.
+Primary builder:
 
-### Tests
+- `tools/build_version_history.py`
 
-`tests/test_section_history.py` covers:
+Generated output:
 
-- U.S. Code title filename normalization;
-- Public Law target deduplication;
-- exclusion of source credits and notes from substantive comparison text;
-- note-only changes producing no redline;
-- amended text producing reversible diff operations;
-- newly added sections being marked `added`.
+- `data/version-history/manifest.json`
+- `data/version-history/<title>/<section>.json`
 
-`tests/test_section_comparison.mjs` covers:
+Configured verified repository states:
 
-- comparison module/CSS wiring into `site-bootstrap.js`;
-- actual Node syntax validation of `section-comparison.js`;
-- presence of the verified-baseline, Redline, Side-by-side, and no-fabricated-intermediate-version UI contract.
+1. `00ea0e9b430e4a2eb2253a77d35e6fb125ba5f46` — **Codification repository baseline**
+2. `21e483ef2f71762f954f20c48a9a207898848645` — **Public-law corpus reconciled**
+3. `6ece679f3e504db46d27fbd06a48980850a056f1` — **2026 enactments integrated**
+4. current published working tree — **Current published Code**
 
-Before merge, the full existing Pages CI must also pass, including:
+Important semantics:
 
-- current-law overlay tests;
+- these are **repository-state versions**, not automatically one version per enactment;
+- exact statutory text is extracted from the actual XML at each retrievable state;
+- consecutive identical statutory states are collapsed and recorded through `also_represents`;
+- every unique text carries SHA-256 verification;
+- token redlines are precomputed for every pair of unique versions;
+- Public Law numbers are attached to a repository state only when the commit message explicitly names that law **and** the law is associated with the section;
+- associated Public Laws remain section-history evidence, not proof of exact per-enactment text.
+
+Shallow CI handling:
+
+- `ensure_commit()` fetches a known snapshot SHA on demand if it is absent from the checkout;
+- historical Git LFS XML is smudged/materialized;
+- unavailable snapshots/titles are recorded explicitly rather than silently replaced with current text;
+- the builder fails if no historical snapshot can be verified at all.
+
+This is a major improvement over only baseline/current because a researcher can compare any preserved unique repository states without pretending the repository preserved a perfect legislative chronology.
+
+## 3. Statutory References / Referenced By graph
+
+Primary builder:
+
+- `tools/build_reference_graph.py`
+
+Generated output:
+
+- `data/references/manifest.json`
+- `data/references/<title>/<section>.json`
+
+Reliability rule:
+
+> Only explicit USLM `<ref>` `href`/`identifier` links count as statutory references.
+
+There is **no fuzzy text matching** and no browser-side crawl of the Code.
+
+The graph stores:
+
+- outgoing **References**;
+- incoming **Referenced by**;
+- canonical citation;
+- heading;
+- compact manifest counts/path for lazy loading.
+
+The full Pages build must prove that the actual current XML corpus yields nonzero verified edges before merge.
+
+## 4. Richer section research interface
+
+Primary files:
+
+- `assets/js/section-research.js`
+- `assets/css/section-research.css`
+- `assets/js/court-bridge.js`
+- `assets/js/site-bootstrap.js`
+
+A current section gains a restrained research summary rather than a heavy dashboard. Depending on available verified data it can show:
+
+- **Current law**
+- source-law count
+- verified version count
+- outgoing references
+- incoming references
+- **Search case law ↗**
+
+### Version History panel
+
+Lazy-loaded per section and supports:
+
+- choose any earlier/later verified repository state;
+- **Redline** view;
+- **Side by side** view;
+- repository-state timeline;
+- commit/date metadata;
+- explicit Public Law commit associations where support exists;
+- clear disclaimer that repository snapshots are not fabricated per-enactment versions.
+
+### Statutory References panel
+
+Lazy-loaded per section and shows:
+
+- **References**
+- **Referenced by**
+
+Each existing target links directly to its `/cite/<title>/<section>/` route.
+
+### Courts bridge
+
+The Courts site already has a Case Law Search page at permanent route `/caselaw/`. Its own `assets/case-search.js` reads the `q` URL parameter and automatically executes a Supreme Court-only CourtListener search.
+
+`court-bridge.js` therefore rewrites the section's Courts link to:
+
+`https://nationalarchivesusar.github.io/courts/caselaw/?q="<citation>"`
+
+Example conceptually:
+
+`/courts/caselaw/?q="18 U.S.C. § 1752"`
+
+This is a genuine cross-site research handoff. The Code site does **not** display an invented case count. If a future Courts dataset exposes structured statute-citation metadata, exact Code-section → decision counts can be built later.
+
+## 5. Changes to the Code
+
+New page/files:
+
+- `changes.html`
+- `assets/js/code-changes.js`
+- `assets/css/code-changes.css`
+
+Purpose: connect Public Laws to affected Code sections without confusing codification records with independently verified textual change.
+
+Filters:
+
+- search term;
+- U.S.C. title;
+- active/repealed Public Law status;
+- verified added/amended/removed;
+- recorded action.
+
+Evidence labels are deliberately distinct:
+
+- **Verified amended / added / removed** — the fixed baseline → current textual classification from `data/section-history/manifest.json`.
+- **Recorded action** — the Public Law codification index says the law/action affected that section, but the site is not claiming that action by itself equals an independently reconstructed text snapshot.
+
+The page explicitly warns that a baseline/current verified classification is not necessarily the isolated effect of the displayed Public Law.
+
+Do not invent enactment dates if the source dataset does not preserve trustworthy dates.
+
+## 6. General U.S. Code API v1
+
+Primary builder:
+
+- `tools/build_code_api.py`
+
+Documentation:
+
+- `api.html`
+- `assets/css/api.css`
+
+Namespace:
+
+`data/api/v1/code/`
+
+This is intentionally **separate** from:
+
+`data/api/v1/criminal-law/`
+
+The existing Criminal Law API must not be renamed, reshaped, or replaced.
+
+General API layout:
+
+- `data/api/v1/code/index.json`
+- `data/api/v1/code/titles/<title>/manifest.json`
+- `data/api/v1/code/titles/<title>/chunk-NNN.json`
+
+A title manifest includes `section_to_chunk`, allowing a client to locate one section without downloading an entire large title.
+
+Current v1 section object fields:
+
+- `section`
+- `citation`
+- `identifier`
+- `heading`
+- `body`
+- `web_url`
+
+The schema intentionally avoids duplicating a separate `text` field because clients can concatenate `heading` + `body`; this keeps the static publication smaller.
+
+Compatibility rule:
+
+- additive fields may be introduced inside v1;
+- incompatible structural changes should use a new API version.
+
+## 7. Constitution provenance and research controls
+
+Updated builder:
+
+- `tools/build_constitution.py`
+
+New generated metadata:
+
+- `data/constitution-meta.json`
+
+It records:
+
+- NARA HackMD source URL/note ID;
+- UTC fetch timestamp;
+- SHA-256 of exactly the text being published;
+- character count;
+- publication-role description;
+- explicit legal-validity caveat.
+
+The legal/source distinction must always remain explicit:
+
+> HackMD is the website publication source. Editing it changes what the site imports on a build; editing it does **not by itself** prove that a constitutional amendment or revision was legally adopted under the Constitution.
+
+New UI:
+
+- `assets/js/constitution-research.js`
+- `assets/css/constitution-research.css`
+
+Features:
+
+- Copy constitutional citation;
+- Copy permalink;
+- article citations such as `U.S. Const. art. II`;
+- section citations such as `U.S. Const. art. II, § I`;
+- amendment citations such as `U.S. Const. amend. XXIV, § 2`;
+- active TOC highlighting while scrolling;
+- collapsible **Publication provenance** block with source/hash/fetch information.
+
+The underlying constitutional wording is never silently corrected by this presentation layer.
+
+## 8. Automatic Constitution publication refresh
+
+New workflow:
+
+- `.github/workflows/constitution-refresh.yml`
+
+Schedule:
+
+- hourly at minute 17 UTC (`17 * * * *`)
+- manual `workflow_dispatch` also available.
+
+The scheduled task dispatches the normal `jekyll-gh-pages.yml` workflow on `main`. The normal Pages build then fetches/validates the HackMD Constitution and republishes it.
+
+This means a valid HackMD publication edit can propagate without an unrelated repository commit, subject to GitHub Actions scheduling delay.
+
+If Actions permissions prevent the dispatch after merge, move the schedule trigger directly into `jekyll-gh-pages.yml`; do not replace the validation/build path with a weaker updater.
+
+## 9. Static publication changes
+
+The existing Pages workflow copies selected root HTML files rather than blindly publishing every root page. To make the new research pages deploy without duplicating the whole workflow, `tools/build_social_routes.py` now also publishes:
+
+- `changes.html`
+- `api.html`
+
+into `_site` before validating social metadata and generating citation routes.
+
+Both pages must have the same required canonical/OpenGraph/Twitter metadata contract as existing public pages.
+
+## 10. Build pipeline integration
+
+`tools/filter_public_laws_for_publication.py` remains the post-codification publication gate. After it finalizes/validates `data/public-laws.json`, Phase II now invokes:
+
+1. existing `build_section_history()`;
+2. `build_version_history()`;
+3. `build_reference_graph()`;
+4. `build_code_api()`.
+
+This ordering is intentional. Research data should be generated from the already-cleaned public-facing Public Law targets and current finalized Code XML.
+
+The builder fails publication if:
+
+- no verified section-history changes exist;
+- no exact version-history sections exist;
+- the explicit reference graph yields no verified edges;
+- the general Code API yields no sections.
+
+Existing Criminal Law API generation/hardening remains in its established workflow steps.
+
+---
+
+# Tests and validation
+
+Existing important tests remain:
+
+- `tests/test_section_history.py`
+- `tests/test_section_comparison.mjs`
+- all current-law/codification tests;
 - Public Law dataset validation;
-- all Python tests;
-- all Node/static-site tests;
-- Title 42 build checks;
-- Criminal Law API hardening/final-surface checks;
-- static Pages artifact assembly.
+- Title 42/LFS checks;
+- Criminal Law API hardening/final-surface tests;
+- static Pages/social-route tests.
 
-### Required spot checks before/after publication
+New Phase II integration test:
 
-Verify at least:
+- `tests/test_research_suite.mjs`
 
-- one **amended** existing section;
-- one **newly added** section;
-- one Public-Law-linked section whose substantive text is unchanged and therefore has no Compare versions button;
-- at least one Title 42 target to verify historical LFS handling;
-- mobile layout;
-- dark-mode layout;
-- production `data/section-history/manifest.json` after deployment.
+It checks:
 
----
+- Node syntax for all new JS modules;
+- single-surface homepage citation behavior;
+- bootstrap wiring;
+- version-history/references UI contract;
+- Courts citation-search bridge;
+- Changes-page evidence distinctions;
+- separate general Code API namespace;
+- Constitution provenance/legal-validity caveat;
+- hourly Constitution refresh workflow.
 
-## Next phase: true per-enactment historical versions
-
-This is intentionally **not** part of the verified-baseline MVP unless sufficient evidence is available.
-
-Desired eventual capability:
-
-- original/baseline text;
-- snapshot after Public Law A;
-- snapshot after Public Law B;
-- current text;
-- comparison between any two verified states.
-
-### Correct implementation path
-
-1. Establish an ordered enactment/action timeline for each affected section.
-2. Preserve or recover exact enacted amendment instructions/text for each action.
-3. Replay actions deterministically against the correct predecessor version.
-4. Store a hash for every reconstructed snapshot.
-5. Validate that replaying all applicable actions produces text identical to the current published section.
-6. Mark actions that cannot be deterministically replayed as unavailable rather than guessing.
-7. Distinguish an official/preserved historical text from a site reconstruction in UI metadata.
-
-**Never label an inferred or approximate reconstruction as authoritative historical text.**
+The **real full Pages build is the integration test** for the corpus builders. Unit tests alone are not sufficient because historical Git/LFS materialization and actual USLM reference structure must work against the repository corpus.
 
 ---
 
-## Later research phases
+# Mandatory pre-merge verification for Phase II
 
-### 1. Cited by / References graph
+Do not merge `feature/research-suite-phase-2` until all of the following are true:
 
-Build a lazy build-time reference graph from USLM `<ref>` links and identifiers:
+1. Full GitHub Pages build/validation succeeds.
+2. `data/version-history/manifest.json` has nonzero verified versioned sections and at least one historical snapshot.
+3. `data/references/manifest.json` has nonzero verified explicit statutory edges.
+4. `data/api/v1/code/index.json` has a plausible title/section count.
+5. `data/constitution-meta.json` exists and validates against the published Constitution text.
+6. `changes.html` and `api.html` are present in the Pages artifact.
+7. Representative exact version records look legally sensible:
+   - 18 U.S.C. § 205
+   - 5 U.S.C. § 552
+   - a newly added section such as 40 U.S.C. § 9701
+8. At least one reference record has both sensible outgoing/incoming statutory links where expected.
+9. Homepage artifact no longer presents the redundant pink quick-citation block after JS enhancement.
+10. Existing `/cite/<title>/<section>/` and subsection pinpoint routes still work.
+11. Criminal Law API validation remains green and its namespace/contracts are unchanged.
+12. Artifact size remains acceptable for GitHub Pages.
 
-- **References** — statutes this section cites.
-- **Referenced by** — statutes that cite this section.
-- Direct navigation between related provisions.
-- Optional visual relationship graph where it adds value.
-
-Do not scan the full XML corpus in every user's browser.
-
-### 2. Changes to the Code page
-
-Create a dedicated chronological/legal-change research page showing, where supported:
-
-- Public Law number and title;
-- affected Code sections;
-- added / amended / repealed classification;
-- direct links to Public Law, current section, and verified redline.
-
-Do not invent enactment dates when source data does not reliably preserve them.
-
-### 3. Constitution research controls
-
-Add Code-quality controls to constitutional provisions:
-
-- Copy constitutional citation.
-- Copy permalink.
-- Active TOC highlighting while scrolling.
-- Citation forms such as `U.S. Const. art. II, § I` and `U.S. Const. amend. XXIV, § 2`.
-- Refined print view.
-
-Preserve exact source text, including source typos, unless the authoritative Constitution source itself is changed.
-
-### 4. Automatic Constitution refresh
-
-The Constitution is fetched from HackMD on every Pages build. A scheduled workflow trigger can make HackMD publication edits propagate even when no repository commit occurs.
-
-A scheduled rebuild changes publication synchronization only; it does not decide whether a constitutional amendment was legally adopted.
-
-### 5. Courts integration
-
-Cross-link Code and Courts data only where reliable case metadata exists:
-
-- Code section → cases interpreting/citing it.
-- Case → statutes and constitutional provisions cited.
-- Prefer explicit case metadata/citations over fuzzy text matching.
+After merge, independently verify the `main` Pages workflow and the public production URLs before calling the work deployed.
 
 ---
 
-## Non-negotiable safeguards
+# Future work after Phase II
 
-1. **Do not break or silently reshape the Criminal Law API.**
-2. **Do not manufacture legal history.** If an intermediate version is unsupported, say so.
-3. **Preserve source wording.** Parsing may recognize inconsistent labels but must not silently rewrite legal text.
-4. **Keep history lazy-loaded.** Ordinary section browsing must not download the entire historical corpus.
-5. **Fail closed on comparison integrity.** A diff that cannot reproduce baseline/current text exactly must not be published as verified.
-6. **Separate substantive text from metadata.** A note/source-credit change is not automatically a statutory-body amendment.
-7. **Keep permanent deep links stable.** Existing `/cite/<title>/<section>/` and subsection pinpoint behavior must remain intact.
-8. **Do not use Public Law association alone as proof of an exact intermediate statutory text.**
+## A. True enactment-by-enactment history
+
+The repository-state history is truthful but does not necessarily represent every enacted intermediate state. The eventual gold-standard chronology requires:
+
+1. ordered enactment/action timeline per section;
+2. preserved exact amendment instructions or enacted replacement text;
+3. deterministic replay against the correct predecessor version;
+4. snapshot hash after every replayable action;
+5. final replay must equal current published Code exactly;
+6. unsupported actions must be labeled unavailable, never guessed;
+7. UI must distinguish preserved text from site-reconstructed text.
+
+## B. Structured Courts citation graph
+
+The current bridge sends a Code citation into the Courts site's Supreme Court CourtListener search. Future richer integration should only be built if Courts has reliable explicit citation metadata:
+
+- section → decisions citing/interpreting it;
+- decision → statutes/constitutional provisions cited;
+- exact counts and filtered decision lists.
+
+Do not generate counts using naive text occurrence scans.
+
+## C. Constitution amendment chronology
+
+If authoritative ratification/amendment metadata becomes available, add an amendment-history layer separate from the publication-source provenance. The HackMD edit timestamp must never be mistaken for the amendment's legal ratification/effective date.
+
+## D. API expansion
+
+After the general API stabilizes, additive v1 extensions may expose:
+
+- source-law history;
+- verified version-history path/count;
+- outgoing/incoming statutory references;
+- provenance hashes.
+
+Keep large research payloads as linked/lazy resources rather than duplicating them inside every API section object.
 
 ---
 
-## Recovery / continuation checklist
+# Non-negotiable safeguards
 
-If work resumes elsewhere:
+1. **Do not break or silently reshape `data/api/v1/criminal-law/`.**
+2. **Do not manufacture legal history.**
+3. **Do not use a Public Law association alone as proof of exact intermediate text.**
+4. **Preserve statutory and constitutional source wording.**
+5. **Explicit references only** for the statutory reference graph unless a future inference layer is separately labeled.
+6. **Keep large research data lazy-loaded.**
+7. **Fail closed on history-integrity failures.**
+8. **Keep `/cite/<title>/<section>/` and subsection pinpoints stable.**
+9. **Do not invent enactment dates.**
+10. **Do not invent Courts citation counts.**
+11. **HackMD publication authority is not the same as constitutional legal-amendment authority.**
+12. **Full Pages CI + production verification are required before calling a release finished.**
 
-1. Read this file first.
-2. Inspect latest `main` and PR #13 / `feature/section-redlines` if still present.
-3. Confirm the fixed comparison baseline remains `00ea0e9b430e4a2eb2253a77d35e6fb125ba5f46`.
-4. Inspect `tools/build_section_history.py`, `assets/js/section-comparison.js`, and `tools/filter_public_laws_for_publication.py` before changing architecture.
-5. Run/inspect full Pages CI, not only isolated unit tests.
-6. Record actual generated history counts and any `unavailable_titles` from CI.
-7. Spot-check amended, added, unchanged, and Title 42 targets.
-8. Verify mobile/dark-mode comparison presentation.
-9. Merge only after a clean full build.
-10. After merge, verify the production Pages deployment and production history manifest.
+---
 
-## Status note
+# Recovery checklist
 
-At the time this revision was written, the implementation was under review in **PR #13** on `feature/section-redlines`; isolated Python and Node comparison tests were passing, while the full Pages integration run was still being validated.
+If another session takes over:
+
+1. Read this file fully.
+2. Inspect latest `main` and `feature/research-suite-phase-2`.
+3. Confirm PR #13 merge base `3e3d869d66cef16b8b411268aa8cd7098e225192` and fixed history baseline `00ea0e9b430e4a2eb2253a77d35e6fb125ba5f46`.
+4. Inspect:
+   - `tools/filter_public_laws_for_publication.py`
+   - `tools/build_section_history.py`
+   - `tools/build_version_history.py`
+   - `tools/build_reference_graph.py`
+   - `tools/build_code_api.py`
+   - `tools/build_constitution.py`
+5. Inspect browser modules:
+   - `assets/js/homepage-search.js`
+   - `assets/js/research-tools.js`
+   - `assets/js/section-comparison.js`
+   - `assets/js/section-research.js`
+   - `assets/js/court-bridge.js`
+   - `assets/js/code-changes.js`
+   - `assets/js/constitution-research.js`
+   - `assets/js/site-bootstrap.js`
+6. Inspect pages:
+   - `changes.html`
+   - `api.html`
+   - `constitution.html`
+7. Run/inspect all Python + Node tests and the full Pages workflow.
+8. Pull the exact Pages artifact and inspect generated manifests/counts, not merely CI pass/fail.
+9. Spot-check version history, references, Changes page, general API, Constitution metadata, and Criminal Law API.
+10. Merge only after clean full CI.
+11. Watch the post-merge `main` Pages run to completion.
+12. Verify public production resources directly.
+13. Update this status section with PR number, merge SHA, production run, and generated counts.
+
+## Current status
+
+**Phase II is implemented on `feature/research-suite-phase-2` and awaiting full integration CI/PR verification. It is not yet safe to describe as deployed.**
