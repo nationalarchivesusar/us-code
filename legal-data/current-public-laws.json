@@ -123,6 +123,45 @@
           ]
         }
       ]
+    },
+    {
+      "law_id": "PL-042-274",
+      "public_law": "42-274",
+      "title": "United States Capitol Police Reform and Accountability Act",
+      "status": "active",
+      "trello_short_link": "DAwGab9j",
+      "actions": [
+        {
+          "provision": "§§ 3–21",
+          "effect_category": "code",
+          "effect_label": "Integrated into the Code",
+          "treatment": "new Code chapter and sections",
+          "description": "Permanent Capitol Police organization, governance, jurisdiction, protective-service, enforcement, use-of-force, oversight, access, emergency, political-neutrality, and penalty provisions are classified to 2 U.S.C. §§ 7001–7019.",
+          "targets": [
+            {"title": "2", "range": [7001, 7019]}
+          ]
+        },
+        {
+          "provision": "§ 2",
+          "effect_category": "note",
+          "effect_label": "Express repeal and supersession",
+          "treatment": "repeal and supersession history",
+          "description": "The Act expressly repeals the Uniformed Capitol Police Act of 2023 and the United States Capitol Police Technical Corrections Act, terminates authority dependent solely on those enactments, and supersedes inconsistent continuing law, rule, regulation, or order. Existing archived law identities are preserved where the historical archive contains conflicting public-law numbering.",
+          "targets": [
+            {"title": "2", "section": "7001"}
+          ]
+        },
+        {
+          "provision": "§§ 1, 22–24",
+          "effect_category": "note",
+          "effect_label": "Statutory notes",
+          "treatment": "short-title, severability, rule-of-construction, and effective-date notes",
+          "description": "Short-title, severability, rule-of-construction, and effective-date/transition provisions are retained as statutory notes at 2 U.S.C. § 7001.",
+          "targets": [
+            {"title": "2", "section": "7001"}
+          ]
+        }
+      ]
     }
   ]
 }

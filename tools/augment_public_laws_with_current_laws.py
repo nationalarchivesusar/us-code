@@ -2,7 +2,7 @@
 """Merge post-audit/current-law enactments into the public-law website dataset.
 
 The original public-law builder is intentionally tied to the completed 270-law audit
-ledger.  New enactments whose substantive Code treatment is maintained by the 2026
+ledger. New enactments whose substantive Code treatment is maintained by the 2026
 current-law overlay live in ``legal-data/current-public-laws.json`` and are merged here.
 Existing law IDs are replaced, so a law such as Pub. L. 41-271 can keep its audited
 archive identity while displaying its newer substantive codification instead of the
@@ -135,7 +135,7 @@ def build_current_law(row: dict, short_links: dict[str, str]) -> dict:
         ),
     )
 
-    short_link = short_links.get(law_id)
+    short_link = str(row.get("trello_short_link") or "").strip() or short_links.get(law_id)
     trello_url = f"https://trello.com/c/{short_link}" if short_link else None
     action_count = len(actions)
     target_count = len(targets)
