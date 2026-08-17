@@ -1,0 +1,139 @@
+.section-metadata {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem 0.7rem;
+  margin: 0.75rem 0 1rem;
+  padding: 0.7rem 0.8rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface-alt) 72%, transparent);
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.section-metadata__item {
+  display: inline-flex;
+  gap: 0.25rem;
+  align-items: baseline;
+  white-space: nowrap;
+}
+
+.section-metadata__item strong {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.section-metadata__item--current strong {
+  color: var(--usar-green-dark);
+}
+
+.section-metadata__item--history strong {
+  color: var(--cornell-red-dark);
+}
+
+.section-metadata__item + .section-metadata__item::before {
+  content: "·";
+  margin-right: 0.2rem;
+  color: var(--border-strong);
+}
+
+.section-metadata__courts {
+  margin-left: auto;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.section-relations {
+  margin: 1rem 0;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.section-relations > summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 0.9rem;
+  cursor: pointer;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.section-relations > summary span:last-child {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.section-relations__body {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 0.9rem;
+  border-top: 1px solid var(--border);
+}
+
+.section-relations__column h4 {
+  margin: 0 0 0.55rem;
+  font-family: var(--serif);
+  font-size: 1rem;
+}
+
+.section-relations__column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.section-relations__link {
+  display: grid;
+  gap: 0.05rem;
+  padding: 0.45rem 0.55rem;
+  border-left: 3px solid var(--border-strong);
+  background: var(--surface-alt);
+  text-decoration: none;
+}
+
+.section-relations__link:hover {
+  border-left-color: var(--cornell-red-dark);
+}
+
+.section-relations__citation {
+  font-weight: 800;
+}
+
+.section-relations__heading {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.section-relations__empty,
+.section-relations__note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.section-relations__note {
+  grid-column: 1 / -1;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 720px) {
+  .section-metadata__courts {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .section-relations__body {
+    grid-template-columns: 1fr;
+  }
+
+  .section-relations__note {
+    grid-column: auto;
+  }
+}
