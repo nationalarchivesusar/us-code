@@ -21,15 +21,17 @@ test("shared bootstrap loads visual polish and enactment history", () => {
   assert.match(bootstrap, /phase-three-polish/);
 });
 
-test("enactment UI distinguishes audit events from exact statutory versions", () => {
+test("enactment UI distinguishes audit evidence from exact statutory text", () => {
   const script = read("assets/js/enactment-history.js");
   const builder = read("tools/build_enactment_history.py");
   assert.match(script, /Verified enactment history/);
-  assert.match(script, /not a fabricated version archive/i);
-  assert.match(script, /audit summaries and source quotations are evidence/i);
+  assert.match(script, /Audit summaries and source quotations are evidence, not statutory text/);
+  assert.match(script, /Exact before \/ after statutory text/);
+  assert.match(script, /sole verified substantive enactment event/);
   assert.match(script, /Verified version history/);
   assert.match(builder, /"exact_text_snapshot_available": False/);
   assert.match(builder, /"exact_text_snapshot": None/);
+  assert.match(builder, /sole-published-enactment-between-verified-repository-states/);
 });
 
 test("Phase III polish removes duplicate research-toolbar rule and keeps legal hierarchy", () => {
@@ -46,5 +48,5 @@ test("enactment generator cannot modify or generate the Criminal Law API", () =>
   assert.match(builder, /data" \/ "enactment-history"/);
   assert.doesNotMatch(builder, /data" \/ "api" \/ "v1" \/ "criminal-law"/);
   assert.doesNotMatch(builder, /criminal-law\/manifest/);
-  assert.match(builder, /does not fabricate an exact intermediate U\.S\. Code text snapshot/);
+  assert.match(builder, /never promoted into an exact intermediate U\.S\. Code text snapshot/);
 });
