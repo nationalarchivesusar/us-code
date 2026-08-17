@@ -3,7 +3,7 @@ import { test } from "node:test";
 import fs from "node:fs";
 
 const pages = [
-  ["index.html", "Home"],
+  ["index.html", "U.S. Code"],
   ["criminal-law.html", "Criminal Law"],
   ["public-laws.html", "Public Laws"],
   ["constitution.html", "Constitution"],
@@ -21,8 +21,23 @@ for (const [filename, currentLabel] of pages) {
     assert.match(html, /class="footer-primary"/);
     assert.match(html, /class="nara-attribution"/);
     assert.match(html, /class="footer-nav"/);
+    assert.match(html, />Developer API</);
     assert.match(html, /class="footer-disclaimer"/);
     assert.doesNotMatch(html, /class="brand-abbr"/);
     assert.doesNotMatch(html, /class="site-footer__links"/);
+
+    const primaryStart = html.indexOf('<nav class="primary-nav"');
+    const primaryEnd = html.indexOf("</nav>", primaryStart);
+    const primary = html.slice(primaryStart, primaryEnd);
+    assert.match(primary, />U\.S\. Code</);
+    assert.match(primary, />Public Laws</);
+    assert.match(primary, />Constitution</);
+    assert.match(primary, />Criminal Law</);
+    assert.match(primary, /United States Courts/);
+    assert.doesNotMatch(primary, />Home</);
+    assert.doesNotMatch(primary, />Search Code</);
+    assert.doesNotMatch(primary, />Code Titles</);
+    assert.doesNotMatch(primary, />Code Changes</);
+    assert.doesNotMatch(primary, />API</);
   });
 }

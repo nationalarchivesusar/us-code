@@ -6,6 +6,56 @@
     ? new URL("../../", scriptUrl)
     : new URL("./", window.location.href);
 
+  const PRIMARY_NAV = [
+    { path: "./", label: "U.S. Code", key: "code" },
+    { path: "public-laws.html", label: "Public Laws", key: "public-laws" },
+    { path: "constitution.html", label: "Constitution", key: "constitution" },
+    { path: "criminal-law.html", label: "Criminal Law", key: "criminal-law" },
+    {
+      url: "https://nationalarchivesusar.github.io/courts/",
+      label: "United States Courts",
+      key: "courts",
+      external: true,
+    },
+  ];
+
+  const FOOTER_NAV = [
+    { path: "./", label: "U.S. Code" },
+    { path: "public-laws.html", label: "Public Laws" },
+    { path: "constitution.html", label: "Constitution" },
+    { path: "criminal-law.html", label: "Criminal Law" },
+    { path: "api.html", label: "Developer API" },
+    { url: "https://nationalarchivesusar.github.io/courts/", label: "United States Courts" },
+  ];
+
+  function ensureStyle(path, marker) {
+    if (
+      typeof document.querySelector !== "function" ||
+      typeof document.createElement !== "function" ||
+      !document.head ||
+      typeof document.head.appendChild !== "function"
+    ) {
+      return;
+    }
+    if (document.querySelector(`link[data-site-style="${marker}"]`)) return;
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = new URL(path, APP_BASE_URL).toString();
+    link.dataset.siteStyle = marker;
+    document.head.appendChild(link);
+  }
+
+  // Navigation CSS does not depend on body markup, so load it while the head is
+  // still parsing to avoid a mobile flash of the fallback multi-row nav.
+  ensureStyle("assets/css/navigation.css", "canonical-navigation");
+
+  function ensureContextStyles() {
+    if (typeof document.querySelector !== "function") return;
+    if (document.querySelector(".criminal-about")) {
+      ensureStyle("assets/css/criminal-law-ia.css", "criminal-law-ia");
+    }
+  }
+
   let theme = "system";
   try {
     const stored = localStorage.getItem(THEME_STORAGE_KEY);
@@ -22,82 +72,101 @@
   document.documentElement.dataset.theme =
     theme === "dark" || (theme === "system" && prefersDark) ? "dark" : "light";
 
-  function rootSiteNavigation() {
-    document.querySelectorAll(".brand, .primary-nav a, .footer-nav a").forEach((anchor) => {
-      const href = anchor.getAttribute("href") || "";
-      if (!href || href.startsWith("#")) return;
-      anchor.href = new URL(href, APP_BASE_URL).toString();
-    });
+  function pageKey() {
+    const current = new URL(window.location.href);
+    const relative = current.pathname
+      .slice(APP_BASE_URL.pathname.length)
+      .replace(/^\/+|\/+$/g, "");
+
+    if (!relative || relative === "index.html" || relative.startsWith("cite/")) return "code";
+    if (relative === "public-laws.html" || relative === "changes.html") return "public-laws";
+    if (relative === "constitution.html") return "constitution";
+    if (relative === "criminal-law.html" || relative.startsWith("criminal/")) return "criminal-law";
+    return null;
   }
 
-  function pageIs(path) {
-    const target = new URL(path, APP_BASE_URL);
-    return new URL(window.location.href).pathname === target.pathname;
+  function createNavLink(item, activeKey = null) {
+    const anchor = document.createElement("a");
+    anchor.href = item.url || new URL(item.path, APP_BASE_URL).toString();
+    anchor.textContent = item.label;
+    if (item.external) {
+      anchor.classList.add("primary-nav__related");
+      anchor.setAttribute("aria-label", `${item.label}, related site`);
+      const external = document.createElement("span");
+      external.setAttribute("aria-hidden", "true");
+      external.textContent = " ↗";
+      anchor.appendChild(external);
+    }
+    if (item.key && item.key === activeKey) anchor.setAttribute("aria-current", "page");
+    return anchor;
   }
 
-  function insertNavLink(nav, { path, label, marker, beforeRelated = true }) {
-    if (!nav || nav.querySelector(`[data-legal-material="${marker}"]`)) return;
-    const link = document.createElement("a");
-    link.href = new URL(path, APP_BASE_URL).toString();
-    link.textContent = label;
-    link.dataset.legalMaterial = marker;
-    if (pageIs(path)) link.setAttribute("aria-current", "page");
-    const related = beforeRelated ? nav.querySelector(".primary-nav__related") : null;
-    if (related) related.before(link);
-    else nav.appendChild(link);
-  }
-
-  function addResearchLinks() {
+  function canonicalizeGlobalNavigation() {
     if (
-      typeof document.querySelector !== "function" ||
+      typeof document.querySelectorAll !== "function" ||
       typeof document.createElement !== "function"
     ) {
       return;
     }
+    const activeKey = pageKey();
+    document.querySelectorAll(".primary-nav").forEach((nav, index) => {
+      if (!nav || typeof nav.querySelector !== "function") return;
+      let inner = nav.querySelector(".primary-nav__inner");
+      if (!inner) {
+        if (typeof nav.appendChild !== "function") return;
+        inner = document.createElement("div");
+        inner.className = "primary-nav__inner";
+        nav.appendChild(inner);
+      }
+      if (typeof inner.replaceChildren !== "function") return;
+      if (!inner.id) inner.id = `primary-nav-menu-${index + 1}`;
+      inner.replaceChildren(...PRIMARY_NAV.map((item) => createNavLink(item, activeKey)));
 
-    const nav = document.querySelector(".primary-nav__inner");
-    insertNavLink(nav, {
-      path: "changes.html",
-      label: "Code Changes",
-      marker: "code-changes",
+      if (!nav.querySelector(".primary-nav__toggle") && typeof nav.prepend === "function") {
+        const toggle = document.createElement("button");
+        toggle.type = "button";
+        toggle.className = "primary-nav__toggle";
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-controls", inner.id);
+        toggle.textContent = "Menu";
+        toggle.addEventListener("click", () => {
+          const open = nav.classList.toggle("is-open");
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+          toggle.textContent = open ? "Close menu" : "Menu";
+        });
+        nav.prepend(toggle);
+      }
+      if (nav.dataset) nav.dataset.menuReady = "true";
     });
-    insertNavLink(nav, {
-      path: "constitution.html",
-      label: "Constitution",
-      marker: "constitution",
-    });
+  }
 
-    document.querySelectorAll(".footer-nav").forEach((footerNav) => {
-      const courts = Array.from(footerNav.querySelectorAll("a")).find((anchor) =>
-        /United States Courts/i.test(anchor.textContent || ""),
+  function canonicalizeFooterNavigation() {
+    if (
+      typeof document.querySelectorAll !== "function" ||
+      typeof document.createElement !== "function"
+    ) {
+      return;
+    }
+    document.querySelectorAll(".footer-nav").forEach((nav) => {
+      if (!nav || typeof nav.replaceChildren !== "function") return;
+      nav.replaceChildren(
+        ...FOOTER_NAV.map((item) => {
+          const anchor = document.createElement("a");
+          anchor.href = item.url || new URL(item.path, APP_BASE_URL).toString();
+          anchor.textContent = item.label;
+          return anchor;
+        }),
       );
+    });
+  }
 
-      if (!footerNav.querySelector('[data-legal-material="code-changes"]')) {
-        const changes = document.createElement("a");
-        changes.href = new URL("changes.html", APP_BASE_URL).toString();
-        changes.textContent = "Code Changes";
-        changes.dataset.legalMaterial = "code-changes";
-        if (courts) courts.before(changes);
-        else footerNav.appendChild(changes);
-      }
-
-      if (!footerNav.querySelector('[data-legal-material="constitution"]')) {
-        const constitution = document.createElement("a");
-        constitution.href = new URL("constitution.html", APP_BASE_URL).toString();
-        constitution.textContent = "Constitution";
-        constitution.dataset.legalMaterial = "constitution";
-        if (courts) courts.before(constitution);
-        else footerNav.appendChild(constitution);
-      }
-
-      if (!footerNav.querySelector('[data-legal-material="api"]')) {
-        const api = document.createElement("a");
-        api.href = new URL("api.html", APP_BASE_URL).toString();
-        api.textContent = "API";
-        api.dataset.legalMaterial = "api";
-        if (courts) courts.before(api);
-        else footerNav.appendChild(api);
-      }
+  function rootSiteNavigation() {
+    if (typeof document.querySelectorAll !== "function") return;
+    document.querySelectorAll(".brand, .primary-nav a, .footer-nav a").forEach((anchor) => {
+      if (!anchor || typeof anchor.getAttribute !== "function") return;
+      const href = anchor.getAttribute("href") || "";
+      if (!href || href.startsWith("#")) return;
+      anchor.href = new URL(href, APP_BASE_URL).toString();
     });
   }
 
@@ -125,8 +194,10 @@
   }
 
   document.addEventListener("DOMContentLoaded", () => {
+    ensureContextStyles();
     rootSiteNavigation();
-    addResearchLinks();
+    canonicalizeGlobalNavigation();
+    canonicalizeFooterNavigation();
     loadPageEnhancements();
   });
 

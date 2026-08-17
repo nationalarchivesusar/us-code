@@ -1,0 +1,54 @@
+.legislative-view-tabs {
+  display: inline-flex;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--border-strong);
+  background: var(--surface-alt);
+}
+
+.legislative-view-tabs button {
+  min-height: 2.65rem;
+  border: 0;
+  border-right: 1px solid var(--border-strong);
+  background: transparent;
+  color: var(--muted);
+  padding: 0.55rem 1rem;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.legislative-view-tabs button:last-child {
+  border-right: 0;
+}
+
+.legislative-view-tabs button:hover,
+.legislative-view-tabs button:focus-visible {
+  color: var(--cornell-red-dark);
+  outline: none;
+}
+
+.legislative-view-tabs button.is-active {
+  background: var(--cornell-red-dark);
+  color: #fff;
+}
+
+#public-laws-view > .public-law-stats {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+#code-changes-view .changes-method {
+  margin-top: 0;
+}
+
+@media (max-width: 520px) {
+  .legislative-view-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
+  .legislative-view-tabs button {
+    padding-inline: 0.5rem;
+  }
+}

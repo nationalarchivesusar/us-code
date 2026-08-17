@@ -3,54 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Browse all USAR public laws and see where each law affected the United States Code."
-    />
+    <meta name="description" content="Browse USAR public laws and research their recorded and verified effects on the United States Code." />
     <link rel="canonical" href="https://nationalarchivesusar.github.io/us-code/public-laws.html" />
-    <meta property="og:title" content="USAR Public Laws | US Code Library" />
-    <meta
-      property="og:description"
-      content="Browse all USAR public laws, their active or repealed status, and their U.S. Code effects."
-    />
+    <meta property="og:title" content="Public Laws | US Code Library" />
+    <meta property="og:description" content="Browse public laws and research recorded and verified changes to the United States Code." />
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="US Code Library" />
-    <meta
-      property="og:url"
-      content="https://nationalarchivesusar.github.io/us-code/public-laws.html"
-    />
-    <meta
-      property="og:image"
-      content="https://nationalarchivesusar.github.io/us-code/assets/images/social-card.png"
-    />
-    <meta
-      property="og:image:secure_url"
-      content="https://nationalarchivesusar.github.io/us-code/assets/images/social-card.png"
-    />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="400" />
-    <meta property="og:image:height" content="400" />
-    <meta
-      property="og:image:alt"
-      content="Great Seal of the United States and United States Code Library branding."
-    />
+    <meta property="og:url" content="https://nationalarchivesusar.github.io/us-code/public-laws.html" />
+    <meta property="og:image" content="https://nationalarchivesusar.github.io/us-code/assets/images/social-card.png" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="USAR Public Laws | US Code Library" />
-    <meta
-      name="twitter:description"
-      content="Browse all USAR public laws, their active or repealed status, and their U.S. Code effects."
-    />
-    <meta
-      name="twitter:image"
-      content="https://nationalarchivesusar.github.io/us-code/assets/images/social-card.png"
-    />
-    <meta
-      name="twitter:image:alt"
-      content="Great Seal of the United States and United States Code Library branding."
-    />
+    <meta name="twitter:title" content="Public Laws | US Code Library" />
+    <meta name="twitter:description" content="Browse public laws and research recorded and verified changes to the United States Code." />
+    <meta name="twitter:image" content="https://nationalarchivesusar.github.io/us-code/assets/images/social-card.png" />
     <meta name="theme-color" content="#8b1e1e" />
-    <title>USAR Public Laws | US Code Library</title>
+    <title>Public Laws | US Code Library</title>
     <script src="assets/js/site-bootstrap.js"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png" />
@@ -58,9 +24,10 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/public-laws.css" />
     <link rel="stylesheet" href="assets/css/public-laws-links.css" />
+    <link rel="stylesheet" href="assets/css/code-changes.css" />
   </head>
   <body>
-    <a class="skip-link" href="#public-laws">Skip to public laws</a>
+    <a class="skip-link" href="#legislative-research">Skip to legislative research</a>
 
     <header class="site-header">
       <div class="masthead">
@@ -73,7 +40,6 @@
               <span class="brand-tagline">Legal information and legislative history</span>
             </span>
           </a>
-
           <div class="masthead__tools">
             <div class="theme-switcher" role="group" aria-label="Color theme">
               <button type="button" class="theme-switcher__button" data-theme-choice="system">System</button>
@@ -83,93 +49,118 @@
           </div>
         </div>
       </div>
-
       <nav class="primary-nav" aria-label="Primary navigation">
         <div class="primary-nav__inner">
-          <a href="./">Home</a>
-          <a href="./#search">Search Code</a>
-          <a href="./#browse">Code Titles</a>
-          <a href="criminal-law.html">Criminal Law</a>
+          <a href="./">U.S. Code</a>
           <a href="public-laws.html" aria-current="page">Public Laws</a>
-          <a class="primary-nav__related" href="https://nationalarchivesusar.github.io/courts/" aria-label="United States Courts, related site">United States Courts <span aria-hidden="true">↗</span></a>
+          <a href="constitution.html">Constitution</a>
+          <a href="criminal-law.html">Criminal Law</a>
+          <a class="primary-nav__related" href="https://nationalarchivesusar.github.io/courts/">United States Courts <span aria-hidden="true">↗</span></a>
         </div>
       </nav>
     </header>
 
     <section class="public-laws-hero" aria-labelledby="public-laws-heading">
       <div class="public-laws-hero__inner">
-        <p class="eyebrow">USAR Legislative History</p>
-        <h1 id="public-laws-heading">Public laws and their U.S. Code effects</h1>
-        <p>
-          Search every recorded USAR public law, confirm whether it is active or
-          repealed, open its original Trello card when available, and follow direct
-          links to each affected U.S. Code section.
-        </p>
-
-        <div class="public-law-stats" aria-label="Public law totals">
-          <div class="public-law-stat">
-            <strong id="count-total">—</strong>
-            <span>Total laws</span>
-          </div>
-          <div class="public-law-stat">
-            <strong id="count-active">—</strong>
-            <span>Active</span>
-          </div>
-          <div class="public-law-stat">
-            <strong id="count-repealed">—</strong>
-            <span>Repealed</span>
-          </div>
-          <div class="public-law-stat">
-            <strong id="count-actions">—</strong>
-            <span>Recorded actions</span>
-          </div>
-        </div>
+        <p class="eyebrow">Legislative History</p>
+        <h1 id="public-laws-heading">Public Laws and changes to the Code</h1>
+        <p>Browse enacted public laws, inspect their recorded Code effects, or switch to the change-oriented view to trace affected sections and verified baseline-to-current text changes.</p>
       </div>
     </section>
 
-    <main id="public-laws" class="public-laws-shell">
-      <section class="public-law-controls" aria-label="Filter public laws">
-        <div class="public-law-control">
-          <label for="law-search">Search laws, citations, or provisions</label>
-          <input
-            id="law-search"
-            type="search"
-            placeholder="Public Law 17-128, impeachment, 2 U.S.C. § 200..."
-          />
-        </div>
-        <div class="public-law-control">
-          <label for="status-filter">Status</label>
-          <select id="status-filter">
-            <option value="all">All statuses</option>
-            <option value="active">Active only</option>
-            <option value="repealed">Repealed only</option>
-          </select>
-        </div>
-        <div class="public-law-control">
-          <label for="effect-filter">Code effect</label>
-          <select id="effect-filter">
-            <option value="all">All effects</option>
-            <option value="code">Code text</option>
-            <option value="note">Statutory or historical notes</option>
-            <option value="no-code">No Code amendment</option>
-            <option value="superseded">Superseded actions</option>
-            <option value="repealed-history">Repealed history</option>
-          </select>
-        </div>
-      </section>
-
-      <div class="public-laws-results">
-        <p id="result-summary">Loading public laws…</p>
-        <p>Repealed-law citations are historical and are not linked as current law.</p>
+    <main id="legislative-research" class="public-laws-shell">
+      <div class="legislative-view-tabs" role="tablist" aria-label="Legislative history view">
+        <button type="button" role="tab" data-public-law-view="laws" aria-controls="public-laws-view" aria-selected="true" class="is-active">Public Laws</button>
+        <button type="button" role="tab" data-public-law-view="changes" aria-controls="code-changes-view" aria-selected="false">Code Changes</button>
       </div>
 
-      <p id="loading-message" class="public-laws-message" role="status">
-        Loading the public-law index…
-      </p>
-      <p id="empty-message" class="public-laws-message" hidden>
-        No public laws match the selected filters.
-      </p>
-      <section id="public-law-list" class="public-law-list" aria-live="polite"></section>
+      <section id="public-laws-view" role="tabpanel" aria-label="Public Laws">
+        <section class="public-law-stats" aria-label="Public law totals">
+          <div class="public-law-stat"><strong id="count-total">—</strong><span>Total laws</span></div>
+          <div class="public-law-stat"><strong id="count-active">—</strong><span>Active</span></div>
+          <div class="public-law-stat"><strong id="count-repealed">—</strong><span>Repealed</span></div>
+          <div class="public-law-stat"><strong id="count-actions">—</strong><span>Recorded actions</span></div>
+        </section>
+
+        <section class="public-law-controls" aria-label="Filter public laws">
+          <div class="public-law-control">
+            <label for="law-search">Search laws, citations, or provisions</label>
+            <input id="law-search" type="search" placeholder="Public Law 17-128, impeachment, 2 U.S.C. § 200..." />
+          </div>
+          <div class="public-law-control">
+            <label for="status-filter">Status</label>
+            <select id="status-filter">
+              <option value="all">All statuses</option>
+              <option value="active">Active only</option>
+              <option value="repealed">Repealed only</option>
+            </select>
+          </div>
+          <div class="public-law-control">
+            <label for="effect-filter">Code effect</label>
+            <select id="effect-filter">
+              <option value="all">All effects</option>
+              <option value="code">Code text</option>
+              <option value="note">Statutory or historical notes</option>
+              <option value="no-code">No Code amendment</option>
+              <option value="superseded">Superseded actions</option>
+              <option value="repealed-history">Repealed history</option>
+            </select>
+          </div>
+        </section>
+
+        <div class="public-laws-results">
+          <p id="result-summary">Loading public laws…</p>
+          <p>Repealed-law citations are historical and are not linked as current law.</p>
+        </div>
+        <p id="loading-message" class="public-laws-message" role="status">Loading the public-law index…</p>
+        <p id="empty-message" class="public-laws-message" hidden>No public laws match the selected filters.</p>
+        <section id="public-law-list" class="public-law-list" aria-live="polite"></section>
+      </section>
+
+      <section id="code-changes-view" role="tabpanel" aria-label="Code Changes" hidden>
+        <section class="changes-method" aria-label="Research method">
+          <strong>Evidence labels matter.</strong>
+          <span>A “verified text change” is proven by the repository baseline comparison. A “recorded action” comes from the Public Law codification index and is not represented as an exact intermediate statutory text unless separately verified.</span>
+        </section>
+
+        <form id="changes-filters" class="changes-filters" autocomplete="off">
+          <div class="field changes-filters__search">
+            <label for="changes-search">Search</label>
+            <input id="changes-search" type="search" placeholder="Public Law, title, section, or description" />
+          </div>
+          <div class="field">
+            <label for="changes-title">U.S.C. title</label>
+            <input id="changes-title" type="text" inputmode="numeric" placeholder="18" />
+          </div>
+          <div class="field">
+            <label for="changes-status">Law status</label>
+            <select id="changes-status">
+              <option value="all">All</option>
+              <option value="active">Active</option>
+              <option value="repealed">Repealed</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="changes-type">Change type</label>
+            <select id="changes-type">
+              <option value="all">All</option>
+              <option value="amended">Verified amended</option>
+              <option value="added">Verified added</option>
+              <option value="removed">Verified removed</option>
+              <option value="recorded">Recorded action</option>
+            </select>
+          </div>
+          <button id="changes-clear" type="button" class="changes-filters__clear">Clear</button>
+        </form>
+
+        <section class="changes-results" aria-labelledby="changes-results-heading">
+          <div class="changes-results__heading">
+            <h2 id="changes-results-heading">Affected Code sections</h2>
+            <p id="changes-summary" role="status" aria-live="polite">Loading research data…</p>
+          </div>
+          <div id="changes-results" class="changes-list" aria-live="polite"></div>
+        </section>
+      </section>
     </main>
 
     <footer class="site-footer">
@@ -179,24 +170,22 @@
             <img src="assets/images/nara.png" alt="National Archives and Records Administration" />
             <span>Maintained by the <strong>National Archives and Records Administration</strong> for the United States Code.</span>
           </a>
-
           <nav class="footer-nav" aria-label="Footer navigation">
-            <a href="./">Home</a>
-            <a href="./#browse">Code Titles</a>
-            <a href="criminal-law.html">Criminal Law</a>
+            <a href="./">U.S. Code</a>
             <a href="public-laws.html">Public Laws</a>
+            <a href="constitution.html">Constitution</a>
+            <a href="criminal-law.html">Criminal Law</a>
+            <a href="api.html">Developer API</a>
             <a href="https://nationalarchivesusar.github.io/courts/">United States Courts</a>
           </nav>
         </div>
-        <p class="footer-source">
-          Public-law status and available Trello links are drawn from the USAR
-          legislative archive; U.S. Code effects are drawn from the completed
-          codification ledger and the current-law publication registry.
-        </p>
+        <p class="footer-source">Public-law status and available Trello links are drawn from the USAR legislative archive; U.S. Code effects are drawn from the codification ledger and current-law publication registry.</p>
         <p class="footer-disclaimer">An independent USAR community resource. Not affiliated with the real United States government.</p>
       </div>
     </footer>
 
     <script type="module" src="assets/js/public-laws.js"></script>
+    <script type="module" src="assets/js/code-changes.js"></script>
+    <script type="module" src="assets/js/public-law-views.js"></script>
   </body>
 </html>

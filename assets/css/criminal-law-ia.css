@@ -1,0 +1,70 @@
+.criminal-hero__inner {
+  padding-block: clamp(1.35rem, 3vw, 2.25rem);
+}
+
+.criminal-hero h1 {
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+}
+
+.criminal-shell {
+  padding-top: 1.25rem;
+}
+
+.criminal-controls {
+  grid-template-columns: minmax(0, 2.4fr) minmax(13rem, 0.8fr);
+}
+
+.criminal-results {
+  margin-bottom: 1.5rem;
+}
+
+.criminal-about {
+  margin-top: 1.5rem;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+}
+
+.criminal-about > summary {
+  padding: 0.85rem 1rem;
+  background: var(--surface-alt);
+  color: var(--ink);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.criminal-about > summary:hover,
+.criminal-about > summary:focus-visible {
+  color: var(--cornell-red-dark);
+  outline: none;
+}
+
+.criminal-about__body {
+  padding: 1rem;
+}
+
+.criminal-about__intro {
+  max-width: 62rem;
+  margin: 0 0 1rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.criminal-about .criminal-stats,
+.criminal-about .legal-lineage,
+.criminal-about .sentencing-alert {
+  margin-bottom: 1.25rem;
+}
+
+.criminal-about__permanent {
+  margin: 0;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+@media (max-width: 860px) {
+  .criminal-controls {
+    grid-template-columns: 1fr;
+  }
+}
