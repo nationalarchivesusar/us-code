@@ -1,0 +1,54 @@
+.constitution-provenance {
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-alt);
+}
+
+.constitution-provenance__inner {
+  width: min(var(--measure), calc(100% - 2rem));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(14rem, 0.42fr);
+  gap: 1.25rem;
+  align-items: start;
+  padding: 0.9rem 0;
+}
+
+.constitution-provenance h2 {
+  margin: 0 0 0.25rem;
+  font-family: var(--serif);
+  font-size: 1rem;
+}
+
+.constitution-provenance p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.constitution-provenance__facts {
+  display: grid;
+  gap: 0.25rem;
+  margin: 0;
+  font-size: 0.78rem;
+}
+
+.constitution-provenance__facts div {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 0.5rem;
+}
+
+.constitution-provenance__facts dt {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.constitution-provenance__facts dd {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .constitution-provenance__inner {
+    grid-template-columns: 1fr;
+  }
+}
