@@ -7,14 +7,9 @@ however, transfer functions or supersede procedures without literally striking e
 older U.S. Code section that names the former agency or procedure. Readers need to
 see those later enactments where they encounter the older text.
 
-This tool reads legal-data/current-law-notes.json and inserts deterministic `rp-`
-notes at the affected Code sections. The source manifest is the reviewable legal
-mapping; this script contains no hard-coded substantive law.
-
-The GitHub Pages workflow runs the projection after checkout and before the search
-index/title chunks are built. Thus the published Code, citation pages, and keyword
-search all consume the reconciled XML while the repository can continue to retain
-its upstream OLRC baseline plus separately reviewable USAR overlays.
+The primary manifest is ``legal-data/current-law-notes.json``. Reviewable sidecars
+matching ``current-law-notes.extra.*.json`` are merged in filename order so later
+post-audit enactments can be added without rewriting the historical manifest.
 """
 from __future__ import annotations
 
@@ -29,6 +24,7 @@ from lxml import etree
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_MANIFEST = ROOT / "legal-data" / "current-law-notes.json"
+EXTRAS = "current-law-notes.extra.*.json"
 USLM_NS = "http://xml.house.gov/schemas/uslm/1.0"
 NS = {"u": USLM_NS}
 PARSER = etree.XMLParser(remove_blank_text=False, huge_tree=True, recover=False)
@@ -67,15 +63,12 @@ def configure_note(note: etree._Element, spec: dict) -> None:
     note.set("topic", spec["topic"])
     note.set("style", note_style(spec["topic"]))
     note.attrib.pop("role", None)
-
     for child in list(note):
         note.remove(child)
     note.text = None
-
     heading = etree.SubElement(note, q("heading"))
     heading.set("class", "centered smallCaps")
     heading.text = spec["heading"]
-
     for paragraph in spec["paragraphs"]:
         p = etree.SubElement(note, q("p"))
         p.set("style", "-uslm-lc:I21")
@@ -86,9 +79,7 @@ def configure_note(note: etree._Element, spec: dict) -> None:
 def verify_note(note: etree._Element, spec: dict) -> list[str]:
     problems: list[str] = []
     if note.get("topic") != spec["topic"]:
-        problems.append(
-            f"topic is {note.get('topic')!r}, expected {spec['topic']!r}"
-        )
+        problems.append(f"topic is {note.get('topic')!r}, expected {spec['topic']!r}")
     heading = note.find(q("heading"))
     if normalized_text(heading) != " ".join(spec["heading"].split()):
         problems.append("heading differs from manifest")
@@ -99,31 +90,34 @@ def verify_note(note: etree._Element, spec: dict) -> list[str]:
 
 
 def parse_document(raw: bytes) -> etree._ElementTree:
-    # etree.parse, unlike fromstring, preserves processing instructions that
-    # precede the root element (notably the OLRC xml-stylesheet instruction).
     return etree.parse(io.BytesIO(raw), PARSER)
 
 
 def serialize(tree: etree._ElementTree, original: bytes) -> bytes:
     had_declaration = original.lstrip().startswith(b"<?xml")
-    output = etree.tostring(
-        tree,
-        encoding="UTF-8",
-        xml_declaration=had_declaration,
-        pretty_print=False,
-    )
+    output = etree.tostring(tree, encoding="UTF-8", xml_declaration=had_declaration, pretty_print=False)
     if original.endswith(b"\n") and not output.endswith(b"\n"):
         output += b"\n"
     return output
 
 
-def load_manifest(path: Path) -> dict:
-    payload = json.loads(path.read_text(encoding="utf-8"))
+def _validate_manifest(payload: dict, source: Path) -> list[dict]:
     if payload.get("schema_version") != "1.0":
-        raise ValueError("Unsupported current-law-notes schema version")
+        raise ValueError(f"Unsupported current-law-notes schema version in {source}")
     notes = payload.get("notes")
     if not isinstance(notes, list) or not notes:
-        raise ValueError("Manifest contains no notes")
+        raise ValueError(f"Manifest {source} contains no notes")
+    return notes
+
+
+def load_manifest(path: Path) -> dict:
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    notes = list(_validate_manifest(payload, path))
+    for sidecar in sorted(path.parent.glob(EXTRAS)):
+        extra = json.loads(sidecar.read_text(encoding="utf-8"))
+        notes.extend(_validate_manifest(extra, sidecar))
+    payload = dict(payload)
+    payload["notes"] = notes
 
     ids: set[str] = set()
     locations: set[tuple[str, str, str]] = set()
@@ -154,11 +148,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=ROOT)
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
-    parser.add_argument(
-        "--check",
-        action="store_true",
-        help="Verify that the projected notes already exist and exactly match the manifest.",
-    )
+    parser.add_argument("--check", action="store_true", help="Verify projected notes exactly match the merged manifests.")
     args = parser.parse_args(argv)
 
     root = args.root.resolve()
@@ -174,7 +164,6 @@ def main(argv: list[str] | None = None) -> int:
     updated = 0
     verified = 0
 
-    # Parse and validate every affected title before writing any file.
     for title in sorted(grouped, key=lambda value: int(value)):
         path = title_path(root, title)
         if not path.is_file():
@@ -200,18 +189,11 @@ def main(argv: list[str] | None = None) -> int:
         path, original, tree = parsed[title]
         for spec in grouped[title]:
             identifier = section_identifier(title, str(spec["section"]))
-            sections = tree.xpath(
-                "//u:section[@identifier=$identifier]",
-                namespaces=NS,
-                identifier=identifier,
-            )
+            sections = tree.xpath("//u:section[@identifier=$identifier]", namespaces=NS, identifier=identifier)
             if len(sections) != 1:
-                errors.append(
-                    f"{path.name}: expected exactly one section {identifier}, found {len(sections)}"
-                )
+                errors.append(f"{path.name}: expected exactly one section {identifier}, found {len(sections)}")
                 continue
             section = sections[0]
-
             all_with_id = tree.xpath("//*[@id=$id]", id=spec["id"])
             if len(all_with_id) > 1:
                 errors.append(f"{path.name}: duplicate existing id {spec['id']}")
@@ -220,9 +202,7 @@ def main(argv: list[str] | None = None) -> int:
             if existing is not None and existing.getparent() is not None:
                 ancestor_sections = existing.xpath("ancestor::u:section[1]", namespaces=NS)
                 if not ancestor_sections or ancestor_sections[0] is not section:
-                    errors.append(
-                        f"{path.name}: id {spec['id']} already exists outside target {identifier}"
-                    )
+                    errors.append(f"{path.name}: id {spec['id']} already exists outside target {identifier}")
                     continue
 
             if args.check:
@@ -231,9 +211,7 @@ def main(argv: list[str] | None = None) -> int:
                     continue
                 problems = verify_note(existing, spec)
                 if problems:
-                    errors.append(
-                        f"{path.name}: {spec['id']}: " + "; ".join(problems)
-                    )
+                    errors.append(f"{path.name}: {spec['id']}: " + "; ".join(problems))
                 else:
                     verified += 1
                 continue
@@ -268,7 +246,6 @@ def main(argv: list[str] | None = None) -> int:
     for title in sorted(grouped, key=lambda value: int(value)):
         path, original, tree = parsed[title]
         projected = serialize(tree, original)
-        # Strictly reparse the staged full document before replacing the build-workspace file.
         try:
             parse_document(projected)
         except etree.XMLSyntaxError as exc:
@@ -278,10 +255,7 @@ def main(argv: list[str] | None = None) -> int:
             path.write_bytes(projected)
             changed_files.append(path.name)
 
-    print(
-        f"Projected {inserted} new and {updated} updated current-law note(s); "
-        f"{verified} already current."
-    )
+    print(f"Projected {inserted} new and {updated} updated current-law note(s); {verified} already current.")
     if changed_files:
         print("Changed build-workspace titles: " + ", ".join(changed_files))
     else:
