@@ -37,8 +37,11 @@
     document.head.appendChild(link);
   }
 
-  function ensureShellStyles() {
-    ensureStyle("assets/css/navigation.css", "canonical-navigation");
+  // Navigation CSS does not depend on body markup, so load it while the head is
+  // still parsing to avoid a mobile flash of the fallback multi-row nav.
+  ensureStyle("assets/css/navigation.css", "canonical-navigation");
+
+  function ensureContextStyles() {
     if (document.querySelector(".criminal-about")) {
       ensureStyle("assets/css/criminal-law-ia.css", "criminal-law-ia");
     }
@@ -91,13 +94,14 @@
 
   function canonicalizeGlobalNavigation() {
     const activeKey = pageKey();
-    document.querySelectorAll(".primary-nav").forEach((nav) => {
+    document.querySelectorAll(".primary-nav").forEach((nav, index) => {
       let inner = nav.querySelector(".primary-nav__inner");
       if (!inner) {
         inner = document.createElement("div");
         inner.className = "primary-nav__inner";
         nav.appendChild(inner);
       }
+      if (!inner.id) inner.id = `primary-nav-menu-${index + 1}`;
       inner.replaceChildren(...PRIMARY_NAV.map((item) => createNavLink(item, activeKey)));
 
       if (!nav.querySelector(".primary-nav__toggle")) {
@@ -105,6 +109,7 @@
         toggle.type = "button";
         toggle.className = "primary-nav__toggle";
         toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-controls", inner.id);
         toggle.textContent = "Menu";
         toggle.addEventListener("click", () => {
           const open = nav.classList.toggle("is-open");
@@ -160,7 +165,7 @@
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    ensureShellStyles();
+    ensureContextStyles();
     rootSiteNavigation();
     canonicalizeGlobalNavigation();
     canonicalizeFooterNavigation();
