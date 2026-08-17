@@ -40,7 +40,7 @@ test("homepage uses one citation search surface", () => {
 test("global navigation contains only real destinations", () => {
   const bootstrap = read("assets/js/site-bootstrap.js");
   for (const label of ["U.S. Code", "Public Laws", "Constitution", "Criminal Law", "United States Courts"]) {
-    assert.match(bootstrap, new RegExp(`label: \\\"${label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\\"`));
+    assert.ok(bootstrap.includes(`label: "${label}"`), `missing primary destination ${label}`);
   }
   assert.doesNotMatch(bootstrap, /label: "Search Code"/);
   assert.doesNotMatch(bootstrap, /label: "Code Titles"/);
