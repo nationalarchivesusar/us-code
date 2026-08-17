@@ -10,6 +10,18 @@
   color: var(--muted);
   font-size: 0.74rem;
 }
+
+/* The title-browser footer describes local Git/LFS implementation details,
+   not legal research functionality. Keep that maintenance note out of the
+   public interface and let the browser end with the title list itself. */
+.title-browser__footer {
+  display: none !important;
+}
+
+.research-layout {
+  padding-top: 1.15rem;
+}
+
 @media (max-width: 980px) {
   .citation-search { padding-bottom: 2.45rem; }
   .citation-search__smart-help { position: static; grid-column: 1 / -1; }
