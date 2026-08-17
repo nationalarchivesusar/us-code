@@ -131,6 +131,7 @@ test("general Code API stays separate and does not duplicate the statutory corpu
 test("Constitution enhancements publish provenance and legal-validity caveat", () => {
   const builder = read("tools/build_constitution.py");
   const script = read("assets/js/constitution-research.js");
+  const css = read("assets/css/constitution-research.css");
   const page = read("constitution.html");
   assert.match(builder, /constitution-meta\.json/);
   assert.match(builder, /does not itself establish that a constitutional/);
@@ -138,6 +139,9 @@ test("Constitution enhancements publish provenance and legal-validity caveat", (
   assert.match(script, /Publication provenance/);
   assert.match(script, /U\.S\. Const\. amend\./);
   assert.match(page, /constitution-research\.js/);
+  assert.match(css, /grid-template-columns:\s*minmax\(0, 1fr\) auto auto/);
+  assert.match(css, /\.constitution-heading-actions[\s\S]*grid-column:\s*2/);
+  assert.match(css, /\.constitution-permalink[\s\S]*grid-column:\s*3/);
 });
 
 test("scheduled Constitution refresh dispatches the main Pages workflow", () => {
