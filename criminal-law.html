@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="assets/css/criminal-law.css" />
   </head>
   <body>
-    <a class="skip-link" href="#criminal-law-results">Skip to criminal law</a>
+    <a class="skip-link" href="#criminal-search">Skip to charge search</a>
 
     <header class="site-header">
       <div class="masthead">
@@ -49,12 +49,11 @@
       </div>
       <nav class="primary-nav" aria-label="Primary navigation">
         <div class="primary-nav__inner">
-          <a href="./">Home</a>
-          <a href="./#search">Search Code</a>
-          <a href="./#browse">Code Titles</a>
-          <a href="criminal-law.html" aria-current="page">Criminal Law</a>
+          <a href="./">U.S. Code</a>
           <a href="public-laws.html">Public Laws</a>
-          <a class="primary-nav__related" href="https://nationalarchivesusar.github.io/courts/" aria-label="United States Courts, related site">United States Courts <span aria-hidden="true">↗</span></a>
+          <a href="constitution.html">Constitution</a>
+          <a href="criminal-law.html" aria-current="page">Criminal Law</a>
+          <a class="primary-nav__related" href="https://nationalarchivesusar.github.io/courts/">United States Courts <span aria-hidden="true">↗</span></a>
         </div>
       </nav>
     </header>
@@ -63,15 +62,8 @@
       <div class="criminal-hero__inner">
         <div>
           <p class="eyebrow">Criminal Law Reference</p>
-          <h1 id="criminal-heading">Search the charges officers actually need at booking.</h1>
-          <p class="criminal-hero__lede">
-            This reference is intentionally limited to current, platform-safe criminal charges from Title 18
-            and the D.C. Criminal Code federalized by Public Law 36-260. General provisions, duplicate offense
-            sets, and restricted-content sections are not included here.
-          </p>
-          <p class="criminal-hero__links">
-            <a href="criminal/">Browse the permanent charge index</a>
-          </p>
+          <h1 id="criminal-heading">Find a current booking charge.</h1>
+          <p class="criminal-hero__lede">Search the current platform-safe charge catalog from Title 18 and the D.C. Criminal Code adopted as federal law.</p>
         </div>
         <aside class="criminal-hero__status" aria-label="Catalog status">
           <span class="status-dot" aria-hidden="true"></span>
@@ -84,52 +76,11 @@
     </section>
 
     <main class="criminal-shell">
-      <section class="criminal-stats" aria-label="Criminal charge totals">
-        <div><strong id="stat-title18">—</strong><span>Title 18 charges</span></div>
-        <div><strong id="stat-dc">—</strong><span>Federalized D.C. charges</span></div>
-        <div><strong id="stat-charges">—</strong><span>Total booking charges</span></div>
-      </section>
-
-      <section class="legal-lineage" aria-labelledby="lineage-heading">
-        <div class="section-heading">
-          <p class="eyebrow">Controlling Sources</p>
-          <h2 id="lineage-heading">How these sources fit together</h2>
-        </div>
-        <div class="lineage-grid">
-          <article class="lineage-card">
-            <div class="lineage-card__number">PL 36-260</div>
-            <h3>Fixing the District of Columbia Act of 2025</h3>
-            <p>Dissolved the municipal government and adopted the D.C. Criminal Code as federal law in § 10(b), adding a new § 102(11) assigning prosecutions to the U.S. Attorney’s Office for the District of Columbia. Section 10(e) says the adopted laws remain in force until amended or repealed by Congress.</p>
-            <a href="public-laws.html#pl-36-260">Open Public Law 36-260</a>
-          </article>
-          <article class="lineage-card lineage-card--primary">
-            <div class="lineage-card__number">PL 37-261</div>
-            <h3>Federal Criminal Code Act of 2025</h3>
-            <p>Re-established a Federal Criminal Code for the District of Columbia. A section-by-section catalog review found that all 66 FCC offenses duplicate D.C. Criminal Code offenses by section number, offense heading, and class. The FCC source remains preserved, but it is omitted from the booking API to avoid duplicate charges.</p>
-            <a href="public-laws.html#pl-37-261">Open Public Law 37-261</a>
-          </article>
-          <article class="lineage-card">
-            <div class="lineage-card__number">PL 39-267</div>
-            <h3>Reform Sentencing Act</h3>
-            <p>Controls non-court-imposed sentencing and caps multi-charge imprisonment at 30 minutes. Its felony/misdemeanor class scheme is kept separate because the supplied law does not expressly cross-walk it to the federalized D.C. Criminal Code’s A–G offense classes.</p>
-            <a href="public-laws.html#pl-39-267">Open Public Law 39-267</a>
-          </article>
-        </div>
-      </section>
-
-      <section class="sentencing-alert" aria-labelledby="sentencing-alert-heading">
-        <div class="sentencing-alert__icon" aria-hidden="true">§</div>
-        <div>
-          <h2 id="sentencing-alert-heading">Sentencing data is deliberately not guessed.</h2>
-          <p>Public Law 39-267 uses Class A–E felonies and Class A–C misdemeanors, while the federalized D.C. Criminal Code assigns offenses Classes A–G. Because the supplied enactments do not state a crosswalk, the reference keeps the schedules separate rather than inventing one.</p>
-        </div>
-      </section>
-
-      <section class="criminal-search" aria-labelledby="criminal-search-heading">
+      <section id="criminal-search" class="criminal-search" aria-labelledby="criminal-search-heading">
         <div class="section-heading section-heading--inline">
           <div>
             <p class="eyebrow">Charge Search</p>
-            <h2 id="criminal-search-heading">Find a charge</h2>
+            <h2 id="criminal-search-heading">Search criminal law</h2>
           </div>
           <span id="result-summary" class="result-summary">Loading charge catalog…</span>
         </div>
@@ -152,6 +103,56 @@
       <p id="criminal-loading" class="criminal-message" role="status">Loading the criminal-law catalog…</p>
       <p id="criminal-empty" class="criminal-message" hidden>No matching charges were found.</p>
       <section id="criminal-law-results" class="criminal-results" aria-live="polite"></section>
+
+      <details class="criminal-about">
+        <summary>About this criminal-law catalog</summary>
+        <div class="criminal-about__body">
+          <p class="criminal-about__intro">This reference is intentionally limited to current, platform-safe criminal charges from Title 18 and the D.C. Criminal Code federalized by Public Law 36-260. General provisions, duplicate offense sets, and restricted-content sections are not included in the booking catalog.</p>
+
+          <section class="criminal-stats" aria-label="Criminal charge totals">
+            <div><strong id="stat-title18">—</strong><span>Title 18 charges</span></div>
+            <div><strong id="stat-dc">—</strong><span>Federalized D.C. charges</span></div>
+            <div><strong id="stat-charges">—</strong><span>Total booking charges</span></div>
+          </section>
+
+          <section class="legal-lineage" aria-labelledby="lineage-heading">
+            <div class="section-heading">
+              <p class="eyebrow">Controlling Sources</p>
+              <h2 id="lineage-heading">How the catalog sources fit together</h2>
+            </div>
+            <div class="lineage-grid">
+              <article class="lineage-card">
+                <div class="lineage-card__number">PL 36-260</div>
+                <h3>Fixing the District of Columbia Act of 2025</h3>
+                <p>Dissolved the municipal government and adopted the D.C. Criminal Code as federal law in § 10(b), adding a new § 102(11) assigning prosecutions to the U.S. Attorney’s Office for the District of Columbia. Section 10(e) says the adopted laws remain in force until amended or repealed by Congress.</p>
+                <a href="public-laws.html#pl-36-260">Open Public Law 36-260</a>
+              </article>
+              <article class="lineage-card lineage-card--primary">
+                <div class="lineage-card__number">PL 37-261</div>
+                <h3>Federal Criminal Code Act of 2025</h3>
+                <p>Re-established a Federal Criminal Code for the District of Columbia. A section-by-section catalog review found that all 66 FCC offenses duplicate D.C. Criminal Code offenses by section number, offense heading, and class. The FCC source remains preserved, but it is omitted from the booking API to avoid duplicate charges.</p>
+                <a href="public-laws.html#pl-37-261">Open Public Law 37-261</a>
+              </article>
+              <article class="lineage-card">
+                <div class="lineage-card__number">PL 39-267</div>
+                <h3>Reform Sentencing Act</h3>
+                <p>Controls non-court-imposed sentencing and caps multi-charge imprisonment at 30 minutes. Its felony/misdemeanor class scheme is kept separate because the supplied law does not expressly cross-walk it to the federalized D.C. Criminal Code’s A–G offense classes.</p>
+                <a href="public-laws.html#pl-39-267">Open Public Law 39-267</a>
+              </article>
+            </div>
+          </section>
+
+          <section class="sentencing-alert" aria-labelledby="sentencing-alert-heading">
+            <div class="sentencing-alert__icon" aria-hidden="true">§</div>
+            <div>
+              <h2 id="sentencing-alert-heading">Sentencing data is deliberately not guessed.</h2>
+              <p>Public Law 39-267 uses Class A–E felonies and Class A–C misdemeanors, while the federalized D.C. Criminal Code assigns offenses Classes A–G. Because the supplied enactments do not state a crosswalk, the reference keeps the schedules separate rather than inventing one.</p>
+            </div>
+          </section>
+
+          <p class="criminal-about__permanent"><a href="criminal/">Open the permanent charge index</a> for stable static charge URLs and no-JavaScript access.</p>
+        </div>
+      </details>
     </main>
 
     <footer class="site-footer">
@@ -161,16 +162,16 @@
             <img src="assets/images/nara.png" alt="National Archives and Records Administration" />
             <span>Maintained by the <strong>National Archives and Records Administration</strong> for the United States Code.</span>
           </a>
-
           <nav class="footer-nav" aria-label="Footer navigation">
-            <a href="./">Home</a>
-            <a href="./#browse">Code Titles</a>
-            <a href="criminal-law.html">Criminal Law</a>
+            <a href="./">U.S. Code</a>
             <a href="public-laws.html">Public Laws</a>
+            <a href="constitution.html">Constitution</a>
+            <a href="criminal-law.html">Criminal Law</a>
+            <a href="api.html">Developer API</a>
             <a href="https://nationalarchivesusar.github.io/courts/">United States Courts</a>
           </nav>
         </div>
-        <p class="footer-source">Only current, platform-safe, non-duplicative charge material is exposed through this booking reference. The excluded FCC source remains available through the Public Laws page.</p>
+        <p class="footer-source">Only current, platform-safe, non-duplicative charge material is exposed through this booking reference. The excluded FCC source remains available through Public Laws.</p>
         <p class="footer-disclaimer">An independent USAR community resource. Not affiliated with the real United States government.</p>
       </div>
     </footer>
