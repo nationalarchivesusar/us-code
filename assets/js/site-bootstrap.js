@@ -45,9 +45,10 @@
     document.head.appendChild(link);
   }
 
-  // Navigation CSS does not depend on body markup, so load it while the head is
-  // still parsing to avoid a mobile flash of the fallback multi-row nav.
+  // Shared shell/polish CSS does not depend on body markup, so load it while
+  // the head is still parsing to avoid layout shifts on the research pages.
   ensureStyle("assets/css/navigation.css", "canonical-navigation");
+  ensureStyle("assets/css/site-polish.css", "phase-three-polish");
 
   function ensureContextStyles() {
     if (typeof document.querySelector !== "function") return;
@@ -183,6 +184,7 @@
       ["research tools", "assets/js/research-tools.js"],
       ["section comparisons", "assets/js/section-comparison.js"],
       ["section research", "assets/js/section-research.js"],
+      ["enactment history", "assets/js/enactment-history.js"],
       ["Courts case-law bridge", "assets/js/court-bridge.js"],
     ];
     modules.forEach(([label, path]) => {

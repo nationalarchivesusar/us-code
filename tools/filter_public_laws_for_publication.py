@@ -11,6 +11,7 @@ from urllib.parse import quote
 
 from augment_public_laws_with_current_laws import augment
 from build_code_api import build as build_code_api
+from build_enactment_history import build as build_enactment_history
 from build_reference_graph import build as build_reference_graph
 from build_section_history import (
     DEFAULT_BASELINE,
@@ -251,6 +252,14 @@ def main() -> None:
     print(
         f"Prepared exact repository version history for "
         f"{versions['counts']['versioned_sections']} sections."
+    )
+
+    enactments = build_enactment_history(public_laws_path=DATA_FILE)
+    if enactments["counts"]["events"] <= 0:
+        raise SystemExit("Enactment-history build produced no verified law-by-law events.")
+    print(
+        f"Prepared verified enactment history with {enactments['counts']['events']} events "
+        f"across {enactments['counts']['sections']} sections."
     )
 
     references = build_reference_graph()

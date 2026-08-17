@@ -1,0 +1,259 @@
+/* Phase III visual polish.
+   This layer intentionally refines hierarchy and rhythm without changing the
+   site's legal-publication identity or page information architecture. */
+
+:root {
+  --utility-gap: 0.32rem;
+  --content-rule: color-mix(in srgb, var(--border) 82%, transparent);
+}
+
+/* Keep the masthead institutional, but do not let it dominate research. */
+.masthead__inner {
+  min-height: 5.65rem;
+  padding-block: 0.68rem;
+}
+
+.brand-mark {
+  width: 4rem;
+  height: 4rem;
+}
+
+.primary-nav a {
+  min-height: 2.8rem;
+}
+
+.page-shell,
+.criminal-shell,
+.constitution-shell {
+  padding-bottom: 3rem;
+}
+
+/* The homepage is a search surface, not a marketing hero. */
+.search-band__inner {
+  padding-block: clamp(1.1rem, 2.2vw, 1.6rem);
+}
+
+.search-band h1 {
+  max-width: 25rem;
+}
+
+/* Research controls should read as utilities attached to a provision, not as
+   a second form or a bank of unrelated rectangular buttons. */
+.section-research-summary + .research-toolbar {
+  padding-top: 0.4rem;
+  border-top: 0;
+}
+
+.research-toolbar {
+  gap: 0;
+}
+
+.research-toolbar__button {
+  position: relative;
+  min-height: 1.8rem;
+  padding: 0.22rem 0.52rem;
+  border: 0;
+  background: transparent;
+  color: var(--link);
+  font-size: 0.76rem;
+}
+
+.research-toolbar__button + .research-toolbar__button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.38rem;
+  bottom: 0.38rem;
+  width: 1px;
+  background: var(--border);
+}
+
+.research-toolbar__button:hover,
+.research-toolbar__button:focus-visible {
+  background: var(--surface-alt);
+  color: var(--cornell-red-dark);
+}
+
+.section-research-summary {
+  gap: 0.28rem 0.7rem;
+  padding-top: 0.65rem;
+  border-top-color: var(--border-strong);
+}
+
+.section-research-summary__current {
+  min-height: 1.35rem;
+  padding-inline: 0.4rem;
+  font-size: 0.7rem;
+}
+
+/* Related research panels share one visual grammar. The closed state is a
+   simple legal-document rule; the open state gets the stronger container. */
+.section-history,
+.section-research-panel {
+  margin-top: 0.7rem;
+  border-color: var(--content-rule);
+}
+
+.section-history > summary,
+.section-research-panel > summary {
+  min-height: 2.7rem;
+  padding: 0.68rem 0.85rem;
+  background: var(--surface);
+}
+
+.section-history[open] > summary,
+.section-research-panel[open] > summary {
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-alt);
+}
+
+.section-history__body,
+.section-research-panel__body {
+  padding: 0.9rem 1rem 1rem;
+}
+
+.section-research-panel__count,
+.section-history__count {
+  font-size: 0.67rem;
+}
+
+.version-history__display {
+  border-color: var(--content-rule);
+}
+
+/* Public Laws and Code Changes are two views of the same research corpus, so
+   the local switcher should look like a local tab strip rather than another
+   global navigation bar. */
+.legislative-view-tabs {
+  width: 100%;
+  margin-bottom: 1rem;
+  border: 0;
+  border-bottom: 1px solid var(--border-strong);
+  background: transparent;
+}
+
+.legislative-view-tabs button {
+  min-height: 2.35rem;
+  margin-bottom: -1px;
+  padding: 0.42rem 0.8rem;
+  border-right: 0;
+  border-bottom: 3px solid transparent;
+}
+
+.legislative-view-tabs button.is-active {
+  border-bottom-color: var(--cornell-red-dark);
+  background: transparent;
+  color: var(--cornell-red-dark);
+}
+
+/* Criminal Law is now search-first. Keep the identity copy, but shorten the
+   trip from page load to the charge search. */
+.criminal-hero__inner {
+  padding-block: clamp(1.25rem, 3vw, 2.1rem);
+}
+
+.criminal-hero h1 {
+  margin-bottom: 0.55rem;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+}
+
+.criminal-shell {
+  padding-top: 1.2rem;
+}
+
+.criminal-search {
+  padding: 1rem;
+}
+
+.law-result summary {
+  padding-block: 0.8rem;
+}
+
+/* Constitution research utilities should stay subordinate to the text. */
+.constitution-controls {
+  padding: 0.85rem;
+}
+
+.constitution-provenance {
+  margin-top: 0.65rem;
+}
+
+.constitution-document {
+  line-height: 1.64;
+}
+
+/* Dense legal data should wrap rather than create page-level horizontal
+   scrolling. */
+.section-research-panel,
+.section-history,
+.criminal-search,
+.public-law-card,
+.constitution-document {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+button:focus-visible,
+a:focus-visible,
+summary:focus-visible,
+select:focus-visible,
+input:focus-visible {
+  outline: none;
+  box-shadow: var(--focus);
+}
+
+@media (max-width: 760px) {
+  .masthead__inner {
+    min-height: auto;
+  }
+
+  .brand-mark {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .research-toolbar {
+    display: flex;
+    grid-template-columns: none;
+    gap: 0;
+  }
+
+  .research-toolbar__button {
+    width: auto;
+    flex: 0 1 auto;
+  }
+
+  .legislative-view-tabs {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .legislative-view-tabs button {
+    flex: 1 0 auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .search-band__inner {
+    padding-block: 1rem;
+  }
+
+  .section-history__body,
+  .section-research-panel__body {
+    padding-inline: 0.75rem;
+  }
+
+  .research-toolbar__button {
+    font-size: 0.73rem;
+    padding-inline: 0.42rem;
+  }
+}
+
+@media print {
+  .site-header,
+  .research-toolbar,
+  .section-research-summary,
+  .legislative-view-tabs {
+    box-shadow: none !important;
+  }
+}
