@@ -58,7 +58,7 @@ jobs:
           python -m unittest tests.test_current_law_sections -v
 
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: "22"
 
@@ -115,7 +115,7 @@ jobs:
           node --check assets/js/criminal-law.js
           node --check assets/js/research-tools.js
           node --check assets/js/constitution.js
-          python -m py_compile tools/build_constitution.py tools/build_criminal_law_api.py tools/include_dc_booking_charges.py tools/harden_roblox_criminal_api.py tools/finalize_roblox_criminal_api.py tools/build_criminal_law_routes.py tools/apply_current_law_sections.py tools/augment_public_laws_with_current_laws.py tools/filter_public_laws_for_publication.py
+          python -m py_compile tools/build_constitution.py tools/build_criminal_law_api.py tools/include_dc_booking_charges.py tools/harden_roblox_criminal_api.py tools/finalize_roblox_criminal_api.py tools/build_criminal_law_routes.py tools/apply_current_law_notes.py tools/apply_current_law_sections.py tools/augment_public_laws_with_current_laws.py tools/filter_public_laws_for_publication.py
           python tools/harden_roblox_criminal_api.py --check
           python tools/finalize_roblox_criminal_api.py --check
           node --test tests/*.mjs
@@ -125,10 +125,10 @@ jobs:
           from pathlib import Path
 
           payload = json.loads(Path('data/public-laws.json').read_text(encoding='utf-8'))
-          assert payload['counts']['total'] == 272
-          assert payload['counts']['active'] == 143
+          assert payload['counts']['total'] == 273
+          assert payload['counts']['active'] == 144
           assert payload['counts']['repealed'] == 129
-          assert len(payload['laws']) == 272
+          assert len(payload['laws']) == 273
           assert payload['counts']['actions'] == sum(
               law['action_count'] for law in payload['laws']
           )
@@ -141,10 +141,12 @@ jobs:
           )
 
           laws = {law['public_law']: law for law in payload['laws']}
-          assert {'41-271', '42-272', '42-273'} <= set(laws)
+          assert {'41-271', '42-272', '42-273', '42-274'} <= set(laws)
           assert laws['41-271']['status'] == 'active'
           assert laws['42-272']['status'] == 'active'
           assert laws['42-273']['status'] == 'active'
+          assert laws['42-274']['status'] == 'active'
+          assert laws['42-274']['trello_url'] == 'https://trello.com/c/DAwGab9j'
 
           def sections(law_number, title):
               return {
@@ -156,6 +158,7 @@ jobs:
 
           assert set(range(9701, 9717)) <= sections('42-272', 40)
           assert set(range(1801, 1816)) <= sections('42-273', 6)
+          assert set(range(7001, 7020)) <= sections('42-274', 2)
           assert set(range(5001, 5008)) <= sections('41-271', 50)
           assert set(range(10001, 10012)) <= sections('41-271', 15)
           assert set(range(2501, 2505)) <= sections('41-271', 5)
@@ -287,6 +290,8 @@ jobs:
           test -s _site/cite/18/111/index.html
           test -s _site/cite/28/530B/index.html
           test -s _site/cite/42/1983/index.html
+          test -s _site/cite/2/7001/index.html
+          test -s _site/cite/2/7019/index.html
           test -s _site/criminal/index.html
           test ! -e _site/criminal/fcc
           test -s _site/criminal/dc/201/index.html
@@ -297,6 +302,8 @@ jobs:
           grep -q 'property="og:title"' _site/cite/18/111/index.html
           grep -q 'property="og:image"' _site/cite/18/111/index.html
           grep -q '18 U.S.C. § 111' _site/cite/18/111/index.html
+          grep -q '2 U.S.C. § 7001' _site/cite/2/7001/index.html
+          grep -q '2 U.S.C. § 7019' _site/cite/2/7019/index.html
           grep -q 'D.C. Criminal Code § 201' _site/criminal/dc/201/index.html
           grep -q '18 U.S.C. § 111' _site/criminal/title18/111/index.html
           grep -q '<urlset' _site/sitemap-criminal.xml
