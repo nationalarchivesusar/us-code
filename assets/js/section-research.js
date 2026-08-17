@@ -210,6 +210,23 @@ function renderSideBySide(target, before, after) {
   target.appendChild(grid);
 }
 
+function appendDirectLawLink(item, linkRecord) {
+  const row = document.createElement("div");
+  row.className = "version-history__named-laws";
+  const strong = document.createElement("strong");
+  strong.textContent = "Direct Public Law link: ";
+  const link = document.createElement("a");
+  link.href = new URL(`public-laws.html#pl-${encodeURIComponent(linkRecord.public_law)}`, APP_BASE_URL);
+  link.textContent = `Pub. L. ${linkRecord.public_law}`;
+  row.append(strong, link);
+  if (linkRecord.title) row.appendChild(document.createTextNode(` — ${linkRecord.title}`));
+  const evidence = document.createElement("span");
+  evidence.textContent = " · exact repository state linked by the snapshot commit and this section’s published law target";
+  row.appendChild(evidence);
+  row.title = linkRecord.limitation || "";
+  item.appendChild(row);
+}
+
 function buildVersionTimeline(record) {
   const list = document.createElement("ol");
   list.className = "version-history__timeline";
@@ -222,7 +239,9 @@ function buildVersionTimeline(record) {
     const pieces = [formatDate(version.committed_at), version.commit ? version.commit.slice(0, 10) : null].filter(Boolean);
     meta.textContent = pieces.length ? ` — ${pieces.join(" · ")}` : "";
     item.appendChild(meta);
-    if (version.named_public_laws?.length) {
+    if (version.direct_public_law_link) {
+      appendDirectLawLink(item, version.direct_public_law_link);
+    } else if (version.named_public_laws?.length) {
       const laws = document.createElement("div");
       laws.className = "version-history__named-laws";
       laws.textContent = `Commit explicitly names Pub. L. ${version.named_public_laws.join(", Pub. L. ")}`;
