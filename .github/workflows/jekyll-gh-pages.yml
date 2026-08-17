@@ -78,11 +78,17 @@ jobs:
           set -euo pipefail
           rm -rf data/title-42
           rm -rf data/api/v1/criminal-law
+          rm -rf data/api/v1/code
+          rm -rf data/section-history data/version-history data/references
           python tools/build_constitution.py
           python tools/build_title42_chunks.py
           python tools/build_index.py
           python tools/build_public_laws_index.py
           python tools/filter_public_laws_for_publication.py
+          python tools/build_section_history.py
+          python tools/build_version_history.py
+          python tools/build_reference_graph.py
+          python tools/build_code_api.py
           python tools/build_criminal_law_api.py
           python tools/include_dc_booking_charges.py
           python tools/harden_roblox_criminal_api.py
@@ -90,9 +96,14 @@ jobs:
           python tools/harden_roblox_criminal_api.py --check
           python tools/finalize_roblox_criminal_api.py --check
           test -s data/constitution.txt
+          test -s data/constitution-meta.json
           test -s data/titles.json
           test -s data/title-42/manifest.json
           test -s data/public-laws.json
+          test -s data/section-history/manifest.json
+          test -s data/version-history/manifest.json
+          test -s data/references/manifest.json
+          test -s data/api/v1/code/index.json
           test -s data/api/v1/criminal-law/manifest.json
           test -s data/api/v1/criminal-law/charges.json
           test ! -e data/api/v1/criminal-law/federal-code.json
@@ -115,7 +126,10 @@ jobs:
           node --check assets/js/criminal-law.js
           node --check assets/js/research-tools.js
           node --check assets/js/constitution.js
-          python -m py_compile tools/build_constitution.py tools/build_criminal_law_api.py tools/include_dc_booking_charges.py tools/harden_roblox_criminal_api.py tools/finalize_roblox_criminal_api.py tools/build_criminal_law_routes.py tools/apply_current_law_notes.py tools/apply_current_law_sections.py tools/augment_public_laws_with_current_laws.py tools/filter_public_laws_for_publication.py
+          node --check assets/js/section-research.js
+          node --check assets/js/constitution-research.js
+          node --check assets/js/code-changes.js
+          python -m py_compile tools/build_constitution.py tools/build_criminal_law_api.py tools/include_dc_booking_charges.py tools/harden_roblox_criminal_api.py tools/finalize_roblox_criminal_api.py tools/build_criminal_law_routes.py tools/apply_current_law_notes.py tools/apply_current_law_sections.py tools/augment_public_laws_with_current_laws.py tools/filter_public_laws_for_publication.py tools/build_section_history.py tools/build_version_history.py tools/build_reference_graph.py tools/build_code_api.py
           python tools/harden_roblox_criminal_api.py --check
           python tools/finalize_roblox_criminal_api.py --check
           node --test tests/*.mjs
@@ -165,6 +179,23 @@ jobs:
           assert set(range(2308, 2315)) <= sections('41-271', 5)
           assert 205 in sections('41-271', 18)
           print('Public-law index validation passed.')
+          PY
+
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          history = json.loads(Path('data/section-history/manifest.json').read_text(encoding='utf-8'))
+          versions = json.loads(Path('data/version-history/manifest.json').read_text(encoding='utf-8'))
+          references = json.loads(Path('data/references/manifest.json').read_text(encoding='utf-8'))
+          code_api = json.loads(Path('data/api/v1/code/index.json').read_text(encoding='utf-8'))
+
+          assert history['counts']['changed'] > 0
+          assert versions['counts']['versioned_sections'] > 0
+          assert references['counts']['sections'] > 0
+          assert code_api['titles']
+          assert code_api.get('criminal_law_api_unchanged') is True
+          print('Legal research publication outputs passed.')
           PY
 
           python - <<'PY'
@@ -244,7 +275,7 @@ jobs:
           rm -rf _site
           mkdir -p _site
 
-          cp index.html 404.html public-laws.html criminal-law.html constitution.html _site/
+          cp index.html 404.html public-laws.html criminal-law.html constitution.html api.html changes.html _site/
           cp -a assets _site/assets
           cp -a data _site/data
           cp -a usc _site/usc
@@ -266,18 +297,26 @@ jobs:
           test -s _site/public-laws.html
           test -s _site/criminal-law.html
           test -s _site/constitution.html
+          test -s _site/api.html
+          test -s _site/changes.html
           test -s _site/assets/js/public-laws.js
           test -s _site/assets/js/criminal-law.js
           test -s _site/assets/js/research-tools.js
           test -s _site/assets/js/constitution.js
+          test -s _site/assets/js/section-research.js
           test -s _site/assets/css/public-laws.css
           test -s _site/assets/css/criminal-law.css
           test -s _site/assets/css/criminal-law-static.css
           test -s _site/assets/css/research-tools.css
           test -s _site/assets/css/constitution.css
           test -s _site/data/constitution.txt
+          test -s _site/data/constitution-meta.json
           test -s _site/data/titles.json
           test -s _site/data/public-laws.json
+          test -s _site/data/section-history/manifest.json
+          test -s _site/data/version-history/manifest.json
+          test -s _site/data/references/manifest.json
+          test -s _site/data/api/v1/code/index.json
           test -s _site/data/social-routes.json
           test -s _site/data/title-42/manifest.json
           test -s _site/data/api/v1/criminal-law/manifest.json
