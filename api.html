@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Read-only public API documentation for current United States Code sections published by the USAR National Archives." />
+    <link rel="canonical" href="https://nationalarchivesusar.github.io/us-code/api.html" />
+    <meta property="og:title" content="U.S. Code API | United States Code" />
+    <meta property="og:description" content="Fetch current U.S. Code section data through the NARA legal research API." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="US Code Library" />
+    <meta property="og:url" content="https://nationalarchivesusar.github.io/us-code/api.html" />
+    <meta property="og:image" content="https://nationalarchivesusar.github.io/us-code/assets/images/social-card.png" />
+    <title>U.S. Code API | United States Code</title>
+    <script src="assets/js/site-bootstrap.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/api.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#api-content">Skip to API documentation</a>
+    <header class="site-header">
+      <div class="masthead">
+        <div class="masthead__inner">
+          <a class="brand" href="./" aria-label="United States Code home">
+            <img class="brand-mark" src="assets/images/icon-512.png" alt="" />
+            <span class="brand-text">
+              <span class="brand-kicker">Federal Statutory Law</span>
+              <span class="brand-title">United States Code</span>
+              <span class="brand-tagline">Legal information and legislative history</span>
+            </span>
+          </a>
+          <div class="masthead__tools">
+            <div class="theme-switcher" role="group" aria-label="Color theme">
+              <button type="button" class="theme-switcher__button" data-theme-choice="system">System</button>
+              <button type="button" class="theme-switcher__button" data-theme-choice="light">Light</button>
+              <button type="button" class="theme-switcher__button" data-theme-choice="dark">Dark</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <div class="primary-nav__inner">
+          <a href="./">Home</a>
+          <a href="./#search">Search Code</a>
+          <a href="./#browse">Code Titles</a>
+          <a href="criminal-law.html">Criminal Law</a>
+          <a href="public-laws.html">Public Laws</a>
+          <a href="changes.html" data-legal-material="changes">Code Changes</a>
+          <a href="constitution.html" data-legal-material="constitution">Constitution</a>
+          <a class="primary-nav__related" href="https://nationalarchivesusar.github.io/courts/">United States Courts <span aria-hidden="true">↗</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="api-content" class="api-shell">
+      <header class="api-heading">
+        <p class="eyebrow">Developer Resource</p>
+        <h1>United States Code API</h1>
+        <p>Read-only JSON access to the current published U.S. Code. This is a separate namespace from the existing Criminal Law API and does not alter that API's contract.</p>
+      </header>
+
+      <section class="api-status" aria-labelledby="api-status-heading">
+        <div>
+          <h2 id="api-status-heading">API status</h2>
+          <p id="api-manifest-status">Loading manifest…</p>
+        </div>
+        <a href="data/api/v1/code/manifest.json">Open manifest JSON</a>
+      </section>
+
+      <section class="api-section">
+        <h2>Endpoints</h2>
+        <div class="api-endpoints">
+          <article>
+            <h3>Manifest</h3>
+            <code>GET /us-code/data/api/v1/code/manifest.json</code>
+            <p>API metadata, counts, title indexes, route templates, and compatibility notes.</p>
+          </article>
+          <article>
+            <h3>Title index</h3>
+            <code>GET /us-code/data/api/v1/code/titles/{title}.json</code>
+            <p>Lists the published sections in one U.S. Code title with citation, heading, URLs, and text verification hash.</p>
+          </article>
+          <article>
+            <h3>Section</h3>
+            <code>GET /us-code/data/api/v1/code/sections/{title}/{section}.json</code>
+            <p>Returns the current codified section body, source credit, canonical web URL, XML identifier, and SHA-256 text verifier.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="api-section api-example">
+        <h2>Example</h2>
+        <p>To fetch 18 U.S.C. § 1752:</p>
+        <code>https://nationalarchivesusar.github.io/us-code/data/api/v1/code/sections/18/1752.json</code>
+        <pre><code>{
+  "schema_version": "1.0",
+  "title": "18",
+  "section": "1752",
+  "citation": "18 U.S.C. § 1752",
+  "heading": "…",
+  "body": "…",
+  "source_credit": "…",
+  "web_url": "https://nationalarchivesusar.github.io/us-code/cite/18/1752/",
+  "sha256": "…"
+}</code></pre>
+      </section>
+
+      <section class="api-section api-contract">
+        <h2>Contract and scope</h2>
+        <ul>
+          <li>The API is read-only and represents the current published Code build.</li>
+          <li>Statutory notes are excluded from the compact section payload; source credit is provided separately.</li>
+          <li>Historical comparisons live under the separate section-history research data and are not represented as fabricated intermediate versions.</li>
+          <li>The pre-existing <code>/data/api/v1/criminal-law/</code> namespace remains independently hardened for Roblox charge-catalog use.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="footer-primary">
+          <a class="nara-attribution" href="https://discord.gg/vhTGAHgkHC" rel="noopener noreferrer">
+            <img src="assets/images/nara.png" alt="National Archives and Records Administration" />
+            <span>Maintained by the <strong>National Archives and Records Administration</strong> for the United States Code.</span>
+          </a>
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="./">Home</a>
+            <a href="./#browse">Code Titles</a>
+            <a href="criminal-law.html">Criminal Law</a>
+            <a href="public-laws.html">Public Laws</a>
+            <a href="changes.html" data-legal-material="changes">Code Changes</a>
+            <a href="constitution.html" data-legal-material="constitution">Constitution</a>
+            <a href="api.html" aria-current="page">Code API</a>
+            <a href="https://nationalarchivesusar.github.io/courts/">United States Courts</a>
+          </nav>
+        </div>
+        <p class="footer-source">Generated from the same current USLM source used to publish the Code website.</p>
+        <p class="footer-disclaimer">An independent USAR community resource. Not affiliated with the real United States government.</p>
+      </div>
+    </footer>
+    <script type="module" src="assets/js/api.js"></script>
+  </body>
+</html>
