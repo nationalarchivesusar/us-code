@@ -3,7 +3,12 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from tools.build_enactment_history import build_records, target_from_identifier, write_dataset
+from tools.build_enactment_history import (
+    attach_exact_sole_enactment_pairs,
+    build_records,
+    target_from_identifier,
+    write_dataset,
+)
 
 
 class EnactmentHistoryTests(unittest.TestCase):
@@ -109,6 +114,98 @@ class EnactmentHistoryTests(unittest.TestCase):
         self.assertEqual(event['source_provisions'], ['SEC. 1(a)', 'SEC. 1(b)'])
         self.assertEqual(event['subsection_paths'], ['a', 'b'])
         self.assertEqual(event['changed_node_ids'], ['x', 'y'])
+
+    def test_exact_pair_attaches_only_when_event_and_public_law_are_unique(self):
+        audit = {
+            'results': [
+                {
+                    'action_id': 'A1', 'public_law': '7-39', 'provision_reference': 'SEC. 1',
+                    'planned_action': 'amend existing text', 'planned_treatment': 'amend-existing-text',
+                    'result_status': 'applied', 'final_section_or_subsection_identifier': '/us/usc/t42/s217',
+                    'actual_node_ids_changed': ['node-217'], 'validation_result': 'validated',
+                }
+            ]
+        }
+        laws = {
+            'laws': [
+                {
+                    'public_law': '7-39',
+                    'targets': [{'title': '42', 'section': '217'}],
+                }
+            ]
+        }
+        _, sections = build_records(audit, laws)
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / '42').mkdir()
+            history_record = {
+                'status': 'amended',
+                'baseline': {
+                    'commit': 'base', 'present': True, 'heading': 'Old',
+                    'text': 'old exact text', 'sha256': 'oldhash',
+                },
+                'current': {
+                    'present': True, 'heading': 'New',
+                    'text': 'new exact text', 'sha256': 'newhash',
+                },
+                'diff': [{'op': 'delete', 'text': 'old'}, {'op': 'insert', 'text': 'new'}],
+            }
+            (root / '42' / '217.json').write_text(json.dumps(history_record), encoding='utf-8')
+            (root / 'manifest.json').write_text(
+                json.dumps({'sections': {'42:217': {'path': str(root / '42' / '217.json')}}}),
+                encoding='utf-8',
+            )
+            attached = attach_exact_sole_enactment_pairs(sections, laws, root)
+
+        self.assertEqual(attached, 1)
+        event = sections[('42', '217')]['events'][0]
+        self.assertTrue(event['exact_text_snapshot_available'])
+        self.assertEqual(event['exact_text_snapshot']['baseline']['text'], 'old exact text')
+        self.assertEqual(event['exact_text_snapshot']['current']['text'], 'new exact text')
+        self.assertEqual(
+            event['exact_text_snapshot']['basis'],
+            'sole-published-enactment-between-verified-repository-states',
+        )
+
+    def test_exact_pair_is_blocked_when_crosswalk_names_another_law(self):
+        audit = {
+            'results': [
+                {
+                    'action_id': 'A1', 'public_law': '7-39',
+                    'planned_action': 'amend existing text', 'planned_treatment': 'amend-existing-text',
+                    'result_status': 'applied', 'final_section_or_subsection_identifier': '/us/usc/t42/s217',
+                    'actual_node_ids_changed': ['node-217'],
+                }
+            ]
+        }
+        laws = {
+            'laws': [
+                {'public_law': '7-39', 'targets': [{'title': '42', 'section': '217'}]},
+                {'public_law': '8-1', 'targets': [{'title': '42', 'section': '217'}]},
+            ]
+        }
+        _, sections = build_records(audit, laws)
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / '42').mkdir()
+            record_path = root / '42' / '217.json'
+            record_path.write_text(
+                json.dumps({
+                    'status': 'amended',
+                    'baseline': {'text': 'old'},
+                    'current': {'text': 'new'},
+                    'diff': [],
+                }),
+                encoding='utf-8',
+            )
+            (root / 'manifest.json').write_text(
+                json.dumps({'sections': {'42:217': {'path': str(record_path)}}}),
+                encoding='utf-8',
+            )
+            attached = attach_exact_sole_enactment_pairs(sections, laws, root)
+
+        self.assertEqual(attached, 0)
+        self.assertFalse(sections[('42', '217')]['events'][0]['exact_text_snapshot_available'])
 
     def test_writer_creates_manifest_and_section_files(self):
         manifest = {'counts': {'events': 1}, 'sections': {}}
