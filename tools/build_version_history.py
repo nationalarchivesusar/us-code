@@ -56,16 +56,43 @@ def section_key(title: str, section: str) -> str:
     return f"{title.lower()}:{section.lower()}"
 
 
+def ensure_commit(commit: str) -> None:
+    """Materialize one known snapshot in shallow CI checkouts."""
+    try:
+        git_output(["git", "cat-file", "-e", f"{commit}^{{commit}}"])
+        return
+    except RuntimeError:
+        pass
+    git_output(["git", "fetch", "--no-tags", "--depth=1", "origin", commit])
+    git_output(["git", "cat-file", "-e", f"{commit}^{{commit}}"])
+
+
 def git_file_bytes(commit: str, relative_path: str) -> bytes:
+    ensure_commit(commit)
     raw = git_output(["git", "show", f"{commit}:{relative_path}"])
     if raw.startswith(b"version https://git-lfs.github.com/spec/v1"):
-        raw = git_output(["git", "lfs", "smudge"], input_bytes=raw)
-        if raw.startswith(b"version https://git-lfs.github.com/spec/v1"):
+        materialized = git_output(["git", "lfs", "smudge"], input_bytes=raw)
+        if materialized.startswith(b"version https://git-lfs.github.com/spec/v1"):
+            try:
+                git_output([
+                    "git",
+                    "lfs",
+                    "fetch",
+                    f"--include={relative_path}",
+                    "origin",
+                    commit,
+                ])
+                materialized = git_output(["git", "lfs", "smudge"], input_bytes=raw)
+            except RuntimeError:
+                pass
+        if materialized.startswith(b"version https://git-lfs.github.com/spec/v1"):
             raise RuntimeError(f"LFS object unavailable for {commit}:{relative_path}")
+        raw = materialized
     return raw
 
 
 def commit_metadata(commit: str) -> dict:
+    ensure_commit(commit)
     fmt = "%cI%x00%B"
     output = git_output(["git", "show", "-s", f"--format={fmt}", commit]).decode("utf-8", errors="replace")
     committed_at, _, message = output.partition("\x00")
@@ -153,8 +180,13 @@ def build(*, output_dir: Path = OUTPUT_DIR, public_laws_path: Path = PUBLIC_LAWS
     law_index = laws_by_section(laws)
 
     snapshot_states = []
+    unavailable_snapshots: dict[str, str] = {}
     for index, snapshot in enumerate(SNAPSHOTS):
-        meta = commit_metadata(snapshot["commit"])
+        try:
+            meta = commit_metadata(snapshot["commit"])
+        except RuntimeError as exc:
+            unavailable_snapshots[snapshot["commit"]] = str(exc)
+            continue
         snapshot_states.append(
             {
                 **snapshot,
@@ -162,6 +194,9 @@ def build(*, output_dir: Path = OUTPUT_DIR, public_laws_path: Path = PUBLIC_LAWS
                 "state_id": f"snapshot-{index + 1}",
             }
         )
+    if not snapshot_states:
+        raise RuntimeError("No verified historical repository snapshot could be materialized.")
+
     current_state = {
         "state_id": "current",
         "label": "Current published Code",
@@ -258,8 +293,11 @@ def build(*, output_dir: Path = OUTPUT_DIR, public_laws_path: Path = PUBLIC_LAWS
         "states": [{k: v for k, v in state.items() if k != "message"} for state in snapshot_states] + [current_state],
         "counts": {
             "versioned_sections": versioned_count,
+            "available_snapshots": len(snapshot_states),
+            "unavailable_snapshots": len(unavailable_snapshots),
             "unavailable_titles": len(unavailable),
         },
+        "unavailable_snapshots": unavailable_snapshots,
         "unavailable": unavailable,
         "sections": manifest_sections,
         "limitations": [
@@ -273,7 +311,10 @@ def build(*, output_dir: Path = OUTPUT_DIR, public_laws_path: Path = PUBLIC_LAWS
 
 def main() -> int:
     manifest = build()
-    print(f"Built verified version history for {manifest['counts']['versioned_sections']} sections.")
+    print(
+        f"Built verified version history for {manifest['counts']['versioned_sections']} sections "
+        f"across {manifest['counts']['available_snapshots']} historical snapshots."
+    )
     return 0
 
 
