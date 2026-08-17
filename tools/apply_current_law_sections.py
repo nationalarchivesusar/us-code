@@ -55,7 +55,7 @@ def load_manifest(directory=Path("legal-data")):
                 existing.setdefault("chapter_notes", []).extend(row.get("chapter_notes", []))
     for chapter in data.get("chapters", []):
         sections = chapter.get("sections", [])
-        sections.sort(key=lambda item: int(item["section"]) if str(item.get("section", "")).isdigit() else str(item.get("section", "")))
+        sections.sort(key=lambda item: (0, int(str(item.get("section", "")))) if str(item.get("section", "")).isdigit() else (1, str(item.get("section", ""))))
         seen = set()
         for section in sections:
             number = str(section.get("section"))
