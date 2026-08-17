@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Build a separate, versioned general U.S. Code JSON API without touching criminal-law API."""
+"""Build a compact, versioned general U.S. Code index API.
+
+The general API intentionally does not duplicate the full statutory body already
+published in the authoritative USLM XML. Section records provide stable metadata,
+deep links, and USLM identifiers; each title manifest points to its source XML for
+clients that need the complete statutory text.
+"""
 
 from __future__ import annotations
 
@@ -14,7 +20,7 @@ from build_section_history import ROOT, USC_DIR, extract_sections
 OUTPUT_DIR = ROOT / "data" / "api" / "v1" / "code"
 TITLES_FILE = ROOT / "data" / "titles.json"
 SCHEMA_VERSION = "1.0"
-CHUNK_SIZE = 250
+CHUNK_SIZE = 500
 
 
 def natural_section_key(value: str):
@@ -75,7 +81,6 @@ def build(output_dir: Path = OUTPUT_DIR) -> dict:
                         "citation": f"{title} U.S.C. § {section}",
                         "identifier": record["identifier"],
                         "heading": record["heading"],
-                        "body": record["body"],
                         "web_url": f"cite/{title}/{section}/",
                     }
                 )
@@ -102,6 +107,7 @@ def build(output_dir: Path = OUTPUT_DIR) -> dict:
             )
 
         meta = title_meta.get(title.lower(), {})
+        source_xml = meta.get("file") or f"usc/{xml_path.name}"
         manifest_relative = f"data/api/v1/code/titles/{title.lower()}/manifest.json"
         title_manifest = {
             "schema_version": SCHEMA_VERSION,
@@ -110,7 +116,12 @@ def build(output_dir: Path = OUTPUT_DIR) -> dict:
             "label": meta.get("label") or f"Title {title}",
             "heading": meta.get("heading") or "",
             "section_count": len(ordered),
-            "source_xml": meta.get("file") or f"usc/{xml_path.name}",
+            "source_xml": source_xml,
+            "source_format": "USLM XML",
+            "source_note": (
+                "Use the section identifier from the compact API record to locate the "
+                "complete statutory text in source_xml."
+            ),
             "chunks": chunks,
             "section_to_chunk": section_to_chunk,
         }
@@ -125,6 +136,7 @@ def build(output_dir: Path = OUTPUT_DIR) -> dict:
                 "heading": title_manifest["heading"],
                 "section_count": len(ordered),
                 "manifest": manifest_relative,
+                "source_xml": source_xml,
             }
         )
         total_sections += len(ordered)
@@ -134,11 +146,13 @@ def build(output_dir: Path = OUTPUT_DIR) -> dict:
         "generated_at": generated_at,
         "name": "USAR General U.S. Code API",
         "namespace": "data/api/v1/code/",
+        "publication_model": "compact section metadata with authoritative USLM source pointers",
         "criminal_law_api_unchanged": True,
         "lookup": {
             "step_1": "Fetch index.json and choose a title manifest.",
             "step_2": "Use section_to_chunk in that title manifest to locate the compact section chunk.",
-            "step_3": "Read the matching section object from the chunk's sections array.",
+            "step_3": "Read the matching section metadata object from the chunk's sections array.",
+            "full_text": "Fetch source_xml from the title manifest and locate the record's USLM identifier.",
         },
         "counts": {"titles": len(index_titles), "sections": total_sections},
         "titles": index_titles,
@@ -151,7 +165,10 @@ def build(output_dir: Path = OUTPUT_DIR) -> dict:
 
 def main() -> int:
     index = build()
-    print(f"Built general Code API: {index['counts']['titles']} titles, {index['counts']['sections']} sections.")
+    print(
+        f"Built compact general Code API: {index['counts']['titles']} titles, "
+        f"{index['counts']['sections']} sections."
+    )
     return 0
 
 
