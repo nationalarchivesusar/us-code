@@ -28,6 +28,15 @@
     { url: "https://nationalarchivesusar.github.io/courts/", label: "United States Courts" },
   ];
 
+  function ensureNavigationStyles() {
+    if (document.querySelector('link[data-canonical-navigation="true"]')) return;
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = new URL("assets/css/navigation.css", APP_BASE_URL).toString();
+    link.dataset.canonicalNavigation = "true";
+    document.head.appendChild(link);
+  }
+
   let theme = "system";
   try {
     const stored = localStorage.getItem(THEME_STORAGE_KEY);
@@ -144,6 +153,7 @@
   }
 
   document.addEventListener("DOMContentLoaded", () => {
+    ensureNavigationStyles();
     rootSiteNavigation();
     canonicalizeGlobalNavigation();
     canonicalizeFooterNavigation();
