@@ -76,13 +76,19 @@ test("Code Changes page distinguishes verified comparisons from recorded actions
   assert.match(script, /not necessarily the isolated effect of this one Public Law/);
 });
 
-test("general Code API stays in a separate namespace", () => {
+test("general Code API stays separate and does not duplicate the statutory corpus", () => {
   const page = read("api.html");
   const builder = read("tools/build_code_api.py");
   assert.match(page, /data\/api\/v1\/code\/index\.json/);
   assert.match(page, /does not replace or reshape the existing Criminal Law API/);
+  assert.match(page, /source_xml/);
+  assert.match(page, /does not duplicate the entire statutory corpus/i);
   assert.match(builder, /data" \/ "api" \/ "v1" \/ "code"/);
   assert.match(builder, /criminal_law_api_unchanged/);
+  assert.match(builder, /source_xml/);
+  assert.match(builder, /compact section metadata with authoritative USLM source pointers/);
+  assert.doesNotMatch(builder, /"body"\s*:\s*record\["body"\]/);
+  assert.doesNotMatch(builder, /"text"\s*:\s*record\["text"\]/);
   assert.doesNotMatch(builder, /data" \/ "api" \/ "v1" \/ "criminal-law"/);
 });
 
