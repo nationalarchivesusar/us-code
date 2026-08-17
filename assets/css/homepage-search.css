@@ -1,0 +1,72 @@
+.search-band__inner--compact {
+  grid-template-columns: minmax(17rem, 0.82fr) minmax(26rem, 1.18fr);
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+}
+
+.search-band__inner--compact .citation-search {
+  grid-template-columns: minmax(12rem, auto) minmax(18rem, 1fr) minmax(4.75rem, auto);
+  padding: 0.9rem;
+}
+
+.search-band__inner--compact .citation-search__smart,
+.search-band__inner--compact .citation-search__keyword {
+  min-width: 0;
+}
+
+.citation-search__hint,
+.citation-search__message {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.72rem;
+  line-height: 1.3;
+  color: var(--faint);
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 400;
+}
+
+.citation-search__message:not(:empty) {
+  color: var(--cornell-red-dark);
+  font-weight: 700;
+}
+
+/* The former standalone quick-citation card duplicated the primary search. */
+.quick-citation {
+  display: none !important;
+}
+
+@media (max-width: 920px) {
+  .search-band__inner--compact {
+    grid-template-columns: 1fr;
+  }
+
+  .search-band__inner--compact .search-band__copy {
+    max-width: 42rem;
+  }
+
+  .search-band__inner--compact .citation-search {
+    grid-template-columns: minmax(11rem, auto) minmax(14rem, 1fr) minmax(4.75rem, auto);
+  }
+}
+
+@media (max-width: 640px) {
+  .search-band__inner--compact {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .search-band__inner--compact .citation-search {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  .search-band__inner--compact .citation-search__modes {
+    width: 100%;
+  }
+
+  .search-band__inner--compact .citation-search__mode {
+    flex: 1;
+    justify-content: center;
+  }
+}
