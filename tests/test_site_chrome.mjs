@@ -25,8 +25,19 @@ for (const [filename, currentLabel] of pages) {
     assert.match(html, /class="footer-disclaimer"/);
     assert.doesNotMatch(html, /class="brand-abbr"/);
     assert.doesNotMatch(html, /class="site-footer__links"/);
-    assert.doesNotMatch(html, />Search Code</);
-    assert.doesNotMatch(html, />Code Titles</);
-    assert.doesNotMatch(html, />Code Changes</);
+
+    const primaryStart = html.indexOf('<nav class="primary-nav"');
+    const primaryEnd = html.indexOf("</nav>", primaryStart);
+    const primary = html.slice(primaryStart, primaryEnd);
+    assert.match(primary, />U\.S\. Code</);
+    assert.match(primary, />Public Laws</);
+    assert.match(primary, />Constitution</);
+    assert.match(primary, />Criminal Law</);
+    assert.match(primary, /United States Courts/);
+    assert.doesNotMatch(primary, />Home</);
+    assert.doesNotMatch(primary, />Search Code</);
+    assert.doesNotMatch(primary, />Code Titles</);
+    assert.doesNotMatch(primary, />Code Changes</);
+    assert.doesNotMatch(primary, />API</);
   });
 }
