@@ -1,3 +1,14 @@
+const APP_BASE_URL = new URL("../../", import.meta.url);
+
+function ensureStyles() {
+  if (document.querySelector('link[data-legislative-views="true"]')) return;
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = new URL("assets/css/legislative-views.css", APP_BASE_URL).toString();
+  link.dataset.legislativeViews = "true";
+  document.head.appendChild(link);
+}
+
 const views = {
   laws: document.getElementById("public-laws-view"),
   changes: document.getElementById("code-changes-view"),
@@ -39,7 +50,7 @@ function setView(view, { updateUrl = false } = {}) {
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => setView(tab.dataset.publicLawView, { updateUrl: true }));
   tab.addEventListener("keydown", (event) => {
-    if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+    if (!["ArrowLeft", "ArrowRight"].includes(event.key)) return;
     event.preventDefault();
     const next = tab.dataset.publicLawView === "laws" ? "changes" : "laws";
     setView(next, { updateUrl: true });
@@ -48,4 +59,5 @@ tabs.forEach((tab) => {
 });
 
 window.addEventListener("popstate", () => setView(requestedView()));
+ensureStyles();
 setView(requestedView());
