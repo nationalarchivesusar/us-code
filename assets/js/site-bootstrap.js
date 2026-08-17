@@ -30,7 +30,24 @@
     });
   }
 
-  function addConstitutionLinks() {
+  function pageIs(path) {
+    const target = new URL(path, APP_BASE_URL);
+    return new URL(window.location.href).pathname === target.pathname;
+  }
+
+  function insertNavLink(nav, { path, label, marker, beforeRelated = true }) {
+    if (!nav || nav.querySelector(`[data-legal-material="${marker}"]`)) return;
+    const link = document.createElement("a");
+    link.href = new URL(path, APP_BASE_URL).toString();
+    link.textContent = label;
+    link.dataset.legalMaterial = marker;
+    if (pageIs(path)) link.setAttribute("aria-current", "page");
+    const related = beforeRelated ? nav.querySelector(".primary-nav__related") : null;
+    if (related) related.before(link);
+    else nav.appendChild(link);
+  }
+
+  function addResearchLinks() {
     if (
       typeof document.querySelector !== "function" ||
       typeof document.createElement !== "function"
@@ -38,33 +55,49 @@
       return;
     }
 
-    const constitutionUrl = new URL("constitution.html", APP_BASE_URL).toString();
-    const isConstitution =
-      new URL(window.location.href).pathname === new URL(constitutionUrl).pathname;
-
     const nav = document.querySelector(".primary-nav__inner");
-    if (nav && !nav.querySelector('[data-legal-material="constitution"]')) {
-      const link = document.createElement("a");
-      link.href = constitutionUrl;
-      link.textContent = "Constitution";
-      link.dataset.legalMaterial = "constitution";
-      if (isConstitution) link.setAttribute("aria-current", "page");
-      const related = nav.querySelector(".primary-nav__related");
-      if (related) related.before(link);
-      else nav.appendChild(link);
-    }
+    insertNavLink(nav, {
+      path: "changes.html",
+      label: "Code Changes",
+      marker: "code-changes",
+    });
+    insertNavLink(nav, {
+      path: "constitution.html",
+      label: "Constitution",
+      marker: "constitution",
+    });
 
     document.querySelectorAll(".footer-nav").forEach((footerNav) => {
-      if (footerNav.querySelector('[data-legal-material="constitution"]')) return;
-      const link = document.createElement("a");
-      link.href = constitutionUrl;
-      link.textContent = "Constitution";
-      link.dataset.legalMaterial = "constitution";
       const courts = Array.from(footerNav.querySelectorAll("a")).find((anchor) =>
         /United States Courts/i.test(anchor.textContent || ""),
       );
-      if (courts) courts.before(link);
-      else footerNav.appendChild(link);
+
+      if (!footerNav.querySelector('[data-legal-material="code-changes"]')) {
+        const changes = document.createElement("a");
+        changes.href = new URL("changes.html", APP_BASE_URL).toString();
+        changes.textContent = "Code Changes";
+        changes.dataset.legalMaterial = "code-changes";
+        if (courts) courts.before(changes);
+        else footerNav.appendChild(changes);
+      }
+
+      if (!footerNav.querySelector('[data-legal-material="constitution"]')) {
+        const constitution = document.createElement("a");
+        constitution.href = new URL("constitution.html", APP_BASE_URL).toString();
+        constitution.textContent = "Constitution";
+        constitution.dataset.legalMaterial = "constitution";
+        if (courts) courts.before(constitution);
+        else footerNav.appendChild(constitution);
+      }
+
+      if (!footerNav.querySelector('[data-legal-material="api"]')) {
+        const api = document.createElement("a");
+        api.href = new URL("api.html", APP_BASE_URL).toString();
+        api.textContent = "API";
+        api.dataset.legalMaterial = "api";
+        if (courts) courts.before(api);
+        else footerNav.appendChild(api);
+      }
     });
   }
 
@@ -77,8 +110,10 @@
     }
 
     const modules = [
+      ["homepage search", "assets/js/homepage-search.js"],
       ["research tools", "assets/js/research-tools.js"],
       ["section comparisons", "assets/js/section-comparison.js"],
+      ["section research", "assets/js/section-research.js"],
     ];
     modules.forEach(([label, path]) => {
       const moduleUrl = new URL(path, APP_BASE_URL).toString();
@@ -90,7 +125,7 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     rootSiteNavigation();
-    addConstitutionLinks();
+    addResearchLinks();
     loadPageEnhancements();
   });
 
@@ -150,7 +185,9 @@
   if (
     destination === "criminal-law.html" ||
     destination === "public-laws.html" ||
-    destination === "constitution.html"
+    destination === "changes.html" ||
+    destination === "constitution.html" ||
+    destination === "api.html"
   ) {
     window.location.replace(new URL(destination, APP_BASE_URL).toString());
     return;
