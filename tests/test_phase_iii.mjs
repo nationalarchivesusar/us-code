@@ -23,11 +23,13 @@ test("shared bootstrap loads visual polish and enactment history", () => {
 
 test("enactment UI distinguishes audit events from exact statutory versions", () => {
   const script = read("assets/js/enactment-history.js");
+  const builder = read("tools/build_enactment_history.py");
   assert.match(script, /Verified enactment history/);
   assert.match(script, /not a fabricated version archive/i);
   assert.match(script, /audit summaries and source quotations are evidence/i);
   assert.match(script, /Verified version history/);
-  assert.match(script, /exact_text_snapshot_available/);
+  assert.match(builder, /"exact_text_snapshot_available": False/);
+  assert.match(builder, /"exact_text_snapshot": None/);
 });
 
 test("Phase III polish removes duplicate research-toolbar rule and keeps legal hierarchy", () => {
