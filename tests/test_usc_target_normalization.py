@@ -1,5 +1,6 @@
 import unittest
 
+from tools.build_canonical_enactment_history import is_statutory_note_target
 from tools.build_enactment_history import build_records
 from tools.usc_target_normalization import (
     canonicalize_audit_payload,
@@ -133,6 +134,20 @@ class UscTargetNormalizationTests(unittest.TestCase):
         self.assertFalse(
             any('|' in section for _, section in sections)
         )
+
+    def test_statutory_note_nodes_are_not_section_text_targets(self):
+        self.assertTrue(
+            is_statutory_note_target(
+                '/us/usc/t50/s1/note/rp-pl027196-codification'
+            )
+        )
+        self.assertTrue(
+            is_statutory_note_target(
+                '/us/usc/t40/s101/note/rp-pl034249-codification/section-3'
+            )
+        )
+        self.assertFalse(is_statutory_note_target('/us/usc/t50/s1/a/1'))
+        self.assertFalse(is_statutory_note_target('/us/usc/t42/s2000e–2/a/1'))
 
 
 if __name__ == '__main__':
