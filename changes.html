@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Research recorded changes to the USAR United States Code by Public Law and affected section." />
+    <link rel="canonical" href="https://nationalarchivesusar.github.io/us-code/changes.html" />
+    <meta property="og:title" content="Changes to the Code | US Code Library" />
+    <meta property="og:description" content="Browse Public Law actions and verified textual changes to the United States Code." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="US Code Library" />
+    <meta property="og:url" content="https://nationalarchivesusar.github.io/us-code/changes.html" />
+    <meta property="og:image" content="https://nationalarchivesusar.github.io/us-code/assets/images/social-card.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Changes to the Code | US Code Library" />
+    <meta name="twitter:description" content="Browse Public Law actions and verified textual changes to the United States Code." />
+    <meta name="twitter:image" content="https://nationalarchivesusar.github.io/us-code/assets/images/social-card.png" />
+    <title>Changes to the Code | US Code Library</title>
+    <script src="assets/js/site-bootstrap.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/code-changes.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#changes-results">Skip to Code changes</a>
+
+    <header class="site-header">
+      <div class="masthead">
+        <div class="masthead__inner">
+          <a class="brand" href="./" aria-label="United States Code home">
+            <img class="brand-mark" src="assets/images/icon-512.png" alt="" />
+            <span class="brand-text">
+              <span class="brand-kicker">Federal Statutory Law</span>
+              <span class="brand-title">United States Code</span>
+              <span class="brand-tagline">Legal information and legislative history</span>
+            </span>
+          </a>
+          <div class="masthead__tools">
+            <div class="theme-switcher" role="group" aria-label="Color theme">
+              <button type="button" class="theme-switcher__button" data-theme-choice="system">System</button>
+              <button type="button" class="theme-switcher__button" data-theme-choice="light">Light</button>
+              <button type="button" class="theme-switcher__button" data-theme-choice="dark">Dark</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <div class="primary-nav__inner">
+          <a href="./">Home</a>
+          <a href="./#search">Search Code</a>
+          <a href="./#browse">Code Titles</a>
+          <a href="criminal-law.html">Criminal Law</a>
+          <a href="public-laws.html">Public Laws</a>
+          <a href="changes.html" data-legal-material="code-changes" aria-current="page">Code Changes</a>
+          <a href="constitution.html" data-legal-material="constitution">Constitution</a>
+          <a class="primary-nav__related" href="https://nationalarchivesusar.github.io/courts/" aria-label="United States Courts, related site">United States Courts <span aria-hidden="true">↗</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="changes-hero" aria-labelledby="changes-heading">
+      <div class="changes-hero__inner">
+        <p class="eyebrow">Legislative History</p>
+        <h1 id="changes-heading">Changes to the United States Code</h1>
+        <p>Research recorded Public Law actions by affected Code section and distinguish those records from verified baseline-to-current textual changes.</p>
+      </div>
+    </section>
+
+    <main class="changes-shell">
+      <section class="changes-method" aria-label="Research method">
+        <strong>Evidence labels matter.</strong>
+        <span>A “verified text change” is proven by the repository baseline comparison. A “recorded action” comes from the Public Law codification index and is not represented as an exact intermediate statutory text unless separately verified.</span>
+      </section>
+
+      <form id="changes-filters" class="changes-filters" autocomplete="off">
+        <div class="field changes-filters__search">
+          <label for="changes-search">Search</label>
+          <input id="changes-search" type="search" placeholder="Public Law, title, section, or description" />
+        </div>
+        <div class="field">
+          <label for="changes-title">U.S.C. title</label>
+          <input id="changes-title" type="text" inputmode="numeric" placeholder="18" />
+        </div>
+        <div class="field">
+          <label for="changes-status">Law status</label>
+          <select id="changes-status">
+            <option value="all">All</option>
+            <option value="active">Active</option>
+            <option value="repealed">Repealed</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="changes-type">Change type</label>
+          <select id="changes-type">
+            <option value="all">All</option>
+            <option value="amended">Verified amended</option>
+            <option value="added">Verified added</option>
+            <option value="removed">Verified removed</option>
+            <option value="recorded">Recorded action</option>
+          </select>
+        </div>
+        <button id="changes-clear" type="button" class="changes-filters__clear">Clear</button>
+      </form>
+
+      <section class="changes-results" aria-labelledby="changes-results-heading">
+        <div class="changes-results__heading">
+          <h2 id="changes-results-heading">Public Law changes</h2>
+          <p id="changes-summary" role="status" aria-live="polite">Loading research data…</p>
+        </div>
+        <div id="changes-results" class="changes-list" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="footer-primary">
+          <a class="nara-attribution" href="https://discord.gg/vhTGAHgkHC" rel="noopener noreferrer">
+            <img src="assets/images/nara.png" alt="National Archives and Records Administration" />
+            <span>Maintained by the <strong>National Archives and Records Administration</strong> for the United States Code.</span>
+          </a>
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="./">Home</a>
+            <a href="./#browse">Code Titles</a>
+            <a href="criminal-law.html">Criminal Law</a>
+            <a href="public-laws.html">Public Laws</a>
+            <a href="changes.html" data-legal-material="code-changes">Code Changes</a>
+            <a href="constitution.html" data-legal-material="constitution">Constitution</a>
+            <a href="api.html" data-legal-material="api">API</a>
+            <a href="https://nationalarchivesusar.github.io/courts/">United States Courts</a>
+          </nav>
+        </div>
+        <p class="footer-source">Change classifications distinguish verified textual comparisons from recorded codification actions.</p>
+        <p class="footer-disclaimer">An independent USAR community resource. Not affiliated with the real United States government.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="assets/js/code-changes.js"></script>
+  </body>
+</html>
