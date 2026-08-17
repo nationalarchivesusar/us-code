@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Documentation for the versioned USAR United States Code public JSON API." />
+    <link rel="canonical" href="https://nationalarchivesusar.github.io/us-code/api.html" />
+    <meta property="og:title" content="Code API | US Code Library" />
+    <meta property="og:description" content="Use the versioned general United States Code JSON API." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="US Code Library" />
+    <meta property="og:url" content="https://nationalarchivesusar.github.io/us-code/api.html" />
+    <meta property="og:image" content="https://nationalarchivesusar.github.io/us-code/assets/images/social-card.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Code API | US Code Library" />
+    <meta name="twitter:description" content="Use the versioned general United States Code JSON API." />
+    <meta name="twitter:image" content="https://nationalarchivesusar.github.io/us-code/assets/images/social-card.png" />
+    <title>Code API | US Code Library</title>
+    <script src="assets/js/site-bootstrap.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/api.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#api-documentation">Skip to API documentation</a>
+    <header class="site-header">
+      <div class="masthead">
+        <div class="masthead__inner">
+          <a class="brand" href="./" aria-label="United States Code home">
+            <img class="brand-mark" src="assets/images/icon-512.png" alt="" />
+            <span class="brand-text">
+              <span class="brand-kicker">Federal Statutory Law</span>
+              <span class="brand-title">United States Code</span>
+              <span class="brand-tagline">Legal information and legislative history</span>
+            </span>
+          </a>
+          <div class="masthead__tools">
+            <div class="theme-switcher" role="group" aria-label="Color theme">
+              <button type="button" class="theme-switcher__button" data-theme-choice="system">System</button>
+              <button type="button" class="theme-switcher__button" data-theme-choice="light">Light</button>
+              <button type="button" class="theme-switcher__button" data-theme-choice="dark">Dark</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <div class="primary-nav__inner">
+          <a href="./">Home</a>
+          <a href="./#search">Search Code</a>
+          <a href="./#browse">Code Titles</a>
+          <a href="criminal-law.html">Criminal Law</a>
+          <a href="public-laws.html">Public Laws</a>
+          <a href="changes.html" data-legal-material="code-changes">Code Changes</a>
+          <a href="constitution.html" data-legal-material="constitution">Constitution</a>
+          <a class="primary-nav__related" href="https://nationalarchivesusar.github.io/courts/" aria-label="United States Courts, related site">United States Courts <span aria-hidden="true">↗</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="api-hero" aria-labelledby="api-heading">
+      <div class="api-hero__inner">
+        <p class="eyebrow">Public Data Interface</p>
+        <h1 id="api-heading">United States Code API</h1>
+        <p>A compact, versioned JSON index for the general Code, published separately from the established Criminal Law API.</p>
+      </div>
+    </section>
+
+    <main id="api-documentation" class="api-shell">
+      <section class="api-notice">
+        <strong>Compatibility guarantee:</strong>
+        <span>This general API uses its own <code>/data/api/v1/code/</code> namespace. It does not replace or reshape the existing Criminal Law API.</span>
+      </section>
+
+      <section class="api-section">
+        <p class="eyebrow">Start here</p>
+        <h2>API root</h2>
+        <p>The root index lists available Code titles, their compact section manifests, and the already-published USLM XML source for each title.</p>
+        <div class="api-endpoint"><code>data/api/v1/code/index.json</code><a href="data/api/v1/code/index.json">Open JSON</a></div>
+      </section>
+
+      <section class="api-section">
+        <p class="eyebrow">Lookup model</p>
+        <h2>Finding a section</h2>
+        <ol class="api-steps">
+          <li>Fetch <code>data/api/v1/code/index.json</code> and select the title.</li>
+          <li>Fetch that title's manifest, for example <code>data/api/v1/code/titles/18/manifest.json</code>.</li>
+          <li>Look up the desired section in <code>section_to_chunk</code>.</li>
+          <li>Fetch that compact chunk and select the matching metadata object from its <code>sections</code> array.</li>
+          <li>If complete statutory text is needed, fetch the title manifest's <code>source_xml</code> and locate the section by its exact USLM <code>identifier</code>.</li>
+        </ol>
+        <p>The API deliberately does not duplicate the entire statutory corpus in JSON. The authoritative USLM XML is already published by the site, so the compact API provides fast discovery and stable pointers while keeping one source of statutory text.</p>
+      </section>
+
+      <section class="api-section">
+        <p class="eyebrow">Section object</p>
+        <h2>Fields</h2>
+        <div class="api-field-grid">
+          <code>section</code><span>Canonical section number.</span>
+          <code>citation</code><span>Formatted U.S. Code citation.</span>
+          <code>identifier</code><span>Exact USLM section identifier used to locate complete text in the title's <code>source_xml</code>.</span>
+          <code>heading</code><span>Section heading for discovery and display.</span>
+          <code>web_url</code><span>Relative deep link to the human-readable Code section.</span>
+        </div>
+      </section>
+
+      <section class="api-section">
+        <p class="eyebrow">Title manifest</p>
+        <h2>Full-text source pointer</h2>
+        <p>Every title manifest exposes <code>source_xml</code> and <code>source_format: "USLM XML"</code>. A client that needs complete statutory language should fetch that file and locate the section whose <code>identifier</code> matches the API record.</p>
+      </section>
+
+      <section class="api-section">
+        <p class="eyebrow">Example</p>
+        <h2>Browser JavaScript</h2>
+        <pre class="api-code"><code>const root = await fetch("https://nationalarchivesusar.github.io/us-code/data/api/v1/code/index.json").then(r =&gt; r.json());
+const title = root.titles.find(item =&gt; item.title === "18");
+const manifest = await fetch(`https://nationalarchivesusar.github.io/us-code/${title.manifest}`).then(r =&gt; r.json());
+const chunkPath = manifest.section_to_chunk["1752"];
+const chunk = await fetch(`https://nationalarchivesusar.github.io/us-code/${chunkPath}`).then(r =&gt; r.json());
+const section = chunk.sections.find(item =&gt; item.section === "1752");
+
+// Complete statutory text remains in the site's published USLM XML:
+const sourceXml = `https://nationalarchivesusar.github.io/us-code/${manifest.source_xml}`;
+console.log(section.identifier, sourceXml);</code></pre>
+      </section>
+
+      <section class="api-section">
+        <p class="eyebrow">Versioning</p>
+        <h2>Stability</h2>
+        <p><strong>v1</strong> is the compatibility boundary. Additive fields may be introduced without changing the namespace; incompatible structural changes should use a new API version. The Code API reflects the currently published Code build.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="footer-primary">
+          <a class="nara-attribution" href="https://discord.gg/vhTGAHgkHC" rel="noopener noreferrer">
+            <img src="assets/images/nara.png" alt="National Archives and Records Administration" />
+            <span>Maintained by the <strong>National Archives and Records Administration</strong> for the United States Code.</span>
+          </a>
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="./">Home</a>
+            <a href="./#browse">Code Titles</a>
+            <a href="criminal-law.html">Criminal Law</a>
+            <a href="public-laws.html">Public Laws</a>
+            <a href="changes.html" data-legal-material="code-changes">Code Changes</a>
+            <a href="constitution.html" data-legal-material="constitution">Constitution</a>
+            <a href="api.html" data-legal-material="api" aria-current="page">API</a>
+            <a href="https://nationalarchivesusar.github.io/courts/">United States Courts</a>
+          </nav>
+        </div>
+        <p class="footer-source">General Code API namespace: data/api/v1/code/.</p>
+        <p class="footer-disclaimer">An independent USAR community resource. Not affiliated with the real United States government.</p>
+      </div>
+    </footer>
+  </body>
+</html>

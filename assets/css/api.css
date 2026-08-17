@@ -1,0 +1,145 @@
+.api-hero {
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.api-hero__inner,
+.api-shell {
+  width: min(68rem, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.api-hero__inner {
+  padding: clamp(1.5rem, 4vw, 2.8rem) 0;
+}
+
+.api-hero h1 {
+  margin: 0.2rem 0 0;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+}
+
+.api-hero p:last-child {
+  max-width: 48rem;
+  margin: 0.7rem 0 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.api-shell {
+  padding: 1.4rem 0 3rem;
+}
+
+.api-notice {
+  display: flex;
+  gap: 0.55rem;
+  padding: 0.85rem 1rem;
+  border-left: 3px solid var(--cornell-red-dark);
+  background: var(--surface-alt);
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.api-notice strong {
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.api-section {
+  padding: 1.35rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.api-section:last-child {
+  border-bottom: 0;
+}
+
+.api-section h2 {
+  margin: 0.18rem 0 0.55rem;
+  font-family: var(--serif);
+  font-size: 1.45rem;
+}
+
+.api-section p,
+.api-steps {
+  max-width: 56rem;
+  line-height: 1.6;
+}
+
+.api-endpoint {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.8rem;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--border-strong);
+  background: var(--surface-alt);
+}
+
+.api-endpoint a {
+  flex: 0 0 auto;
+  font-weight: 800;
+}
+
+.api-steps {
+  padding-left: 1.3rem;
+}
+
+.api-steps li {
+  margin: 0.35rem 0;
+}
+
+.api-field-grid {
+  display: grid;
+  grid-template-columns: minmax(7rem, 10rem) minmax(0, 1fr);
+  border-top: 1px solid var(--border);
+}
+
+.api-field-grid > * {
+  padding: 0.55rem 0.65rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.api-field-grid code {
+  color: var(--cornell-red-dark);
+  font-weight: 800;
+}
+
+.api-code {
+  overflow-x: auto;
+  margin: 0.8rem 0 0;
+  padding: 1rem;
+  border: 1px solid var(--border-strong);
+  background: var(--surface-alt);
+  color: var(--ink);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.api-shell code {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 620px) {
+  .api-notice,
+  .api-endpoint {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .api-field-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .api-field-grid code {
+    padding-bottom: 0.1rem;
+    border-bottom: 0;
+  }
+
+  .api-field-grid span {
+    padding-top: 0.1rem;
+  }
+}

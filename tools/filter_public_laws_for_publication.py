@@ -10,11 +10,14 @@ from pathlib import Path
 from urllib.parse import quote
 
 from augment_public_laws_with_current_laws import augment
+from build_code_api import build as build_code_api
+from build_reference_graph import build as build_reference_graph
 from build_section_history import (
     DEFAULT_BASELINE,
     OUTPUT_DIR as SECTION_HISTORY_DIR,
     build as build_section_history,
 )
+from build_version_history import build as build_version_history
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_FILE = ROOT / "data" / "public-laws.json"
@@ -240,6 +243,30 @@ def main() -> None:
     print(
         f"Prepared section-history publication data: {counts['changed']} changed sections "
         f"from {counts['tracked_targets']} tracked Public Law targets."
+    )
+
+    versions = build_version_history(public_laws_path=DATA_FILE)
+    if versions["counts"]["versioned_sections"] <= 0:
+        raise SystemExit("Version-history build produced no verified versioned sections.")
+    print(
+        f"Prepared exact repository version history for "
+        f"{versions['counts']['versioned_sections']} sections."
+    )
+
+    references = build_reference_graph()
+    if references["counts"]["directed_reference_edges"] <= 0:
+        raise SystemExit("Reference-graph build produced no verified statutory edges.")
+    print(
+        f"Prepared statutory reference graph with "
+        f"{references['counts']['directed_reference_edges']} verified edges."
+    )
+
+    code_api = build_code_api()
+    if code_api["counts"]["sections"] <= 0:
+        raise SystemExit("General Code API build produced no sections.")
+    print(
+        f"Prepared general Code API with {code_api['counts']['titles']} titles and "
+        f"{code_api['counts']['sections']} sections."
     )
 
 

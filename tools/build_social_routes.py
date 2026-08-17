@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate crawler-friendly social metadata pages for every published citation route."""
+"""Prepare static research pages and crawler-friendly metadata routes."""
 
 from __future__ import annotations
 
@@ -7,16 +7,19 @@ import argparse
 import html
 import json
 import re
+import shutil
 from pathlib import Path
 from urllib.parse import quote
 import xml.etree.ElementTree as ET
 
+ROOT = Path(__file__).resolve().parents[1]
 USLM_NS = "http://xml.house.gov/schemas/uslm/1.0"
 NS = f"{{{USLM_NS}}}"
 SECTION_RE = re.compile(r"^/us/usc/t(?P<title>\d+[A-Za-z]?)/s(?P<section>[^/]+)$", re.I)
 BASE_URL = "https://nationalarchivesusar.github.io/us-code/"
 IMAGE_URL = BASE_URL + "assets/images/social-card.png"
 SITE_NAME = "US Code Library"
+STATIC_RESEARCH_PAGES = ("changes.html", "api.html")
 REQUIRED_SOCIAL_MARKERS = (
     'rel="canonical"',
     'property="og:title"',
@@ -67,7 +70,6 @@ def redirect_script() -> str:
 
 def render_page(*, canonical: str, page_title: str, description: str, og_type: str) -> str:
     escape = html.escape
-    # Deliberately compact: this file is generated roughly 60,000 times.
     return (
         '<!doctype html><html lang="en"><head><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width,initial-scale=1">'
@@ -96,8 +98,16 @@ def render_page(*, canonical: str, page_title: str, description: str, og_type: s
     )
 
 
+def publish_static_research_pages(site: Path) -> None:
+    for relative in STATIC_RESEARCH_PAGES:
+        source = ROOT / relative
+        if not source.is_file():
+            raise SystemExit(f"Required research page is missing: {relative}")
+        shutil.copy2(source, site / relative)
+
+
 def validate_base_pages(site: Path) -> None:
-    for relative in ("index.html", "public-laws.html", "404.html"):
+    for relative in ("index.html", "public-laws.html", "404.html", *STATIC_RESEARCH_PAGES):
         text = (site / relative).read_text(encoding="utf-8")
         missing = [marker for marker in REQUIRED_SOCIAL_MARKERS if marker not in text]
         if missing:
@@ -110,6 +120,7 @@ def main() -> None:
     args = parser.parse_args()
     site = args.site_dir.resolve()
 
+    publish_static_research_pages(site)
     validate_base_pages(site)
     titles_payload = json.loads((site / "data" / "titles.json").read_text(encoding="utf-8"))
     title_meta = {str(item["number"]).lower(): item for item in titles_payload["titles"]}
@@ -186,7 +197,6 @@ def main() -> None:
             )
             section_routes += 1
 
-    # The current corpus contains 59,536 unique routable section identifiers.
     if section_routes < 59_000:
         raise SystemExit(f"Too few citation embed routes generated: {section_routes}")
     if title_routes < 50:
@@ -210,12 +220,16 @@ def main() -> None:
         "section_routes": section_routes,
         "base_url": BASE_URL,
         "social_image": IMAGE_URL,
+        "static_research_pages": list(STATIC_RESEARCH_PAGES),
     }
     (site / "data" / "social-routes.json").write_text(
         json.dumps(manifest, indent=2) + "\n",
         encoding="utf-8",
     )
-    print(f"Generated {section_routes} section embed routes and {title_routes} title embed routes.")
+    print(
+        f"Generated {section_routes} section embed routes, {title_routes} title embed routes, "
+        f"and published {len(STATIC_RESEARCH_PAGES)} static research pages."
+    )
 
 
 if __name__ == "__main__":

@@ -3,7 +3,10 @@
 
 from __future__ import annotations
 
+import hashlib
+import json
 import re
+from datetime import UTC, datetime
 from pathlib import Path
 
 import requests
@@ -11,6 +14,7 @@ from lxml import html
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "data" / "constitution.txt"
+META_OUTPUT = ROOT / "data" / "constitution-meta.json"
 NOTE_ID = "CDCV7p2_Sca6O0FrEJyaIQ"
 SOURCE_URL = f"https://hackmd.io/{NOTE_ID}?view"
 DOWNLOAD_URL = f"https://hackmd.io/{NOTE_ID}/download"
@@ -46,10 +50,9 @@ def strip_inline_markdown(value: str) -> str:
 def strip_markdown(markdown: str) -> str:
     """Convert HackMD Markdown to stable plain text without losing legal structure.
 
-    Headings are deliberately surrounded by blank lines.  The browser renderer uses
+    Headings are deliberately surrounded by blank lines. The browser renderer uses
     those boundaries to distinguish Articles, Amendments, and Sections from the body
-    text.  The previous importer removed ``#``/``###`` markers in-place, which could
-    turn ``### Section I`` plus the following paragraph into one ordinary text block.
+    text. The importer preserves wording and only removes Markdown presentation syntax.
     """
 
     lines = markdown.replace("\r\n", "\n").replace("\r", "\n").splitlines()
@@ -136,6 +139,24 @@ def fetch_rendered_page() -> str:
     return candidate
 
 
+def write_metadata(text: str) -> None:
+    metadata = {
+        "schema_version": "1.0",
+        "source": SOURCE_URL,
+        "source_note_id": NOTE_ID,
+        "fetched_at": datetime.now(UTC).isoformat(),
+        "sha256": hashlib.sha256(text.encode("utf-8")).hexdigest(),
+        "character_count": len(text),
+        "publication_role": "NARA source copy used to publish this constitutional text",
+        "legal_validity_note": (
+            "Publication from this source records the text displayed by the website. "
+            "Editing the publication source does not itself establish that a constitutional "
+            "amendment or revision was legally adopted under the Constitution."
+        ),
+    }
+    META_OUTPUT.write_text(json.dumps(metadata, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
 def main() -> None:
     text = fetch_download()
     if text is None:
@@ -143,7 +164,11 @@ def main() -> None:
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(text, encoding="utf-8")
-    print(f"Wrote {OUTPUT.relative_to(ROOT)} ({len(text)} characters) from {SOURCE_URL}")
+    write_metadata(text)
+    print(
+        f"Wrote {OUTPUT.relative_to(ROOT)} and {META_OUTPUT.relative_to(ROOT)} "
+        f"({len(text)} characters) from {SOURCE_URL}"
+    )
 
 
 if __name__ == "__main__":
