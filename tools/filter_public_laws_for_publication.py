@@ -9,7 +9,10 @@ from pathlib import Path
 from urllib.parse import quote
 
 from augment_public_laws_with_current_laws import augment
-from build_canonical_enactment_history import build as build_enactment_history
+from build_canonical_enactment_history import (
+    build as build_enactment_history,
+    is_statutory_note_target,
+)
 from build_code_api import build as build_code_api
 from build_reference_graph import build as build_reference_graph
 from build_section_history import (
@@ -77,9 +80,9 @@ def resolve_section(
         return canonical, True
 
     # Some older inferred node identifiers append subdivision-like suffixes to
-    # the section token.  Preserve the existing fallback, but only after first
-    # trying the complete dash-normalized token against the live Code.  This is
-    # what prevents 2000e?2 from collapsing to the nearby section 2000e.
+    # the section token. Preserve that fallback, but only after first trying
+    # the complete dash-normalized token against the live Code. This prevents
+    # 2000e?2 from collapsing to the nearby section 2000e.
     shortened = fold_section_token(value)
     while "-" in shortened:
         shortened = shortened.rsplit("-", 1)[0]
@@ -181,6 +184,16 @@ def main() -> None:
             raw_targets = action.get("targets") or (
                 [action["target"]] if action.get("target") else []
             )
+            explicit_note_target = any(
+                isinstance(target, dict)
+                and target.get("inferred") is not True
+                and is_statutory_note_target(target.get("identifier"))
+                for target in raw_targets
+            )
+            if explicit_note_target and not repealed:
+                action["effect_category"] = "note"
+                action["effect_label"] = "Statutory or historical note"
+
             raw_targets = expand_authoritative_targets(raw_targets, section_index)
             action["targets"] = dedupe_targets(
                 raw_targets, repealed, section_index
@@ -246,6 +259,38 @@ def main() -> None:
     ):
         raise SystemExit(
             "Pub. L. 24-178 ACTION-0530 incorrectly resolves to 42 U.S.C. § 2000e."
+        )
+
+    note_action_ids = {
+        "ACTION-0600",
+        "ACTION-0887",
+        "ACTION-0888",
+        "ACTION-0891",
+        "ACTION-0892",
+        "ACTION-0893",
+    }
+    actions_by_id = {
+        action.get("action_id"): action
+        for law in payload.get("laws", [])
+        for action in law.get("actions", [])
+    }
+    misclassified_notes = [
+        action_id
+        for action_id in note_action_ids
+        if actions_by_id.get(action_id, {}).get("effect_category") != "note"
+    ]
+    if misclassified_notes:
+        raise SystemExit(
+            "Known statutory-note amendments are still classified as Code-text changes: "
+            + ", ".join(sorted(misclassified_notes))
+        )
+    foreign_note_targets = actions_by_id.get("ACTION-0888", {}).get("targets", [])
+    if any(
+        target.get("title") == "22" and target.get("section") == "618"
+        for target in foreign_note_targets
+    ):
+        raise SystemExit(
+            "ACTION-0888 still exposes inferred 22 U.S.C. § 618 as an amended section."
         )
 
     payload.setdefault("counts", {})["direct_section_links"] = len(clickable)
