@@ -76,7 +76,6 @@ def build(output_dir: Path = OUTPUT_DIR) -> dict:
                         "identifier": record["identifier"],
                         "heading": record["heading"],
                         "body": record["body"],
-                        "text": record["text"],
                         "web_url": f"cite/{title}/{section}/",
                     }
                 )
