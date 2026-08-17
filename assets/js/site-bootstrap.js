@@ -30,41 +30,47 @@
     });
   }
 
-  function addConstitutionLinks() {
-    if (
-      typeof document.querySelector !== "function" ||
-      typeof document.createElement !== "function"
-    ) {
-      return;
-    }
-
-    const constitutionUrl = new URL("constitution.html", APP_BASE_URL).toString();
-    const isConstitution =
-      new URL(window.location.href).pathname === new URL(constitutionUrl).pathname;
-
+  function insertPrimaryLink({ key, href, label, beforeRelated = true }) {
     const nav = document.querySelector(".primary-nav__inner");
-    if (nav && !nav.querySelector('[data-legal-material="constitution"]')) {
-      const link = document.createElement("a");
-      link.href = constitutionUrl;
-      link.textContent = "Constitution";
-      link.dataset.legalMaterial = "constitution";
-      if (isConstitution) link.setAttribute("aria-current", "page");
-      const related = nav.querySelector(".primary-nav__related");
-      if (related) related.before(link);
-      else nav.appendChild(link);
-    }
+    if (!nav || nav.querySelector(`[data-legal-material="${key}"]`)) return;
+    const link = document.createElement("a");
+    link.href = new URL(href, APP_BASE_URL).toString();
+    link.textContent = label;
+    link.dataset.legalMaterial = key;
+    const current = new URL(window.location.href).pathname;
+    if (current === new URL(link.href).pathname) link.setAttribute("aria-current", "page");
+    const related = nav.querySelector(".primary-nav__related");
+    if (beforeRelated && related) related.before(link);
+    else nav.appendChild(link);
+  }
 
+  function insertFooterLink({ key, href, label, beforeCourts = true }) {
     document.querySelectorAll(".footer-nav").forEach((footerNav) => {
-      if (footerNav.querySelector('[data-legal-material="constitution"]')) return;
+      if (footerNav.querySelector(`[data-legal-material="${key}"]`)) return;
       const link = document.createElement("a");
-      link.href = constitutionUrl;
-      link.textContent = "Constitution";
-      link.dataset.legalMaterial = "constitution";
+      link.href = new URL(href, APP_BASE_URL).toString();
+      link.textContent = label;
+      link.dataset.legalMaterial = key;
       const courts = Array.from(footerNav.querySelectorAll("a")).find((anchor) =>
         /United States Courts/i.test(anchor.textContent || ""),
       );
-      if (courts) courts.before(link);
+      if (beforeCourts && courts) courts.before(link);
       else footerNav.appendChild(link);
+    });
+  }
+
+  function addResearchLinks() {
+    insertPrimaryLink({ key: "changes", href: "changes.html", label: "Code Changes" });
+    insertPrimaryLink({ key: "constitution", href: "constitution.html", label: "Constitution" });
+    insertFooterLink({ key: "changes", href: "changes.html", label: "Code Changes" });
+    insertFooterLink({ key: "constitution", href: "constitution.html", label: "Constitution" });
+    insertFooterLink({ key: "code-api", href: "api.html", label: "Code API" });
+  }
+
+  function importEnhancement(label, path) {
+    const moduleUrl = new URL(path, APP_BASE_URL).toString();
+    return import(moduleUrl).catch((error) => {
+      console.error(`Unable to load ${label}`, error);
     });
   }
 
@@ -76,21 +82,18 @@
       return;
     }
 
-    const modules = [
-      ["research tools", "assets/js/research-tools.js"],
-      ["section comparisons", "assets/js/section-comparison.js"],
-    ];
-    modules.forEach(([label, path]) => {
-      const moduleUrl = new URL(path, APP_BASE_URL).toString();
-      import(moduleUrl).catch((error) => {
-        console.error(`Unable to load ${label}`, error);
-      });
+    // Homepage search is intentionally loaded before research-tools so it can
+    // replace the old duplicate quick-citation card with the unified search UI.
+    importEnhancement("unified homepage search", "assets/js/homepage-search.js").then(() => {
+      importEnhancement("research tools", "assets/js/research-tools.js");
     });
+    importEnhancement("section comparisons", "assets/js/section-comparison.js");
+    importEnhancement("section research graph", "assets/js/section-research.js");
   }
 
   document.addEventListener("DOMContentLoaded", () => {
     rootSiteNavigation();
-    addConstitutionLinks();
+    addResearchLinks();
     loadPageEnhancements();
   });
 
@@ -150,7 +153,9 @@
   if (
     destination === "criminal-law.html" ||
     destination === "public-laws.html" ||
-    destination === "constitution.html"
+    destination === "changes.html" ||
+    destination === "constitution.html" ||
+    destination === "api.html"
   ) {
     window.location.replace(new URL(destination, APP_BASE_URL).toString());
     return;
