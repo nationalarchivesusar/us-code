@@ -13,11 +13,12 @@ const jsFiles = [
   "assets/js/section-research.js",
   "assets/js/court-bridge.js",
   "assets/js/code-changes.js",
+  "assets/js/public-law-views.js",
   "assets/js/constitution-research.js",
   "assets/js/site-bootstrap.js",
 ];
 
-test("phase II JavaScript passes syntax validation", () => {
+test("research-suite JavaScript passes syntax validation", () => {
   for (const relative of jsFiles) {
     const result = spawnSync(process.execPath, ["--check", path.join(root, relative)], {
       encoding: "utf8",
@@ -36,6 +37,20 @@ test("homepage uses one citation search surface", () => {
   assert.match(homepageCss, /\.quick-citation\s*\{\s*display:\s*none\s*!important/);
 });
 
+test("global navigation contains only real destinations", () => {
+  const bootstrap = read("assets/js/site-bootstrap.js");
+  for (const label of ["U.S. Code", "Public Laws", "Constitution", "Criminal Law", "United States Courts"]) {
+    assert.match(bootstrap, new RegExp(`label: \\\"${label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\\"`));
+  }
+  assert.doesNotMatch(bootstrap, /label: "Search Code"/);
+  assert.doesNotMatch(bootstrap, /label: "Code Titles"/);
+  assert.doesNotMatch(bootstrap, /label: "Code Changes"/);
+  assert.doesNotMatch(bootstrap, /label: "API"/);
+  assert.match(bootstrap, /label: "Developer API"/);
+  assert.match(bootstrap, /primary-nav__toggle/);
+  assert.match(read("assets/css/navigation.css"), /data-menu-ready/);
+});
+
 test("shared bootstrap wires legal research suite", () => {
   const bootstrap = read("assets/js/site-bootstrap.js");
   for (const expected of [
@@ -44,7 +59,6 @@ test("shared bootstrap wires legal research suite", () => {
     "assets/js/section-comparison.js",
     "assets/js/section-research.js",
     "assets/js/court-bridge.js",
-    "changes.html",
     "constitution.html",
     "api.html",
   ]) {
@@ -64,16 +78,37 @@ test("section research exposes verified history, statutory references, and Court
   assert.match(courts, /searchParams\.set\("q"/);
 });
 
-test("Code Changes page distinguishes verified comparisons from recorded actions", () => {
-  const page = read("changes.html");
-  const script = read("assets/js/code-changes.js");
-  assert.match(page, /Changes to the United States Code/);
+test("Code Changes is a local Public Laws view and old route remains compatible", () => {
+  const page = read("public-laws.html");
+  const alias = read("changes.html");
+  const viewScript = read("assets/js/public-law-views.js");
+  const changesScript = read("assets/js/code-changes.js");
+  assert.match(page, /data-public-law-view="laws"/);
+  assert.match(page, /data-public-law-view="changes"/);
+  assert.match(page, /id="public-laws-view"/);
+  assert.match(page, /id="code-changes-view"/);
   assert.match(page, /verified text change/i);
   assert.match(page, /recorded action/i);
-  assert.match(script, /Verified amended/);
-  assert.match(script, /Verified added/);
-  assert.match(script, /Verified removed/);
-  assert.match(script, /not necessarily the isolated effect of this one Public Law/);
+  assert.match(viewScript, /searchParams\.set\("view", "changes"\)/);
+  assert.match(alias, /public-laws\.html\?view=changes/);
+  assert.match(changesScript, /Verified amended/);
+  assert.match(changesScript, /Verified added/);
+  assert.match(changesScript, /Verified removed/);
+  assert.match(changesScript, /not necessarily the isolated effect of this one Public Law/);
+});
+
+test("Criminal Law is search-first and permanent indexes are secondary", () => {
+  const page = read("criminal-law.html");
+  const searchIndex = page.indexOf('id="criminal-search"');
+  const aboutIndex = page.indexOf('class="criminal-about"');
+  const permanentIndex = page.indexOf('href="criminal/"');
+  assert.ok(searchIndex >= 0, "charge search must exist");
+  assert.ok(aboutIndex > searchIndex, "catalog explanation must follow charge search");
+  assert.ok(permanentIndex > aboutIndex, "permanent index link must be demoted inside catalog explanation");
+  assert.match(page, /About this criminal-law catalog/);
+  const generator = read("tools/build_criminal_law_routes.py");
+  assert.match(generator, /For ordinary research and booking, use the Criminal Law search page/);
+  assert.match(generator, /Developer API/);
 });
 
 test("general Code API stays separate and does not duplicate the statutory corpus", () => {
@@ -83,6 +118,7 @@ test("general Code API stays separate and does not duplicate the statutory corpu
   assert.match(page, /does not replace or reshape the existing Criminal Law API/);
   assert.match(page, /source_xml/);
   assert.match(page, /does not duplicate the entire statutory corpus/i);
+  assert.match(page, /Developer Utility/);
   assert.match(builder, /data" \/ "api" \/ "v1" \/ "code"/);
   assert.match(builder, /criminal_law_api_unchanged/);
   assert.match(builder, /source_xml/);
