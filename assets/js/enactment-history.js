@@ -78,7 +78,10 @@ function addMetric(summary, meta, context) {
   const button = document.createElement("button");
   button.type = "button";
   button.className = "section-research-summary__metric enactment-history__metric";
-  button.textContent = `${meta.event_count} enactment event${meta.event_count === 1 ? "" : "s"}`;
+  const exact = Number(meta.exact_enactment_pair_count || 0);
+  button.textContent = exact
+    ? `${meta.event_count} enactment event${meta.event_count === 1 ? "" : "s"} · ${exact} exact pair${exact === 1 ? "" : "s"}`
+    : `${meta.event_count} enactment event${meta.event_count === 1 ? "" : "s"}`;
   button.addEventListener("click", () => openPanel(context.content));
   const caseLaw = summary.querySelector("a.section-research-summary__metric");
   if (caseLaw) caseLaw.before(button);
@@ -101,7 +104,10 @@ function makeSummary(meta) {
   left.textContent = "Verified enactment history";
   const right = document.createElement("span");
   right.className = "section-research-panel__count";
-  right.textContent = `${meta.event_count} event${meta.event_count === 1 ? "" : "s"}`;
+  const exact = Number(meta.exact_enactment_pair_count || 0);
+  right.textContent = exact
+    ? `${meta.event_count} event${meta.event_count === 1 ? "" : "s"} · ${exact} exact pair${exact === 1 ? "" : "s"}`
+    : `${meta.event_count} event${meta.event_count === 1 ? "" : "s"}`;
   summary.append(left, right);
   return summary;
 }
@@ -131,6 +137,69 @@ function eventHeading(event) {
   return wrapper;
 }
 
+function renderExactPair(event) {
+  const snapshot = event.exact_text_snapshot;
+  if (!event.exact_text_snapshot_available || !snapshot) return null;
+
+  const details = document.createElement("details");
+  details.className = "enactment-event__exact-pair";
+  const summary = document.createElement("summary");
+  summary.textContent = "Exact before / after statutory text";
+
+  const note = document.createElement("p");
+  note.className = "enactment-event__exact-note";
+  note.textContent = "High-confidence attribution: this Public Law is the sole verified substantive enactment event and sole published Public Law associated with the section between the fixed baseline and current repository states.";
+
+  const grid = document.createElement("div");
+  grid.className = "enactment-event__exact-grid";
+  const states = [
+    ["Before enactment", snapshot.baseline],
+    ["After enactment", snapshot.current],
+  ];
+  for (const [label, state] of states) {
+    const column = document.createElement("section");
+    const heading = document.createElement("h5");
+    heading.textContent = label;
+    const text = document.createElement("div");
+    text.className = "enactment-event__exact-text";
+    text.textContent = state?.present === false
+      ? "[Section not present in this verified repository state]"
+      : state?.text || "[Verified text unavailable]";
+    const hash = document.createElement("div");
+    hash.className = "enactment-event__exact-hash";
+    hash.textContent = state?.sha256 ? `SHA-256 ${state.sha256}` : "";
+    column.append(heading, text);
+    if (hash.textContent) column.appendChild(hash);
+    grid.appendChild(column);
+  }
+  details.append(summary, note, grid);
+  return details;
+}
+
+function renderVerification(event) {
+  const details = document.createElement("details");
+  details.className = "enactment-event__verification";
+  const summary = document.createElement("summary");
+  summary.textContent = "Verification details";
+
+  const facts = document.createElement("dl");
+  facts.className = "enactment-event__verification-facts";
+  const rows = [
+    ["Audit action", (event.audit_action_ids || []).join(", ")],
+    ["Changed XML nodes", String((event.changed_node_ids || []).length)],
+    ["Evidence hash", event.evidence_sha256 || ""],
+  ].filter(([, value]) => value);
+  for (const [label, value] of rows) {
+    const dt = document.createElement("dt");
+    dt.textContent = label;
+    const dd = document.createElement("dd");
+    dd.textContent = value;
+    facts.append(dt, dd);
+  }
+  details.append(summary, facts);
+  return details;
+}
+
 function eventCard(event) {
   const item = document.createElement("li");
   item.className = "enactment-event";
@@ -141,6 +210,12 @@ function eventCard(event) {
   for (const label of event.change_labels || []) {
     const badge = document.createElement("span");
     badge.textContent = label;
+    labels.appendChild(badge);
+  }
+  if (event.exact_text_snapshot_available) {
+    const badge = document.createElement("span");
+    badge.className = "enactment-event__label--exact";
+    badge.textContent = "exact text pair";
     labels.appendChild(badge);
   }
   item.appendChild(labels);
@@ -171,17 +246,9 @@ function eventCard(event) {
     item.appendChild(source);
   }
 
-  const verification = compactEvidence(event.validation_evidence?.[0]);
-  if (verification) {
-    const details = document.createElement("details");
-    details.className = "enactment-event__verification";
-    const summary = document.createElement("summary");
-    summary.textContent = "Verification details";
-    const body = document.createElement("p");
-    body.textContent = verification;
-    details.append(summary, body);
-    item.appendChild(details);
-  }
+  const exact = renderExactPair(event);
+  if (exact) item.appendChild(exact);
+  item.appendChild(renderVerification(event));
   return item;
 }
 
@@ -195,7 +262,7 @@ function populatePanel(panel, record) {
 
   const warning = document.createElement("p");
   warning.className = "section-research-panel__note enactment-history__limitation";
-  warning.textContent = "This is not a fabricated version archive: audit summaries and source quotations are evidence, not verbatim intermediate U.S. Code text. Use Verified version history for exact repository-state statutory text.";
+  warning.textContent = "Audit summaries and source quotations are evidence, not statutory text. Exact before/after text appears only where one Public Law is uniquely attributable under both the audit timeline and finalized Public Law crosswalk; otherwise use Verified version history for exact repository-state text.";
 
   const list = document.createElement("ol");
   list.className = "enactment-history__timeline";
