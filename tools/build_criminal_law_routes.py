@@ -34,6 +34,29 @@ def esc(value: object) -> str:
     return html.escape(str(value or ""))
 
 
+def primary_navigation() -> str:
+    return f'''<nav class="primary-nav" aria-label="Primary navigation">
+      <div class="primary-nav__inner">
+        <a href="{BASE_URL}">U.S. Code</a>
+        <a href="{BASE_URL}public-laws.html">Public Laws</a>
+        <a href="{BASE_URL}constitution.html">Constitution</a>
+        <a href="{BASE_URL}criminal-law.html" aria-current="page">Criminal Law</a>
+        <a class="primary-nav__related" href="https://nationalarchivesusar.github.io/courts/">United States Courts <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>'''
+
+
+def footer_navigation() -> str:
+    return f'''<nav class="footer-nav" aria-label="Footer navigation">
+          <a href="{BASE_URL}">U.S. Code</a>
+          <a href="{BASE_URL}public-laws.html">Public Laws</a>
+          <a href="{BASE_URL}constitution.html">Constitution</a>
+          <a href="{BASE_URL}criminal-law.html">Criminal Law</a>
+          <a href="{BASE_URL}api.html">Developer API</a>
+          <a href="https://nationalarchivesusar.github.io/courts/">United States Courts</a>
+        </nav>'''
+
+
 def shell(*, title: str, description: str, canonical: str, body: str) -> str:
     return f'''<!doctype html>
 <html lang="en">
@@ -73,16 +96,7 @@ def shell(*, title: str, description: str, canonical: str, body: str) -> str:
         </a>
       </div>
     </div>
-    <nav class="primary-nav" aria-label="Primary navigation">
-      <div class="primary-nav__inner">
-        <a href="{BASE_URL}">Home</a>
-        <a href="{BASE_URL}#search">Search Code</a>
-        <a href="{BASE_URL}#browse">Code Titles</a>
-        <a href="{BASE_URL}criminal-law.html" aria-current="page">Criminal Law</a>
-        <a href="{BASE_URL}public-laws.html">Public Laws</a>
-        <a class="primary-nav__related" href="https://nationalarchivesusar.github.io/courts/" aria-label="United States Courts, related site">United States Courts <span aria-hidden="true">↗</span></a>
-      </div>
-    </nav>
+    {primary_navigation()}
   </header>
   {body}
   <footer class="site-footer">
@@ -92,13 +106,7 @@ def shell(*, title: str, description: str, canonical: str, body: str) -> str:
           <img src="{BASE_URL}assets/images/nara.png" alt="National Archives and Records Administration">
           <span>Maintained by the <strong>National Archives and Records Administration</strong> for the United States Code.</span>
         </a>
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <a href="{BASE_URL}">Home</a>
-          <a href="{BASE_URL}#browse">Code Titles</a>
-          <a href="{BASE_URL}criminal-law.html">Criminal Law</a>
-          <a href="{BASE_URL}public-laws.html">Public Laws</a>
-          <a href="https://nationalarchivesusar.github.io/courts/">United States Courts</a>
-        </nav>
+        {footer_navigation()}
       </div>
       <p class="footer-source">This permanent index contains only current, platform-safe booking charges.</p>
       <p class="footer-disclaimer">An independent USAR community resource. Not affiliated with the real United States government.</p>
@@ -133,7 +141,7 @@ def section_page(*, citation: str, heading: str, text: str, source: str,
         link_html = f'<a class="static-law-source-link" href="{html.escape(source_link, quote=True)}">Open related source</a>'
     body = f'''
 <main id="static-law-content" class="static-law-shell">
-  <nav class="static-law-breadcrumbs" aria-label="Breadcrumb"><a href="{BASE_URL}criminal/">Criminal Law</a><span>›</span><span>{esc(source)}</span></nav>
+  <nav class="static-law-breadcrumbs" aria-label="Breadcrumb"><a href="{BASE_URL}criminal-law.html">Criminal Law</a><span>›</span><span>{esc(source)}</span></nav>
   <article class="static-law-article">
     <p class="eyebrow">{esc(source)}</p>
     <h1>{esc(citation)}</h1>
@@ -156,6 +164,7 @@ def list_page(*, title: str, description: str, canonical: str, eyebrow: str,
     body = f'''
 <main id="static-law-content" class="static-law-shell">
   <section class="static-law-index">
+    <nav class="static-law-breadcrumbs" aria-label="Breadcrumb"><a href="{BASE_URL}criminal-law.html">Criminal Law</a><span>›</span><span>Permanent charge index</span></nav>
     <p class="eyebrow">{esc(eyebrow)}</p>
     <h1>{esc(title)}</h1>
     <p>{esc(intro)}</p>
@@ -187,7 +196,6 @@ def main() -> None:
     }
     urls: list[str] = []
 
-    # Federalized D.C. Criminal Code charges.
     dc_items = []
     for sec in dc.get("sections", []):
         if sec.get("is_offense") is not True or sec.get("id") not in allowed_ids:
@@ -224,7 +232,6 @@ def main() -> None:
     ))
     urls.append(dc_index)
 
-    # Title 18 charge pages.
     title18_items = []
     for item in title18_index.get("sections", []):
         if item.get("is_charge") is not True or item.get("id") not in allowed_ids:
@@ -274,13 +281,11 @@ def main() -> None:
         description="Static charge-only index for Title 18 and the federalized D.C. Criminal Code.",
         canonical=criminal_root,
         eyebrow="Permanent Charge Index",
-        intro="This index excludes general provisions, platform-restricted material, and the duplicative Federal Criminal Code offense set.",
+        intro="This compatibility index provides stable static charge URLs. For ordinary research and booking, use the Criminal Law search page.",
         items=root_items,
     ))
     urls.append(criminal_root)
 
-    # Only human-facing charge pages are indexed. The underlying JSON API is
-    # intentionally not advertised and is disallowed for cooperative crawlers.
     sitemap = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for url in [BASE_URL, BASE_URL + "criminal-law.html", BASE_URL + "public-laws.html", *urls]:
         sitemap.append(f"  <url><loc>{html.escape(url)}</loc></url>")
@@ -294,7 +299,6 @@ def main() -> None:
         encoding="utf-8",
     )
 
-    # Build-level verification uses known safe charge sections only.
     required = [
         site / "criminal" / "dc" / "201" / "index.html",
         site / "criminal" / "title18" / "111" / "index.html",
