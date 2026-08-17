@@ -5,13 +5,12 @@ from __future__ import annotations
 
 import json
 import re
-from collections import defaultdict
 from pathlib import Path
 from urllib.parse import quote
 
 from augment_public_laws_with_current_laws import augment
+from build_canonical_enactment_history import build as build_enactment_history
 from build_code_api import build as build_code_api
-from build_enactment_history import build as build_enactment_history
 from build_reference_graph import build as build_reference_graph
 from build_section_history import (
     DEFAULT_BASELINE,
@@ -19,10 +18,15 @@ from build_section_history import (
     build as build_section_history,
 )
 from build_version_history import build as build_version_history
+from usc_target_normalization import (
+    build_section_index as build_canonical_section_index,
+    expand_authoritative_targets,
+    fold_section_token,
+    resolve_canonical_section,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_FILE = ROOT / "data" / "public-laws.json"
-SECTION_PATH_RE = re.compile(r"/us/usc/t(?P<title>\d+[A-Za-z]?)/s(?P<section>[^/\"'<>&?#\s]+)")
 SECTION_SUFFIX_RE = re.compile(
     r"-(?:source(?:-credit)?|amendment-note|effective-date|short-title|"
     r"statutory-notes-heading|codification-note|toc-entry|source-defect)$",
@@ -45,14 +49,7 @@ def public_no_code_description(treatment: str) -> str:
 
 
 def build_section_index() -> dict[str, dict[str, str]]:
-    index: dict[str, dict[str, str]] = defaultdict(dict)
-    for path in sorted((ROOT / "usc").glob("usc*.xml")):
-        text = path.read_text(encoding="utf-8", errors="replace")
-        for match in SECTION_PATH_RE.finditer(text):
-            title = match.group("title").lstrip("0") or "0"
-            section = match.group("section").rstrip(".,;:|)]}")
-            index[title].setdefault(section.lower(), section)
-    return index
+    return build_canonical_section_index(ROOT / "usc")
 
 
 def normalize_section(value: str | None) -> str | None:
@@ -74,14 +71,19 @@ def resolve_section(
     value = normalize_section(section)
     if not value:
         return None, False
-    known = section_index.get(title, {})
-    candidates = [value]
-    shortened = value
+
+    canonical = resolve_canonical_section(title, value, section_index)
+    if canonical:
+        return canonical, True
+
+    # Some older inferred node identifiers append subdivision-like suffixes to
+    # the section token.  Preserve the existing fallback, but only after first
+    # trying the complete dash-normalized token against the live Code.  This is
+    # what prevents 2000e?2 from collapsing to the nearby section 2000e.
+    shortened = fold_section_token(value)
     while "-" in shortened:
         shortened = shortened.rsplit("-", 1)[0]
-        candidates.append(shortened)
-    for candidate in candidates:
-        canonical = known.get(candidate.lower())
+        canonical = resolve_canonical_section(title, shortened, section_index)
         if canonical:
             return canonical, True
     return value, False
@@ -179,6 +181,7 @@ def main() -> None:
             raw_targets = action.get("targets") or (
                 [action["target"]] if action.get("target") else []
             )
+            raw_targets = expand_authoritative_targets(raw_targets, section_index)
             action["targets"] = dedupe_targets(
                 raw_targets, repealed, section_index
             )
@@ -202,8 +205,48 @@ def main() -> None:
         raise SystemExit("Clickable U.S. Code target does not exist in the published Code.")
     if any(SECTION_SUFFIX_RE.search(target.get("section") or "") for target in all_targets):
         raise SystemExit("Internal XML note suffix remains in a public section link.")
+    malformed_targets = [
+        target
+        for target in all_targets
+        if "|" in str(target.get("section") or "")
+        or "?" in str(target.get("section") or "")
+    ]
+    if malformed_targets:
+        raise SystemExit(
+            "Malformed compound or placeholder U.S. Code targets remain after canonicalization."
+        )
     if len(clickable) < 200:
         raise SystemExit(f"Too few exact section links were generated: {len(clickable)}.")
+
+    laws_by_number = {
+        law.get("public_law"): law for law in payload.get("laws", [])
+    }
+    equality_law = laws_by_number.get("24-178")
+    equality_action = next(
+        (
+            action
+            for action in (equality_law or {}).get("actions", [])
+            if action.get("action_id") == "ACTION-0530"
+        ),
+        None,
+    )
+    equality_targets = (equality_action or {}).get("targets", [])
+    if not any(
+        target.get("title") == "42"
+        and fold_section_token(target.get("section")) == "2000e-2"
+        for target in equality_targets
+    ):
+        raise SystemExit(
+            "Pub. L. 24-178 ACTION-0530 no longer resolves to 42 U.S.C. § 2000e-2."
+        )
+    if any(
+        target.get("title") == "42"
+        and fold_section_token(target.get("section")) == "2000e"
+        for target in equality_targets
+    ):
+        raise SystemExit(
+            "Pub. L. 24-178 ACTION-0530 incorrectly resolves to 42 U.S.C. § 2000e."
+        )
 
     payload.setdefault("counts", {})["direct_section_links"] = len(clickable)
     payload["counts"]["unavailable_section_references"] = sum(
