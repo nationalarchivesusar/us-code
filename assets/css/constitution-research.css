@@ -1,0 +1,145 @@
+.constitution-heading-actions {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-self: start;
+  gap: 0.3rem;
+  margin-left: auto;
+}
+
+.constitution-heading-actions button {
+  border: 1px solid var(--border);
+  background: var(--surface-alt);
+  color: var(--muted);
+  padding: 0.28rem 0.48rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.constitution-heading-actions button:hover,
+.constitution-heading-actions button:focus-visible {
+  border-color: var(--border-strong);
+  color: var(--cornell-red-dark);
+  outline: none;
+}
+
+.constitution-toc__link.is-active {
+  background: var(--surface-alt);
+  color: var(--cornell-red-dark);
+  box-shadow: inset 3px 0 var(--cornell-red-dark);
+  font-weight: 800;
+}
+
+.constitution-provenance {
+  margin: 0.8rem 0 1rem;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+}
+
+.constitution-provenance > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0.85rem;
+  background: var(--surface-alt);
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.constitution-provenance > summary span:last-child {
+  color: var(--muted);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.constitution-provenance__body {
+  padding: 0.85rem;
+  font-size: 0.82rem;
+}
+
+.constitution-provenance__grid {
+  display: grid;
+  grid-template-columns: minmax(8rem, 12rem) minmax(0, 1fr);
+  margin: 0;
+  border-top: 1px solid var(--border);
+}
+
+.constitution-provenance__grid dt,
+.constitution-provenance__grid dd {
+  margin: 0;
+  padding: 0.42rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.constitution-provenance__grid dt {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.constitution-provenance__grid dd {
+  overflow-wrap: anywhere;
+}
+
+.constitution-provenance__note {
+  margin: 0.75rem 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.constitution-research-toast {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1000;
+  max-width: min(24rem, calc(100vw - 2rem));
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border-strong);
+  background: var(--ink);
+  color: var(--surface);
+  font-size: 0.8rem;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(0.5rem);
+  pointer-events: none;
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+
+.constitution-research-toast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 760px) {
+  .constitution-heading-actions {
+    flex-basis: 100%;
+    margin-left: 0;
+  }
+
+  .constitution-provenance__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .constitution-provenance__grid dt {
+    padding-bottom: 0.1rem;
+    border-bottom: 0;
+  }
+
+  .constitution-provenance__grid dd {
+    padding-top: 0.1rem;
+  }
+}
+
+@media print {
+  .constitution-heading-actions,
+  .constitution-research-toast {
+    display: none !important;
+  }
+
+  .constitution-provenance {
+    break-inside: avoid;
+  }
+}
