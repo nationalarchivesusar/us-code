@@ -58,7 +58,7 @@ jobs:
           python -m unittest tests.test_current_law_sections -v
 
       - name: Set up Node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v4
         with:
           node-version: "22"
 
