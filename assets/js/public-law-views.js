@@ -43,7 +43,7 @@ function setView(view, { updateUrl = false } = {}) {
     } else {
       url.searchParams.delete("view");
     }
-    history.replaceState(null, "", url);
+    history.replaceState(null, "", url.toString());
   }
 }
 
