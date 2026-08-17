@@ -10,12 +10,12 @@
 }
 
 .public-laws-hero__inner {
-  padding: clamp(1.5rem, 4vw, 3rem) 0;
+  padding: clamp(1.25rem, 3vw, 2.15rem) 0;
 }
 
 .public-laws-hero h1 {
   max-width: 52rem;
-  margin: 0.35rem 0 0.75rem;
+  margin: 0.25rem 0 0.55rem;
   font-family: var(--serif);
   font-size: clamp(2rem, 4vw, 3.35rem);
   line-height: 1.08;
@@ -25,18 +25,18 @@
   max-width: 62rem;
   margin: 0;
   color: var(--muted);
-  font-size: 1.05rem;
+  font-size: 1.02rem;
 }
 
 .public-law-stats {
   display: grid;
   grid-template-columns: repeat(4, minmax(8rem, 1fr));
-  gap: 1rem;
-  margin: 1.75rem 0 0;
+  gap: 0.8rem;
+  margin: 1.25rem 0 0;
 }
 
 .public-law-stat {
-  padding: 1rem;
+  padding: 0.85rem 0.95rem;
   border: 1px solid var(--border);
   background: var(--surface-alt);
 }
@@ -44,15 +44,15 @@
 .public-law-stat strong {
   display: block;
   font-family: var(--serif);
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   line-height: 1;
 }
 
 .public-law-stat span {
   display: block;
-  margin-top: 0.35rem;
+  margin-top: 0.3rem;
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -60,7 +60,7 @@
 
 .public-laws-shell {
   flex: 1;
-  padding: 1.5rem 0 3rem;
+  padding: 1.25rem 0 3rem;
 }
 
 .public-law-controls {
