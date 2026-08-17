@@ -192,9 +192,16 @@ jobs:
 
           assert history['counts']['changed'] > 0
           assert versions['counts']['versioned_sections'] > 0
-          assert references['counts']['sections'] > 0
+          assert versions['counts']['direct_public_law_links'] > 0
+          assert references['counts']['connected_sections'] > 0
+          assert references['counts']['directed_reference_edges'] > 0
           assert code_api['titles']
           assert code_api.get('criminal_law_api_unchanged') is True
+          title42 = next(item for item in code_api['titles'] if item['title'] == '42')
+          assert title42['source']['type'] == 'uslm-section-manifest'
+          assert title42['source']['path'] == 'data/title-42/manifest.json'
+          assert title42['source_xml'] is None
+          assert title42['source_manifest'] == 'data/title-42/manifest.json'
           print('Legal research publication outputs passed.')
           PY
 
