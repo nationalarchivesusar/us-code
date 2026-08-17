@@ -73,7 +73,7 @@
       <section class="api-section">
         <p class="eyebrow">Start here</p>
         <h2>API root</h2>
-        <p>The root index lists available Code titles, their compact section manifests, and the already-published USLM XML source for each title.</p>
+        <p>The root index lists available Code titles, their compact section manifests, and a production-valid source pointer for the published statutory text.</p>
         <div class="api-endpoint"><code>data/api/v1/code/index.json</code><a href="data/api/v1/code/index.json">Open JSON</a></div>
       </section>
 
@@ -85,9 +85,9 @@
           <li>Fetch that title's manifest, for example <code>data/api/v1/code/titles/18/manifest.json</code>.</li>
           <li>Look up the desired section in <code>section_to_chunk</code>.</li>
           <li>Fetch that compact chunk and select the matching metadata object from its <code>sections</code> array.</li>
-          <li>If complete statutory text is needed, fetch the title manifest's <code>source_xml</code> and locate the section by its exact USLM <code>identifier</code>.</li>
+          <li>For complete statutory text, follow the title manifest's <code>source.path</code>. Ordinary titles point to one USLM XML file; Title 42 points to its published section manifest.</li>
         </ol>
-        <p>The API deliberately does not duplicate the entire statutory corpus in JSON. The authoritative USLM XML is already published by the site, so the compact API provides fast discovery and stable pointers while keeping one source of statutory text.</p>
+        <p>The API deliberately does not duplicate the entire statutory corpus in JSON. The published USLM material remains the source of statutory text, while the compact API provides fast discovery and stable pointers.</p>
       </section>
 
       <section class="api-section">
@@ -96,7 +96,7 @@
         <div class="api-field-grid">
           <code>section</code><span>Canonical section number.</span>
           <code>citation</code><span>Formatted U.S. Code citation.</span>
-          <code>identifier</code><span>Exact USLM section identifier used to locate complete text in the title's <code>source_xml</code>.</span>
+          <code>identifier</code><span>Exact USLM section identifier used to locate complete text in the title's published source.</span>
           <code>heading</code><span>Section heading for discovery and display.</span>
           <code>web_url</code><span>Relative deep link to the human-readable Code section.</span>
         </div>
@@ -105,7 +105,7 @@
       <section class="api-section">
         <p class="eyebrow">Title manifest</p>
         <h2>Full-text source pointer</h2>
-        <p>Every title manifest exposes <code>source_xml</code> and <code>source_format: "USLM XML"</code>. A client that needs complete statutory language should fetch that file and locate the section whose <code>identifier</code> matches the API record.</p>
+        <p>Every title manifest exposes a <code>source</code> object with <code>type</code>, <code>path</code>, <code>format</code>, and <code>note</code>. Most titles also expose the compatibility field <code>source_xml</code>. Title 42 instead exposes <code>source_manifest</code> because the production site intentionally publishes Title 42 as individual USLM section files rather than a monolithic XML file.</p>
       </section>
 
       <section class="api-section">
@@ -118,8 +118,8 @@ const chunkPath = manifest.section_to_chunk["1752"];
 const chunk = await fetch(`https://nationalarchivesusar.github.io/us-code/${chunkPath}`).then(r =&gt; r.json());
 const section = chunk.sections.find(item =&gt; item.section === "1752");
 
-const sourceXml = `https://nationalarchivesusar.github.io/us-code/${manifest.source_xml}`;
-console.log(section.identifier, sourceXml);</code></pre>
+const publishedSource = `https://nationalarchivesusar.github.io/us-code/${manifest.source.path}`;
+console.log(section.identifier, publishedSource);</code></pre>
       </section>
 
       <section class="api-section">
