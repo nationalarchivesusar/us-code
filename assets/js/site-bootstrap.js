@@ -28,13 +28,20 @@
     { url: "https://nationalarchivesusar.github.io/courts/", label: "United States Courts" },
   ];
 
-  function ensureNavigationStyles() {
-    if (document.querySelector('link[data-canonical-navigation="true"]')) return;
+  function ensureStyle(path, marker) {
+    if (document.querySelector(`link[data-site-style="${marker}"]`)) return;
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = new URL("assets/css/navigation.css", APP_BASE_URL).toString();
-    link.dataset.canonicalNavigation = "true";
+    link.href = new URL(path, APP_BASE_URL).toString();
+    link.dataset.siteStyle = marker;
     document.head.appendChild(link);
+  }
+
+  function ensureShellStyles() {
+    ensureStyle("assets/css/navigation.css", "canonical-navigation");
+    if (document.querySelector(".criminal-about")) {
+      ensureStyle("assets/css/criminal-law-ia.css", "criminal-law-ia");
+    }
   }
 
   let theme = "system";
@@ -153,7 +160,7 @@
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    ensureNavigationStyles();
+    ensureShellStyles();
     rootSiteNavigation();
     canonicalizeGlobalNavigation();
     canonicalizeFooterNavigation();
