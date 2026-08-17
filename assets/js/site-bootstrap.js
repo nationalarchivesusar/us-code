@@ -29,6 +29,14 @@
   ];
 
   function ensureStyle(path, marker) {
+    if (
+      typeof document.querySelector !== "function" ||
+      typeof document.createElement !== "function" ||
+      !document.head ||
+      typeof document.head.appendChild !== "function"
+    ) {
+      return;
+    }
     if (document.querySelector(`link[data-site-style="${marker}"]`)) return;
     const link = document.createElement("link");
     link.rel = "stylesheet";
@@ -42,6 +50,7 @@
   ensureStyle("assets/css/navigation.css", "canonical-navigation");
 
   function ensureContextStyles() {
+    if (typeof document.querySelector !== "function") return;
     if (document.querySelector(".criminal-about")) {
       ensureStyle("assets/css/criminal-law-ia.css", "criminal-law-ia");
     }
@@ -93,18 +102,27 @@
   }
 
   function canonicalizeGlobalNavigation() {
+    if (
+      typeof document.querySelectorAll !== "function" ||
+      typeof document.createElement !== "function"
+    ) {
+      return;
+    }
     const activeKey = pageKey();
     document.querySelectorAll(".primary-nav").forEach((nav, index) => {
+      if (!nav || typeof nav.querySelector !== "function") return;
       let inner = nav.querySelector(".primary-nav__inner");
       if (!inner) {
+        if (typeof nav.appendChild !== "function") return;
         inner = document.createElement("div");
         inner.className = "primary-nav__inner";
         nav.appendChild(inner);
       }
+      if (typeof inner.replaceChildren !== "function") return;
       if (!inner.id) inner.id = `primary-nav-menu-${index + 1}`;
       inner.replaceChildren(...PRIMARY_NAV.map((item) => createNavLink(item, activeKey)));
 
-      if (!nav.querySelector(".primary-nav__toggle")) {
+      if (!nav.querySelector(".primary-nav__toggle") && typeof nav.prepend === "function") {
         const toggle = document.createElement("button");
         toggle.type = "button";
         toggle.className = "primary-nav__toggle";
@@ -118,12 +136,19 @@
         });
         nav.prepend(toggle);
       }
-      nav.dataset.menuReady = "true";
+      if (nav.dataset) nav.dataset.menuReady = "true";
     });
   }
 
   function canonicalizeFooterNavigation() {
+    if (
+      typeof document.querySelectorAll !== "function" ||
+      typeof document.createElement !== "function"
+    ) {
+      return;
+    }
     document.querySelectorAll(".footer-nav").forEach((nav) => {
+      if (!nav || typeof nav.replaceChildren !== "function") return;
       nav.replaceChildren(
         ...FOOTER_NAV.map((item) => {
           const anchor = document.createElement("a");
@@ -136,8 +161,12 @@
   }
 
   function rootSiteNavigation() {
-    document.querySelectorAll(".brand").forEach((anchor) => {
-      anchor.href = APP_BASE_URL.toString();
+    if (typeof document.querySelectorAll !== "function") return;
+    document.querySelectorAll(".brand, .primary-nav a, .footer-nav a").forEach((anchor) => {
+      if (!anchor || typeof anchor.getAttribute !== "function") return;
+      const href = anchor.getAttribute("href") || "";
+      if (!href || href.startsWith("#")) return;
+      anchor.href = new URL(href, APP_BASE_URL).toString();
     });
   }
 
