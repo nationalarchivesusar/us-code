@@ -110,42 +110,65 @@ def parse_section_identifier(
     }
 
 
+def canonical_target_from_raw(
+    raw: dict[str, Any],
+    identifier: str,
+    section_index: dict[str, dict[str, str]],
+) -> dict[str, Any] | None:
+    parsed = parse_section_identifier(identifier, section_index)
+    if not parsed:
+        return None
+    target = dict(raw)
+    target.update(
+        {
+            "identifier": parsed["identifier"],
+            "title": parsed["title"],
+            "section": parsed["section"],
+            "inferred": False,
+        }
+    )
+    return target
+
+
 def expand_authoritative_targets(
     targets: Iterable[dict[str, Any]],
     section_index: dict[str, dict[str, str]],
 ) -> list[dict[str, Any]]:
-    """Expand an explicit compound identifier and discard inference fallbacks.
+    """Prefer explicit audit section targets over citation/node fallbacks.
 
     ``build_public_laws_index`` intentionally gathers fallback targets from node
-    IDs and prose.  When the audit itself provides a compound final identifier,
-    however, that explicit list is more authoritative than those fallbacks.
-    Keeping both is what previously turned 42 U.S.C. 2000e-2 into 2000e.
+    IDs and prose.  Those fallbacks are useful only when the audit did not
+    provide a usable section target.  When an explicit target exists—compound
+    or singular—it is authoritative.  Keeping inferred citations beside it can
+    falsely claim that a law amended a section it merely mentioned.
     """
     raw_targets = [dict(target) for target in targets if isinstance(target, dict)]
-    expanded: list[dict[str, Any]] = []
-    saw_compound = False
+    compound_expanded: list[dict[str, Any]] = []
 
     for raw in raw_targets:
         parts = split_compound_identifier(raw.get("identifier"))
         if len(parts) <= 1:
             continue
-        saw_compound = True
         for part in parts:
-            parsed = parse_section_identifier(part, section_index)
-            if not parsed:
-                continue
-            target = dict(raw)
-            target.update(
-                {
-                    "identifier": parsed["identifier"],
-                    "title": parsed["title"],
-                    "section": parsed["section"],
-                    "inferred": False,
-                }
-            )
-            expanded.append(target)
+            target = canonical_target_from_raw(raw, part, section_index)
+            if target:
+                compound_expanded.append(target)
 
-    return expanded if saw_compound and expanded else raw_targets
+    if compound_expanded:
+        return compound_expanded
+
+    explicit: list[dict[str, Any]] = []
+    for raw in raw_targets:
+        if raw.get("inferred") is True:
+            continue
+        parts = split_compound_identifier(raw.get("identifier"))
+        if len(parts) != 1:
+            continue
+        target = canonical_target_from_raw(raw, parts[0], section_index)
+        if target:
+            explicit.append(target)
+
+    return explicit if explicit else raw_targets
 
 
 def canonicalize_audit_payload(
