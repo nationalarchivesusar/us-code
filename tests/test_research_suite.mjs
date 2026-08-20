@@ -27,7 +27,7 @@ test("research-suite JavaScript passes syntax validation", () => {
   }
 });
 
-test("homepage uses one citation search surface", () => {
+test("homepage uses one citation search surface and hides implementation notes", () => {
   const homepage = read("assets/js/homepage-search.js");
   const homepageCss = read("assets/css/homepage-search.css");
   assert.match(homepage, /quick-citation-form/);
@@ -35,6 +35,7 @@ test("homepage uses one citation search surface", () => {
   assert.match(homepage, /Public Law number/);
   assert.match(homepage, /18 U\.S\.C\. § 1752\(a\)\(1\)/);
   assert.match(homepageCss, /\.quick-citation\s*\{\s*display:\s*none\s*!important/);
+  assert.match(homepageCss, /\.title-browser__footer[\s\S]*display:\s*none\s*!important/);
 });
 
 test("global navigation contains only real destinations", () => {
@@ -66,11 +67,13 @@ test("shared bootstrap wires legal research suite", () => {
   }
 });
 
-test("section research exposes verified history, statutory references, and Courts search", () => {
+test("section research exposes verified history, direct Public Law evidence, statutory references, and Courts search", () => {
   const sectionResearch = read("assets/js/section-research.js");
   const courts = read("assets/js/court-bridge.js");
   assert.match(sectionResearch, /Verified repository-state history/);
   assert.match(sectionResearch, /does not invent a separate text version/);
+  assert.match(sectionResearch, /Direct Public Law link/);
+  assert.match(sectionResearch, /direct_public_law_link/);
   assert.match(sectionResearch, /Built only from explicit USLM statutory reference links/);
   assert.match(sectionResearch, /Version history/);
   assert.match(sectionResearch, /References/);
@@ -105,24 +108,30 @@ test("Criminal Law is search-first and permanent indexes are secondary", () => {
   assert.ok(searchIndex >= 0, "charge search must exist");
   assert.ok(aboutIndex > searchIndex, "catalog explanation must follow charge search");
   assert.ok(permanentIndex > aboutIndex, "permanent index link must be demoted inside catalog explanation");
+  assert.match(page, /<h2 id="criminal-search-heading">Search charges<\/h2>/);
+  assert.doesNotMatch(page, /<p class="eyebrow">Charge Search<\/p>/);
   assert.match(page, /About this criminal-law catalog/);
   const generator = read("tools/build_criminal_law_routes.py");
   assert.match(generator, /For ordinary research and booking, use the Criminal Law search page/);
   assert.match(generator, /Developer API/);
 });
 
-test("general Code API stays separate and does not duplicate the statutory corpus", () => {
+test("general Code API stays separate, compact, and uses production-valid source pointers", () => {
   const page = read("api.html");
   const builder = read("tools/build_code_api.py");
   assert.match(page, /data\/api\/v1\/code\/index\.json/);
   assert.match(page, /does not replace or reshape the existing Criminal Law API/);
-  assert.match(page, /source_xml/);
+  assert.match(page, /source\.path/);
+  assert.match(page, /source_manifest/);
+  assert.match(page, /Title 42/);
   assert.match(page, /does not duplicate the entire statutory corpus/i);
   assert.match(page, /Developer Utility/);
   assert.match(builder, /data" \/ "api" \/ "v1" \/ "code"/);
   assert.match(builder, /criminal_law_api_unchanged/);
   assert.match(builder, /source_xml/);
-  assert.match(builder, /compact section metadata with authoritative USLM source pointers/);
+  assert.match(builder, /source_manifest/);
+  assert.match(builder, /data\/title-42\/manifest\.json/);
+  assert.match(builder, /compact section metadata with production-valid USLM source pointers/);
   assert.doesNotMatch(builder, /"body"\s*:\s*record\["body"\]/);
   assert.doesNotMatch(builder, /"text"\s*:\s*record\["text"\]/);
   assert.doesNotMatch(builder, /data" \/ "api" \/ "v1" \/ "criminal-law"/);

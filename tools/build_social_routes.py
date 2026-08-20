@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prepare static research pages and crawler-friendly metadata routes."""
+"""Prepare static research pages and compact crawler-friendly metadata routes."""
 
 from __future__ import annotations
 
@@ -20,7 +20,12 @@ BASE_URL = "https://nationalarchivesusar.github.io/us-code/"
 IMAGE_URL = BASE_URL + "assets/images/social-card.png"
 SITE_NAME = "US Code Library"
 STATIC_RESEARCH_PAGES = ("changes.html", "api.html")
-REQUIRED_SOCIAL_MARKERS = (
+
+# Full public pages retain the richer Twitter-specific metadata. Generated citation
+# shells are deliberately tiny: X/Twitter can fall back to the equivalent Open
+# Graph title/description/image when twitter:card is present, avoiding three large
+# duplicated strings across ~59,000 crawler-only files.
+BASE_SOCIAL_MARKERS = (
     'rel="canonical"',
     'property="og:title"',
     'property="og:description"',
@@ -31,6 +36,15 @@ REQUIRED_SOCIAL_MARKERS = (
     'name="twitter:description"',
     'name="twitter:image"',
 )
+ROUTE_SOCIAL_MARKERS = (
+    'rel="canonical"',
+    'property="og:title"',
+    'property="og:description"',
+    'property="og:url"',
+    'property="og:image"',
+    'name="twitter:card"',
+)
+MAX_ROUTE_BYTES = 1_500
 
 
 def compact(value: str, limit: int) -> str:
@@ -60,41 +74,35 @@ def iter_sections(path: Path):
 
 
 def redirect_script() -> str:
+    # /us-code/ is nine characters. Every generated shell lives under that base,
+    # so we can avoid repeating the longer compatibility parser on 59k pages.
     return (
-        "(function(){var b='/us-code/';var l=window.location;"
-        "var p=l.pathname.indexOf(b)===0?l.pathname.slice(b.length):"
-        "l.pathname.replace(/^\\/+/, '');var s=p+l.search+l.hash;"
-        "window.location.replace(b+'?redirect='+encodeURIComponent(s));})();"
+        "location.replace('/us-code/?redirect='+encodeURIComponent("
+        "location.pathname.slice(9)+location.search+location.hash))"
     )
 
 
 def render_page(*, canonical: str, page_title: str, description: str, og_type: str) -> str:
+    """Return a minimal valid HTML shell for crawlers and deep-link redirects.
+
+    The shell intentionally contains no duplicated visible site chrome or legal
+    text. Humans are immediately redirected into the canonical SPA route; social
+    crawlers receive canonical/Open Graph metadata without executing JavaScript.
+    """
     escape = html.escape
     return (
         '<!doctype html><html lang="en"><head><meta charset="utf-8">'
-        '<meta name="viewport" content="width=device-width,initial-scale=1">'
         f'<title>{escape(page_title)}</title>'
         f'<meta name="description" content="{escape(description, quote=True)}">'
         f'<link rel="canonical" href="{escape(canonical, quote=True)}">'
         f'<meta property="og:title" content="{escape(page_title, quote=True)}">'
         f'<meta property="og:description" content="{escape(description, quote=True)}">'
         f'<meta property="og:type" content="{og_type}">'
-        f'<meta property="og:site_name" content="{SITE_NAME}">'
         f'<meta property="og:url" content="{escape(canonical, quote=True)}">'
         f'<meta property="og:image" content="{IMAGE_URL}">'
-        f'<meta property="og:image:secure_url" content="{IMAGE_URL}">'
-        '<meta property="og:image:type" content="image/png">'
-        '<meta property="og:image:width" content="400">'
-        '<meta property="og:image:height" content="400">'
-        '<meta property="og:image:alt" content="Great Seal of the United States and United States Code Library branding.">'
         '<meta name="twitter:card" content="summary">'
-        f'<meta name="twitter:title" content="{escape(page_title, quote=True)}">'
-        f'<meta name="twitter:description" content="{escape(description, quote=True)}">'
-        f'<meta name="twitter:image" content="{IMAGE_URL}">'
-        '<meta name="twitter:image:alt" content="Great Seal of the United States and United States Code Library branding.">'
-        '<meta name="theme-color" content="#8b1e1e">'
-        f'<script>{redirect_script()}</script></head>'
-        f'<body><p><a href="{escape(canonical, quote=True)}">Open this U.S. Code page</a></p></body></html>\n'
+        f'<script>{redirect_script()}</script>'
+        '</head><body><noscript><a href="/us-code/">United States Code</a></noscript></body></html>\n'
     )
 
 
@@ -109,9 +117,21 @@ def publish_static_research_pages(site: Path) -> None:
 def validate_base_pages(site: Path) -> None:
     for relative in ("index.html", "public-laws.html", "404.html", *STATIC_RESEARCH_PAGES):
         text = (site / relative).read_text(encoding="utf-8")
-        missing = [marker for marker in REQUIRED_SOCIAL_MARKERS if marker not in text]
+        missing = [marker for marker in BASE_SOCIAL_MARKERS if marker not in text]
         if missing:
             raise SystemExit(f"{relative} is missing social metadata: {missing}")
+
+
+def validate_route(path: Path) -> None:
+    text = path.read_text(encoding="utf-8")
+    missing = [marker for marker in ROUTE_SOCIAL_MARKERS if marker not in text]
+    if missing:
+        raise SystemExit(f"Generated route {path} is missing metadata: {missing}")
+    size = path.stat().st_size
+    if size > MAX_ROUTE_BYTES:
+        raise SystemExit(
+            f"Generated crawler shell is unexpectedly large ({size} bytes > {MAX_ROUTE_BYTES}): {path}"
+        )
 
 
 def main() -> None:
@@ -128,20 +148,22 @@ def main() -> None:
     route_root.mkdir(parents=True, exist_ok=True)
 
     title_routes = 0
+    route_bytes = 0
+    max_route_bytes = 0
     for title, metadata in title_meta.items():
         encoded_title = quote(title, safe="")
         canonical = f"{BASE_URL}cite/{encoded_title}/"
         label = metadata.get("label") or f"Title {title}"
-        heading = compact(metadata.get("heading", ""), 120)
+        heading = compact(metadata.get("heading", ""), 100)
         page_title = compact(
             f"{label} — {heading} | {SITE_NAME}" if heading else f"{label} | {SITE_NAME}",
-            180,
+            150,
         )
         description = compact(
             f"Browse {label}, {heading}, in the United States Code."
             if heading
             else f"Browse {label} of the United States Code.",
-            240,
+            180,
         )
         destination = route_root / encoded_title / "index.html"
         destination.parent.mkdir(parents=True, exist_ok=True)
@@ -154,6 +176,9 @@ def main() -> None:
             ),
             encoding="utf-8",
         )
+        size = destination.stat().st_size
+        route_bytes += size
+        max_route_bytes = max(max_route_bytes, size)
         title_routes += 1
 
     section_routes = 0
@@ -171,18 +196,18 @@ def main() -> None:
             encoded_section = quote(section, safe="")
             canonical = f"{BASE_URL}cite/{encoded_title}/{encoded_section}/"
             citation = f"{title.upper()} U.S.C. § {section}"
-            heading = compact(heading, 120)
+            heading = compact(heading, 100)
             page_title = compact(
                 f"{citation} — {heading} | {SITE_NAME}"
                 if heading
                 else f"{citation} | {SITE_NAME}",
-                180,
+                150,
             )
             description = compact(
                 f"Read {citation}, {heading}, in the United States Code."
                 if heading
                 else f"Read {citation} in the United States Code.",
-                240,
+                180,
             )
             destination = route_root / encoded_title / encoded_section / "index.html"
             destination.parent.mkdir(parents=True, exist_ok=True)
@@ -195,6 +220,9 @@ def main() -> None:
                 ),
                 encoding="utf-8",
             )
+            size = destination.stat().st_size
+            route_bytes += size
+            max_route_bytes = max(max_route_bytes, size)
             section_routes += 1
 
     if section_routes < 59_000:
@@ -210,10 +238,7 @@ def main() -> None:
     for sample in samples:
         if not sample.is_file():
             raise SystemExit(f"Expected citation route was not generated: {sample}")
-        text = sample.read_text(encoding="utf-8")
-        missing = [marker for marker in REQUIRED_SOCIAL_MARKERS if marker not in text]
-        if missing:
-            raise SystemExit(f"Generated route {sample} is missing metadata: {missing}")
+        validate_route(sample)
 
     manifest = {
         "title_routes": title_routes,
@@ -221,6 +246,9 @@ def main() -> None:
         "base_url": BASE_URL,
         "social_image": IMAGE_URL,
         "static_research_pages": list(STATIC_RESEARCH_PAGES),
+        "route_bytes": route_bytes,
+        "max_route_bytes": max_route_bytes,
+        "max_allowed_route_bytes": MAX_ROUTE_BYTES,
     }
     (site / "data" / "social-routes.json").write_text(
         json.dumps(manifest, indent=2) + "\n",
@@ -228,7 +256,8 @@ def main() -> None:
     )
     print(
         f"Generated {section_routes} section embed routes, {title_routes} title embed routes, "
-        f"and published {len(STATIC_RESEARCH_PAGES)} static research pages."
+        f"and published {len(STATIC_RESEARCH_PAGES)} static research pages; "
+        f"crawler shells total {route_bytes:,} bytes (max {max_route_bytes:,} bytes)."
     )
 
 

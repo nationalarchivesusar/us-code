@@ -4,6 +4,12 @@
 This does not invent one version per enactment. It publishes exact section text only
 for repository states that can be retrieved and verified, and associates a Public Law
 with a snapshot only when the snapshot commit message explicitly names that law.
+
+When a snapshot commit names one or more Public Laws, the builder may mark a section
+state as directly linked to one named Public Law only when exactly one of the laws
+named by that commit is associated with that section in the published Public Law
+index. This is repository evidence, not a claim that the commit isolated every legal
+effect of the enactment or establishes its legal effective time.
 """
 
 from __future__ import annotations
@@ -31,7 +37,7 @@ from build_section_history import (
 )
 
 OUTPUT_DIR = ROOT / "data" / "version-history"
-SCHEMA_VERSION = "1.0"
+SCHEMA_VERSION = "1.1"
 SNAPSHOTS = [
     {
         "commit": DEFAULT_BASELINE,
@@ -46,6 +52,11 @@ SNAPSHOTS = [
     {
         "commit": "6ece679f3e504db46d27fbd06a48980850a056f1",
         "label": "2026 enactments integrated",
+        "kind": "repository-snapshot",
+    },
+    {
+        "commit": "8461e76f47a7df89b4e03888aa6986460890b072",
+        "label": "Public Law 42-274 integrated",
         "kind": "repository-snapshot",
     },
 ]
@@ -174,6 +185,46 @@ def collapse_identical_versions(versions: list[dict]) -> list[dict]:
     return collapsed
 
 
+def attach_direct_law_links(versions: list[dict], section_laws: list[dict]) -> int:
+    """Attach conservative repository evidence linking a version to one Public Law.
+
+    A link is made only if the snapshot commit explicitly names a Public Law and,
+    after restricting those names to laws associated with this section, exactly one
+    named law remains. The label deliberately describes a repository association,
+    not an isolated legal-effective-text conclusion.
+    """
+    metadata = {
+        item.get("public_law"): item
+        for item in section_laws
+        if item.get("public_law")
+    }
+    linked = 0
+    for version in versions:
+        named = [law_no for law_no in version.get("named_public_laws", []) if law_no in metadata]
+        version["named_public_laws"] = named
+        if len(named) != 1 or not version.get("commit"):
+            continue
+        law_no = named[0]
+        law = metadata[law_no]
+        version["direct_public_law_link"] = {
+            "public_law": law_no,
+            "title": law.get("title"),
+            "status": law.get("status"),
+            "evidence": "direct-commit-message-and-section-target",
+            "description": (
+                f"This exact repository state is directly linked to Pub. L. {law_no}: "
+                "the snapshot commit names that law, and no other Public Law named by "
+                "the commit is associated with this section."
+            ),
+            "limitation": (
+                "This repository link does not by itself prove that the commit isolates "
+                "every legal effect of the enactment or establish the enactment's legal effective time."
+            ),
+        }
+        linked += 1
+    return linked
+
+
 def build(*, output_dir: Path = OUTPUT_DIR, public_laws_path: Path = PUBLIC_LAWS) -> dict:
     laws = load_json(public_laws_path)
     targets = public_law_targets(laws)
@@ -211,6 +262,7 @@ def build(*, output_dir: Path = OUTPUT_DIR, public_laws_path: Path = PUBLIC_LAWS
     manifest_sections: dict[str, dict] = {}
     unavailable: dict[str, dict[str, str]] = {}
     versioned_count = 0
+    direct_law_link_count = 0
 
     for title, sections in sorted(targets.items()):
         filename = title_filename(title)
@@ -258,6 +310,7 @@ def build(*, output_dir: Path = OUTPUT_DIR, public_laws_path: Path = PUBLIC_LAWS
                 version["named_public_laws"] = [
                     law_no for law_no in version.get("named_public_laws", []) if law_no in section_law_numbers
                 ]
+            direct_law_link_count += attach_direct_law_links(versions, section_laws)
 
             relative_path = Path("data") / "version-history" / title.lower() / f"{section}.json"
             destination = ROOT / relative_path
@@ -275,6 +328,7 @@ def build(*, output_dir: Path = OUTPUT_DIR, public_laws_path: Path = PUBLIC_LAWS
                     "A repository snapshot may incorporate more than one enactment.",
                     "A Public Law is attached to a snapshot only when the commit message explicitly names that law.",
                     "Associated Public Laws are section history and do not by themselves prove the exact text after each enactment.",
+                    "A direct Public Law link is repository evidence and does not by itself establish legal effective time or prove that a commit isolates every effect of the law.",
                 ],
             }
             destination.write_text(json.dumps(record, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
@@ -283,6 +337,7 @@ def build(*, output_dir: Path = OUTPUT_DIR, public_laws_path: Path = PUBLIC_LAWS
                 "section": section,
                 "citation": record["citation"],
                 "versions": len(versions),
+                "direct_public_law_links": sum(1 for version in versions if version.get("direct_public_law_link")),
                 "path": relative_path.as_posix(),
             }
             versioned_count += 1
@@ -293,6 +348,7 @@ def build(*, output_dir: Path = OUTPUT_DIR, public_laws_path: Path = PUBLIC_LAWS
         "states": [{k: v for k, v in state.items() if k != "message"} for state in snapshot_states] + [current_state],
         "counts": {
             "versioned_sections": versioned_count,
+            "direct_public_law_links": direct_law_link_count,
             "available_snapshots": len(snapshot_states),
             "unavailable_snapshots": len(unavailable_snapshots),
             "unavailable_titles": len(unavailable),
@@ -303,6 +359,7 @@ def build(*, output_dir: Path = OUTPUT_DIR, public_laws_path: Path = PUBLIC_LAWS
         "limitations": [
             "Version history is repository-state history, not a fabricated enactment-by-enactment chronology.",
             "Only exact retrievable statutory text is published as a version.",
+            "Direct Public Law links identify evidence-backed repository associations; they do not independently establish legal effective time or an isolated enactment delta.",
         ],
     }
     (output_dir / "manifest.json").write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -313,7 +370,8 @@ def main() -> int:
     manifest = build()
     print(
         f"Built verified version history for {manifest['counts']['versioned_sections']} sections "
-        f"across {manifest['counts']['available_snapshots']} historical snapshots."
+        f"across {manifest['counts']['available_snapshots']} historical snapshots; "
+        f"{manifest['counts']['direct_public_law_links']} exact states have direct Public Law links."
     )
     return 0
 
