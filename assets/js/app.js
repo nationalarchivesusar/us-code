@@ -1438,6 +1438,9 @@ function renderSection(sectionElement, options = {}) {
 
   textButton.addEventListener("click", () => switchView("statute"));
   notesButton.addEventListener("click", () => switchView("notes"));
+  if (new URLSearchParams(window.location.search).get("view") === "notes") {
+    switchView("notes");
+  }
 
   const pinpointTarget = pinpoint
     ? findElementByIdentifier(resolvePinpointIdentifier(sectionIdentifier, pinpoint))
