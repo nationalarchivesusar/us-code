@@ -99,6 +99,7 @@ test("section provenance comes only from explicit USAR source credits and note i
   const codeReference = {
     namespaceURI: USLM_NS,
     localName: "sourceCredit",
+    getAttribute: (name) => name === "id" ? "rp-usar-t49-s106-source" : null,
     getElementsByTagNameNS() {
       return [{ getAttribute: (name) => name === "href" ? "/us/pl/43/276/s7" : "" }];
     },
