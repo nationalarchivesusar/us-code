@@ -1199,7 +1199,6 @@ async function populatePublicLawSources(identifier, host) {
   if (parts.length < 5 || parts[1] !== "us" || parts[2] !== "usc" || !parts[3].startsWith("t") || !parts[4].startsWith("s")) return;
   const titleNumber = parts[3].slice(1).toLowerCase();
   const sectionNumber = parts[4].slice(1).toLowerCase();
-  if (!match) return;
   try {
     const index = await loadPublicLawSourceIndex();
     if (!host.isConnected || state.currentSectionIdentifier !== identifier) return;
