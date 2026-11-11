@@ -1174,7 +1174,7 @@ function loadPublicLawSourceIndex() {
           if (!/^[0-9]+-[0-9]+$/.test(law.public_law || "")) continue;
           for (const action of law.actions || []) {
             if (["no-code", "superseded"].includes(action.effect_category)) continue;
-            if (["documented-no-code-action", "superseded-by-later-action"].includes(action.result_status)) continue;
+            if (!["applied", "already-satisfied-with-baseline-proof"].includes(action.result_status)) continue;
             const relationship = law.status === "repealed"
               ? "Historical (repealed)"
               : action.effect_category === "note"
@@ -1219,7 +1219,7 @@ function recordedSectionCredits(sectionElement, index) {
     (node) => node.namespaceURI === USLM_NS && node.localName === "sourceCredit",
   );
   for (const credit of credits) {
-    for (const ref of credit.querySelectorAll("ref")) {
+    for (const ref of credit.getElementsByTagNameNS(USLM_NS, "ref")) {
       const href = ref.getAttribute("href") || "";
       const match = href.match(/^\/us\/pl\/(\d+)\/(\d+)(?:\/|$)/);
       if (match) add(`${Number(match[1])}-${Number(match[2])}`, "Enactment source credit");
