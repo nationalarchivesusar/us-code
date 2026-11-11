@@ -1,6 +1,6 @@
 {
   "source": "Post-audit enacted laws and substantive 2026 codification registry",
-  "description": "Publication metadata for enacted laws whose current Code dispositions are maintained by the substantive current-law overlay rather than the completed 270-law audit action ledger.",
+  "description": "Publication metadata for authenticated newer enactments, their verified amendment or statutory-note anchors, and subsequent repeal overrides. Note targets are editorial placements, not claims that the cited section's enacted text was rewritten.",
   "laws": [
     {
       "law_id": "PL-041-271",
@@ -15,7 +15,13 @@
           "treatment": "new Code sections",
           "description": "National-security eligibility provisions are classified to 50 U.S.C. §§ 5001–5007.",
           "targets": [
-            {"title": "50", "range": [5001, 5007]}
+            {
+              "title": "50",
+              "range": [
+                5001,
+                5007
+              ]
+            }
           ]
         },
         {
@@ -25,7 +31,13 @@
           "treatment": "new Code sections",
           "description": "Commerce, trade, intellectual-property, and labor transfer provisions are classified to 15 U.S.C. §§ 10001–10011.",
           "targets": [
-            {"title": "15", "range": [10001, 10011]}
+            {
+              "title": "15",
+              "range": [
+                10001,
+                10011
+              ]
+            }
           ]
         },
         {
@@ -35,7 +47,10 @@
           "treatment": "amend existing Code section",
           "description": "Conflict-of-interest provisions are consolidated into 18 U.S.C. § 205 as new subsections (k)–(n).",
           "targets": [
-            {"title": "18", "section": "205"}
+            {
+              "title": "18",
+              "section": "205"
+            }
           ]
         },
         {
@@ -45,7 +60,13 @@
           "treatment": "new Code sections",
           "description": "Commissioned-service staffing and continuity provisions are classified to 5 U.S.C. §§ 2501–2504.",
           "targets": [
-            {"title": "5", "range": [2501, 2504]}
+            {
+              "title": "5",
+              "range": [
+                2501,
+                2504
+              ]
+            }
           ]
         },
         {
@@ -55,7 +76,13 @@
           "treatment": "new Code sections",
           "description": "Whistleblower and oversight protections are classified to 5 U.S.C. §§ 2308–2314.",
           "targets": [
-            {"title": "5", "range": [2308, 2314]}
+            {
+              "title": "5",
+              "range": [
+                2308,
+                2314
+              ]
+            }
           ]
         },
         {
@@ -81,7 +108,13 @@
           "treatment": "new Code chapter and sections",
           "description": "Permanent MPD public-safety and property-authority provisions are classified to 40 U.S.C. §§ 9701–9716.",
           "targets": [
-            {"title": "40", "range": [9701, 9716]}
+            {
+              "title": "40",
+              "range": [
+                9701,
+                9716
+              ]
+            }
           ]
         },
         {
@@ -91,7 +124,10 @@
           "treatment": "short-title, severability, and effective-date notes",
           "description": "Short-title, severability, and effective-date provisions are retained as notes at 40 U.S.C. § 9701.",
           "targets": [
-            {"title": "40", "section": "9701"}
+            {
+              "title": "40",
+              "section": "9701"
+            }
           ]
         }
       ]
@@ -109,7 +145,13 @@
           "treatment": "new Code chapter and sections",
           "description": "Federal law-enforcement communications and coordination provisions are classified to 6 U.S.C. §§ 1801–1815.",
           "targets": [
-            {"title": "6", "range": [1801, 1815]}
+            {
+              "title": "6",
+              "range": [
+                1801,
+                1815
+              ]
+            }
           ]
         },
         {
@@ -119,7 +161,10 @@
           "treatment": "short-title, severability, and effective-date notes",
           "description": "Short-title, severability, and effective-date provisions are retained as notes at 6 U.S.C. § 1801.",
           "targets": [
-            {"title": "6", "section": "1801"}
+            {
+              "title": "6",
+              "section": "1801"
+            }
           ]
         }
       ]
@@ -138,7 +183,13 @@
           "treatment": "new Code chapter and sections",
           "description": "Permanent Capitol Police organization, governance, jurisdiction, protective-service, enforcement, use-of-force, oversight, access, emergency, political-neutrality, and penalty provisions are classified to 2 U.S.C. §§ 7001–7019.",
           "targets": [
-            {"title": "2", "range": [7001, 7019]}
+            {
+              "title": "2",
+              "range": [
+                7001,
+                7019
+              ]
+            }
           ]
         },
         {
@@ -148,7 +199,10 @@
           "treatment": "repeal and supersession history",
           "description": "The Act expressly repeals the Uniformed Capitol Police Act of 2023 and the United States Capitol Police Technical Corrections Act, terminates authority dependent solely on those enactments, and supersedes inconsistent continuing law, rule, regulation, or order. Existing archived law identities are preserved where the historical archive contains conflicting public-law numbering.",
           "targets": [
-            {"title": "2", "section": "7001"}
+            {
+              "title": "2",
+              "section": "7001"
+            }
           ]
         },
         {
@@ -158,8 +212,229 @@
           "treatment": "short-title, severability, rule-of-construction, and effective-date notes",
           "description": "Short-title, severability, rule-of-construction, and effective-date/transition provisions are retained as statutory notes at 2 U.S.C. § 7001.",
           "targets": [
-            {"title": "2", "section": "7001"}
+            {
+              "title": "2",
+              "section": "7001"
+            }
           ]
+        }
+      ]
+    },
+    {
+      "law_id": "PL-043-275",
+      "public_law": "43-275",
+      "title": "Combatant Command Purge Act",
+      "status": "active",
+      "trello_short_link": "qyA1cU56",
+      "source_document_url": "https://drive.google.com/file/d/1zMAUKYCUM7tvepT-ljNT1o2G3LkjYE4M/view",
+      "actions": [
+        {
+          "provision": "§§ 4–5",
+          "effect_category": "note",
+          "effect_label": "Amendment to an earlier public law",
+          "treatment": "statutory amendment note",
+          "description": "Amends §§ 5–6 of Pub. L. 16-116, leaving U.S. Special Operations Command as the only combatant command established by that Act and changing the reporting and operational-command rules. Definitions reference Title 10 but do not amend the cited Code provisions.",
+          "targets": [
+            {
+              "title": "10",
+              "section": "161"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "law_id": "PL-043-276",
+      "public_law": "43-276",
+      "title": "Federal Aviation Administration Continuity and Restricted Airspace Act",
+      "status": "active",
+      "trello_short_link": "2EVy1yGa",
+      "source_document_url": "https://drive.google.com/file/d/1VadZ5BUiVY8AkwPjqMZ5fgnIYEsksuXg/view",
+      "actions": [
+        {
+          "provision": "§§ 3–5, 9",
+          "effect_category": "note",
+          "effect_label": "Direct Code amendments — recorded in note",
+          "treatment": "controlling amendment note pending structural consolidation",
+          "description": "Directly amends 49 U.S.C. § 106 to place FAA under joint DHS/NASA administration, define the Administrator and supervisory authorities, and provide conforming changes. The amendment is recorded at its actual target without rewriting unrelated provisions or guessing subsection nesting.",
+          "targets": [
+            {
+              "title": "49",
+              "section": "106"
+            }
+          ]
+        },
+        {
+          "provision": "§ 6",
+          "effect_category": "note",
+          "effect_label": "New NASA airspace authority — statutory note",
+          "treatment": "amendment note pending numbered-section consolidation",
+          "description": "Adds NASA facility airspace powers after 51 U.S.C. § 20113 in chapter 201; § 8 refers to 51 U.S.C. § 20113A, although the insertion instruction in § 6 does not give the new section an explicit numbered heading. Recorded at § 20113 pending that structural reconciliation.",
+          "targets": [
+            {
+              "title": "51",
+              "section": "20113"
+            }
+          ]
+        },
+        {
+          "provision": "§ 7",
+          "effect_category": "note",
+          "effect_label": "Direct Code amendment — recorded in note",
+          "treatment": "controlling amendment note pending structural consolidation",
+          "description": "Adds mandatory permanent restricted flight areas at the White House Complex, Capitol complex, Joint Base Moore and specified security areas to 49 U.S.C. § 40103.",
+          "targets": [
+            {
+              "title": "49",
+              "section": "40103"
+            }
+          ]
+        },
+        {
+          "provision": "§ 8",
+          "effect_category": "note",
+          "effect_label": "Direct Code amendment — recorded in note",
+          "treatment": "controlling amendment note pending structural consolidation",
+          "description": "Adds airspace-restriction civil enforcement, grounding, administrative remedies and criminal referrals to 49 U.S.C. § 46301.",
+          "targets": [
+            {
+              "title": "49",
+              "section": "46301"
+            }
+          ]
+        },
+        {
+          "provision": "§§ 1–2, 10–12",
+          "effect_category": "no-code",
+          "effect_label": "Construction, definitions and implementation",
+          "treatment": "uncodified contextual and transition provisions",
+          "description": "The Act's definitions, construction rules, severability and effective date are preserved in the original enactment; their incidental Code citations are not treated as amended sections.",
+          "targets": []
+        }
+      ]
+    },
+    {
+      "law_id": "PL-043-277",
+      "public_law": "43-277",
+      "title": "Homeland Amendment Act",
+      "status": "active",
+      "trello_short_link": "mwCa76Gc",
+      "source_document_url": "https://drive.google.com/file/d/1R8dYH4_9giEkdNgS6JoCGSt5l8FWfoiM/view",
+      "actions": [
+        {
+          "provision": "§ 2",
+          "effect_category": "note",
+          "effect_label": "Amendment to Pub. L. 42-273 — recorded in Code note",
+          "treatment": "controlling amendment note",
+          "description": "Amends § 4(b) of Pub. L. 42-273: the Director shall be appointed by the President after consultation with the Secretary of Homeland Security. Recorded beside the corresponding § 4 codification at 6 U.S.C. § 1803; no unrelated sections are amended.",
+          "targets": [
+            {
+              "title": "6",
+              "section": "1803"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "law_id": "PL-043-278",
+      "public_law": "43-278",
+      "title": "Please Help We Don't Have Enough Judges Act",
+      "status": "active",
+      "trello_short_link": "GiYq6u9s",
+      "source_document_url": "https://drive.google.com/file/d/1_ix_sc4Q4ruyYqWoSbjscs48feeLuU67/view",
+      "actions": [
+        {
+          "provision": "§ 3 (first occurrence)",
+          "effect_category": "note",
+          "effect_label": "FISA Court amendment — statutory note",
+          "treatment": "amendment to prior public law",
+          "description": "Restates § 103 of Pub. L. 30-222 to permit the Chief Justice to appoint no fewer than one district judge to the FISA Court for renewable six-month terms. This amends the prior public law, not an expressly identified Code section; recorded at the prior Act's Title 50 statutory-note anchor.",
+          "targets": [
+            {
+              "title": "50",
+              "section": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "law_id": "PL-044-279",
+      "public_law": "44-279",
+      "title": "Armed Forces Continuity Act of 2026",
+      "status": "active",
+      "trello_short_link": "HdI1PnW0",
+      "source_document_url": "https://drive.google.com/file/d/1pv3hFydaUjvgGxQvGfQs4snczL-iafx4/view",
+      "actions": [
+        {
+          "provision": "§§ 3–6",
+          "effect_category": "note",
+          "effect_label": "New continuing statutory requirements",
+          "treatment": "freestanding statutory note",
+          "description": "Requires an enacted joint resolution before a covered military service or the D.C. National Guard can be activated or deactivated, including constructively; preserves the President's command and operational authority. The Act defines covered forces by reference to 10 U.S.C. § 101 but does not amend that section.",
+          "targets": [
+            {
+              "title": "10",
+              "section": "101"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "law_id": "PL-044-006",
+      "public_law": "44-6",
+      "title": "Executive Disclosure Act of 2026",
+      "status": "active",
+      "trello_short_link": "dkXXGhPE",
+      "source_document_url": "https://drive.google.com/file/d/17-aKJ3OAzrl6ynOX1UbZYCKsKr7bbzIs/view",
+      "actions": [
+        {
+          "provision": "§ 3(e)",
+          "effect_category": "no-code",
+          "effect_label": "Express repeal of an earlier public law",
+          "treatment": "repeal and historical disposition",
+          "description": "Expressly repeals Pub. L. 26-188 (Departmental Reports Act) in full. The earlier enactment is marked repealed in the publication registry.",
+          "targets": []
+        },
+        {
+          "provision": "§§ 4–10",
+          "effect_category": "note",
+          "effect_label": "New continuing reporting and penalty requirements",
+          "treatment": "freestanding statutory note",
+          "description": "Creates monthly congressional reporting duties for State, Defense, Justice, Homeland Security and the Director of National Intelligence, subject to permitted withholding and penalties. The Act references 5 U.S.C. § 101 for definitions but does not amend that section.",
+          "targets": [
+            {
+              "title": "5",
+              "section": "101"
+            }
+          ]
+        },
+        {
+          "provision": "§§ 1–2, 11",
+          "effect_category": "no-code",
+          "effect_label": "Short title, severability and effective date",
+          "treatment": "non-Code implementation provisions",
+          "description": "Takes effect on the first full calendar month after enactment; the short title and severability provisions do not modify any Code section.",
+          "targets": []
+        }
+      ]
+    },
+    {
+      "law_id": "PL-026-188",
+      "public_law": "26-188",
+      "title": "Departmental Reports Act",
+      "status": "repealed",
+      "trello_short_link": "jSEht4L7",
+      "actions": [
+        {
+          "provision": "Entire Act",
+          "effect_category": "no-code",
+          "effect_label": "Repealed by Pub. L. 44-6",
+          "treatment": "repealed prior law",
+          "description": "Pub. L. 44-6, § 3(e), expressly repealed the Departmental Reports Act (Pub. L. 26-188). Historical codifications are not operative by virtue of the former Act.",
+          "targets": []
         }
       ]
     }
