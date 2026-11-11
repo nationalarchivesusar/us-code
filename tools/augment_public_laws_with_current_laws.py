@@ -110,6 +110,9 @@ def build_current_law(row: dict, short_links: dict[str, str]) -> dict:
             raw_action.get("targets") or [], repealed=repealed
         ) if result_status in {"applied", "already-satisfied-with-baseline-proof"} else []
         category = raw_action.get("effect_category") or "code"
+        if category == "note":
+            for target in targets:
+                target["view"] = "notes"
         effect_categories.add(category)
         law_targets.extend(targets)
         actions.append(
