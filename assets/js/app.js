@@ -1164,6 +1164,12 @@ function loadPublicLawSourceIndex() {
       })
       .then((payload) => {
         const index = new Map();
+        const knownLaws = new Map();
+        for (const law of payload.laws || []) {
+          if (/^[0-9]+-[0-9]+$/.test(law.public_law || "")) {
+            knownLaws.set(law.public_law, { number: law.public_law, title: law.title });
+          }
+        }
         for (const law of payload.laws || []) {
           if (!/^[0-9]+-[0-9]+$/.test(law.public_law || "")) continue;
           for (const action of law.actions || []) {
@@ -1188,13 +1194,47 @@ function loadPublicLawSourceIndex() {
             }
           }
         }
+        // A Code section may have an authentic enactment source credit even
+        // when the historical migration ledger has no action for that section.
+        index.knownLaws = knownLaws;
         return index;
       });
   }
   return publicLawSourceIndexPromise;
 }
 
-async function populatePublicLawSources(identifier, host) {
+// Read only USAR-authored source-credit references and deterministic note IDs.
+// A passing statutory citation or arbitrary text mention is never provenance.
+function recordedSectionCredits(sectionElement, index) {
+  const credited = new Map();
+  const add = (number, relationship) => {
+    const law = index.knownLaws?.get(number);
+    if (!law) return;
+    if (!credited.has(number)) {
+      credited.set(number, { ...law, relationships: new Set() });
+    }
+    credited.get(number).relationships.add(relationship);
+  };
+  const credits = Array.from(sectionElement.children).filter(
+    (node) => node.namespaceURI === USLM_NS && node.localName === "sourceCredit",
+  );
+  for (const credit of credits) {
+    for (const ref of credit.querySelectorAll("ref")) {
+      const href = ref.getAttribute("href") || "";
+      const match = href.match(/^\/us\/pl\/(\d+)\/(\d+)(?:\/|$)/);
+      if (match) add(`${Number(match[1])}-${Number(match[2])}`, "Enactment source credit");
+    }
+  }
+  for (const note of sectionElement.getElementsByTagNameNS(USLM_NS, "note")) {
+    const match = (note.getAttribute("id") || "").match(
+      /^rp-(?:current-)?pl(\d{2,3})(\d{3})(?:-|$)/,
+    );
+    if (match) add(`${Number(match[1])}-${Number(match[2])}`, "Source-identified statutory note");
+  }
+  return credited;
+}
+
+async function populatePublicLawSources(identifier, host, sectionElement) {
   const parts = String(identifier || "").split("/");
   if (parts.length < 5 || parts[1] !== "us" || parts[2] !== "usc" || !parts[3].startsWith("t") || !parts[4].startsWith("s")) return;
   const titleNumber = parts[3].slice(1).toLowerCase();
@@ -1202,8 +1242,17 @@ async function populatePublicLawSources(identifier, host) {
   try {
     const index = await loadPublicLawSourceIndex();
     if (!host.isConnected || state.currentSectionIdentifier !== identifier) return;
-    const records = index.get(`${titleNumber}:${sectionNumber}`);
-    if (!records || !records.size) {
+    const records = new Map(index.get(`${titleNumber}:${sectionNumber}`) || []);
+    for (const [number, credited] of recordedSectionCredits(sectionElement, index)) {
+      if (!records.has(number)) {
+        records.set(number, credited);
+      } else {
+        for (const relationship of credited.relationships) {
+          records.get(number).relationships.add(relationship);
+        }
+      }
+    }
+    if (!records.size) {
       host.remove();
       return;
     }
@@ -1372,7 +1421,7 @@ function renderSection(sectionElement, options = {}) {
   notesPanel.prepend(publicLawHistory);
   panels.appendChild(notesPanel);
   elements.sectionContent.appendChild(panels);
-  void populatePublicLawSources(sectionIdentifier, publicLawHistory);
+  void populatePublicLawSources(sectionIdentifier, publicLawHistory, sectionElement);
 
   const switchView = (view) => {
     panels.dataset.view = view;
