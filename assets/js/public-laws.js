@@ -153,7 +153,10 @@ function createAction(action, law) {
   if (targets.length) {
     const targetLabel = document.createElement("span");
     targetLabel.className = "law-action__target";
-    targetLabel.append(targets.length === 1 ? "Recorded location: " : "Recorded locations: ");
+    const locationLabel = action.effect_category === "note"
+      ? (targets.length === 1 ? "Statutory note at: " : "Statutory notes at: ")
+      : (targets.length === 1 ? "Affected Code section: " : "Affected Code sections: ");
+    targetLabel.append(locationLabel);
     appendTargets(targetLabel, targets);
     meta.appendChild(targetLabel);
   } else {
