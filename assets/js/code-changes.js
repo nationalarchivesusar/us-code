@@ -40,10 +40,16 @@ function targetIdentity(target) {
   return `${target?.title || ""}:${target?.section || ""}`.toLowerCase();
 }
 
+function isCodeLocationAction(action) {
+  return action && !["no-code", "superseded"].includes(action.effect_category)
+    && !["documented-no-code-action", "superseded-by-later-action"].includes(action.result_status);
+}
+
 function bestActionForTarget(law, target) {
   const identity = targetIdentity(target);
   return (law.actions || []).find((action) =>
-    actionTargets(action).some((candidate) => targetIdentity(candidate) === identity),
+    isCodeLocationAction(action)
+    && actionTargets(action).some((candidate) => targetIdentity(candidate) === identity),
   ) || null;
 }
 
@@ -53,18 +59,20 @@ function normalizedVerifiedStatus(meta) {
 }
 
 function labelFor(record) {
-  if (record.verifiedStatus === "amended") return "Verified amended";
-  if (record.verifiedStatus === "added") return "Verified added";
-  if (record.verifiedStatus === "removed") return "Verified removed";
-  return record.effectLabel || "Recorded action";
+  // A baseline-to-current section difference cannot be attributed to
+  // each Public Law that mentions that section.
+  return record.effectLabel || "Recorded Code placement";
 }
 
 function buildRecords(publicLaws, historyManifest) {
   const result = [];
   for (const law of publicLaws.laws || []) {
     const seen = new Set();
-    const candidates = [...(law.targets || [])];
-    for (const action of law.actions || []) candidates.push(...actionTargets(action));
+    const candidates = [];
+    for (const action of law.actions || []) {
+      if (!isCodeLocationAction(action)) continue;
+      candidates.push(...actionTargets(action));
+    }
 
     for (const target of candidates) {
       if (!target?.section) continue;
@@ -72,6 +80,7 @@ function buildRecords(publicLaws, historyManifest) {
       if (!identity || seen.has(identity)) continue;
       seen.add(identity);
       const action = bestActionForTarget(law, target);
+      if (!action) continue;
       const meta = historyManifest.sections?.[sectionKey(target.title, target.section)] || null;
       const verifiedStatus = normalizedVerifiedStatus(meta);
       result.push({
@@ -125,9 +134,7 @@ function createBadge(record) {
   const badge = document.createElement("span");
   badge.className = `changes-record__badge ${record.verifiedStatus ? `changes-record__badge--${record.verifiedStatus}` : "changes-record__badge--recorded"}`;
   badge.textContent = labelFor(record);
-  badge.title = record.verifiedStatus
-    ? "Verified against the fixed repository baseline and current published statutory text."
-    : "Recorded in the Public Law codification index; not an independently reconstructed text snapshot.";
+  badge.title = "Classification of this Public Law's recorded Code placement; independent section comparisons cannot establish a law-specific amendment.";
   return badge;
 }
 
@@ -170,7 +177,7 @@ function renderRecord(record) {
   if (record.verifiedStatus) {
     const note = document.createElement("p");
     note.className = "changes-record__evidence";
-    note.textContent = "Verified text classification describes baseline → current Code, not necessarily the isolated effect of this one Public Law.";
+    note.textContent = `Separately verified section comparison: ${record.verifiedStatus} since the fixed baseline. This does not establish that this particular Public Law caused the change.`;
     item.appendChild(note);
   }
   return item;
