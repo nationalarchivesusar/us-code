@@ -161,7 +161,10 @@ def targets_from_action(action: dict, repealed: bool) -> list[dict]:
     of actually changed nodes can substantiate a public-facing Code link.
     """
     result_status = action.get("result_status") or ""
-    if result_status in {"documented-no-code-action", "superseded-by-later-action"}:
+    # An identified section is not proof of a successful codification.
+    # Blocked, planned, deferred and superseded operations must not generate
+    # public-facing "amended Code" links, even when the audit has a target.
+    if result_status not in {"applied", "already-satisfied-with-baseline-proof"}:
         return []
 
     identifier = str(action.get("final_section_or_subsection_identifier") or "").strip()
