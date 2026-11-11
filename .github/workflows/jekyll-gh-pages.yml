@@ -114,6 +114,7 @@ jobs:
           python tools/audit_applied_material.py
           python tools/reconcile_repealed_laws.py --check
           python -m unittest discover -s tests -p "test_*.py" -v
+          node --check assets/js/app.js
           node --check assets/js/public-laws.js
           node --check assets/js/criminal-law.js
           node --check assets/js/research-tools.js
@@ -128,10 +129,10 @@ jobs:
           from pathlib import Path
 
           payload = json.loads(Path('data/public-laws.json').read_text(encoding='utf-8'))
-          assert payload['counts']['total'] == 273
-          assert payload['counts']['active'] == 144
-          assert payload['counts']['repealed'] == 129
-          assert len(payload['laws']) == 273
+          assert payload['counts']['total'] == 279
+          assert payload['counts']['active'] == 149
+          assert payload['counts']['repealed'] == 130
+          assert len(payload['laws']) == 279
           assert payload['counts']['actions'] == sum(
               law['action_count'] for law in payload['laws']
           )
@@ -144,7 +145,9 @@ jobs:
           )
 
           laws = {law['public_law']: law for law in payload['laws']}
-          assert {'41-271', '42-272', '42-273', '42-274'} <= set(laws)
+          assert {'41-271', '42-272', '42-273', '42-274', '43-275', '43-276', '43-277', '43-278', '44-279', '44-6'} <= set(laws)
+          assert laws['26-188']['status'] == 'repealed'
+          assert laws['44-6']['status'] == 'active'
           assert laws['41-271']['status'] == 'active'
           assert laws['42-272']['status'] == 'active'
           assert laws['42-273']['status'] == 'active'
