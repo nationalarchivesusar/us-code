@@ -181,8 +181,20 @@ def main() -> None:
                     action.get("treatment") or ""
                 )
 
-            raw_targets = action.get("targets") or (
-                [action["target"]] if action.get("target") else []
+            # No-action and superseded audit entries may carry bookkeeping
+            # identifiers. They are not evidence that this law altered, or was
+            # codified in, the referenced section.
+            non_code_action = (
+                action.get("effect_category") in {"no-code", "superseded"}
+                or action.get("result_status") in {
+                    "documented-no-code-action",
+                    "superseded-by-later-action",
+                }
+            )
+            raw_targets = [] if non_code_action else (
+                action.get("targets") or (
+                    [action["target"]] if action.get("target") else []
+                )
             )
             explicit_note_target = any(
                 isinstance(target, dict)
@@ -201,10 +213,18 @@ def main() -> None:
             action["target"] = action["targets"][0] if action["targets"] else None
             law_targets.extend(action["targets"])
 
+        # Do not revive legacy law-level targets when every action has been
+        # verified as non-Code. Only independently grounded action targets
+        # can appear on the public law card.
         law["targets"] = dedupe_targets(
-            law_targets or law.get("targets", []), repealed, section_index
+            law_targets, repealed, section_index
         )
         law["target_count"] = len(law["targets"])
+        law["effect_categories"] = sorted({
+            action.get("effect_category")
+            for action in law.get("actions", [])
+            if action.get("effect_category")
+        })
 
     all_targets = [
         target
