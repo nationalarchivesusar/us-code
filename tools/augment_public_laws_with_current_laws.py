@@ -147,7 +147,7 @@ def build_current_law(row: dict, short_links: dict[str, str]) -> dict:
     elif target_count:
         summary = (
             f"Active law with {action_count} recorded codification action"
-            f"{'' if action_count == 1 else 's'} affecting {target_count} Code location"
+            f"{'' if action_count == 1 else 's'} associated with {target_count} Code location"
             f"{'' if target_count == 1 else 's'}."
         )
     else:
