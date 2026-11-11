@@ -36,6 +36,16 @@ class PublicLawAttributionTests(unittest.TestCase):
         }
         self.assertEqual(targets_from_action(action, False), [])
 
+    def test_pending_or_blocked_action_cannot_generate_section_links(self):
+        for status in ("pending", "blocked", "deferred", ""):
+            with self.subTest(status=status):
+                action = {
+                    "result_status": status,
+                    "final_section_or_subsection_identifier": "/us/usc/t49/s106",
+                    "actual_node_ids_changed": ["rp-pl043276-t49-s106"],
+                }
+                self.assertEqual(targets_from_action(action, False), [])
+
     def test_documented_no_code_action_cannot_generate_section_links(self):
         action = {
             "result_status": "documented-no-code-action",
