@@ -94,6 +94,37 @@ function fakeNotesContainer(children) {
   };
 }
 
+test("section provenance comes only from explicit USAR source credits and note identifiers", () => {
+  const ctx = loadAppContext();
+  const codeReference = {
+    namespaceURI: USLM_NS,
+    localName: "sourceCredit",
+    getElementsByTagNameNS() {
+      return [{ getAttribute: (name) => name === "href" ? "/us/pl/43/276/s7" : "" }];
+    },
+  };
+  const section = {
+    children: [codeReference],
+    getElementsByTagNameNS() {
+      return [
+        { getAttribute: () => "rp-current-pl044006-t05s101" },
+        { getAttribute: () => "nonusar-pub-l-43-275" },
+      ];
+    },
+  };
+  const index = new Map();
+  index.knownLaws = new Map([
+    ["43-276", { number: "43-276", title: "Aviation Act" }],
+    ["44-6", { number: "44-6", title: "Executive Disclosure Act" }],
+    ["43-275", { number: "43-275", title: "Combatant Command Purge Act" }],
+  ]);
+  const credited = ctx.recordedSectionCredits(section, index);
+  assert.equal(credited.size, 2);
+  assert.deepEqual([...credited.get("43-276").relationships], ["Enactment source credit"]);
+  assert.deepEqual([...credited.get("44-6").relationships], ["Source-identified statutory note"]);
+  assert.equal(credited.has("43-275"), false);
+});
+
 test("isUsarNoteElement is true only for note elements with an rp- id", () => {
   const ctx = loadAppContext();
   assert.equal(ctx.isUsarNoteElement(fakeNote({ id: "rp-abc123" })), true);
