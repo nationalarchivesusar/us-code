@@ -70,6 +70,25 @@ class CurrentLawSidecarTests(unittest.TestCase):
             merged = notes_mod.load_manifest(primary)
             self.assertEqual([note["id"] for note in merged["notes"]], ["rp-primary", "rp-extra"])
 
+    def test_new_laws_use_authoritative_notes_not_incidental_code_links(self):
+        registry = json.loads((ROOT / "legal-data" / "current-public-laws.json").read_text(encoding="utf-8"))
+        laws = {item["public_law"]: item for item in registry["laws"]}
+        for number in ("43-275", "43-276", "43-277", "43-278", "44-279", "44-6"):
+            with self.subTest(public_law=number):
+                self.assertEqual(laws[number]["status"], "active")
+                self.assertTrue(laws[number]["trello_short_link"])
+                self.assertTrue(laws[number]["source_document_url"].startswith("https://drive.google.com/file/d/"))
+                self.assertFalse(any(action["effect_category"] == "code" for action in laws[number]["actions"]))
+        self.assertEqual(laws["26-188"]["status"], "repealed")
+        faa_targets = {
+            (str(target["title"]), str(target["section"]))
+            for action in laws["43-276"]["actions"]
+            for target in action["targets"]
+        }
+        self.assertEqual(
+            faa_targets, {("49", "106"), ("49", "40103"), ("49", "46301"), ("51", "20113")}
+        )
+
     def test_current_law_can_supply_trello_short_link(self):
         row = {
             "law_id": "PL-042-274",
