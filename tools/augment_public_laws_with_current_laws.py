@@ -173,6 +173,7 @@ def build_current_law(row: dict, short_links: dict[str, str]) -> dict:
         "status": status,
         "status_label": "Repealed" if repealed else "Active",
         "trello_url": trello_url,
+        "source_document_url": row.get("source_document_url"),
         "actions": actions,
         "targets": targets,
         "effect_categories": sorted(effect_categories),
