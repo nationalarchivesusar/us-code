@@ -103,7 +103,12 @@ def build_current_law(row: dict, short_links: dict[str, str]) -> dict:
     effect_categories: set[str] = set()
 
     for index, raw_action in enumerate(row.get("actions") or [], start=1):
-        targets = expand_targets(raw_action.get("targets") or [], repealed=repealed)
+        result_status = raw_action.get("result_status", "applied")
+        if result_status not in {"applied", "already-satisfied-with-baseline-proof", "pending", "blocked"}:
+            raise SystemExit(f"Invalid current-law result status for {law_id}: {result_status}")
+        targets = expand_targets(
+            raw_action.get("targets") or [], repealed=repealed
+        ) if result_status in {"applied", "already-satisfied-with-baseline-proof"} else []
         category = raw_action.get("effect_category") or "code"
         effect_categories.add(category)
         law_targets.extend(targets)
@@ -113,13 +118,18 @@ def build_current_law(row: dict, short_links: dict[str, str]) -> dict:
                 "provision": raw_action.get("provision") or "Unspecified provision",
                 "effect_category": category,
                 "effect_label": raw_action.get("effect_label") or "Integrated into the Code",
-                "result_status": "applied",
-                "result_label": "Applied",
+                "result_status": result_status,
+                "result_label": {
+                    "applied": "Applied",
+                    "already-satisfied-with-baseline-proof": "Already reflected in the Code",
+                    "pending": "Awaiting verified codification",
+                    "blocked": "Codification withheld",
+                }[result_status],
                 "planned_action": raw_action.get("description") or "",
                 "treatment": raw_action.get("treatment") or "current-law overlay",
                 "targets": targets,
                 "target": targets[0] if targets else None,
-                "description": raw_action.get("description") or "Current-law codification applied.",
+                "description": raw_action.get("description") or "Current-law disposition recorded.",
             }
         )
 
