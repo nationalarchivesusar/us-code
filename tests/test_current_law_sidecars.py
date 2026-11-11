@@ -73,7 +73,7 @@ class CurrentLawSidecarTests(unittest.TestCase):
     def test_new_laws_use_authoritative_notes_not_incidental_code_links(self):
         registry = json.loads((ROOT / "legal-data" / "current-public-laws.json").read_text(encoding="utf-8"))
         laws = {item["public_law"]: item for item in registry["laws"]}
-        for number in ("43-275", "43-276", "43-277", "43-278", "44-279", "44-6"):
+        for number in ("43-275", "43-276", "43-277", "43-278", "44-279", "44-280"):
             with self.subTest(public_law=number):
                 self.assertEqual(laws[number]["status"], "active")
                 self.assertTrue(laws[number]["trello_short_link"])
