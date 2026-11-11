@@ -1165,7 +1165,7 @@ function loadPublicLawSourceIndex() {
       .then((payload) => {
         const index = new Map();
         for (const law of payload.laws || []) {
-          if (!/^\\d+-\\d+$/.test(law.public_law || "")) continue;
+          if (!/^[0-9]+-[0-9]+$/.test(law.public_law || "")) continue;
           for (const action of law.actions || []) {
             if (["no-code", "superseded"].includes(action.effect_category)) continue;
             if (["documented-no-code-action", "superseded-by-later-action"].includes(action.result_status)) continue;
@@ -1195,12 +1195,15 @@ function loadPublicLawSourceIndex() {
 }
 
 async function populatePublicLawSources(identifier, host) {
-  const match = String(identifier || "").match(/^\\/us\\/usc\\/t(\\d+[A-Za-z]?)\\/s([^/]+)/);
+  const parts = String(identifier || "").split("/");
+  if (parts.length < 5 || parts[1] !== "us" || parts[2] !== "usc" || !parts[3].startsWith("t") || !parts[4].startsWith("s")) return;
+  const titleNumber = parts[3].slice(1).toLowerCase();
+  const sectionNumber = parts[4].slice(1).toLowerCase();
   if (!match) return;
   try {
     const index = await loadPublicLawSourceIndex();
     if (!host.isConnected || state.currentSectionIdentifier !== identifier) return;
-    const records = index.get(`${match[1].toLowerCase()}:${match[2].toLowerCase()}`);
+    const records = index.get(`${titleNumber}:${sectionNumber}`);
     if (!records || !records.size) {
       host.remove();
       return;
