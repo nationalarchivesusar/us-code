@@ -154,78 +154,71 @@ def action_text(action: dict) -> str:
 
 
 def targets_from_action(action: dict, repealed: bool) -> list[dict]:
-    identifier = (action.get("final_section_or_subsection_identifier") or "").strip()
+    """Expose proven placement targets, not every citation mentioned in prose.
+
+    The integration audit uses some target fields for bookkeeping even when no
+    Code action occurred. Only the recorded final destination or identifiers
+    of actually changed nodes can substantiate a public-facing Code link.
+    """
+    result_status = action.get("result_status") or ""
+    if result_status in {"documented-no-code-action", "superseded-by-later-action"}:
+        return []
+
+    identifier = str(action.get("final_section_or_subsection_identifier") or "").strip()
     title = xml_title_number(action)
     targets: list[dict] = []
 
-    match = TARGET_RE.match(identifier)
-    if match:
+    # One audit field can contain several explicit destinations separated by
+    # pipes. Each must be parsed as a whole identifier; never turn an
+    # incidental reference in an audit explanation into an affected section.
+    for raw_identifier in re.split(r"\\s*\\|\\s*", identifier):
+        match = TARGET_RE.fullmatch(raw_identifier)
+        if not match:
+            continue
         explicit_title = normalized_title(match.group("title")) or match.group("title")
-        explicit_section = match.group("section")
-        explicit_rest = match.group("rest") or ""
         targets.append(
             make_target(
                 explicit_title,
-                explicit_section,
-                explicit_rest,
+                match.group("section"),
+                match.group("rest") or "",
                 repealed=repealed,
-                identifier=identifier,
+                identifier=raw_identifier,
             )
         )
-        title = explicit_title
 
-    for node_id in (
+    if targets:
+        return dedupe_targets(targets)
+
+    # Legacy records without an explicit destination may still identify the
+    # node they actually inserted, modified, or removed. Node IDs are stronger
+    # evidence than citations in source quotations or diagnostic descriptions.
+    node_ids = (
         list(action.get("actual_node_ids_added") or [])
         + list(action.get("actual_node_ids_changed") or [])
         + list(action.get("actual_node_ids_removed") or [])
-    ):
-        match = NODE_TARGET_RE.search(str(node_id))
-        if match:
+    )
+    for node_id in node_ids:
+        node_match = NODE_TARGET_RE.search(str(node_id))
+        if node_match:
             targets.append(
                 make_target(
-                    match.group("title"),
-                    match.group("section"),
+                    node_match.group("title"),
+                    node_match.group("section"),
                     repealed=repealed,
                     inferred=True,
                 )
             )
             continue
-        match = NODE_SECTION_RE.search(str(node_id))
-        if match and title:
+        section_match = NODE_SECTION_RE.search(str(node_id))
+        if section_match and title:
             targets.append(
                 make_target(
                     title,
-                    match.group("section"),
+                    section_match.group("section"),
                     repealed=repealed,
                     inferred=True,
                 )
             )
-
-    text = action_text(action)
-    for match in TARGET_ANY_RE.finditer(text):
-        found_identifier = match.group(0)
-        targets.append(
-            make_target(
-                match.group("title"),
-                match.group("section"),
-                match.group("rest") or "",
-                repealed=repealed,
-                identifier=found_identifier,
-                inferred=True,
-            )
-        )
-    for match in USC_CITATION_RE.finditer(text):
-        targets.append(
-            make_target(
-                match.group("title"),
-                match.group("section"),
-                repealed=repealed,
-                inferred=True,
-            )
-        )
-
-    if not targets and title:
-        targets.append(make_target(title, None, repealed=repealed, identifier=identifier or None))
 
     return dedupe_targets(targets)
 
@@ -364,20 +357,10 @@ def build() -> dict:
                 }
             )
 
-        for title, targets in list(section_targets_by_title.items()):
-            section_targets_by_title[title] = dedupe_targets(targets)
-
+        # Keep each action's provenance independent. A title-wide note must
+        # not inherit the section links of unrelated actions in that title.
         law_targets: list[dict] = []
         for action in prepared_actions:
-            expanded: list[dict] = []
-            for target in action["targets"]:
-                if not target.get("section") and section_targets_by_title.get(
-                    target["title"]
-                ):
-                    expanded.extend(section_targets_by_title[target["title"]])
-                else:
-                    expanded.append(target)
-            action["targets"] = dedupe_targets(expanded)
             action["target"] = action["targets"][0] if action["targets"] else None
             law_targets.extend(action["targets"])
 
