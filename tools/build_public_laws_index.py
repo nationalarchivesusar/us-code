@@ -380,7 +380,7 @@ def build() -> dict:
         elif law["target_count"]:
             law["summary"] = (
                 f"Active law with {law['action_count']} recorded action"
-                f"{'' if law['action_count'] == 1 else 's'} affecting "
+                f"{'' if law['action_count'] == 1 else 's'} associated with "
                 f"{law['target_count']} Code location"
                 f"{'' if law['target_count'] == 1 else 's'}."
             )
