@@ -171,7 +171,7 @@ def targets_from_action(action: dict, repealed: bool) -> list[dict]:
     # One audit field can contain several explicit destinations separated by
     # pipes. Each must be parsed as a whole identifier; never turn an
     # incidental reference in an audit explanation into an affected section.
-    for raw_identifier in re.split(r"\\s*\\|\\s*", identifier):
+    for raw_identifier in (part.strip() for part in identifier.split("|")):
         match = TARGET_RE.fullmatch(raw_identifier)
         if not match:
             continue
