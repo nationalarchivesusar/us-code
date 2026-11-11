@@ -1219,6 +1219,10 @@ function recordedSectionCredits(sectionElement, index) {
     (node) => node.namespaceURI === USLM_NS && node.localName === "sourceCredit",
   );
   for (const credit of credits) {
+    // The OLRC baseline can contain real-world Public Law references that
+    // happen to share a number with a USAR enactment. Only provenance
+    // credits explicitly managed by this site's USAR codification qualify.
+    if (!(credit.getAttribute("id") || "").startsWith("rp-")) continue;
     for (const ref of credit.getElementsByTagNameNS(USLM_NS, "ref")) {
       const href = ref.getAttribute("href") || "";
       const match = href.match(/^\/us\/pl\/(\d+)\/(\d+)(?:\/|$)/);
