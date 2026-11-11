@@ -210,6 +210,9 @@ def main() -> None:
             action["targets"] = dedupe_targets(
                 raw_targets, repealed, section_index
             )
+            if action.get("effect_category") == "note":
+                for target in action["targets"]:
+                    target["view"] = "notes"
             action["target"] = action["targets"][0] if action["targets"] else None
             law_targets.extend(action["targets"])
 
