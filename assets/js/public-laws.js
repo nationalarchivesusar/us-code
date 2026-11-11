@@ -116,7 +116,11 @@ function createTarget(target) {
     ? "law-target law-target--link"
     : "law-target law-target--historical";
   item.textContent = target.citation;
-  if (target.href) item.href = target.href;
+  if (target.href) {
+    item.href = target.view === "notes"
+      ? `${target.href}${target.href.includes("?") ? "&" : "?"}view=notes`
+      : target.href;
+  }
   if (target.historical) {
     item.title = "Historical location; the law is repealed.";
   } else if (!target.section) {
