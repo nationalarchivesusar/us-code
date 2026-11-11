@@ -1151,6 +1151,83 @@ function findSectionElement(doc, identifier, number) {
   return sectionList.find((section) => sectionKey(directChildText(section, "num")) === targetKey) || null;
 }
 
+// Source relationships are taken from the published, filtered action index,
+// never by searching Code text for a passing reference to another enactment.
+let publicLawSourceIndexPromise = null;
+
+function loadPublicLawSourceIndex() {
+  if (!publicLawSourceIndexPromise) {
+    publicLawSourceIndexPromise = fetch(appResourceUrl("data/public-laws.json"))
+      .then((response) => {
+        if (!response.ok) throw new Error("Public-law source index unavailable");
+        return response.json();
+      })
+      .then((payload) => {
+        const index = new Map();
+        for (const law of payload.laws || []) {
+          if (!/^\\d+-\\d+$/.test(law.public_law || "")) continue;
+          for (const action of law.actions || []) {
+            if (["no-code", "superseded"].includes(action.effect_category)) continue;
+            if (["documented-no-code-action", "superseded-by-later-action"].includes(action.result_status)) continue;
+            const relationship = law.status === "repealed"
+              ? "Historical (repealed)"
+              : action.effect_category === "note"
+                ? "Statutory or historical note"
+                : action.result_status === "already-satisfied-with-baseline-proof"
+                  ? "Already reflected in Code"
+                  : "Recorded Code action";
+            for (const target of action.targets || (action.target ? [action.target] : [])) {
+              if (!target.title || !target.section) continue;
+              const key = `${String(target.title).toLowerCase()}:${String(target.section).toLowerCase()}`;
+              if (!index.has(key)) index.set(key, new Map());
+              const rows = index.get(key);
+              if (!rows.has(law.public_law)) {
+                rows.set(law.public_law, { number: law.public_law, title: law.title, relationships: new Set() });
+              }
+              rows.get(law.public_law).relationships.add(relationship);
+            }
+          }
+        }
+        return index;
+      });
+  }
+  return publicLawSourceIndexPromise;
+}
+
+async function populatePublicLawSources(identifier, host) {
+  const match = String(identifier || "").match(/^\\/us\\/usc\\/t(\\d+[A-Za-z]?)\\/s([^/]+)/);
+  if (!match) return;
+  try {
+    const index = await loadPublicLawSourceIndex();
+    if (!host.isConnected || state.currentSectionIdentifier !== identifier) return;
+    const records = index.get(`${match[1].toLowerCase()}:${match[2].toLowerCase()}`);
+    if (!records || !records.size) {
+      host.remove();
+      return;
+    }
+    const heading = document.createElement("h3");
+    heading.textContent = "USAR Public Law history";
+    const introduction = document.createElement("p");
+    introduction.textContent = "Verified codification placements and notes; a note does not necessarily amend the statutory text.";
+    const list = document.createElement("ul");
+    for (const record of records.values()) {
+      const item = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = appResourceUrl(`public-laws.html#pl-${record.number}`);
+      link.textContent = `Pub. L. ${record.number}`;
+      item.appendChild(link);
+      item.appendChild(document.createTextNode(` — ${[...record.relationships].join(", ")}`));
+      list.appendChild(item);
+    }
+    host.append(heading, introduction, list);
+  } catch (error) {
+    // A missing generated index must not prevent the authoritative XML from
+    // rendering. It also must not turn unknown source information into a claim.
+    console.warn("USAR public-law history unavailable", error);
+    host.remove();
+  }
+}
+
 function renderSection(sectionElement, options = {}) {
   const { pinpoint = null } = options;
   elements.sectionContent.hidden = false;
@@ -1250,6 +1327,26 @@ function renderSection(sectionElement, options = {}) {
     statutePanel.appendChild(empty);
   }
 
+  // The published USLM source credits were previously discarded entirely.
+  // Display their actual text without linking OLRC-relative /us/pl URLs to
+  // incorrect paths on this independent USAR website.
+  const sourceCredits = Array.from(sectionElement.children).filter(
+    (child) => child.namespaceURI === USLM_NS && child.localName === "sourceCredit",
+  );
+  if (sourceCredits.length) {
+    const credits = document.createElement("section");
+    credits.className = "usc-note usc-source-credits";
+    const heading = document.createElement("h3");
+    heading.textContent = "Source credits in published U.S. Code XML";
+    credits.appendChild(heading);
+    for (const credit of sourceCredits) {
+      const paragraph = document.createElement("p");
+      paragraph.textContent = credit.textContent.trim();
+      credits.appendChild(paragraph);
+    }
+    statutePanel.appendChild(credits);
+  }
+
   panels.appendChild(statutePanel);
 
   const notesList = Array.from(sectionElement.children).filter(
@@ -1268,8 +1365,12 @@ function renderSection(sectionElement, options = {}) {
     notesPanel.appendChild(emptyNotes);
   }
 
+  const publicLawHistory = document.createElement("section");
+  publicLawHistory.className = "usc-note usc-source-laws";
+  notesPanel.prepend(publicLawHistory);
   panels.appendChild(notesPanel);
   elements.sectionContent.appendChild(panels);
+  void populatePublicLawSources(sectionIdentifier, publicLawHistory);
 
   const switchView = (view) => {
     panels.dataset.view = view;
