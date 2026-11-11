@@ -145,9 +145,9 @@ jobs:
           )
 
           laws = {law['public_law']: law for law in payload['laws']}
-          assert {'41-271', '42-272', '42-273', '42-274', '43-275', '43-276', '43-277', '43-278', '44-279', '44-6'} <= set(laws)
+          assert {'41-271', '42-272', '42-273', '42-274', '43-275', '43-276', '43-277', '43-278', '44-279', '44-280'} <= set(laws)
           assert laws['26-188']['status'] == 'repealed'
-          assert laws['44-6']['status'] == 'active'
+          assert laws['44-280']['status'] == 'active'
           assert laws['41-271']['status'] == 'active'
           assert laws['42-272']['status'] == 'active'
           assert laws['42-273']['status'] == 'active'
