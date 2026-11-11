@@ -234,6 +234,15 @@ function createLawCard(law) {
     trello.textContent = "View Public Law on Trello";
     intro.appendChild(trello);
   }
+  if (law.source_document_url) {
+    const documentLink = document.createElement("a");
+    documentLink.className = "trello-link";
+    documentLink.href = law.source_document_url;
+    documentLink.target = "_blank";
+    documentLink.rel = "noopener noreferrer";
+    documentLink.textContent = "Read enacted document";
+    intro.appendChild(documentLink);
+  }
   body.appendChild(intro);
 
   const locations = document.createElement("section");
