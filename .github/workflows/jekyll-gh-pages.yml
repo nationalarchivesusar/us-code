@@ -42,13 +42,9 @@ jobs:
       - name: Install Python dependencies
         run: python -m pip install --disable-pip-version-check -r requirements.txt
 
-      - name: Apply USAR current-law notes
-        shell: bash
-        run: |
-          set -euo pipefail
-          python tools/apply_current_law_notes.py
-          python tools/apply_current_law_notes.py --check
-
+      # Install managed sections before attaching later-law amendment notes.
+      # Otherwise a newly enacted note can target a section not yet present in
+      # the original XML (and rebuilding that section can discard the note).
       - name: Apply substantive 2026 current-law sections
         shell: bash
         run: |
@@ -56,6 +52,13 @@ jobs:
           python tools/apply_current_law_sections.py
           python tools/apply_current_law_sections.py --check
           python -m unittest tests.test_current_law_sections -v
+
+      - name: Apply USAR current-law notes and later amendments
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/apply_current_law_notes.py
+          python tools/apply_current_law_notes.py --check
 
       - name: Set up Node
         uses: actions/setup-node@v4
