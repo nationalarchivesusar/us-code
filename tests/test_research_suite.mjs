@@ -91,10 +91,11 @@ test("Code Changes is a local Public Laws view and old route remains compatible"
   assert.match(page, /recorded action/i);
   assert.match(viewScript, /searchParams\.set\("view", "changes"\)/);
   assert.match(alias, /public-laws\.html\?view=changes/);
-  assert.match(changesScript, /Verified amended/);
-  assert.match(changesScript, /Verified added/);
-  assert.match(changesScript, /Verified removed/);
-  assert.match(changesScript, /not necessarily the isolated effect of this one Public Law/);
+  // These status comparisons describe the section's baseline-to-current
+  // change; they do NOT prove that each cited Public Law caused it.
+  assert.match(changesScript, /record\.effectLabel \|\| "Recorded Code placement"/);
+  assert.match(changesScript, /"amended", "added", "removed"/);
+  assert.match(changesScript, /This does not establish that this particular Public Law caused the change/);
 });
 
 test("Criminal Law is search-first and permanent indexes are secondary", () => {
