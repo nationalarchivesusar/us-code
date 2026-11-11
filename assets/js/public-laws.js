@@ -153,13 +153,13 @@ function createAction(action, law) {
   if (targets.length) {
     const targetLabel = document.createElement("span");
     targetLabel.className = "law-action__target";
-    targetLabel.append(targets.length === 1 ? "Code location: " : "Code locations: ");
+    targetLabel.append(targets.length === 1 ? "Recorded location: " : "Recorded locations: ");
     appendTargets(targetLabel, targets);
     meta.appendChild(targetLabel);
   } else {
     const noTarget = document.createElement("span");
     noTarget.className = "law-action__target";
-    noTarget.textContent = "No direct U.S. Code location";
+    noTarget.textContent = "No recorded Code location for this action";
     meta.appendChild(noTarget);
   }
 
@@ -239,7 +239,7 @@ function createLawCard(law) {
   locationHeading.textContent =
     law.status === "repealed"
       ? "Former or historical Code locations"
-      : "Affected Code sections";
+      : "Recorded Code locations and statutory notes";
   locations.appendChild(locationHeading);
   if (law.targets.length) {
     const targetList = document.createElement("div");
@@ -248,7 +248,7 @@ function createLawCard(law) {
     locations.appendChild(targetList);
   } else {
     const none = document.createElement("p");
-    none.textContent = "No direct U.S. Code location was recorded.";
+    none.textContent = "No direct Code location was established; see the law text and disposition below.";
     locations.appendChild(none);
   }
   body.appendChild(locations);
