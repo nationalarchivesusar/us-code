@@ -120,7 +120,7 @@
       <section id="code-changes-view" role="tabpanel" aria-label="Code Changes" hidden>
         <section class="changes-method" aria-label="Research method">
           <strong>Evidence labels matter.</strong>
-          <span>A “verified text change” is proven by the repository baseline comparison. A “recorded action” comes from the Public Law codification index and is not represented as an exact intermediate statutory text unless separately verified.</span>
+          <span>A “verified text change” compares the section across the whole repository baseline period; it does not establish that an individual Public Law caused the change. A “recorded action” identifies this Public Law’s own codification placement or statutory note. A citation alone is not proof of amendment.</span>
         </section>
 
         <form id="changes-filters" class="changes-filters" autocomplete="off">
@@ -144,9 +144,9 @@
             <label for="changes-type">Change type</label>
             <select id="changes-type">
               <option value="all">All</option>
-              <option value="amended">Verified amended</option>
-              <option value="added">Verified added</option>
-              <option value="removed">Verified removed</option>
+              <option value="amended">Section amended since baseline</option>
+              <option value="added">Section added since baseline</option>
+              <option value="removed">Section removed since baseline</option>
               <option value="recorded">Recorded action</option>
             </select>
           </div>
